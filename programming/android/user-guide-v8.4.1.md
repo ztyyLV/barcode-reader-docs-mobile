@@ -53,8 +53,10 @@ You can add Dynamsoft Barcode Reader like below:
 
 ## Getting Started: HelloWorld
 
+In this section, you will be guide on creating a Hello world app which can read barcodes from camera video input. `Dynamsoft Camera Enhancer` will be used to deploy the camera video input module in this guide.
+
 1. Create a new Android project in Android Studio.
-2. Import the `.aar` files into the new project. Besides `DynamsoftBarcodeReaderAndroid.aar`, you can find another package named `DynamsoftCameraEnhancerAndroid.aar`. This is the package specially designed for you to easily set up a camera module when using Barcode Reader on video streaming decoding. In this guide, we will use Dynamsoft Camera Enhancer to deploy the camera module.
+2. Import the `DynamsoftBarcodeReaderAndroid.aar` and `DynamsoftCameraEnhancerAndroid.aar` files into the new project.
 
    To manually import the `.aar` :
 
@@ -223,7 +225,7 @@ Here are some typical scanning settings you might find helpful:
 - [Specify Maximum Barcode Count](#specify-maximum-barcode-count)
 - [Specify a Scan Region](#specify-a-scan-region)
 
-For more scanning settings guide, please check out the [How To Guide]( {{site.how-to}} ) section.
+For more scanning settings guide, please read the [How To Guide]({{site.how-to}}) section.
 
 #### Specify Barcode Type to Read
 
