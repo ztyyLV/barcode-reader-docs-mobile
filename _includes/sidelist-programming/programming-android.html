@@ -1,7 +1,12 @@
 <li><a href="{{ site.android }}" class="otherLinkColour">Java (Android)</a>
     <ul>
         {%- if page.url contains '/android/' or page.url contains '/android-v' -%}
-        <li><a href="{{ site.android }}user-guide.html" class="otherLinkColour">User Guide</a></li>
+        <li><a href="{{ site.android }}user-guide.html" class="otherLinkColour">User Guide</a>
+            <ul>
+                <li><a href="{{ site.android }}user-guide.html" class="otherLinkColour">Getting Started</a></li>
+                <li><a href="{{ site.android }}upgrade.html" class="otherLinkColour">Upgrade</a></li>
+            </ul>
+        </li>
         <li><a href="{{ site.android_api }}" class="otherLinkColour">API Reference</a>
             <ul>
                 <li><a href="{{ site.android_api }}BarcodeReader/" class="otherLinkColour">Methods</a>
@@ -46,7 +51,6 @@
                 <li><a href="{{ site.android_api }}interface.html" class="otherLinkColour">Interface</a></li>
             </ul>
         </li>
-
         <li><a href="{{ site.android_release_notes }}" class="otherLinkColour">Release Notes</a>
             <ul>
                 <li><a href="{{ site.android_release_notes }}android-8.html" class="otherLinkColour">Version 8.x</a></li>
