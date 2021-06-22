@@ -52,7 +52,7 @@ You can add Dynamsoft Barcode Reader like below:
    Please replace `{version-number}` with the correct version number, e.g.
 
    ```java
-   implementation 'com.dynamsoft:dynamsoftbarcodereader:8.1.2@aar'
+   implementation 'com.dynamsoft:dynamsoftbarcodereader:8.4.1@aar'
    ```
 
 ## Getting Started: Create a video barcode scanner
