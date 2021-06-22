@@ -17,11 +17,15 @@ noTitleIndex: true
 
 ## Installation
 
+There are two options for you to install Dynamsoft Barcode Reader. You can download the package from our website or use maven to load the packages.
+
+### Download Installation
+
 To install Dynamsoft Barcode Reader for Android on your development machine, you can download the SDK from the [Dynamsoft website](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx) and unzip `dbr-android-{version-number}.zip`.
 
 After decompression, you can find samples in the **DBRSamples** folder under the **dbr-android-{version-number}** folder.
 
-### Option 2: Build with Maven
+### Build with Maven
 
 You can add Dynamsoft Barcode Reader like below:
 
@@ -51,11 +55,11 @@ You can add Dynamsoft Barcode Reader like below:
    implementation 'com.dynamsoft:dynamsoftbarcodereader:8.1.2@aar'
    ```
 
-## Getting Started: HelloWorld
+## Getting Started: Create a video barcode scanner
 
 In this section, you will be guide on creating a Hello world app which can read barcodes from camera video input. `Dynamsoft Camera Enhancer` will be used to deploy the camera video input module in this guide.
 
-### Create a New project and Include the Library
+### Create a new project and include the library
 
 1. Create a new Android project in Android Studio.
 2. Import the `DynamsoftBarcodeReaderAndroid.aar` and `DynamsoftCameraEnhancerAndroid.aar` files into the new project.
@@ -107,7 +111,7 @@ In this section, you will be guide on creating a Hello world app which can read 
 
       iii. Click Sync Now. After the synchronization completes, `DynamsoftBarcodeReaderAndroid.aar` and `DynamsoftCameraEnhancerAndroid.aar` are added to the project.
 
-### Initialize Camera Module
+### Initialize camera module
 
 In the process of video barcode scanning, the camera will provide the video input for the barcode reader. In this section, you will be guide on how to initialize the camera module for barcode scanning with the help of `Dynamsoft Camera Enhancer`. You can skip this step if you are not going to use `Dynamsoft Camera Enhancer` to create your camera module.
 
@@ -189,7 +193,7 @@ In the process of video barcode scanning, the camera will provide the video inpu
       android:visibility="visible"/>
    ```
 
-### Initialize Barcode reader
+### Initialize barcode reader
 
 At the begining of your class, please instantiate the Barcode Reader. 
 
@@ -215,7 +219,7 @@ try {
 }
 ```
 
-### Barcode Scanning
+### Barcode scanning
 
 If you are following this guide and using `Dynamsoft Camera Enhancer` to create the camera module, please add the following code to start the barcode scanning. The Barcode Reader will automatically use `decodeBuffer` method to process the video frames once it have received parameters transfered from the Camera Enhancer. Firstly, please instantiate Text result callback. The Text result callback will be sent to the Barcode Reader as a parameter and help you on getting the barcode decode result.
 
@@ -248,7 +252,7 @@ If you are not using `Dynamsoft Camera Enhancer`. The following code is the solu
 TextResult[] result = reader.decodeBuffer(frame.getData(), frame.getWidth(), frame.getHeight(), frame.getStrides()[0], frame.getFormat(), "");
 ```
 
-### Get & Display Barcode Decode Result
+### Get & display barcode decode result
 
 Instantiate a text view for displaying result.
 
@@ -365,7 +369,10 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-## Decoding Methods
+## Other Barcode Reading Settings
+
+
+### Decoding Methods
 
 The SDK provides multiple decoding methods that support reading barcodes from different sources, including static images, video stream, files in memory, base64 string, bitmap, etc. Here is a list of all decoding methods:
 
@@ -377,11 +384,9 @@ The SDK provides multiple decoding methods that support reading barcodes from di
 
 You can find more samples in more programming languages at [Code Gallery](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx) or [Github Repositories](https://github.com/dynamsoft-dbr?q=java&type=&language=).
 
-## Barcode Reading Settings
-
 Calling the [decoding methods](#decoding-methods) directly will use the default scanning modes and it will satisfy most of the needs. The SDK also allows you to adjust the scanning settings to optimize the scanning performance for different usage scenarios.
 
-### Use [`PublicRuntimeSettings`](api-reference/class/PublicRuntimeSettings.md) class to Change Settings
+### [`PublicRuntimeSettings`](api-reference/class/PublicRuntimeSettings.md)
 
 Here are some typical scanning settings you might find helpful:
 
