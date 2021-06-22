@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader for Android - User Guide v8.4
 description: This is the user guide of Dynamsoft Barcode Reader for Android SDK.
 keywords: user guide v8.4, android
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
@@ -55,6 +55,8 @@ You can add Dynamsoft Barcode Reader like below:
 
 In this section, you will be guide on creating a Hello world app which can read barcodes from camera video input. `Dynamsoft Camera Enhancer` will be used to deploy the camera video input module in this guide.
 
+### Create a New project and Include the Library
+
 1. Create a new Android project in Android Studio.
 2. Import the `DynamsoftBarcodeReaderAndroid.aar` and `DynamsoftCameraEnhancerAndroid.aar` files into the new project.
 
@@ -104,6 +106,8 @@ In this section, you will be guide on creating a Hello world app which can read 
       ```
 
       iii. Click Sync Now. After the synchronization completes, `DynamsoftBarcodeReaderAndroid.aar` and `DynamsoftCameraEnhancerAndroid.aar` are added to the project.
+
+### 
 
 3. Add the following code to initiate and use the Dynamsoft Barcode Reader SDK.
 
