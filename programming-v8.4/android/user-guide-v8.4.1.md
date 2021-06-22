@@ -249,13 +249,10 @@ PublicRuntimeSettings runtimeSettings = reader.getRuntimeSettings();
 runtimeSettings.barcodeFormatIds = 0x7FF;
 //The barcode will try to find 10 barcodes.
 runtimeSettings.expectedBarcodesCount = 10;
-//The margin-top of the scan region is 25%
+//The following code shrinks the decoding region by 25% on all sides
 runtimeSettings.region.regionTop = 25;
-//The margin-bottom of the scan region is 75%
 runtimeSettings.region.regionBottom = 75;
-//The margin-left of the scan region is 25%
 runtimeSettings.region.regionLeft = 25;
-//The margin-right of the scan region is 75%
 runtimeSettings.region.regionRight = 75;
 //The region is determined by the percentage
 runtimeSettings.region.regionMeasuredByPercentage = 1;

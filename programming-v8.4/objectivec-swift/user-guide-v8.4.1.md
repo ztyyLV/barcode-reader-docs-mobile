@@ -270,13 +270,10 @@ iPublicRuntimeSettings* settings = [barcodeReader getRuntimeSettings:nil];
 settings.barcodeFormatIds = EnumBarcodeFormatONED;
 settings.expectedBarcodesCount = 1;
 // Set the scan region
-//The margin-top of the scan region is 25%
+//The following code shrinks the decoding region by 25% on all sides
 settings.region.regionTop = 25;
-//The margin-bottom of the scan region is 75%
 settings.region.regionBottom = 75;
-//The margin-left of the scan region is 25%
 settings.region.regionLeft = 25;
-//The margin-right of the scan region is 75%
 settings.region.regionRight = 75;
 //The region is determined by percentage
 settings.region.regionMeasuredByPercentage = 1;
@@ -291,13 +288,10 @@ let settings = try reader.getRuntimeSettings()
 settings.barcodeFormatIds = Int(EnumBarcodeFormat.ONED.rawValue)
 settings.expectedBarcodesCount = 1
 // Set the scan region
-//The margin-top of the scan region is 25%
+//The following code shrinks the decoding region by 25% on all sides
 settings.region.regionTop = 25
-//The margin-bottom of the scan region is 75%
 settings.region.regionBottom = 75
-//The margin-left of the scan region is 25%
 settings.region.regionLeft = 25
-//The margin-right of the scan region is 75%
 settings.region.regionRight = 75
 //The region is determined by percentage
 settings.region.regionMeasuredByPercentage = 1
