@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader initializa
 description: This page shows BarcodeReader initialization and Destroy methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: destroy, BarcodeReader, initialization and destroy, api reference, android
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 # Android API Reference - BarcodeReader Initialization and Destroy
@@ -32,7 +33,6 @@ com.dynamsoft.dbr.BarcodeReader.BarcodeReader(String license)	throws Exception
 ### Exceptions
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
-
 
 ### Remarks
 

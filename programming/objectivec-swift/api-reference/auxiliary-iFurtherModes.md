@@ -3,13 +3,14 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iFurtherModes Class
 description: This page shows the iFurtherModes Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iFurtherModes, class, api reference, objective-c, oc, swift
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
 # iFurtherModes
 
-Stores the FurtherModes. 
+Stores the FurtherModes.
 
 ## Typedefs
 
@@ -18,7 +19,6 @@ Stores the FurtherModes.
 ```  
   
 ---
-  
 
 ## Attributes
   
@@ -47,13 +47,13 @@ NSArray* colourClusteringModes[8]
 
 - **Value range**  
    Each array item can be any one of the [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) Enumeration items.  
-     
+
 - **Default value**  
    `[EnumColourClusteringModeSkip, EnumColourClusteringModeSkip, EnumColourClusteringModeSkip, EnumColourClusteringModeSkip, EnumColourClusteringModeSkip, EnumColourClusteringModeSkip, EnumColourClusteringModeSkip, EnumColourClusteringModeSkip]`  
-     
+
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is. 
-   
+
 - **See also**  
    [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode)
 
@@ -64,18 +64,19 @@ Sets the mode and priority for converting a colour image to a grayscale image.
 ```objc
 NSArray* colourConversionModes[8]
 ```
+
 - **Value range**  
-   Each array item can be any one of the [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) Enumeration items. 
-     
+   Each array item can be any one of the [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) Enumeration items.
+
 - **Default value**  
-   ` [EnumColourConversionModeGeneral, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip]`  
-     
+   `[EnumColourConversionModeGeneral, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip]`
+
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
-   
+
 - **See also**  
    [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)
-   
+
 ### grayscaleTransformationModes
 
 Sets the mode and priority for the grayscale image conversion.
@@ -83,15 +84,16 @@ Sets the mode and priority for the grayscale image conversion.
 ```objc
 NSArray* grayscaleTransformationModes[8]
 ```
+
 - **Value range**  
-   Each array item can be any one of the [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) Enumeration items. 
-     
+   Each array item can be any one of the [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) Enumeration items.
+
 - **Default value**  
    `[EnumGrayscaleTransformationModeOriginal, EnumGrayscaleTransformationModeSkip, EnumGrayscaleTransformationModeSkip, EnumGrayscaleTransformationModeSkip, EnumGrayscaleTransformationModeSkip, EnumGrayscaleTransformationModeSkip, EnumGrayscaleTransformationModeSkip, EnumGrayscaleTransformationModeSkip]`  
-     
+
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
-   
+
 - **See also**  
    [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
 
@@ -105,13 +107,13 @@ NSArray* regionPredetectionModes[8]
 
 - **Value range**  
    Each array item can be any one of the [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) Enumeration items.  
-     
+
 - **Default value**  
-   `[EnumRegionPredetectionModeGeneral, EnumRegionPredetectionModeSkip, EnumRegionPredetectionModeSkip, EnumRegionPredetectionModeSkip, EnumRegionPredetectionModeSkip, EnumRegionPredetectionModeSkip, EnumRegionPredetectionModeSkip, EnumRegionPredetectionModeSkip]` 
-     
+   `[EnumRegionPredetectionModeGeneral, EnumRegionPredetectionModeSkip, EnumRegionPredetectionModeSkip, EnumRegionPredetectionModeSkip, EnumRegionPredetectionModeSkip, EnumRegionPredetectionModeSkip, EnumRegionPredetectionModeSkip, EnumRegionPredetectionModeSkip]`
+
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is. If the image is large and the barcode on the image is very small, it is recommended to enable region predetection to speed up the localization process and recognition accuracy.
-   
+
 - **See also**  
    [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)
 
@@ -125,13 +127,13 @@ NSArray* imagePreprocessingModes[8]
 
 - **Value range**  
    Each array item can be any one of the [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) Enumeration items.  
-     
+
 - **Default value**  
-   ` [EnumImagePreprocessingModeGeneral, EnumImagePreprocessingModeSkip, EnumImagePreprocessingModeSkip, EnumImagePreprocessingModeSkip, EnumImagePreprocessingModeSkip, EnumImagePreprocessingModeSkip, EnumImagePreprocessingModeSkip, EnumImagePreprocessingModeSkip]` 
-     
+   `[EnumImagePreprocessingModeGeneral, EnumImagePreprocessingModeSkip, EnumImagePreprocessingModeSkip, EnumImagePreprocessingModeSkip, EnumImagePreprocessingModeSkip, EnumImagePreprocessingModeSkip, EnumImagePreprocessingModeSkip, EnumImagePreprocessingModeSkip]`
+
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.
-   
+
 - **See also**  
    [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode)
 
@@ -145,16 +147,16 @@ NSArray* textureDetectionModes[8]
 
 - **Value range**  
    Each array item can be any one of the [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode) Enumeration items.  
-     
+
 - **Default value**  
-   ` [EnumTextureDetectionModeGeneralWidthConcentration, EnumTextureDetectionModeSkip, EnumTextureDetectionModeSkip, EnumTextureDetectionModeSkip, EnumTextureDetectionModeSkip, EnumTextureDetectionModeSkip, EnumTextureDetectionModeSkip, EnumTextureDetectionModeSkip]`  
-     
+   `[EnumTextureDetectionModeGeneralWidthConcentration, EnumTextureDetectionModeSkip, EnumTextureDetectionModeSkip, EnumTextureDetectionModeSkip, EnumTextureDetectionModeSkip, EnumTextureDetectionModeSkip, EnumTextureDetectionModeSkip, EnumTextureDetectionModeSkip]`  
+
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.
-   
+
 - **See also**  
    [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
-   
+
 ### textFilterModes
 
 Sets the mode and priority for text filter.
@@ -162,19 +164,19 @@ Sets the mode and priority for text filter.
 ```objc
 NSArray* textFilterModes[8]
 ```
+
 - **Value range**  
    Each array item can be any one of the [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) Enumeration items.  
-     
+
 - **Default value**  
-   ` [EnumTextFilterModeGeneralContour, EnumTextFilterModeSkip, EnumTextFilterModeSkip, EnumTextFilterModeSkip, EnumTextFilterModeSkip, EnumTextFilterModeSkip, EnumTextFilterModeSkip, EnumTextFilterModeSkip]`  
-     
+   `[EnumTextFilterModeGeneralContour, EnumTextFilterModeSkip, EnumTextFilterModeSkip, EnumTextFilterModeSkip, EnumTextFilterModeSkip, EnumTextFilterModeSkip, EnumTextFilterModeSkip, EnumTextFilterModeSkip]`
+
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is. If the image contains a lot of text, you can enable text filter to speed up the localization process.
-   
+
 - **See also**  
    [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)
-   
-   
+
 ### dpmCodeReadingModes
 
 Sets the mode and priority for DPM code reading.
@@ -185,13 +187,13 @@ NSArray* dpmCodeReadingModes[8]
 
 - **Value range**  
    Each array item can be any one of the [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) Enumeration items.  
-     
+
 - **Default value**  
-   ` [EnumDPMCodeReadingModeSkip, EnumDPMCodeReadingModeSkip, EnumDPMCodeReadingModeSkip, EnumDPMCodeReadingModeSkip, EnumDPMCodeReadingModeSkip, EnumDPMCodeReadingModeSkip, EnumDPMCodeReadingModeSkip, EnumDPMCodeReadingModeSkip]`  
-     
+   `[EnumDPMCodeReadingModeSkip, EnumDPMCodeReadingModeSkip, EnumDPMCodeReadingModeSkip, EnumDPMCodeReadingModeSkip, EnumDPMCodeReadingModeSkip, EnumDPMCodeReadingModeSkip, EnumDPMCodeReadingModeSkip, EnumDPMCodeReadingModeSkip]`  
+
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
-   
+
 - **See also**  
    [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)
 
@@ -202,17 +204,18 @@ Sets the mode and priority for deformation resisting.
 ```objc
 NSArray* deformationResistingModes[8]
 ```
+
 - **Value range**  
    Each array item can be any one of the [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) Enumeration items.  
-     
+
 - **Default value**  
    `[EnumDeformationResistingModeSkip, EnumDeformationResistingModeSkip, EnumDeformationResistingModeSkip, EnumDeformationResistingModeSkip, EnumDeformationResistingModeSkip, EnumDeformationResistingModeSkip, EnumDeformationResistingModeSkip, EnumDeformationResistingModeSkip]`  
-     
+
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
-   
+
 - **See also**  
-   [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) 
+   [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)
 
 ### barcodeComplementModes
 
@@ -224,15 +227,15 @@ NSArray* barcodeComplementModes[8]
 
 - **Value range**  
    Each array item can be any one of the [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) Enumeration items.  
-     
+
 - **Default value**  
    `[EnumBarcodeComplementModeSkip, EnumBarcodeComplementModeSkip, EnumBarcodeComplementModeSkip, EnumBarcodeComplementModeSkip, EnumBarcodeComplementModeSkip, EnumBarcodeComplementModeSkip, EnumBarcodeComplementModeSkip, EnumBarcodeComplementModeSkip]`  
-     
+
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
-   
+
 - **See also**  
-   [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) 
+   [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode)
 
 ### barcodeColourModes
 
@@ -244,12 +247,12 @@ NSArray* barcodeColourModes[8]
 
 - **Value range**  
    Each array item can be any one of the [`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode) Enumeration items.  
-     
+
 - **Default value**  
-   `[EnumBarcodeColourModeDarkOnLight, EnumBarcodeColourModeSkip, EnumBarcodeColourModeSkip, EnumBarcodeColourModeSkip, EnumBarcodeColourModeSkip, EnumBarcodeColourModeSkip, EnumBarcodeColourModeSkip, EnumBarcodeColourModeSkip]`       
+   `[EnumBarcodeColourModeDarkOnLight, EnumBarcodeColourModeSkip, EnumBarcodeColourModeSkip, EnumBarcodeColourModeSkip, EnumBarcodeColourModeSkip, EnumBarcodeColourModeSkip, EnumBarcodeColourModeSkip, EnumBarcodeColourModeSkip]`
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
-   
+
 - **See also**  
    [`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)
 
@@ -263,12 +266,12 @@ NSArray* accompanyingTextRecognitionModes[8]
 
 - **Value range**  
    Each array item can be any one of the [`EnumAccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode) Enumeration items.  
-     
+
 - **Default value**  
-   ` [EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip,  EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip]`  
-        
+   `[EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip,  EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip]`  
+
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
-   
+
 - **See also**  
    [`EnumAccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)

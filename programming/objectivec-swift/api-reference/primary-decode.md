@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Decode Metho
 description: This page shows Decode methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: decodeFileWithName, decodeImage, decodeBuffer, decodeBase64, decode methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
@@ -20,15 +21,14 @@ needAutoGenerateSidebar: true
   
 ---
 
-
 ## decodeFileWithName
 
 Decode barcodes from a specified image file.
 
 ```objc
-- (NSArray<iTextResult*>* _Nullable)decodeFileWithName:(NSString* _Nonnull)name templateName:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;	
-```   
-   
+- (NSArray<iTextResult*>* _Nullable)decodeFileWithName:(NSString* _Nonnull)name templateName:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
+```
+
 ### Parameters
 
 `[in] name` The local path of the file.
@@ -71,25 +71,20 @@ func ltsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 let error: NSError? = NSError()
 let result = barcodeReader.decodeFileWithName(name:"your file path",templateName:"",error:&error)
 ```
-&nbsp;
-
-
-
-
 
 ## decodeImage
 
 Decode barcodes from an image file in memory.
 
 ```objc
-- (NSArray<iTextResult*>* _Nullable)decodeImage:(UIImage* _Nonnull)image withTemplate:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;	
+- (NSArray<iTextResult*>* _Nullable)decodeImage:(UIImage* _Nonnull)image withTemplate:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
 ```  
-   
+
 ### Parameters
 
 `[in] image` The image file in memory.
 `[in] templateName` The template name.
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in, out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 ### Return value
 
@@ -113,6 +108,7 @@ UIImage *image = [[UIImage alloc] init];
 NSError __autoreleasing * _Nullable error;
 NSArray<iTextResult*>* result = [barcodeReader decodeImage:image withTemplate:@"" error:&error];
 ```
+
 Swift:
 
 ```Swift
@@ -135,8 +131,8 @@ Decode barcodes from the memory buffer containing image pixels in defined format
 
 ```objc
 - (NSArray<iTextResult*>* _Nullable)decodeBuffer:(NSData* _Nonnull)buffer withWidth:(NSInteger)width height:(NSInteger)height stride:(NSInteger)stride format:(EnumImagePixelFormat)format templateName:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
-```   
-   
+```
+
 ### Parameters
 
 `[in] buffer` The array of bytes which contain the image data.  
@@ -173,6 +169,7 @@ NSInteger format;
 NSError __autoreleasing * _Nullable error;
 NSArray<iTextResult*>* result = [barcodeReader decodeBuffer:bufferBytes withWidth:iWidth height:iHeight stride:iStride format:format templateName:@"" error:&error];
 ```
+
 Swift:
 
 ```Swift
@@ -193,17 +190,13 @@ let format:Int
 let result = barcodeReader.decodeBuffer(buffer: bufferBytes!, width: width, height: height, stride: stride, format: format, templateName: "", error: &error)
 ```
 
-&nbsp;
-
-
-
 ## decodeBase64
 
 Decode barcodes from an image file encoded as a base64 string.
 
 ```objc
 DBR_API int DBR_DecodeBase64String (void* barcodeReader, const char* pBase64String, const char* pTemplateName)	
-```   
+```
 
 ### Parameters
 
@@ -232,6 +225,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificat
 NSError __autoreleasing * _Nullable error;
 NSArray<iTextResult*>* result = [barcodeReader decodeBase64:@"file in base64 string" withTemplate:@"" error:&error];
 ```
+
 Swift:
 
 ```Swift
@@ -247,17 +241,14 @@ let error: NSError? = NSError()
 let result = barcodeReader.decodeBase64(base64: file in base64 string, withTemplate: "", error: &error)
 ```
 
-
-&nbsp;
-
 ## createIntermediateResult
 
 Inits an intermediateResult struct with default values.
 
 ```objc
-- (iIntermediateResult* _Nullable)createIntermediateResult:(EnumIntermediateResultType)type error:(NSError* _Nullable * _Nullable)error;	
-```   
-   
+- (iIntermediateResult* _Nullable)createIntermediateResult:(EnumIntermediateResultType)type error:(NSError* _Nullable * _Nullable)error;
+```
+
 ### Parameters
 
 `[in] type` The type of the intermediate result to init.
@@ -295,18 +286,14 @@ barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV**************
 irResult = try! barcodeReader?.createIntermediateResult(EnumIntermediateResultType(rawValue: EnumIntermediateResultType.originalImage.rawValue)!)
 ```
 
-
-&nbsp;
-
-
 ## decodeIntermediateResults
 
 Decodes barcode from intermediate results.
 
 ```objc
-- (NSArray<iTextResult*>* _Nullable)decodeIntermediateResults:(NSArray<iIntermediateResult*>* _Nullable)array templateName:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;	
-```   
-   
+- (NSArray<iTextResult*>* _Nullable)decodeIntermediateResults:(NSArray<iIntermediateResult*>* _Nullable)array templateName:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
+```
+
 ### Parameters
 
 `[in] array` The intermediate result array for decoding.
@@ -355,7 +342,3 @@ result = try! barcodeReader?.decodeFile(withName: "your file path", templateName
 var array:[iIntermediateResult]? = try! barcodeReader?.getIntermediateResult()
 result = try! barcodeReader?.decode(array, withTemplate: "")
 ```
-
-
-&nbsp;
-

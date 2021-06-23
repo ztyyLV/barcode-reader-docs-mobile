@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Android API Reference - DMLTSConnectionParameters Class
 description: This page shows the DMLTSConnectionParameters Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: DMLTSConnectionParameters, class, api reference, android
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
@@ -147,12 +148,15 @@ int com.dynamsoft.dbr.DMLTSConnectionParameters.chargeWay
     Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay) Enumeration items.
 
 ### organizationID
+
 The organization ID got from Dynamsoft.
+
 ```java
 String com.dynamsoft.dbr.DMLTSConnectionParameters.organizationID
 ```
-- **Value range**   
-    Any string value   
-      
-- **Default value**   
+
+- **Value range**
+    Any string value
+
+- **Default value**
     ""

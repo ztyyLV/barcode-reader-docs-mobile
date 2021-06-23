@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iLineSegment Class
 description: This page shows the iLineSegment Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iLineSegment, class, api reference, objective-c, oc, swift
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
@@ -18,7 +19,6 @@ Stores line segment data.
 ```  
   
 ---
-  
 
 ## Attributes
   
@@ -30,7 +30,7 @@ Stores line segment data.
 
 ### startPoint
 
-The start point of the line segment.   
+The start point of the line segment.
 
 ```objc
 CGPoint startPoint
@@ -48,9 +48,9 @@ CGPoint endPoint
 
 The confidence coefficients for lines. There are 4 coefficients in this set:  
 
-1. linesConfidenceCoefficients\[0\] is average positive amplitude;   
-2. linesConfidenceCoefficients\[1\] is max positive amplitude; 
-3. linesConfidenceCoefficients\[2\] is average negative amplitude;   
+1. linesConfidenceCoefficients\[0\] is average positive amplitude;
+2. linesConfidenceCoefficients\[1\] is max positive amplitude;
+3. linesConfidenceCoefficients\[2\] is average negative amplitude;
 4. linesConfidenceCoefficients\[3\] is max negative amplitude.
 
 ```objc

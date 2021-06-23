@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iImageData Class
 description: This page shows the iImageData Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iImageData, class, api reference, objective-c, oc, swift
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
@@ -20,7 +21,7 @@ Stores the image data.
 ---
 
 ## Attributes
-    
+
 | Attribute | Type |
 |---------- | ---- |
 | [`bytesLength`](#byteslength) | *NSInteger* |
@@ -30,10 +31,9 @@ Stores the image data.
 | [`stride`](#stride) | *NSInteger* |
 | [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) |
 
-
 ### bytesLength
 
-The length of the image data byte array. 
+The length of the image data byte array.
 
 ```objc
 NSInteger bytesLength
@@ -41,7 +41,7 @@ NSInteger bytesLength
 
 ### bytes
 
-The image data content in a byte array. 
+The image data content in a byte array.
 
 ```objc
 unsigned char* bytes
@@ -65,7 +65,7 @@ NSInteger height
 
 ### stride
 
-The stride (or scan width) of the image. 
+The stride (or scan width) of the image.
 
 ```objc
 NSInteger stride
@@ -73,10 +73,8 @@ NSInteger stride
 
 ### format
 
-The image pixel format used in the image byte array. 
+The image pixel format used in the image byte array.
 
 ```objc
 EnumImagePixelFormat format
 ```
-  
-

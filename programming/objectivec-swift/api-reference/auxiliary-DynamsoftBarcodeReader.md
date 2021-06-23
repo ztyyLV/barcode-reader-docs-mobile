@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - DynamsoftBarcodeReader Class
 description: This page shows the DynamsoftBarcodeReader Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: DynamsoftBarcodeReader, class, api reference, objective-c, oc, swift
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

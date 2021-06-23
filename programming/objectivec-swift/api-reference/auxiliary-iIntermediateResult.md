@@ -3,9 +3,9 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iIntermediateResult Class
 description: This page shows the iIntermediateResult Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iIntermediateResult, class, api reference, objective-c, oc, swift
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
-
 
 # iIntermediateResult
 
@@ -18,7 +18,6 @@ Stores the intermediate result.
 ```  
 
 ---
-  
 
 ## Attributes
   
@@ -54,7 +53,6 @@ Stores the intermediate result.
 | [`ccmIndex`](#ccmindex) | *NSInteger* |
 | [`scaleDownRatio`](#scaledownratio) | *NSInteger* |
 | [`frameId`](#frameid) | *NSInteger* |
-
 
 ### resultsCount
 
@@ -121,7 +119,9 @@ NSInteger drmIndex
 ```
 
 ### dpmCodeReadingMode
+
 The [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) used when generating the current intermediate result.
+
 ```objc
 EnumDPMCodeReadingMode dpmCodeReadingMode
 ```
@@ -293,4 +293,3 @@ The ID of the operated frame.
 ```objc
 NSInteger frameId
 ```
-

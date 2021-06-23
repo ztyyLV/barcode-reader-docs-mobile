@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Android API Reference - QRCodeDetails Class
 description: This page shows the QRCodeDetails Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: QRCodeDetails, class, api reference, android
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
@@ -26,10 +27,9 @@ Stores the QRCode details.
 | [`totalPage`](#totalpage) | *int* |
 | [`parityData`](#paritydata) | *byte* |
 
-
 ### moduleSize
 
-The barcode module size (the minimum bar width in pixels). 
+The barcode module size (the minimum bar width in pixels).
 
 ```java
 int com.dynamsoft.dbr.QRCodeDetails.moduleSize
@@ -45,7 +45,7 @@ int com.dynamsoft.dbr.QRCodeDetails.rows
 
 ### columns
 
-The column count of the barcode. 
+The column count of the barcode.
 
 ```java
 int com.dynamsoft.dbr.QRCodeDetails.columns
@@ -106,4 +106,3 @@ The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. 
 ```java
 byte com.dynamsoft.dbr.QRCodeDetails.parityData
 ```
-

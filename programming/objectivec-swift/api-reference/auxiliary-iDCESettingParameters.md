@@ -3,14 +3,15 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iDCESettingParameters Class
 description: This page shows the iDCESettingParameters Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iDCESettingParameters, class, api reference, iOS
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 # iDCESettingParameters
 
 Stores the iDCESettingParameters information.
 
-# Attributes
+## Attributes
 
 | Attribute | type |
 |-----------|------|

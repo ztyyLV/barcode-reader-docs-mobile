@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader for Android - User Guide
 description: This is the user guide of Dynamsoft Barcode Reader for Android SDK.
 keywords: user guide, android
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 

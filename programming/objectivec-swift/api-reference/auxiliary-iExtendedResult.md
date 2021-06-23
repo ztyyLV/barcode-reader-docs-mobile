@@ -3,13 +3,13 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iExtendedResult Class
 description: This page shows the iExtendedResult Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iExtendedResult, class, api reference, objective-c, oc, swift
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
-
 
 # iExtendedResult
 
-Stores the extended result. 
+Stores the extended result.
 
 ## Typedefs
 
@@ -27,20 +27,20 @@ Stores the extended result.
 | [`barcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) |
 | [`barcodeFormatString`](#barcodeformatstring) | *NSString \** |
 | [`barcodeFormat_2`](#barcodeformat_2) | [`EnumBarcodeFormat2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) |
-| [`barcodeFormatString_2`](#barcodeformatstring_2) | *NSString \** | 
-| [`confidence`](#confidence) | *NSInteger* | 
-| [`bytes`](#bytes) | *NSData \** | 
-| [`bytesLength`](#byteslength) | *NSInteger* | 
-| [`accompanyingTextBytes`](#accompanyingtextbytes) | *NSData \** | 
-| [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | *NSInteger* | 
-| [`deformation`](#deformation) | *NSInteger* | 
+| [`barcodeFormatString_2`](#barcodeformatstring_2) | *NSString \** |
+| [`confidence`](#confidence) | *NSInteger* |
+| [`bytes`](#bytes) | *NSData \** |
+| [`bytesLength`](#byteslength) | *NSInteger* |
+| [`accompanyingTextBytes`](#accompanyingtextbytes) | *NSData \** |
+| [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | *NSInteger* |
+| [`deformation`](#deformation) | *NSInteger* |
 | [`detailedResult`](#detailedresult) | *NSObject \** |
 | [`samplingImage`](#samplingimage) | [`iSamplingImageData*`](iSamplingImageData.md) |
-| [`clarity`](#clarity) | *NSInteger* | 
+| [`clarity`](#clarity) | *NSInteger* |
 
 ### resultType
 
-Extended result type. 
+Extended result type.
 
 ```objc
 EnumResultType resultType
@@ -48,7 +48,7 @@ EnumResultType resultType
 
 ### barcodeFormat
 
-Barcode type in BarcodeFormat group 1. 
+Barcode type in BarcodeFormat group 1.
 
 ```objc
 EnumBarcodeFormat barcodeFormat
@@ -69,7 +69,7 @@ Barcode type in BarcodeFormat group 2.
 ```objc
 EnumBarcodeFormat2 barcodeFormat_2
 ```
- 
+
 ### barcodeFormatString_2
 
 Barcode type in BarcodeFormat group 2 as string.
@@ -141,7 +141,7 @@ The sampling image info.
 ```objc
 iSamplingImageData* samplingImage
 ```
- 
+
 ### clarity
 
 The clarity of the barcode zone in percentage.

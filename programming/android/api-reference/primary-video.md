@@ -4,12 +4,13 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Video Meth
 description: This page shows BarcodeReader video methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: startFrameDecoding, startFrameDecodingEx, appendFrame, stopFrameDecoding, initFrameDecodingParameters, setErrorCallback, setTextResultCallback, setIntermediateResultCallback, getLengthOfFrameQueue, video methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 # Android API Reference - BarcodeReader Video Methods
 
 - Decode
-    
+
    | Method               | Description |
    |----------------------|-------------|
    | [`startFrameDecoding`](#startframedecoding) | Decode barcodes from inner frame queue. |
@@ -18,13 +19,13 @@ needAutoGenerateSidebar: true
    | [`stopFrameDecoding`](#stopframedecoding) | Stop thread used for frame decoding. |
 
 - Parameter
-   
+
    | Method               | Description |
    |----------------------|-------------|
    | [`initFrameDecodingParameters`](#initframedecodingparameters) | Initialize frame decoding parameter. |
 
 - Callback
-   
+
    | Method               | Description |
    |----------------------|-------------|
    | [`setErrorCallback`](#seterrorcallback) | Set callback interface to process errors generated during frame decoding. |
@@ -32,7 +33,7 @@ needAutoGenerateSidebar: true
    | [`setIntermediateResultCallback`](#setintermediateresultcallback) | Set callback interface to process intermediate results generated during frame decoding. |
 
 - Status retrieval
-   
+
    | Method               | Description |
    |----------------------|-------------|
    | [`getLengthOfFrameQueue`](#getlengthofframequeue) | Get length of current inner frame queue. |
@@ -44,7 +45,7 @@ needAutoGenerateSidebar: true
 Start a new thread to decode barcodes from the inner frame queue with specific frame decoding setting passed in.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.startFrameDecoding	(final int maxQueueLength, final int maxResultQueueLength, final int width, final int height, final int stride, final int enumImagePixelFormat, final String templateName) throws BarcodeReaderException
+void com.dynamsoft.dbr.BarcodeReader.startFrameDecoding (final int maxQueueLength, final int maxResultQueueLength, final int width, final int height, final int stride, final int enumImagePixelFormat, final String templateName) throws BarcodeReaderException
 ```
 
 ### Parameters
@@ -56,7 +57,6 @@ void com.dynamsoft.dbr.BarcodeReader.startFrameDecoding	(final int maxQueueLengt
 - `stride`: The stride (or scan width) of the frame image.  
 - `format`: The image pixel format used in the image byte array.  
 - `templateName`: The template name.  
-
 
 ### Exceptions
 
@@ -140,7 +140,7 @@ reader.destroy();
 Append a frame image buffer to the inner frame queue.  
 
 ```java
-int com.dynamsoft.dbr.BarcodeReader.appendFrame(byte[] bufferBytes)	 
+int com.dynamsoft.dbr.BarcodeReader.appendFrame(byte[] bufferBytes)
 ```
 
 ### Parameters
@@ -327,10 +327,10 @@ Set callback interface to process intermediate results generated during frame de
 ```java
 void com.dynamsoft.dbr.BarcodeReader.setIntermediateResultCallback(IntermediateResultCallback intermediateResultCallback, Object userData} throws BarcodeReaderException
 ```
-   
+
 ### Parameters
 
-- `intermediateResultCallback`: Callback interface.   
+- `intermediateResultCallback`: Callback interface.
 - `userData`: Customized arguments passed to your function.
 
 ### Exceptions

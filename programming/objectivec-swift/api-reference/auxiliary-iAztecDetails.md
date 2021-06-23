@@ -3,32 +3,32 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iAztecDetails Class
 description: This page shows the iAztecDetails Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iAztecDetails, class, api reference, objective-c, oc, swift
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
 # iAztecDetails
 
 Stores the Aztec details.
-  
 
 ## Typedefs
 
 ```objc
 @interface iAztecDetails
-```  
+```
+
 ---
 
 ## Attributes
   
 | Attribute | Type |
-|---------- | ----------- | 
+|---------- | ----------- |
 | [`moduleSize`](#modulesize) | *NSInteger* |
-| [`rows`](#rows) | *NSInteger* | 
+| [`rows`](#rows) | *NSInteger* |
 | [`columns`](#columns) | *NSInteger* |
 | [`layerNumber`](#layernumber) | *NSInteger* |
-  
-  
+
 ### moduleSize
 
 The barcode module size (the minimum bar width in pixel).
@@ -36,7 +36,7 @@ The barcode module size (the minimum bar width in pixel).
 ```objc
 NSInteger moduleSize
 ```  
-   
+
 ### rows
 
 The row count of the barcode.

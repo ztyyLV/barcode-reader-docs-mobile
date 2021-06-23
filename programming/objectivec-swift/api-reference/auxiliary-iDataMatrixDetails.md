@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iDataMatrixDetails Class
 description: This page shows the iDataMatrixDetails Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iDataMatrixDetails, class, api reference, objective-c, oc, swift
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
@@ -24,12 +25,11 @@ Stores the DataMatrix details.
 | Attribute | Type |
 |---------- | ---- |
 | [`moduleSize`](#modulesize) | *NSInteger* |
-| [`rows`](#rows) | *NSInteger* | 
+| [`rows`](#rows) | *NSInteger* |
 | [`columns`](#columns) | *NSInteger* |
-| [`dataRegionRows`](#dataregionrows) | *NSInteger* | 
+| [`dataRegionRows`](#dataregionrows) | *NSInteger* |
 | [`dataRegionColumns`](#dataregioncolumns) | *NSInteger* |
 | [`dataRegionNumber`](#dataregionnumber) | *NSInteger* |
-
 
 ### moduleSize
 
@@ -55,7 +55,7 @@ The column count of the barcode.
 NSInteger columns
 ```
 
-### dataRegionRows 
+### dataRegionRows
 
 The data region row count of the barcode.
 

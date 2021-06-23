@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader License Me
 description: This page shows BarcodeReader license methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: initLicense, initLicenseFromServer, initLicenseFromLicenseContent, outputLicenseToString, license methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
@@ -31,11 +32,9 @@ void com.dynamsoft.dbr.BarcodeReader.initLicense(String license) throws BarcodeR
 
 `license`: The product keys.
 
-
 ### Exceptions
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
-
 
 ### Code Snippet
 
@@ -52,7 +51,7 @@ Initialize the license and connect to the specified server for online verificati
 ```java
 void com.dynamsoft.dbr.BarcodeReader.initLicenseFromServer(String licenseServer, String licenseKey, DBRServerLicenseVerificationListener dbrServerLicenseVerificationListener)
 ```
-   
+
 ### Parameters
 
 - `licenseServer`: The URL of the license server.  
@@ -77,7 +76,7 @@ Initialize barcode reader license from the license content on the client machine
 
 ```java
 void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLicenseContent(String licenseKey, String licenseContent) throws BarcodeReaderException
-```   
+```
 
 ### Parameters
 
@@ -104,7 +103,7 @@ Output the license content as an encrypted string from the license server to be 
 ```java
 String com.dynamsoft.dbr.BarcodeReader.outputLicenseToString() throws BarcodeReaderException
 ```
-   
+
 ### Return value
 
 The output string which stores the contents of license.
@@ -143,7 +142,6 @@ void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLTS(DMLTSConnectionParameter
 - `ltsInfo`: The struct DMLTSConnectionParameters with customized settings.  
 - `listener`: The delegate to handle callback when license server returns.
 
-
 ### Code Snippet
 
 ```java
@@ -160,4 +158,3 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
    }
 });
 ```
-

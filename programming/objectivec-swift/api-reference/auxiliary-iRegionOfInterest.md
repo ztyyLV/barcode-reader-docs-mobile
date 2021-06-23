@@ -3,9 +3,9 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iRegionOfInterest Class
 description: This page shows the iRegionOfInterest Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iRegionOfInterest, class, api reference, objective-c, oc, swift
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
-
 
 # iRegionOfInterest
 
@@ -18,7 +18,6 @@ Stores the region of interest.
 ```  
   
 ---
-  
 
 ## Attributes
   
@@ -28,7 +27,6 @@ Stores the region of interest.
 | [`point`](#point) | [`CGPoint`](iDBRPoint.md) |
 | [`width`](#width) | *NSInteger* |
 | [`height`](#height) | *NSInteger* |
-
 
 ### roiId
 

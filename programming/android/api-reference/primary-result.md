@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Result Met
 description: This page shows BarcodeReader result methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: getIntermediateResults, result methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
@@ -21,7 +22,7 @@ Get intermediate results containing the original image, the colour clustered ima
 
 ```java
 IntermediateResult[] com.dynamsoft.dbr.BarcodeReader.getIntermediateResults() throws BarcodeReaderException 
-```   
+```
 
 ### Return value
 

@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iLocalizationResult Class
 description: This page shows the iLocalizationResult Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iLocalizationResult, class, api reference, objective-c, oc, swift
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
@@ -18,7 +19,6 @@ Stores the localization result.
 ```  
   
 ---
-  
 
 ## Attributes
   
@@ -27,7 +27,7 @@ Stores the localization result.
 | [`terminatePhase`](#terminatephase) | [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) |
 | [`barcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) |
 | [`barcodeFormatString`](#barcodeformatstring) | *NSString \** |
-| [`barcodeFormat_2 `](#barcodeformat_2 ) | [`EnumBarcodeFormat2 `]({{ site.enumerations }}format-enums.html#barcodeformat_2) |
+| [`barcodeFormat_2`](#barcodeformat_2 ) | [`EnumBarcodeFormat2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) |
 | [`barcodeFormatString_2`](#barcodeformatstring_2) | *NSString \** |
 | [`resultPoints`](#resultpoints) | *NSArray \** |
 | [`angle`](#angle) | *NSInteger* |
@@ -39,7 +39,6 @@ Stores the localization result.
 | [`accompanyingTextBytes`](#accompanyingtextbytes) | *NSData \** |
 | [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | *NSInteger* |
 | [`confidence`](#confidence) | *NSInteger* |
-
 
 ### terminatePhase
 

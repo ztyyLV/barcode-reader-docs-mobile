@@ -15,15 +15,11 @@ breadcrumbText: Methods
   |----------------------|-------------|
   | [`init`](initialize.md#init) | Create an instance of Dynamsoft Barcode Reader. |
 
-&nbsp;
-
 ### Camera Enhancer
   
    | Method               | Description |
    |----------------------|-------------|
    | [`SetCameraEnhancerParam`](camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
-
-&nbsp;
 
 ## Decode
 
@@ -35,8 +31,6 @@ breadcrumbText: Methods
   | [`decodeBase64`](decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
   | [`createIntermediateResult`](decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
-
-&nbsp;
 
 ## Parameter and Runtime Settings
 
@@ -62,8 +56,6 @@ breadcrumbText: Methods
   | [`outputSettingsToFile`](parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
   | [`outputSettingsToString`](parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
 
-&nbsp;
-
 ## License
 
   | Method               | Description |
@@ -73,15 +65,11 @@ breadcrumbText: Methods
   | [`outputLicenseToString`](license.md#outputlicensetostring) | Output the license content to a string from the license server. |
   | [`initLicenseFromLTS`](license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
 
-&nbsp;
-
 ## Result
 
   | Method               | Description |
   |----------------------|-------------|
   | [`getIntermediateResult`](result.md#getintermediateresult) | Get intermediate results. |
-
-&nbsp;
 
 ## Video
 

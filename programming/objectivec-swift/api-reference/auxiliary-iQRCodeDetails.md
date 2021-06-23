@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iQRCodeDetails Class
 description: This page shows the iQRCodeDetails Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iQRCodeDetails, class, api reference, objective-c, oc, swift
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
@@ -18,7 +19,6 @@ Stores the QRCode details.
 ```  
   
 ---
-  
 
 ## Attributes
   
@@ -34,7 +34,6 @@ Stores the QRCode details.
 | [`page`](#page) | *NSInteger* |
 | [`totalPage`](#totalpage) | *NSInteger* |
 | [`parityData`](#paritydata) | *byte* |
-
 
 ### moduleSize
 
@@ -54,7 +53,7 @@ NSInteger rows
 
 ### columns
 
-The column count of the barcode. 
+The column count of the barcode.
 
 ```objc
 NSInteger columns
@@ -83,7 +82,6 @@ Number of the models.
 ```objc
 NSInteger model
 ```
-
 
 ### mode
 

@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Parameter 
 description: This page shows BarcodeReader advanced runtime settings methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: initRuntimeSettingsWithFile, initRuntimeSettingsWithString, appendTplFileToRuntimeSettings, appendTplStringToRuntimeSettings, getAllParameterTemplateNames, outputSettingsToFile, outputSettingsToString, parameter and runtime settings advanced methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 # Android API Reference - BarcodeReader Parameter and Runtime Settings Advanced Methods
@@ -26,12 +27,12 @@ Initialize runtime settings with the settings in a given JSON file.
 
 ```java
 void com.dynamsoft.dbr.BarcodeReader.initRuntimeSettingsWithFile(String filePath, int enumConflictMode) throws BarcodeReaderException
-```   
+```
 
 ### Parameters
 
 - `filePath`: The path of the settings file.  
-- `enumConflictMode`: The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings and replace with the new template. 
+- `enumConflictMode`: The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings and replace with the new template.
 
 ### Exceptions
 
@@ -170,7 +171,7 @@ reader.destroy();
 Gets the parameter templates name array.
 
 ```java
-String [] com.dynamsoft.dbr.BarcodeReader.getAllParameterTemplateNames()		
+String [] com.dynamsoft.dbr.BarcodeReader.getAllParameterTemplateNames()
 ```
 
 ### Return value

@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Android API Reference - Point Class
 description: This page shows the Point Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: Point, class, api reference, android
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
@@ -13,11 +14,10 @@ Stores an x- and y-coordinate pair in two-dimensional space.
 
 ## Attributes
   
-| Attribute | Type | 
-|---------- | ---- | 
+| Attribute | Type |
+|---------- | ---- |
 | [`x`](#x) | *int* |
 | [`y`](#y) | *int* |
-
 
 ### x
 

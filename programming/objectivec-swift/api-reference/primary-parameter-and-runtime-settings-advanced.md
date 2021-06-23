@@ -4,10 +4,11 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Parameter an
 description: This page shows advanced Runtime Settings methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: initRuntimeSettingsWithFile, initRuntimeSettingsWithString, appendTplFileToRuntimeSettings, appendTplStringToRuntimeSettings, allParameterTemplateNames, outputSettingsToFile, outputSettingsToString, parameter and runtime settings advanced methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 # Objective-C API Reference - Parameter and Runtime Settings Advanced Methods
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`initRuntimeSettingsWithFile`](#initruntimesettingswithfile) | Initialize runtime settings with the settings in a given JSON file. |
@@ -28,14 +29,14 @@ Initialize runtime settings with the parameters obtained from a JSON file.
 - (void)initRuntimeSettingsWithFile:(NSString* _Nonnull)fileName
                         conflictMode:(EnumConflictMode)conflictMode
                         error:(NSError* _Nullable * _Nullable)error;
-```   
-   
+```
+
 ### Parameters
 
 `[in] fileName` The settings file path.  
 `[in] conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template settings or to overwrite previous settings with the new template.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.  
- 
+
 ### Code Snippet
 
 Objective-C:
@@ -53,6 +54,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificat
 NSError __autoreleasing * _Nullable error;
 [barcodeReader initRuntimeSettingsWithFile:@"your template file path" conflictMode:EnumConflictModeOverwrite error:&error];
 ```
+
 Swift:
 
 ```Swift
@@ -76,13 +78,13 @@ Initialize runtime settings with the parameters obtained from a JSON string.
 - (void)initRuntimeSettingsWithString:(NSString* _Nonnull)content
                         conflictMode:(EnumConflictMode)conflictMode
                         error:(NSError* _Nullable * _Nullable)error;
-```   
-   
-### Parameters 
+```
+
+### Parameters
 
 `[in] content` A JSON string that represents the content of the settings.  
 `[in] conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.  
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.   
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 ### Code Snippet
 
@@ -101,6 +103,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificat
 NSError __autoreleasing * _Nullable error;
 [barcodeReader initRuntimeSettingsWithString:@"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}" conflictMode:EnumConflictModeOverwrite error:&error];
 ```
+
 Swift:
 
 ```Swift
@@ -124,13 +127,13 @@ Append a new template file to the current runtime settings.
 - (void)appendTplFileToRuntimeSettings:(NSString * _Nonnull)fileName
                         conflictMode:(EnumConflictMode)conflictMode
                                 error:(NSError * _Nullable *_Nullable)error;
-```   
- 
+```
+
 ### Parameters
 
-`[in] fileName` The settings file path.     
-`[in] conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template settings or to overwrite previous settings with the new template.     
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.    
+`[in] fileName` The settings file path.
+`[in] conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template settings or to overwrite previous settings with the new template.
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 ### Code Snippet
 
@@ -149,6 +152,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificat
 NSError __autoreleasing * _Nullable error;
 [barcodeReader appendTplFileToRuntimeSettings:@"your template file path" conflictMode:EnumConflictModeIgnore error:&error];
 ```
+
 Swift:
 
 ```Swift
@@ -172,13 +176,13 @@ Append a new template string to the current runtime settings.
 - (void)appendTplStringToRuntimeSettings:(NSString * _Nonnull)content
                             conflictMode:(EnumConflictMode)conflictMode
                                     error:(NSError *_Nullable *_Nullable)error;
-```   
-   
+```
+
 ### Parameters
 
-`[in] content` A JSON string that represents the content of the settings.   
-`[in] conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.   
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information. 
+`[in] content` A JSON string that represents the content of the settings.
+`[in] conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 ### Code Snippet
 
@@ -198,7 +202,9 @@ NSError __autoreleasing * _Nullable error;
 [barcodeReader initRuntimeSettingsWithString:@"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}" conflictMode:EnumConflictModeOverwrite error:&error];
 [barcodeReader appendTplStringToRuntimeSettings:@"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_OneD\"], \"ExpectedBarcodesCount\":20}}" conflictMode:EnumConflictModeIgnore error:&error];
 ```
+
 Swift:
+
 ```Swift
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
@@ -219,8 +225,8 @@ Get count of parameter templates.
 
 ```objc
 - (NSArray<NSString*>* _Nullable)allParameterTemplateNames: (NSError *__autoreleasing  _Nullable * _Nullable)error;
-```   
-   
+```
+
 ### Parameters
 
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
@@ -247,6 +253,7 @@ NSError __autoreleasing * _Nullable error;
 
 [barcodeReader allParameterTemplateNames:&error];
 ```
+
 Swift:
 
 ```Swift
@@ -270,8 +277,8 @@ Outputs runtime settings and save them into a settings file (JSON file).
 - (void)outputSettingsToFile:(NSString *_Nullable)filePath 
                 settingsName:(NSString*_Nonnull)settingsName 
                         error:(NSError*_Nullable *_Nullable)error;
-```   
-   
+```
+
 ### Parameters
 
 `[in] filePath` The path of the output file which stores current settings.  
@@ -296,6 +303,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificat
 NSError __autoreleasing * _Nullable error;
 settingsName = [barcodeReader outputSettingsToFile:@"your saving file path" settingsName:@"currentRuntimeSettings" error:&error];
 ```
+
 Swift:
 
 ```Swift
@@ -318,8 +326,8 @@ Output runtime settings to a string.
 ```objc
 - (NSString *_Nullable)outputSettingsToString:(NSString*_Nonnull)settingsName 
                                         error:(NSError* _Nullable * _Nullable)error;
-```   
-   
+```
+
 ### Parameters
 
 `[in] settingsName` A unique name for declaring current runtime settings.  
@@ -347,6 +355,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificat
 NSError __autoreleasing * _Nullable error;
 settingsName = [barcodeReader outputSettingsToString:@"currentRuntimeSettings" error:&error];
 ```
+
 Swift:
 
 ```Swift

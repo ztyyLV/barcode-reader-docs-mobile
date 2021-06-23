@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iOneDCodeDetails Class
 description: This page shows the iOneDCodeDetails Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iOneDCodeDetails, class, api reference, objective-c, oc, swift
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 # iOneDCodeDetails
@@ -17,7 +18,6 @@ Stores the OneD code details.
 ```  
   
 ---
-  
 
 ## Attributes
   
@@ -30,7 +30,6 @@ Stores the OneD code details.
 | [`stopCharsBytesLength`](#stopcharsbyteslength) | *NSInteger* |
 | [`checkDigitBytes`](#checkdigitbytes) | *NSData \** |
 | [`checkDigitBytesLength`](#checkdigitbyteslength) | *NSInteger* |
-
 
 ### moduleSize
 

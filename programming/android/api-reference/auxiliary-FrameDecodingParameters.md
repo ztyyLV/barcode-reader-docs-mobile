@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Android API Reference - FrameDecodingParameters Class
 description: This page shows the FrameDecodingParameters Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: FrameDecodingParameters, class, api reference, android
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
@@ -11,9 +12,8 @@ needAutoGenerateSidebar: false
 
 Defines a struct to configure the frame decoding Parameters.  
 
-
 ## Attributes
-    
+
 | Attribute | Type |
 |---------- | ---- |
 | [`maxQueueLength`](#maxqueuelength) | *int* |
@@ -29,7 +29,6 @@ Defines a struct to configure the frame decoding Parameters.
 | [`clarityCalculationMethod`](#claritycalculationmethod) | *int* |
 | [`clarityFilterMode`](#clarityfiltermode) | *int* |
 
-
 ### maxQueueLength
 
 The maximum number of frames waiting for decoding.
@@ -38,10 +37,10 @@ The maximum number of frames waiting for decoding.
 int com.dynamsoft.dbr.FrameDecodingParameters.maxQueueLength
 ```
 
-- **Value range**   
-    [0,0x7fffffff]   
-      
-- **Default value**   
+- **Value range**
+    [0,0x7fffffff]
+
+- **Default value**
     3
 
 ### maxResultQueueLength
@@ -52,10 +51,10 @@ The maximum number of frames waiting results (text result/localization result) w
 int com.dynamsoft.dbr.FrameDecodingParameters.maxResultQueueLength
 ```
 
-- **Value range**   
-    [0,0x7fffffff]   
-      
-- **Default value**   
+- **Value range**
+    [0,0x7fffffff]
+
+- **Default value**
     10  
 
 ### width
@@ -66,10 +65,10 @@ The width of the frame image in pixels.
 int com.dynamsoft.dbr.FrameDecodingParameters.width
 ```
 
-- **Value range**   
-    [0,0x7fffffff]   
-      
-- **Default value**   
+- **Value range**
+    [0,0x7fffffff]
+
+- **Default value**
     0  
 
 ### height
@@ -80,10 +79,10 @@ The height of the frame image in pixels.
 int com.dynamsoft.dbr.FrameDecodingParameters.height
 ```
 
-- **Value range**   
-    [0,0x7fffffff]   
-      
-- **Default value**   
+- **Value range**
+    [0,0x7fffffff]
+
+- **Default value**
     0  
 
 ### stride
@@ -94,12 +93,12 @@ The stride (or scan width) of the frame image.
 int com.dynamsoft.dbr.FrameDecodingParameters.stride
 ```
 
-- **Value range**   
-    [0,0x7fffffff]   
-      
-- **Default value**   
-    0 
-      
+- **Value range**
+    [0,0x7fffffff]
+
+- **Default value**
+    0
+
 ### imagePixelFormat
 
 The image pixel format used in the image byte array.
@@ -108,12 +107,12 @@ The image pixel format used in the image byte array.
 int com.dynamsoft.dbr.FrameDecodingParameters.imagePixelFormat
 ```
 
-- **Value range**   
+- **Value range**
     A value of [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) Enumeration items.
-      
-- **Default value**   
+
+- **Default value**
     `IPF_GRAYSCALED`
-    
+
 - **See also**  
     [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)
 
@@ -127,10 +126,10 @@ RegionDefinition com.dynamsoft.dbr.FrameDecodingParameters.region
 
 - **Default value**  
     `{ regionLeft = 0, regionRight = 100, regionTop = 0, regionBottom = 100, regionMeasuredByPercentage = 1 }`
-      
-- **See also**   
+
+- **See also**
     [`RegionDefinition`](RegionDefinition.md)
-     
+
 ### threshold
 
 The threshold used for filtering frames.
@@ -138,10 +137,11 @@ The threshold used for filtering frames.
 ```java
 float com.dynamsoft.dbr.FrameDecodingParameters.threshold
 ```
-- **Value range**   
+
+- **Value range**
     [0, 1]
-      
-- **Default value**   
+
+- **Default value**
     0.1
 
 - **Remarks**  
@@ -155,12 +155,12 @@ The frequency of calling [`appendFrame`](../BarcodeReader/video.md#appendframe) 
 int com.dynamsoft.dbr.FrameDecodingParameters.fps
 ```
 
-- **Value range**   
+- **Value range**
     [0,0x7fffffff]
-      
-- **Default value**   
+
+- **Default value**
     0  
-    
+
 - **Remarks**  
     0 means the frequency will be calculated automatically by the SDK.
 
@@ -172,14 +172,14 @@ Sets whether to filter frames automatically.
 int com.dynamsoft.dbr.FrameDecodingParameters.autoFilter
 ```
 
-- **Value range**   
+- **Value range**
     [0,1]
-      
-- **Default value**   
+
+- **Default value**
     1  
-    
+
 - **Remarks**  
-    0: Diable filtering frames automatically. 1: Enable filtering frames automatically. 
+    0: Diable filtering frames automatically. 1: Enable filtering frames automatically.
 
 ### clarityCalculationMethod
 
@@ -189,14 +189,14 @@ Sets the method used for calculating the clarity of the frames.
 int com.dynamsoft.dbr.FrameDecodingParameters.clarityCalculationMethod
 ```
 
-- **Value range**   
-    Any one of the [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) Enumeration items.   
-      
-- **Default value**   
-    ECCM_CONTRAST   
-    
+- **Value range**
+    Any one of the [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) Enumeration items.
+
+- **Default value**
+    ECCM_CONTRAST
+
 - **See also**  
-    [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod)    
+    [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod)
 
 ### clarityFilterMode
 
@@ -206,12 +206,11 @@ Sets the mode used for filtering frames by calculated clarity.
 int com.dynamsoft.dbr.FrameDecodingParameters.clarityFilterMode
 ```
 
-- **Value range**   
-    Any one of the [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) Enumeration items.   
-      
-- **Default value**   
-    CFM_GENERAL   
-    
-- **See also**  
-    [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode)    
+- **Value range**
+    Any one of the [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) Enumeration items.
 
+- **Default value**
+    CFM_GENERAL
+
+- **See also**  
+    [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode)

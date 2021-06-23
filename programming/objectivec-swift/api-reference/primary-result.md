@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Result Metho
 description: This page shows Result methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: getIntermediateResult, result methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 # Objective-C API Reference - Result Methods
@@ -20,9 +21,9 @@ Return intermediate results containing the original image, the colour clustered 
 
 ```objc
 -(NSArray<iIntermediateResult*>* _Nullable)getIntermediateResult:(NSError* _Nullable *  _Nullable)error;
-```   
-   
-### Parameters 
+```
+
+### Parameters
 
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
@@ -55,6 +56,7 @@ settings.intermediateResultTypes = EnumIntermediateResultTypeColourConvertedGray
 result = [m_barcodeReader decodeFileWithName:@"your file path" templateName:@"" error:&error];
 irResult = [m_barcodeReader getIntermediateResult:&error];
 ```
+
 Swift:
 
 ```Swift

@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Android API Reference - OneDCodeDetails Class
 description: This page shows the OneDCodeDetails Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: OneDCodeDetails, class, api reference, android
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 # OneDCodeDetails

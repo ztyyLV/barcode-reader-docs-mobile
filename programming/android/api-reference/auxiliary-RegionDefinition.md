@@ -3,13 +3,14 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Android API Reference - RegionDefinition Class
 description: This page shows the RegionDefinition Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: RegionDefinition, class, api reference, android
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
 # RegionDefinition
 
-Stores the region information. 
+Stores the region information.
   
 ## Attributes
   
@@ -29,11 +30,11 @@ The top-most coordinate or percentage of the region.
 int com.dynamsoft.dbr.RegionDefinition.regionTop
 ```
 
-- **Value range**   
+- **Value range**
     regionMeasuredByPercentage = 0: [0, 0x7fffffff]  
     regionMeasuredByPercentage = 1: [0, 100]  
-      
-- **Default value**   
+
+- **Default value**
     0
 
 ### regionLeft
@@ -44,11 +45,11 @@ The left-most coordinate or percentage of the region.
 int com.dynamsoft.dbr.RegionDefinition.regionLeft
 ```
 
-- **Value range**   
+- **Value range**
     regionMeasuredByPercentage = 0: [0, 0x7fffffff]  
     regionMeasuredByPercentage = 1: [0, 100]  
-      
-- **Default value**   
+
+- **Default value**
     0
 
 ### regionRight
@@ -59,11 +60,11 @@ The right-most coordinate or percentage of the region.
 int com.dynamsoft.dbr.RegionDefinition.regionRight
 ```
 
-- **Value range**   
+- **Value range**
     regionMeasuredByPercentage = 0: [0, 0x7fffffff]  
     regionMeasuredByPercentage = 1: [0, 100]  
-      
-- **Default value**   
+
+- **Default value**
     0
 
 ### regionBottom
@@ -74,13 +75,13 @@ The bottom-most coordinate or percentage of the region.
 int com.dynamsoft.dbr.RegionDefinition.regionBottom
 ```
 
-- **Value range**   
+- **Value range**
     regionMeasuredByPercentage = 0: [0, 0x7fffffff]  
     regionMeasuredByPercentage = 1: [0, 100]  
-      
-- **Default value**   
+
+- **Default value**
     0
-    
+
 ### regionMeasuredByPercentage
 
 Sets whether or not to use percentage to measure the region size.
@@ -89,11 +90,11 @@ Sets whether or not to use percentage to measure the region size.
 int com.dynamsoft.dbr.RegionDefinition.regionMeasuredByPercentage
 ```
 
-- **Value range**   
+- **Value range**
     [0, 1]
-      
-- **Default value**   
+
+- **Default value**
     0
-    
-- **Remarks**   
+
+- **Remarks**
     When it's set to 1, the values of Top, Left, Right, Bottom indicate percentage (from 0 to 100); Otherwise, they indicate coordinates. 0: not by percentage 1: by percentage.

@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Decode Met
 description: This page shows BarcodeReader Decode methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: decodeFile, decodeFileInMemory, decodeBuffer, decodeBase64String, decodeBufferedImage, decode methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
@@ -15,7 +16,7 @@ needAutoGenerateSidebar: true
   | [`decodeFileInMemory`](#decodefileinmemory) | Decode barcodes from an image file in memory. |
   | [`decodeBuffer`](#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64String`](#decodebase64string) | Decode barcodes from a base64 encoded string. |
-  | [`decodeBufferedImage `](#decodeBufferedImage) | Decodes barcode from a buffered imag (bitmap). |
+  | [`decodeBufferedImage`](#decodeBufferedImage) | Decodes barcode from a buffered imag (bitmap). |
   | [`initIntermediateResult`](#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
   
@@ -27,7 +28,7 @@ Decode barcodes from a specified image file.
 
 ```java
 TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeFile(String fileFullPath, String templateName)	throws BarcodeReaderException	
-```   
+```
 
 ### Parameters
 
@@ -67,8 +68,8 @@ Decode barcodes from an image file in memory.
 
 ```java
 TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeFileInMemory(byte[] fileBytes, String templateName) throws BarcodeReaderException
-```   
-   
+```
+
 ### Parameters
 
 - `fileBytes`: The image file bytes in memory.  
@@ -104,8 +105,8 @@ reader.destroy();
 
 ```java
 TextResult [] com.dynamsoft.dbr.BarcodeReader.decodeFileInMemory(InputStream fileStream, String templateName) throws BarcodeReaderException, IOException
-```   
-   
+```
+
 ### Parameters
 
 - `fileStream`: The image file bytes in memory.  
@@ -144,9 +145,9 @@ reader.destroy();
 Decode barcodes from the memory buffer containing image pixels in defined format.
 
 ```java
-TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBuffer(byte[] buffer, int width, int height, int stride, int enumImagePixelFormat, String templateName)	throws BarcodeReaderException	
+TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBuffer(byte[] buffer, int width, int height, int stride, int enumImagePixelFormat, String templateName)	throws BarcodeReaderException
 ```
-   
+
 ### Parameters
 
 - `buffer`: The array of bytes which contain the image data.
@@ -195,8 +196,8 @@ Decode barcode from an image file encoded as a base64 string.
 
 ```java
 TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBase64String(String base64, String templateName)	throws BarcodeReaderException
-```   
-   
+```
+
 ### Parameters
 
 - `base64`:	A base64 encoded string that represents an image.
@@ -236,7 +237,7 @@ Decodes barcode from a buffered image (bitmap).
 ```java
 TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBufferedImage(Bitmap image, String templateName)	throws IOException, BarcodeReaderException
 ```
-   
+
 ### Parameters
 
 - `image`: The image to be decoded.  
@@ -276,7 +277,7 @@ Inits an intermediateResult struct with default values.
 
 ```java
 IntermediateResult com.dynamsoft.dbr.BarcodeReader.initIntermediateResults(int resultType) throws BarcodeReaderException	
-```   
+```
 
 ### Parameters
 
@@ -313,8 +314,8 @@ IntermediateResult imResult = reader.initIntermediateResult(EnumIntermediateResu
 Decodes barcode from intermediate results.
 
 ```java
-TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeIntermediateResults(IntermediateResult[] results, String templateName) throws BarcodeReaderException	
-```   
+TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeIntermediateResults(IntermediateResult[] results, String templateName) throws BarcodeReaderException
+```
 
 ### Parameters
 
@@ -351,4 +352,3 @@ reader.decodeFile("your file path", "");
 IntermediateResult[] irtResult = reader.getIntermediateResults();
 TextResult[] result = reader.decodeIntermediateResults(irtResult, "");
 ```
-

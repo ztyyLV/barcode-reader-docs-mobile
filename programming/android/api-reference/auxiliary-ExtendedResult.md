@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Android API Reference - ExtendedResult Class
 description: This page shows the ExtendedResult Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: ExtendedResult, class, api reference, android
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
@@ -15,11 +16,11 @@ Stores the extended result.
   
 | Attribute | Type |
 |---------- | ---- |
-| [`resultType`](#resulttype) | *int * |
-| [`barcodeFormat`](#barcodeformat) | *int * |
-| [`barcodeFormatString`](#barcodeformatstring) | *String * |
-| [`barcodeFormat_2`](#barcodeformat_2) | *int * |
-| [`barcodeFormatString_2`](#barcodeformatstring_2) | *String * |
+| [`resultType`](#resulttype) | *int* |
+| [`barcodeFormat`](#barcodeformat) | *int* |
+| [`barcodeFormatString`](#barcodeformatstring) | *String* |
+| [`barcodeFormat_2`](#barcodeformat_2) | *int* |
+| [`barcodeFormatString_2`](#barcodeformatstring_2) | *String* |
 | [`confidence`](#confidence) | *int* |
 | [`bytes`](#bytes) | *byte\[\]* |
 | [`accompanyingTextBytes`](#accompanyingtextbytes) | *byte\[\]* |

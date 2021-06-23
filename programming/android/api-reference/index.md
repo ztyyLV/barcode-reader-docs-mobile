@@ -130,7 +130,7 @@ breadcrumbText: API Reference
   | [`ErrorCallback`](interface.md#errorcallback) | Represents the method that will handle the error code returned by the SDK. |
   | [`IntermediateResultCallback`](interface.md#intermediateresultcallback) | Represents the method that will handle the intermediate result array returned by the SDK. |
   | [`TextResultCallback`](interface.md#cb_textresult) | Represents the method that will handle the text result array returned by the SDK. | 
-  | [`DBRServerLicenseVerificationListener`](interface.md#dbrserverlicenseverificationlistener) | Represents the method that will handle callback when license server returns. | 
+  | [`DBRServerLicenseVerificationListener`](interface.md#dbrserverlicenseverificationlistener) | Represents the method that will handle callback when license server returns. |
 
 ## [Error Code]({{ site.enumerations }}error-code.html)
 

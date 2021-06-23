@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Initialize M
 description: This page shows Initialize methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: init, initialize methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
@@ -14,7 +15,6 @@ needAutoGenerateSidebar: true
   | [`init`](#init) | Create an instance of Dynamsoft Barcode Reader. |
   
   ---
-  
 
 ## init
 
@@ -40,10 +40,9 @@ Objective-C:
 DynamsoftBarcodeReader *barcodeReader;
 BarcodeReader = [[DynamsoftBarcodeReader alloc] init];
 ```
+
 Swift:
 
 ```Swift
 let barcodeReader = DynamsoftBarcodeReader.init()
 ```
-
-

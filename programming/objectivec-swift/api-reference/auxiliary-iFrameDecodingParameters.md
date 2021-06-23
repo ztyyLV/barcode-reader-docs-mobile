@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iFrameDecodingParameters Class
 description: This page shows the iFrameDecodingParameters Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iExtendedResult, class, api reference, objective-c, oc, swift
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
@@ -20,7 +21,7 @@ Defines a struct to configure the frame decoding Parameters.
 ---
 
 ## Attributes
-    
+
 | Attribute | Type |
 |---------- | ---- |
 | [`maxQueueLength`](#maxqueuelength) | *NSInteger* |
@@ -36,7 +37,6 @@ Defines a struct to configure the frame decoding Parameters.
 | [`clarityCalculationMethod`](#claritycalculationmethod) | [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) |
 | [`clarityFilterMode`](#clarityfiltermode) | [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) |
 
-
 ### maxQueueLength
 
 The maximum number of frames waiting for decoding.
@@ -45,10 +45,10 @@ The maximum number of frames waiting for decoding.
 NSInteger maxQueueLength
 ```
 
-- **Value range**   
-    [0,0x7fffffff]   
-      
-- **Default value**   
+- **Value range**
+    [0,0x7fffffff]
+
+- **Default value**
     3
 
 ### maxResultQueueLength
@@ -59,24 +59,24 @@ The maximum number of frames waiting results (text result/localization result) w
 NSInteger maxResultQueueLength
 ```
 
-- **Value range**   
-    [0,0x7fffffff]   
-      
-- **Default value**   
+- **Value range**
+    [0,0x7fffffff]
+
+- **Default value**
     10  
 
 ### width
 
-The width of the frame image in pixels. 
+The width of the frame image in pixels.
 
 ```objc
 NSInteger width
 ```
 
-- **Value range**   
-    [0,0x7fffffff]   
-      
-- **Default value**   
+- **Value range**
+    [0,0x7fffffff]
+
+- **Default value**
     0  
 
 ### height
@@ -87,10 +87,10 @@ The height of the frame image in pixels.
 NSInteger height
 ```
 
-- **Value range**   
-    [0,0x7fffffff]   
-      
-- **Default value**   
+- **Value range**
+    [0,0x7fffffff]
+
+- **Default value**
     0  
 
 ### stride
@@ -101,12 +101,12 @@ The stride (or scan width) of the frame image.
 NSInteger stride
 ```
 
-- **Value range**   
-    [0,0x7fffffff]   
-      
-- **Default value**   
-    0 
-      
+- **Value range**
+    [0,0x7fffffff]
+
+- **Default value**
+    0
+
 ### imagePixelFormat
 
 The image pixel format used in the image byte array.
@@ -115,15 +115,15 @@ The image pixel format used in the image byte array.
 EnumImagePixelFormat imagePixelFormat
 ```
 
-- **Value range**   
+- **Value range**
     A value of [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) Enumeration items.
-      
-- **Default value**   
+
+- **Default value**
     `EnumImagePixelFormatGrayScaled`
-    
+
 - **See also**  
     [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)
-      
+
 ### region
 
 The region definition of the frame to calculate the internal indicator. 
@@ -134,10 +134,10 @@ iRegionDefinition region
 
 - **Default value**  
     `{ regionLeft = 0, regionRight = 100, regionTop = 0, regionBottom = 100, regionMeasuredByPercentage = 1 }`
-      
-- **See also**   
+
+- **See also**
     [`iRegionDefinition`](iRegionDefinition.md)
-     
+
 ### threshold
 
 The threshold used for filtering frames.
@@ -146,12 +146,12 @@ The threshold used for filtering frames.
 float threshold
 ```
 
-- **Value range**   
+- **Value range**
     [0, 1]
-      
-- **Default value**   
+
+- **Default value**
     0.1
-    
+
 - **Remarks**  
     The SDK will calculate an inner indicator for each frame from [`AppendFrame`](../methods/video.md#appendframe), if the change rate of the indicators between the current frame and the history frames is larger than the given threshold, the current frame will not be added to the inner frame queue waiting for decoding.
 
@@ -163,12 +163,12 @@ The frequency of calling [`AppendFrame`](../methods/video.md#appendframe) per se
 NSInteger fps
 ```
 
-- **Value range**   
+- **Value range**
     [0,0x7fffffff]
-      
-- **Default value**   
+
+- **Default value**
     0  
-    
+
 - **Remarks**  
     0 means the frequency will be calculated automatically by the SDK.
 
@@ -179,15 +179,15 @@ Sets whether to filter frames automatically.
 ```objc
 NSInteger autoFilter
 ```
-- **Value range**   
+
+- **Value range**
     [0,1]
-      
-- **Default value**   
+
+- **Default value**
     1  
-    
-- **Remarks**  
+
+- **Remarks**
     0: Diable filtering frames automatically. 1: Enable filtering frames automatically. 
-    
 
 ### clarityCalculationMethod
 
@@ -197,15 +197,15 @@ Sets the method used for calculating the clarity of the frames.
 EnumClarityCalculationMethod clarityCalculationMethod
 ```
 
-- **Value range**   
-    Any one of the [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) Enumeration items.   
-      
-- **Default value**   
-    EnumClarityCalculationMethodContrast   
-    
+- **Value range**
+    Any one of the [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) Enumeration items.
+
+- **Default value**
+    EnumClarityCalculationMethodContrast
+
 - **See also**  
-    [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod)    
-    
+    [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod)
+
 ### clarityFilterMode
 
 Sets the mode used for filtering frames by calculated clarity.
@@ -214,11 +214,11 @@ Sets the mode used for filtering frames by calculated clarity.
 EnumClarityFilterMode clarityFilterMode
 ```
 
-- **Value range**   
-    Any one of the [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) Enumeration items.   
-      
-- **Default value**   
-    EnumClarityFilterModeGeneral   
-    
+- **Value range**
+    Any one of the [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) Enumeration items.
+
+- **Default value**
+    EnumClarityFilterModeGeneral
+
 - **See also**  
-    [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode)    
+    [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode)
