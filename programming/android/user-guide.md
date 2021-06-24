@@ -12,32 +12,54 @@ noTitleIndex: true
 # User Guide for Android Edition
 
 - Systems Requirements:
-  - Supported OS: Android 5 or higher (Android 7 or higher recommended)
-  - Supported ABI: armeabi-v7a, arm64-v8a, x86 and x86_64
+  - Supported OS: Android 5 or higher (Android 7 or higher recommended).
+  - Supported ABI: armeabi-v7a, arm64-v8a, x86 and x86_64.
 
 ## Installation
 
 There are two options for you to install Dynamsoft Barcode Reader. You can download the package from our website or use maven to load the packages.
 
-### Download Installation
+### Option 1: Download Installation
 
-To install Dynamsoft Barcode Reader for Android on your development machine, you can download the SDK from the [Dynamsoft website](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx) and unzip `dbr-android-{version-number}.zip`.
+If you have downloaded the SDK from the [Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/) and unzipped `dbr-android-{version-number}.zip`, you can find two `aar` files and a sample folder. You can simply include `DynamsoftBarcodeReaderAndroid.aar` to your project to start creating a barcode scanning app. The other aar package, `DynamsoftCameraEnhancer.aar`, is an expansion package which integrates video frame preprocessing algorithms and camera control APIs. In this guide, we will use the `Camera Enhancer` to create the camera module for receiving video input.
 
-After decompression, you can find samples in the **DBRSamples** folder under the **dbr-android-{version-number}** folder.
+You can add your downloaded packages into your project by the following steps:
 
-### Build with Maven
+1. Create a new Android project in Android Studio.
+2. Import the `DynamsoftBarcodeReaderAndroid.aar` and `DynamsoftCameraEnhancerAndroid.aar` files into the new project.
+3. In the project, open `build.gradle(Module: app)` and add the following code:
 
-You can add Dynamsoft Barcode Reader like below:
+   ```groovy
+   repositories {
+      flatDir {
+         dirs 'libs'
+      }
+   }
+   ```
+
+   Then Add `.aar` reference in the dependencies:
+
+   ```groovy
+   implementation(name: 'DynamsoftBarcodeReaderAndroid', ext: 'aar')
+   implementation(name: 'DynamsoftCameraEnhancerAndroid', ext: 'aar')
+   ```
+
+4. Click **Sync Now**. After the synchronization completes, `DynamsoftBarcodeReaderAndroid.aar` and `DynamsoftCameraEnhancerAndroid.aar` are added to the project.
+
+### Option 2: Install from Gradle
+
+You can add Dynamsoft Barcode Reader by the following steps:
 
 1. Add download URL in your project's `build.gradle`.
 
-   ```java
+   ```groovy
    allprojects {
       repositories {
          google()
          jcenter()
          maven {
-            url "http://download2.dynamsoft.com/maven/dbr/aar"
+            url "http://download.dynamsoft.com/maven/dbr/aar"
+            url "http://download.dynamsoft.com/maven/dce/aar"
          }
       }
    }
@@ -45,77 +67,26 @@ You can add Dynamsoft Barcode Reader like below:
 
 2. Implement Dynamsoft Barcode Reader at dependencies in your module's `build.gradle`.
 
-   ```java
-   implementation 'com.dynamsoft:dynamsoftbarcodereader:{version-number}@aar'
+   ```groovy
+   implementation 'com.dynamsoft:dynamsoftbarcodereader:{version number}@aar'
+   implementation 'com.dynamsoft:dynamsoftcameraenhancer:{version number}@aar'
    ```
 
    Please replace `{version-number}` with the correct version number, e.g.
 
-   ```java
+   ```groovy
    implementation 'com.dynamsoft:dynamsoftbarcodereader:8.4.1@aar'
    ```
 
 ## Getting Started: Create a Simple Video Barcode Scanner
 
-In this section, you will be guide on creating a Hello world app which can read barcodes from camera video input. `Dynamsoft Camera Enhancer` will be used to deploy the camera video input module in this guide.
-
-### Create a new project and include the library
-
-1. Create a new Android project in Android Studio.
-2. Import the `DynamsoftBarcodeReaderAndroid.aar` and `DynamsoftCameraEnhancerAndroid.aar` files into the new project.
-
-   To manually import the `.aar` :
-
-      i. Decompress the `dbr-android-{version number}.zip` file and you will find `DynamsoftBarcodeReaderAndroid.aar` and `DynamsoftCameraEnhancerAndroid.aar` in the decompressed folder.
-      ii. Put the .aar file under the directory libs in the project.
-      iii. In the project, open `build.gradle(Module: app)` and add the following code:
-
-      ```java
-      repositories {
-         flatDir {
-            dirs 'libs'
-         }
-      }
-      ```
-
-      ii. Add `.aar` reference in the dependencies:
-
-      ```java
-      implementation(name: 'DynamsoftBarcodeReaderAndroid', ext: 'aar')
-      implementation(name: 'DynamsoftCameraEnhancerAndroid', ext: 'aar')
-      ```
-
-      iii. Click **Sync Now**. After the synchronization completes, `DynamsoftBarcodeReaderAndroid.aar` and `DynamsoftCameraEnhancerAndroid.aar` are added to the project.
-
-   Or you can use maven import the `.aar` file into the project.
-
-      i. In the new project, open `build.gradle(module:app)` and add the following code:
-
-      ```java
-      allprojects {
-         repositories {
-            maven {
-               url "http://download.dynamsoft.com/maven/dbr/aar"
-               url "http://download.dynamsoft.com/maven/dce/aar"
-            }
-         }
-      }
-      ```
-
-      ii. Then add `.aar` reference in the dependencies as below:
-
-      ```java
-      implementation 'com.dynamsoft:dynamsoftbarcodereader:{version number}@aar'
-      implementation 'com.dynamsoft:dynamsoftcameraenhancer:{version number}@aar'
-      ```
-
-      iii. Click Sync Now. After the synchronization completes, `DynamsoftBarcodeReaderAndroid.aar` and `DynamsoftCameraEnhancerAndroid.aar` are added to the project.
+In this section, you will be guided on creating a Hello world app that can read barcodes from camera video input. `Dynamsoft Camera Enhancer` will be used to deploy the camera module for receiving video input.
 
 ### Initialize camera module
 
-In the process of video barcode scanning, the camera will provide the video input for the barcode reader. In this section, you will be guide on how to initialize the camera module for barcode scanning with the help of `Dynamsoft Camera Enhancer`. You can skip this step if you are not going to use `Dynamsoft Camera Enhancer` to create your camera module.
+In the process of video barcode scanning, the camera will provide the video input for the barcode reader. In this section, you will be guided on how to initialize the camera module for barcode scanning with the help of `Dynamsoft Camera Enhancer`. You can skip this step if you are not going to use `Dynamsoft Camera Enhancer` to create your camera module.
 
-1. Import and instantiate the Camera Enhancer
+1. Import and instantiate the Camera Enhancer. If you have followed the installation guide, you can import Dynamsoft Barcode Reader (dbr) and Camera Enhancer (dce) in your project.
 
    Import:
 
@@ -172,7 +143,7 @@ In the process of video barcode scanning, the camera will provide the video inpu
    }
    ```
 
-4. Edit layout file. The following code are the necessary content for you to display the camera UI and barcode decode result.
+4. Edit layout file. The following code is the necessary content for you to display the camera UI and barcode decode result.
 
    ```xml
    <com.dynamsoft.dce.CameraView
@@ -195,7 +166,7 @@ In the process of video barcode scanning, the camera will provide the video inpu
 
 ### Initialize barcode reader
 
-At the begining of your class, please instantiate the Barcode Reader.
+At the beginning of your class, please instantiate the Barcode Reader.
 
 ```java
 BarcodeReader reader;
@@ -219,9 +190,9 @@ try {
 }
 ```
 
-### Barcode scanning
+### Add Codes for Barcode scanning
 
-If you are following this guide and using `Dynamsoft Camera Enhancer` to create the camera module, please add the following code to start the barcode scanning. The Barcode Reader will automatically use `decodeBuffer` method to process the video frames once it have received parameters transfered from the Camera Enhancer. Firstly, please instantiate Text result callback. The Text result callback will be sent to the Barcode Reader as a parameter and help you on getting the barcode decode result.
+If you are following this guide and using `Dynamsoft Camera Enhancer` to create the camera module, please add the following code to start the barcode scanning. The Barcode Reader will automatically use the `decodeBuffer` method to process the video frames once it has received parameters transferred from the Camera Enhancer. Firstly, please instantiate the Text result callback. The Text result callback will be sent to the Barcode Reader as a parameter and help you in getting the barcode decode result.
 
 ```java
 TextResultCallback mTextResultCallback;
@@ -254,7 +225,7 @@ TextResult[] result = reader.decodeBuffer(frame.getData(), frame.getWidth(), fra
 
 ### Get & display barcode decode result
 
-Instantiate a text view for displaying result.
+Instantiate a text view for displaying the result.
 
 ```java
 TextView tvRes;
@@ -370,7 +341,6 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 ## Other Barcode Reading Settings
-
 
 ### Decoding Methods
 

@@ -19,15 +19,9 @@ noTitleIndex: true
 
 ## Installation
 
-To install Dynamsoft Barcode Reader for iOS on your development machine, you can download the SDK from the [Dynamsoft website](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx) and unzip `dbr-ios-{version-number}.zip`.
+If you have downloaded the SDK from the [Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/) and unzipped `dbr-android-{version-number}.zip`, you can find two `frameworks`  and a sample folder. You can simply include `DynamsoftBarcodeReaderAndroid` to your project to start creating a barcode scanning app. The other framework, `DynamsoftCameraEnhancer`, is an expansion package which integrates video frame preprocessing algorithms and camera control APIs. In this guide, we will use the `Camera Enhancer` to create the camera module for receiving video input.
 
-After decompression, you can find samples in the **DBRSamples** folder under the **dbr-ios-{version-number}** folder.
-
-## Getting Started: Create a Simple Video Barcode Scanner
-
-In this section, you will be guide on creating a Hello world app which can read barcodes from camera video input. `Dynamsoft Camera Enhancer` will be used to deploy the camera video input module in this guide. Please follow the steps below.
-
-### Create a new project and include the library
+You can add your downloaded frameworks into your project by the following steps:
 
 1. Create a new iOS project in Xcode.
 2. Add the barcode reader and camera enhancer frameworks to your project
@@ -54,6 +48,10 @@ In this section, you will be guide on creating a Hello world app which can read 
    import DynamsoftBarcodeReader
    import DynamsoftCameraEnhancer
    ```
+
+## Getting Started: Create a Simple Video Barcode Scanner
+
+In this section, you will be guided on creating a Hello world app which can read barcodes from camera video input. `Dynamsoft Camera Enhancer` will be used to deploy the camera video input module in this guide. Please follow the steps below.
 
 ### Initialize the barcode reader and the camera enhancer
 
