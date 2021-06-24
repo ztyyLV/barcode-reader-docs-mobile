@@ -89,7 +89,7 @@ In this section, you will be guided on creating a Hello world app that can read 
 
 ### Initialize Camera Module
 
-In the process of video barcode scanning, the camera will provide the video input for the barcode reader. In this section, you will be guided on how to initialize the camera module for barcode scanning with the help of `Dynamsoft Camera Enhancer`. You can skip this step if you are not going to use `Dynamsoft Camera Enhancer` to create your camera module.
+In the process of video barcode scanning, the camera will provide the video input for the barcode reader. In this section, you will be guided on how to initialize the camera module for barcode scanning with the help of `Dynamsoft Camera Enhancer`.
 
 1. Import and instantiate the Camera Enhancer. If you have followed the installation guide, you can import Dynamsoft Barcode Reader (dbr) and Camera Enhancer (dce) in your project.
 
@@ -195,7 +195,7 @@ try {
 }
 ```
 
-### Add Codes for Barcode scanning
+### Set the Source of Video Input
 
 If you are following this guide and using `Dynamsoft Camera Enhancer` to create the camera module, please add the following code to start the barcode scanning. The Barcode Reader will automatically use the `decodeBuffer` method to process the video frames once it has received parameters transferred from the Camera Enhancer. Firstly, please instantiate the Text result callback. The Text result callback will be sent to the Barcode Reader as a parameter and help you in getting the barcode decode result.
 
@@ -206,26 +206,10 @@ TextResultCallback mTextResultCallback;
 Add the following code in `onCreate`.
 
 ```java
-//Settings on text result, this will help you on getting and displaying the decode result.
-mTextResultCallback = new TextResultCallback() {
-   @Override
-   public void textResultCallback(int i, TextResult[] textResults, Object o) {
-      //Call the function that can display the result on the screen.
-      //This function will be provided in the next step.
-      showResult(textResults);
-   }
-};
 DCESettingParameters dceSettingParameters = new DCESettingParameters();
 dceSettingParameters._cameraInstance = mCameraEnhancer;
 dceSettingParameters._textResultCallback = mTextResultCallback;
 reader.SetCameraEnhancerParam(dceSettingParameters);
-```
-
-If you are not using `Dynamsoft Camera Enhancer`. The following code is the solution for you to decode on the video frame you got from your camera. Please Skip this code if you are using `Dynamsoft Camera Enhancer`.
-
-```java
-//'frame' in this line of code means the video frame.
-TextResult[] result = reader.decodeBuffer(frame.getData(), frame.getWidth(), frame.getHeight(), frame.getStrides()[0], frame.getFormat(), "");
 ```
 
 ### Get & Display Barcode Decode Result
@@ -236,17 +220,24 @@ Instantiate a text view for displaying the result.
 TextView tvRes;
 ```
 
-Add the function that helps you display the text result on your screen.
-
 ```java
-private void showResult(TextResult[] results) {
-   if (results != null && results.length > 0) {
-      String strRes = "";
-      for (int i = 0; i < results.length; i++)
-         strRes += results[i].barcodeText + "\n\n";
-      tvRes.setText(strRes);
+//Settings on text result, this will help you on getting and displaying the decode result.
+mTextResultCallback = new TextResultCallback() {
+   @Override
+   public void textResultCallback(int i, TextResult[] textResults, Object o) {
+      //Call the function that can display the result on the screen.
+      //This function will be provided in the next step.
+      showResult(textResults);
+      if (textResults != null && textResults.length > 0) {
+         String strRes = "";
+         for (int i = 0; i < textResults.length; i++)
+            strRes += textResults[i].barcodeText + "\n\n";
+         tvRes.setText(strRes);
+      } else{
+         tvRes.setText("");
+      }
    }
-}
+};
 ```
 
 ### Run the Project
