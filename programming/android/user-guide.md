@@ -87,7 +87,7 @@ You can add Dynamsoft Barcode Reader by the following steps:
 
 In this section, you will be guided on creating a Hello world app that can read barcodes from camera video input. `Dynamsoft Camera Enhancer` will be used to deploy the camera module for receiving video input.
 
-### Initialize camera module
+### Initialize Camera Module
 
 In the process of video barcode scanning, the camera will provide the video input for the barcode reader. In this section, you will be guided on how to initialize the camera module for barcode scanning with the help of `Dynamsoft Camera Enhancer`. You can skip this step if you are not going to use `Dynamsoft Camera Enhancer` to create your camera module.
 
@@ -169,7 +169,7 @@ In the process of video barcode scanning, the camera will provide the video inpu
       android:visibility="visible"/>
    ```
 
-### Initialize barcode reader
+### Initialize Barcode Reader
 
 At the beginning of your class, please instantiate the Barcode Reader.
 
@@ -228,7 +228,7 @@ If you are not using `Dynamsoft Camera Enhancer`. The following code is the solu
 TextResult[] result = reader.decodeBuffer(frame.getData(), frame.getWidth(), frame.getHeight(), frame.getStrides()[0], frame.getFormat(), "");
 ```
 
-### Get & display barcode decode result
+### Get & Display Barcode Decode Result
 
 Instantiate a text view for displaying the result.
 
@@ -249,7 +249,7 @@ private void showResult(TextResult[] results) {
 }
 ```
 
-### Run the project
+### Run the Project
 
 If you have followed the above guide step by step, your project will be able to build a video barcode scanner. If the project is not working well, please check the following code to find out the problems.
 

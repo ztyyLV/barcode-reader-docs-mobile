@@ -16,7 +16,7 @@ noTitleIndex: true
 
 Replace the old `DynamsoftBarcodeReaderAndroid.aar` file with the one in the latest version. If you are using Maven, then change the version number in the `build.gradle` file.
 
-### API changes
+### API Changes
 
 Change Name of Import from `import com.dynamsoft.barcode.***;` to `import com.dynamsoft.dbr.***;`, like this:
 

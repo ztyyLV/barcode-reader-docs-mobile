@@ -58,7 +58,7 @@ You can add your downloaded frameworks into your project by the following steps:
 
 In this section, you will be guided on creating a Hello world app which can read barcodes from camera video input. `Dynamsoft Camera Enhancer` will be used to deploy the camera video input module in this guide. Please follow the steps below.
 
-### Initialize the barcode reader and the camera enhancer
+### Initialize the Barcode Reader and the Camera Enhancer
 
 Add the following code to instantiate the camera enhancer and camera view.
 
@@ -102,7 +102,7 @@ override func viewWillAppear(_ animated: Bool) {
 }
 ```
 
-### Configure the camera
+### Configure the Camera
 
 In the process of video barcode scanning, the camera will provide the video input for the barcode reader. In this section, you will be guided on how to initialize the camera module for barcode scanning with the help of `Dynamsoft Camera Enhancer`. You can skip this step if you are not going to use `Dynamsoft Camera Enhancer` to create your camera module.
 
@@ -153,7 +153,7 @@ func configurationDCE() {
 }
 ```
 
-### Configure the barcode reader
+### Configure the Barcode Reader
 
 Please add the following code to configure the barcode reader.
 
@@ -180,7 +180,7 @@ func initDBR() {
 }
 ```
 
-### Get & display barcode decode result
+### Get & Display Barcode Decode Result
 
 The following functions will help you get the text results and display them on the screen.
 
@@ -239,7 +239,7 @@ private func showResult(_ result: String, completion: @escaping () -> Void) {
 }
 ```
 
-### Run the project
+### Run the Project
 
 If you have followed the above guide step by step, your project will be able to build a video barcode scanner. If the project is not working well, please check the following code to find out the problems.
 
@@ -424,7 +424,7 @@ Here are some typical scanning settings you might find helpful:
 
 For more scanning settings guide, please read the [How To Guide]({{site.how-to}}) section.
 
-#### Specify Barcode Type to Read
+#### Specify barcode type to read
 
 A simple barcode format setting will result in a higher processing speed. By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. Please use the [`BarcodeFormatIds`]({{ site.enumerations }}format-enums.html#barcodeformat) and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) to specify your barcode format(s) so that you can find the balance between speed and readability.
 
@@ -436,7 +436,7 @@ By default, the SDK will try to find at least one barcode. You can use `expected
 
 By default, the barcode reader will scan the whole image for barcodes. This can lead to poor performance, especially when dealing with high-resolution images. You can speed up the recognition process by restricting the scanning region.
 
-#### Code Snippet of PublicRuntimeSettings
+#### Code snippet of publicRuntimeSettings
 
 The following code is a template on how to use `PublicRuntimeSettings`.
 
