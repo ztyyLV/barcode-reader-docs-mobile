@@ -55,7 +55,7 @@ You can add Dynamsoft Barcode Reader like below:
    implementation 'com.dynamsoft:dynamsoftbarcodereader:8.4.1@aar'
    ```
 
-## Getting Started: Create a video barcode scanner
+## Getting Started: Create a Simple Video Barcode Scanner
 
 In this section, you will be guide on creating a Hello world app which can read barcodes from camera video input. `Dynamsoft Camera Enhancer` will be used to deploy the camera video input module in this guide.
 
@@ -133,7 +133,7 @@ In the process of video barcode scanning, the camera will provide the video inpu
    ```
 
 2. Initialize the Camera Enhancer
-   
+
    In `onCreate`, use the camera enhancer to turn on the camera and start getting video input for barcode scanning.
 
    ```java
@@ -195,7 +195,7 @@ In the process of video barcode scanning, the camera will provide the video inpu
 
 ### Initialize barcode reader
 
-At the begining of your class, please instantiate the Barcode Reader. 
+At the begining of your class, please instantiate the Barcode Reader.
 
 ```java
 BarcodeReader reader;
