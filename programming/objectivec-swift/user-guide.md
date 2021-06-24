@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader for Objective-C & Swift - User Guide v8.4.1
 description: This is the user guide v8.4.1 of Dynamsoft Barcode Reader for iOS SDK.
 keywords: user guide, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
@@ -19,7 +19,12 @@ noTitleIndex: true
 
 ## Installation
 
-If you have downloaded the SDK from the [Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/) and unzipped `dbr-android-{version-number}.zip`, you can find two `frameworks`  and a sample folder. You can simply include `DynamsoftBarcodeReaderAndroid` to your project to start creating a barcode scanning app. The other framework, `DynamsoftCameraEnhancer`, is an expansion package which integrates video frame preprocessing algorithms and camera control APIs. In this guide, we will use the `Camera Enhancer` to create the camera module for receiving video input.
+If you have downloaded the SDK from the [Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/) and unzipped `dbr-ios-{version-number}.zip`, you can find two `frameworks`  and a sample folder. You can simply include `DynamsoftBarcodeReader` to your project to start creating a barcode scanning app. The other framework, `DynamsoftCameraEnhancer`, is an expansion package which integrates video frame preprocessing algorithms and camera control APIs. In this guide, we will use the `Camera Enhancer` to create the camera module for receiving video input.
+
+| Framework | Description |
+|---------|-------------|
+| `DynamsoftBarcodeReader.framework` | The Barcode Reader package, includes all barcode decoding releated algorithms and APIs. |
+| `DynamsoftCameraEnhancer.framework` | The Camera Enhancer Package, includes camera control APIs and frame preprocessing algorithm.  |
 
 You can add your downloaded frameworks into your project by the following steps:
 

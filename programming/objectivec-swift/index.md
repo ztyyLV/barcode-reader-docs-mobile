@@ -23,12 +23,15 @@ The Objective-C and Swift documentation mainly consists of two parts. One is the
 - <a href="https://www.dynamsoft.com/barcode-reader/resources/code-gallery/?SampleID=221" target="_blank">Code Gallery - Cordova</a>
 
 ## API Reference
-- [ObjectiveC/Swift](api-reference/)
-- [Class](api-reference/#classes)
+
+- [Primary APIs](api-reference/primary-index.md)
+- [Auxiliary APIs](api-reference/Auxiliary-index.md)
 
 ## Release Notes
+
 - [Version 8.x](release-notes/ios-8.md)
 - [Version 7.6 and below](release-notes/ios-7.md)
 
 ## Online Store
+
 - <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#mobile" target="_blank">For Mobile App</a>

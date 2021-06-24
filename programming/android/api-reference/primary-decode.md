@@ -4,7 +4,6 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Decode Met
 description: This page shows BarcodeReader Decode methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: decodeFile, decodeFileInMemory, decodeBuffer, decodeBase64String, decodeBufferedImage, decode methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
 

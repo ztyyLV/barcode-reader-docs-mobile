@@ -4,7 +4,6 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Parameter an
 description: This page shows advanced Runtime Settings methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: initRuntimeSettingsWithFile, initRuntimeSettingsWithString, appendTplFileToRuntimeSettings, appendTplStringToRuntimeSettings, allParameterTemplateNames, outputSettingsToFile, outputSettingsToString, parameter and runtime settings advanced methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
 # Objective-C API Reference - Parameter and Runtime Settings Advanced Methods

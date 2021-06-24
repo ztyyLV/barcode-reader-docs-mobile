@@ -4,7 +4,6 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Parameter 
 description: This page shows BarcodeReader basic runtime settings methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: setModeArgument, getModeArgument, getRuntimeSettings, updateRuntimeSettings, resetRuntimeSettings, parameter and runtime settings basic methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
 

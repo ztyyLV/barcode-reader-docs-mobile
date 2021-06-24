@@ -21,7 +21,12 @@ There are two options for you to install Dynamsoft Barcode Reader. You can downl
 
 ### Option 1: Download Installation
 
-If you have downloaded the SDK from the [Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/) and unzipped `dbr-android-{version-number}.zip`, you can find two `aar` files and a sample folder. You can simply include `DynamsoftBarcodeReaderAndroid.aar` to your project to start creating a barcode scanning app. The other aar package, `DynamsoftCameraEnhancer.aar`, is an expansion package which integrates video frame preprocessing algorithms and camera control APIs. In this guide, we will use the `Camera Enhancer` to create the camera module for receiving video input.
+If you have downloaded the SDK from the [Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/) and unzipped `dbr-android-{version-number}.zip`, you can find two `aar` files and a sample folder. You can simply include `DynamsoftBarcodeReaderAndroid.aar` to your project to start creating a barcode scanning app. The other aar package, `DynamsoftCameraEnhancerAndroid.aar`, is an expansion package which integrates video frame preprocessing algorithms and camera control APIs. In this guide, we will use the `Camera Enhancer` to create the camera module for receiving video input.
+
+| Package | Description |
+|---------|-------------|
+| `DynamsoftBarcodeReaderAndroid.aar` | The Barcode Reader package, includes all barcode decoding releated algorithms and APIs. |
+| `DynamsoftCameraEnhancerAndroid.aar` | The Camera Enhancer Package, includes camera control APIs and frame preprocessing algorithm.  |
 
 You can add your downloaded packages into your project by the following steps:
 

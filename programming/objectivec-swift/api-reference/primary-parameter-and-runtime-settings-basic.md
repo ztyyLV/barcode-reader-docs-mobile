@@ -4,7 +4,6 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Parameter an
 description: This page shows basic Runtime Settings methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: setModeArgument, getModeArgument, getRuntimeSettings, updateRuntimeSettings, resetRuntimeSettings, parameter and runtime settings basic methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
 # Objective-C API Reference - Parameter and Runtime Settings Basic Methods

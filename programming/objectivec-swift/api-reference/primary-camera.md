@@ -4,7 +4,6 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Camera Metho
 description: This page shows Camera methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: getIntermediateResult, Camera methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
 # Objective-C API Reference - Camera Methods

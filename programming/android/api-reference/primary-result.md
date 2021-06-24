@@ -4,7 +4,6 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Result Met
 description: This page shows BarcodeReader result methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: getIntermediateResults, result methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
 

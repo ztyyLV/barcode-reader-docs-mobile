@@ -4,7 +4,6 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Parameter 
 description: This page shows BarcodeReader advanced runtime settings methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: initRuntimeSettingsWithFile, initRuntimeSettingsWithString, appendTplFileToRuntimeSettings, appendTplStringToRuntimeSettings, getAllParameterTemplateNames, outputSettingsToFile, outputSettingsToString, parameter and runtime settings advanced methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
 # Android API Reference - BarcodeReader Parameter and Runtime Settings Advanced Methods

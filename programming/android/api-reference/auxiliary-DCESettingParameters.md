@@ -11,7 +11,7 @@ needGenerateH3Content: true
 
 Stores the DCESettingParameters information.
 
-# Attributes
+## Attributes
 
 | Attribute | type |
 |-----------|------|
@@ -21,13 +21,13 @@ Stores the DCESettingParameters information.
 | [`_irtCallback`](#_irtcallback) | [`IntermediateResultCallback`]({{site.android_api}}interface.html#intermediateresultcallback) |
 | [`_irtCallback_UserData`](#_irtcallback_userdata) | *Object* |
 
-## _CameraInstance
+### _CameraInstance
 
 ```java
     Object com.dynamsoft.dbr.DCESettingParameters._CameraInstance
 ```
 
-## _textResultCallback
+### _textResultCallback
 
 Set text result callback.
 
@@ -41,7 +41,7 @@ The `TextResultCallback` includes the following Parameters:
 - `results`: The recognized barcode result of the frame.
 - `userData`: Arguments passed to your function.
 
-## _textResultCallback_UserData
+### _textResultCallback_UserData
 
 Set the `UserData` of the `TextResultCallback`.
 
@@ -49,7 +49,7 @@ Set the `UserData` of the `TextResultCallback`.
     Object com.dynamsoft.dbr.DCESettingParameters._textResultCallback_UserData
 ```
 
-## _irtCallback
+### _irtCallback
 
 Set intermediate result call back.
 
@@ -63,7 +63,7 @@ The `IntermediateResultCallback` includes the following Parameters:
 - `results`: The intermediate result of the frame.
 - `userData`: Arguments passed to your function.
 
-## _irtCallback_UserData
+### _irtCallback_UserData
 
 Set the `UserData` of the `IntermediateResultCallback`.
 
