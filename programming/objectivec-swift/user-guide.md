@@ -19,7 +19,7 @@ noTitleIndex: true
 
 ## Installation
 
-If you have downloaded the SDK from the [Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/) and unzipped `dbr-ios-{version-number}.zip`, you can find two `frameworks`  and a sample folder. You can simply include `DynamsoftBarcodeReader` to your project to start creating a barcode scanning app. The other framework, `DynamsoftCameraEnhancer`, is an expansion package which integrates video frame preprocessing algorithms and camera control APIs. In this guide, we will use the `Camera Enhancer` to create the camera module for receiving video input.
+If you have downloaded the SDK from the [Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/){:target="_blank"} and unzipped `dbr-ios-{version-number}.zip`, you can find two `frameworks`  and a sample folder. You can simply include `DynamsoftBarcodeReader` to your project to start creating a barcode scanning app. The other framework, `DynamsoftCameraEnhancer`, is an expansion package which integrates video frame preprocessing algorithms and camera control APIs. In this guide, we will use the `Camera Enhancer` to create the camera module for receiving video input.
 
 | Framework | Description |
 |---------|-------------|
@@ -354,7 +354,7 @@ video stream, files in memory, base64 string, bitmap, etc. Here is a list of all
 - [decodeBuffer](api-reference/methods/decode.md#decodebuffer): Reads barcodes from raw buffer.
 - [decodeImage](api-reference/methods/decode.md#decodeimage): Decodes barcodes from an image file in memory.
 
-You can find more samples in more programming languages at [Code Gallery](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx).
+You can find more samples in more programming languages at [Code Gallery](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx){:target="_blank"}.
 
 Calling the [decoding methods](#decoding-methods) directly will use the default scanning modes and it will satisfy most of the needs. The SDK also allows you to adjust the scanning settings to optimize the scanning performance for different usage scenarios.
 
@@ -366,11 +366,11 @@ Here are some typical scanning settings you might find helpful:
 - [Specify Maximum Barcode Count](#specify-maximum-barcode-count)
 - [Specify a Scan Region](#specify-a-scan-region)
 
-For more scanning settings guide, please read the [How To Guide]({{site.introduction}}how-to-guide/) section.
+For more scanning settings guide, please read the [How To Guide]({{site.introduction}}how-to-guide/){:target="_blank"} section.
 
 #### Specify barcode type to read
 
-A simple barcode format setting will result in a higher processing speed. By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. Please use the [`BarcodeFormatIds`]({{ site.enumerations }}format-enums.html#barcodeformat) and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) to specify your barcode format(s) so that you can find the balance between speed and readability.
+A simple barcode format setting will result in a higher processing speed. By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. Please use the [`BarcodeFormatIds`]({{ site.enumerations }}format-enums.html#barcodeformat){:target="_blank"} and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2){:target="_blank"} to specify your barcode format(s) so that you can find the balance between speed and readability.
 
 #### Specify maximum barcode count
 
