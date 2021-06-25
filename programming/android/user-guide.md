@@ -98,10 +98,11 @@ In the process of video barcode scanning, the camera will provide the video inpu
    ```java
    import com.dynamsoft.dce.CameraEnhancer;
    import com.dynamsoft.dce.CameraLTSLicenseVerificationListener;
+   import com.dynamsoft.dce.CameraState;
    import com.dynamsoft.dce.CameraView;
    ```
 
-   Instantiate Camera Enhancer and CameraView at the start of the project. The camera view will be the UI of the camera in your app.
+   Declare Camera Enhancer and CameraView at the start of the project. The camera view will be the UI of the camera in your app.
 
    ```java
    CameraView cameraView;            
@@ -171,6 +172,17 @@ In the process of video barcode scanning, the camera will provide the video inpu
 
 ### Initialize Barcode Reader
 
+Import:
+
+```java
+import com.dynamsoft.dbr.BarcodeReader;
+import com.dynamsoft.dbr.BarcodeReaderException;
+import com.dynamsoft.dbr.DBRLTSLicenseVerificationListener;
+import com.dynamsoft.dbr.DCESettingParameters;
+import com.dynamsoft.dbr.TextResultCallback;
+import com.dynamsoft.dbr.TextResult;
+```
+
 At the beginning of your class, please instantiate the Barcode Reader.
 
 ```java
@@ -195,9 +207,9 @@ try {
 }
 ```
 
-### Set the Source of Video Input
+### Set the Video Input Source
 
-If you are following this guide and using `Dynamsoft Camera Enhancer` to create the camera module, please add the following code to start the barcode scanning. The Barcode Reader will automatically use the `decodeBuffer` method to process the video frames once it has received parameters transferred from the Camera Enhancer. Firstly, please instantiate the Text result callback. The Text result callback will be sent to the Barcode Reader as a parameter and help you in getting the barcode decode result.
+If you are following this guide and using `Dynamsoft Camera Enhancer` to create the camera module, please add the following code to start the barcode scanning. The Barcode Reader will automatically use the `decodeBuffer` method to process the video frames once it has received parameters transferred from the Camera Enhancer. Firstly, please declare the Text result callback. The Text result callback will be sent to the Barcode Reader as a parameter and help you in getting the barcode decode result.
 
 ```java
 TextResultCallback mTextResultCallback;
@@ -207,30 +219,29 @@ Add the following code in `onCreate`.
 
 ```java
 DCESettingParameters dceSettingParameters = new DCESettingParameters();
-dceSettingParameters._cameraInstance = mCameraEnhancer;
-dceSettingParameters._textResultCallback = mTextResultCallback;
+dceSettingParameters.cameraInstance = mCameraEnhancer;
+dceSettingParameters.textResultCallback = mTextResultCallback;
 reader.SetCameraEnhancerParam(dceSettingParameters);
 ```
 
 ### Get & Display Barcode Decode Result
 
-Instantiate a text view for displaying the result.
+Declare a text view for displaying the result.
 
 ```java
 TextView tvRes;
 ```
 
+Please put the following code before `DCESettingParameters` code.
+
 ```java
-//Settings on text result, this will help you on getting and displaying the decode result.
+//Settings on text result will help you in getting and displaying the decoding result.
 mTextResultCallback = new TextResultCallback() {
    @Override
    public void textResultCallback(int i, TextResult[] textResults, Object o) {
-      //Call the function that can display the result on the screen.
-      //This function will be provided in the next step.
-      showResult(textResults);
       if (textResults != null && textResults.length > 0) {
          String strRes = "";
-         for (int i = 0; i < textResults.length; i++)
+         for ( i = 0; i < textResults.length; i++)
             strRes += textResults[i].barcodeText + "\n\n";
          tvRes.setText(strRes);
       } else{
@@ -238,103 +249,15 @@ mTextResultCallback = new TextResultCallback() {
       }
    }
 };
+// DCESettingParameters dceSettingParameters = new DCESettingParameters();
+// dceSettingParameters.cameraInstance = mCameraEnhancer;
+// dceSettingParameters.textResultCallback = mTextResultCallback;
+// reader.SetCameraEnhancerParam(dceSettingParameters);
 ```
 
 ### Run the Project
 
-If you have followed the above guide step by step, your project will be able to build a video barcode scanner. If the project is not working well, please check the following code to find out the problems.
-
-```java
-import com.dynamsoft.dbr.BarcodeReader;
-import com.dynamsoft.dbr.BarcodeReaderException;
-import com.dynamsoft.dbr.DBRLTSLicenseVerificationListener;
-import com.dynamsoft.dbr.DCESettingParameters;
-import com.dynamsoft.dbr.TextResultCallback;
-import com.dynamsoft.dbr.TextResult;
-import com.dynamsoft.dce.CameraEnhancer;
-import com.dynamsoft.dce.CameraLTSLicenseVerificationListener;
-import com.dynamsoft.dce.CameraView;
-
-public class MainActivity extends AppCompatActivity {
-   CameraView cameraView;            
-   CameraEnhancer mCameraEnhancer;
-   TextResultCallback mTextResultCallback;
-   BarcodeReader reader;
-   TextView tvRes;
-      
-   @Override
-   protected void onCreate(Bundle savedInstanceState) {
-      super.onCreate(savedInstanceState);
-      setContentView(R.layout.activity_main);
-
-      //Deploy the camera with Dynamsoft Camera Enhancer.
-      cameraView = findViewById(R.id.cameraView);
-      tvRes = findViewById(R.id.tv_res);
-      mCameraEnhancer = new CameraEnhancer(MainActivity.this);
-      mCameraEnhancer.addCameraView(cameraView);
-      com.dynamsoft.dce.DMLTSConnectionParameters info = new com.dynamsoft.dce.DMLTSConnectionParameters();
-      info.organizationID = "Put your organizationID here.";
-      mCameraEnhancer.initLicenseFromLTS(info,new CameraLTSLicenseVerificationListener() {
-         @Override
-         public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
-            if(!isSuccess){ error.printStackTrace(); }
-         }
-      });
-      mCameraEnhancer.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
-      mCameraEnhancer.startScanning();
-
-      //Initialize Dynamsoft Barcode Reader from License Tracking Server.
-      try {
-         reader = new BarcodeReader();
-         com.dynamsoft.dbr.DMLTSConnectionParameters parameters = new com.dynamsoft.dbr.DMLTSConnectionParameters();
-         parameters.organizationID = "Put your organizationID here.";
-         reader.initLicenseFromLTS(parameters, new DBRLTSLicenseVerificationListener() {
-            @Override
-            public void LTSLicenseVerificationCallback(boolean b, Exception e) {
-               if (!b) { e.printStackTrace(); }
-            }
-         });
-      } catch (BarcodeReaderException e) {
-         e.printStackTrace();
-      }
-      //Get and display the text result.
-      mTextResultCallback = new TextResultCallback() {
-         @Override
-         public void textResultCallback(int i, TextResult[] textResults, Object o) {
-            showResult(textResults);
-         }
-      };                
-      //Set DCE setting parameters in Dynamsoft Barcode Reader.
-      //The camera instance will be transferred as an argument to the barcode reader.
-      //With the Camera instance, the barcode reader will automatically use decodeBuffer as the decode method.
-      DCESettingParameters dceSettingParameters = new DCESettingParameters();
-      dceSettingParameters._cameraInstance = mCameraEnhancer;
-      dceSettingParameters._textResultCallback = mTextResultCallback;
-      reader.SetCameraEnhancerParam(dceSettingParameters);
-   }
-      
-   @Override
-   public void onResume() {
-      reader.StartCameraEnhancer();
-      super.onResume();
-   }
-
-   @Override
-   public void onPause() {
-      reader.StopCameraEnhancer();
-      super.onPause();
-   }
-   //This is the function for displaying decode result on the screen
-   private void showResult(TextResult[] results) {
-      if (results != null && results.length > 0) {
-         String strRes = "";
-         for (int i = 0; i < results.length; i++)
-            strRes += results[i].barcodeText + "\n\n";
-         tvRes.setText(strRes);
-      }
-   }
-}
-```
+If you have followed the above guide step by step, your project will be able to build a video barcode scanner. If the project is not working well, please check the [template code](template.md) to find out the problems.
 
 ## Other Barcode Reading Settings
 
