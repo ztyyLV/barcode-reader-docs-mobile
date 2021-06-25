@@ -337,7 +337,10 @@ private func showResult(_ result: String, completion: @escaping () -> Void) {
 
 ### Run the Project
 
-If you have followed the above guide step by step, your project will be able to build a video barcode scanner. If the project is not working well, please check the [template code](template.md) to find out the problems.
+If you have followed the above guide step by step, your project will be able to build a video barcode scanner. If the project is not working well, please check the template code to find out the problems.
+
+- [`Objective-C template`](https://github.com/Dynamsoft/barcode-reader-docs-mobile/blob/preview/programming/objectivec-swift/template.m){:target="_blank"}
+- [`Swift template`](https://github.com/Dynamsoft/barcode-reader-docs-mobile/blob/preview/programming/objectivec-swift/template.swift){:target="_blank"}
 
 ## Other Barcode Reading Settings
 

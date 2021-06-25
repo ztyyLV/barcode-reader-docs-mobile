@@ -258,7 +258,7 @@ mTextResultCallback = new TextResultCallback() {
 
 ### Run the Project
 
-If you have followed the above guide step by step, your project will be able to build a video barcode scanner. If the project is not working well, please check the [template code](template.md) to find out the problems.
+If you have followed the above guide step by step, your project will be able to build a video barcode scanner. If the project is not working well, please check the [template code](https://github.com/Dynamsoft/barcode-reader-docs-mobile/blob/preview/programming/android/template.java){:target="_blank"} to find out the problems.
 
 ## Other Barcode Reading Settings
 
