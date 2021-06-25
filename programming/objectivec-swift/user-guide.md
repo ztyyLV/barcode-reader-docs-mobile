@@ -189,6 +189,7 @@ var dceView:DCECaptureView! = nil
 var barcodeReader:DynamsoftBarcodeReader! = nil
 override func viewDidLoad() {
     /*super.viewDidLoad()*/
+    /*Put the code for DBR initialization here*/
     initDBR()
     /*configurationDCE()*/
 }
@@ -232,10 +233,13 @@ In `configurationDCE` add the following code to set camera enhancer parameter:
     [_dce setCameraDesiredState:CAMERA_STATE_ON];
     _dce.isEnable = YES;
     */
-
-    /*Set DCE setting parameters in Dynamsoft Barcode Reader.
+    
+    /*
+    Put the code for setting the video input source here.
+    Set DCE setting parameters in Dynamsoft Barcode Reader.
     The camera instance will be transferred as an argument to the barcode reader.
-    With the Camera instance, the barcode reader will automatically use decodeBuffer as the decode method.*/
+    With the Camera instance, the barcode reader will automatically use decodeBuffer as the decode method.
+    */
     DCESettingParameters* para = [[DCESettingParameter alloc] init];
     para.cameraInstance = _dce;
     para.textResultDelegate = self;
@@ -259,9 +263,12 @@ func configurationDCE() {
     dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
     dce.setCameraDesiredState(.CAMERA_STATE_ON)
     */
-    /*Set DCE setting parameters in Dynamsoft Barcode Reader.
+    /*
+    Put the code for setting the video input source here.
+    Set DCE setting parameters in Dynamsoft Barcode Reader.
     The camera instance will be transferred as an argument to the barcode reader.
-    With the Camera instance, the barcode reader will automatically use decodeBuffer as the decode method.*/
+    With the Camera instance, the barcode reader will automatically use decodeBuffer as the decode method.
+    */
     let para = DCESettingParameters.init()
     para.cameraInstance = dce
     para.textResultDelegate = self

@@ -249,6 +249,7 @@ mTextResultCallback = new TextResultCallback() {
       }
    }
 };
+// Please add the code before this line.
 // DCESettingParameters dceSettingParameters = new DCESettingParameters();
 // dceSettingParameters.cameraInstance = mCameraEnhancer;
 // dceSettingParameters.textResultCallback = mTextResultCallback;
