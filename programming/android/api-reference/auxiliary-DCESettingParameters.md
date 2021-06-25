@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# DCESettingParameters
+# com.dynamsoft.dbr.DCESettingParameters.DCESettingParameters
 
 Stores the DCESettingParameters information.
 
@@ -15,46 +15,47 @@ Stores the DCESettingParameters information.
 
 | Attribute | type |
 |-----------|------|
-| [`_CameraInstance`](#_camerainstance) | *Object* |
-| [`_textResultCallback`](#_textresultcallback) | [`TextResultCallback`]({{site.android_api}}interface.html#textresultcallback) |
-| [`_textResultCallback_UserData`](#_textresultcallback_userdata) | *Object* |
-| [`_irtCallback`](#_irtcallback) | [`IntermediateResultCallback`]({{site.android_api}}interface.html#intermediateresultcallback) |
-| [`_irtCallback_UserData`](#_irtcallback_userdata) | *Object* |
+| [`CameraInstance`](#camerainstance) | *Object* |
+| [`textResultCallback`](#textresultcallback) | [`TextResultCallback`]({{site.android_api}}interface.html#textresultcallback) |
+| [`textResultCallback_UserData`](#textresultcallback_userdata) | *Object* |
+| [`irtCallback`](#irtcallback) | [`IntermediateResultCallback`]({{site.android_api}}interface.html#intermediateresultcallback) |
+| [`irtCallback_UserData`](#irtcallback_userdata) | *Object* |
 
-### _CameraInstance
+### CameraInstance
 
 ```java
-    Object com.dynamsoft.dbr.DCESettingParameters._CameraInstance
+    Object com.dynamsoft.dbr.DCESettingParameters.CameraInstance
 ```
 
-### _textResultCallback
+### textResultCallback
 
 Set text result callback.
 
 ```java
-    TextResultCallback com.dynamsoft.dbr.DCESettingParameters._textResultCallback
+    TextResultCallback com.dynamsoft.dbr.DCESettingParameters.textResultCallback
 ```
 
 The `TextResultCallback` includes the following Parameters:
 
+- `frame`: The frame data.
 - `frameID`: The ID of frame.
 - `results`: The recognized barcode result of the frame.
 - `userData`: Arguments passed to your function.
 
-### _textResultCallback_UserData
+### textResultCallback_UserData
 
 Set the `UserData` of the `TextResultCallback`.
 
 ```java
-    Object com.dynamsoft.dbr.DCESettingParameters._textResultCallback_UserData
+    Object com.dynamsoft.dbr.DCESettingParameters.textResultCallback_UserData
 ```
 
-### _irtCallback
+### irtCallback
 
 Set intermediate result call back.
 
 ```java
-    IntermediateResultCallback com.dynamsoft.dbr.DCESettingParameters._irtCallback
+    IntermediateResultCallback com.dynamsoft.dbr.DCESettingParameters.irtCallback
 ```
 
 The `IntermediateResultCallback` includes the following Parameters:
@@ -63,10 +64,10 @@ The `IntermediateResultCallback` includes the following Parameters:
 - `results`: The intermediate result of the frame.
 - `userData`: Arguments passed to your function.
 
-### _irtCallback_UserData
+### irtCallback_UserData
 
 Set the `UserData` of the `IntermediateResultCallback`.
 
 ```java
-    Object com.dynamsoft.dbr.DCESettingParameters._irtCallback_UserData
+    Object com.dynamsoft.dbr.DCESettingParameters.irtCallback_UserData
 ```

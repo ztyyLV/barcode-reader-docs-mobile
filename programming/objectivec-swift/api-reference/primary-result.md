@@ -11,7 +11,8 @@ needAutoGenerateSidebar: true
   | Method               | Description |
   |----------------------|-------------|
   | [`getIntermediateResult`](#getintermediateresult) | Get intermediate results. |
-  
+  | [`enableResultVerification`](#enableresultverification) | Result will be verified before output. |
+  | [`enableDuplicateFilter`](#enableduplicatefilter) | Duplicate results will be filtered and output only once for every 3 seconds |
 ---
 
 ## getIntermediateResult
@@ -28,7 +29,7 @@ Return intermediate results containing the original image, the colour clustered 
 
 ### Return value
 
-Returns  intermediate result array.
+Returns intermediate result array.
 
 ### Code Snippet
 
@@ -73,4 +74,44 @@ settings.intermediateResultTypes = EnumIntermediateResultType.ColourConvertedGra
 barcodeReader.updateRuntimeSettings(settings:settings, error:nil)
 let result = barcodeReader.decodeFileWithName(name:"your file path", templateName:"", error:nil)
 let irResult = barcodeReader.getIntermediateResult(error: &error)
+```
+
+## enableResultVerification
+
+The text results will be verified before output if the result verification is enabled.
+
+Objective-C:
+
+```objectivec
+[barcodeReader enableResultVerification:true];
+// To check the status of this mode
+[barcodeReader getEnableResultVerification]
+```
+
+Swift:
+
+```swift
+barcodeReader.enableResultVerification = true
+// To check the status of this mode
+let x = barcodeReader.enableResultVerification
+```
+
+## enableDuplicateFilter
+
+The duplicated text result will be filtered. The barcode reader will not output the result for the same barcode a second time in 3 seconds.
+
+Objective-C:
+
+```objectivec
+[barcodeReader enableDuplicateFilter:true];
+// To check the status of this mode
+[barcodeReader getEnableDuplicateFilter]
+```
+
+Swift:
+
+```swift
+barcodeReader.enableDuplicateFilter = true
+// To check the status of this mode
+let x = barcodeReader.enableDuplicateFilter
 ```

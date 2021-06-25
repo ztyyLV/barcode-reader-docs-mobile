@@ -26,7 +26,7 @@ Stores the iDCESettingParameters information.
 The instance of Camera Enhancer. This instance will enable DBR to fetch frames from the Camera Enhancer frame queue and also take control of the status of the camera.
 
 ```objectivec
-    DynamsoftCameraEnhancer* cameraInstance
+DynamsoftCameraEnhancer* cameraInstance
 ```
 
 ## textResultDelegate
@@ -34,11 +34,12 @@ The instance of Camera Enhancer. This instance will enable DBR to fetch frames f
 Set text result delegate.
 
 ```objectivec
-    DBRTextResultDelegate* textResultDelegate
+DBRTextResultDelegate* textResultDelegate
 ```
 
 The `textResultDelegate` includes the following Parameters:
 
+- `frame`: The frame data.
 - `frameID`: The ID of frame.
 - `results`: The recognized barcode result of the frame.
 - `userData`: Arguments passed to your function.
@@ -48,7 +49,7 @@ The `textResultDelegate` includes the following Parameters:
 Set the `UserData` of the `textResultDelegate`.
 
 ```objectivec
-    NSObject* textResultData
+NSObject* textResultData
 ```
 
 ## intermediateResultDelegate
@@ -56,7 +57,7 @@ Set the `UserData` of the `textResultDelegate`.
 Set intermediate result delegate.
 
 ```objectivec
-    DBRIntermediateResultDelegate* intermediateResultDelegate
+DBRIntermediateResultDelegate* intermediateResultDelegate
 ```
 
 The `intermediateResultDelegate` includes the following Parameters:
@@ -70,5 +71,5 @@ The `intermediateResultDelegate` includes the following Parameters:
 Set the `UserData` of the `intermediateResultDelegate`.
 
 ```objectivec
-    NSObject* intermediateResultData
+NSObject* intermediateResultData
 ```
