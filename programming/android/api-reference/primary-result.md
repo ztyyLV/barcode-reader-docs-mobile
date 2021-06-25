@@ -12,6 +12,8 @@ needAutoGenerateSidebar: true
   | Method               | Description |
   |----------------------|-------------|
   | [`getIntermediateResults`](#getintermediateresults) | Get intermediate results. |
+  | [`enableResultVerification`](#enableresultverification) | Result will be verified before output. |
+  | [`enableDuplicateFilter`](#enableduplicatefilter) | Duplicate results will be filtered and output only once for every 3 seconds |
 
   ---
 
@@ -52,4 +54,24 @@ reader.updateRuntimeSettings(settings);
 TextResult[] result = reader.decodeFile("your file path", "");
 IntermediateResult[] irtResult = reader.getIntermediateResults();
 reader.destroy();
+```
+
+## enableResultVerification
+
+The text results will be verified before output if the result verification is enabled.
+
+```java
+reader.enableResultVerification(true)
+// To check the status of this mode:
+boolean x = reader.getEnableResultVerificationStatus();
+```
+
+## enableDuplicateFilter
+
+The duplicated text result will be filtered. The barcode reader will not output the result for the same barcode a second time in 3 seconds.
+
+```java
+reader.enableDuplicateFilter(true)
+// To check the status of this mode:
+boolean x = reader.getEnableDuplicateFilterStatus();
 ```

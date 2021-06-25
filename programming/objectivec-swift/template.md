@@ -91,6 +91,8 @@ Objective-C:
 @end
 ```
 
+[Back to guide](user-guide.md)
+
 Swift:
 
 ```Swift
@@ -161,3 +163,5 @@ class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DB
     }
 }
 ```
+
+[Back to guide](user-guide.md)

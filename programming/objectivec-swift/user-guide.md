@@ -72,12 +72,11 @@ Initialize the Camera Enhancer:
 @property(nonatomic, strong) DCECaptureView *dceView;
 
 @end
-    
+
 @implementation ViewController
    
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initDBR];
     [self configurationDCE];
 }
 
@@ -146,22 +145,24 @@ Add code to initialize the Barcode reader:
 
 ```objectivec
 @interface ViewController ()
-@property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
-@property(nonatomic, strong) DCECaptureView *dceView;
+@property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
+/*@property(nonatomic, strong) DynamsoftCameraEnhancer *dce;*/
+/*@property(nonatomic, strong) DCECaptureView *dceView;*/
 
 @end
     
 @implementation ViewController
    
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    /*[super viewDidLoad];*/
     [self initDBR];
-    [self configurationDCE];
+    /*[self configurationDCE];*/
 }
-
+/*
 override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
 }
+*/
 ```
 
 Add configurations to the barcode reader:
@@ -181,18 +182,21 @@ Swift:
 Add code to initialize the Barcode reader:
 
 ```swift
+/*
 var dce:DynamsoftCameraEnhancer! = nil
 var dceView:DCECaptureView! = nil
+*/
 var barcodeReader:DynamsoftBarcodeReader! = nil
 override func viewDidLoad() {
-    super.viewDidLoad()
+    /*super.viewDidLoad()*/
     initDBR()
-    configurationDCE()
+    /*configurationDCE()*/
 }
-
+/*
 override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
 }
+*/
 ```
 
 Add configurations to the barcode reader:
@@ -328,7 +332,9 @@ private func showResult(_ result: String, completion: @escaping () -> Void) {
 
 If you have followed the above guide step by step, your project will be able to build a video barcode scanner. If the project is not working well, please check the [template code](template.md) to find out the problems.
 
-## Decoding Methods
+## Other Barcode Reading Settings
+
+### Decoding Methods
 
 The SDK provides multiple decoding methods that support reading barcodes from different sources, including static images,
 video stream, files in memory, base64 string, bitmap, etc. Here is a list of all decoding methods:
@@ -340,11 +346,9 @@ video stream, files in memory, base64 string, bitmap, etc. Here is a list of all
 
 You can find more samples in more programming languages at [Code Gallery](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx).
 
-## Barcode Reading Settings
-
 Calling the [decoding methods](#decoding-methods) directly will use the default scanning modes and it will satisfy most of the needs. The SDK also allows you to adjust the scanning settings to optimize the scanning performance for different usage scenarios.
 
-### Use [`PublicRuntimeSettings`](api-reference/class/iPublicRuntimeSettings.md) class to Change Settings
+### [`PublicRuntimeSettings`](api-reference/class/iPublicRuntimeSettings.md)
 
 Here are some typical scanning settings you might find helpful:
 
@@ -352,7 +356,7 @@ Here are some typical scanning settings you might find helpful:
 - [Specify Maximum Barcode Count](#specify-maximum-barcode-count)
 - [Specify a Scan Region](#specify-a-scan-region)
 
-For more scanning settings guide, please read the [How To Guide]({{site.how-to}}) section.
+For more scanning settings guide, please read the [How To Guide]({{site.introduction}}how-to-guide/) section.
 
 #### Specify barcode type to read
 

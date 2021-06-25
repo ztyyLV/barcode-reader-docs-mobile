@@ -283,7 +283,7 @@ Here are some typical scanning settings you might find helpful:
 - [Specify Maximum Barcode Count](#specify-maximum-barcode-count)
 - [Specify a Scan Region](#specify-a-scan-region)
 
-For more scanning settings guide, please read the [How To Guide]({{site.how-to}}) section.
+For more scanning settings guide, please read the [How To Guide]({{site.introduction}}how-to-guide/) section.
 
 #### Specify Barcode Type to Read
 
