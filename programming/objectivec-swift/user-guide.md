@@ -11,7 +11,9 @@ noTitleIndex: true
 
 # User Guide for Objective-C & Swift
 
-- System Requirements:
+## Requirements
+
+- Operating systems:
   - macOS 10.11 and above.
   - iOS 9.0 and above.
 - Environment: Xcode 7.1 - 11.5 and above.
@@ -54,7 +56,7 @@ You can add your downloaded frameworks into your project by the following steps:
    import DynamsoftCameraEnhancer
    ```
 
-## Getting Started: Create a Simple Video Barcode Scanner
+## Build Your First Application
 
 In this section, you will be guided on creating a Hello world app which can read barcodes from camera video input. `Dynamsoft Camera Enhancer` will be used to deploy the camera video input module in this guide. Please follow the steps below.
 
@@ -342,7 +344,7 @@ If you have followed the above guide step by step, your project will be able to 
 - [`Objective-C template`](https://github.com/Dynamsoft/barcode-reader-docs-mobile/blob/preview/programming/objectivec-swift/template.m){:target="_blank"}
 - [`Swift template`](https://github.com/Dynamsoft/barcode-reader-docs-mobile/blob/preview/programming/objectivec-swift/template.swift){:target="_blank"}
 
-## Other Barcode Reading Settings
+## Further Barcode Reading Settings
 
 ### Decoding Methods
 

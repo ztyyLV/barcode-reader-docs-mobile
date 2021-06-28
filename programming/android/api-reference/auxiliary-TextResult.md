@@ -36,6 +36,8 @@ Barcode type in BarcodeFormat group 1.
 int com.dynamsoft.dbr.TextResult.barcodeFormat
 ```
 
+Read more in [`Enumerations: BarcodeFormatIds`]({{ site.enumerations }}format-enums.html#barcodeformat)
+
 ### barcodeFormatString
 
 Barcode type in BarcodeFormat group 1 as string.
@@ -51,6 +53,8 @@ Barcode type in BarcodeFormat group 2.
 ```java
 int com.dynamsoft.dbr.TextResult.barcodeFormat_2
 ```
+
+Read more in [`Enumerations: BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat)
 
 ### barcodeFormatString_2
 

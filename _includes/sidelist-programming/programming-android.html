@@ -1,13 +1,8 @@
 <li><a href="{{ site.android }}" class="otherLinkColour">Java (Android)</a>
     <ul>
         {%- if page.url contains '/android/' or page.url contains '/android-v' -%}
-        <li><a style="cursor:pointer;color:#3c3c3c">User Guide</a>
-            <ul>
-                <li><a href="{{ site.android }}user-guide.html" class="otherLinkColour">Getting Started</a></li>
-                <li><a href="{{ site.android }}upgrade.html" class="otherLinkColour">Upgrade</a></li>
-            </ul>
-        </li>
-        <li><a href="{{ site.android_api }}primary-index.html" class="otherLinkColour">Primary APIs</a>
+        <li><a href="{{ site.android }}user-guide.html" class="otherLinkColour">User Guide</a></li>
+        <li><a href="{{ site.android_api }}primary-index.html" class="otherLinkColour">Barcode Reader</a>
             <ul>
                 <li><a href="{{ site.android_api }}primary-initialize-and-destroy.html" class="otherLinkColour">Initialization and Destroy</a></li>
                 <li><a href="{{ site.android_api }}primary-decode.html" class="otherLinkColour">Decode Methods</a></li>
@@ -20,7 +15,7 @@
                 <li><a href="{{ site.android_api }}primary-video.html" class="otherLinkColour">Video Methods</a></li>
             </ul>
         </li>
-        <li><a href="{{ site.android_api }}auxiliary-index.html" class="otherLinkColour">Auxiliary APIs</a>
+        <li><a href="{{ site.android_api }}auxiliary-index.html" class="otherLinkColour">Class</a>
             <ul>
                 <li><a href="{{ site.android_api }}auxiliary-AztecDetails.html" class="otherLinkColour">AztecDetails</a></li>
                 <li><a href="{{ site.android_api }}auxiliary-BarcodeReaderException.html" class="otherLinkColour">BarcodeReaderException</a></li>
@@ -46,12 +41,14 @@
                 <li><a href="{{ site.android_api }}auxiliary-TextResult.html" class="otherLinkColour">TextResult</a></li>
             </ul>
         </li>
+        <li><a href="{{ site.android_api }}interface.html" class="otherLinkColour">Interface</a></li>
         <li><a href="{{ site.android_release_notes }}" class="otherLinkColour">Release Notes</a>
             <ul>
                 <li><a href="{{ site.android_release_notes }}android-8.html" class="otherLinkColour">Version 8.x</a></li>
                 <li><a href="{{ site.android_release_notes }}android-7.html" class="otherLinkColour">Version 7.6.1 and below</a></li>
             </ul>
         </li>
+        <li><a href="{{ site.android }}upgrade.html" class="otherLinkColour">Upgrade Instructions</a></li>
         
         {%- endif -%}
     </ul>
