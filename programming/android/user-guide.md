@@ -64,6 +64,8 @@ You can add Dynamsoft Barcode Reader by the following steps:
          jcenter()
          maven {
             url "http://download.dynamsoft.com/maven/dbr/aar"
+         }
+         maven {
             url "http://download.dynamsoft.com/maven/dce/aar"
          }
       }
@@ -81,6 +83,7 @@ You can add Dynamsoft Barcode Reader by the following steps:
 
    ```groovy
    implementation 'com.dynamsoft:dynamsoftbarcodereader:8.4.1@aar'
+   implementation 'com.dynamsoft:dynamsoftcameraenhancer:1.0.1@aar'
    ```
 
 ## Getting Started: Create a Simple Video Barcode Scanner
