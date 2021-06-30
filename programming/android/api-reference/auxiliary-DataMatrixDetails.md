@@ -10,13 +10,7 @@ needGenerateH3Content: true
 
 # DataMatrixDetails
 
-```java
-import com.dynamsoft.dbr.DataMatrixDetails;
-```
-
-`DataMatrixDetails` is one of the [`detailedResult`](class-TextResult.md#detailedresult). It stores the DataMatrix code details.  
-
----
+`DataMatrixDetails` is one of the [`detailedResult`](class-TextResult.md#detailedresult) in class `TextResult`. It stores the DataMatrix code details.
 
 ## Attributes
   
@@ -75,4 +69,21 @@ The data region count.
 
 ```java
 int com.dynamsoft.dbr.DataMatrixDetails.dataRegionNumber
+```
+
+## Usage
+
+```java
+import com.dynamsoft.dbr.DataMatrixDetails;
+```
+
+```java
+//The textresult[i] is one of the text result you got  
+DataMatrixDetails dataMatrixDetails = (AztecDetails) textresult[i].detailedResult;
+int dm_moduleSize = dataMatrixDetails.moduleSize;
+int dm_columns = dataMatrixDetails.columns;
+int dm_rows = dataMatrixDetails.rows;
+int dm_dataRegionRows = dataMatrixDetails.dataRegionRows;
+int dm_dataRegionColumns = dataMatrixDetails.dataRegionColumns;
+int dm_dataRegionNumber = dataMatrixDetails.dataRegionNumber;
 ```

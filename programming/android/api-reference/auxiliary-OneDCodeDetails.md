@@ -9,11 +9,7 @@ needGenerateH3Content: true
 
 # OneDCodeDetails
 
-```java
-import com.dynamsoft.dbr.OneDCodeDetails;
-```
-
-`OneDCodeDetails` is one of the [`detailedResult`](class-TextResult.md#detailedresult). It stores the OneD code details.
+`OneDCodeDetails` is one of the [`detailedResult`](class-TextResult.md#detailedresult) in class `TextResult`. It stores the OneD code details.
 
 ## Attributes
   
@@ -81,4 +77,8 @@ The end pattern range of the OneDcode.
 
 ```java
 byte[] com.dynamsoft.dbr.OneDCodeDetails.endPatternRange
+```
+
+```java
+import com.dynamsoft.dbr.OneDCodeDetails;
 ```

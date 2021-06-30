@@ -10,7 +10,11 @@ needGenerateH3Content: true
 
 # Class AztecDetails
 
-`AztecDetails` is an extension of the class `textResult`. It stores the Aztec code details.
+```java
+import com.dynamsoft.dbr.AztecDetails;
+```
+
+`AztecDetails` is one of the [`detailedResult`](class-TextResult.md#detailedresult) in class `TextResult`. It stores the Aztec code details.
 
 ## Attributes
   
@@ -22,10 +26,6 @@ needGenerateH3Content: true
 | `int layerNumber;` | A negative number (-1, -2, -3, -4) specifies a compact Aztec code. A positive number (1, 2, .. 32) specifies a normal (full-rang) Aztec code. |
 
 ## Usage
-
-```java
-import com.dynamsoft.dbr.AztecDetails;
-```
 
 ```java
 //The textresult[i] is one of the text result you got  

@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# com.dynamsoft.dbr.DCESettingParameters
+# DCESettingParameters
 
 Stores the DCESettingParameters information.
 
