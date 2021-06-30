@@ -17,14 +17,14 @@ import com.dynamsoft.dbr.DataMatrixDetails;
 
 ## Attributes
   
-| Attribute | Description |
-|---------- | ---- |
-| [`moduleSize`](#modulesize) | The barcode module size (the minimum bar width in pixel). |
-| [`rows`](#rows) | The row count of the barcode. |
-| [`columns`](#columns) | The column count of the barcode. |
-| [`dataRegionRows`](#dataregionrows) | The data region row count of the barcode. |
-| [`dataRegionColumns`](#dataregioncolumns) | The data region column count of the barcode. |
-| [`dataRegionNumber`](#dataregionnumber) | The data region count. |
+| Attribute | Type | Description |
+|---------- |-----|------|
+| `moduleSize` | *int* | The barcode module size (the minimum bar width in pixel). |
+| `rows`| *int* | The row count of the barcode. |
+| `columns` | *int* | The column count of the barcode. |
+| `dataRegionRows` | *int* | The data region row count of the barcode. |
+| `dataRegionColumns` | *int* | The data region column count of the barcode. |
+| `dataRegionNumber` | *int* | The data region count. |
 
 ## Usage
 

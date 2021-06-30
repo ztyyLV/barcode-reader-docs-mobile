@@ -18,18 +18,18 @@ import com.dynamsoft.dbr.QRCodeDetails;
 
 ## Attributes
   
-| Attribute | Description |
-|---------- | ---- |
-| `int moduleSize` | The barcode module size (the minimum bar width in pixels). |
-| `int rows`| The row count of the barcode.   |
-| `int columns` | The column count of the barcode. |
-| `int errorCorrectionLevel` | The error correction level of the barcode.   |
-| `int version` | The version of the QR Code. |
-| `int model` | Number of the models. |
-| `int mode` | Identify the first data encoding mode. |
-| `int page` | Identify the position of the particular symbol. |
-| `int totalPage` | Identify the total number of symbols to be concatenated in the Structured Append format. |
-| `int parityData` | The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks. |
+| Attribute | Type | Description |
+|---------- | ---- |-----|
+| `moduleSize` | *int* | The barcode module size (the minimum bar width in pixels). |
+| `rows`| *int* | The row count of the barcode.   |
+| `columns` | *int* | The column count of the barcode. |
+| `errorCorrectionLevel` | *int* | The error correction level of the barcode.   |
+| `version` | *int* | The version of the QR Code. |
+| `model` | *int* | Number of the models. |
+| `mode` | *int* | Identify the first data encoding mode. |
+| `page` | *int* | Identify the position of the particular symbol. |
+| `totalPage` | *int* | Identify the total number of symbols to be concatenated in the Structured Append format. |
+| `parityData` | *int* | The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks. |
 
 ## Usage
 

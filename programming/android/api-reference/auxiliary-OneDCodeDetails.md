@@ -17,15 +17,15 @@ import com.dynamsoft.dbr.OneDCodeDetails;
 
 ## Attributes
   
-| Attribute | Type |
-|---------- | ---- |
-| [`moduleSize`](#modulesize) | The barcode module size (the minimum bar width in pixel). |
-| [`startCharsBytes`](#startcharsbytes) | The start chars in a byte array. |
-| [`stopCharsBytes`](#stopcharsbytes) | The stop chars in a byte array. |
-| [`checkDigitBytes`](#checkdigitbytes) | The check digit chars in a byte array. |
-| [`startPatternRange`](#startpatternrange) | The start pattern range of the OneDcode. |
-| [`middlePatternRange`](#middlepatternrange) | The middle pattern range of the OneDcode. |
-| [`endPatternRange`](#endpatternrange) | The end pattern range of the OneDcode. |
+| Attribute | Type | Description |
+|---------- |-----| ---- |
+| `moduleSize` | *int* | The barcode module size (the minimum bar width in pixel). |
+| `startCharsBytes` | *int* | The start chars in a byte array. |
+| `stopCharsBytes` | *int* | The stop chars in a byte array. |
+| `checkDigitBytes` | *int* | The check digit chars in a byte array. |
+| `startPatternRange` | *int* | The start pattern range of the OneDcode. |
+| `middlePatternRange` | *int* | The middle pattern range of the OneDcode. |
+| `endPatternRange` | *int* | The end pattern range of the OneDcode. |
 
 ## Usage
 

@@ -18,12 +18,12 @@ import com.dynamsoft.dbr.PDF417Details;
   
 ## Attributes
   
-| Attribute | Description |
-|---------- | ---- |
-| `int moduleSize` | The barcode module size (the minimum bar width in pixel). |
-| `int rows` | The row count of the barcode. |
-| `int columns` | The column count of the barcode. |
-| `int errorCorrectionLevel` | The error correction level of the barcode. |
+| Attribute | Type | Description |
+|---------- |------|------------ |
+| `moduleSize` | *int* | The barcode module size (the minimum bar width in pixel). |
+| `rows` | *int* | The row count of the barcode. |
+| `columns` | *int* | The column count of the barcode. |
+| `errorCorrectionLevel` | *int* | The error correction level of the barcode. |
 
 ## Usage
 
