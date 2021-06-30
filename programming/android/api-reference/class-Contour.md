@@ -8,9 +8,13 @@ needGenerateH3Content: true
 ---
 
 
-# Contour
+# Class Contour
 
-Stores the contour information.
+```java
+import com.dynamsoft.dbr.Contour;
+```
+
+The contour is one of the results type of the [`IntermediateResult`](class-IntermediateResult.md#results).
 
 ## Attributes
   
@@ -20,7 +24,7 @@ Stores the contour information.
   
 ### points
 
-The points array.
+The array of the points that surrounds the barcode area.
 
 ```java
 Point[] com.dynamsoft.dbr.Contour.points

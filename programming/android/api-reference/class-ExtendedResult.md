@@ -10,7 +10,7 @@ needGenerateH3Content: true
 
 # ExtendedResult
 
-Stores the extended result.
+`ExtendedResult` is the extension of the class [`TextResult`](class-TextResult.md). It stores the extended result information.
 
 ## Attributes
   
@@ -71,7 +71,7 @@ String com.dynamsoft.dbr.ExtendedResult.barcodeFormatString_2
 
 ### confidence
 
-The confidence of the result.
+The confidence of the result. The higher confidence means the higher accuracy.
 
 ```java
 int com.dynamsoft.dbr.ExtendedResult.confidence
@@ -103,7 +103,7 @@ int com.dynamsoft.dbr.ExtendedResult.deformation
 
 ### detailedResult
 
-One of the following: [`QRCodeDetails`](QRCodeDetails.md), [`PDF417Details`](PDF417Details.md), [`DataMatrixDetails`](DataMatrixDetails.md), [`AztecDetails`](AztecDetails.md), [`OneDCodeDetails`](OneDCodeDetails.md).
+One of the following: [`QRCodeDetails`](class-QRCodeDetails.md), [`PDF417Details`](class-PDF417Details.md), [`DataMatrixDetails`](class-DataMatrixDetails.md), [`AztecDetails`](class-AztecDetails.md), [`OneDCodeDetails`](class-OneDCodeDetails.md).
 
 ```java
 Object com.dynamsoft.dbr.ExtendedResult.detailedResult

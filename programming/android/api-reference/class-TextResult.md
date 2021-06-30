@@ -98,7 +98,7 @@ LocalizationResult com.dynamsoft.dbr.TextResult.localizationResult
 
 ### detailedResult
 
-One of the following: [`QRCodeDetails`](QRCodeDetails.md), [`PDF417Details`](PDF417Details.md), [`DataMatrixDetails`](DataMatrixDetails.md), [`AztecDetails`](AztecDetails.md), [`OneDCodeDetails`](OneDCodeDetails.md).
+One of the following: [`QRCodeDetails`](class-QRCodeDetails.md), [`PDF417Details`](class-PDF417Details.md), [`DataMatrixDetails`](class-DataMatrixDetails.md), [`AztecDetails`](class-AztecDetails.md), [`OneDCodeDetails`](class-OneDCodeDetails.md).
 
 ```java
 Object com.dynamsoft.dbr.TextResult.detailedResult

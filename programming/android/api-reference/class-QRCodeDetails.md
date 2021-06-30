@@ -10,7 +10,7 @@ needGenerateH3Content: true
 
 # QRCodeDetails
 
-Stores the QRCode details.  
+`QRCodeDetails` is one of the [`detailedResult`](class-TextResult.md#detailedresult). It stores the QRCode details.
 
 ## Attributes
   

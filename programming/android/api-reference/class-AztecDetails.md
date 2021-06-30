@@ -8,7 +8,11 @@ needGenerateH3Content: true
 ---
 
 
-# AztecDetails
+# Class AztecDetails
+
+```java
+import com.dynamsoft.dbr.AztecDetails;
+```
 
 Stores the Aztec details.
 

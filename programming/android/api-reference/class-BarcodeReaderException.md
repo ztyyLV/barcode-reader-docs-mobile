@@ -8,7 +8,11 @@ needGenerateH3Content: true
 ---
 
 
-# BarcodeReaderException
+# Class BarcodeReaderException
+
+```java
+import com.dynamsoft.dbr.BarcodeReaderException;
+```
 
 Exception for signalling barcode reader errors.
 

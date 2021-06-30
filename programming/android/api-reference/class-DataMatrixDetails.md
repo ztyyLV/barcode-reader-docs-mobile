@@ -10,7 +10,11 @@ needGenerateH3Content: true
 
 # DataMatrixDetails
 
-Stores the DataMatrix details.
+```java
+import com.dynamsoft.dbr.DataMatrixDetails;
+```
+
+`DataMatrixDetails` is one of the [`detailedResult`](class-TextResult.md#detailedresult). It stores the DataMatrix code details.  
 
 ---
 

@@ -9,7 +9,11 @@ needGenerateH3Content: true
 
 # OneDCodeDetails
 
-Stores the OneD code details.
+```java
+import com.dynamsoft.dbr.OneDCodeDetails;
+```
+
+`OneDCodeDetails` is one of the [`detailedResult`](class-TextResult.md#detailedresult). It stores the OneD code details.
 
 ## Attributes
   
