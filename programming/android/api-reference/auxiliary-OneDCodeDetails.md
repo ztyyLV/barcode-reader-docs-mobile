@@ -9,76 +9,34 @@ needGenerateH3Content: true
 
 # OneDCodeDetails
 
+```java
+import com.dynamsoft.dbr.OneDCodeDetails;
+```
+
 `OneDCodeDetails` is one of the [`detailedResult`](class-TextResult.md#detailedresult) in class `TextResult`. It stores the OneD code details.
 
 ## Attributes
   
 | Attribute | Type |
 |---------- | ---- |
-| [`moduleSize`](#modulesize) | *int* |
-| [`startCharsBytes`](#startcharsbytes) | *byte\[\]* |
-| [`stopCharsBytes`](#stopcharsbytes) | *byte\[\]* |
-| [`checkDigitBytes`](#checkdigitbytes) | *byte\[\]* |
-| [`startPatternRange`](#startpatternrange) | *float\[\]* |
-| [`middlePatternRange`](#middlepatternrange) | *float\[\]* |
-| [`endPatternRange`](#endpatternrange) | *float\[\]* |
+| [`moduleSize`](#modulesize) | The barcode module size (the minimum bar width in pixel). |
+| [`startCharsBytes`](#startcharsbytes) | The start chars in a byte array. |
+| [`stopCharsBytes`](#stopcharsbytes) | The stop chars in a byte array. |
+| [`checkDigitBytes`](#checkdigitbytes) | The check digit chars in a byte array. |
+| [`startPatternRange`](#startpatternrange) | The start pattern range of the OneDcode. |
+| [`middlePatternRange`](#middlepatternrange) | The middle pattern range of the OneDcode. |
+| [`endPatternRange`](#endpatternrange) | The end pattern range of the OneDcode. |
 
-### moduleSize
-
-The barcode module size (the minimum bar width in pixel).
+## Usage
 
 ```java
-int com.dynamsoft.dbr.OneDCodeDetails.moduleSize
-```
-
-### startCharsBytes
-
-The start chars in a byte array.
-
-```java
-byte[] com.dynamsoft.dbr.OneDCodeDetails.startCharsBytes
-```
-
-### stopCharsBytes
-
-The stop chars in a byte array.
-
-```java
-byte[] com.dynamsoft.dbr.OneDCodeDetails.stopCharsBytes
-```
-
-### checkDigitBytes
-
-The check digit chars in a byte array.
-
-```java
-byte[] com.dynamsoft.dbr.OneDCodeDetails.checkDigitBytes
-```
-
-### startPatternRange
-
-The start pattern range of the OneDcode.
-
-```java
-byte[] com.dynamsoft.dbr.OneDCodeDetails.startPatternRange
-```
-
-### middlePatternRange
-
-The middle pattern range of the OneDcode.
-
-```java
-byte[] com.dynamsoft.dbr.OneDCodeDetails.middlePatternRange
-```
-
-### endPatternRange
-
-The end pattern range of the OneDcode.
-
-```java
-byte[] com.dynamsoft.dbr.OneDCodeDetails.endPatternRange
-```
-
-```java
-import com.dynamsoft.dbr.OneDCodeDetails;
+//The textresult[i] is one of the text result you got  
+OneDCodeDetails oneDDetails = (OneDCodeDetails) textresult[i].detailedResult;
+int oneD_moduleSize = oneDDetails.moduleSize;
+int oneD_startCharsBytes = oneDDetails.startCharsBytes;
+int oneD_stopCharsBytes = oneDDetails.stopCharsBytes;
+int oneD_checkDigitBytes = oneDDetails.checkDigitBytes;
+int oneD_startPatternRange = oneDDetails.startPatternRange;
+int oneD_middlePatternRange = oneDDetails.middlePatternRange;
+int oneD_endPatternRange = oneDDetails.endPatternRange;
 ```

@@ -14,17 +14,15 @@ needGenerateH3Content: true
 import com.dynamsoft.dbr.Contour;
 ```
 
-The contour is one of the results type of the [`IntermediateResult`](class-IntermediateResult.md#results).
+The contour is one of the [`results`](class-IntermediateResult.md#results) type in `IntermediateResult`.
 
 ## Attributes
   
-| Attribute | Type |
-|---------- | ---- |
-| [`points`](#points) | [Point](Point.md)\[\] |
+| Attribute | Description |
+|---------- | ----------- |
+| `Point[] points;` | The array of the points that surround the barcode area. |
   
-### points
-
-The array of the points that surrounds the barcode area.
+### Usage
 
 ```java
 Point[] com.dynamsoft.dbr.Contour.points

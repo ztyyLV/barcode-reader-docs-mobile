@@ -10,99 +10,40 @@ needGenerateH3Content: true
 
 # QRCodeDetails
 
+```java
+import com.dynamsoft.dbr.QRCodeDetails;
+```
+
 `QRCodeDetails` is one of the [`detailedResult`](class-TextResult.md#detailedresult) in class `TextResult`. It stores the QRCode details.
 
 ## Attributes
   
-| Attribute | Type |
+| Attribute | Description |
 |---------- | ---- |
-| [`moduleSize`](#modulesize) | *int* |
-| [`rows`](#rows) | *int* |
-| [`columns`](#columns) | *int* |
-| [`errorCorrectionLevel`](#errorcorrectionlevel) | [`EnumQRCodeErrorCorrectionLevel`]({{ site.enumerations }}other-enums.html#qrcodeerrorcorrectionlevel) |
-| [`version`](#version) | *int* |
-| [`model`](#model) | *int* |
-| [`mode`](#mode) | *int* |
-| [`page`](#page) | *int* |
-| [`totalPage`](#totalpage) | *int* |
-| [`parityData`](#paritydata) | *byte* |
+| `int moduleSize` | The barcode module size (the minimum bar width in pixels). |
+| `int rows`| The row count of the barcode.   |
+| `int columns` | The column count of the barcode. |
+| `int errorCorrectionLevel` | The error correction level of the barcode.   |
+| `int version` | The version of the QR Code. |
+| `int model` | Number of the models. |
+| `int mode` | Identify the first data encoding mode. |
+| `int page` | Identify the position of the particular symbol. |
+| `int totalPage` | Identify the total number of symbols to be concatenated in the Structured Append format. |
+| `int parityData` | The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks. |
 
-### moduleSize
-
-The barcode module size (the minimum bar width in pixels).
+## Usage
 
 ```java
-int com.dynamsoft.dbr.QRCodeDetails.moduleSize
-```
-
-### rows
-
-The row count of the barcode.  
-
-```java
-int com.dynamsoft.dbr.QRCodeDetails.rows
-```
-
-### columns
-
-The column count of the barcode.
-
-```java
-int com.dynamsoft.dbr.QRCodeDetails.columns
-```
-
-### errorCorrectionLevel
-
-The error correction level of the barcode.  
-
-```java
-int com.dynamsoft.dbr.QRCodeDetails.errorCorrectionLevel
-```
-
-### version
-
-The version of the QR Code.
-
-```java
-int com.dynamsoft.dbr.QRCodeDetails.version
-```
-
-### model
-
-Number of the models.
-
-```java
-int com.dynamsoft.dbr.QRCodeDetails.model
-```
-
-### mode
-
-Identify the first data encoding mode.
-
-```java
-int com.dynamsoft.dbr.QRCodeDetails.mode
-```
-
-### page
-
-Identify the position of the particular symbol.
-
-```java
-int com.dynamsoft.dbr.QRCodeDetails.page
-```
-
-### totalPage
-
-Identify the total number of symbols to be concatenated in the Structured Append format.
-
-```java
-int com.dynamsoft.dbr.QRCodeDetails.totalPage
-```
-
-### parityData
-
-The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks.
-
-```java
-byte com.dynamsoft.dbr.QRCodeDetails.parityData
+//The textresult[i] is one of the text results you got  
+QRCodeDetails qrDetails = (QRCodeDetails) textresult[i].detailedResult;
+int qr_ = qrDetails.moduleSize;
+int qr_rows = qrDetails.rows;
+int qr_columns = qrDetails.columns;
+int qr_errorCorrectionLevel = qrDetails.errorCorrectionLevel;
+int qr_version = qrDetails.version;
+int qr_model = qrDetails.model;
+int qr_mode = qrDetails.mode;
+int qr_page = qrDetails.page;
+int qr_totalPage = qrDetails.totalPage;
+int qr_parityData = qrDetails.parityData;
 ```

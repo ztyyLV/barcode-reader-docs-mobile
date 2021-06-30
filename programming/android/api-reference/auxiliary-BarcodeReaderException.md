@@ -18,14 +18,16 @@ Exception for signalling barcode reader errors.
 
 ## Method
   
-| Method | Type |
-|---------- | ----------- |
-| [`getErrorCode`](#geterrorcode)| *int* |
+| Method | Value | Description |
+|--------|------|-------------|
+| [`getErrorCode`](#geterrorcode)| *int* | Gets the error code. |
 
-### getErrorCode
-
-Gets the error code.
+## Usage
 
 ```java
-int com.dynamsoft.dbr.BarcodeReaderException.getErrorCode()
+try {
+    //Do something here
+} catch (BarcodeReaderException e) {
+    e.printStackTrace();
+}
 ```
