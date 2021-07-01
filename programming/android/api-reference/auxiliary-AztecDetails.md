@@ -14,7 +14,7 @@ needGenerateH3Content: true
 import com.dynamsoft.dbr.AztecDetails;
 ```
 
-`AztecDetails` is one of the [`detailedResult`](class-TextResult.md#detailedresult) in class `TextResult`. It stores the Aztec code details.
+`AztecDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the Aztec code details.
 
 ## Attributes
   

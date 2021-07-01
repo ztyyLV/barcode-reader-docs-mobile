@@ -49,7 +49,7 @@ Stores the intermediate result.
 
 ### results
 
-One of the following types: Array of [`Contour`](class-Contour.md), Array of [`ImageData`](class-ImageData.md), Array of [`LineSegment`](class-LineSegment.md), Array of [`LocalizationResult`](class-LocalizationResult.md), Array of [`RegionOfInterest`](class-RegionOfInterest.md).
+One of the following types: Array of [`Contour`](auxiliary-Contour.md), Array of [`ImageData`](auxiliary-ImageData.md), Array of [`LineSegment`](auxiliary-LineSegment.md), Array of [`LocalizationResult`](auxiliary-LocalizationResult.md), Array of [`RegionOfInterest`](auxiliary-RegionOfInterest.md).
 
 ```java
 Object[] com.dynamsoft.dbr.IntermediateResult.results
@@ -81,7 +81,7 @@ iny com.dynamsoft.dbr.IntermediateResult.barcodeComplementMode
 
 ### bcmIndex
 
-The array index of current used [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) in the [`barcodeComplementModes`](class-FurtherModes.md#barcodecomplementmodes) setting.
+The array index of current used [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) in the [`barcodeComplementModes`](auxiliary-FurtherModes.md#barcodecomplementmodes) setting.
 
 ```java
 int com.dynamsoft.dbr.IntermediateResult.bcmIndex
@@ -97,7 +97,7 @@ int com.dynamsoft.dbr.IntermediateResult.deformationResistingMode
 
 ### drmIndex
 
-The array index of current used [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) in the [`deformationResistingModes`](class-FurtherModes.md#deformationresistingmodes) setting.
+The array index of current used [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) in the [`deformationResistingModes`](auxiliary-FurtherModes.md#deformationresistingmodes) setting.
 
 ```java
 int com.dynamsoft.dbr.IntermediateResult.drmIndex
@@ -113,7 +113,7 @@ int com.dynamsoft.dbr.IntermediateResult.dpmCodeReadingMode
 
 ### dpmcrmIndex
 
-The array index of current used [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) in the [`dpmCodeReadingModes`](class-FurtherModes.md#dpmcodereadingmodes) setting.
+The array index of current used [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) in the [`dpmCodeReadingModes`](auxiliary-FurtherModes.md#dpmcodereadingmodes) setting.
 
 ```java
 int com.dynamsoft.dbr.IntermediateResult.dpmcrmIndex
@@ -137,7 +137,7 @@ int com.dynamsoft.dbr.IntermediateResult.textFilterMode
 
 ### tfmIndex
 
-The array index of current used [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) in the [`textFilterModes`](class-FurtherModes.md#textfiltermodes) setting.
+The array index of current used [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) in the [`textFilterModes`](auxiliary-FurtherModes.md#textfiltermodes) setting.
 
 ```java
 int com.dynamsoft.dbr.IntermediateResult.tfmIndex
@@ -153,7 +153,7 @@ int com.dynamsoft.dbr.IntermediateResult.localizationMode
 
 ### lmIndex
 
-The array index of current used [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) in the [`localizationModes`](class-PublicRuntimeSettings.md#localizationmodes) setting.
+The array index of current used [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) in the [`localizationModes`](auxiliary-PublicRuntimeSettings.md#localizationmodes) setting.
 
 ```java
 int com.dynamsoft.dbr.IntermediateResult.lmIndex
@@ -169,7 +169,7 @@ int com.dynamsoft.dbr.IntermediateResult.binarizationMode
 
 ### bmIndex
 
-The array index of current used [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) in the [`binarizationModes`](class-PublicRuntimeSettings.md#binarizationmodes) setting.
+The array index of current used [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) in the [`binarizationModes`](auxiliary-PublicRuntimeSettings.md#binarizationmodes) setting.
 
 ```java
 int com.dynamsoft.dbr.IntermediateResult.bmIndex
@@ -185,7 +185,7 @@ int com.dynamsoft.dbr.IntermediateResult.imagePreprocessingMode
 
 ### ipmIndex
 
-The array index of current used [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) in [`imagePreprocessingModes`](class-FurtherModes.md#imagepreprocessingmodes) setting.
+The array index of current used [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) in [`imagePreprocessingModes`](auxiliary-FurtherModes.md#imagepreprocessingmodes) setting.
 
 ```java
 int com.dynamsoft.dbr.IntermediateResult.ipmIndex
@@ -209,7 +209,7 @@ int com.dynamsoft.dbr.IntermediateResult.regionPredetectionMode
 
 ### rpmIndex
 
-The array index of current used [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) in the [`regionPredetectionModes`](class-FurtherModes.md#regionpredetectionmodes) setting.
+The array index of current used [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) in the [`regionPredetectionModes`](auxiliary-FurtherModes.md#regionpredetectionmodes) setting.
 
 ```java
 int com.dynamsoft.dbr.IntermediateResult.rpmIndex
@@ -225,7 +225,7 @@ int com.dynamsoft.dbr.IntermediateResult.grayscaleTransformationMode
 
 ### gtmIndex
 
-The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) in the [`grayscaleTransformationModes`](class-FurtherModes.md#grayscaletransformationmodes) setting.
+The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) in the [`grayscaleTransformationModes`](auxiliary-FurtherModes.md#grayscaletransformationmodes) setting.
 
 ```java
 int com.dynamsoft.dbr.IntermediateResult.gtmIndex
@@ -241,7 +241,7 @@ int com.dynamsoft.dbr.IntermediateResult.colourConversionMode
 
 ### cicmIndex
 
-The array index of current used [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) in the [`colourConversionModes`](class-FurtherModes.md#colourconversionmodes) setting.
+The array index of current used [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) in the [`colourConversionModes`](auxiliary-FurtherModes.md#colourconversionmodes) setting.
 
 ```java
 int com.dynamsoft.dbr.IntermediateResult.cicmIndex
@@ -257,7 +257,7 @@ int com.dynamsoft.dbr.IntermediateResult.colourClusteringMode
 
 ### ccmIndex
 
-The array index of current used [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) in the [`colourClusteringModes`](class-FurtherModes.md#colourclusteringmodes) setting.
+The array index of current used [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) in the [`colourClusteringModes`](auxiliary-FurtherModes.md#colourclusteringmodes) setting.
 
 ```java
 int com.dynamsoft.dbr.IntermediateResult.ccmIndex

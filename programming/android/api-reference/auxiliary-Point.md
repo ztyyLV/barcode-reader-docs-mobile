@@ -7,7 +7,6 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-
 # Point
 
 Stores an x- and y-coordinate pair in two-dimensional space.

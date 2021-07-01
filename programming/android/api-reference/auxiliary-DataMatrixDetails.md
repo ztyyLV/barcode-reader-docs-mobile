@@ -13,7 +13,7 @@ needGenerateH3Content: true
 import com.dynamsoft.dbr.DataMatrixDetails;
 ```
 
-`DataMatrixDetails` is one of the [`detailedResult`](class-TextResult.md#detailedresult) in class `TextResult`. It stores the DataMatrix code details.
+`DataMatrixDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the DataMatrix code details.
 
 ## Attributes
   

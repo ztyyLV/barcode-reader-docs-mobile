@@ -14,7 +14,7 @@ Stores the text result.
 ## Attributes
   
 | Attribute | Type |
-|---------- | ---- |
+|-----------|------|
 | [`barcodeFormat`](#barcodeformat) | *int* |
 | [`barcodeFormatString`](#barcodeformatstring) | *String* |
 | [`barcodeFormat_2`](#barcodeformat_2) | *int* |
@@ -98,7 +98,7 @@ LocalizationResult com.dynamsoft.dbr.TextResult.localizationResult
 
 ### detailedResult
 
-One of the following: [`QRCodeDetails`](class-QRCodeDetails.md), [`PDF417Details`](class-PDF417Details.md), [`DataMatrixDetails`](class-DataMatrixDetails.md), [`AztecDetails`](class-AztecDetails.md), [`OneDCodeDetails`](class-OneDCodeDetails.md).
+One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.md), [`PDF417Details`](auxiliary-PDF417Details.md), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md), [`AztecDetails`](auxiliary-AztecDetails.md), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.md).
 
 ```java
 Object com.dynamsoft.dbr.TextResult.detailedResult

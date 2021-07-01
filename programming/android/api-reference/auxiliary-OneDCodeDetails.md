@@ -13,7 +13,7 @@ needGenerateH3Content: true
 import com.dynamsoft.dbr.OneDCodeDetails;
 ```
 
-`OneDCodeDetails` is one of the [`detailedResult`](class-TextResult.md#detailedresult) in class `TextResult`. It stores the OneD code details.
+`OneDCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the OneD code details.
 
 ## Attributes
   

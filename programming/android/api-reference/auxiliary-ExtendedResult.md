@@ -10,7 +10,7 @@ needGenerateH3Content: true
 
 # ExtendedResult
 
-`ExtendedResult` is the extension of the class [`TextResult`](class-TextResult.md). It stores the extended result information.
+`ExtendedResult` is the extension of the class [`TextResult`](auxiliary-TextResult.md). It stores the extended result information.
 
 ## Attributes
   
@@ -103,7 +103,7 @@ int com.dynamsoft.dbr.ExtendedResult.deformation
 
 ### detailedResult
 
-One of the following: [`QRCodeDetails`](class-QRCodeDetails.md), [`PDF417Details`](class-PDF417Details.md), [`DataMatrixDetails`](class-DataMatrixDetails.md), [`AztecDetails`](class-AztecDetails.md), [`OneDCodeDetails`](class-OneDCodeDetails.md).
+One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.md), [`PDF417Details`](auxiliary-PDF417Details.md), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md), [`AztecDetails`](auxiliary-AztecDetails.md), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.md).
 
 ```java
 Object com.dynamsoft.dbr.ExtendedResult.detailedResult
