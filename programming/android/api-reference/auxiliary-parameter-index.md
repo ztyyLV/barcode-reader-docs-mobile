@@ -11,6 +11,21 @@ needGenerateH3Content: false
 
 ### PublicRuntimeSettings
 
+```java
+import com.dynamsoft.dbr.PublicRuntimeSettings;
+```
+
+You can update most of the parameter settings through the `PublicRuntimeSettings` class.
+
+```java
+PublicRuntimeSettings runtimeSettings = barcodeReader.getRuntimeSettings();
+runtimeSettings.barcodeFormatIds = 0;
+runtimeSettings.region.regionLeft = 30;
+runtimeSettings.region.regionTop = 15;
+runtimeSettings.region.regionRight = 70;
+runtimeSettings.region.regionBottom = 85;
+```
+
 ### RegionDefinition
 
 ### FurtherModes

@@ -31,9 +31,8 @@ import com.dynamsoft.dbr.TextResult;
 | `isDPM` | *int* | This attribute stands for whether the result is a DPM result. |
 | `isMirrored` | *int* | This attribute stands for whether the barcode is mirrored. |
 
-### TextResult Usage
-
 ```java
+// Get the text result by decode methodes
 TextResult[] textresult = barcodeReader.decodeBuffer(frame.getData(),frame.getWidth(),frame.getHeight(),frame.getStrides()[0],frame.getFormat(),"");
 ```
 
@@ -62,14 +61,11 @@ import com.dynamsoft.dbr.LocalizationResult;
 | `accompanyingTextBytes` | *byte\[\]* | The accompanying text content in a byte array. |
 | `confidence` | *int* | The confidence of the localization result. |
 
-### LocalizationResult usage
-
 ```java
 if ( textresult != null && textresult.length != 0){
     for ( int i = 0; i< textresult.length; i++ ) {
         LocalizationResult localizationResult = textresult[i].localizationResult;
-        int localization_terminatePhase = localizationResult.terminatePhase;
-        Point[] localization_points = localizationResult.resultPoints;
+        // DO something on localization results.
     }
 }
 ```
@@ -97,15 +93,11 @@ import com.dynamsoft.dbr.ExtendedResult;
 | `samplingImage` | [`SamplingImageData`](#samplingimagedata) | The sampling image info. |
 | `clarity` | *int* | The clarity of the barcode zone in percentage. |
 
-### ExtendedResult Usage
-
 ```java
 if ( textresult != null && textresult.length != 0){
     for ( int i = 0; i < textresult.length; i++ ) {
         ExtendedResult[] extendedResult = textresult[i].results;
-        for (int j = 0; j < extendedResult.length; j++) {
-            int extend_resultType = extendedResult[j].resultType;
-        }
+        // Do something on extended results.
     }
 }
 ```
@@ -125,15 +117,9 @@ import com.dynamsoft.dbr.AztecDetails;
 | `columns` | *int* | The column count of the barcode. |
 | `layerNumber` | *int* | A negative number (-1, -2, -3, -4) specifies a compact Aztec code. A positive number (1, 2, .. 32) specifies a normal (full-rang) Aztec code. |
 
-### AztecDetails Usage
-
 ```java
 //The textresult[i] is one of the text result you got  
 AztecDetails aztecDetails = (AztecDetails) textresult[i].detailedResult;
-int aztec_moduleSize = aztecDetails.moduleSize;
-int aztec_columns = aztecDetails.columns;
-int aztec_rows = aztecDetails.rows;
-int aztec_layerNumber = aztecDetails.layerNumber;
 ```
 
 ## [DataMatrixDetails](auxiliary-DataMatrixDetails.md)
@@ -153,17 +139,9 @@ import com.dynamsoft.dbr.DataMatrixDetails;
 | `dataRegionColumns` | *int* | The data region column count of the barcode. |
 | `dataRegionNumber` | *int* | The data region count. |
 
-### DataMatrixDetails Usage
-
 ```java
 //The textresult[i] is one of the text result you got  
 DataMatrixDetails dataMatrixDetails = (DataMatrixDetails) textresult[i].detailedResult;
-int dm_moduleSize = dataMatrixDetails.moduleSize;
-int dm_columns = dataMatrixDetails.columns;
-int dm_rows = dataMatrixDetails.rows;
-int dm_dataRegionRows = dataMatrixDetails.dataRegionRows;
-int dm_dataRegionColumns = dataMatrixDetails.dataRegionColumns;
-int dm_dataRegionNumber = dataMatrixDetails.dataRegionNumber;
 ```
 
 ## [OneDCodeDetails](auxiliary-OneDCodeDetails.md)
@@ -184,18 +162,9 @@ import com.dynamsoft.dbr.OneDCodeDetails;
 | `middlePatternRange` | *int* | The middle pattern range of the OneDcode. |
 | `endPatternRange` | *int* | The end pattern range of the OneDcode. |
 
-### OneDCodeDetails Usage
-
 ```java
 //The textresult[i] is one of the text result you got  
 OneDCodeDetails oneDDetails = (OneDCodeDetails) textresult[i].detailedResult;
-int oneD_moduleSize = oneDDetails.moduleSize;
-int oneD_startCharsBytes = oneDDetails.startCharsBytes;
-int oneD_stopCharsBytes = oneDDetails.stopCharsBytes;
-int oneD_checkDigitBytes = oneDDetails.checkDigitBytes;
-int oneD_startPatternRange = oneDDetails.startPatternRange;
-int oneD_middlePatternRange = oneDDetails.middlePatternRange;
-int oneD_endPatternRange = oneDDetails.endPatternRange;
 ```
 
 ## [PDF417Details](auxiliary-PDF417Details.md)
@@ -213,15 +182,9 @@ import com.dynamsoft.dbr.PDF417Details;
 | `columns` | *int* | The column count of the barcode. |
 | `errorCorrectionLevel` | *int* | The error correction level of the barcode. |
 
-### PDF417Details Usage
-
 ```java
 //The textresult[i] is one of the text results you got  
 PDF417Details pdf417Details = (PDF417Details) textresult[i].detailedResult;
-int pdf417_moduleSize = pdf417Details.moduleSize;
-int pdf417_rows = pdf417Details.rows;
-int pdf417_columns = pdf417Details.columns;
-int pdf417_errorCorrectionLevel = pdf417Details.errorCorrectionLevel;
 ```
 
 ## [QRCodeDetails](auxiliary-QRCodeDetails.md)
@@ -245,21 +208,9 @@ import com.dynamsoft.dbr.QRCodeDetails;
 | `totalPage` | *int* | Identify the total number of symbols to be concatenated in the Structured Append format. |
 | `parityData` | *int* | The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks. |
 
-### QRCodeDetails Usage
-
 ```java
 //The textresult[i] is one of the text results you got  
 QRCodeDetails qrDetails = (QRCodeDetails) textresult[i].detailedResult;
-int qr_ = qrDetails.moduleSize;
-int qr_rows = qrDetails.rows;
-int qr_columns = qrDetails.columns;
-int qr_errorCorrectionLevel = qrDetails.errorCorrectionLevel;
-int qr_version = qrDetails.version;
-int qr_model = qrDetails.model;
-int qr_mode = qrDetails.mode;
-int qr_page = qrDetails.page;
-int qr_totalPage = qrDetails.totalPage;
-int qr_parityData = qrDetails.parityData;
 ```
 
 ## SamplingImageData
@@ -275,8 +226,6 @@ import com.dynamsoft.dbr.SamplingImageData;
 | [`bytes`](#bytes) | *byte\[\]* | The sampling image data in a byte array. |
 | [`width`](#width) | *int* | The width of the sampling image. |
 | [`height`](#height) | *int* | The height of the sampling image. |
-
-### SamplingImageData Usage
 
 ```java
 SamplingImageData samplingImageData = extendedResult[j].samplingImage;
