@@ -9,13 +9,7 @@ breadcrumbText: API Reference
 
 # Dynamsoft Barcode Reader SDK - Android API Reference
 
-- [`BarcodeReader` Methods](#barcodereader-methods)
-- [Interface](#interface)
-- [Error Code](#error-code)
-- [Classes](#classes)  
-- [Enumerations](#enumerations)
-
-## BarcodeReader Methods
+## BarcodeReader Class
 
 ### Initialize and Destroy
 
@@ -23,16 +17,6 @@ breadcrumbText: API Reference
   |----------------------|-------------|
   | [`BarcodeReader`](BarcodeReader/initialize-and-destroy.md#barcodereader) | Initialization of `BarcodeReader` object.|
   | [`destroy`](BarcodeReader/initialize-and-destroy.md#destroy) | Destroys an instance of `BarcodeReader` object.|
-
-### Camera Enhancer
-  
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`StartCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Start using Dynamsoft Camera Enhancer |
-   | [`StopCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Stop using Dynamsoft Camera Enhancer |
-   | [`PauseCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
-   | [`ResumeCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Resume the process of Dynamsoft Camera Enhancer |
-   | [`SetCameraEnhancerParam`](BarcodeReader/camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
 
 ### Decode
 
@@ -55,6 +39,16 @@ breadcrumbText: API Reference
   | [`initLicenseFromLicenseContent`](BarcodeReader/license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
   | [`outputLicenseToString`](BarcodeReader/license.md#outputlicensetostring) | Output the license content to a string from the license server. |
   | [`initLicenseFromLTS`](BarcodeReader/license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+
+### Camera Enhancer
+  
+   | Method               | Description |
+   |----------------------|-------------|
+   | [`StartCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Start using Dynamsoft Camera Enhancer |
+   | [`StopCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Stop using Dynamsoft Camera Enhancer |
+   | [`PauseCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
+   | [`ResumeCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Resume the process of Dynamsoft Camera Enhancer |
+   | [`SetCameraEnhancerParam`](BarcodeReader/camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
 
 ### Parameter and Runtime Settings
 
