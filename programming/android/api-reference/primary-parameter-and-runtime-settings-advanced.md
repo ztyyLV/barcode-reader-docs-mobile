@@ -6,7 +6,7 @@ keywords: initRuntimeSettingsWithFile, initRuntimeSettingsWithString, appendTplF
 needAutoGenerateSidebar: true
 ---
 
-# Android API Reference - BarcodeReader Parameter and Runtime Settings Advanced Methods
+# BarcodeReader Class - Parameter and Runtime Settings Advanced Methods
 
   | Method               | Description |
   |----------------------|-------------|

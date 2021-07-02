@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# SamplingImageData
+# Class SamplingImageData
 
 Stores the sampling image data.
 

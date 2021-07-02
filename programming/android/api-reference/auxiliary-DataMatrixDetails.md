@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# DataMatrixDetails
+# Class DataMatrixDetails
 
 ```java
 import com.dynamsoft.dbr.DataMatrixDetails;
@@ -29,7 +29,7 @@ import com.dynamsoft.dbr.DataMatrixDetails;
 ## Usage
 
 ```java
-//The textresult[i] is one of the text result you got  
+//The textresult[i] is one of the text results you got  
 DataMatrixDetails dataMatrixDetails = (DataMatrixDetails) textresult[i].detailedResult;
 int dm_moduleSize = dataMatrixDetails.moduleSize;
 int dm_columns = dataMatrixDetails.columns;

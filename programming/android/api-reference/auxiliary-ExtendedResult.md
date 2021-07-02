@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# ExtendedResult
+# Class ExtendedResult
 
 `ExtendedResult` is the extension of the class [`TextResult`](auxiliary-TextResult.md). It stores the extended result information.
 

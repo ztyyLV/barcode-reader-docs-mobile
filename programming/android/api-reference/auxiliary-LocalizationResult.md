@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# LocalizationResult
+# Class LocalizationResult
 
 Stores the localization result.
 

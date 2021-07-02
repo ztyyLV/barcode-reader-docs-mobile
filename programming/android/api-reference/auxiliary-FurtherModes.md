@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# FurtherModes
+# Class FurtherModes
 
 Stores the FurtherModes.
 

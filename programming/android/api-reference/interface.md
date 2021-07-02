@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# Android API Reference - Interface
+# Interfaces
 
   | Function | Description |
   |----------|-------------|

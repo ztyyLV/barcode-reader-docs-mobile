@@ -6,7 +6,7 @@ keywords: destroy, BarcodeReader, initialization and destroy, api reference, and
 needAutoGenerateSidebar: true
 ---
 
-# Android API Reference - BarcodeReader Initialization and Destroy
+# BarcodeReader Class - Initialization and Destroy
 
   | Method               | Description |
   |----------------------|-------------|

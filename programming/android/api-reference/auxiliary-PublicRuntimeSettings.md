@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# PublicRuntimeSettings
+# Class PublicRuntimeSettings
 
 Defines a struct to configure the barcode reading runtime settings. These settings control the barcode recognition process such as which barcode types to decode.
   

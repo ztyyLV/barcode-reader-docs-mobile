@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# LineSegment
+# Class LineSegment
 
 Stores line segment data.
 

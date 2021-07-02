@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# Quadrilateral
+# Class Quadrilateral
 
 Stores the quadrilateral.
 

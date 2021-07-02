@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# RegionOfInterest
+# Class RegionOfInterest
 
 Stores the region of interest.  
 

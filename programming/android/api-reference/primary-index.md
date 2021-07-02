@@ -8,7 +8,7 @@ needGenerateH3Content: true
 breadcrumbText: BarcodeReader Methods
 ---
 
-# Dynamsoft Barcode Reader SDK - Android BarcodeReader Methods
+# Dynamsoft Barcode Reader Android SDK - BarcodeReader Class
 
 ## Initialize and Destroy
 

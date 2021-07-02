@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# RegionDefinition
+# Class RegionDefinition
 
 Stores the region information.
   

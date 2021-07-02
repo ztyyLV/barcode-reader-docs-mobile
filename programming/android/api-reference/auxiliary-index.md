@@ -9,7 +9,7 @@ breadcrumbText: Class
 
 # Dynamsoft Barcode Reader SDK - Android Class
 
-- license Class
+- License Class
   - [`DMLTSConnectionParameters`](auxiliary-DMLTSConnectionParameters.md)
 - Common Classes
   - [`Point`](auxiliary-Point.md)

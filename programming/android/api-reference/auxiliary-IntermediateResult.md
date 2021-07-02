@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# IntermediateResult
+# Class IntermediateResult
 
 Stores the intermediate result.
 

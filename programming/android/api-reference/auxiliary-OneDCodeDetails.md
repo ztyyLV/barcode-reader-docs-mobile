@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# OneDCodeDetails
+# Class OneDCodeDetails
 
 ```java
 import com.dynamsoft.dbr.OneDCodeDetails;

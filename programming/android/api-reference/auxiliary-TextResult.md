@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# TextResult
+# Class TextResult
 
 Stores the text result.
 

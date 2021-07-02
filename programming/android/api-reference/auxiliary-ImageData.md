@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# ImageData
+# Class ImageData
 
 Stores the image data.  
 

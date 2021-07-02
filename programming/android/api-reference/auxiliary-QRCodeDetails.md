@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# QRCodeDetails
+# Class QRCodeDetails
 
 ```java
 import com.dynamsoft.dbr.QRCodeDetails;

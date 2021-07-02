@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# FrameDecodingParameters
+# Class FrameDecodingParameters
 
 Defines a struct to configure the frame decoding Parameters.  
 

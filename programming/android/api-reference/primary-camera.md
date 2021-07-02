@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 ---
 
 
-# Android API Reference - Camera Methods
+# BarcodeReader Class - Camera Methods
 
 | Method | Description |
 |--------|-------------|

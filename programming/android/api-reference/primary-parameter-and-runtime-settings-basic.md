@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 ---
 
 
-# Android API Reference - BarcodeReader Parameter and Runtime Settings Basic Methods
+# BarcodeReader Class - Parameter and Runtime Settings Basic Methods
 
   | Method               | Description |
   |----------------------|-------------|

@@ -6,7 +6,7 @@ keywords: startFrameDecoding, startFrameDecodingEx, appendFrame, stopFrameDecodi
 needAutoGenerateSidebar: true
 ---
 
-# Android API Reference - BarcodeReader Video Methods
+# BarcodeReader Class - Video Methods
 
 - Decode
 

@@ -7,9 +7,9 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: False
 ---
 
-# Intermediate Result Class
+# Intermediate Result Classes
 
-## IntermediateResult
+## Class IntermediateResult
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |

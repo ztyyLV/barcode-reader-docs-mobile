@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# DCESettingParameters
+# Class DCESettingParameters
 
 ```java
 import com.dynamsoft.dbr.DCESettingParameters;

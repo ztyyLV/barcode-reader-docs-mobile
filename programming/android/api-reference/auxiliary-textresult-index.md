@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: false
 ---
 
-# Result Classes
+# Barcode Result Classes
 
 ## [TextResult](auxiliary-TextResult.md)
 

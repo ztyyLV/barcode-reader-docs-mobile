@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 ---
 
 
-# Android API Reference - BarcodeReader License Methods
+# BarcodeReader Class - License Methods
 
   | Method               | Description |
   |----------------------|-------------|
