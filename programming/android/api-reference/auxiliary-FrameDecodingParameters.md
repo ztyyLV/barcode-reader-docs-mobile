@@ -59,7 +59,7 @@ int com.dynamsoft.dbr.FrameDecodingParameters.maxResultQueueLength
 
 ### width
 
-The width of the frame image in pixels. 
+The width of the frame image in pixels.
 
 ```java
 int com.dynamsoft.dbr.FrameDecodingParameters.width

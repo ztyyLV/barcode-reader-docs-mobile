@@ -44,6 +44,11 @@ needGenerateH3Content: False
 | [`frameId`](#frameid) | *int* | The ID of the operated frame. |
 | [`rpmColourArgumentIndex`](#rpmcolourargumentindex) | *int* | The index of the rpm colour argument. |
 
+```java
+barcodeReader.initIntermediateResults(EnumIntermediateResultType.IRT_ORIGINAL_IMAGE);
+IntermediateResult[] intermediateResults = barcodeReader.getIntermediateResults();
+```
+
 ## [Contour](auxiliary-contour.md)
 
 ```java
@@ -56,17 +61,8 @@ import com.dynamsoft.dbr.Contour;
 |---------- | ---- | ----------- |
 | `points` | *Point\[\]* | The array of the points that surround the barcode area. |
 
-### Contour Usage
-
 ```java
-if ( intermediateResults != null ) {
-    for (int i = 0; i < intermediateResults.length; i++ ) {
-        Contour[] contours = (Contour[]) intermediateResults[i].results;
-        for (int j = 0; j < contours.length; j++) {
-            Point[] points = contours[j].points;
-        }
-    }
-}
+Contour[] contours = (Contour[]) intermediateResults[i].results;
 ```
 
 ## [ImageData](auxiliary-imagedata.md)
@@ -85,6 +81,10 @@ import com.dynamsoft.dbr.ImageData;
 | `stride` | *int* | The stride (or scan width) of the image. |
 | `format` | *int* | The image pixel format used in the image byte array. |
 
+```java
+ImageData[] imageData = (ImageData[]) intermediateResults[i].results;
+```
+
 ## [LineSegment](auxiliary-linesegment.md)
 
 ```java
@@ -98,6 +98,10 @@ import com.dynamsoft.dbr.LineSegment;
 | [`startPoint`](#startpoint) | [`Point`](Point.md) | The start point of the line segment. |
 | [`endPoint`](#endpoint) | [`Point`](Point.md) | The end point of the line segment. |
 | [`linesConfidenceCoefficients`](#linesconfidencecoefficients) | *byte\[\]* | The confidence coefficients for lines. |
+
+```java
+LineSegment[] lineSegment = (LineSegment[]) intermediateResults[i].results;
+```
 
 ## [RegionOfInterest](auxiliary-regionofinterest.md)
 
@@ -113,6 +117,10 @@ import com.dynamsoft.dbr.LineSegment;
 | [`point`](#point) | [`Point`](Point.md) | The left top point of the region. |
 | [`width`](#width) | *int* | The width of the region. |
 | [`height`](#height) | *int* | The height of the region. |
+
+```java
+RegionOfInterest[] regionOfInterest = (RegionOfInterest[]) intermediateResults[i].results;
+```
 
 ## [LocalizationResult](auxiliary-localizationresult.md)
 
@@ -139,11 +147,6 @@ import com.dynamsoft.dbr.LocalizationResult;
 | `accompanyingTextBytes` | *byte\[\]* | The accompanying text content in a byte array. |
 | `confidence` | *int* | The confidence of the localization result. |
 
-## [Point](auxiliary-point.md)
-
-Stores an x- and y-coordinate pair in two-dimensional space.
-  
-| Attribute | Type | Description |
-|---------- | ---- | ----------- |
-| [`x`](#x) | *int* | The X coordinate of the point. |
-| [`y`](#y) | *int* | The Y coordinate of the point. |
+```java
+LocalizationResult[] localizationResult = (LocalizationResult[]) intermediateResults[i].results;
+```
