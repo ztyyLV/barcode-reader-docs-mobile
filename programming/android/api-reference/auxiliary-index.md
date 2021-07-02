@@ -14,20 +14,20 @@ breadcrumbText: Class
 > ## License Class
 > <hr>
 > * [`DMLTSConnectionParameters`](auxiliary-DMLTSConnectionParameters.md)
-
+>
 > ## Common Classes
 > <hr>
 > * [`Point`](auxiliary-Point.md)
 > * [`RegionDefinition`](auxiliary-RegionDefinition.md)
 > * [`Quadrilateral`](auxiliary-Quadrilateral.md)
-
+>
 > ## Parameter Configuration
 > <hr>
 > * [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md)
 > * [`FurtherModes`](auxiliary-FurtherModes.md)
 > * [`FrameDecodingParameters`](auxiliary-FrameDecodingParameters.md)
 > * [`DCESettingParameters`](auxiliary-DCESettingParameters.md)
-
+>
 > ## Barcode Result Classes
 > <hr>
 > * [`TextResult`](auxiliary-TextResult.md)
@@ -39,7 +39,7 @@ breadcrumbText: Class
 > * [`PDF417Details`](auxiliary-PDF417Details.md)
 > * [`QRCodeDetails`](auxiliary-QRCodeDetails.md)
 > * [`SamplingImageData`](auxiliary-SamplingImageData.md)
-
+>
 > ## Intermediate Result Classes
 > <hr>
 > * [`IntermediateResult`](auxiliary-IntermediateResult.md)
@@ -47,7 +47,7 @@ breadcrumbText: Class
 > * [`ImageData`](auxiliary-ImageData.md)
 > * [`LineSegment`](auxiliary-LineSegment.md)
 > * [`RegionOfInterest`](auxiliary-RegionOfInterest.md)
-
+>
 > ## Exception
 > <hr>
 > * [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
