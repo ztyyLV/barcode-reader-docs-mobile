@@ -12,13 +12,11 @@ needGenerateH3Content: true
 
 Stores the quadrilateral.
 
-## Attributes
-  
 | Attribute | Type |
 |---------- | ---- |
 | [`points`](#points) | [`Point`](Point.md)[] |
 
-### points
+## points
 
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex.
 

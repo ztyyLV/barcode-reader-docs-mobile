@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader License Me
 description: This page shows BarcodeReader license methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: initLicense, initLicenseFromServer, initLicenseFromLicenseContent, outputLicenseToString, license methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
+needGenerateH3Content: false
 ---
 
 

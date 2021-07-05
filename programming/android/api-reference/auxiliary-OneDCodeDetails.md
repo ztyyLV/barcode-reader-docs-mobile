@@ -15,28 +15,68 @@ import com.dynamsoft.dbr.OneDCodeDetails;
 
 `OneDCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the OneD code details.
 
-## Attributes
-  
-| Attribute | Type | Description |
-|---------- |-----| ---- |
-| `moduleSize` | *int* | The barcode module size (the minimum bar width in pixel). |
-| `startCharsBytes` | *int* | The start chars in a byte array. |
-| `stopCharsBytes` | *int* | The stop chars in a byte array. |
-| `checkDigitBytes` | *int* | The check digit chars in a byte array. |
-| `startPatternRange` | *int* | The start pattern range of the OneDcode. |
-| `middlePatternRange` | *int* | The middle pattern range of the OneDcode. |
-| `endPatternRange` | *int* | The end pattern range of the OneDcode. |
+| Attribute | Type |
+|---------- |-----|
+| `moduleSize` | *int* |
+| `startCharsBytes` | *int* |
+| `stopCharsBytes` | *int* |
+| `checkDigitBytes` | *int* |
+| `startPatternRange` | *int* |
+| `middlePatternRange` | *int* |
+| `endPatternRange` | *int* |
 
-## Usage
+## moduleSize
+
+The barcode module size (the minimum bar width in pixel).
 
 ```java
-//The textresult[i] is one of the text result you got  
-OneDCodeDetails oneDDetails = (OneDCodeDetails) textresult[i].detailedResult;
-int oneD_moduleSize = oneDDetails.moduleSize;
-int oneD_startCharsBytes = oneDDetails.startCharsBytes;
-int oneD_stopCharsBytes = oneDDetails.stopCharsBytes;
-int oneD_checkDigitBytes = oneDDetails.checkDigitBytes;
-int oneD_startPatternRange = oneDDetails.startPatternRange;
-int oneD_middlePatternRange = oneDDetails.middlePatternRange;
-int oneD_endPatternRange = oneDDetails.endPatternRange;
+int com.dynamsoft.dbr.OneDCodeDetails.moduleSize
+```
+
+## startCharsBytes
+
+The start chars in a byte array.
+
+```java
+byte[] com.dynamsoft.dbr.OneDCodeDetails.startCharsBytes
+```
+
+## stopCharsBytes
+
+The stop chars in a byte array.
+
+```java
+byte[] com.dynamsoft.dbr.OneDCodeDetails.stopCharsBytes
+```
+
+## checkDigitBytes
+
+The check digit chars in a byte array.
+
+```java
+byte[] com.dynamsoft.dbr.OneDCodeDetails.checkDigitBytes
+```
+
+## startPatternRange
+
+The start pattern range of the OneDcode.
+
+```java
+byte[] com.dynamsoft.dbr.OneDCodeDetails.startPatternRange
+```
+
+## middlePatternRange
+
+The middle pattern range of the OneDcode.
+
+```java
+byte[] com.dynamsoft.dbr.OneDCodeDetails.middlePatternRange
+```
+
+## endPatternRange
+
+The end pattern range of the OneDcode.
+
+```java
+byte[] com.dynamsoft.dbr.OneDCodeDetails.endPatternRange
 ```

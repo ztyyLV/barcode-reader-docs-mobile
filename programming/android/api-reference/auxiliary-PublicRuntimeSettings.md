@@ -11,9 +11,7 @@ needGenerateH3Content: true
 # Class PublicRuntimeSettings
 
 Defines a struct to configure the barcode reading runtime settings. These settings control the barcode recognition process such as which barcode types to decode.
-  
-## Attributes
-  
+
 | Attribute | Type |
 |---------- | ---- |
 | [`terminatePhase`](#terminatephase) | *int* |
@@ -41,7 +39,7 @@ Defines a struct to configure the barcode reading runtime settings. These settin
 | [`deblurModes`](#deblurmodes) | *int\[\]* |
 | [`barcodeZoneMinDistanceToImageBorders`](#barcodezonemindistancetoimageborders) | *int* |
 
-### terminatePhase
+## terminatePhase
 
 Sets the phase to stop the barcode reading algorithm.
 
@@ -61,7 +59,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.terminatePhase
 - **See also**  
     [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase)
 
-### timeout
+## timeout
 
 Sets the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. It does not include the time taken to load/decode an image (TIFF, PNG, etc.) from disk into memory.
 
@@ -78,7 +76,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.timeout
 - **Remarks**
     If you want to stop reading barcodes after a certain period of time, you can use this parameter to set a timeout.
 
-### maxAlgorithmThreadCount
+## maxAlgorithmThreadCount
 
 Sets the number of threads the image processing algorithm will use to decode barcodes.
 
@@ -95,7 +93,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.timeout
 - **Remarks**
     To keep a balance between speed and quality, the library concurrently runs four different threads for barcode decoding by default.
 
-### expectedBarcodesCount
+## expectedBarcodesCount
 
 Sets the number of barcodes expected to be detected for each image.
 
@@ -112,7 +110,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.expectedBarcodesCount
 - **Remarks**
     0: means Unknown and it will find at least one barcode. 1: try to find one barcode. If one barcode is found, the library will stop the localization process and perform barcode decoding. n: try to find n barcodes. If the library only finds m (m<n) barcode, it will try different algorithms till n barcodes are found or all algorithms are tried.
 
-### barcodeFormatIds
+## barcodeFormatIds
 
 Sets the formats of the barcode in BarcodeFormat group 1 to be read. Barcode formats in BarcodeFormat group 1 can be combined.
 
@@ -132,7 +130,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.barcodeFormatIds
 - **See also**  
     [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
-### barcodeFormatIds_2
+## barcodeFormatIds_2
 
 Sets the formats of the barcode in BarcodeFormat group 2 to be read. Barcode formats in BarcodeFormat group 2 can be combined.
 
@@ -152,7 +150,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.barcodeFormatIds_2
 - **See also**  
     [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
-### pdfRasterDPI
+## pdfRasterDPI
 
 Sets the output image resolution.
 
@@ -169,7 +167,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.pdfRasterDPI
 - **Remarks**
     When decoding barcodes from a PDF file using the DecodeFile method, the library will convert the PDF file to image(s) first, then perform barcode recognition.
 
-### scaleDownThreshold
+## scaleDownThreshold
 
 Sets the threshold for the image shrinking.
 
@@ -186,7 +184,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.scaleDownThreshold
 - **Remarks**
     If the shorter edge size is larger than the given threshold value, the library will calculate the required height and width of the barcode image and shrink the image to that size before localization. Otherwise, the library will perform barcode localization on the original image.
 
-### binarizationModes
+## binarizationModes
 
 Sets the mode and priority for binarization.
 
@@ -206,7 +204,7 @@ int[] com.dynamsoft.dbr.PublicRuntimeSettings.binarizationModes
 - **See also**
     [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
 
-### localizationModes
+## localizationModes
 
 Sets the mode and priority for localization algorithms.
 
@@ -226,7 +224,7 @@ int[] com.dynamsoft.dbr.PublicRuntimeSettings.localizationModes
 - **See also**
     [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode)  
 
-### furtherModes
+## furtherModes
 
 Sets further modes.
 
@@ -234,7 +232,7 @@ Sets further modes.
 FurtherModes com.dynamsoft.dbr.PublicRuntimeSettings.furtherModes
 ```
 
-### deblurLevel
+## deblurLevel
 
 Sets the degree of blurriness of the barcode.
 
@@ -251,7 +249,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.deblurLevel
 - **Remarks**
     If you have a blurry image, you can set this property to a larger value. The higher the value set, the more effort the library will spend to decode images, but it may also slow down the recognition process.
 
-### intermediateResultTypes
+## intermediateResultTypes
 
 Sets which types of intermediate result to be kept for further reference. Intermediate result types can be combined.
 
@@ -268,7 +266,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.intermediateResultTypes
 - **See also**
     [`EnumIntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype)
 
-### intermediateResultSavingMode
+## intermediateResultSavingMode
 
 Sets the mode for saving intermediate result.
 
@@ -285,7 +283,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.intermediateResultSavingMode
 - **See also**
     [`EnumIntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode)
 
-### resultCoordinateType
+## resultCoordinateType
 
 Specifies the format for the coordinates returned.
 
@@ -302,7 +300,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.resultCoordinateType
 - **See also**
     [`EnumResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype)
 
-### textResultOrderModes
+## textResultOrderModes
 
 Sets the mode and priority for the order of the text results returned.
 
@@ -322,7 +320,7 @@ int[] com.dynamsoft.dbr.PublicRuntimeSettings.textResultOrderModes
 - **See also**
     [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)
 
-### returnBarcodeZoneClarity
+## returnBarcodeZoneClarity
 
 Sets whether or not to return the clarity of the barcode zone.
 
@@ -339,7 +337,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.returnBarcodeZoneClarity
 - **Remarks**
     0: Do not return the clarity of the barcode zone; 1: Return the clarity of the barcode zone.  
 
-### region
+## region
 
 Sets the region definition including regionTop, regionLeft, regionRight, regionBottom, and regionMeasuredByPercentage.
 
@@ -347,7 +345,7 @@ Sets the region definition including regionTop, regionLeft, regionRight, regionB
 RegionDefinition com.dynamsoft.dbr.PublicRuntimeSettings.region
 ```
 
-### minBarcodeTextLength
+## minBarcodeTextLength
 
 Sets the range of barcode text length for barcodes search.
 
@@ -364,7 +362,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.minBarcodeTextLength
 - **Remarks**
     0: means no limitation on the barcode text length.
 
-### minResultConfidence
+## minResultConfidence
 
 The minimum confidence of the result.
 
@@ -381,7 +379,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.minResultConfidence
 - **Remarks**
     0: means no limitation on the result confidence.
 
-### scaleUpModes
+## scaleUpModes
 
 Sets the mode and priority to control the sampling methods of scale-up for linear barcode with small module sizes.
 
@@ -401,7 +399,7 @@ int[] com.dynamsoft.dbr.PublicRuntimeSettings.scaleUpModes[]
 - **See also**
     [`EnumScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)
 
-### pdfReadingMode
+## pdfReadingMode
 
 Sets the way to detect barcodes from a PDF file when using the DecodeFile method.
 
@@ -418,7 +416,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.pdfReadingMode
 - **See also**
     [`EnumPDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode)
 
-### deblurModes
+## deblurModes
 
 Sets the mode and priority for deblurring.
 
@@ -438,7 +436,7 @@ int[] com.dynamsoft.dbr.PublicRuntimeSettings.deblurModes
 - **See also**
     [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)
 
-### barcodeZoneMinDistanceToImageBorders
+## barcodeZoneMinDistanceToImageBorders
 
 Sets the minimum distance (in pixels) between the barcode zone and image borders.
 

@@ -11,8 +11,6 @@ needGenerateH3Content: true
 # Class ExtendedResult
 
 `ExtendedResult` is the extension of the class [`TextResult`](auxiliary-TextResult.md). It stores the extended result information.
-
-## Attributes
   
 | Attribute | Type |
 |---------- | ---- |
@@ -26,10 +24,10 @@ needGenerateH3Content: true
 | [`accompanyingTextBytes`](#accompanyingtextbytes) | *byte\[\]* |
 | [`deformation`](#deformation) | *int* |
 | [`detailedResult`](#detailedresult) | *Object* |
-| [`samplingImage`](#samplingimage) | [`SamplingImageData`](SamplingImageData.md) |
+| [`samplingImage`](#samplingimage) | [`SamplingImageData`](auxiliary-SamplingImageData.md) |
 | [`clarity`](#clarity) | *int* |
 
-### resultType
+## resultType
 
 Extended result type.
 
@@ -37,7 +35,7 @@ Extended result type.
 int com.dynamsoft.dbr.ExtendedResult.resultType
 ```
 
-### barcodeFormat
+## barcodeFormat
 
 Barcode type in BarcodeFormat group 1.
 
@@ -45,7 +43,7 @@ Barcode type in BarcodeFormat group 1.
 int com.dynamsoft.dbr.ExtendedResult.barcodeFormat
 ```
 
-### barcodeFormatString
+## barcodeFormatString
 
 Barcode type in BarcodeFormat group 1 as string.
 
@@ -53,7 +51,7 @@ Barcode type in BarcodeFormat group 1 as string.
 String com.dynamsoft.dbr.ExtendedResult.barcodeFormatString
 ```
 
-### barcodeFormat_2
+## barcodeFormat_2
 
 Barcode type in BarcodeFormat group 2.
 
@@ -61,7 +59,7 @@ Barcode type in BarcodeFormat group 2.
 int com.dynamsoft.dbr.ExtendedResult.barcodeFormat_2
 ```
 
-### barcodeFormatString_2
+## barcodeFormatString_2
 
 Barcode type in BarcodeFormat group 2 as string.
 
@@ -69,7 +67,7 @@ Barcode type in BarcodeFormat group 2 as string.
 String com.dynamsoft.dbr.ExtendedResult.barcodeFormatString_2
 ```
 
-### confidence
+## confidence
 
 The confidence of the result. The higher confidence means the higher accuracy.
 
@@ -77,7 +75,7 @@ The confidence of the result. The higher confidence means the higher accuracy.
 int com.dynamsoft.dbr.ExtendedResult.confidence
 ```
 
-### bytes
+## bytes
 
 The content in a byte array.
 
@@ -85,7 +83,7 @@ The content in a byte array.
 byte[] com.dynamsoft.dbr.ExtendedResult.bytes
 ```
 
-### accompanyingTextBytes
+## accompanyingTextBytes
 
 The accompanying text content in a byte array.
 
@@ -93,7 +91,7 @@ The accompanying text content in a byte array.
 byte[] com.dynamsoft.dbr.ExtendedResult.accompanyingTextBytes
 ```
 
-### deformation
+## deformation
 
 The deformation value.
 
@@ -101,7 +99,7 @@ The deformation value.
 int com.dynamsoft.dbr.ExtendedResult.deformation
 ```
 
-### detailedResult
+## detailedResult
 
 One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.md), [`PDF417Details`](auxiliary-PDF417Details.md), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md), [`AztecDetails`](auxiliary-AztecDetails.md), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.md).
 
@@ -109,7 +107,7 @@ One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.md), [`PDF417Det
 Object com.dynamsoft.dbr.ExtendedResult.detailedResult
 ```
 
-### samplingImage
+## samplingImage
 
 The sampling image info.
 
@@ -117,7 +115,7 @@ The sampling image info.
 SamplingImageData com.dynamsoft.dbr.ExtendedResult.samplingImage
 ```
 
-### clarity
+## clarity
 
 The clarity of the barcode zone in percentage.
 

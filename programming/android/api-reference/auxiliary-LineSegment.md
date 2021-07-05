@@ -12,15 +12,13 @@ needGenerateH3Content: true
 
 Stores line segment data.
 
-## Attributes
-  
 | Attribute | Type |
 |---------- | ---- |
 | [`startPoint`](#startpoint) | [`Point`](Point.md) |
 | [`endPoint`](#endpoint) | [`Point`](Point.md) |
 | [`linesConfidenceCoefficients`](#linesconfidencecoefficients) | *byte\[\]* |
 
-### startPoint
+## startPoint
 
 The start point of the line segment.
 
@@ -28,7 +26,7 @@ The start point of the line segment.
 Point com.dynamsoft.dbr.LineSegment.startPoint
 ```
 
-### endPoint
+## endPoint
 
 The end point of the line segment.
 
@@ -36,7 +34,7 @@ The end point of the line segment.
 Point com.dynamsoft.dbr.LineSegment.endPoint
 ```
 
-### linesConfidenceCoefficients
+## linesConfidenceCoefficients
 
 The confidence coefficients for lines. There are 4 coefficients in this set:  
 

@@ -12,15 +12,13 @@ needGenerateH3Content: true
 
 Stores the sampling image data.
 
-## Attributes
-  
 | Attribute | Type |
 |---------- | ---- |
 | [`bytes`](#bytes) | *byte\[\]* |
 | [`width`](#width) | *int* |
 | [`height`](#height) | *int* |
 
-### bytes
+## bytes
 
 The sampling image data in a byte array.
 
@@ -28,7 +26,7 @@ The sampling image data in a byte array.
 byte[] com.dynamsoft.dbr.SamplingImageData.bytes
 ```
 
-### width
+## width
 
 The width of the sampling image.
 
@@ -36,7 +34,7 @@ The width of the sampling image.
 int com.dynamsoft.dbr.SamplingImageData.width
 ```
 
-### height
+## height
 
 The height of the sampling image.
 

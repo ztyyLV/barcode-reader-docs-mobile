@@ -15,14 +15,12 @@ import com.dynamsoft.dbr.BarcodeReaderException;
 ```
 
 Exception for signalling barcode reader errors.
-
-## Method
   
-| Method | Value | Description |
-|--------|------|-------------|
-| [`getErrorCode`](#geterrorcode)| *int* | Gets the error code. |
+| Method | Type |
+|--------|------|
+| [`getErrorCode`](#geterrorcode)| *int* |
 
-## Usage
+## getErrorCode
 
 ```java
 try {

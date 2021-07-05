@@ -12,8 +12,6 @@ needGenerateH3Content: true
 
 Stores the image data.  
 
-## Attributes
-
 | Attribute | Type |
 |---------- | ---- |
 | [`bytes`](#bytes) | *byte\[\]* |
@@ -22,7 +20,7 @@ Stores the image data.
 | [`stride`](#stride) | *int* |
 | [`format`](#format) | *int* |
 
-### bytes
+## bytes
 
 The image data content in a byte array.
 
@@ -30,7 +28,7 @@ The image data content in a byte array.
 byte[] com.dynamsoft.dbr.ImageData.bytes
 ```
 
-### width
+## width
 
 The width of the image in pixels.  
 
@@ -38,7 +36,7 @@ The width of the image in pixels.
 int com.dynamsoft.dbr.ImageData.width
 ```
 
-### height
+## height
 
 The height of the image in pixels.
 
@@ -46,7 +44,7 @@ The height of the image in pixels.
 int com.dynamsoft.dbr.ImageData.height
 ```
 
-### stride
+## stride
 
 The stride (or scan width) of the image.
 
@@ -54,7 +52,7 @@ The stride (or scan width) of the image.
 int com.dynamsoft.dbr.ImageData.stride
 ```
 
-### format
+## format
 
 The image pixel format used in the image byte array.
 

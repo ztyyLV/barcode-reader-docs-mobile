@@ -15,22 +15,62 @@ import com.dynamsoft.dbr.DCESettingParameters;
 
 Stores the DCESettingParameters information.
 
-## Attributes
+| Attribute | type |
+|-----------|------|
+| `cameraInstance` | *Object* |
+|  `textResultCallback` | [`TextResultCallback`]({{site.android_api}}interface.html#textresultcallback) |
+| `textResultCallback_UserData` | *Object*  |
+| `intermediateResultCallback` | [`IntermediateResultCallback`]({{site.android_api}}interface.html#intermediateresultcallback) |
+| `IntermediateResultCallback_UserData` | *Object* |
 
-| Attribute | type | Description |
-|-----------|------|-------------|
-| `cameraInstance` | *Object* | The Camera Enhancer instance |
-|  `textResultCallback` | [`TextResultCallback`]({{site.android_api}}interface.html#textresultcallback) | Set text result callback. |
-| `textResultCallback_UserData` | *Object*  | Transfer user data. |
-| `intermediateResultCallback` | [`IntermediateResultCallback`]({{site.android_api}}interface.html#intermediateresultcallback) | Set intermediate result callback. |
-| `IntermediateResultCallback_UserData` | *Object* | Transfer user data. |
+## CameraInstance
 
-## Usage
+The Camera Enhancer instance.
 
 ```java
-DCESettingParameters settingParameters = new DCESettingParameters();
 settingParameters.cameraInstance = mCameraEnhancer;
+```
+
+## textResultCallback
+
+Set text result callback.
+
+```java
 settingParameters.textResultCallback =mTextResultCallback;
+```
+
+The `TextResultCallback` includes the following Parameters:
+
+- `frameID`: The ID of frame.
+- `results`: The recognized barcode result of the frame.
+- `userData`: Arguments passed to your function.
+
+## textResultCallback_UserData
+
+Set the `UserData` of the `TextResultCallback`.
+
+```java
+settingParameters.textResultCallback_UserData =userData;
+```
+
+## intermediateResultCallback
+
+Set intermediate result call back.
+
+```java
 settingParameters.intermediateResultCallback = mIntermediateResultCallback;
-barcodeReader.SetCameraEnhancerParam(settingParameters);
+```
+
+The `IntermediateResultCallback` includes the following Parameters:
+
+- `frameID`: The ID of frame.
+- `results`: The intermediate result of the frame.
+- `userData`: Arguments passed to your function.
+
+## intermediateResultCallback_UserData
+
+Set the `UserData` of the `IntermediateResultCallback`.
+
+```java
+settingParameters.intermediateResultCallback_UserData =userData;
 ```

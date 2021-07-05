@@ -12,8 +12,6 @@ needGenerateH3Content: true
 
 Stores the intermediate result.
 
-## Attributes
-  
 | Attribute | Type |
 |---------- | ---- |
 | [`results`](#results) | *Object\[\]* |
@@ -47,7 +45,7 @@ Stores the intermediate result.
 | [`frameId`](#frameid) | *int* |
 | [`rpmColourArgumentIndex`](#rpmcolourargumentindex) | *int* |
 
-### results
+## results
 
 One of the following types: Array of [`Contour`](auxiliary-Contour.md), Array of [`ImageData`](auxiliary-ImageData.md), Array of [`LineSegment`](auxiliary-LineSegment.md), Array of [`LocalizationResult`](auxiliary-LocalizationResult.md), Array of [`RegionOfInterest`](auxiliary-RegionOfInterest.md).
 
@@ -55,7 +53,7 @@ One of the following types: Array of [`Contour`](auxiliary-Contour.md), Array of
 Object[] com.dynamsoft.dbr.IntermediateResult.results
 ```
 
-### dataType
+## dataType
 
 The data type of the intermediate result.
 
@@ -63,7 +61,7 @@ The data type of the intermediate result.
 int com.dynamsoft.dbr.IntermediateResult.dataType
 ```
 
-### resultType
+## resultType
 
 Intermediate result type.
 
@@ -71,7 +69,7 @@ Intermediate result type.
 int com.dynamsoft.dbr.IntermediateResult.resultType
 ```
 
-### barcodeComplementMode
+## barcodeComplementMode
 
 The [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) used when generating the current intermediate result.
 
@@ -79,7 +77,7 @@ The [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.ht
 iny com.dynamsoft.dbr.IntermediateResult.barcodeComplementMode
 ```
 
-### bcmIndex
+## bcmIndex
 
 The array index of current used [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) in the [`barcodeComplementModes`](auxiliary-FurtherModes.md#barcodecomplementmodes) setting.
 
@@ -87,7 +85,7 @@ The array index of current used [`EnumBarcodeComplementMode`]({{ site.enumeratio
 int com.dynamsoft.dbr.IntermediateResult.bcmIndex
 ```
 
-### deformationResistingMode
+## deformationResistingMode
 
 The [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) used when generating the current intermediate result.
 
@@ -95,7 +93,7 @@ The [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums
 int com.dynamsoft.dbr.IntermediateResult.deformationResistingMode
 ```
 
-### drmIndex
+## drmIndex
 
 The array index of current used [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) in the [`deformationResistingModes`](auxiliary-FurtherModes.md#deformationresistingmodes) setting.
 
@@ -103,7 +101,7 @@ The array index of current used [`EnumDeformationResistingMode`]({{ site.enumera
 int com.dynamsoft.dbr.IntermediateResult.drmIndex
 ```
 
-### dpmCodeReadingMode
+## dpmCodeReadingMode
 
 The [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) used when generating the current intermediate result.
 
@@ -111,7 +109,7 @@ The [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#
 int com.dynamsoft.dbr.IntermediateResult.dpmCodeReadingMode
 ```
 
-### dpmcrmIndex
+## dpmcrmIndex
 
 The array index of current used [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) in the [`dpmCodeReadingModes`](auxiliary-FurtherModes.md#dpmcodereadingmodes) setting.
 
@@ -119,7 +117,7 @@ The array index of current used [`EnumDPMCodeReadingMode`]({{ site.enumerations 
 int com.dynamsoft.dbr.IntermediateResult.dpmcrmIndex
 ```
 
-### rotationMatrix
+## rotationMatrix
 
 The rotation matrix.
 
@@ -127,7 +125,7 @@ The rotation matrix.
 double[] com.dynamsoft.dbr.IntermediateResult.rotationMatrix
 ```
 
-### textFilterMode
+## textFilterMode
 
 The [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) used when generating the current intermediate result.
 
@@ -135,7 +133,7 @@ The [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#text
 int com.dynamsoft.dbr.IntermediateResult.textFilterMode
 ```
 
-### tfmIndex
+## tfmIndex
 
 The array index of current used [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) in the [`textFilterModes`](auxiliary-FurtherModes.md#textfiltermodes) setting.
 
@@ -143,7 +141,7 @@ The array index of current used [`EnumTextFilterMode`]({{ site.enumerations }}pa
 int com.dynamsoft.dbr.IntermediateResult.tfmIndex
 ```
 
-### localizationMode
+## localizationMode
 
 The [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) used when generating the current intermediate result.
 
@@ -151,7 +149,7 @@ The [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#lo
 int com.dynamsoft.dbr.IntermediateResult.localizationMode
 ```
 
-### lmIndex
+## lmIndex
 
 The array index of current used [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) in the [`localizationModes`](auxiliary-PublicRuntimeSettings.md#localizationmodes) setting.
 
@@ -159,7 +157,7 @@ The array index of current used [`EnumLocalizationMode`]({{ site.enumerations }}
 int com.dynamsoft.dbr.IntermediateResult.lmIndex
 ```
 
-### binarizationMode
+## binarizationMode
 
 The [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) used when generating the current intermediate result.
 
@@ -167,7 +165,7 @@ The [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#bi
 int com.dynamsoft.dbr.IntermediateResult.binarizationMode
 ```
 
-### bmIndex
+## bmIndex
 
 The array index of current used [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) in the [`binarizationModes`](auxiliary-PublicRuntimeSettings.md#binarizationmodes) setting.
 
@@ -175,7 +173,7 @@ The array index of current used [`EnumBinarizationMode`]({{ site.enumerations }}
 int com.dynamsoft.dbr.IntermediateResult.bmIndex
 ```
 
-### imagePreprocessingMode
+## imagePreprocessingMode
 
 The [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) used when generating the current intermediate result.
 
@@ -183,7 +181,7 @@ The [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.h
 int com.dynamsoft.dbr.IntermediateResult.imagePreprocessingMode
 ```
 
-### ipmIndex
+## ipmIndex
 
 The array index of current used [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) in [`imagePreprocessingModes`](auxiliary-FurtherModes.md#imagepreprocessingmodes) setting.
 
@@ -191,7 +189,7 @@ The array index of current used [`EnumImagePreprocessingMode`]({{ site.enumerati
 int com.dynamsoft.dbr.IntermediateResult.ipmIndex
 ```
 
-### roiId
+## roiId
 
 The ID of the ROI (Region Of Interest) generated by the SDK. -1 means the original image.
 
@@ -199,7 +197,7 @@ The ID of the ROI (Region Of Interest) generated by the SDK. -1 means the origin
 int com.dynamsoft.dbr.IntermediateResult.roiId
 ```
 
-### regionPredetectionMode
+## regionPredetectionMode
 
 The [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) used when generating the current intermediate result.
 
@@ -207,7 +205,7 @@ The [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.h
 int com.dynamsoft.dbr.IntermediateResult.regionPredetectionMode
 ```
 
-### rpmIndex
+## rpmIndex
 
 The array index of current used [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) in the [`regionPredetectionModes`](auxiliary-FurtherModes.md#regionpredetectionmodes) setting.
 
@@ -215,7 +213,7 @@ The array index of current used [`EnumRegionPredetectionMode`]({{ site.enumerati
 int com.dynamsoft.dbr.IntermediateResult.rpmIndex
 ```
 
-### grayscaleTransformationMode
+## grayscaleTransformationMode
 
 The [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) used when generating the current intermediate result.
 
@@ -223,7 +221,7 @@ The [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-en
 int com.dynamsoft.dbr.IntermediateResult.grayscaleTransformationMode
 ```
 
-### gtmIndex
+## gtmIndex
 
 The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) in the [`grayscaleTransformationModes`](auxiliary-FurtherModes.md#grayscaletransformationmodes) setting.
 
@@ -231,7 +229,7 @@ The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.enum
 int com.dynamsoft.dbr.IntermediateResult.gtmIndex
 ```
 
-### colourConversionMode
+## colourConversionMode
 
 The [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) used when generating the current intermediate result.
 
@@ -239,7 +237,7 @@ The [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.htm
 int com.dynamsoft.dbr.IntermediateResult.colourConversionMode
 ```
 
-### cicmIndex
+## cicmIndex
 
 The array index of current used [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) in the [`colourConversionModes`](auxiliary-FurtherModes.md#colourconversionmodes) setting.
 
@@ -247,7 +245,7 @@ The array index of current used [`EnumColourConversionMode`]({{ site.enumeration
 int com.dynamsoft.dbr.IntermediateResult.cicmIndex
 ```
 
-### colourClusteringMode
+## colourClusteringMode
 
 The [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) used when generating the current intermediate result.
 
@@ -255,7 +253,7 @@ The [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.htm
 int com.dynamsoft.dbr.IntermediateResult.colourClusteringMode
 ```
 
-### ccmIndex
+## ccmIndex
 
 The array index of current used [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) in the [`colourClusteringModes`](auxiliary-FurtherModes.md#colourclusteringmodes) setting.
 
@@ -263,7 +261,7 @@ The array index of current used [`EnumColourClusteringMode`]({{ site.enumeration
 int com.dynamsoft.dbr.IntermediateResult.ccmIndex
 ```
 
-### scaleDownRatio
+## scaleDownRatio
 
 The scale down ratio.
 
@@ -271,7 +269,7 @@ The scale down ratio.
 int com.dynamsoft.dbr.IntermediateResult.scaleDownRatio
 ```
 
-### frameId
+## frameId
 
 The ID of the operated frame.
 
@@ -279,7 +277,7 @@ The ID of the operated frame.
 int com.dynamsoft.dbr.IntermediateResult.frameId
 ```
 
-### rpmColourArgumentIndex
+## rpmColourArgumentIndex
 
 The index of the rpm colour argument.
 

@@ -11,9 +11,7 @@ needGenerateH3Content: true
 # Class RegionDefinition
 
 Stores the region information.
-  
-## Attributes
-  
+
 | Attribute | Type |
 |---------- | ---- |
 | [`regionTop`](#regiontop) | *int* |
@@ -22,7 +20,7 @@ Stores the region information.
 | [`regionBottom`](#regionbottom) | *int* |
 | [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | *int* |
 
-### regionTop
+## regionTop
 
 The top-most coordinate or percentage of the region.
 
@@ -37,7 +35,7 @@ int com.dynamsoft.dbr.RegionDefinition.regionTop
 - **Default value**
     0
 
-### regionLeft
+## regionLeft
 
 The left-most coordinate or percentage of the region.
 
@@ -52,7 +50,7 @@ int com.dynamsoft.dbr.RegionDefinition.regionLeft
 - **Default value**
     0
 
-### regionRight
+## regionRight
 
 The right-most coordinate or percentage of the region.
 
@@ -67,7 +65,7 @@ int com.dynamsoft.dbr.RegionDefinition.regionRight
 - **Default value**
     0
 
-### regionBottom
+## regionBottom
 
 The bottom-most coordinate or percentage of the region.
 
@@ -82,7 +80,7 @@ int com.dynamsoft.dbr.RegionDefinition.regionBottom
 - **Default value**
     0
 
-### regionMeasuredByPercentage
+## regionMeasuredByPercentage
 
 Sets whether or not to use percentage to measure the region size.
 

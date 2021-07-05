@@ -11,14 +11,12 @@ needGenerateH3Content: true
 
 Stores an x- and y-coordinate pair in two-dimensional space.
 
-## Attributes
-  
 | Attribute | Type |
 |---------- | ---- |
 | [`x`](#x) | *int* |
 | [`y`](#y) | *int* |
 
-### x
+## x
 
 The X coordinate of the point.
 
@@ -26,7 +24,7 @@ The X coordinate of the point.
 int com.dynamsoft.dbr.Point.x
 ```
 
-### y
+## y
 
 The Y coordinate of the point.
 

@@ -15,15 +15,13 @@ import com.dynamsoft.dbr.Contour;
 ```
 
 The contour is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
-
-## Attributes
   
 | Attribute | Description |
 |---------- | ----------- |
 | `Point[] points;` | The array of the points that surround the barcode area. |
   
-### Usage
+## Points
 
 ```java
-Point[] com.dynamsoft.dbr.Contour.points
+Point[] points
 ```  

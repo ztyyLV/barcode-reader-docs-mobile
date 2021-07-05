@@ -12,8 +12,6 @@ needGenerateH3Content: true
 
 Defines a struct to configure the frame decoding Parameters.  
 
-## Attributes
-
 | Attribute | Type |
 |---------- | ---- |
 | [`maxQueueLength`](#maxqueuelength) | *int* |
@@ -29,7 +27,7 @@ Defines a struct to configure the frame decoding Parameters.
 | [`clarityCalculationMethod`](#claritycalculationmethod) | *int* |
 | [`clarityFilterMode`](#clarityfiltermode) | *int* |
 
-### maxQueueLength
+## maxQueueLength
 
 The maximum number of frames waiting for decoding.
 
@@ -43,7 +41,7 @@ int com.dynamsoft.dbr.FrameDecodingParameters.maxQueueLength
 - **Default value**
     3
 
-### maxResultQueueLength
+## maxResultQueueLength
 
 The maximum number of frames waiting results (text result/localization result) will be kept for further reference.  
 
@@ -57,7 +55,7 @@ int com.dynamsoft.dbr.FrameDecodingParameters.maxResultQueueLength
 - **Default value**
     10  
 
-### width
+## width
 
 The width of the frame image in pixels.
 
@@ -71,7 +69,7 @@ int com.dynamsoft.dbr.FrameDecodingParameters.width
 - **Default value**
     0  
 
-### height
+## height
 
 The height of the frame image in pixels.
 
@@ -85,7 +83,7 @@ int com.dynamsoft.dbr.FrameDecodingParameters.height
 - **Default value**
     0  
 
-### stride
+## stride
 
 The stride (or scan width) of the frame image.
 
@@ -99,7 +97,7 @@ int com.dynamsoft.dbr.FrameDecodingParameters.stride
 - **Default value**
     0
 
-### imagePixelFormat
+## imagePixelFormat
 
 The image pixel format used in the image byte array.
 
@@ -116,7 +114,7 @@ int com.dynamsoft.dbr.FrameDecodingParameters.imagePixelFormat
 - **See also**  
     [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)
 
-### region
+## region
 
 The region definition of the frame to calculate the internal indicator.  
 
@@ -130,7 +128,7 @@ RegionDefinition com.dynamsoft.dbr.FrameDecodingParameters.region
 - **See also**
     [`RegionDefinition`](RegionDefinition.md)
 
-### threshold
+## threshold
 
 The threshold used for filtering frames.
 
@@ -147,7 +145,7 @@ float com.dynamsoft.dbr.FrameDecodingParameters.threshold
 - **Remarks**  
     The SDK will calculate an inner indicator for each frame from [`appendFrame`](../BarcodeReader/video.md#appendframe), if the change rate of the indicators between the current frame and the history frames is larger than the given threshold, the current frame will not be added to the inner frame queue waiting for decoding.
 
-### fps
+## fps
 
 The frequency of calling [`appendFrame`](../BarcodeReader/video.md#appendframe) per second.
 
@@ -164,7 +162,7 @@ int com.dynamsoft.dbr.FrameDecodingParameters.fps
 - **Remarks**  
     0 means the frequency will be calculated automatically by the SDK.
 
-### autoFilter
+## autoFilter
 
 Sets whether to filter frames automatically.
 
@@ -181,7 +179,7 @@ int com.dynamsoft.dbr.FrameDecodingParameters.autoFilter
 - **Remarks**  
     0: Diable filtering frames automatically. 1: Enable filtering frames automatically.
 
-### clarityCalculationMethod
+## clarityCalculationMethod
 
 Sets the method used for calculating the clarity of the frames.
 
@@ -198,7 +196,7 @@ int com.dynamsoft.dbr.FrameDecodingParameters.clarityCalculationMethod
 - **See also**  
     [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod)
 
-### clarityFilterMode
+## clarityFilterMode
 
 Sets the mode used for filtering frames by calculated clarity.
 

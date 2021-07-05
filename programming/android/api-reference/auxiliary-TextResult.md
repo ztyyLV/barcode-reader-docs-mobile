@@ -11,8 +11,6 @@ needGenerateH3Content: true
 
 Stores the text result.
 
-## Attributes
-  
 | Attribute | Type |
 |-----------|------|
 | [`barcodeFormat`](#barcodeformat) | *int* |
@@ -28,7 +26,7 @@ Stores the text result.
 | [`isDPM`](#isdpm) | *int* |
 | [`isMirrored`](#ismirrored) | *int* |
 
-### barcodeFormat
+## barcodeFormat
 
 Barcode type in BarcodeFormat group 1.
 
@@ -38,7 +36,7 @@ int com.dynamsoft.dbr.TextResult.barcodeFormat
 
 Read more in [`Enumerations: BarcodeFormatIds`]({{ site.enumerations }}format-enums.html#barcodeformat)
 
-### barcodeFormatString
+## barcodeFormatString
 
 Barcode type in BarcodeFormat group 1 as string.
 
@@ -46,7 +44,7 @@ Barcode type in BarcodeFormat group 1 as string.
 String com.dynamsoft.dbr.TextResult.barcodeFormatString
 ```
 
-### barcodeFormat_2
+## barcodeFormat_2
 
 Barcode type in BarcodeFormat group 2.
 
@@ -56,7 +54,7 @@ int com.dynamsoft.dbr.TextResult.barcodeFormat_2
 
 Read more in [`Enumerations: BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat)
 
-### barcodeFormatString_2
+## barcodeFormatString_2
 
 Barcode type in BarcodeFormat group 2 as string.
 
@@ -64,7 +62,7 @@ Barcode type in BarcodeFormat group 2 as string.
 String com.dynamsoft.dbr.TextResult.barcodeFormatString_2
 ```
 
-### barcodeText
+## barcodeText
 
 The barcode text, ends by '\0'.
 
@@ -72,7 +70,7 @@ The barcode text, ends by '\0'.
 String com.dynamsoft.dbr.TextResult.barcodeText
 ```
 
-### barcodeBytes
+## barcodeBytes
 
 The barcode content in a byte array.
 
@@ -80,7 +78,7 @@ The barcode content in a byte array.
 byte[] com.dynamsoft.dbr.TextResult.barcodeBytes
 ```
 
-### barcodeBytesLength
+## barcodeBytesLength
 
 The length of the byte array.
 
@@ -88,7 +86,7 @@ The length of the byte array.
 int com.dynamsoft.dbr.TextResult.barcodeBytesLength
 ```
 
-### localizationResult
+## localizationResult
 
 The corresponding localization result.
 
@@ -96,7 +94,7 @@ The corresponding localization result.
 LocalizationResult com.dynamsoft.dbr.TextResult.localizationResult
 ```
 
-### detailedResult
+## detailedResult
 
 One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.md), [`PDF417Details`](auxiliary-PDF417Details.md), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md), [`AztecDetails`](auxiliary-AztecDetails.md), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.md).
 
@@ -104,7 +102,7 @@ One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.md), [`PDF417Det
 Object com.dynamsoft.dbr.TextResult.detailedResult
 ```
 
-### results
+## results
 
 The extended result array.
 
@@ -112,7 +110,7 @@ The extended result array.
 ExtendedResult[] com.dynamsoft.dbr.TextResult.results
 ```
 
-### exception
+## exception
 
 The exception message.
 
@@ -120,7 +118,7 @@ The exception message.
 String com.dynamsoft.dbr.TextResult.exception
 ```
 
-### isDPM
+## isDPM
 
 This attribute stands for whether the result is a DPM result.
 
@@ -128,7 +126,7 @@ This attribute stands for whether the result is a DPM result.
 int com.dynamsoft.dbr.TextResult.isDPM
 ```
 
-### isMirrored
+## isMirrored
 
 This attribute stands for whether the barcode is mirrored.
 

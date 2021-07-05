@@ -12,8 +12,6 @@ needGenerateH3Content: true
 
 Stores the localization result.
 
-## Attributes
-  
 | Attribute | Type |
 |---------- | ---- |
 | [`terminatePhase`](#terminatephase) | *int* |
@@ -31,7 +29,7 @@ Stores the localization result.
 | [`accompanyingTextBytes`](#accompanyingtextbytes) | *byte\[\]* |
 | [`confidence`](#confidence) | *int* |
 
-### terminatePhase
+## terminatePhase
 
 The terminate phase of localization result.
 
@@ -39,7 +37,7 @@ The terminate phase of localization result.
 int com.dynamsoft.dbr.LocalizationResult.terminatePhase
 ```
 
-### barcodeFormat
+## barcodeFormat
 
 Barcode type in BarcodeFormat group 1.
 
@@ -47,7 +45,7 @@ Barcode type in BarcodeFormat group 1.
 int com.dynamsoft.dbr.LocalizationResult.barcodeFormat
 ```
 
-### barcodeFormatString
+## barcodeFormatString
 
 Barcode type in BarcodeFormat group 1 as string.
 
@@ -55,7 +53,7 @@ Barcode type in BarcodeFormat group 1 as string.
 String com.dynamsoft.dbr.LocalizationResult.barcodeFormatString
 ```
 
-### barcodeFormat_2
+## barcodeFormat_2
 
 Barcode type in BarcodeFormat group 2.
 
@@ -63,7 +61,7 @@ Barcode type in BarcodeFormat group 2.
 int com.dynamsoft.dbr.LocalizationResult.barcodeFormat_2
 ```
 
-### barcodeFormatString_2
+## barcodeFormatString_2
 
 Barcode type in BarcodeFormat group 2 as string.
 
@@ -71,7 +69,7 @@ Barcode type in BarcodeFormat group 2 as string.
 String com.dynamsoft.dbr.LocalizationResult.barcodeFormatString_2
 ```
 
-### resultPoints
+## resultPoints
 
 The vertices coordinates information of the barcode region.
 
@@ -79,7 +77,7 @@ The vertices coordinates information of the barcode region.
 Point[] com.dynamsoft.dbr.LocalizationResult.resultPoints
 ```
 
-### angle
+## angle
 
 The angle of a barcode. Values range is from 0 to 360.
 
@@ -87,7 +85,7 @@ The angle of a barcode. Values range is from 0 to 360.
 int com.dynamsoft.dbr.LocalizationResult.angle
 ```
 
-### moduleSize
+## moduleSize
 
 The barcode module size (the minimum bar width in pixel).
 
@@ -95,7 +93,7 @@ The barcode module size (the minimum bar width in pixel).
 int com.dynamsoft.dbr.LocalizationResult.moduleSize
 ```
 
-### pageNumber
+## pageNumber
 
 The page number the barcode located in. The index is 0-based.
 
@@ -103,7 +101,7 @@ The page number the barcode located in. The index is 0-based.
 int com.dynamsoft.dbr.LocalizationResult.pageNumber
 ```
 
-### regionName
+## regionName
 
 The region name the barcode located in.
 
@@ -111,7 +109,7 @@ The region name the barcode located in.
 String com.dynamsoft.dbr.LocalizationResult.regionName
 ```
 
-### documentName
+## documentName
 
 The document name.
 
@@ -119,7 +117,7 @@ The document name.
 String com.dynamsoft.dbr.LocalizationResult.documentName
 ```
 
-### resultCoordinateType
+## resultCoordinateType
 
 The coordinate type.
 
@@ -127,7 +125,7 @@ The coordinate type.
 int com.dynamsoft.dbr.LocalizationResult.resultCoordinateType
 ```
 
-### accompanyingTextBytes
+## accompanyingTextBytes
 
 The accompanying text content in a byte array.
 
@@ -135,7 +133,7 @@ The accompanying text content in a byte array.
 byte[] com.dynamsoft.dbr.LocalizationResult.accompanyingTextBytes
 ```
 
-### confidence
+## confidence
 
 The confidence of the localization result.
 

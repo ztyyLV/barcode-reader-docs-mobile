@@ -11,8 +11,6 @@ needGenerateH3Content: true
 
 Stores the FurtherModes.
 
-## Attributes
-  
 | Attribute | Type |
 |---------- | ---- |
 | [`colourClusteringModes`](#colourclusteringmodes) | *int\[\]* |
@@ -29,7 +27,7 @@ Stores the FurtherModes.
 | [`barcodeColourModes`](#barcodecolourmodes) | *int\[\]* |
 | [`accompanyingTextRecognitionModes`](#accompanyingtextrecognitionmodes) | *int\[\]* |
 
-### colourClusteringModes
+## colourClusteringModes
 
 Sets the mode and priority for colour categorization. Not supported yet.  
 
@@ -49,7 +47,7 @@ int[] com.dynamsoft.dbr.FurtherModes.colourClusteringModes
 - **See also**  
    [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#enumcolourclusteringmode)
 
-### colourConversionModes
+## colourConversionModes
 
 Sets the mode and priority for converting a colour image to a grayscale image.
 
@@ -69,7 +67,7 @@ int[] com.dynamsoft.dbr.FurtherModes.colourConversionModes
 - **See also**  
    [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumcolourconversionmode)
 
-### grayscaleTransformationModes
+## grayscaleTransformationModes
 
 Sets the mode and priority for the grayscale image conversion.
 
@@ -89,7 +87,7 @@ int[] com.dynamsoft.dbr.FurtherModes.grayscaleTransformationModes
 - **See also**  
    [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#enumgrayscaletransformationmode)
 
-### regionPredetectionModes
+## regionPredetectionModes
 
 Sets the region pre-detection mode for barcodes search.
 
@@ -109,7 +107,7 @@ int[] com.dynamsoft.dbr.FurtherModes.regionPredetectionModes
 - **See also**  
    [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumregionpredetectionmode)
 
-### imagePreprocessingModes
+## imagePreprocessingModes
 
 Sets the mode and priority for image preprocessing algorithms.
 
@@ -129,7 +127,7 @@ int[] com.dynamsoft.dbr.FurtherModes.imagePreprocessingModes
 - **See also**  
    [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#enumimagepreprocessingmode)
 
-### textureDetectionModes
+## textureDetectionModes
 
 Sets the mode and priority for texture detection.
 
@@ -149,7 +147,7 @@ int[] com.dynamsoft.dbr.FurtherModes.textureDetectionModes
 - **See also**  
    [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumtexturedetectionmode)
 
-### textFilterModes
+## textFilterModes
 
 Sets the mode and priority for text filter.
 
@@ -169,7 +167,7 @@ int[] com.dynamsoft.dbr.FurtherModes.textFilterModes
 - **See also**  
    [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#enumtextfiltermode)
 
-### textAssistedCorrectionMode
+## textAssistedCorrectionMode
 
 Sets the mode of text assisted correction for barcode decoding. ***Not supported yet***.
 
@@ -186,7 +184,7 @@ int com.dynamsoft.dbr.FurtherModes.textAssistedCorrectionMode
 - **See also**  
    [`EnumTextAssistedCorrectionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumtextassistedcorrectionmode)
 
-### dpmCodeReadingModes
+## dpmCodeReadingModes
 
 Sets the mode and priority for DPM code reading.
 
@@ -206,7 +204,7 @@ int[] com.dynamsoft.dbr.FurtherModes.dpmCodeReadingModes
 - **See also**  
    [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#enumdpmcodereadingmode)
 
-### deformationResistingModes
+## deformationResistingModes
 
 Sets the mode and priority for deformation resisting.
 
@@ -226,7 +224,7 @@ int[] com.dynamsoft.dbr.FurtherModes.deformationResistingModes
 - **See also**  
    [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#enumdeformationresistingmode)
 
-### barcodeComplementModes
+## barcodeComplementModes
 
 Sets the mode and priority to complement the missing parts in the barcode.
 
@@ -246,7 +244,7 @@ int[] com.dynamsoft.dbr.FurtherModes.barcodeComplementModes
 - **See also**  
    [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#enumbarcodecomplementmode)
 
-### barcodeColourModes
+## barcodeColourModes
 
 Sets the mode and priority for the barcode colour mode used to process the barcode zone.
 
@@ -266,7 +264,7 @@ int[] com.dynamsoft.dbr.FurtherModes.barcodeColourModes
 - **See also**  
    [`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#enumbarcodecolourmode)
 
-### accompanyingTextRecognitionModes
+## accompanyingTextRecognitionModes
 
 Sets the mode and priority to recognize accompanying text.
 

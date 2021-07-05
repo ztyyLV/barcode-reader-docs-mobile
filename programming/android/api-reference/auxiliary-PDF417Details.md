@@ -15,9 +15,7 @@ import com.dynamsoft.dbr.PDF417Details;
 ```
 
 `PDF417Details` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the PDF417 code details.
-  
-## Attributes
-  
+
 | Attribute | Type | Description |
 |---------- |------|------------ |
 | `moduleSize` | *int* | The barcode module size (the minimum bar width in pixel). |
@@ -25,13 +23,34 @@ import com.dynamsoft.dbr.PDF417Details;
 | `columns` | *int* | The column count of the barcode. |
 | `errorCorrectionLevel` | *int* | The error correction level of the barcode. |
 
-## Usage
+## moduleSize
+
+The barcode module size (the minimum bar width in pixel).
 
 ```java
-//The textresult[i] is one of the text results you got  
-PDF417Details pdf417Details = (PDF417Details) textresult[i].detailedResult;
-int pdf417_moduleSize = pdf417Details.moduleSize;
-int pdf417_rows = pdf417Details.rows;
-int pdf417_columns = pdf417Details.columns;
-int pdf417_errorCorrectionLevel = pdf417Details.errorCorrectionLevel;
+int com.dynamsoft.dbr.PDF417Details.moduleSize
+```
+
+## rows
+
+The row count of the barcode.
+
+```java
+int com.dynamsoft.dbr.PDF417Details.rows
+```
+
+## columns
+
+The column count of the barcode.
+
+```java
+int com.dynamsoft.dbr.PDF417Details.columns
+```
+
+## errorCorrectionLevel
+
+The error correction level of the barcode.
+
+```java
+int com.dynamsoft.dbr.PDF417Details.errorCorrectionLevel
 ```
