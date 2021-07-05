@@ -34,7 +34,7 @@ void com.dynamsoft.dbr.BarcodeReader.initLicense(String license) throws BarcodeR
 
 ### Exceptions
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 ### Code Snippet
 
@@ -85,7 +85,7 @@ void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLicenseContent(String licens
 
 ### Exceptions
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 ### Code Snippet
 
@@ -110,7 +110,7 @@ The output string which stores the contents of license.
 
 ### Exceptions
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 ### Remark
 

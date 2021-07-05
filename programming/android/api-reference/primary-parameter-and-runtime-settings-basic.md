@@ -37,7 +37,7 @@ void com.dynamsoft.dbr.BarcodeReader.setModeArgument(String modesName, int index
 
 ### Exceptions
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 ### Remark
 
@@ -54,7 +54,7 @@ Check the available modes and arguments below:
 - [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes)
 - [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes)
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
-- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes) 
+- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)
 
 ### Code Snippet
 
@@ -98,7 +98,7 @@ the optional argument for a specified mode in Modes parameters.
 
 ### Exceptions
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 ### Remark
 
@@ -115,7 +115,7 @@ Check the available modes and arguments below:
 - [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes)
 - [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes)
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
-- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)    
+- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)
 
 ### Code Snippet
 
@@ -142,10 +142,10 @@ reader.destroy();
 
 ## getRuntimeSettings
 
-Get current settings and save them into a [`PublicRuntimeSettings`](../class/PublicRuntimeSettings.md) struct.
+Get current settings and save them into a [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct.
 
 ```java
-PublicRuntimeSettings com.dynamsoft.dbr.BarcodeReader.getRuntimeSettings() throws BarcodeReaderException	
+PublicRuntimeSettings com.dynamsoft.dbr.BarcodeReader.getRuntimeSettings() throws BarcodeReaderException
 ```
 
 ### Return value
@@ -154,7 +154,7 @@ The struct of template settings.
 
 ### Exceptions
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 ### Code Snippet
 
@@ -177,7 +177,7 @@ reader.destroy();
 
 ## updateRuntimeSettings
 
-Update runtime settings with a given [`PublicRuntimeSettings`](../class/PublicRuntimeSettings.md) struct.
+Update runtime settings with a given [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct.
 
 ```java
 void com.dynamsoft.dbr.BarcodeReader.updateRuntimeSettings(PublicRuntimeSettings settings) throws BarcodeReaderException
@@ -189,7 +189,7 @@ void com.dynamsoft.dbr.BarcodeReader.updateRuntimeSettings(PublicRuntimeSettings
 
 ### Exceptions
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 ### Code Snippet
 
@@ -217,11 +217,11 @@ reader.destroy();
 Reset all parameters to default values.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.resetRuntimeSettings()	throws BarcodeReaderException
+void com.dynamsoft.dbr.BarcodeReader.resetRuntimeSettings() throws BarcodeReaderException
 ```
 
 ### Exceptions
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 ### Code Snippet
 

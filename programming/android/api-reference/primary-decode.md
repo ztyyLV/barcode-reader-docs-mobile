@@ -41,7 +41,7 @@ All barcode text results decoded successfully.
 
 ### Exceptions
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 ### Code Snippet
 
@@ -81,7 +81,7 @@ All barcode text results decoded successfully.
 
 ### Exceptions
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 ### Code Snippet
 
@@ -118,7 +118,7 @@ All barcode text results decoded successfully.
 
 ### Exceptions
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md), IOException
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md), IOException
 
 ### Code Snippet
 
@@ -145,7 +145,7 @@ reader.destroy();
 Decode barcodes from the memory buffer containing image pixels in defined format.
 
 ```java
-TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBuffer(byte[] buffer, int width, int height, int stride, int enumImagePixelFormat, String templateName)	throws BarcodeReaderException
+TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBuffer(byte[] buffer, int width, int height, int stride, int enumImagePixelFormat, String templateName) throws BarcodeReaderException
 ```
 
 ### Parameters
@@ -163,7 +163,7 @@ All barcode text results decoded successfully.
 
 ### Exceptions
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 ### Code Snippet
 
@@ -209,7 +209,7 @@ All barcode text results decoded successfully.
 
 ### Exceptions
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 ### Code Snippet
 
@@ -249,7 +249,7 @@ All barcode text results decoded successfully.
 
 ### Exceptions
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md), IOException
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md), IOException
 
 ### Code Snippet
 
@@ -289,7 +289,7 @@ An intermediateResult struct with default values.
 
 ### Exceptions
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 ### Code Snippet
 
@@ -328,7 +328,7 @@ All barcode text results decoded successfully.
 
 ### Exceptions
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 ### Code Snippet
 

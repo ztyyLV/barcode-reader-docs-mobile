@@ -36,7 +36,7 @@ void com.dynamsoft.dbr.BarcodeReader.initRuntimeSettingsWithFile(String filePath
 
 ### Exceptions
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 ### Code Snippet
 
@@ -67,12 +67,12 @@ void com.dynamsoft.dbr.BarcodeReader.initRuntimeSettingsWithString(String conten
 
 ### Parameters
 
-- `content`: A JSON string that represents the content of the settings.   
-- `enumConflictMode`: The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings and replace with the new template. 
+- `content`: A JSON string that represents the content of the settings.
+- `enumConflictMode`: The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings and replace with the new template.
 
 ### Exceptions
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 ### Code Snippet
 
@@ -108,7 +108,7 @@ void com.dynamsoft.dbr.BarcodeReader.appendTplFileToRuntimeSettings(String fileP
 
 ### Exceptions
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 ### Code Snippet
 
@@ -134,7 +134,7 @@ reader.destroy();
 Append a new template string to the current runtime settings.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.appendTplStringToRuntimeSettings(String content, int enumConflictMode)	throws BarcodeReaderException	
+void com.dynamsoft.dbr.BarcodeReader.appendTplStringToRuntimeSettings(String content, int enumConflictMode)	throws BarcodeReaderException
 ```
 
 ### Parameters
@@ -144,7 +144,7 @@ void com.dynamsoft.dbr.BarcodeReader.appendTplStringToRuntimeSettings(String con
 
 ### Exceptions
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 ### Code Snippet
 
@@ -180,7 +180,7 @@ The template name array.
 
 ### Exceptions
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 ### Code Snippet
 
@@ -216,7 +216,7 @@ void com.dynamsoft.dbr.BarcodeReader.outputSettingsToFile(String filePath, Strin
 
 ### Exceptions
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 ### Code Snippet
 
