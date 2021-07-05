@@ -17,85 +17,85 @@ breadcrumbText: API Reference
 
 > ### Initialize and Destroy
 > <hr>
-> * [`BarcodeReader`](BarcodeReader/initialize-and-destroy.md#barcodereader)
-> * [`destroy`](BarcodeReader/initialize-and-destroy.md#destroy)
+> * [`BarcodeReader`](BarcodeReader/primary-initialize-and-destroy.md#barcodereader)
+> * [`destroy`](BarcodeReader/primary-initialize-and-destroy.md#destroy)
 >
 > ### Decode
 > <hr>
-> * [`decodeFile`](BarcodeReader/decode.md#decodefile)
-> * [`decodeFileInMemory`](BarcodeReader/decode.md#decodefileinmemory)
-> * [`decodeBuffer`](BarcodeReader/decode.md#decodebuffer)
-> * [`decodeBase64String`](BarcodeReader/decode.md#decodebase64string)
-> * [`decodeBufferedImage`](BarcodeReader/decode.md#decodebufferedimage)
-> * [`initIntermediateResult`](BarcodeReader/decode.md#initintermediateresult)
-> * [`decodeIntermediateResults`](BarcodeReader/decode.md#decodeintermediateresults)
+> * [`decodeFile`](BarcodeReader/primary-decode.md#decodefile)
+> * [`decodeFileInMemory`](BarcodeReader/primary-decode.md#decodefileinmemory)
+> * [`decodeBuffer`](BarcodeReader/primary-decode.md#decodebuffer)
+> * [`decodeBase64String`](BarcodeReader/primary-decode.md#decodebase64string)
+> * [`decodeBufferedImage`](BarcodeReader/primary-decode.md#decodebufferedimage)
+> * [`initIntermediateResult`](BarcodeReader/primary-decode.md#initintermediateresult)
+> * [`decodeIntermediateResults`](BarcodeReader/primary-decode.md#decodeintermediateresults)
 >
 > ### License
 > <hr>
-> * [`initLicense`](BarcodeReader/license.md#initlicense)
-> * [`initLicenseFromServer`](BarcodeReader/license.md#initlicensefromserver)
-> * [`initLicenseFromLicenseContent`](BarcodeReader/license.md#initlicensefromlicensecontent)
-> * [`outputLicenseToString`](BarcodeReader/license.md#outputlicensetostring)
-> * [`initLicenseFromLTS`](BarcodeReader/license.md#initlicensefromlts)
+> * [`initLicense`](BarcodeReader/primary-license.md#initlicense)
+> * [`initLicenseFromServer`](BarcodeReader/primary-license.md#initlicensefromserver)
+> * [`initLicenseFromLicenseContent`](BarcodeReader/primary-license.md#initlicensefromlicensecontent)
+> * [`outputLicenseToString`](BarcodeReader/primary-license.md#outputlicensetostring)
+> * [`initLicenseFromLTS`](BarcodeReader/primary-license.md#initlicensefromlts)
 >
 > ### Camera Enhancer
 > <hr>
-> * [`StartCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer)
-> * [`StopCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer)
-> * [`PauseCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer)
-> * [`ResumeCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer)
-> * [`SetCameraEnhancerParam`](BarcodeReader/camera.md#setcameraenhancerparam)
+> * [`StartCameraEnhancer`](BarcodeReader/primary-camera.md#start-stop-pause-resume-camera-enhancer)
+> * [`StopCameraEnhancer`](BarcodeReader/primary-camera.md#start-stop-pause-resume-camera-enhancer)
+> * [`PauseCameraEnhancer`](BarcodeReader/primary-camera.md#start-stop-pause-resume-camera-enhancer)
+> * [`ResumeCameraEnhancer`](BarcodeReader/primary-camera.md#start-stop-pause-resume-camera-enhancer)
+> * [`SetCameraEnhancerParam`](BarcodeReader/primary-camera.md#setcameraenhancerparam)
 >
 > ### Parameter and Runtime Settings
 >
 > #### Basic
 > <hr>
-> * [`setModeArgument`](BarcodeReader/parameter-and-runtime-settings-basic.md#setmodeargument)
-> * [`getModeArgument`](BarcodeReader/parameter-and-runtime-settings-basic.md#getmodeargument)
-> * [`getRuntimeSettings`](BarcodeReader/parameter-and-runtime-settings-basic.md#getruntimesettings)
-> * [`updateRuntimeSettings`](BarcodeReader/parameter-and-runtime-settings-basic.md#updateruntimesettings)
-> * [`resetRuntimeSettings`](BarcodeReader/parameter-and-runtime-settings-basic.md#resetruntimesettings)
+> * [`setModeArgument`](BarcodeReader/primary-parameter-and-runtime-settings-basic.md#setmodeargument)
+> * [`getModeArgument`](BarcodeReader/primary-parameter-and-runtime-settings-basic.md#getmodeargument)
+> * [`getRuntimeSettings`](BarcodeReader/primary-parameter-and-runtime-settings-basic.md#getruntimesettings)
+> * [`updateRuntimeSettings`](BarcodeReader/primary-parameter-and-runtime-settings-basic.md#updateruntimesettings)
+> * [`resetRuntimeSettings`](BarcodeReader/primary-parameter-and-runtime-settings-basic.md#resetruntimesettings)
 >
 > #### Advanced
 > <hr>
-> * [`initRuntimeSettingsWithFile`](BarcodeReader/parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile)
-> * [`initRuntimeSettingsWithString`](BarcodeReader/parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring)
-> * [`appendTplFileToRuntimeSettings`](BarcodeReader/parameter-and-runtime-settings-advanced.md#appendtplfiletoruntimesettings)
-> * [`appendTplStringToRuntimeSettings`](BarcodeReader/parameter-and-runtime-settings-advanced.md#appendtplstringtoruntimesettings)
-> * [`getAllParameterTemplateNames`](BarcodeReader/parameter-and-runtime-settings-advanced.md#getallparametertemplatenames)
-> * [`outputSettingsToFile`](BarcodeReader/parameter-and-runtime-settings-advanced.md#outputsettingstofile)
-> * [`outputSettingsToString`](BarcodeReader/parameter-and-runtime-settings-advanced.md#outputsettingstostring)
+> * [`initRuntimeSettingsWithFile`](BarcodeReader/primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile)
+> * [`initRuntimeSettingsWithString`](BarcodeReader/primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring)
+> * [`appendTplFileToRuntimeSettings`](BarcodeReader/primary-parameter-and-runtime-settings-advanced.md#appendtplfiletoruntimesettings)
+> * [`appendTplStringToRuntimeSettings`](BarcodeReader/primary-parameter-and-runtime-settings-advanced.md#appendtplstringtoruntimesettings)
+> * [`getAllParameterTemplateNames`](BarcodeReader/primary-parameter-and-runtime-settings-advanced.md#getallparametertemplatenames)
+> * [`outputSettingsToFile`](BarcodeReader/primary-parameter-and-runtime-settings-advanced.md#outputsettingstofile)
+> * [`outputSettingsToString`](BarcodeReader/primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring)
 >
 > ### Result
 > <hr>
-> * [`getIntermediateResults`](BarcodeReader/result.md#getintermediateresults)
+> * [`getIntermediateResults`](BarcodeReader/primary-result.md#getintermediateresults)
 >
 > ### Status Retrieval
 > <hr>
-> * [`getVersion`](BarcodeReader/status-retrieval.md#getversion)
+> * [`getVersion`](BarcodeReader/primary-status-retrieval.md#getversion)
 >
 > ### Video
 >
 > #### Decode
 > <hr>
-> * [`startFrameDecoding`](BarcodeReader/video.md#startframedecoding)
-> * [`startFrameDecodingEx`](BarcodeReader/video.md#startframedecodingex)
-> * [`appendFrame`](BarcodeReader/video.md#appendframe)
-> * [`stopFrameDecoding`](BarcodeReader/video.md#stopframedecoding)
+> * [`startFrameDecoding`](BarcodeReader/primary-video.md#startframedecoding)
+> * [`startFrameDecodingEx`](BarcodeReader/primary-video.md#startframedecodingex)
+> * [`appendFrame`](BarcodeReader/primary-video.md#appendframe)
+> * [`stopFrameDecoding`](BarcodeReader/primary-video.md#stopframedecoding)
 >
 > #### Parameter
 > <hr>
-> * [`initFrameDecodingParameters`](BarcodeReader/video.md#initframedecodingparameters)
+> * [`initFrameDecodingParameters`](BarcodeReader/primary-video.md#initframedecodingparameters)
 >
 > #### Callback
 > <hr>
-> * [`setErrorCallback`](BarcodeReader/video.md#seterrorcallback)
-> * [`setTextResultCallback`](BarcodeReader/video.md#settextresultcallback)
-> * [`setIntermediateResultCallback`](BarcodeReader/video.md#setintermediateresultcallback)
+> * [`setErrorCallback`](BarcodeReader/primary-video.md#seterrorcallback)
+> * [`setTextResultCallback`](BarcodeReader/primary-video.md#settextresultcallback)
+> * [`setIntermediateResultCallback`](BarcodeReader/primary-video.md#setintermediateresultcallback)
 >
 > #### Status retrieval
 > <hr>
-> * [`getLengthOfFrameQueue`](BarcodeReader/video.md#getlengthofframequeue)
+> * [`getLengthOfFrameQueue`](BarcodeReader/primary-video.md#getlengthofframequeue)
 >
 > ## Interface
 > <hr>
@@ -110,28 +110,28 @@ breadcrumbText: API Reference
 >
 > ## Classes
 > <hr>
-> * [`AztecDetails`](class/AztecDetails.md)
-> * [`BarcodeReaderException`](class/BarcodeReaderException.md)
-> * [`Contour`](class/Contour.md)
-> * [`DataMatrixDetails`](class/DataMatrixDetails.md)
-> * [`DCESettingParameters`](class/DCESettingParameters.md)
-> * [`DMLTSConnectionParameters`](class/DMLTSConnectionParameters.md)
-> * [`ExtendedResult`](class/ExtendedResult.md)
-> * [`FrameDecodingParameters`](class/FrameDecodingParameters.md)
-> * [`FurtherModes`](class/FurtherModes.md)
-> * [`ImageData`](class/ImageData.md)
-> * [`IntermediateResult`](class/IntermediateResult.md)
-> * [`LineSegment`](class/LineSegment.md)
-> * [`LocalizationResult`](class/LocalizationResult.md)
-> * [`OneDCodeDetails`](class/OneDCodeDetails.md)
-> * [`PDF417Details`](class/PDF417Details.md)
-> * [`PublicRuntimeSettings`](class/PublicRuntimeSettings.md)
-> * [`QRCodeDetails`](class/QRCodeDetails.md)
-> * [`Quadrilateral`](class/Quadrilateral.md)
-> * [`RegionDefinition`](class/RegionDefinition.md)
-> * [`RegionOfInterest`](class/RegionOfInterest.md)
-> * [`SamplingImageData`](class/SamplingImageData.md)
-> * [`TextResult`](class/TextResult.md)
+> * [`AztecDetails`](class/auxiliary-AztecDetails.md)
+> * [`BarcodeReaderException`](class/auxiliary-BarcodeReaderException.md)
+> * [`Contour`](class/auxiliary-Contour.md)
+> * [`DataMatrixDetails`](class/auxiliary-DataMatrixDetails.md)
+> * [`DCESettingParameters`](class/auxiliary-DCESettingParameters.md)
+> * [`DMLTSConnectionParameters`](class/auxiliary-DMLTSConnectionParameters.md)
+> * [`ExtendedResult`](class/auxiliary-ExtendedResult.md)
+> * [`FrameDecodingParameters`](class/auxiliary-FrameDecodingParameters.md)
+> * [`FurtherModes`](class/auxiliary-FurtherModes.md)
+> * [`ImageData`](class/auxiliary-ImageData.md)
+> * [`IntermediateResult`](class/auxiliary-IntermediateResult.md)
+> * [`LineSegment`](class/auxiliary-LineSegment.md)
+> * [`LocalizationResult`](class/auxiliary-LocalizationResult.md)
+> * [`OneDCodeDetails`](class/auxiliary-OneDCodeDetails.md)
+> * [`PDF417Details`](class/auxiliary-PDF417Details.md)
+> * [`PublicRuntimeSettings`](class/auxiliary-PublicRuntimeSettings.md)
+> * [`QRCodeDetails`](class/auxiliary-QRCodeDetails.md)
+> * [`Quadrilateral`](class/auxiliary-Quadrilateral.md)
+> * [`RegionDefinition`](class/auxiliary-RegionDefinition.md)
+> * [`RegionOfInterest`](class/auxiliary-RegionOfInterest.md)
+> * [`SamplingImageData`](class/auxiliary-SamplingImageData.md)
+> * [`TextResult`](class/auxiliary-TextResult.md)
 >
 > ## Enumerations
 > <hr>
