@@ -32,7 +32,7 @@ import com.dynamsoft.dbr.Point;
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |
-| [`points`](#points) | [`Point`](Point.md)[] | Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
+| `points` | [`Point`](auxiliary-Point.md)[] | Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
 
 ## [RegionDefinition](auxiliary-RegionDefinition.md)
 
