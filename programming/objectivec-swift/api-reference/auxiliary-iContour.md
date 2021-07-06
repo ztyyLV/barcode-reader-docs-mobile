@@ -20,7 +20,7 @@ The iContour is one of the [`results`](auxiliary-iIntermediateResult.md#results)
 | Attribute | Type |
 |---------- | ---- |
 | [`pointsCount`](#pointscount) |  *NSInteger* |
-| [`points`](#points) | [NSArray*](iDBRPoint.md) \* |
+| [`points`](#points) | [NSArray*](auxiliary-iDBRPoint.md) \* |
 
 ## pointsCount
 

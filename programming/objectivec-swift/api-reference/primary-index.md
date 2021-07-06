@@ -5,7 +5,6 @@ description: This page shows all methods of Dynamsoft Barcode Reader for iOS SDK
 keywords: methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
-needGenerateH3Content: true
 breadcrumbText: Methods
 ---
 
@@ -13,11 +12,11 @@ breadcrumbText: Methods
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
-> ### Initialize and Destroy
+> ## Initialize and Destroy
 > <hr>
 > * [init](primary-initialize.md)
 >
-> ### Decode
+> ## Decode
 > <hr>
 > * [decodeFileWithName](primary-decode.md#decodefilewithname)
 > * [decodeImage](primary-decode.md#decodeimage)
@@ -26,20 +25,20 @@ breadcrumbText: Methods
 > * [createIntermediateResult](primary-decode.md#createintermediateresult)
 > * [decodeIntermediateResults](primary-decode.md#decodeintermediateresults)
 >
-> ### License
+> ## License
 > <hr>
 > * [initWithLicense](primary-license.md#initwithlicense)
 > * [initWithLicenseFromServer](primary-license.md#initwithlicensefromserver)
 > * [outputLicenseToString](primary-license.md#outputlicensetostring)
 > * [initLicenseFromLTS](primary-license.md#initlicensefromlts)
 >
-> ### Camera Enhancer
+> ## Camera Enhancer
 > <hr>
 > * [SetCameraEnhancerParam](primary-camera.md#setcameraenhancerparam)
 >
-> ### Parameter and Runtime Settings
+> ## Parameter and Runtime Settings
 >
-> #### Basic
+> ### Basic
 > <hr>
 > * [setModeArgument](primary-parameter-and-runtime-settings-basic.md#setmodeargument)
 > * [getModeArgument](primary-parameter-and-runtime-settings-basic.md#getmodeargument)
@@ -47,7 +46,7 @@ breadcrumbText: Methods
 > * [updateRuntimeSettings](primary-parameter-and-runtime-settings-basic.md#updateruntimesettings)
 > * [resetRuntimeSettings](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings)
 >
-> #### Advanced
+> ### Advanced
 > <hr>
 > * [initRuntimeSettingsWithFile](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile)
 > * [initRuntimeSettingsWithString](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring)
@@ -57,29 +56,29 @@ breadcrumbText: Methods
 > * [outputSettingsToFile](primary-parameter-and-runtime-settings-advanced.md#outputsettingstofile)
 > * [outputSettingsToString](primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring)
 >
-> ### Result
+> ## Result
 > <hr>
 > * [getIntermediateResults](primary-result.md#getintermediateresults)
 >
-> ### Video
+> ## Video
 >
-> #### Decode
+> ### Decode
 > <hr>
 > * [startFrameDecoding](primary-video.md#startframedecoding)
 > * [startFrameDecodingEx](primary-video.md#startframedecodingex)
 > * [appendFrame](primary-video.md#appendframe)
 > * [stopFrameDecoding](primary-video.md#stopframedecoding)
 >
-> #### Parameter
+> ### Parameter
 > <hr>
 > * [getFrameDecodingParameters](primary-video.md#getframedecodingparameters)
 >
-> #### Delegate
+> ### Delegate
 > <hr>
 > * [setDBRErrorDelegate](primary-video.md#setdbrerrordelegate)
 > * [setDBRTextResultDelegate](primary-video.md#setdbrtextresultdelegate)
 > * [setDBRIntermdeiateResultDelegate](primary-video.md#setdbrintermdeiateresultdelegate)
 >
-> #### Status retrieval
+> ### Status retrieval
 > <hr>
 > * [getLengthOfFrameQueue](primary-video.md#getlengthofframequeue)

@@ -16,18 +16,18 @@ import com.dynamsoft.dbr.QRCodeDetails;
 
 `QRCodeDetails` is one of the [`detailedResult`](class-TextResult.md#detailedresult) in class `TextResult`. It stores the QRCode details.
 
-| Attribute | Type | Description |
-|---------- | ---- |-----|
-| `moduleSize` | *int* | The barcode module size (the minimum bar width in pixels). |
-| `rows`| *int* | The row count of the barcode.   |
-| `columns` | *int* | The column count of the barcode. |
-| `errorCorrectionLevel` | *int* | The error correction level of the barcode.   |
-| `version` | *int* | The version of the QR Code. |
-| `model` | *int* | Number of the models. |
-| `mode` | *int* | Identify the first data encoding mode. |
-| `page` | *int* | Identify the position of the particular symbol. |
-| `totalPage` | *int* | Identify the total number of symbols to be concatenated in the Structured Append format. |
-| `parityData` | *int* | The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks. |
+| Attribute | Type |
+|---------- | ---- |
+| `moduleSize` | *int* |
+| `rows`| *int* |
+| `columns` | *int* |
+| `errorCorrectionLevel` | *int* |
+| `version` | *int* |
+| `model` | *int* |
+| `mode` | *int* |
+| `page` | *int* |
+| `totalPage` | *int* |
+| `parityData` | *int* |
 
 ## moduleSize
 

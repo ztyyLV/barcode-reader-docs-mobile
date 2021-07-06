@@ -20,7 +20,7 @@ Defines a struct to configure the frame decoding Parameters.
 | [`height`](#height) | *int* |
 | [`stride`](#stride) | *int* |
 | [`imagePixelFormat`](#imagepixelformat) | *int* |
-| [`region`](#region) | [`RegionDefinition`](RegionDefinition.md) |
+| [`region`](#region) | [`RegionDefinition`](auxiliary-RegionDefinition.md) |
 | [`threshold`](#threshold) | *float* |
 | [`fps`](#fps) | *int* |
 | [`autoFilter`](#autofilter) | *int* |

@@ -10,7 +10,7 @@ needGenerateH3Content: true
 
 # Class SamplingImageData
 
-Stores the sampling image data.
+`SamplingImageData` stores the detailed image data in `ExtendedResult`.
 
 | Attribute | Type |
 |---------- | ---- |

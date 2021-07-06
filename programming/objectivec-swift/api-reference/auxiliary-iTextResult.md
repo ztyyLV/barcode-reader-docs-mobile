@@ -24,9 +24,9 @@ Stores the text result.
 | [`barcodeFormatString_2`](#barcodeformatstring_2) | *NSString \** |
 | [`barcodeText`](#barcodetext) | *NSString \** |
 | [`barcodeBytes`](#barcodebytes) | *NSData \** |
-| [`localizationResult`](#localizationresult) | [`iLocalizationResult`](iLocalizationResult.md)\* |
+| [`localizationResult`](#localizationresult) | [`iLocalizationResult`](auxiliary-iLocalizationResult.md)\* |
 | [`detailedResult`](#detailedresult) | *NSObject \** |
-| [`extendedResults`](#extendedResults) | [`NSArray<iExtendedResult*>*`](iExtendedResult.md)\* |
+| [`extendedResults`](#extendedResults) | [`NSArray<iExtendedResult*>*`](auxiliary-iExtendedResult.md)\* |
 | [`exception`](#exception) | *NSString \** |
 | [`isDPM`](#isdpm) | *NSInteger* |
 | [`isMirrored`](#ismirrored) | *NSInteger* |

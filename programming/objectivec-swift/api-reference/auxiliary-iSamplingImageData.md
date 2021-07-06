@@ -8,7 +8,7 @@ needAutoGenerateSidebar: true
 
 # Class iSamplingImageData
 
-Stores the sampling image data.
+`SamplingImageData` stores the detailed image data in `ExtendedResult`.
 
 ## Typedefs
 

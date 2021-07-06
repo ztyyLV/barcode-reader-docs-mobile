@@ -19,8 +19,8 @@ Stores line segment data.
 
 | Attribute | Type |
 |---------- | ---- |
-| [`startPoint`](#startpoint) | [`CGPoint`](iDBRPoint.md) |
-| [`endPoint`](#endpoint) | [`CGPoint`](iDBRPoint.md) |
+| [`startPoint`](#startpoint) | [`CGPoint`](auxiliary-iDBRPoint.md) |
+| [`endPoint`](#endpoint) | [`CGPoint`](auxiliary-iDBRPoint.md) |
 | [`linesConfidenceCoefficients`](#linesconfidencecoefficients) | *NSData \** |
 
 ## startPoint

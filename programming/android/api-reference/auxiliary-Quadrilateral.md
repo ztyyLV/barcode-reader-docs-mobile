@@ -14,7 +14,7 @@ Stores the quadrilateral.
 
 | Attribute | Type |
 |---------- | ---- |
-| [`points`](#points) | [`Point`](Point.md)[] |
+| [`points`](#points) | [`Point`](auxiliary-Point.md)[] |
 
 ## points
 

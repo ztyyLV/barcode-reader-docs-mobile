@@ -14,8 +14,8 @@ Stores line segment data.
 
 | Attribute | Type |
 |---------- | ---- |
-| [`startPoint`](#startpoint) | [`Point`](Point.md) |
-| [`endPoint`](#endpoint) | [`Point`](Point.md) |
+| [`startPoint`](#startpoint) | [`Point`](auxiliary-Point.md) |
+| [`endPoint`](#endpoint) | [`Point`](auxiliary-Point.md) |
 | [`linesConfidenceCoefficients`](#linesconfidencecoefficients) | *byte\[\]* |
 
 ## startPoint

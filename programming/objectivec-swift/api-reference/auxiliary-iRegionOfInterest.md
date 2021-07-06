@@ -19,7 +19,7 @@ Stores the region of interest.
 | Attribute | Type |
 |---------- | ---- |
 | [`roiId`](#roiid) | *NSInteger* |
-| [`point`](#point) | [`CGPoint`](iDBRPoint.md) |
+| [`point`](#point) | [`CGPoint`](auxiliaryiDBRPoint.md) |
 | [`width`](#width) | *NSInteger* |
 | [`height`](#height) | *NSInteger* |
 

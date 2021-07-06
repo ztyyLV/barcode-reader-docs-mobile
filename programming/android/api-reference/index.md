@@ -101,8 +101,9 @@ breadcrumbText: API Reference
 > <hr>
 > * [ErrorCallback](interface.md#errorcallback)
 > * [IntermediateResultCallback](interface.md#intermediateresultcallback)
-> * [TextResultCallback](interface.md#cb_textresult)
+> * [TextResultCallback](interface.md#textresultcallback)
 > * [DBRServerLicenseVerificationListener](interface.md#dbrserverlicenseverificationlistener)
+> * [DBRLTSLicenseVerificationListener](interface.md#dbrltslicenseverificationlistener)
 >
 > ## Error Code
 > <hr>

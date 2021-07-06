@@ -29,7 +29,7 @@ import com.dynamsoft.dbr.PublicRuntimeSettings;
 | [`scaleDownThreshold`](auxiliary-PublicRuntimeSettings.md#scaledownthreshold) | *int* | Sets the threshold for the image shrinking. |
 | [`binarizationModes`](auxiliary-PublicRuntimeSettings.md#binarizationmodes) | *int\[\]* | Sets the mode and priority for binarization. |
 | [`localizationModes`](auxiliary-PublicRuntimeSettings.md#localizationmodes) | *int\[\]* | Sets the mode and priority for localization algorithms. |
-| [`furtherModes`](auxiliary-PublicRuntimeSettings.md#furthermodes) | `FurtherModes` | Further modes settings. Please read more in [`FurtherModes`](auxiliary-FurtherModes.md) class. |
+| [`furtherModes`](auxiliary-PublicRuntimeSettings.md#furthermodes) | [`FurtherModes`](auxiliary-FurtherModes.md) | Further modes settings. Please read more in [`FurtherModes`](auxiliary-FurtherModes.md) class. |
 | [`deblurLevel`](auxiliary-PublicRuntimeSettings.md#deblurlevel) | *int* | Sets the degree of blurriness of the barcode.
  |
 | [`intermediateResultTypes`](auxiliary-PublicRuntimeSettings.md#intermediateresulttypes) | *int* | Sets which types of intermediate result to be kept for further reference. |
@@ -37,7 +37,7 @@ import com.dynamsoft.dbr.PublicRuntimeSettings;
 | [`resultCoordinateType`](auxiliary-PublicRuntimeSettings.md#resultcoordinatetype) | *int* | Specifies the format for the coordinates returned. |
 | [`textResultOrderModes`](auxiliary-PublicRuntimeSettings.md#textresultordermodes) | *int\[\]* | Sets the mode and priority for the order of the text results returned. |
 | [`returnBarcodeZoneClarity`](auxiliary-PublicRuntimeSettings.md#returnbarcodezoneclarity) | *int* | Sets whether or not to return the clarity of the barcode zone. |
-| [`region`](auxiliary-PublicRuntimeSettings.md#region) | `RegionDefinition` | Sets the scan region. Please read more in [`RegionDefinition`](auxiliary-RegionDefinition.md) Class |
+| [`region`](auxiliary-PublicRuntimeSettings.md#region) | [`RegionDefinition`](auxiliary-FurtherModes.md) | Sets the scan region. Please read more in [`RegionDefinition`](auxiliary-RegionDefinition.md) Class |
 | [`minBarcodeTextLength`](auxiliary-PublicRuntimeSettings.md#minbarcodetextlength) | *int* | Sets the range of barcode text length for barcodes search. |
 | [`minResultConfidence`](auxiliary-PublicRuntimeSettings.md#minresultconfidence) | *int* | The minimum confidence of the result. |
 | [`scaleUpModes`](auxiliary-PublicRuntimeSettings.md#scaleupmodes) | *int\[\]* | Sets the mode and priority to control the sampling methods of scale-up for linear barcode with small module sizes. |

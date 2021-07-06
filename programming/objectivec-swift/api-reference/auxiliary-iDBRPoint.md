@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 ---
 
 
-# Class iDBRPoint
+# ClassiDBRPoint
 
 Stores an x- and y-coordinate pair in two-dimensional space.
 
@@ -16,7 +16,7 @@ Stores an x- and y-coordinate pair in two-dimensional space.
 ```objc
 @interface iDBRPoint
 ```
- 
+
 | Attribute | Type |
 |---------- | ---- |
 | [`x`](#x) | *NSInteger* |

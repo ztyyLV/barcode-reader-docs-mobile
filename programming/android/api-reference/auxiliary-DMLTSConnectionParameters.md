@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# DMLTSConnectionParameters
+# Class DMLTSConnectionParameters
 
 Defines a struct to configure the parameters to connect to license tracking server.  
 

@@ -25,7 +25,7 @@ Defines a struct to configure the frame decoding Parameters.
 | [`height`](#height) | *NSInteger* |
 | [`stride`](#stride) | *NSInteger* |
 | [`imagePixelFormat`](#imagepixelformat) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) |
-| [`region`](#region) | [`iRegionDefinition`](iRegionDefinition.md) |
+| [`region`](#region) | [`iRegionDefinition`](auxiliary-iRegionDefinition.md) |
 | [`threshold`](#threshold) | *float* |
 | [`fps`](#fps) | *NSInteger* |
 | [`autoFilter`](#autofilter) | *NSInteger* |

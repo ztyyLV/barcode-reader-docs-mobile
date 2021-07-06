@@ -30,7 +30,7 @@ needAutoGenerateSidebar: true
 | [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | *NSInteger* |
 | [`deformation`](#deformation) | *NSInteger* |
 | [`detailedResult`](#detailedresult) | *NSObject \** |
-| [`samplingImage`](#samplingimage) | [`iSamplingImageData*`](iSamplingImageData.md) |
+| [`samplingImage`](#samplingimage) | [`iSamplingImageData*`](auxiliary-iSamplingImageData.md) |
 | [`clarity`](#clarity) | *NSInteger* |
 
 ## resultType
