@@ -11,10 +11,9 @@ breadcrumbText: API Reference
 
 # Dynamsoft Barcode Reader SDK - Android API Reference
 
-## BarcodeReader Class
-
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
+> ## BarcodeReader Class
 > ### Initialize and Destroy
 > <hr>
 > * [BarcodeReader](primary-initialize-and-destroy.md#barcodereader)
@@ -96,7 +95,11 @@ breadcrumbText: API Reference
 > #### Status retrieval
 > <hr>
 > * [getLengthOfFrameQueue](primary-video.md#getlengthofframequeue)
->
+
+
+
+<div class="doc-card-prefix doc-card-list-prefix"></div>
+
 > ## Interface
 > <hr>
 > * [ErrorCallback](interface.md#errorcallback)
@@ -104,12 +107,16 @@ breadcrumbText: API Reference
 > * [TextResultCallback](interface.md#textresultcallback)
 > * [DBRServerLicenseVerificationListener](interface.md#dbrserverlicenseverificationlistener)
 > * [DBRLTSLicenseVerificationListener](interface.md#dbrltslicenseverificationlistener)
->
+
+<div class="doc-card-prefix doc-card-list-prefix"></div>
+
 > ## Error Code
 > <hr>
 > * [ErrorCode]({{ site.enumerations }}error-code.html)
->
-> ## Classes
+
+<div class="doc-card-prefix doc-card-list-prefix"></div>
+
+> ## Auxiliary Classes
 > <hr>
 > * [AztecDetails](auxiliary-AztecDetails.md)
 > * [BarcodeReaderException](auxiliary-BarcodeReaderException.md)
@@ -134,6 +141,9 @@ breadcrumbText: API Reference
 > * [SamplingImageData](auxiliary-SamplingImageData.md)
 > * [TextResult](auxiliary-TextResult.md)
 >
+
+<div class="doc-card-prefix doc-card-list-prefix"></div>
+
 > ## Enumerations
 > <hr>
 > * [EnumAccompanyingTextRecognitionMode]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)

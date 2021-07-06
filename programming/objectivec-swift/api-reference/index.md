@@ -5,12 +5,14 @@ description: This is the main page of Dynamsoft Barcode Reader for iOS SDK API R
 keywords: api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 breadcrumbText: API Reference
+noTitleIndex: true
 ---
 
 # Dynamsoft Barcode Reader SDK - iOS API Reference
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
+> ## BarcodeReader Class
 > ### Initialize and Destroy
 > <hr>
 > * [init](primary-initialize.md)
@@ -81,12 +83,16 @@ breadcrumbText: API Reference
 > #### Status retrieval
 > <hr>
 > * [getLengthOfFrameQueue](primary-video.md#getlengthofframequeue)
->
+
+<div class="doc-card-prefix doc-card-list-prefix"></div>
+
 > ## Error Code
 > <hr>
 > * [ErrorCode]({{ site.enumerations }}error-code.html)
->
-> ## Classes
+
+<div class="doc-card-prefix doc-card-list-prefix"></div>
+
+> ## Auxiliary Classes
 > <hr>
 > * [iAztecDetails](auxiliary-iAztecDetails.md)
 > * [iContour](auxiliary-iContour.md)
@@ -110,7 +116,9 @@ breadcrumbText: API Reference
 > * [iRegionOfInterest](auxiliary-iRegionOfInterest.md)
 > * [iSamplingImageData](auxiliary-iSamplingImageData.md)
 > * [iTextResult](auxiliary-iTextResult.md)
->
+
+<div class="doc-card-prefix doc-card-list-prefix"></div>
+
 > ## Enumerations
 > <hr>
 > * [EnumAccompanyingTextRecognitionMode]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)

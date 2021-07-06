@@ -49,7 +49,7 @@ barcodeReader.initIntermediateResults(EnumIntermediateResultType.IRT_ORIGINAL_IM
 IntermediateResult[] intermediateResults = barcodeReader.getIntermediateResults();
 ```
 
-## [Contour](auxiliary-contour.md)
+## Class [Contour](auxiliary-contour.md)
 
 ```java
 import com.dynamsoft.dbr.Contour;
@@ -65,7 +65,7 @@ import com.dynamsoft.dbr.Contour;
 Contour[] contours = (Contour[]) intermediateResults[i].results;
 ```
 
-## [ImageData](auxiliary-imagedata.md)
+## Class [ImageData](auxiliary-imagedata.md)
 
 ```java
 import com.dynamsoft.dbr.ImageData;
@@ -85,7 +85,7 @@ import com.dynamsoft.dbr.ImageData;
 ImageData[] imageData = (ImageData[]) intermediateResults[i].results;
 ```
 
-## [LineSegment](auxiliary-linesegment.md)
+## Class [LineSegment](auxiliary-linesegment.md)
 
 ```java
 import com.dynamsoft.dbr.LineSegment;
@@ -103,7 +103,7 @@ import com.dynamsoft.dbr.LineSegment;
 LineSegment[] lineSegment = (LineSegment[]) intermediateResults[i].results;
 ```
 
-## [RegionOfInterest](auxiliary-regionofinterest.md)
+## Class [RegionOfInterest](auxiliary-regionofinterest.md)
 
 `RegionOfInterest` is one of the [`results`](auxiliary-intermediateresult.md#results) type in `IntermediateResult`.
 
@@ -122,7 +122,7 @@ import com.dynamsoft.dbr.LineSegment;
 RegionOfInterest[] regionOfInterest = (RegionOfInterest[]) intermediateResults[i].results;
 ```
 
-## [LocalizationResult](auxiliary-localizationresult.md)
+## Class [LocalizationResult](auxiliary-localizationresult.md)
 
 ```java
 import com.dynamsoft.dbr.LocalizationResult;

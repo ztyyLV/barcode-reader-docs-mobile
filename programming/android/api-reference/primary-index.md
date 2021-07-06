@@ -5,6 +5,7 @@ description: This page shows BarcodeReader methods of Dynamsoft Barcode Reader f
 keywords: methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+noTitleIndex: true
 breadcrumbText: BarcodeReader Methods
 ---
 

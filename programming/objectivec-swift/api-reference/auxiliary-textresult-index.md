@@ -8,7 +8,7 @@ needAutoGenerateSidebar: true
 
 # Barcode Result Classes
 
-## [iTextResult](auxiliary-iTextResult.md)
+## Class [iTextResult](auxiliary-iTextResult.md)
 
 ```objc
 @interface iTextResult
@@ -29,7 +29,7 @@ needAutoGenerateSidebar: true
 | `isDPM` | *NSInteger* | This attribute stands for whether the result is a DPM result. |
 | `isMirrored` | *NSInteger* | This attribute stands for whether the barcode is mirrored. |
 
-## [iLocalizationResult](auxiliary-iLocalizationResult.md)
+## Class [iLocalizationResult](auxiliary-iLocalizationResult.md)
 
 ```objc
 @interface iLocalizationResult
@@ -55,7 +55,7 @@ needAutoGenerateSidebar: true
 | [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | *NSInteger* | The length of the accompanying text byte array. |
 | [`confidence`](#confidence) | *NSInteger* | The confidence of the localization result. |
 
-## [iExtendedResult](auxiliary-iExtendedResult.md)
+## Class [iExtendedResult](auxiliary-iExtendedResult.md)
 
 ```objc
 @interface iExtendedResult
@@ -80,7 +80,7 @@ needAutoGenerateSidebar: true
 | [`samplingImage`](#samplingimage) | [`iSamplingImageData*`](auxiliary-iSamplingImageData.md) | The sampling image info. |
 | [`clarity`](#clarity) | *NSInteger* | The clarity of the barcode zone in percentage. |
 
-## [iAztecDetails](auxiliary-iAztecDetails.md)
+## Class [iAztecDetails](auxiliary-iAztecDetails.md)
 
 ```objc
 @interface iAztecDetails
@@ -95,7 +95,7 @@ needAutoGenerateSidebar: true
 | [`columns`](#columns) | *NSInteger* | The column count of the barcode. |
 | [`layerNumber`](#layernumber) | *NSInteger* | A negative number (-1, -2, -3, -4) specifies a compact Aztec code. A positive number (1, 2, .. 32) specifies a normal (full-rang) Aztec code. |
 
-## [iDataMatrixDetails](auxiliary-iDataMatrixDetails.md)
+## Class [iDataMatrixDetails](auxiliary-iDataMatrixDetails.md)
 
 ```objc
 @interface iDataMatrixDetails
@@ -112,7 +112,7 @@ needAutoGenerateSidebar: true
 | [`dataRegionColumns`](#dataregioncolumns) | *NSInteger* | The data region column count of the barcode. |
 | [`dataRegionNumber`](#dataregionnumber) | *NSInteger* | The data region count. |
 
-## [iOneDCodeDetails](auxiliary-iOneDCodeDetails.md)
+## Class [iOneDCodeDetails](auxiliary-iOneDCodeDetails.md)
 
 ```objc
 @interface iOneDCodeDetails
@@ -130,7 +130,7 @@ needAutoGenerateSidebar: true
 | [`checkDigitBytes`](#checkdigitbytes) | *NSData \** | The check digit chars in a byte array. |
 | [`checkDigitBytesLength`](#checkdigitbyteslength) | *NSInteger* | The length of the check digit chars byte array. |
 
-## [iPDF417Details](auxiliary-iPDF417Details.md)
+## Class [iPDF417Details](auxiliary-iPDF417Details.md)
 
 ```objc
 @interface iPDF417Details
@@ -145,7 +145,7 @@ needAutoGenerateSidebar: true
 | [`columns`](#columns) | *NSInteger* | The column count of the barcode. |
 | [`errorCorrectionLevel`](#errorcorrectionlevel) | *NSInteger* | The error correction level of the barcode. |
 
-## [iQRCodeDetails](auxiliary-iQRCodeDetails.md)
+## Class [iQRCodeDetails](auxiliary-iQRCodeDetails.md)
 
 ```objc
 @interface iQRCodeDetails
@@ -166,7 +166,7 @@ needAutoGenerateSidebar: true
 | [`totalPage`](#totalpage) | *NSInteger* | Identify the total number of symbols to be concatenated in the Structured Append format. |
 | [`parityData`](#paritydata) | *byte* | The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks. |
 
-## [iSamplingImageData](auxiliary-iSamplingImageData.md)
+## Class [iSamplingImageData](auxiliary-iSamplingImageData.md)
 
 ```objc
 @interface iSamplingImageData
