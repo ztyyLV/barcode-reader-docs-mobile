@@ -4,23 +4,18 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iOneDCodeDet
 description: This page shows the iOneDCodeDetails Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iOneDCodeDetails, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
-# iOneDCodeDetails
+# Class iOneDCodeDetails
 
-Stores the OneD code details.
+`iOneDCodeDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the OneD code details.
 
 ## Typedefs
 
 ```objc
 @interface iOneDCodeDetails
 ```  
-  
----
 
-## Attributes
-  
 | Attribute | Type |
 |---------- | ---- |
 | [`moduleSize`](#modulesize) | *NSInteger* |
@@ -31,7 +26,7 @@ Stores the OneD code details.
 | [`checkDigitBytes`](#checkdigitbytes) | *NSData \** |
 | [`checkDigitBytesLength`](#checkdigitbyteslength) | *NSInteger* |
 
-### moduleSize
+## moduleSize
 
 The barcode module size (the minimum bar width in pixel).
 
@@ -39,7 +34,7 @@ The barcode module size (the minimum bar width in pixel).
 NSInteger moduleSize
 ```
 
-### startCharsBytes
+## startCharsBytes
 
 The start chars in a byte array.
 
@@ -47,7 +42,7 @@ The start chars in a byte array.
 NSData* startCharsBytes
 ```
 
-### startCharsBytesLength
+## startCharsBytesLength
 
 The length of the start chars byte array.
 
@@ -55,7 +50,7 @@ The length of the start chars byte array.
 NSInteger startCharsBytesLength
 ```
 
-### stopCharsBytes
+## stopCharsBytes
 
 The stop chars in a byte array.
 
@@ -63,7 +58,7 @@ The stop chars in a byte array.
 NSData* stopCharsBytes
 ```
 
-### stopCharsBytesLength
+## stopCharsBytesLength
 
 The length of the stop chars byte array.
 
@@ -71,7 +66,7 @@ The length of the stop chars byte array.
 NSInteger stopCharsBytesLength
 ```
 
-### checkDigitBytes
+## checkDigitBytes
 
 The check digit chars in a byte array.
 
@@ -79,7 +74,7 @@ The check digit chars in a byte array.
 NSData* checkDigitBytes
 ```
 
-### checkDigitBytesLength
+## checkDigitBytesLength
 
 The length of the check digit chars byte array.
 

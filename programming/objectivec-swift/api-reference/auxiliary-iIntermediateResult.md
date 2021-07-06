@@ -4,10 +4,9 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iIntermediat
 description: This page shows the iIntermediateResult Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iIntermediateResult, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
-# iIntermediateResult
+# Class iIntermediateResult
 
 Stores the intermediate result.
 
@@ -17,10 +16,6 @@ Stores the intermediate result.
 @interface iIntermediateResult 
 ```  
 
----
-
-## Attributes
-  
 | Attribute | Type |
 |---------- | ---- |
 | [`resultsCount`](#resultscount) | *NSInteger* |
@@ -54,7 +49,7 @@ Stores the intermediate result.
 | [`scaleDownRatio`](#scaledownratio) | *NSInteger* |
 | [`frameId`](#frameid) | *NSInteger* |
 
-### resultsCount
+## resultsCount
 
 The total result count.
 
@@ -62,7 +57,7 @@ The total result count.
 NSInteger resultsCount
 ```
 
-### results
+## results
 
 One of the following types: Array of [`iContour`](iContour.md), Array of [`iImageData`](iImageData.md), Array of [`iLineSegment`](iLineSegment.md), Array of [`iLocalizationResult`](iLocalizationResult.md), Array of [`iRegionOfInterest`](iRegionOfInterest.md).
 
@@ -70,7 +65,7 @@ One of the following types: Array of [`iContour`](iContour.md), Array of [`iImag
 NSObject* results
 ```
 
-### dataType
+## dataType
 
 The data type of the intermediate result
 
@@ -78,7 +73,7 @@ The data type of the intermediate result
 EnumIMResultDataType dataType
 ```
 
-### resultType
+## resultType
 
 Intermediate result type.
 
@@ -86,15 +81,15 @@ Intermediate result type.
 EnumIntermediateResultType resultType
 ```
 
-### barcodeComplementMode
+## barcodeComplementMode
 
-The [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) used when generating the current intermediate result. 
+The [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) used when generating the current intermediate result.
 
 ```objc
 EnumBarcodeComplementMode barcodeComplementMode
 ```
 
-### bcmIndex
+## bcmIndex
 
 The array index of current used [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) in the [`barcodeComplementModes`](iFurtherModes.md#barcodecomplementmodes) setting.
 
@@ -102,7 +97,7 @@ The array index of current used [`EnumBarcodeComplementMode`]({{ site.enumeratio
 NSInteger bcmIndex
 ```
 
-### deformationResistingMode
+## deformationResistingMode
 
 The [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) used when generating the current intermediate result.
 
@@ -110,7 +105,7 @@ The [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums
 EnumDeformationResistingMode deformationResistingMode
 ```
 
-### drmIndex
+## drmIndex
 
 The array index of current used [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) in the [`deformationResistingModes`](iFurtherModes.md#deformationresistingmodes) setting.
 
@@ -118,7 +113,7 @@ The array index of current used [`EnumDeformationResistingMode`]({{ site.enumera
 NSInteger drmIndex
 ```
 
-### dpmCodeReadingMode
+## dpmCodeReadingMode
 
 The [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) used when generating the current intermediate result.
 
@@ -126,7 +121,7 @@ The [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#
 EnumDPMCodeReadingMode dpmCodeReadingMode
 ```
 
-### dpmcrmIndex
+## dpmcrmIndex
 
 The array index of current used [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) in the [`dpmCodeReadingModes`](iFurtherModes.md#dpmcodereadingmodes) setting.
 
@@ -134,7 +129,7 @@ The array index of current used [`EnumDPMCodeReadingMode`]({{ site.enumerations 
 NSInteger dpmcrmIndex
 ```
 
-### transformationMatrix
+## transformationMatrix
 
 The rotation matrix.
 
@@ -142,7 +137,7 @@ The rotation matrix.
 NSArray* transformationMatrix[9]
 ```
 
-### textFilterMode
+## textFilterMode
 
 The [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) used when generating the current intermediate result.
 
@@ -150,7 +145,7 @@ The [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#text
 EnumTextFilterMode textFilterMode
 ```
 
-### tfmIndex
+## tfmIndex
 
 The array index of current used [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) in the [`textFilterModes`](iFurtherModes.md#textfiltermodes) setting.
 
@@ -158,7 +153,7 @@ The array index of current used [`EnumTextFilterMode`]({{ site.enumerations }}pa
 NSInteger tfmIndex
 ```
 
-### localizationMode
+## localizationMode
 
 The [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) used when generating the current intermediate result.
 
@@ -166,7 +161,7 @@ The [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#lo
 EnumLocalizationMode localizationMode
 ```
 
-### lmIndex
+## lmIndex
 
 The array index of current used [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) in the [`localizationModes`](iPublicRuntimeSettings.md#localizationmodes) setting.
 
@@ -174,7 +169,7 @@ The array index of current used [`EnumLocalizationMode`]({{ site.enumerations }}
 NSInteger lmIndex
 ```
 
-### binarizationMode
+## binarizationMode
 
 The [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) used when generating the current intermediate result.
 
@@ -182,7 +177,7 @@ The [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#bi
 EnumBinarizationMode binarizationMode
 ```
 
-### bmIndex
+## bmIndex
 
 The array index of current used [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) in the [`binarizationModes`](iPublicRuntimeSettings.md#binarizationmodes) setting.
 
@@ -190,7 +185,7 @@ The array index of current used [`EnumBinarizationMode`]({{ site.enumerations }}
 NSInteger bmIndex
 ```
 
-### imagePreprocessingMode
+## imagePreprocessingMode
 
 The [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) used when generating the current intermediate result.
 
@@ -198,7 +193,7 @@ The [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.h
 EnumImagePreprocessingMode imagePreprocessingMode
 ```
 
-### ipmIndex
+## ipmIndex
 
 The array index of current used [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) in [`imagePreprocessingModes`](iFurtherModes.md#imagepreprocessingmodes) setting.
 
@@ -206,7 +201,7 @@ The array index of current used [`EnumImagePreprocessingMode`]({{ site.enumerati
 NSInteger ipmIndex
 ```
 
-### roiId
+## roiId
 
 The ID of the ROI (Region Of Interest) generated by the SDK. -1 means the original image.
 
@@ -214,7 +209,7 @@ The ID of the ROI (Region Of Interest) generated by the SDK. -1 means the origin
 NSInteger roiId
 ```
 
-### regionPredetectionMode
+## regionPredetectionMode
 
 The [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) used when generating the current intermediate result.
 
@@ -222,7 +217,7 @@ The [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.h
 EnumRegionPredetectionMode regionPredetectionMode
 ```
 
-### rpmIndex
+## rpmIndex
 
 The array index of current used [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) in the [`regionPredetectionModes`](iFurtherModes.md#regionpredetectionmodes) setting.
 
@@ -230,7 +225,7 @@ The array index of current used [`EnumRegionPredetectionMode`]({{ site.enumerati
 NSInteger rpmIndex
 ```
 
-### grayscaleTransformationMode
+## grayscaleTransformationMode
 
 The [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) used when generating the current intermediate result.
 
@@ -238,7 +233,7 @@ The [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-en
 EnumGrayscaleTransformationMode grayscaleTransformationMode
 ```
 
-### gtmIndex
+## gtmIndex
 
 The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) in the [`grayscaleTransformationModes`](iFurtherModes.md#grayscaletransformationmodes) setting.
 
@@ -246,7 +241,7 @@ The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.enum
 NSInteger gtmIndex
 ```
 
-### colourConversionMode
+## colourConversionMode
 
 The [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) used when generating the current intermediate result.
 
@@ -254,7 +249,7 @@ The [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.htm
 EnumColourConversionMode colourConversionMode
 ```
 
-### cicmIndex
+## cicmIndex
 
 The array index of current used [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) in the [`colourConversionModes`](iFurtherModes.md#colourconversionmodes) setting.
 
@@ -262,7 +257,7 @@ The array index of current used [`EnumColourConversionMode`]({{ site.enumeration
 NSInteger cicmIndex
 ```
 
-### colourClusteringMode
+## colourClusteringMode
 
 The [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) used when generating the current intermediate result.
 
@@ -270,7 +265,7 @@ The [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.htm
 EnumColourClusteringMode colourClusteringMode
 ```
 
-### ccmIndex
+## ccmIndex
 
 The array index of current used [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) in the [`colourClusteringModes`](iFurtherModes.md#colourclusteringmodes) setting.
 
@@ -278,7 +273,7 @@ The array index of current used [`EnumColourClusteringMode`]({{ site.enumeration
 NSInteger ccmIndex
 ```
 
-### scaleDownRatio
+## scaleDownRatio
 
 The scale down ratio.
 
@@ -286,7 +281,7 @@ The scale down ratio.
 NSInteger scaleDownRatio
 ```
 
-### frameId
+## frameId
 
 The ID of the operated frame.
 

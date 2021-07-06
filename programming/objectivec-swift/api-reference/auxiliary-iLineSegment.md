@@ -4,11 +4,10 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iLineSegment
 description: This page shows the iLineSegment Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iLineSegment, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
 
-# iLineSegment
+# Class iLineSegment
 
 Stores line segment data.
 
@@ -17,18 +16,14 @@ Stores line segment data.
 ```objc
 @interface iLineSegment
 ```  
-  
----
 
-## Attributes
-  
 | Attribute | Type |
 |---------- | ---- |
 | [`startPoint`](#startpoint) | [`CGPoint`](iDBRPoint.md) |
 | [`endPoint`](#endpoint) | [`CGPoint`](iDBRPoint.md) |
 | [`linesConfidenceCoefficients`](#linesconfidencecoefficients) | *NSData \** |
 
-### startPoint
+## startPoint
 
 The start point of the line segment.
 
@@ -36,7 +31,7 @@ The start point of the line segment.
 CGPoint startPoint
 ```
 
-### endPoint
+## endPoint
 
 The end point of the line segment.
 
@@ -44,7 +39,7 @@ The end point of the line segment.
 CGPoint endPoint
 ```
 
-### linesConfidenceCoefficients
+## linesConfidenceCoefficients
 
 The confidence coefficients for lines. There are 4 coefficients in this set:  
 

@@ -4,11 +4,10 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iQuadrilater
 description: This page shows the iQuadrilateral Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iQuadrilateral, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
 
-# iQuadrilateral
+# Class iQuadrilateral
 
 Stores the quadrilateral.  
 
@@ -17,16 +16,12 @@ Stores the quadrilateral.
 ```objc
 @interface iQuadrilateral 
 ```  
-  
----
 
-## Attributes
-  
 | Attribute | Type |
 |---------- | ---- |
 | [`points`](#points) | *NSArray\** |
 
-### points
+## points
 
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
 

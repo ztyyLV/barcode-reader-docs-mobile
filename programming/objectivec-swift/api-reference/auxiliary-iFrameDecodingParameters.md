@@ -4,11 +4,10 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iFrameDecodi
 description: This page shows the iFrameDecodingParameters Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iExtendedResult, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
 
-# iFrameDecodingParameters
+# Class iFrameDecodingParameters
 
 Defines a struct to configure the frame decoding Parameters.  
 
@@ -17,10 +16,6 @@ Defines a struct to configure the frame decoding Parameters.
 ```objc
 @interface iFrameDecodingParameters
 ```
-
----
-
-## Attributes
 
 | Attribute | Type |
 |---------- | ---- |
@@ -37,7 +32,7 @@ Defines a struct to configure the frame decoding Parameters.
 | [`clarityCalculationMethod`](#claritycalculationmethod) | [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) |
 | [`clarityFilterMode`](#clarityfiltermode) | [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) |
 
-### maxQueueLength
+## maxQueueLength
 
 The maximum number of frames waiting for decoding.
 
@@ -51,7 +46,7 @@ NSInteger maxQueueLength
 - **Default value**
     3
 
-### maxResultQueueLength
+## maxResultQueueLength
 
 The maximum number of frames waiting results (text result/localization result) will be kept for further reference.  
 
@@ -65,7 +60,7 @@ NSInteger maxResultQueueLength
 - **Default value**
     10  
 
-### width
+## width
 
 The width of the frame image in pixels.
 
@@ -79,7 +74,7 @@ NSInteger width
 - **Default value**
     0  
 
-### height
+## height
 
 The height of the frame image in pixels.
 
@@ -93,7 +88,7 @@ NSInteger height
 - **Default value**
     0  
 
-### stride
+## stride
 
 The stride (or scan width) of the frame image.
 
@@ -107,7 +102,7 @@ NSInteger stride
 - **Default value**
     0
 
-### imagePixelFormat
+## imagePixelFormat
 
 The image pixel format used in the image byte array.
 
@@ -124,7 +119,7 @@ EnumImagePixelFormat imagePixelFormat
 - **See also**  
     [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)
 
-### region
+## region
 
 The region definition of the frame to calculate the internal indicator. 
 
@@ -138,7 +133,7 @@ iRegionDefinition region
 - **See also**
     [`iRegionDefinition`](iRegionDefinition.md)
 
-### threshold
+## threshold
 
 The threshold used for filtering frames.
 
@@ -155,7 +150,7 @@ float threshold
 - **Remarks**  
     The SDK will calculate an inner indicator for each frame from [`AppendFrame`](../methods/video.md#appendframe), if the change rate of the indicators between the current frame and the history frames is larger than the given threshold, the current frame will not be added to the inner frame queue waiting for decoding.
 
-### fps
+## fps
 
 The frequency of calling [`AppendFrame`](../methods/video.md#appendframe) per second.
 
@@ -172,7 +167,7 @@ NSInteger fps
 - **Remarks**  
     0 means the frequency will be calculated automatically by the SDK.
 
-### autoFilter
+## autoFilter
 
 Sets whether to filter frames automatically.
 
@@ -189,7 +184,7 @@ NSInteger autoFilter
 - **Remarks**
     0: Diable filtering frames automatically. 1: Enable filtering frames automatically. 
 
-### clarityCalculationMethod
+## clarityCalculationMethod
 
 Sets the method used for calculating the clarity of the frames.
 
@@ -206,7 +201,7 @@ EnumClarityCalculationMethod clarityCalculationMethod
 - **See also**  
     [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod)
 
-### clarityFilterMode
+## clarityFilterMode
 
 Sets the mode used for filtering frames by calculated clarity.
 

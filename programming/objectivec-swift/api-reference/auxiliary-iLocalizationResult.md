@@ -4,11 +4,10 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iLocalizatio
 description: This page shows the iLocalizationResult Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iLocalizationResult, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
 
-# iLocalizationResult
+# Class iLocalizationResult
 
 Stores the localization result.
 
@@ -17,11 +16,7 @@ Stores the localization result.
 ```objc
 @interface iLocalizationResult
 ```  
-  
----
 
-## Attributes
-  
 | Attribute | Type |
 |---------- | ---- |
 | [`terminatePhase`](#terminatephase) | [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) |
@@ -40,7 +35,7 @@ Stores the localization result.
 | [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | *NSInteger* |
 | [`confidence`](#confidence) | *NSInteger* |
 
-### terminatePhase
+## terminatePhase
 
 The terminate phase of localization result.
 
@@ -48,7 +43,7 @@ The terminate phase of localization result.
 EnumTerminatePhase terminatePhase
 ```
 
-### barcodeFormat
+## barcodeFormat
 
 Barcode type in BarcodeFormat group 1.
 
@@ -56,7 +51,7 @@ Barcode type in BarcodeFormat group 1.
 EnumBarcodeFormat barcodeFormat
 ```
 
-### barcodeFormatString
+## barcodeFormatString
 
 Barcode type in BarcodeFormat group 1 as string.
 
@@ -64,7 +59,7 @@ Barcode type in BarcodeFormat group 1 as string.
 NSString* barcodeFormatString
 ```
 
-### barcodeFormat_2
+## barcodeFormat_2
 
 Barcode type in BarcodeFormat group 2.
 
@@ -72,7 +67,7 @@ Barcode type in BarcodeFormat group 2.
 EnumBarcodeFormat2 barcodeFormat_2
 ```
 
-### barcodeFormatString_2
+## barcodeFormatString_2
 
 Barcode type in BarcodeFormat group 2 as string.
 
@@ -80,7 +75,7 @@ Barcode type in BarcodeFormat group 2 as string.
 NSString* barcodeFormatString_2
 ```
 
-### resultPoints
+## resultPoints
 
 The resultPoints are Four CGPoints that localize the result area.
 
@@ -88,7 +83,7 @@ The resultPoints are Four CGPoints that localize the result area.
 NSArray* resultPoints
 ```
 
-### angle
+## angle
 
 The angle of a barcode. Values range is from 0 to 360.
 
@@ -96,7 +91,7 @@ The angle of a barcode. Values range is from 0 to 360.
 NSInteger angle
 ```
 
-### moduleSize
+## moduleSize
 
 The barcode module size (the minimum bar width in pixel).
 
@@ -104,7 +99,7 @@ The barcode module size (the minimum bar width in pixel).
 NSInteger moduleSize
 ```
 
-### pageNumber
+## pageNumber
 
 The page number the barcode located in. The index is 0-based.
 
@@ -112,7 +107,7 @@ The page number the barcode located in. The index is 0-based.
 NSInteger pageNumber
 ```
 
-### regionName
+## regionName
 
 The region name the barcode located in.
 
@@ -120,7 +115,7 @@ The region name the barcode located in.
 NSString* regionName
 ```
 
-### documentName
+## documentName
 
 The document name.
 
@@ -128,7 +123,7 @@ The document name.
 NSString* documentName
 ```
 
-### resultCoordinateType
+## resultCoordinateType
 
 The coordinate type.
 
@@ -136,7 +131,7 @@ The coordinate type.
 EnumResultCoordinateType resultCoordinateType
 ```
 
-### accompanyingTextBytes
+## accompanyingTextBytes
 
 The accompanying text content in a byte array.
 
@@ -144,7 +139,7 @@ The accompanying text content in a byte array.
 NSData* accompanyingTextBytes
 ```
 
-### accompanyingTextBytesLength
+## accompanyingTextBytesLength
 
 The length of the accompanying text byte array.
 
@@ -152,7 +147,7 @@ The length of the accompanying text byte array.
 NSInteger accompanyingTextBytesLength
 ```
 
-### confidence
+## confidence
 
 The confidence of the localization result.
 

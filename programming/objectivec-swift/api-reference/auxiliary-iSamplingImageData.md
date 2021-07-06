@@ -4,11 +4,9 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iSamplingIma
 description: This page shows the iSamplingImageData Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iSamplingImageData, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
-
-# iSamplingImageData
+# Class iSamplingImageData
 
 Stores the sampling image data.
 
@@ -17,18 +15,14 @@ Stores the sampling image data.
 ```objc
 @interface iSamplingImageData
 ```  
-  
----
 
-## Attributes
-  
 | Attribute | Type |
 |---------- | ---- |
 | [`bytes`](#bytes) | *NSData\** |
 | [`width`](#width) | *NSInteger* |
 | [`height`](#height) | *NSInteger* |
 
-### bytes
+## bytes
 
 The sampling image data in a byte array.
 
@@ -36,7 +30,7 @@ The sampling image data in a byte array.
 NSData* bytes
 ```
 
-### width
+## width
 
 The width of the sampling image.
 
@@ -44,7 +38,7 @@ The width of the sampling image.
 NSInteger width
 ```
 
-### height
+## height
 
 The height of the sampling image.
 

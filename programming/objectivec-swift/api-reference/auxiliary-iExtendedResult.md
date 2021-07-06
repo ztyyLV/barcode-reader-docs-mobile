@@ -4,12 +4,11 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iExtendedRes
 description: This page shows the iExtendedResult Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iExtendedResult, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
-# iExtendedResult
+# Class iExtendedResult
 
-Stores the extended result.
+`iExtendedResult` is the extension of the class [`iTextResult`](auxiliary-iTextResult.md). It stores the extended result information.
 
 ## Typedefs
 
@@ -17,10 +16,6 @@ Stores the extended result.
 @interface iExtendedResult
 ```  
 
----
-
-## Attributes
-  
 | Attribute | Type |
 |---------- | ---- |
 | [`resultType`](#resulttype) | [`EnumResultType`]({{ site.enumerations }}result-enums.html#resulttype) |
@@ -38,7 +33,7 @@ Stores the extended result.
 | [`samplingImage`](#samplingimage) | [`iSamplingImageData*`](iSamplingImageData.md) |
 | [`clarity`](#clarity) | *NSInteger* |
 
-### resultType
+## resultType
 
 Extended result type.
 
@@ -46,7 +41,7 @@ Extended result type.
 EnumResultType resultType
 ```
 
-### barcodeFormat
+## barcodeFormat
 
 Barcode type in BarcodeFormat group 1.
 
@@ -54,7 +49,7 @@ Barcode type in BarcodeFormat group 1.
 EnumBarcodeFormat barcodeFormat
 ```
 
-### barcodeFormatString
+## barcodeFormatString
 
 Barcode type in BarcodeFormat group 1 as string.
 
@@ -62,7 +57,7 @@ Barcode type in BarcodeFormat group 1 as string.
 NSString* barcodeFormatString
 ```
 
-### barcodeFormat_2
+## barcodeFormat_2
 
 Barcode type in BarcodeFormat group 2.
 
@@ -70,7 +65,7 @@ Barcode type in BarcodeFormat group 2.
 EnumBarcodeFormat2 barcodeFormat_2
 ```
 
-### barcodeFormatString_2
+## barcodeFormatString_2
 
 Barcode type in BarcodeFormat group 2 as string.
 
@@ -78,7 +73,7 @@ Barcode type in BarcodeFormat group 2 as string.
 NSString* barcodeFormatString_2
 ```
 
-### confidence
+## confidence
 
 The confidence of the result.
 
@@ -86,7 +81,7 @@ The confidence of the result.
 NSInteger confidence
 ```
 
-### bytes
+## bytes
 
 The content in a byte array.
 
@@ -94,7 +89,7 @@ The content in a byte array.
 NSData* bytes
 ```
 
-### bytesLength
+## bytesLength
 
 The length of the byte array.
 
@@ -102,7 +97,7 @@ The length of the byte array.
 NSInteger bytesLength
 ```
 
-### accompanyingTextBytes
+## accompanyingTextBytes
 
 The accompanying text content in a byte array.
 
@@ -110,7 +105,7 @@ The accompanying text content in a byte array.
 NSData* accompanyingTextBytes
 ```
 
-### accompanyingTextBytesLength
+## accompanyingTextBytesLength
 
 The length of the accompanying text byte array.
 
@@ -118,7 +113,7 @@ The length of the accompanying text byte array.
 NSInteger accompanyingTextBytesLength
 ```
 
-### deformation
+## deformation
 
 The deformation value.
 
@@ -126,7 +121,7 @@ The deformation value.
 NSInteger deformation
 ```
 
-### detailedResult
+## detailedResult
 
 One of the following: [`iQRCodeDetails`](iQRCodeDetails.md), [`iPDF417Details`](iPDF417Details.md), [`iDataMatrixDetails`](iDataMatrixDetails.md), [`iAztecDetails`](iAztecDetails.md), [`iOneDCodeDetails`](iOneDCodeDetails.md).
 
@@ -134,7 +129,7 @@ One of the following: [`iQRCodeDetails`](iQRCodeDetails.md), [`iPDF417Details`](
 NSObject* detailedResult
 ```
 
-### samplingImage
+## samplingImage
 
 The sampling image info.
 
@@ -142,7 +137,7 @@ The sampling image info.
 iSamplingImageData* samplingImage
 ```
 
-### clarity
+## clarity
 
 The clarity of the barcode zone in percentage.
 

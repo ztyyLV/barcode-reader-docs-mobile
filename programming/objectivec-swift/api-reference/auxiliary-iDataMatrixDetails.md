@@ -4,23 +4,18 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iDataMatrixD
 description: This page shows the iDataMatrixDetails Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iDataMatrixDetails, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
 
-# iDataMatrixDetails
+# Class iDataMatrixDetails
 
-Stores the DataMatrix details.
+`iDataMatrixDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the DataMatrix code details.
 
 ## Typedefs
 
 ```objc
 @interface iDataMatrixDetails
 ```  
-
----
-
-## Attributes
   
 | Attribute | Type |
 |---------- | ---- |
@@ -31,7 +26,7 @@ Stores the DataMatrix details.
 | [`dataRegionColumns`](#dataregioncolumns) | *NSInteger* |
 | [`dataRegionNumber`](#dataregionnumber) | *NSInteger* |
 
-### moduleSize
+## moduleSize
 
 The barcode module size (the minimum bar width in pixel).
 
@@ -39,7 +34,7 @@ The barcode module size (the minimum bar width in pixel).
 NSInteger moduleSize
 ```
 
-### rows
+## rows
 
 The row count of the barcode.
 
@@ -47,7 +42,7 @@ The row count of the barcode.
 NSInteger rows
 ```
 
-### columns
+## columns
 
 The column count of the barcode.
 
@@ -55,7 +50,7 @@ The column count of the barcode.
 NSInteger columns
 ```
 
-### dataRegionRows
+## dataRegionRows
 
 The data region row count of the barcode.
 
@@ -63,7 +58,7 @@ The data region row count of the barcode.
 NSInteger dataRegionRows
 ```
 
-### dataRegionColumns
+## dataRegionColumns
 
 The data region column count of the barcode.
 
@@ -71,7 +66,7 @@ The data region column count of the barcode.
 NSInteger dataRegionColumns
 ```
 
-### dataRegionNumber
+## dataRegionNumber
 
 The data region count.
 

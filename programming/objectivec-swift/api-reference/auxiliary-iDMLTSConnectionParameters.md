@@ -4,15 +4,12 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iDMLTSConnec
 description: This page shows the iDMLTSConnectionParameters Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iDMLTSConnectionParameters, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
 
-# iDMLTSConnectionParameters
+# Class iDMLTSConnectionParameters
 
 Defines a struct to configure the parameters to connect to license tracking server.  
-
-## Attributes
 
 | Attribute | Type |
 |---------- | ---- |
@@ -26,7 +23,7 @@ Defines a struct to configure the parameters to connect to license tracking serv
 | [`limitedLicenseModules`](#limitedlicensemodules) | *NSArray\** |
 | [`organizationID`](#organizationid) | *NSString\** |
 
-### mainServerURL
+## mainServerURL
 
 The URL of the license tracking server.
 
@@ -43,7 +40,7 @@ NSString* mainServerURL
 - **Remarks**
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to nil (default value), it will connect to Dynamsoft's license tracking servers for online verification.
 
-### standbyServerURL
+## standbyServerURL
 
 The URL of the standby license tracking server.
 
@@ -60,7 +57,7 @@ NSString* standbyServerURL
 - **Remarks**
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to nil (default value), it will connect to Dynamsoft's license tracking servers for online verification.
 
-### handshakeCode
+## handshakeCode
 
 The handshake code.
 
@@ -74,7 +71,7 @@ NSString* handshakeCode
 - **Default value**
     nil
 
-### sessionPassword
+## sessionPassword
 
 The session password of the handshake code set in license tracking server.
 
@@ -88,7 +85,7 @@ NSString* sessionPassword
 - **Default value**
     nil
 
-### chargeWay
+## chargeWay
 
 Sets the charge way.
 
@@ -105,7 +102,7 @@ EnumDMChargeWay chargeWay
 - **See also**  
     [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay)
 
-### UUIDGenerationMethod
+## UUIDGenerationMethod
 
 Sets the method to generate UUID.
 
@@ -122,7 +119,7 @@ EnumDMUUIDGenerationMethod UUIDGenerationMethod
 - **See also**  
     [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
 
-### maxBufferDays
+## maxBufferDays
 
 Sets the max days to buffer the license info.
 
@@ -136,7 +133,7 @@ NSInteger maxBufferDays
 - **Default value**
     7
 
-### limitedLicenseModules
+## limitedLicenseModules
 
 Sets the license modules to use.
 
@@ -153,7 +150,7 @@ NSArray* limitedLicenseModules
 - **See also**  
     [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
 
-### organizationID
+## organizationID
 
 The organization ID got from Dynamsoft.
 

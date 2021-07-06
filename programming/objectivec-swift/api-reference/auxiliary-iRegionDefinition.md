@@ -4,10 +4,9 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iRegionDefin
 description: This page shows the iRegionDefinition Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iRegionDefinition, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
-# iRegionDefinition
+# Class iRegionDefinition
 
 Stores the region information.  
 
@@ -16,11 +15,7 @@ Stores the region information.
 ```objc
 @interface iRegionDefinition
 ```  
-  
----
 
-## Attributes
-  
 | Attribute | Type |
 |---------- | ---- |
 | [`regionTop`](#regiontop) | *NSInteger* |
@@ -29,7 +24,7 @@ Stores the region information.
 | [`regionBottom`](#regionbottom) | *NSInteger* |
 | [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | *NSInteger* |
 
-### regionTop
+## regionTop
 
 The top-most coordinate or percentage of the region.
 
@@ -44,7 +39,7 @@ NSInteger regionTop
 - **Default value**
     0
 
-### regionLeft
+## regionLeft
 
 The left-most coordinate or percentage of the region.
 
@@ -59,7 +54,7 @@ NSInteger regionLeft
 - **Default value**
     0
 
-### regionRight
+## regionRight
 
 The right-most coordinate or percentage of the region.
 
@@ -74,7 +69,7 @@ NSInteger regionRight
 - **Default value**
     0
 
-### regionBottom
+## regionBottom
 
 The bottom-most coordinate or percentage of the region.
 
@@ -89,7 +84,7 @@ NSInteger regionBottom
 - **Default value**
     0
 
-### regionMeasuredByPercentage
+## regionMeasuredByPercentage
 
 Sets whether or not to use percentage to measure the region size.
 

@@ -4,24 +4,19 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iPDF417Detai
 description: This page shows the iPDF417Details Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iPDF417Details, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
 
-# iPDF417Details
+# Class iPDF417Details
 
-Stores the PDF417 details.
+`iPDF417Details` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the PDF417 code details.
 
 ## Typedefs
 
 ```objc
 @interface iPDF417Details
 ```  
-  
----
 
-## Attributes
-  
 | Attribute | Type |
 |---------- | ---- |
 | [`moduleSize`](#modulesize) | *NSInteger* |
@@ -29,7 +24,7 @@ Stores the PDF417 details.
 | [`columns`](#columns) | *NSInteger* |
 | [`errorCorrectionLevel`](#errorcorrectionlevel) | *NSInteger* |
 
-### moduleSize
+## moduleSize
 
 The barcode module size (the minimum bar width in pixel).
 
@@ -37,7 +32,7 @@ The barcode module size (the minimum bar width in pixel).
 NSInteger moduleSize
 ```
 
-### rows
+## rows
 
 The row count of the barcode.
 
@@ -45,7 +40,7 @@ The row count of the barcode.
 NSInteger rows
 ```
 
-### columns
+## columns
 
 The column count of the barcode.
 
@@ -53,7 +48,7 @@ The column count of the barcode.
 NSInteger columns
 ```
 
-### errorCorrectionLevel
+## errorCorrectionLevel
 
 The error correction level of the barcode.
 

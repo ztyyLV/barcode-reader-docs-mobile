@@ -4,10 +4,9 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iTextResult 
 description: This page shows the iTextResult Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iTextResult, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
-# iTextResult
+# Class iTextResult
 
 Stores the text result.
 
@@ -16,11 +15,7 @@ Stores the text result.
 ```objc
 @interface iTextResult
 ```  
-  
----
 
-## Attributes
-  
 | Attribute | Type |
 |---------- | ---- |
 | [`barcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) |
@@ -36,7 +31,7 @@ Stores the text result.
 | [`isDPM`](#isdpm) | *NSInteger* |
 | [`isMirrored`](#ismirrored) | *NSInteger* |
 
-### barcodeFormat
+## barcodeFormat
 
 Barcode type in BarcodeFormat group 1.
 
@@ -44,7 +39,7 @@ Barcode type in BarcodeFormat group 1.
 EnumBarcodeFormat barcodeFormat
 ```
 
-### barcodeFormatString
+## barcodeFormatString
 
 Barcode type in BarcodeFormat group 1 as string.
 
@@ -52,7 +47,7 @@ Barcode type in BarcodeFormat group 1 as string.
 NSString* barcodeFormatString
 ```
 
-### barcodeFormat_2
+## barcodeFormat_2
 
 Barcode type in BarcodeFormat group 2.
 
@@ -60,7 +55,7 @@ Barcode type in BarcodeFormat group 2.
 EnumBarcodeFormat2 barcodeFormat_2
 ```
 
-### barcodeFormatString_2
+## barcodeFormatString_2
 
 Barcode type in BarcodeFormat group 2 as string.
 
@@ -68,7 +63,7 @@ Barcode type in BarcodeFormat group 2 as string.
 NSString* barcodeFormatString_2
 ```
 
-### barcodeText
+## barcodeText
 
 The barcode text, ends by '\0'.
 
@@ -76,7 +71,7 @@ The barcode text, ends by '\0'.
 NSString* barcodeText
 ```
 
-### barcodeBytes
+## barcodeBytes
 
 The barcode content in a byte array.
 
@@ -84,7 +79,7 @@ The barcode content in a byte array.
 NSData* barcodeBytes
 ```
 
-### localizationResult
+## localizationResult
 
 The corresponding localization result.
 
@@ -92,7 +87,7 @@ The corresponding localization result.
 iLocalizationResult* localizationResult
 ```
 
-### detailedResult
+## detailedResult
 
 One of the following: [`iQRCodeDetails`](iQRCodeDetails.md), [`iPDF417Details`](iPDF417Details.md), [`iDataMatrixDetails`](iDataMatrixDetails.md), [`iAztecDetails`](iAztecDetails.md), [`iOneDCodeDetails`](iOneDCodeDetails.md).
 
@@ -100,7 +95,7 @@ One of the following: [`iQRCodeDetails`](iQRCodeDetails.md), [`iPDF417Details`](
 NSObject* detailedResult
 ```
 
-### extendedResults
+## extendedResults
 
 The extended result array.
 
@@ -108,7 +103,7 @@ The extended result array.
 NSArray<iExtendedResult*>* extendedResults
 ```
 
-### exception
+## exception
 
 The exception message.
 
@@ -116,7 +111,7 @@ The exception message.
 NSString* exception
 ```
 
-### isDPM
+## isDPM
 
 This attribute stands for whether the result is a DPM result.
 
@@ -124,7 +119,7 @@ This attribute stands for whether the result is a DPM result.
 NSInteger isDPM
 ```
 
-### isMirrored
+## isMirrored
 
 This attribute stands for whether the barcode is mirrored.
 

@@ -4,24 +4,19 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iQRCodeDetai
 description: This page shows the iQRCodeDetails Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iQRCodeDetails, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
 
-# iQRCodeDetails
+# Class iQRCodeDetails
 
-Stores the QRCode details.  
+`iQRCodeDetails` is one of the [`detailedResult`](class-iTextResult.md#detailedresult) in class `iTextResult`. It stores the QRCode details.
 
 ## Typedefs
 
 ```objc
 @interface iQRCodeDetails
 ```  
-  
----
 
-## Attributes
-  
 | Attribute | Type |
 |---------- | ---- |
 | [`moduleSize`](#modulesize) | *NSInteger* |
@@ -35,7 +30,7 @@ Stores the QRCode details.
 | [`totalPage`](#totalpage) | *NSInteger* |
 | [`parityData`](#paritydata) | *byte* |
 
-### moduleSize
+## moduleSize
 
 The barcode module size (the minimum bar width in pixel).  
 
@@ -43,7 +38,7 @@ The barcode module size (the minimum bar width in pixel).
 NSInteger moduleSize
 ```
 
-### rows
+## rows
 
 The row count of the barcode.  
 
@@ -51,7 +46,7 @@ The row count of the barcode.
 NSInteger rows
 ```
 
-### columns
+## columns
 
 The column count of the barcode.
 
@@ -59,7 +54,7 @@ The column count of the barcode.
 NSInteger columns
 ```
 
-### errorCorrectionLevel
+## errorCorrectionLevel
 
 The error correction level of the barcode.
 
@@ -67,7 +62,7 @@ The error correction level of the barcode.
 EnumQRCodeErrorCorrectionLevel errorCorrectionLevel
 ```
 
-### version
+## version
 
 The version of the QR Code.
 
@@ -75,7 +70,7 @@ The version of the QR Code.
 NSInteger version
 ```
 
-### model
+## model
 
 Number of the models.
 
@@ -83,7 +78,7 @@ Number of the models.
 NSInteger model
 ```
 
-### mode
+## mode
 
 Identify the first data encoding mode.
 
@@ -99,7 +94,7 @@ Identify the position of the particular symbol.
 NSInteger page
 ```
 
-### totalPage
+## totalPage
 
 Identify the total number of symbols to be concatenated in the Structured Append format.
 
@@ -107,7 +102,7 @@ Identify the total number of symbols to be concatenated in the Structured Append
 NSInteger totalPage
 ```
 
-### parityData
+## parityData
 
 The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks.
 

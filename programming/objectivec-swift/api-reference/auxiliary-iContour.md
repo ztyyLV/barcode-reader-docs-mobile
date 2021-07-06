@@ -4,13 +4,12 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iContour Cla
 description: This page shows the iContour Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iContour, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
 
-# iContour
+# Class iContour
 
-Stores the contour information.
+The iContour is one of the [`results`](auxiliary-iIntermediateResult.md#results) type in `iIntermediateResult`.
 
 ## Typedefs
 
@@ -18,16 +17,12 @@ Stores the contour information.
 @interface iContour
 ```  
 
----
-
-## Attributes
-  
 | Attribute | Type |
 |---------- | ---- |
 | [`pointsCount`](#pointscount) |  *NSInteger* |
 | [`points`](#points) | [NSArray*](iDBRPoint.md) \* |
 
-### pointsCount
+## pointsCount
 
 The total points count of the contour.
 
@@ -35,7 +30,7 @@ The total points count of the contour.
 NSInteger pointsCount
 ```  
   
-### points
+## points
 
 The points array.
 

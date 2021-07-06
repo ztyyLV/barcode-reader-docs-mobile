@@ -12,7 +12,6 @@ needGenerateH3Content: true
 
 - [Attributes](#attributes)
 - [Methods](#methods)
-
   - [Initialize](#initialize)
   - [Decode](#decode)
   - [Parameter and Runtime Settings](#parameter-and-runtime-settings)

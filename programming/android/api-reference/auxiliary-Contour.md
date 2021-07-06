@@ -14,7 +14,7 @@ needGenerateH3Content: true
 import com.dynamsoft.dbr.Contour;
 ```
 
-The contour is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
+The `Contour` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
   
 | Attribute | Description |
 |---------- | ----------- |

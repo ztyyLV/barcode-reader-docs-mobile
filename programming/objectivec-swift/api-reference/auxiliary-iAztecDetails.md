@@ -4,13 +4,12 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iAztecDetail
 description: This page shows the iAztecDetails Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iAztecDetails, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
 
-# iAztecDetails
+# Class iAztecDetails
 
-Stores the Aztec details.
+`iAztecDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the Aztec code details.
 
 ## Typedefs
 
@@ -18,10 +17,6 @@ Stores the Aztec details.
 @interface iAztecDetails
 ```
 
----
-
-## Attributes
-  
 | Attribute | Type |
 |---------- | ----------- |
 | [`moduleSize`](#modulesize) | *NSInteger* |
@@ -29,7 +24,7 @@ Stores the Aztec details.
 | [`columns`](#columns) | *NSInteger* |
 | [`layerNumber`](#layernumber) | *NSInteger* |
 
-### moduleSize
+## moduleSize
 
 The barcode module size (the minimum bar width in pixel).
 
@@ -37,7 +32,7 @@ The barcode module size (the minimum bar width in pixel).
 NSInteger moduleSize
 ```  
 
-### rows
+## rows
 
 The row count of the barcode.
 
@@ -45,7 +40,7 @@ The row count of the barcode.
 NSInteger rows
 ```  
 
-### columns
+## columns
 
 The column count of the barcode.
 
@@ -53,7 +48,7 @@ The column count of the barcode.
 NSInteger columns
 ```  
 
-### layerNumber
+## layerNumber
 
 A negative number (-1, -2, -3, -4) specifies a compact Aztec code. A positive number (1, 2, .. 32) specifies a normal (full-rang) Aztec code.  
 

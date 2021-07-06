@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader Android API Reference - LocalizationResult Class
 description: This page shows the LocalizationResult Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: LocalizationResult, class, api reference, android
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needGenerateH3Content: false
 ---
 
 

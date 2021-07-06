@@ -4,11 +4,10 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iFurtherMode
 description: This page shows the iFurtherModes Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iFurtherModes, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
 ---
 
 
-# iFurtherModes
+# Class iFurtherModes
 
 Stores the FurtherModes.
 
@@ -17,11 +16,7 @@ Stores the FurtherModes.
 ```objc
 @interface iFurtherModes
 ```  
-  
----
 
-## Attributes
-  
 | Attribute | Type |
 |---------- | ---- |
 | [`colourClusteringModes`](#colourclusteringmodes) | *NSArray*\* |
@@ -37,7 +32,7 @@ Stores the FurtherModes.
 | [`barcodeColourModes`](#barcodecolourmodes) | *NSArray*\* |
 | [`accompanyingTextRecognitionModes`](#accompanyingtextrecognitionmodes) | *NSArray*\* |
 
-### colourClusteringModes
+## colourClusteringModes
 
 Sets the mode and priority for colour categorization. Not supported yet.  
 
@@ -57,7 +52,7 @@ NSArray* colourClusteringModes[8]
 - **See also**  
    [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode)
 
-### colourConversionModes
+## colourConversionModes
 
 Sets the mode and priority for converting a colour image to a grayscale image.
 
@@ -77,7 +72,7 @@ NSArray* colourConversionModes[8]
 - **See also**  
    [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)
 
-### grayscaleTransformationModes
+## grayscaleTransformationModes
 
 Sets the mode and priority for the grayscale image conversion.
 
@@ -97,7 +92,7 @@ NSArray* grayscaleTransformationModes[8]
 - **See also**  
    [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
 
-### regionPredetectionModes
+## regionPredetectionModes
 
 Sets the region pre-detection mode for barcodes search.
 
@@ -117,7 +112,7 @@ NSArray* regionPredetectionModes[8]
 - **See also**  
    [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)
 
-### imagePreprocessingModes
+## imagePreprocessingModes
 
 Sets the mode and priority for image preprocessing algorithms.
 
@@ -137,7 +132,7 @@ NSArray* imagePreprocessingModes[8]
 - **See also**  
    [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode)
 
-### textureDetectionModes
+## textureDetectionModes
 
 Sets the mode and priority for texture detection. 
 
@@ -157,7 +152,7 @@ NSArray* textureDetectionModes[8]
 - **See also**  
    [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
 
-### textFilterModes
+## textFilterModes
 
 Sets the mode and priority for text filter.
 
@@ -177,7 +172,7 @@ NSArray* textFilterModes[8]
 - **See also**  
    [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)
 
-### dpmCodeReadingModes
+## dpmCodeReadingModes
 
 Sets the mode and priority for DPM code reading.
 
@@ -197,7 +192,7 @@ NSArray* dpmCodeReadingModes[8]
 - **See also**  
    [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)
 
-### deformationResistingModes
+## deformationResistingModes
 
 Sets the mode and priority for deformation resisting.
 
@@ -217,7 +212,7 @@ NSArray* deformationResistingModes[8]
 - **See also**  
    [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)
 
-### barcodeComplementModes
+## barcodeComplementModes
 
 Sets the mode and priority to complement the missing parts in the barcode.
 
@@ -237,7 +232,7 @@ NSArray* barcodeComplementModes[8]
 - **See also**  
    [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode)
 
-### barcodeColourModes
+## barcodeColourModes
 
 Sets the mode and priority for the barcode colour mode used to process the barcode zone.
 
@@ -256,7 +251,7 @@ NSArray* barcodeColourModes[8]
 - **See also**  
    [`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)
 
-### accompanyingTextRecognitionModes
+## accompanyingTextRecognitionModes
 
 Sets the mode and priority to recognize accompanying text.
 
