@@ -9,7 +9,7 @@ needGenerateH3Content: False
 
 # Intermediate Result Classes
 
-## Class IntermediateResult
+## IntermediateResult
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
@@ -49,13 +49,13 @@ barcodeReader.initIntermediateResults(EnumIntermediateResultType.IRT_ORIGINAL_IM
 IntermediateResult[] intermediateResults = barcodeReader.getIntermediateResults();
 ```
 
-## Class [Contour](auxiliary-contour.md)
+## [Contour](auxiliary-contour.md)
 
 ```java
 import com.dynamsoft.dbr.Contour;
 ```
 
-`contour` is one of the [`results`](#intermediateresult) type in `IntermediateResult`.
+`contour` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
@@ -65,13 +65,13 @@ import com.dynamsoft.dbr.Contour;
 Contour[] contours = (Contour[]) intermediateResults[i].results;
 ```
 
-## Class [ImageData](auxiliary-imagedata.md)
+## [ImageData](auxiliary-imagedata.md)
 
 ```java
 import com.dynamsoft.dbr.ImageData;
 ```
 
-`ImageData` is one of the [`results`](#intermediateresult) type in `IntermediateResult`.
+`ImageData` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
@@ -85,13 +85,13 @@ import com.dynamsoft.dbr.ImageData;
 ImageData[] imageData = (ImageData[]) intermediateResults[i].results;
 ```
 
-## Class [LineSegment](auxiliary-linesegment.md)
+## [LineSegment](auxiliary-linesegment.md)
 
 ```java
 import com.dynamsoft.dbr.LineSegment;
 ```
 
-`LineSegment` is one of the [`results`](auxiliary-intermediateresult.md#results) type in `IntermediateResult`.
+`LineSegment` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
@@ -103,9 +103,9 @@ import com.dynamsoft.dbr.LineSegment;
 LineSegment[] lineSegment = (LineSegment[]) intermediateResults[i].results;
 ```
 
-## Class [RegionOfInterest](auxiliary-regionofinterest.md)
+## [RegionOfInterest](auxiliary-regionofinterest.md)
 
-`RegionOfInterest` is one of the [`results`](auxiliary-intermediateresult.md#results) type in `IntermediateResult`.
+`RegionOfInterest` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
 
 ```java
 import com.dynamsoft.dbr.LineSegment;
@@ -122,13 +122,13 @@ import com.dynamsoft.dbr.LineSegment;
 RegionOfInterest[] regionOfInterest = (RegionOfInterest[]) intermediateResults[i].results;
 ```
 
-## Class [LocalizationResult](auxiliary-localizationresult.md)
+## [LocalizationResult](auxiliary-localizationresult.md)
 
 ```java
 import com.dynamsoft.dbr.LocalizationResult;
 ```
 
-`LocalizationResult` can be the extension of the class [`IntermediateResult`](auxiliary-intermediateresult.md). It stores the localization result information.
+`LocalizationResult` can be the extension of the class [`IntermediateResult`](auxiliary-IntermediateResult.md). It stores the localization result information.
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
@@ -137,7 +137,7 @@ import com.dynamsoft.dbr.LocalizationResult;
 | `barcodeFormatString` | *String* | Barcode type in BarcodeFormat group 1 as string. |
 | `barcodeFormat_2` | *int* | Barcode type in BarcodeFormat group 2. |
 | `barcodeFormatString_2` | *String* | Barcode type in BarcodeFormat group 2 as string. |
-| `resultPoints` | [`Point`](Point.md)\[\] | The vertices coordinates information of the barcode region. |
+| `resultPoints` | [`Point`](auxiliary-Point.md)\[\] | The vertices coordinates information of the barcode region. |
 | `angle` | *int* | The angle of a barcode. Values range is from 0 to 360. |
 | `moduleSize` | *int* | The barcode module size (the minimum bar width in pixel). |
 | `pageNumber` | *int* | The page number the barcode located in. The index is 0-based. |

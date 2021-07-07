@@ -9,7 +9,7 @@ needGenerateH3Content: false
 
 # Barcode Result Classes
 
-## Class [TextResult](auxiliary-TextResult.md)
+## [TextResult](auxiliary-TextResult.md)
 
 ```java
 import com.dynamsoft.dbr.TextResult;
@@ -36,7 +36,7 @@ import com.dynamsoft.dbr.TextResult;
 TextResult[] textresult = barcodeReader.decodeBuffer(frame.getData(),frame.getWidth(),frame.getHeight(),frame.getStrides()[0],frame.getFormat(),"");
 ```
 
-## Class [LocalizationResult](auxiliary-LocalizationResult.md)
+## [LocalizationResult](auxiliary-LocalizationResult.md)
 
 ```java
 import com.dynamsoft.dbr.LocalizationResult;
@@ -70,7 +70,7 @@ if ( textresult != null && textresult.length != 0){
 }
 ```
 
-## Class [ExtendedResult](auxiliary-ExtendedResult.md)
+## [ExtendedResult](auxiliary-ExtendedResult.md)
 
 ```java
 import com.dynamsoft.dbr.ExtendedResult;
@@ -102,7 +102,7 @@ if ( textresult != null && textresult.length != 0){
 }
 ```
 
-## Class [AztecDetails](auxiliary-AztecDetails.md)
+## [AztecDetails](auxiliary-AztecDetails.md)
 
 ```java
 import com.dynamsoft.dbr.AztecDetails;
@@ -122,7 +122,7 @@ import com.dynamsoft.dbr.AztecDetails;
 AztecDetails aztecDetails = (AztecDetails) textresult[i].detailedResult;
 ```
 
-## Class [DataMatrixDetails](auxiliary-DataMatrixDetails.md)
+## [DataMatrixDetails](auxiliary-DataMatrixDetails.md)
 
 ```java
 import com.dynamsoft.dbr.DataMatrixDetails;
@@ -144,7 +144,7 @@ import com.dynamsoft.dbr.DataMatrixDetails;
 DataMatrixDetails dataMatrixDetails = (DataMatrixDetails) textresult[i].detailedResult;
 ```
 
-## Class [OneDCodeDetails](auxiliary-OneDCodeDetails.md)
+## [OneDCodeDetails](auxiliary-OneDCodeDetails.md)
 
 ```java
 import com.dynamsoft.dbr.OneDCodeDetails;
@@ -167,7 +167,7 @@ import com.dynamsoft.dbr.OneDCodeDetails;
 OneDCodeDetails oneDDetails = (OneDCodeDetails) textresult[i].detailedResult;
 ```
 
-## Class [PDF417Details](auxiliary-PDF417Details.md)
+## [PDF417Details](auxiliary-PDF417Details.md)
 
 ```java
 import com.dynamsoft.dbr.PDF417Details;
@@ -187,7 +187,7 @@ import com.dynamsoft.dbr.PDF417Details;
 PDF417Details pdf417Details = (PDF417Details) textresult[i].detailedResult;
 ```
 
-## Class [QRCodeDetails](auxiliary-QRCodeDetails.md)
+## [QRCodeDetails](auxiliary-QRCodeDetails.md)
 
 ```java
 import com.dynamsoft.dbr.QRCodeDetails;
@@ -213,7 +213,7 @@ import com.dynamsoft.dbr.QRCodeDetails;
 QRCodeDetails qrDetails = (QRCodeDetails) textresult[i].detailedResult;
 ```
 
-## Class [SamplingImageData](auxiliary-samplingimagedata.md)
+## [SamplingImageData](auxiliary-samplingimagedata.md)
 
 ```java
 import com.dynamsoft.dbr.SamplingImageData;

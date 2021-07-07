@@ -10,9 +10,10 @@ noTitleIndex: true
 
 # Dynamsoft Barcode Reader SDK - iOS API Reference
 
+## BarcodeReader Class
+
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
-> ## BarcodeReader Class
 > ### Initialize and Destroy
 > <hr>
 > * [init](primary-initialize.md)
@@ -84,38 +85,56 @@ noTitleIndex: true
 > <hr>
 > * [getLengthOfFrameQueue](primary-video.md#getlengthofframequeue)
 
+## Error Codes
+
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
-> ## Error Code
+> ### ErrorCode
 > <hr>
 > * [ErrorCode]({{ site.enumerations }}error-code.html)
 
+## Auxiliary Classes
+
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
-> ## Auxiliary Classes
+### License Activation Class
 > <hr>
-> * [iAztecDetails](auxiliary-iAztecDetails.md)
-> * [iContour](auxiliary-iContour.md)
-> * [iDataMatrixDetails](auxiliary-iDataMatrixDetails.md)
-> * [iDBRPoint](auxiliary-iDBRPoint.md)
-> * [iDCESettingParameters](auxiliary-iDCESettingParameters.md)
 > * [iDMLTSConnectionParameters](auxiliary-iDMLTSConnectionParameters.md)
-> * [iExtendedResult](auxiliary-iExtendedResult.md)
+
+> ### Parameter Configeration Classes
+> <hr>
+> * [iPublicRuntimeSettings](auxiliary-iPublicRuntimeSettings.md)
+> * [iDCESettingParameters](auxiliary-iDCESettingParameters.md)
 > * [iFrameDecodingParameters](auxiliary-iFrameDecodingParameters.md)
 > * [iFurtherModes](auxiliary-iFurtherModes.md)
-> * [iImageData](auxiliary-iImageData.md)
-> * [iIntermediateResult](auxiliary-iIntermediateResult.md)
-> * [iLineSegment](auxiliary-iLineSegment.md)
-> * [iLocalizationResult](auxiliary-iLocalizationResult.md)
+
+> ### Barcode Result Classes
+> <hr>
+> * [iTextResult](auxiliary-iTextResult.md)
+> * [iAztecDetails](auxiliary-iAztecDetails.md)
+> * [iExtendedResult](auxiliary-iExtendedResult.md)
+> * [iDataMatrixDetails](auxiliary-iDataMatrixDetails.md)
 > * [iOneDCodeDetails](auxiliary-iOneDCodeDetails.md)
 > * [iPDF417Details](auxiliary-iPDF417Details.md)
-> * [iPublicRuntimeSettings](auxiliary-iPublicRuntimeSettings.md)
 > * [iQRCodeDetails](auxiliary-iQRCodeDetails.md)
-> * [iQuadrilateral](auxiliary-iQuadrilateral.md)
-> * [iRegionDefinition](auxiliary-iRegionDefinition.md)
-> * [iRegionOfInterest](auxiliary-iRegionOfInterest.md)
+> * [iLocalizationResult](auxiliary-iLocalizationResult.md)
 > * [iSamplingImageData](auxiliary-iSamplingImageData.md)
-> * [iTextResult](auxiliary-iTextResult.md)
+
+> ### Intermediate Result Classes
+> <hr>
+> * [iIntermediateResult](auxiliary-iIntermediateResult.md)
+> * [iContour](auxiliary-iContour.md)
+> * [iImageData](auxiliary-iImageData.md)
+> * [iRegionOfInterest](auxiliary-iRegionOfInterest.md)
+> * [iLineSegment](auxiliary-iLineSegment.md)
+
+> ### Common Classes
+> <hr>
+> * [iRegionDefinition](auxiliary-iRegionDefinition.md)
+> * [iDBRPoint](auxiliary-iDBRPoint.md)
+> * [iQuadrilateral](auxiliary-iQuadrilateral.md)
+
+## Enumerations
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 

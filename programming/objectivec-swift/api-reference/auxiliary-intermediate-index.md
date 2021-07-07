@@ -9,7 +9,7 @@ needGenerateH3Content: False
 
 # Intermediate Result Classes
 
-## Class [iIntermediateResult](auxiliary-iIntermediateResult.md)
+## [iIntermediateResult](auxiliary-iIntermediateResult.md)
 
 ```objc
 @interface iIntermediateResult 
@@ -48,7 +48,7 @@ needGenerateH3Content: False
 | [`scaleDownRatio`](#scaledownratio) | *NSInteger* | The scale down ratio. |
 | [`frameId`](#frameid) | *NSInteger* | The ID of the operated frame. |
 
-## Class [iContour](auxiliary-icontour.md)
+## [iContour](auxiliary-icontour.md)
 
 ```objc
 @interface iContour
@@ -61,7 +61,7 @@ needGenerateH3Content: False
 | [`pointsCount`](#pointscount) |  *NSInteger* | The total points count of the contour. |
 | [`points`](#points) | [NSArray*](auxiliary-iDBRPoint.md) \* | The points array of the points that surround the barcode area.. |
 
-## Class [iImageData](auxiliary-iimagedata.md)
+## [iImageData](auxiliary-iimagedata.md)
 
 ```objc
 @interface iImageData
@@ -78,7 +78,7 @@ needGenerateH3Content: False
 | [`stride`](#stride) | *NSInteger* | The stride (or scan width) of the image. |
 | [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) | The image pixel format used in the image byte array. |
 
-## Class [iLineSegment](auxiliary-ilinesegment.md)
+## [iLineSegment](auxiliary-ilinesegment.md)
 
 ```objc
 @interface iLineSegment
@@ -92,7 +92,7 @@ needGenerateH3Content: False
 | [`endPoint`](#endpoint) | [`CGPoint`](auxiliary-iDBRPoint.md) | The end point of the line segment. |
 | [`linesConfidenceCoefficients`](#linesconfidencecoefficients) | *NSData \** | *byte\[\]* | The confidence coefficients for lines. |
 
-## Class [iRegionOfInterest](auxiliary-iregionofinterest.md)
+## [iRegionOfInterest](auxiliary-iregionofinterest.md)
 
 ```objc
 @interface iRegionOfInterest
@@ -107,7 +107,7 @@ needGenerateH3Content: False
 | [`width`](#width) | *NSInteger* | The width of the region. |
 | [`height`](#height) | *NSInteger* | The height of the region. |
 
-## Class [iLocalizationResult](auxiliary-ilocalizationresult.md)
+## [iLocalizationResult](auxiliary-ilocalizationresult.md)
 
 ```objc
 @interface iLocalizationResult

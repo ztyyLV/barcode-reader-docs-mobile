@@ -11,9 +11,10 @@ breadcrumbText: API Reference
 
 # Dynamsoft Barcode Reader SDK - Android API Reference
 
+## BarcodeReader Class
+
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
-> ## BarcodeReader Class
 > ### Initialize and Destroy
 > <hr>
 > * [BarcodeReader](primary-initialize-and-destroy.md#barcodereader)
@@ -96,11 +97,11 @@ breadcrumbText: API Reference
 > <hr>
 > * [getLengthOfFrameQueue](primary-video.md#getlengthofframequeue)
 
-
+## Interface
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
-> ## Interface
+> ### Interfaces
 > <hr>
 > * [ErrorCallback](interface.md#errorcallback)
 > * [IntermediateResultCallback](interface.md#intermediateresultcallback)
@@ -108,43 +109,63 @@ breadcrumbText: API Reference
 > * [DBRServerLicenseVerificationListener](interface.md#dbrserverlicenseverificationlistener)
 > * [DBRLTSLicenseVerificationListener](interface.md#dbrltslicenseverificationlistener)
 
+## Error Code
+
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
-> ## Error Code
+> ### ErrorCode
 > <hr>
 > * [ErrorCode]({{ site.enumerations }}error-code.html)
 
+## Auxiliary Classes
+
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
-> ## Auxiliary Classes
+> ### License Activation Class
 > <hr>
-> * [AztecDetails](auxiliary-AztecDetails.md)
-> * [BarcodeReaderException](auxiliary-BarcodeReaderException.md)
-> * [Contour](auxiliary-Contour.md)
-> * [DataMatrixDetails](auxiliary-DataMatrixDetails.md)
-> * [DCESettingParameters](auxiliary-DCESettingParameters.md)
 > * [DMLTSConnectionParameters](auxiliary-DMLTSConnectionParameters.md)
-> * [ExtendedResult](auxiliary-ExtendedResult.md)
+
+> ### Parameter Configeration Classes
+> <hr>
+> * [PublicRuntimeSettings](auxiliary-PublicRuntimeSettings.md)
+> * [DCESettingParameters](auxiliary-DCESettingParameters.md)
 > * [FrameDecodingParameters](auxiliary-FrameDecodingParameters.md)
 > * [FurtherModes](auxiliary-FurtherModes.md)
-> * [ImageData](auxiliary-ImageData.md)
-> * [IntermediateResult](auxiliary-IntermediateResult.md)
-> * [LineSegment](auxiliary-LineSegment.md)
-> * [LocalizationResult](auxiliary-LocalizationResult.md)
+
+> ### Barcode Result Classes
+> <hr>
+> * [TextResult](auxiliary-TextResult.md)
+> * [ExtendedResult](auxiliary-ExtendedResult.md)
+> * [AztecDetails](auxiliary-AztecDetails.md)
+> * [DataMatrixDetails](auxiliary-DataMatrixDetails.md)
 > * [OneDCodeDetails](auxiliary-OneDCodeDetails.md)
 > * [PDF417Details](auxiliary-PDF417Details.md)
-> * [PublicRuntimeSettings](auxiliary-PublicRuntimeSettings.md)
 > * [QRCodeDetails](auxiliary-QRCodeDetails.md)
-> * [Quadrilateral](auxiliary-Quadrilateral.md)
-> * [RegionDefinition](auxiliary-RegionDefinition.md)
-> * [RegionOfInterest](auxiliary-RegionOfInterest.md)
+> * [LocalizationResult](auxiliary-LocalizationResult.md)
 > * [SamplingImageData](auxiliary-SamplingImageData.md)
-> * [TextResult](auxiliary-TextResult.md)
->
+
+> ### Intermediate Result Classes
+> <hr>
+> * [IntermediateResult](auxiliary-IntermediateResult.md)
+> * [Contour](auxiliary-Contour.md)
+> * [ImageData](auxiliary-ImageData.md)
+> * [LineSegment](auxiliary-LineSegment.md)
+> * [RegionOfInterest](auxiliary-RegionOfInterest.md)
+
+> ### Common Classes
+> <hr>
+> * [RegionDefinition](auxiliary-RegionDefinition.md)
+> * [Point](auxiliary-Point.md)
+> * [Quadrilateral](auxiliary-Quadrilateral.md)
+
+> ### Exception
+> * [BarcodeReaderException](auxiliary-BarcodeReaderException.md)
+
+## Enumerations
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
-> ## Enumerations
+> ### Enumerations
 > <hr>
 > * [EnumAccompanyingTextRecognitionMode]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)
 > * [EnumBarcodeColourMode]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)

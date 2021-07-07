@@ -80,7 +80,7 @@ import com.dynamsoft.dbr.FurtherModes;
 FurtherModes furtherModes = runtimeSettings.furtherModes;
 ```
 
-## Class [RegionDefinition](auxiliary-RegionDefinition.md)
+## [RegionDefinition](auxiliary-RegionDefinition.md)
 
 ```java
 import com.dynamsoft.dbr.RegionDefinition;
@@ -98,7 +98,7 @@ import com.dynamsoft.dbr.RegionDefinition;
 RegionDefinition regionDefinition = runtimeSettings.region;
 ```
 
-## Class [FrameDecodingParameters](auxiliary-FrameDecodingParameters.md)
+## [FrameDecodingParameters](auxiliary-FrameDecodingParameters.md)
 
 The parameters that helps you on frame decoding.
 
@@ -121,7 +121,7 @@ import com.dynamsoft.dbr.FrameDecodingParameters;
 | [`clarityCalculationMethod`](auxiliary-FrameDecodingParameters.md#claritycalculationmethod) | *int* | Sets the method used for calculating the clarity of the frames. |
 | [`clarityFilterMode`](auxiliary-FrameDecodingParameters.md#clarityfiltermode) | *int* | Sets the mode used for filtering frames by calculated clarity. |
 
-## Class [DCESettingParameters](auxiliary-DCESettingParameters.md)
+## [DCESettingParameters](auxiliary-DCESettingParameters.md)
 
 The parameters that helps you on configuring Dynamsoft Camera Enhancer in the Barcode Reader.
 
