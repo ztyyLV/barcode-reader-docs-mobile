@@ -13,7 +13,7 @@ needGenerateH3Content: False
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
-| [`results`](#results) | *Object\[\]* | One of the following types: Array of [`Contour`](auxiliary-contour.md), Array of [`ImageData`](auxiliary-imagedata.md), Array of [`LineSegment`](auxiliary-linesegment.md), Array of [`LocalizationResult`](auxiliary-localizationresult.md), Array of [`RegionOfInterest`](auxiliary-regionofinterest.md). |
+| [`results`](#results) | *Object\[\]* | One of the following types: Array of [`Contour`](auxiliary-Contour.md), Array of [`ImageData`](auxiliary-Imagedata.md), Array of [`LineSegment`](auxiliary-LineSegment.md), Array of [`LocalizationResult`](auxiliary-LocalizationResult.md), Array of [`RegionOfInterest`](auxiliary-RegionofInterest.md). |
 | [`dataType`](#datatype) | *int* | The data type of the intermediate result. |
 | [`resultType`](#resulttype) | *int* | Intermediate result type. |
 | [`barcodeComplementMode`](#barcodecomplementmode) | *int* | The [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) used when generating the current intermediate result. |

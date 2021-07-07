@@ -18,7 +18,7 @@ needGenerateH3Content: False
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
 | [`resultsCount`](#resultscount) | *NSInteger* | The total result count. |
-| [`results`](#results) | *NSObject\** | One of the following types: Array of [`Contour`](auxiliary-contour.md), Array of [`ImageData`](auxiliary-imagedata.md), Array of [`LineSegment`](auxiliary-linesegment.md), Array of [`LocalizationResult`](auxiliary-localizationresult.md), Array of [`RegionOfInterest`](auxiliary-regionofinterest.md). |
+| [`results`](#results) | *NSObject\** | One of the following types: Array of [`iContour`](auxiliary-iContour.md), Array of [`iImageData`](auxiliary-iImageData.md), Array of [`iLineSegment`](auxiliary-iLineSegment.md), Array of [`iLocalizationResult`](auxiliary-iLocalizationResult.md), Array of [`iRegionOfInterest`](auxiliary-iRegionOfInterest.md). |
 | [`dataType`](#datatype) | [`EnumIMResultDataType`]({{ site.enumerations }}result-enums.html#imresultdatatype) | The data type of the intermediate result. |
 | [`resultType`](#resulttype) | [`EnumIntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype) | Intermediate result type. |
 | [`barcodeComplementMode`](#barcodecomplementmode) | [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) | The [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) used when generating the current intermediate result. |

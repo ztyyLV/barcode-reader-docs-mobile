@@ -11,7 +11,7 @@ needGenerateH3Content: false
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`BarcodeReader`](#barcodereader) | Initialization of `BarcodeReader` object.|
+  | [`BarcodeReader`](#barcodereader-initialization) | Initialization of `BarcodeReader` object.|
   | [`destroy`](#destroy) | Destroys an instance of `BarcodeReader` object.|
 
 ---

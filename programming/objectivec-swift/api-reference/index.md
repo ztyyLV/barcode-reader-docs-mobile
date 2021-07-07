@@ -17,6 +17,7 @@ noTitleIndex: true
 > ### Initialize and Destroy
 > <hr>
 > * [init](primary-initialize.md)
+> <hr>
 >
 > ### Decode
 > <hr>
@@ -26,6 +27,7 @@ noTitleIndex: true
 > * [decodeBase64](primary-decode.md#decodebase64)
 > * [createIntermediateResult](primary-decode.md#createintermediateresult)
 > * [decodeIntermediateResults](primary-decode.md#decodeintermediateresults)
+> <hr>
 >
 > ### License
 > <hr>
@@ -33,10 +35,12 @@ noTitleIndex: true
 > * [initWithLicenseFromServer](primary-license.md#initwithlicensefromserver)
 > * [outputLicenseToString](primary-license.md#outputlicensetostring)
 > * [initLicenseFromLTS](primary-license.md#initlicensefromlts)
+> <hr>
 >
 > ### Camera Enhancer
 > <hr>
 > * [SetCameraEnhancerParam](primary-camera.md#setcameraenhancerparam)
+> <hr>
 >
 > ### Parameter and Runtime Settings
 >
@@ -47,6 +51,7 @@ noTitleIndex: true
 > * [getRuntimeSettings](primary-parameter-and-runtime-settings-basic.md#getruntimesettings)
 > * [updateRuntimeSettings](primary-parameter-and-runtime-settings-basic.md#updateruntimesettings)
 > * [resetRuntimeSettings](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings)
+> <hr>
 >
 > #### Advanced
 > <hr>
@@ -57,12 +62,15 @@ noTitleIndex: true
 > * [allparametertemplatenames](primary-parameter-and-runtime-settings-advanced.md#allparametertemplatenames)
 > * [outputSettingsToFile](primary-parameter-and-runtime-settings-advanced.md#outputsettingstofile)
 > * [outputSettingsToString](primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring)
+> <hr>
 >
 > ### Result
 > <hr>
 > * [getIntermediateResults](primary-result.md#getintermediateresults)
+> <hr>
 >
 > ### Video
+> <hr>
 >
 > #### Decode
 > <hr>
@@ -70,16 +78,19 @@ noTitleIndex: true
 > * [startFrameDecodingEx](primary-video.md#startframedecodingex)
 > * [appendFrame](primary-video.md#appendframe)
 > * [stopFrameDecoding](primary-video.md#stopframedecoding)
+> <hr>
 >
 > #### Parameter
 > <hr>
 > * [getFrameDecodingParameters](primary-video.md#getframedecodingparameters)
+> <hr>
 >
 > #### Delegate
 > <hr>
 > * [setDBRErrorDelegate](primary-video.md#setdbrerrordelegate)
 > * [setDBRTextResultDelegate](primary-video.md#setdbrtextresultdelegate)
 > * [setDBRIntermdeiateResultDelegate](primary-video.md#setdbrintermdeiateresultdelegate)
+> <hr>
 >
 > #### Status retrieval
 > <hr>
@@ -100,14 +111,14 @@ noTitleIndex: true
 ### License Activation Class
 > <hr>
 > * [iDMLTSConnectionParameters](auxiliary-iDMLTSConnectionParameters.md)
-
+> <hr>
 > ### Parameter Configeration Classes
 > <hr>
 > * [iPublicRuntimeSettings](auxiliary-iPublicRuntimeSettings.md)
 > * [iDCESettingParameters](auxiliary-iDCESettingParameters.md)
 > * [iFrameDecodingParameters](auxiliary-iFrameDecodingParameters.md)
 > * [iFurtherModes](auxiliary-iFurtherModes.md)
-
+> <hr>
 > ### Barcode Result Classes
 > <hr>
 > * [iTextResult](auxiliary-iTextResult.md)
@@ -119,7 +130,7 @@ noTitleIndex: true
 > * [iQRCodeDetails](auxiliary-iQRCodeDetails.md)
 > * [iLocalizationResult](auxiliary-iLocalizationResult.md)
 > * [iSamplingImageData](auxiliary-iSamplingImageData.md)
-
+> <hr>
 > ### Intermediate Result Classes
 > <hr>
 > * [iIntermediateResult](auxiliary-iIntermediateResult.md)
@@ -127,7 +138,7 @@ noTitleIndex: true
 > * [iImageData](auxiliary-iImageData.md)
 > * [iRegionOfInterest](auxiliary-iRegionOfInterest.md)
 > * [iLineSegment](auxiliary-iLineSegment.md)
-
+> <hr>
 > ### Common Classes
 > <hr>
 > * [iRegionDefinition](auxiliary-iRegionDefinition.md)

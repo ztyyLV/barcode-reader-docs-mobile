@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - DMLTSConnectionParameters Class
-description: This page shows the DMLTSConnectionParameters Class of Dynamsoft Barcode Reader for Android SDK.
-keywords: DMLTSConnectionParameters, class, api reference, android
+title: Dynamsoft Barcode Reader Android API Reference - DMDLSConnectionParameters Class
+description: This page shows the DMDLSConnectionParameters Class of Dynamsoft Barcode Reader for Android SDK.
+keywords: DMDLSConnectionParameters, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# Class DMLTSConnectionParameters
+# Class DMDLSConnectionParameters
 
 Defines a struct to configure the parameters to connect to license tracking server.  
 
@@ -29,7 +29,7 @@ Defines a struct to configure the parameters to connect to license tracking serv
 The URL of the license tracking server.
 
 ```java
-String com.dynamsoft.dbr.DMLTSConnectionParameters.mainServerURL
+String com.dynamsoft.dbr.DMDLSConnectionParameters.mainServerURL
 ```
 
 - **Value range**
@@ -46,7 +46,7 @@ String com.dynamsoft.dbr.DMLTSConnectionParameters.mainServerURL
 The URL of the standby license tracking server.
 
 ```java
-String com.dynamsoft.dbr.DMLTSConnectionParameters.standbyServerURL
+String com.dynamsoft.dbr.DMDLSConnectionParameters.standbyServerURL
 ```
 
 - **Value range**
@@ -63,7 +63,7 @@ String com.dynamsoft.dbr.DMLTSConnectionParameters.standbyServerURL
 The handshake code.
 
 ```java
-String com.dynamsoft.dbr.DMLTSConnectionParameters.handshakeCode
+String com.dynamsoft.dbr.DMDLSConnectionParameters.handshakeCode
 ```
 
 - **Value range**
@@ -77,7 +77,7 @@ String com.dynamsoft.dbr.DMLTSConnectionParameters.handshakeCode
 The session password of the handshake code set in license tracking server.
 
 ```java
-String com.dynamsoft.dbr.DMLTSConnectionParameters.sessionPassword
+String com.dynamsoft.dbr.DMDLSConnectionParameters.sessionPassword
 ```
 
 - **Value range**
@@ -91,7 +91,7 @@ String com.dynamsoft.dbr.DMLTSConnectionParameters.sessionPassword
 Sets the method to generate UUID.
 
 ```java
-int com.dynamsoft.dbr.DMLTSConnectionParameters.uuidGenerationMethod
+int com.dynamsoft.dbr.DMDLSConnectionParameters.uuidGenerationMethod
 ```
 
 - **Value range**
@@ -108,7 +108,7 @@ int com.dynamsoft.dbr.DMLTSConnectionParameters.uuidGenerationMethod
 Sets the max days to buffer the license info.
 
 ```java
-int com.dynamsoft.dbr.DMLTSConnectionParameters.maxBufferDays
+int com.dynamsoft.dbr.DMDLSConnectionParameters.maxBufferDays
 ```
 
 - **Value range**
@@ -122,7 +122,7 @@ int com.dynamsoft.dbr.DMLTSConnectionParameters.maxBufferDays
 Sets the license modules to use.
 
 ```java
-List<Integer> com.dynamsoft.dbr.DMLTSConnectionParameters.limitedLicenseModules
+List<Integer> com.dynamsoft.dbr.DMDLSConnectionParameters.limitedLicenseModules
 ```
 
 - **Value range**
@@ -139,7 +139,7 @@ List<Integer> com.dynamsoft.dbr.DMLTSConnectionParameters.limitedLicenseModules
 Sets the charge way.
 
 ```java
-int com.dynamsoft.dbr.DMLTSConnectionParameters.chargeWay
+int com.dynamsoft.dbr.DMDLSConnectionParameters.chargeWay
 ```
 
 - **Value range**
@@ -150,7 +150,7 @@ int com.dynamsoft.dbr.DMLTSConnectionParameters.chargeWay
 The organization ID got from Dynamsoft.
 
 ```java
-String com.dynamsoft.dbr.DMLTSConnectionParameters.organizationID
+String com.dynamsoft.dbr.DMDLSConnectionParameters.organizationID
 ```
 
 - **Value range**

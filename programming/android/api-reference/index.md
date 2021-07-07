@@ -5,7 +5,7 @@ description: This is the main page of Dynamsoft Barcode Reader for Android SDK A
 keywords: api reference, android
 needAutoGenerateSidebar: true
 noTitleIndex: true
-needGenerateH3Content: true
+needGenerateH3Content: false
 breadcrumbText: API Reference
 ---
 
@@ -19,6 +19,7 @@ breadcrumbText: API Reference
 > <hr>
 > * [BarcodeReader](primary-initialize-and-destroy.md#barcodereader)
 > * [destroy](primary-initialize-and-destroy.md#destroy)
+> <hr>
 >
 > ### Decode
 > <hr>
@@ -29,6 +30,7 @@ breadcrumbText: API Reference
 > * [decodeBufferedImage](primary-decode.md#decodebufferedimage)
 > * [initIntermediateResult](primary-decode.md#initintermediateresult)
 > * [decodeIntermediateResults](primary-decode.md#decodeintermediateresults)
+> <hr>
 >
 > ### License
 > <hr>
@@ -37,6 +39,7 @@ breadcrumbText: API Reference
 > * [initLicenseFromLicenseContent](primary-license.md#initlicensefromlicensecontent)
 > * [outputLicenseToString](primary-license.md#outputlicensetostring)
 > * [initLicenseFromLTS](primary-license.md#initlicensefromlts)
+> <hr>
 >
 > ### Camera Enhancer
 > <hr>
@@ -45,8 +48,10 @@ breadcrumbText: API Reference
 > * [PauseCameraEnhancer](primary-camera.md#start-stop-pause-resume-camera-enhancer)
 > * [ResumeCameraEnhancer](primary-camera.md#start-stop-pause-resume-camera-enhancer)
 > * [SetCameraEnhancerParam](primary-camera.md#setcameraenhancerparam)
+> <hr>
 >
 > ### Parameter and Runtime Settings
+> <hr>
 >
 > #### Basic
 > <hr>
@@ -55,6 +60,7 @@ breadcrumbText: API Reference
 > * [getRuntimeSettings](primary-parameter-and-runtime-settings-basic.md#getruntimesettings)
 > * [updateRuntimeSettings](primary-parameter-and-runtime-settings-basic.md#updateruntimesettings)
 > * [resetRuntimeSettings](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings)
+> <hr>
 >
 > #### Advanced
 > <hr>
@@ -65,16 +71,20 @@ breadcrumbText: API Reference
 > * [getAllParameterTemplateNames](primary-parameter-and-runtime-settings-advanced.md#getallparametertemplatenames)
 > * [outputSettingsToFile](primary-parameter-and-runtime-settings-advanced.md#outputsettingstofile)
 > * [outputSettingsToString](primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring)
+> <hr>
 >
 > ### Result
 > <hr>
 > * [getIntermediateResults](primary-result.md#getintermediateresults)
+> <hr>
 >
 > ### Status Retrieval
 > <hr>
 > * [getVersion](primary-status-retrieval.md#getversion)
+> <hr>
 >
 > ### Video
+> <hr>
 >
 > #### Decode
 > <hr>
@@ -82,16 +92,19 @@ breadcrumbText: API Reference
 > * [startFrameDecodingEx](primary-video.md#startframedecodingex)
 > * [appendFrame](primary-video.md#appendframe)
 > * [stopFrameDecoding](primary-video.md#stopframedecoding)
+> <hr>
 >
 > #### Parameter
 > <hr>
 > * [initFrameDecodingParameters](primary-video.md#initframedecodingparameters)
+> <hr>
 >
 > #### Callback
 > <hr>
 > * [setErrorCallback](primary-video.md#seterrorcallback)
 > * [setTextResultCallback](primary-video.md#settextresultcallback)
 > * [setIntermediateResultCallback](primary-video.md#setintermediateresultcallback)
+> <hr>
 >
 > #### Status retrieval
 > <hr>
@@ -123,15 +136,15 @@ breadcrumbText: API Reference
 
 > ### License Activation Class
 > <hr>
-> * [DMLTSConnectionParameters](auxiliary-DMLTSConnectionParameters.md)
-
+> * [DMDLSConnectionParameters](auxiliary-DMDLSConnectionParameters.md)
+> <hr>
 > ### Parameter Configeration Classes
 > <hr>
 > * [PublicRuntimeSettings](auxiliary-PublicRuntimeSettings.md)
 > * [DCESettingParameters](auxiliary-DCESettingParameters.md)
 > * [FrameDecodingParameters](auxiliary-FrameDecodingParameters.md)
 > * [FurtherModes](auxiliary-FurtherModes.md)
-
+> <hr>
 > ### Barcode Result Classes
 > <hr>
 > * [TextResult](auxiliary-TextResult.md)
@@ -143,7 +156,7 @@ breadcrumbText: API Reference
 > * [QRCodeDetails](auxiliary-QRCodeDetails.md)
 > * [LocalizationResult](auxiliary-LocalizationResult.md)
 > * [SamplingImageData](auxiliary-SamplingImageData.md)
-
+> <hr>
 > ### Intermediate Result Classes
 > <hr>
 > * [IntermediateResult](auxiliary-IntermediateResult.md)
@@ -151,13 +164,13 @@ breadcrumbText: API Reference
 > * [ImageData](auxiliary-ImageData.md)
 > * [LineSegment](auxiliary-LineSegment.md)
 > * [RegionOfInterest](auxiliary-RegionOfInterest.md)
-
+> <hr>
 > ### Common Classes
 > <hr>
 > * [RegionDefinition](auxiliary-RegionDefinition.md)
 > * [Point](auxiliary-Point.md)
 > * [Quadrilateral](auxiliary-Quadrilateral.md)
-
+> <hr>
 > ### Exception
 > * [BarcodeReaderException](auxiliary-BarcodeReaderException.md)
 

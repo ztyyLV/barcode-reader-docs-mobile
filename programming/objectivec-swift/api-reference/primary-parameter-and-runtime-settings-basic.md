@@ -189,7 +189,7 @@ let argumentValue = barcodeReader.getModeArgument(modeName: "BinarizationModes",
 
 ## getRuntimeSettings
 
-Get current settings and save them into a [`iPublicRuntimeSettings`](../class/iPublicRuntimeSettings.md) struct.
+Get current settings and save them into a [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md) struct.
 
 ```objc
 - (iPublicRuntimeSettings* _Nullable)getRuntimeSettings:(NSError* _Nullable * _Nullable)error;
@@ -238,7 +238,7 @@ let licenseString = barcodeReader.getRuntimeSettings(error: &error)
 
 ## updateRuntimeSettings
 
-Update runtime settings with a given [`iPublicRuntimeSettings`](../class/iPublicRuntimeSettings.md) struct.
+Update runtime settings with a given [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md) struct.
 
 ```objc
 - (void)updateRuntimeSettings:(iPublicRuntimeSettings* _Nonnull)settings

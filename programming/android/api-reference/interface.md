@@ -26,7 +26,7 @@ needGenerateH3Content: false
 Represents the method that will handle the error code returned by the SDK.
 
 ```java
-void com.dynamsoft.dbr.ErrorCallback.errorCallback(int frameId, int errorCode, Object userData)	
+void com.dynamsoft.dbr.ErrorCallback.errorCallback(int frameId, int errorCode, Object userData)
 ```
 
 ### Parameters
@@ -40,7 +40,7 @@ void com.dynamsoft.dbr.ErrorCallback.errorCallback(int frameId, int errorCode, O
 Represents the method that will handle the intermediate result array returned by the SDK.
 
 ```java
-void com.dynamsoft.dbr.IntermediateResultCallback.intermediateResultCallback(int frameId, IntermediateResult[] results, Object userData)	
+void com.dynamsoft.dbr.IntermediateResultCallback.intermediateResultCallback(int frameId, IntermediateResult[] results, Object userData)
 ```
 
 ### Parameters
@@ -51,7 +51,7 @@ void com.dynamsoft.dbr.IntermediateResultCallback.intermediateResultCallback(int
 
 ### See Also
 
-[IntermediateResult](class/IntermediateResult.md)
+[IntermediateResult](auxiliary-IntermediateResult.md)
 
 ## TextResultCallback
 
@@ -69,7 +69,7 @@ void textResultCallback(int frameId, TextResult[] results, Object userData)
 
 ### See Also
 
-[TextResult](class/TextResult.md)
+[TextResult](auxiliary-TextResult.md)
 
 ## DBRServerLicenseVerificationListener
 

@@ -16,7 +16,7 @@ needGenerateH3Content: false
   | [`initLicenseFromServer`](#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
   | [`initLicenseFromLicenseContent`](#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
   | [`outputLicenseToString`](#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLicenseFromLTS`](#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`initLicenseFromDLS`](#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
 
   ---
 
@@ -129,29 +129,29 @@ String licenseContent = reader.outputLicenseToString();
 reader.destroy();
 ```
 
-## initLicenseFromLTS
+## initLicenseFromDLS
 
 Initializes the barcode reader license and connects to the specified server for online verification.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLTS(DMLTSConnectionParameters ltsInfo, DBRLTSLicenseVerificationListener listener)
+void com.dynamsoft.dbr.BarcodeReader.initLicenseFromDLS(DMDLSConnectionParameters dlsInfo, DBRDLSLicenseVerificationListener listener)
 ```
 
 ### Parameters
 
-- `ltsInfo`: The struct DMLTSConnectionParameters with customized settings.  
+- `dlsInfo`: The struct DMDLSConnectionParameters with customized settings.  
 - `listener`: The delegate to handle callback when license server returns.
 
 ### Code Snippet
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+DMDLSConnectionParameters info = new DMDLSConnectionParameters();
 info.organizationID = "200001";
 info.sessionPassword = "******";
-reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
    @Override
-   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
       if (!b && e != null) {
          e.printStackTrace();
       }

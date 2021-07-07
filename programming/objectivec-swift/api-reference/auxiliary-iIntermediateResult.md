@@ -59,7 +59,7 @@ NSInteger resultsCount
 
 ## results
 
-One of the following types: Array of [`iContour`](iContour.md), Array of [`iImageData`](iImageData.md), Array of [`iLineSegment`](iLineSegment.md), Array of [`iLocalizationResult`](iLocalizationResult.md), Array of [`iRegionOfInterest`](iRegionOfInterest.md).
+One of the following types: Array of [`iContour`](auxiliary-iContour.md), Array of [`iImageData`](auxiliary-iImageData.md), Array of [`iLineSegment`](auxiliary-iLineSegment.md), Array of [`iLocalizationResult`](auxiliary-iLocalizationResult.md), Array of [`iRegionOfInterest`](auxiliary-iRegionOfInterest.md).
 
 ```objc
 NSObject* results
