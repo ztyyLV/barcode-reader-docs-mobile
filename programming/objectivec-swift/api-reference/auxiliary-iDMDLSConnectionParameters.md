@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iDMLTSConnectionParameters Class
-description: This page shows the iDMLTSConnectionParameters Class of Dynamsoft Barcode Reader for iOS SDK.
-keywords: iDMLTSConnectionParameters, class, api reference, objective-c, oc, swift
+title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iDMDLSConnectionParameters Class
+description: This page shows the iDMDLSConnectionParameters Class of Dynamsoft Barcode Reader for iOS SDK.
+keywords: iDMDLSConnectionParameters, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 ---
 
 
-# Class iDMLTSConnectionParameters
+# Class iDMDLSConnectionParameters
 
 Defines a struct to configure the parameters to connect to license tracking server.  
 

@@ -8,7 +8,7 @@ needGenerateH3Content: false
 ---
 
 
-# BarcodeReader Class - License Methods
+# License Methods
 
   | Method               | Description |
   |----------------------|-------------|

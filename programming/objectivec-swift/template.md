@@ -34,10 +34,10 @@ Objective-C:
 
 /*Initialize Dynamsoft Barcode Reader from License Tracking Server.*/
 - (void)initDBR{
-    iDMLTSConnectionParameters* dbrPara = [[iDMLTSConnectionParameters alloc] init];
+    iDMDLSConnectionParameters* dbrPara = [[iDMDLSConnectionParameters alloc] init];
     //Initialize DBR License
     dbrPara.organizationID = @"Put your organizationID here";
-    _barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:dbrPara verificationDelegate:self];
+    _barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dbrPara verificationDelegate:self];
 }
 
 /*Deploy the camera with Dynamsoft Camera Enhancer.*/
@@ -45,9 +45,9 @@ Objective-C:
     _dceView = [DCECaptureView captureWithFrame:self.view.bounds];
     [_dceView addOverlay];
     [self.view addSubview:_dceView];
-    iDCELTSConnectionParameters* dcePara = [[iDCELTSConnectionParameters alloc] init];
+    iDCEdlsConnectionParameters* dcePara = [[iDCEdlsConnectionParameters alloc] init];
     dcePara.organizationID = @"Put your organizationID here";
-    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara;        
+    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromDLS:dcePara;        
     view:_dceView verificationDelegate:self];
     [_dce setCameraDesiredState:CAMERA_STATE_ON];
     _dce.isEnable = YES;
@@ -57,7 +57,7 @@ Objective-C:
     [_barcodeReader setCameraEnhancerPara:para];
 }
 
-- (void)CameraLTSLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
+- (void)CameraDLSLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
     NSLog(@"Verification: %@",error.userInfo);
 }
 
@@ -100,7 +100,7 @@ import UIKit
 import DynamsoftBarcodeReader
 import DynamsoftCameraEnhancer
 
-class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DBRTextResultDelegate {
+class ViewController: UIViewController, CameraDLSLicenseVerificationDelegate, DBRTextResultDelegate {
         
     var dce:DynamsoftCameraEnhancer! = nil
     var dceView:DCECaptureView! = nil
@@ -117,18 +117,18 @@ class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DB
         
     func initDBR() {
         /*Initialize Dynamsoft Barcode Reader from License Tracking Server.*/
-        let lts = iDMLTSConnectionParameters()
+        let lts = iDMDLSConnectionParameters()
         lts.organizationID = "Put your organizationID here"
-        barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
+        barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
     }
     /*Deploy the camera with Dynamsoft Camera Enhancer.*/
     func configurationDCE() {
         dceView = DCECaptureView.init(view: self.view.bounds)
         dceView.addOverlay()
         self.view.addSubview(dceView)
-        let lts = iDCELTSConnectionParameters()
+        let lts = iDCEdlsConnectionParameters()
         lts.organizationID = "Put your organizationID here"
-        dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
+        dce = DynamsoftCameraEnhancer.init(licenseFromDLS: dls, view: dceView, verificationDelegate: self)
         dce.setCameraDesiredState(.CAMERA_STATE_ON)
         /*Set DCE setting parameters in Dynamsoft Barcode Reader.
         The camera instance will be transferred as an argument to the barcode reader.
@@ -139,7 +139,7 @@ class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DB
         barcodeReader.setCameraEnhancerPara(para)
     }
 
-    func cameraLTSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+    func cameraDLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
         print("Verification: \(String(describing: error))")
     }
     /*Get and display the text result.*/

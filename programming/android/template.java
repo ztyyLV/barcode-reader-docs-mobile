@@ -1,11 +1,11 @@
 import com.dynamsoft.dbr.BarcodeReader;
 import com.dynamsoft.dbr.BarcodeReaderException;
-import com.dynamsoft.dbr.DBRLTSLicenseVerificationListener;
+import com.dynamsoft.dbr.DBRDLSLicenseVerificationListener;
 import com.dynamsoft.dbr.DCESettingParameters;
 import com.dynamsoft.dbr.TextResultCallback;
 import com.dynamsoft.dbr.TextResult;
 import com.dynamsoft.dce.CameraEnhancer;
-import com.dynamsoft.dce.CameraLTSLicenseVerificationListener;
+import com.dynamsoft.dce.CameraDLSLicenseVerificationListener;
 import com.dynamsoft.dce.CameraState;
 import com.dynamsoft.dce.CameraView;
 
@@ -26,11 +26,11 @@ public class MainActivity extends AppCompatActivity {
       tvRes = findViewById(R.id.tv_res);
       mCameraEnhancer = new CameraEnhancer(MainActivity.this);
       mCameraEnhancer.addCameraView(cameraView);
-      com.dynamsoft.dce.DMLTSConnectionParameters info = new com.dynamsoft.dce.DMLTSConnectionParameters();
+      com.dynamsoft.dce.DMDLSConnectionParameters info = new com.dynamsoft.dce.DMDLSConnectionParameters();
       info.organizationID = "Put your organizationID here.";
-      mCameraEnhancer.initLicenseFromLTS(info,new CameraLTSLicenseVerificationListener() {
+      mCameraEnhancer.initLicenseFromDLS(info,new CameraDLSLicenseVerificationListener() {
          @Override
-         public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+         public void DLSLicenseVerificationCallback(boolean isSuccess, Exception error) {
             if(!isSuccess){ error.printStackTrace(); }
          }
       });
@@ -40,11 +40,11 @@ public class MainActivity extends AppCompatActivity {
       //Initialize Dynamsoft Barcode Reader from License Tracking Server.
       try {
          reader = new BarcodeReader();
-         com.dynamsoft.dbr.DMLTSConnectionParameters parameters = new com.dynamsoft.dbr.DMLTSConnectionParameters();
+         com.dynamsoft.dbr.DMDLSConnectionParameters parameters = new com.dynamsoft.dbr.DMDLSConnectionParameters();
          parameters.organizationID = "Put your organizationID here.";
-         reader.initLicenseFromLTS(parameters, new DBRLTSLicenseVerificationListener() {
+         reader.initLicenseFromDLS(parameters, new DBRDLSLicenseVerificationListener() {
             @Override
-            public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+            public void DLSLicenseVerificationCallback(boolean b, Exception e) {
                if (!b) { e.printStackTrace(); }
             }
          });

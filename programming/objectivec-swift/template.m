@@ -22,10 +22,10 @@
 
 /*Initialize Dynamsoft Barcode Reader from License Tracking Server.*/
 - (void)initDBR{
-    iDMLTSConnectionParameters* dbrPara = [[iDMLTSConnectionParameters alloc] init];
+    iDMDLSConnectionParameters* dbrPara = [[iDMDLSConnectionParameters alloc] init];
     //Initialize DBR License
     dbrPara.organizationID = @"Put your organizationID here";
-    _barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:dbrPara verificationDelegate:self];
+    _barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dbrPara verificationDelegate:self];
 }
 
 /*Deploy the camera with Dynamsoft Camera Enhancer.*/
@@ -33,9 +33,9 @@
     _dceView = [DCECaptureView captureWithFrame:self.view.bounds];
     [_dceView addOverlay];
     [self.view addSubview:_dceView];
-    iDCELTSConnectionParameters* dcePara = [[iDCELTSConnectionParameters alloc] init];
+    iDCEdlsConnectionParameters* dcePara = [[iDCEdlsConnectionParameters alloc] init];
     dcePara.organizationID = @"Put your organizationID here";
-    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromLTS:dcePara;        
+    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromDLS:dcePara;        
     view:_dceView verificationDelegate:self];
     [_dce setCameraDesiredState:CAMERA_STATE_ON];
     _dce.isEnable = YES;
@@ -45,7 +45,7 @@
     [_barcodeReader setCameraEnhancerPara:para];
 }
 
-- (void)CameraLTSLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
+- (void)CameraDLSLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
     NSLog(@"Verification: %@",error.userInfo);
 }
 

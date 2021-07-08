@@ -38,7 +38,7 @@ breadcrumbText: API Reference
 > * [initLicenseFromServer](primary-license.md#initlicensefromserver)
 > * [initLicenseFromLicenseContent](primary-license.md#initlicensefromlicensecontent)
 > * [outputLicenseToString](primary-license.md#outputlicensetostring)
-> * [initLicenseFromLTS](primary-license.md#initlicensefromlts)
+> * [initLicenseFromDLS](primary-license.md#initLicenseFromDLS)
 > <hr>
 >
 > ### Camera Enhancer
@@ -120,7 +120,7 @@ breadcrumbText: API Reference
 > * [IntermediateResultCallback](interface.md#intermediateresultcallback)
 > * [TextResultCallback](interface.md#textresultcallback)
 > * [DBRServerLicenseVerificationListener](interface.md#dbrserverlicenseverificationlistener)
-> * [DBRLTSLicenseVerificationListener](interface.md#dbrltslicenseverificationlistener)
+> * [DBRDLSLicenseVerificationListener](interface.md#dbrDLSLicenseVerificationListener)
 
 ## Error Code
 

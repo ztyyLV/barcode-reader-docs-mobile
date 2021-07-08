@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 ---
 
 
-# Objective-C API Reference - Initialize Methods
+# Initialize Methods
 
   | Method               | Description |
   |----------------------|-------------|

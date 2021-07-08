@@ -6,7 +6,7 @@ keywords: getIntermediateResult, Camera methods, api reference, objective-c, oc,
 needAutoGenerateSidebar: true
 ---
 
-# Objective-C API Reference - Camera Methods
+# Camera Methods
 
 | Method | Description |
 |--------|-------------|

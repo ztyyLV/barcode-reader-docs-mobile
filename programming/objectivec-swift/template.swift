@@ -2,7 +2,7 @@ import UIKit
 import DynamsoftBarcodeReader
 import DynamsoftCameraEnhancer
 
-class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DBRTextResultDelegate {
+class ViewController: UIViewController, CameraDLSLicenseVerificationDelegate, DBRTextResultDelegate {
         
     var dce:DynamsoftCameraEnhancer! = nil
     var dceView:DCECaptureView! = nil
@@ -19,18 +19,18 @@ class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DB
         
     func initDBR() {
         /*Initialize Dynamsoft Barcode Reader from License Tracking Server.*/
-        let lts = iDMLTSConnectionParameters()
+        let lts = iDMDLSConnectionParameters()
         lts.organizationID = "Put your organizationID here"
-        barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
+        barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
     }
     /*Deploy the camera with Dynamsoft Camera Enhancer.*/
     func configurationDCE() {
         dceView = DCECaptureView.init(view: self.view.bounds)
         dceView.addOverlay()
         self.view.addSubview(dceView)
-        let lts = iDCELTSConnectionParameters()
+        let lts = iDCEdlsConnectionParameters()
         lts.organizationID = "Put your organizationID here"
-        dce = DynamsoftCameraEnhancer.init(licenseFromLTS: lts, view: dceView, verificationDelegate: self)
+        dce = DynamsoftCameraEnhancer.init(licenseFromDLS: dls, view: dceView, verificationDelegate: self)
         dce.setCameraDesiredState(.CAMERA_STATE_ON)
         /*Set DCE setting parameters in Dynamsoft Barcode Reader.
         The camera instance will be transferred as an argument to the barcode reader.
@@ -41,7 +41,7 @@ class ViewController: UIViewController, CameraLTSLicenseVerificationDelegate, DB
         barcodeReader.setCameraEnhancerPara(para)
     }
 
-    func cameraLTSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+    func cameraDLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
         print("Verification: \(String(describing: error))")
     }
     /*Get and display the text result.*/

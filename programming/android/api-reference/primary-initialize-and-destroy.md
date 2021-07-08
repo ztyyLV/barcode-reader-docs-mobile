@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: false
 ---
 
-# BarcodeReader Class - Initialization and Destroy
+# Initialization and Destroy Methods
 
   | Method               | Description |
   |----------------------|-------------|

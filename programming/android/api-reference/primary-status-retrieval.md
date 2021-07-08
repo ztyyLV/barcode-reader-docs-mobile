@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: false
 ---
 
-# BarcodeReader Class - Status Retrieval Methods
+# Status Retrieval Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -31,12 +31,12 @@ The version information string.
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+DMDLSConnectionParameters info = new DMDLSConnectionParameters();
 info.organizationID = "200001";
 info.sessionPassword = "******";
-reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
    @Override
-   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
       if (!b && e != null) {
          e.printStackTrace();
       }

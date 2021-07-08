@@ -34,7 +34,7 @@ noTitleIndex: true
 > * [initWithLicense](primary-license.md#initwithlicense)
 > * [initWithLicenseFromServer](primary-license.md#initwithlicensefromserver)
 > * [outputLicenseToString](primary-license.md#outputlicensetostring)
-> * [initLicenseFromLTS](primary-license.md#initlicensefromlts)
+> * [initLicenseFromDLS](primary-license.md#initLicenseFromDLS)
 > <hr>
 >
 > ### Camera Enhancer
@@ -110,7 +110,7 @@ noTitleIndex: true
 
 ### License Activation Class
 > <hr>
-> * [iDMLTSConnectionParameters](auxiliary-iDMLTSConnectionParameters.md)
+> * [iDMDLSConnectionParameters](auxiliary-iDMDLSConnectionParameters.md)
 > <hr>
 > ### Parameter Configeration Classes
 > <hr>

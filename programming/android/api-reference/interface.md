@@ -16,7 +16,7 @@ needGenerateH3Content: false
   | [`TextResultCallback`](#textresultcallback) | Represents the method that will handle the text result array returned by the SDK. |
   | [`DBRServerLicenseVerificationListener`](#dbrserverlicenseverificationlistener) | Represents the method that will
    handle callback when license server returns. |
-  | [`DBRLTSLicenseVerificationListener`](#dbrltslicenseverificationlistener) | Represents the method that will
+  | [`DBRDLSLicenseVerificationListener`](#dbrDLSLicenseVerificationListener) | Represents the method that will
    handle callback when license tracking server returns. |
   
 ---
@@ -84,12 +84,12 @@ void com.dynamsoft.dbr.DBRServerLicenseVerificationListener.licenseVerificationC
 - `isSuccess`: Whether the license verification was successful.
 - `error`: The error message from license server.
 
-## DBRLTSLicenseVerificationListener
+## DBRDLSLicenseVerificationListener
 
 Represents the method that will handle callback when license tracking server returns.
 
 ```java
-void com.dynamsoft.dbr.DBRLTSLicenseVerificationListener.licenseVerificationCallback (boolean isSuccess, Exception error)
+void com.dynamsoft.dbr.DBRDLSLicenseVerificationListener.licenseVerificationCallback (boolean isSuccess, Exception error)
 ```
 
 ### Parameters

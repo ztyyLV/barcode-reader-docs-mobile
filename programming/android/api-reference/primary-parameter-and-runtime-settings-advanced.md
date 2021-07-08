@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: false
 ---
 
-# BarcodeReader Class - Parameter and Runtime Settings Advanced Methods
+# Parameter and Runtime Settings Advanced Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -42,12 +42,12 @@ void com.dynamsoft.dbr.BarcodeReader.initRuntimeSettingsWithFile(String filePath
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+DMDLSConnectionParameters info = new DMDLSConnectionParameters();
 info.organizationID = "200001";
 info.sessionPassword = "******";
-reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
    @Override
-   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
       if (!b && e != null) {
          e.printStackTrace();
       }
@@ -78,12 +78,12 @@ void com.dynamsoft.dbr.BarcodeReader.initRuntimeSettingsWithString(String conten
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+DMDLSConnectionParameters info = new DMDLSConnectionParameters();
 info.organizationID = "200001";
 info.sessionPassword = "******";
-reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
    @Override
-   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
       if (!b && e != null) {
          e.printStackTrace();
       }
@@ -114,12 +114,12 @@ void com.dynamsoft.dbr.BarcodeReader.appendTplFileToRuntimeSettings(String fileP
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+DMDLSConnectionParameters info = new DMDLSConnectionParameters();
 info.organizationID = "200001";
 info.sessionPassword = "******";
-reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
    @Override
-   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
       if (!b && e != null) {
          e.printStackTrace();
       }
@@ -150,12 +150,12 @@ void com.dynamsoft.dbr.BarcodeReader.appendTplStringToRuntimeSettings(String con
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+DMDLSConnectionParameters info = new DMDLSConnectionParameters();
 info.organizationID = "200001";
 info.sessionPassword = "******";
-reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
    @Override
-   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
       if (!b && e != null) {
          e.printStackTrace();
       }
@@ -186,12 +186,12 @@ The template name array.
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+DMDLSConnectionParameters info = new DMDLSConnectionParameters();
 info.organizationID = "200001";
 info.sessionPassword = "******";
-reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
    @Override
-   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
       if (!b && e != null) {
          e.printStackTrace();
       }
@@ -222,12 +222,12 @@ void com.dynamsoft.dbr.BarcodeReader.outputSettingsToFile(String filePath, Strin
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+DMDLSConnectionParameters info = new DMDLSConnectionParameters();
 info.organizationID = "200001";
 info.sessionPassword = "******";
-reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
    @Override
-   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
       if (!b && e != null) {
          e.printStackTrace();
       }
@@ -257,12 +257,12 @@ The output string which stores the contents of current settings.
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+DMDLSConnectionParameters info = new DMDLSConnectionParameters();
 info.organizationID = "200001";
 info.sessionPassword = "******";
-reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
    @Override
-   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
       if (!b && e != null) {
          e.printStackTrace();
       }

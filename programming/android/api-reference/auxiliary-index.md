@@ -14,7 +14,7 @@ noTitleIndex: true
 
 > ## License Class
 > <hr>
-> * [DMLTSConnectionParameters](auxiliary-DMLTSConnectionParameters.md)
+> * [DMDLSConnectionParameters](auxiliary-DMDLSConnectionParameters.md)
 >
 > ## Common Classes
 > <hr>

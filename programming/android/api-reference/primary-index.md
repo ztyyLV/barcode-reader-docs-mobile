@@ -62,7 +62,7 @@ breadcrumbText: BarcodeReader Methods
 > * [initLicenseFromServer](primary-license.md#initlicensefromserver)
 > * [initLicenseFromLicenseContent](primary-license.md#initlicensefromlicensecontent)
 > * [outputLicenseToString](primary-license.md#outputlicensetostring)
-> * [initLicenseFromLTS](primary-license.md#initlicensefromlts)
+> * [initLicenseFromDLS](primary-license.md#initLicenseFromDLS)
 >
 > ## Result
 > <hr>

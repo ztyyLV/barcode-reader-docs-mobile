@@ -213,7 +213,7 @@ import com.dynamsoft.dbr.QRCodeDetails;
 QRCodeDetails qrDetails = (QRCodeDetails) textresult[i].detailedResult;
 ```
 
-## [SamplingImageData](auxiliary-samplingimagedata.md)
+## [SamplingImageData](auxiliary-SamplingImageData.md)
 
 ```java
 import com.dynamsoft.dbr.SamplingImageData;

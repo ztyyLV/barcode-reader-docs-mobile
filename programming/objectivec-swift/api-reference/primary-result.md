@@ -6,7 +6,7 @@ keywords: getIntermediateResult, result methods, api reference, objective-c, oc,
 needAutoGenerateSidebar: true
 ---
 
-# Objective-C API Reference - Result Methods
+# Result Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -41,11 +41,11 @@ NSError __autoreleasing * _Nullable error;
 NSArray<iTextResult *> *result;
 NSArray<iIntermediateResult *> *irResult;
 DynamsoftBarcodeReader *barcodeReader;
-iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
+iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
 lts.organizationID = @"200001";
 lts.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificationDelegate:self];
-- (void)LTSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
+barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
+- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
 {
         //TODO add your code for license verification
 }
@@ -61,11 +61,11 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError()
-let lts = iDMLTSConnectionParameters()
+let lts = iDMDLSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
-func ltsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
+let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
+func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 {
     print("isSucc : \(isSuccess) error : \(String(describing: error))")
 }

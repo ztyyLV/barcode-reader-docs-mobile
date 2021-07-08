@@ -8,7 +8,7 @@ needGenerateH3Content: false
 ---
 
 
-# BarcodeReader Class - Camera Methods
+# Camera Methods
 
 | Method | Description |
 |--------|-------------|
