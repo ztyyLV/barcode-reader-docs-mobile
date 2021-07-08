@@ -67,40 +67,27 @@ noTitleIndex: true
 > ### Result
 > <hr>
 > * [getIntermediateResults](primary-result.md#getintermediateresults)
+> * [enableResultVerification](primary-result.md#enableresultverification)
+> * [enableDuplicateFilter](primary-result.md#enableduplicatefilter)
 > <hr>
 >
 > ### Video
-> <hr>
->
-> #### Decode
 > <hr>
 > * [startFrameDecoding](primary-video.md#startframedecoding)
 > * [startFrameDecodingEx](primary-video.md#startframedecodingex)
 > * [appendFrame](primary-video.md#appendframe)
 > * [stopFrameDecoding](primary-video.md#stopframedecoding)
-> <hr>
->
-> #### Parameter
-> <hr>
 > * [getFrameDecodingParameters](primary-video.md#getframedecodingparameters)
-> <hr>
->
-> #### Delegate
-> <hr>
 > * [setDBRErrorDelegate](primary-video.md#setdbrerrordelegate)
 > * [setDBRTextResultDelegate](primary-video.md#setdbrtextresultdelegate)
 > * [setDBRIntermdeiateResultDelegate](primary-video.md#setdbrintermdeiateresultdelegate)
-> <hr>
->
-> #### Status retrieval
-> <hr>
 > * [getLengthOfFrameQueue](primary-video.md#getlengthofframequeue)
 
 ## Error Codes
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
-> ### ErrorCode
+> ### ErrorCode References
 > <hr>
 > * [ErrorCode]({{ site.enumerations }}error-code.html)
 
@@ -108,7 +95,7 @@ noTitleIndex: true
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
-### License Activation Class
+> ### License Activation Class
 > <hr>
 > * [iDMDLSConnectionParameters](auxiliary-iDMDLSConnectionParameters.md)
 > <hr>
@@ -149,7 +136,7 @@ noTitleIndex: true
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
-> ## Enumerations
+> ## Enumerations List
 > <hr>
 > * [EnumAccompanyingTextRecognitionMode]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)
 > * [EnumBarcodeColourMode]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)

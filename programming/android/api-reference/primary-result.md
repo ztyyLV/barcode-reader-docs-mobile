@@ -10,7 +10,7 @@ needGenerateH3Content: false
 # Result Methods
 
   | Method               | Description |
-  |----------------------|-------------|
+  | -------------------- | ----------- |
   | [`getIntermediateResults`](#getintermediateresults) | Get intermediate results. |
   | [`enableResultVerification`](#enableresultverification) | Result will be verified before output. |
   | [`enableDuplicateFilter`](#enableduplicatefilter) | Duplicate results will be filtered and output only once for every 3 seconds |

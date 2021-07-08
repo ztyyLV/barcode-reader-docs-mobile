@@ -4,8 +4,7 @@ title: Dynamsoft Barcode Reader Android API Reference - Main Page
 description: This is the main page of Dynamsoft Barcode Reader for Android SDK API Reference.
 keywords: api reference, android
 needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 breadcrumbText: API Reference
 ---
 
@@ -15,13 +14,13 @@ breadcrumbText: API Reference
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
-> ### Initialize and Destroy
+> ### Initialize and Destroy Methods
 > <hr>
 > * [BarcodeReader](primary-initialize-and-destroy.md#barcodereader)
 > * [destroy](primary-initialize-and-destroy.md#destroy)
 > <hr>
 >
-> ### Decode
+> ### Decode Methods
 > <hr>
 > * [decodeFile](primary-decode.md#decodefile)
 > * [decodeFileInMemory](primary-decode.md#decodefileinmemory)
@@ -32,7 +31,7 @@ breadcrumbText: API Reference
 > * [decodeIntermediateResults](primary-decode.md#decodeintermediateresults)
 > <hr>
 >
-> ### License
+> ### License Methods
 > <hr>
 > * [initLicense](primary-license.md#initlicense)
 > * [initLicenseFromServer](primary-license.md#initlicensefromserver)
@@ -41,7 +40,7 @@ breadcrumbText: API Reference
 > * [initLicenseFromDLS](primary-license.md#initLicenseFromDLS)
 > <hr>
 >
-> ### Camera Enhancer
+> ### Camera Enhancer Methods
 > <hr>
 > * [StartCameraEnhancer](primary-camera.md#start-stop-pause-resume-camera-enhancer)
 > * [StopCameraEnhancer](primary-camera.md#start-stop-pause-resume-camera-enhancer)
@@ -53,7 +52,7 @@ breadcrumbText: API Reference
 > ### Parameter and Runtime Settings
 > <hr>
 >
-> #### Basic
+> #### Basic Methods
 > <hr>
 > * [setModeArgument](primary-parameter-and-runtime-settings-basic.md#setmodeargument)
 > * [getModeArgument](primary-parameter-and-runtime-settings-basic.md#getmodeargument)
@@ -62,7 +61,7 @@ breadcrumbText: API Reference
 > * [resetRuntimeSettings](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings)
 > <hr>
 >
-> #### Advanced
+> #### Advanced Methods
 > <hr>
 > * [initRuntimeSettingsWithFile](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile)
 > * [initRuntimeSettingsWithString](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring)
@@ -73,41 +72,26 @@ breadcrumbText: API Reference
 > * [outputSettingsToString](primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring)
 > <hr>
 >
-> ### Result
+> ### Result Methods
 > <hr>
 > * [getIntermediateResults](primary-result.md#getintermediateresults)
 > <hr>
 >
-> ### Status Retrieval
+> ### Status Retrieval Methods
 > <hr>
 > * [getVersion](primary-status-retrieval.md#getversion)
 > <hr>
 >
-> ### Video
-> <hr>
->
-> #### Decode
+> ### Video Methods
 > <hr>
 > * [startFrameDecoding](primary-video.md#startframedecoding)
 > * [startFrameDecodingEx](primary-video.md#startframedecodingex)
 > * [appendFrame](primary-video.md#appendframe)
 > * [stopFrameDecoding](primary-video.md#stopframedecoding)
-> <hr>
->
-> #### Parameter
-> <hr>
 > * [initFrameDecodingParameters](primary-video.md#initframedecodingparameters)
-> <hr>
->
-> #### Callback
-> <hr>
 > * [setErrorCallback](primary-video.md#seterrorcallback)
 > * [setTextResultCallback](primary-video.md#settextresultcallback)
 > * [setIntermediateResultCallback](primary-video.md#setintermediateresultcallback)
-> <hr>
->
-> #### Status retrieval
-> <hr>
 > * [getLengthOfFrameQueue](primary-video.md#getlengthofframequeue)
 
 ## Interface
@@ -172,13 +156,14 @@ breadcrumbText: API Reference
 > * [Quadrilateral](auxiliary-Quadrilateral.md)
 > <hr>
 > ### Exception
+> <hr>
 > * [BarcodeReaderException](auxiliary-BarcodeReaderException.md)
 
 ## Enumerations
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
-> ### Enumerations
+> ### Enumeration List
 > <hr>
 > * [EnumAccompanyingTextRecognitionMode]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)
 > * [EnumBarcodeColourMode]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)
