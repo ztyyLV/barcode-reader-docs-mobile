@@ -9,7 +9,7 @@ needGenerateH3Content: false
 
 # Parameter Configuration Classes
 
-## Class [PublicRuntimeSettings](auxiliary-PublicRuntimeSettings.md)
+## [PublicRuntimeSettings](auxiliary-PublicRuntimeSettings.md)
 
 You can update most of the parameter settings through the `PublicRuntimeSettings` class.
 
@@ -52,7 +52,7 @@ PublicRuntimeSettings runtimeSettings = barcodeReader.getRuntimeSettings();
 barcodeReader.updateRuntimeSettings(runtimeSettings);
 ```
 
-## Class [FurtherModes](auxiliary-FurtherModes.md)
+## [FurtherModes](auxiliary-FurtherModes.md)
 
 `FurtherModes` is an extension of the `PublicRuntimeSettings` class. Through the `FurtherModes`, you can make advanced settings to process the image for barcode reading.
 

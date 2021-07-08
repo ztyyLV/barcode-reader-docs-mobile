@@ -20,7 +20,7 @@ Defines a struct to configure the parameters to connect to license tracking serv
 | [`sessionPassword`](#sessionpassword) | *String* |
 | [`uuidGenerationMethod`](#uuidgenerationmethod) | *int* |
 | [`maxBufferDays`](#maxbufferdays) | *int* |
-| [`limitedLicenseModules`](#limitedlicensemodules) | *List<Integer>* |
+| [`limitedLicenseModules`](#limitedlicensemodules) | *int[]* |
 | [`chargeWay`](#chargeway) | *int* |
 | [`organizationID`](#organizationid) | *String* |
 

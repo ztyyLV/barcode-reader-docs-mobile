@@ -14,10 +14,8 @@ needGenerateH3Content: false
   | [`ErrorCallback`](#errorcallback) | Represents the method that will handle the error code returned by the SDK. |
   | [`IntermediateResultCallback`](#intermediateresultcallback) | Represents the method that will handle the intermediate result array returned by the SDK. |
   | [`TextResultCallback`](#textresultcallback) | Represents the method that will handle the text result array returned by the SDK. |
-  | [`DBRServerLicenseVerificationListener`](#dbrserverlicenseverificationlistener) | Represents the method that will
-   handle callback when license server returns. |
-  | [`DBRDLSLicenseVerificationListener`](#dbrDLSLicenseVerificationListener) | Represents the method that will
-   handle callback when license tracking server returns. |
+  | [`DBRServerLicenseVerificationListener`](#dbrserverlicenseverificationlistener) | Represents the method that will handle callback when license server returns. |
+  | [`DBRDLSLicenseVerificationListener`](#dbrDLSLicenseVerificationListener) | Represents the method that will handle callback when license tracking server returns. |
   
 ---
 
