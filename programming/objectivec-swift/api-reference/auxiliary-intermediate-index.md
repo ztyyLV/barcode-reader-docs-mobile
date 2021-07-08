@@ -107,7 +107,9 @@ needGenerateH3Content: False
 | [`width`](#width) | *NSInteger* | The width of the region. |
 | [`height`](#height) | *NSInteger* | The height of the region. |
 
-## [iLocalizationResult](auxiliary-ilocalizationresult.md)
+## iLocalizationResult
+
+View more in [TextResult >> LocalizationResult](auxiliary-iLocalizationResult.md)
 
 ```objc
 @interface iLocalizationResult

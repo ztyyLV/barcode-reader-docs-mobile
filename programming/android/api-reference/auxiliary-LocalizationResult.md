@@ -10,7 +10,7 @@ needGenerateH3Content: false
 
 # Class LocalizationResult
 
-Stores the localization result.
+The `LocalizationResult` extends the class [`TextResult`](auxiliary-TextResult.md) and [`IntermediateResult`](auxiliary-IntermediateResult.md). It stores the barcode localization data.
 
 | Attribute | Type |
 |---------- | ---- |

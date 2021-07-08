@@ -9,7 +9,7 @@ needAutoGenerateSidebar: true
 
 # Class iLocalizationResult
 
-Stores the localization result.
+The `iLocalizationResult` extends the class [`iTextResult`](auxiliary-iTextResult.md) and [`iIntermediateResult`](auxiliary-iIntermediateResult.md). It stores the barcode localization data.
 
 ## Typedefs
 

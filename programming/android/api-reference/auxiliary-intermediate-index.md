@@ -122,13 +122,15 @@ import com.dynamsoft.dbr.LineSegment;
 RegionOfInterest[] regionOfInterest = (RegionOfInterest[]) intermediateResults[i].results;
 ```
 
-## [LocalizationResult](auxiliary-LocalizationResult.md)
+## LocalizationResult
+
+View more in [TextResult >> LocalizationResult](auxiliary-LocalizationResult.md)
 
 ```java
 import com.dynamsoft.dbr.LocalizationResult;
 ```
 
-`LocalizationResult` can be the extension of the class [`IntermediateResult`](auxiliary-IntermediateResult.md). It stores the localization result information.
+`LocalizationResult` can be the extension of class [`TextResult`](auxiliary-TextResult.md) and class [`IntermediateResult`](auxiliary-IntermediateResult.md). It stores the localization result information.
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
