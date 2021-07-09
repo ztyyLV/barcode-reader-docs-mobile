@@ -22,9 +22,9 @@ needAutoGenerateSidebar: true
 | `barcodeFormatString_2` | *NSString \** | Barcode type in BarcodeFormat group 2 as string. |
 | `barcodeText` | *NSString \** | The barcode text, ends by '\0'. |
 | `barcodeBytes` | *NSData \** | The barcode content in a byte array. |
-| `localizationResult` | [`iLocalizationResult`](auxiliary-iLocalizationResult.md)\* | The corresponding localization result. |
+| `localizationResult` | [`iLocalizationResult`](auxiliary-iLocalizationResult.md) | The corresponding localization result. |
 | `detailedResult` | *NSObject \** | One of the following: [`QRCodeDetails`](#qrcodedetails), [`PDF417Details`](#pdf417details), [`DataMatrixDetails`](#datamatrixdetails), [`AztecDetails`](#aztecdetails), [`OneDCodeDetails`](#onedcodedetails). |
-| `extendedResults` | [`NSArray<iExtendedResult*>*`](auxiliary-iExtendedResult.md)\* | The extended result array. |
+| `extendedResults` | [`NSArray<iExtendedResult>`](auxiliary-iExtendedResult.md) | The extended result array. |
 | `exception` | *NSString \** | The exception message. |
 | `isDPM` | *NSInteger* | This attribute stands for whether the result is a DPM result. |
 | `isMirrored` | *NSInteger* | This attribute stands for whether the barcode is mirrored. |

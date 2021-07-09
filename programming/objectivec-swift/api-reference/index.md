@@ -14,12 +14,12 @@ noTitleIndex: true
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
-> ### Initialize and Destroy
+> ### [Initialize and Destroy Methods](primary-initialize.md)
 > <hr>
 > * [init](primary-initialize.md)
 > <hr>
 >
-> ### Decode
+> ### [Decode Methods](primary-decode.md)
 > <hr>
 > * [decodeFileWithName](primary-decode.md#decodefilewithname)
 > * [decodeImage](primary-decode.md#decodeimage)
@@ -29,7 +29,7 @@ noTitleIndex: true
 > * [decodeIntermediateResults](primary-decode.md#decodeintermediateresults)
 > <hr>
 >
-> ### License
+> ### [License Methods](primary-license.md)
 > <hr>
 > * [initWithLicense](primary-license.md#initwithlicense)
 > * [initWithLicenseFromServer](primary-license.md#initwithlicensefromserver)
@@ -37,14 +37,14 @@ noTitleIndex: true
 > * [initLicenseFromDLS](primary-license.md#initLicenseFromDLS)
 > <hr>
 >
-> ### Camera Enhancer
+> ### [Camera Enhancer Methods](primary-camera.md)
 > <hr>
 > * [SetCameraEnhancerParam](primary-camera.md#setcameraenhancerparam)
 > <hr>
 >
 > ### Parameter and Runtime Settings
 >
-> #### Basic
+> #### [Basic Methods](primary-parameter-and-runtime-settings-basic.md)
 > <hr>
 > * [setModeArgument](primary-parameter-and-runtime-settings-basic.md#setmodeargument)
 > * [getModeArgument](primary-parameter-and-runtime-settings-basic.md#getmodeargument)
@@ -53,7 +53,7 @@ noTitleIndex: true
 > * [resetRuntimeSettings](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings)
 > <hr>
 >
-> #### Advanced
+> #### [Advanced Methods](primary-parameter-and-runtime-settings-advanced.md)
 > <hr>
 > * [initRuntimeSettingsWithFile](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile)
 > * [initRuntimeSettingsWithString](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring)
@@ -64,14 +64,14 @@ noTitleIndex: true
 > * [outputSettingsToString](primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring)
 > <hr>
 >
-> ### Result
+> ### [Result Methods](primary-result.md)
 > <hr>
 > * [getIntermediateResults](primary-result.md#getintermediateresults)
 > * [enableResultVerification](primary-result.md#enableresultverification)
 > * [enableDuplicateFilter](primary-result.md#enableduplicatefilter)
 > <hr>
 >
-> ### Video
+> ### [Video Methods](primary-video.md)
 > <hr>
 > * [startFrameDecoding](primary-video.md#startframedecoding)
 > * [startFrameDecodingEx](primary-video.md#startframedecodingex)
@@ -83,7 +83,7 @@ noTitleIndex: true
 > * [setDBRIntermdeiateResultDelegate](primary-video.md#setdbrintermdeiateresultdelegate)
 > * [getLengthOfFrameQueue](primary-video.md#getlengthofframequeue)
 
-## Error Codes
+## [Error Codes]({{ site.enumerations }}error-code.html)
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
@@ -91,22 +91,22 @@ noTitleIndex: true
 > <hr>
 > * [ErrorCode]({{ site.enumerations }}error-code.html)
 
-## Auxiliary Classes
+## [Auxiliary Classes](auxiliary-index.md)
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
-> ### License Activation Class
+> ### [License Activation Class](auxiliary-iDMDLSConnectionParameters.md)
 > <hr>
 > * [iDMDLSConnectionParameters](auxiliary-iDMDLSConnectionParameters.md)
 > <hr>
-> ### Parameter Configeration Classes
+> ### [Parameter Configeration Classes](auxiliary-parameter-index.md)
 > <hr>
 > * [iPublicRuntimeSettings](auxiliary-iPublicRuntimeSettings.md)
 > * [iDCESettingParameters](auxiliary-iDCESettingParameters.md)
 > * [iFrameDecodingParameters](auxiliary-iFrameDecodingParameters.md)
 > * [iFurtherModes](auxiliary-iFurtherModes.md)
 > <hr>
-> ### Barcode Result Classes
+> ### [Barcode Result Classes](auxiliary-textresult-index.md)
 > <hr>
 > * [iTextResult](auxiliary-iTextResult.md)
 > * [iAztecDetails](auxiliary-iAztecDetails.md)
@@ -118,7 +118,7 @@ noTitleIndex: true
 > * [iLocalizationResult](auxiliary-iLocalizationResult.md)
 > * [iSamplingImageData](auxiliary-iSamplingImageData.md)
 > <hr>
-> ### Intermediate Result Classes
+> ### [Intermediate Result Classes](auxiliary-intermediate-index.md)
 > <hr>
 > * [iIntermediateResult](auxiliary-iIntermediateResult.md)
 > * [iContour](auxiliary-iContour.md)
@@ -126,17 +126,17 @@ noTitleIndex: true
 > * [iRegionOfInterest](auxiliary-iRegionOfInterest.md)
 > * [iLineSegment](auxiliary-iLineSegment.md)
 > <hr>
-> ### Common Classes
+> ### [Common Classes](auxiliary-common-classes.md)
 > <hr>
 > * [iRegionDefinition](auxiliary-iRegionDefinition.md)
 > * [iDBRPoint](auxiliary-iDBRPoint.md)
 > * [iQuadrilateral](auxiliary-iQuadrilateral.md)
 
-## Enumerations
+## [Enumerations]({{ site.enumerations }})
 
 <div class="doc-card-prefix doc-card-list-prefix"></div>
 
-> ## Enumerations List
+> ## [Enumerations List]({{ site.enumerations }})
 > <hr>
 > * [EnumAccompanyingTextRecognitionMode]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)
 > * [EnumBarcodeColourMode]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)

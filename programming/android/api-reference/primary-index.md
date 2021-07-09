@@ -5,7 +5,6 @@ description: This page shows BarcodeReader methods of Dynamsoft Barcode Reader f
 keywords: methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
-noTitleIndex: true
 breadcrumbText: BarcodeReader Methods
 ---
 
@@ -18,14 +17,7 @@ breadcrumbText: BarcodeReader Methods
 > * [BarcodeReader](primary-initialize-and-destroy.md#barcodereader)
 > * [destroy](primary-initialize-and-destroy.md#destroy)
 >
-> ## Camera Enhancer
 > <hr>
-> * [StartCameraEnhancer](primary-camera.md#start-stop-pause-resume-camera-enhancer)
-> * [StopCameraEnhancer](primary-camera.md#start-stop-pause-resume-camera-enhancer)
-> * [PauseCameraEnhancer](primary-camera.md#start-stop-pause-resume-camera-enhancer)
-> * [ResumeCameraEnhancer](primary-camera.md#start-stop-pause-resume-camera-enhancer)
-> * [SetCameraEnhancerParam](primary-camera.md#setcameraenhancerparam)
->
 > ## Decode
 > <hr>
 > * [decodeFile](primary-decode.md#decodefile)
@@ -36,8 +28,27 @@ breadcrumbText: BarcodeReader Methods
 > * [initIntermediateResult](primary-decode.md#initintermediateresult)
 > * [decodeIntermediateResults](primary-decode.md#decodeintermediateresults)
 >
-> ## Parameter and Runtime Settings
+> <hr>
+> ## Camera Enhancer
+> <hr>
+> * [StartCameraEnhancer](primary-camera.md#start-stop-pause-resume-camera-enhancer)
+> * [StopCameraEnhancer](primary-camera.md#start-stop-pause-resume-camera-enhancer)
+> * [PauseCameraEnhancer](primary-camera.md#start-stop-pause-resume-camera-enhancer)
+> * [ResumeCameraEnhancer](primary-camera.md#start-stop-pause-resume-camera-enhancer)
+> * [SetCameraEnhancerParam](primary-camera.md#setcameraenhancerparam)
 >
+> <hr>
+> ## License
+> <hr>
+> * [initLicense](primary-license.md#initlicense)
+> * [initLicenseFromServer](primary-license.md#initlicensefromserver)
+> * [initLicenseFromLicenseContent](primary-license.md#initlicensefromlicensecontent)
+> * [outputLicenseToString](primary-license.md#outputlicensetostring)
+> * [initLicenseFromDLS](primary-license.md#initLicenseFromDLS)
+>
+> <hr>
+> ## Parameter and Runtime Settings
+> <hr>
 > ### Basic
 > <hr>
 > * [setModeArgument](primary-parameter-and-runtime-settings-basic.md#setmodeargument)
@@ -46,6 +57,7 @@ breadcrumbText: BarcodeReader Methods
 > * [updateRuntimeSettings](primary-parameter-and-runtime-settings-basic.md#updateruntimesettings)
 > * [resetRuntimeSettings](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings)
 >
+> <hr>
 > ### Advanced
 > <hr>
 > * [initRuntimeSettingsWithFile](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile)
@@ -56,24 +68,19 @@ breadcrumbText: BarcodeReader Methods
 > * [outputSettingsToFile](primary-parameter-and-runtime-settings-advanced.md#outputsettingstofile)
 > * [outputSettingsToString](parameter-and-runtime-settings-advanced.md#outputsettingstostring)
 >
-> ## License
 > <hr>
-> * [initLicense](primary-license.md#initlicense)
-> * [initLicenseFromServer](primary-license.md#initlicensefromserver)
-> * [initLicenseFromLicenseContent](primary-license.md#initlicensefromlicensecontent)
-> * [outputLicenseToString](primary-license.md#outputlicensetostring)
-> * [initLicenseFromDLS](primary-license.md#initLicenseFromDLS)
->
 > ## Result
 > <hr>
 > * [getIntermediateResults](primary-result.md#getintermediateresults)
 >
+> <hr>
 > ## Status Retrieval
 > <hr>
 > * [getVersion](primary-status-retrieval.md#getversion)
 >
 > ## Video
 >
+> <hr>
 > ### Decode
 > <hr>
 > * [startFrameDecoding](primary-video.md#startframedecoding)
@@ -81,16 +88,19 @@ breadcrumbText: BarcodeReader Methods
 > * [appendFrame](primary-video.md#appendframe)
 > * [stopFrameDecoding](primary-video.md#stopframedecoding)
 >
+> <hr>
 > ### Parameter
 > <hr>
 > * [initFrameDecodingParameters](primary-video.md#initframedecodingparameters)
 >
+> <hr>
 > ### Callback
 > <hr>
 > * [setErrorCallback](primary-video.md#seterrorcallback)
 > * [setTextResultCallback](primary-video.md#settextresultcallback)
 > * [setIntermediateResultCallback](primary-video.md#setintermediateresultcallback)
 >
+> <hr>
 > ### Status retrieval
 > <hr>
 > * [getLengthOfFrameQueue](primary-video.md#getlengthofframequeue)

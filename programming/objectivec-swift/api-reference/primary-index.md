@@ -16,6 +16,7 @@ breadcrumbText: Methods
 > <hr>
 > * [init](primary-initialize.md)
 >
+> <hr>
 > ## [Decode](primary-decode.md)
 > <hr>
 > * [decodeFileWithName](primary-decode.md#decodefilewithname)
@@ -25,10 +26,12 @@ breadcrumbText: Methods
 > * [createIntermediateResult](primary-decode.md#createintermediateresult)
 > * [decodeIntermediateResults](primary-decode.md#decodeintermediateresults)
 >
+> <hr>
 > ## [Camera Enhancer](primary-camera.md)
 > <hr>
 > * [SetCameraEnhancerParam](primary-camera.md#setcameraenhancerparam)
 >
+> <hr>
 > ## [License](primary-license.md)
 > <hr>
 > * [initWithLicense](primary-license.md#initwithlicense)
@@ -36,8 +39,10 @@ breadcrumbText: Methods
 > * [outputLicenseToString](primary-license.md#outputlicensetostring)
 > * [initLicenseFromDLS](primary-license.md#initLicenseFromDLS)
 >
+> <hr>
 > ## Parameter and Runtime Settings
 >
+> <hr>
 > ### [Basic](primary-parameter-and-runtime-settings-basic.md)
 > <hr>
 > * [setModeArgument](primary-parameter-and-runtime-settings-basic.md#setmodeargument)
@@ -46,6 +51,7 @@ breadcrumbText: Methods
 > * [updateRuntimeSettings](primary-parameter-and-runtime-settings-basic.md#updateruntimesettings)
 > * [resetRuntimeSettings](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings)
 >
+> <hr>
 > ### [Advanced](primary-parameter-and-runtime-settings-advanced.md)
 > <hr>
 > * [initRuntimeSettingsWithFile](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile)
@@ -56,12 +62,15 @@ breadcrumbText: Methods
 > * [outputSettingsToFile](primary-parameter-and-runtime-settings-advanced.md#outputsettingstofile)
 > * [outputSettingsToString](primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring)
 >
+> <hr>
 > ## [Result](primary-result.md)
 > <hr>
 > * [getIntermediateResults](primary-result.md#getintermediateresults)
 >
+> <hr>
 > ## [Video](primary-video.md)
 >
+> <hr>
 > ### Decode
 > <hr>
 > * [startFrameDecoding](primary-video.md#startframedecoding)
@@ -69,16 +78,19 @@ breadcrumbText: Methods
 > * [appendFrame](primary-video.md#appendframe)
 > * [stopFrameDecoding](primary-video.md#stopframedecoding)
 >
+> <hr>
 > ### Parameter
 > <hr>
 > * [getFrameDecodingParameters](primary-video.md#getframedecodingparameters)
 >
+> <hr>
 > ### Delegate
 > <hr>
 > * [setDBRErrorDelegate](primary-video.md#setdbrerrordelegate)
 > * [setDBRTextResultDelegate](primary-video.md#setdbrtextresultdelegate)
 > * [setDBRIntermdeiateResultDelegate](primary-video.md#setdbrintermdeiateresultdelegate)
 >
+> <hr>
 > ### Status retrieval
 > <hr>
 > * [getLengthOfFrameQueue](primary-video.md#getlengthofframequeue)
