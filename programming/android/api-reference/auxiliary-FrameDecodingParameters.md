@@ -32,7 +32,7 @@ Defines a struct to configure the frame decoding Parameters.
 The maximum number of frames waiting for decoding.
 
 ```java
-int com.dynamsoft.dbr.FrameDecodingParameters.maxQueueLength
+int maxQueueLength
 ```
 
 - **Value range**
@@ -46,7 +46,7 @@ int com.dynamsoft.dbr.FrameDecodingParameters.maxQueueLength
 The maximum number of frames waiting results (text result/localization result) will be kept for further reference.  
 
 ```java
-int com.dynamsoft.dbr.FrameDecodingParameters.maxResultQueueLength
+int maxResultQueueLength
 ```
 
 - **Value range**
@@ -60,7 +60,7 @@ int com.dynamsoft.dbr.FrameDecodingParameters.maxResultQueueLength
 The width of the frame image in pixels.
 
 ```java
-int com.dynamsoft.dbr.FrameDecodingParameters.width
+int width
 ```
 
 - **Value range**
@@ -74,7 +74,7 @@ int com.dynamsoft.dbr.FrameDecodingParameters.width
 The height of the frame image in pixels.
 
 ```java
-int com.dynamsoft.dbr.FrameDecodingParameters.height
+int height
 ```
 
 - **Value range**
@@ -88,7 +88,7 @@ int com.dynamsoft.dbr.FrameDecodingParameters.height
 The stride (or scan width) of the frame image.
 
 ```java
-int com.dynamsoft.dbr.FrameDecodingParameters.stride
+int stride
 ```
 
 - **Value range**
@@ -102,7 +102,7 @@ int com.dynamsoft.dbr.FrameDecodingParameters.stride
 The image pixel format used in the image byte array.
 
 ```java
-int com.dynamsoft.dbr.FrameDecodingParameters.imagePixelFormat
+int imagePixelFormat
 ```
 
 - **Value range**
@@ -119,7 +119,7 @@ int com.dynamsoft.dbr.FrameDecodingParameters.imagePixelFormat
 The region definition of the frame to calculate the internal indicator.  
 
 ```java
-RegionDefinition com.dynamsoft.dbr.FrameDecodingParameters.region
+RegionDefinition region
 ```
 
 - **Default value**  
@@ -133,7 +133,7 @@ RegionDefinition com.dynamsoft.dbr.FrameDecodingParameters.region
 The threshold used for filtering frames.
 
 ```java
-float com.dynamsoft.dbr.FrameDecodingParameters.threshold
+float threshold
 ```
 
 - **Value range**
@@ -150,7 +150,7 @@ float com.dynamsoft.dbr.FrameDecodingParameters.threshold
 The frequency of calling [`appendFrame`](../BarcodeReader/video.md#appendframe) per second.
 
 ```java
-int com.dynamsoft.dbr.FrameDecodingParameters.fps
+int fps
 ```
 
 - **Value range**
@@ -167,7 +167,7 @@ int com.dynamsoft.dbr.FrameDecodingParameters.fps
 Sets whether to filter frames automatically.
 
 ```java
-int com.dynamsoft.dbr.FrameDecodingParameters.autoFilter
+int autoFilter
 ```
 
 - **Value range**
@@ -184,7 +184,7 @@ int com.dynamsoft.dbr.FrameDecodingParameters.autoFilter
 Sets the method used for calculating the clarity of the frames.
 
 ```java
-int com.dynamsoft.dbr.FrameDecodingParameters.clarityCalculationMethod
+int clarityCalculationMethod
 ```
 
 - **Value range**
@@ -201,7 +201,7 @@ int com.dynamsoft.dbr.FrameDecodingParameters.clarityCalculationMethod
 Sets the mode used for filtering frames by calculated clarity.
 
 ```java
-int com.dynamsoft.dbr.FrameDecodingParameters.clarityFilterMode
+int clarityFilterMode
 ```
 
 - **Value range**

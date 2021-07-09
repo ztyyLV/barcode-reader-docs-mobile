@@ -30,7 +30,7 @@ import com.dynamsoft.dbr.OneDCodeDetails;
 The barcode module size (the minimum bar width in pixel).
 
 ```java
-int com.dynamsoft.dbr.OneDCodeDetails.moduleSize
+int moduleSize
 ```
 
 ## startCharsBytes
@@ -38,7 +38,7 @@ int com.dynamsoft.dbr.OneDCodeDetails.moduleSize
 The start chars in a byte array.
 
 ```java
-byte[] com.dynamsoft.dbr.OneDCodeDetails.startCharsBytes
+byte[] startCharsBytes
 ```
 
 ## stopCharsBytes
@@ -46,7 +46,7 @@ byte[] com.dynamsoft.dbr.OneDCodeDetails.startCharsBytes
 The stop chars in a byte array.
 
 ```java
-byte[] com.dynamsoft.dbr.OneDCodeDetails.stopCharsBytes
+byte[] stopCharsBytes
 ```
 
 ## checkDigitBytes
@@ -54,7 +54,7 @@ byte[] com.dynamsoft.dbr.OneDCodeDetails.stopCharsBytes
 The check digit chars in a byte array.
 
 ```java
-byte[] com.dynamsoft.dbr.OneDCodeDetails.checkDigitBytes
+byte[] checkDigitBytes
 ```
 
 ## startPatternRange
@@ -62,7 +62,7 @@ byte[] com.dynamsoft.dbr.OneDCodeDetails.checkDigitBytes
 The start pattern range of the OneDcode.
 
 ```java
-byte[] com.dynamsoft.dbr.OneDCodeDetails.startPatternRange
+byte[] startPatternRange
 ```
 
 ## middlePatternRange
@@ -70,7 +70,7 @@ byte[] com.dynamsoft.dbr.OneDCodeDetails.startPatternRange
 The middle pattern range of the OneDcode.
 
 ```java
-byte[] com.dynamsoft.dbr.OneDCodeDetails.middlePatternRange
+byte[] middlePatternRange
 ```
 
 ## endPatternRange
@@ -78,5 +78,5 @@ byte[] com.dynamsoft.dbr.OneDCodeDetails.middlePatternRange
 The end pattern range of the OneDcode.
 
 ```java
-byte[] com.dynamsoft.dbr.OneDCodeDetails.endPatternRange
+byte[] endPatternRange
 ```

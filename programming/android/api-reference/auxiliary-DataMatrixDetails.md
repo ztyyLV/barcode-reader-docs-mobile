@@ -29,7 +29,7 @@ import com.dynamsoft.dbr.DataMatrixDetails;
 The barcode module size (the minimum bar width in pixel).
 
 ```java
-int com.dynamsoft.dbr.DataMatrixDetails.moduleSize
+int moduleSize
 ```
 
 ## rows
@@ -37,7 +37,7 @@ int com.dynamsoft.dbr.DataMatrixDetails.moduleSize
 The row count of the barcode.
 
 ```java
-int com.dynamsoft.dbr.DataMatrixDetails.rows
+int rows
 ```
 
 ## columns
@@ -45,7 +45,7 @@ int com.dynamsoft.dbr.DataMatrixDetails.rows
 The column count of the barcode.
 
 ```java
-int com.dynamsoft.dbr.DataMatrixDetails.columns
+int columns
 ```
 
 ## dataRegionRows
@@ -53,7 +53,7 @@ int com.dynamsoft.dbr.DataMatrixDetails.columns
 The data region row count of the barcode.
 
 ```java
-int com.dynamsoft.dbr.DataMatrixDetails.dataRegionRows
+int dataRegionRows
 ```
 
 ## dataRegionColumns
@@ -61,7 +61,7 @@ int com.dynamsoft.dbr.DataMatrixDetails.dataRegionRows
 The data region column count of the barcode.
 
 ```java
-int com.dynamsoft.dbr.DataMatrixDetails.dataRegionColumns
+int dataRegionColumns
 ```
 
 ## dataRegionNumber
@@ -69,5 +69,5 @@ int com.dynamsoft.dbr.DataMatrixDetails.dataRegionColumns
 The data region count.
 
 ```java
-int com.dynamsoft.dbr.DataMatrixDetails.dataRegionNumber
+int dataRegionNumber
 ```

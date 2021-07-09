@@ -25,7 +25,7 @@ Stores the image data.
 The image data content in a byte array.
 
 ```java
-byte[] com.dynamsoft.dbr.ImageData.bytes
+byte[] bytes
 ```
 
 ## width
@@ -33,7 +33,7 @@ byte[] com.dynamsoft.dbr.ImageData.bytes
 The width of the image in pixels.  
 
 ```java
-int com.dynamsoft.dbr.ImageData.width
+int width
 ```
 
 ## height
@@ -41,7 +41,7 @@ int com.dynamsoft.dbr.ImageData.width
 The height of the image in pixels.
 
 ```java
-int com.dynamsoft.dbr.ImageData.height
+int height
 ```
 
 ## stride
@@ -49,7 +49,7 @@ int com.dynamsoft.dbr.ImageData.height
 The stride (or scan width) of the image.
 
 ```java
-int com.dynamsoft.dbr.ImageData.stride
+int stride
 ```
 
 ## format
@@ -57,5 +57,5 @@ int com.dynamsoft.dbr.ImageData.stride
 The image pixel format used in the image byte array.
 
 ```java
-int com.dynamsoft.dbr.ImageData.format
+int format
 ```

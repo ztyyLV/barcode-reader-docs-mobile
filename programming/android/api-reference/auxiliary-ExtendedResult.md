@@ -32,7 +32,7 @@ needGenerateH3Content: true
 Extended result type.
 
 ```java
-int com.dynamsoft.dbr.ExtendedResult.resultType
+int resultType
 ```
 
 ## barcodeFormat
@@ -40,7 +40,7 @@ int com.dynamsoft.dbr.ExtendedResult.resultType
 Barcode type in BarcodeFormat group 1.
 
 ```java
-int com.dynamsoft.dbr.ExtendedResult.barcodeFormat
+int barcodeFormat
 ```
 
 ## barcodeFormatString
@@ -48,7 +48,7 @@ int com.dynamsoft.dbr.ExtendedResult.barcodeFormat
 Barcode type in BarcodeFormat group 1 as string.
 
 ```java
-String com.dynamsoft.dbr.ExtendedResult.barcodeFormatString
+String barcodeFormatString
 ```
 
 ## barcodeFormat_2
@@ -56,7 +56,7 @@ String com.dynamsoft.dbr.ExtendedResult.barcodeFormatString
 Barcode type in BarcodeFormat group 2.
 
 ```java
-int com.dynamsoft.dbr.ExtendedResult.barcodeFormat_2
+int barcodeFormat_2
 ```
 
 ## barcodeFormatString_2
@@ -64,7 +64,7 @@ int com.dynamsoft.dbr.ExtendedResult.barcodeFormat_2
 Barcode type in BarcodeFormat group 2 as string.
 
 ```java
-String com.dynamsoft.dbr.ExtendedResult.barcodeFormatString_2
+String barcodeFormatString_2
 ```
 
 ## confidence
@@ -72,7 +72,7 @@ String com.dynamsoft.dbr.ExtendedResult.barcodeFormatString_2
 The confidence of the result. The higher confidence means the higher accuracy.
 
 ```java
-int com.dynamsoft.dbr.ExtendedResult.confidence
+int confidence
 ```
 
 ## bytes
@@ -80,7 +80,7 @@ int com.dynamsoft.dbr.ExtendedResult.confidence
 The content in a byte array.
 
 ```java
-byte[] com.dynamsoft.dbr.ExtendedResult.bytes
+byte[] bytes
 ```
 
 ## accompanyingTextBytes
@@ -88,7 +88,7 @@ byte[] com.dynamsoft.dbr.ExtendedResult.bytes
 The accompanying text content in a byte array.
 
 ```java
-byte[] com.dynamsoft.dbr.ExtendedResult.accompanyingTextBytes
+byte[] accompanyingTextBytes
 ```
 
 ## deformation
@@ -96,7 +96,7 @@ byte[] com.dynamsoft.dbr.ExtendedResult.accompanyingTextBytes
 The deformation value.
 
 ```java
-int com.dynamsoft.dbr.ExtendedResult.deformation
+int deformation
 ```
 
 ## detailedResult
@@ -104,7 +104,7 @@ int com.dynamsoft.dbr.ExtendedResult.deformation
 One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.md), [`PDF417Details`](auxiliary-PDF417Details.md), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md), [`AztecDetails`](auxiliary-AztecDetails.md), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.md).
 
 ```java
-Object com.dynamsoft.dbr.ExtendedResult.detailedResult
+Object detailedResult
 ```
 
 ## samplingImage
@@ -112,7 +112,7 @@ Object com.dynamsoft.dbr.ExtendedResult.detailedResult
 The sampling image info.
 
 ```java
-SamplingImageData com.dynamsoft.dbr.ExtendedResult.samplingImage
+SamplingImageData samplingImage
 ```
 
 ## clarity
@@ -120,5 +120,5 @@ SamplingImageData com.dynamsoft.dbr.ExtendedResult.samplingImage
 The clarity of the barcode zone in percentage.
 
 ```java
-int com.dynamsoft.dbr.ExtendedResult.clarity
+int clarity
 ```

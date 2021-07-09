@@ -34,7 +34,7 @@ The `LocalizationResult` extends the class [`TextResult`](auxiliary-TextResult.m
 The terminate phase of localization result.
 
 ```java
-int com.dynamsoft.dbr.LocalizationResult.terminatePhase
+int terminatePhase
 ```
 
 ## barcodeFormat
@@ -42,7 +42,7 @@ int com.dynamsoft.dbr.LocalizationResult.terminatePhase
 Barcode type in BarcodeFormat group 1.
 
 ```java
-int com.dynamsoft.dbr.LocalizationResult.barcodeFormat
+int barcodeFormat
 ```
 
 ## barcodeFormatString
@@ -50,7 +50,7 @@ int com.dynamsoft.dbr.LocalizationResult.barcodeFormat
 Barcode type in BarcodeFormat group 1 as string.
 
 ```java
-String com.dynamsoft.dbr.LocalizationResult.barcodeFormatString
+String barcodeFormatString
 ```
 
 ## barcodeFormat_2
@@ -58,7 +58,7 @@ String com.dynamsoft.dbr.LocalizationResult.barcodeFormatString
 Barcode type in BarcodeFormat group 2.
 
 ```java
-int com.dynamsoft.dbr.LocalizationResult.barcodeFormat_2
+int barcodeFormat_2
 ```
 
 ## barcodeFormatString_2
@@ -66,7 +66,7 @@ int com.dynamsoft.dbr.LocalizationResult.barcodeFormat_2
 Barcode type in BarcodeFormat group 2 as string.
 
 ```java
-String com.dynamsoft.dbr.LocalizationResult.barcodeFormatString_2
+String barcodeFormatString_2
 ```
 
 ## resultPoints
@@ -74,7 +74,7 @@ String com.dynamsoft.dbr.LocalizationResult.barcodeFormatString_2
 The vertices coordinates information of the barcode region.
 
 ```java
-Point[] com.dynamsoft.dbr.LocalizationResult.resultPoints
+Point[] resultPoints
 ```
 
 ## angle
@@ -82,7 +82,7 @@ Point[] com.dynamsoft.dbr.LocalizationResult.resultPoints
 The angle of a barcode. Values range is from 0 to 360.
 
 ```java
-int com.dynamsoft.dbr.LocalizationResult.angle
+int angle
 ```
 
 ## moduleSize
@@ -90,7 +90,7 @@ int com.dynamsoft.dbr.LocalizationResult.angle
 The barcode module size (the minimum bar width in pixel).
 
 ```java
-int com.dynamsoft.dbr.LocalizationResult.moduleSize
+int moduleSize
 ```
 
 ## pageNumber
@@ -98,7 +98,7 @@ int com.dynamsoft.dbr.LocalizationResult.moduleSize
 The page number the barcode located in. The index is 0-based.
 
 ```java
-int com.dynamsoft.dbr.LocalizationResult.pageNumber
+int pageNumber
 ```
 
 ## regionName
@@ -106,7 +106,7 @@ int com.dynamsoft.dbr.LocalizationResult.pageNumber
 The region name the barcode located in.
 
 ```java
-String com.dynamsoft.dbr.LocalizationResult.regionName
+String regionName
 ```
 
 ## documentName
@@ -114,7 +114,7 @@ String com.dynamsoft.dbr.LocalizationResult.regionName
 The document name.
 
 ```java
-String com.dynamsoft.dbr.LocalizationResult.documentName
+String documentName
 ```
 
 ## resultCoordinateType
@@ -122,7 +122,7 @@ String com.dynamsoft.dbr.LocalizationResult.documentName
 The coordinate type.
 
 ```java
-int com.dynamsoft.dbr.LocalizationResult.resultCoordinateType
+int resultCoordinateType
 ```
 
 ## accompanyingTextBytes
@@ -130,7 +130,7 @@ int com.dynamsoft.dbr.LocalizationResult.resultCoordinateType
 The accompanying text content in a byte array.
 
 ```java
-byte[] com.dynamsoft.dbr.LocalizationResult.accompanyingTextBytes
+byte[] accompanyingTextBytes
 ```
 
 ## confidence
@@ -138,5 +138,5 @@ byte[] com.dynamsoft.dbr.LocalizationResult.accompanyingTextBytes
 The confidence of the localization result.
 
 ```java
-int com.dynamsoft.dbr.LocalizationResult.confidence
+int confidence
 ```

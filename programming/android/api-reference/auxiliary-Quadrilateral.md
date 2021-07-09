@@ -21,5 +21,5 @@ Stores the quadrilateral.
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex.
 
 ```java
-Point[] com.dynamsoft.dbr.Quadrilateral.points
+Point[] points
 ```

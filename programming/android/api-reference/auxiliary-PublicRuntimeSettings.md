@@ -44,7 +44,7 @@ Defines a struct to configure the barcode reading runtime settings. These settin
 Sets the phase to stop the barcode reading algorithm.
 
 ```java
-int com.dynamsoft.dbr.PublicRuntimeSettings.terminatePhase
+int terminatePhase
 ```
 
 - **Value range**
@@ -64,7 +64,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.terminatePhase
 Sets the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. It does not include the time taken to load/decode an image (TIFF, PNG, etc.) from disk into memory.
 
 ```java
-int com.dynamsoft.dbr.PublicRuntimeSettings.timeout
+int timeout
 ```
 
 - **Value range**
@@ -81,7 +81,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.timeout
 Sets the number of threads the image processing algorithm will use to decode barcodes.
 
 ```java
-int com.dynamsoft.dbr.PublicRuntimeSettings.timeout
+int timeout
 ```
 
 - **Value range**
@@ -98,7 +98,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.timeout
 Sets the number of barcodes expected to be detected for each image.
 
 ```java
-int com.dynamsoft.dbr.PublicRuntimeSettings.expectedBarcodesCount
+int expectedBarcodesCount
 ```
 
 - **Value range**
@@ -115,7 +115,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.expectedBarcodesCount
 Sets the formats of the barcode in BarcodeFormat group 1 to be read. Barcode formats in BarcodeFormat group 1 can be combined.
 
 ```java
-int com.dynamsoft.dbr.PublicRuntimeSettings.barcodeFormatIds
+int barcodeFormatIds
 ```
 
 - **Value range**
@@ -135,7 +135,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.barcodeFormatIds
 Sets the formats of the barcode in BarcodeFormat group 2 to be read. Barcode formats in BarcodeFormat group 2 can be combined.
 
 ```java
-int com.dynamsoft.dbr.PublicRuntimeSettings.barcodeFormatIds_2
+int barcodeFormatIds_2
 ```
 
 - **Value range**
@@ -155,7 +155,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.barcodeFormatIds_2
 Sets the output image resolution.
 
 ```java
-int com.dynamsoft.dbr.PublicRuntimeSettings.pdfRasterDPI
+int pdfRasterDPI
 ```
 
 - **Value range**
@@ -172,7 +172,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.pdfRasterDPI
 Sets the threshold for the image shrinking.
 
 ```java
-int com.dynamsoft.dbr.PublicRuntimeSettings.scaleDownThreshold
+int scaleDownThreshold
 ```
 
 - **Value range**
@@ -189,7 +189,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.scaleDownThreshold
 Sets the mode and priority for binarization.
 
 ```java
-int[] com.dynamsoft.dbr.PublicRuntimeSettings.binarizationModes
+int[] binarizationModes
 ```
 
 - **Value range**
@@ -209,7 +209,7 @@ int[] com.dynamsoft.dbr.PublicRuntimeSettings.binarizationModes
 Sets the mode and priority for localization algorithms.
 
 ```java
-int[] com.dynamsoft.dbr.PublicRuntimeSettings.localizationModes
+int[] localizationModes
 ```
 
 - **Value range**
@@ -229,7 +229,7 @@ int[] com.dynamsoft.dbr.PublicRuntimeSettings.localizationModes
 Sets further modes.
 
 ```java
-FurtherModes com.dynamsoft.dbr.PublicRuntimeSettings.furtherModes
+FurtherModes furtherModes
 ```
 
 ## deblurLevel
@@ -237,7 +237,7 @@ FurtherModes com.dynamsoft.dbr.PublicRuntimeSettings.furtherModes
 Sets the degree of blurriness of the barcode.
 
 ```java
-int com.dynamsoft.dbr.PublicRuntimeSettings.deblurLevel
+int deblurLevel
 ```
 
 - **Value range**
@@ -254,7 +254,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.deblurLevel
 Sets which types of intermediate result to be kept for further reference. Intermediate result types can be combined.
 
 ```java
-int com.dynamsoft.dbr.PublicRuntimeSettings.intermediateResultTypes
+int intermediateResultTypes
 ```
 
 - **Value range**
@@ -271,7 +271,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.intermediateResultTypes
 Sets the mode for saving intermediate result.
 
 ```java
-int com.dynamsoft.dbr.PublicRuntimeSettings.intermediateResultSavingMode
+int intermediateResultSavingMode
 ```
 
 - **Value range**
@@ -288,7 +288,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.intermediateResultSavingMode
 Specifies the format for the coordinates returned.
 
 ```java
-int com.dynamsoft.dbr.PublicRuntimeSettings.resultCoordinateType
+int resultCoordinateType
 ```
 
 - **Value range**
@@ -305,7 +305,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.resultCoordinateType
 Sets the mode and priority for the order of the text results returned.
 
 ```java
-int[] com.dynamsoft.dbr.PublicRuntimeSettings.textResultOrderModes
+int[] textResultOrderModes
 ```
 
 - **Value range**
@@ -325,7 +325,7 @@ int[] com.dynamsoft.dbr.PublicRuntimeSettings.textResultOrderModes
 Sets whether or not to return the clarity of the barcode zone.
 
 ```java
-int com.dynamsoft.dbr.PublicRuntimeSettings.returnBarcodeZoneClarity
+int returnBarcodeZoneClarity
 ```
 
 - **Value range**
@@ -342,7 +342,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.returnBarcodeZoneClarity
 Sets the region definition including regionTop, regionLeft, regionRight, regionBottom, and regionMeasuredByPercentage.
 
 ```java
-RegionDefinition com.dynamsoft.dbr.PublicRuntimeSettings.region
+RegionDefinition region
 ```
 
 ## minBarcodeTextLength
@@ -350,7 +350,7 @@ RegionDefinition com.dynamsoft.dbr.PublicRuntimeSettings.region
 Sets the range of barcode text length for barcodes search.
 
 ```java
-int com.dynamsoft.dbr.PublicRuntimeSettings.minBarcodeTextLength
+int minBarcodeTextLength
 ```
 
 - **Value range**
@@ -367,7 +367,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.minBarcodeTextLength
 The minimum confidence of the result.
 
 ```java
-int com.dynamsoft.dbr.PublicRuntimeSettings.minResultConfidence
+int minResultConfidence
 ```
 
 - **Value range**
@@ -384,7 +384,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.minResultConfidence
 Sets the mode and priority to control the sampling methods of scale-up for linear barcode with small module sizes.
 
 ```java
-int[] com.dynamsoft.dbr.PublicRuntimeSettings.scaleUpModes[]
+int[] scaleUpModes[]
 ```
 
 - **Value range**
@@ -404,7 +404,7 @@ int[] com.dynamsoft.dbr.PublicRuntimeSettings.scaleUpModes[]
 Sets the way to detect barcodes from a PDF file when using the DecodeFile method.
 
 ```java
-int com.dynamsoft.dbr.PublicRuntimeSettings.pdfReadingMode
+int pdfReadingMode
 ```
 
 - **Value range**
@@ -421,7 +421,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.pdfReadingMode
 Sets the mode and priority for deblurring.
 
 ```java
-int[] com.dynamsoft.dbr.PublicRuntimeSettings.deblurModes
+int[] deblurModes
 ```
 
 - **Value range**
@@ -441,7 +441,7 @@ int[] com.dynamsoft.dbr.PublicRuntimeSettings.deblurModes
 Sets the minimum distance (in pixels) between the barcode zone and image borders.
 
 ```java
-int com.dynamsoft.dbr.PublicRuntimeSettings.barcodeZoneMinDistanceToImageBorders
+int barcodeZoneMinDistanceToImageBorders
 ```
 
 - **Value range**

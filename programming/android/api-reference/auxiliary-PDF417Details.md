@@ -28,7 +28,7 @@ import com.dynamsoft.dbr.PDF417Details;
 The barcode module size (the minimum bar width in pixel).
 
 ```java
-int com.dynamsoft.dbr.PDF417Details.moduleSize
+int moduleSize
 ```
 
 ## rows
@@ -36,7 +36,7 @@ int com.dynamsoft.dbr.PDF417Details.moduleSize
 The row count of the barcode.
 
 ```java
-int com.dynamsoft.dbr.PDF417Details.rows
+int rows
 ```
 
 ## columns
@@ -44,7 +44,7 @@ int com.dynamsoft.dbr.PDF417Details.rows
 The column count of the barcode.
 
 ```java
-int com.dynamsoft.dbr.PDF417Details.columns
+int columns
 ```
 
 ## errorCorrectionLevel
@@ -52,5 +52,5 @@ int com.dynamsoft.dbr.PDF417Details.columns
 The error correction level of the barcode.
 
 ```java
-int com.dynamsoft.dbr.PDF417Details.errorCorrectionLevel
+int errorCorrectionLevel
 ```

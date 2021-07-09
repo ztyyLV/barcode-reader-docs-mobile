@@ -23,7 +23,7 @@ needGenerateH3Content: true
 The sampling image data in a byte array.
 
 ```java
-byte[] com.dynamsoft.dbr.SamplingImageData.bytes
+byte[] bytes
 ```
 
 ## width
@@ -31,7 +31,7 @@ byte[] com.dynamsoft.dbr.SamplingImageData.bytes
 The width of the sampling image.
 
 ```java
-int com.dynamsoft.dbr.SamplingImageData.width
+int width
 ```
 
 ## height
@@ -39,5 +39,5 @@ int com.dynamsoft.dbr.SamplingImageData.width
 The height of the sampling image.
 
 ```java
-int com.dynamsoft.dbr.SamplingImageData.height
+int height
 ```

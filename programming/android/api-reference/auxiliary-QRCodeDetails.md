@@ -34,7 +34,7 @@ import com.dynamsoft.dbr.QRCodeDetails;
 The barcode module size (the minimum bar width in pixels).
 
 ```java
-int com.dynamsoft.dbr.QRCodeDetails.moduleSize
+int moduleSize
 ```
 
 ## rows
@@ -42,7 +42,7 @@ int com.dynamsoft.dbr.QRCodeDetails.moduleSize
 The row count of the barcode.  
 
 ```java
-int com.dynamsoft.dbr.QRCodeDetails.rows
+int rows
 ```
 
 ## columns
@@ -50,7 +50,7 @@ int com.dynamsoft.dbr.QRCodeDetails.rows
 The column count of the barcode.
 
 ```java
-int com.dynamsoft.dbr.QRCodeDetails.columns
+int columns
 ```
 
 ## errorCorrectionLevel
@@ -58,7 +58,7 @@ int com.dynamsoft.dbr.QRCodeDetails.columns
 The error correction level of the barcode.  
 
 ```java
-int com.dynamsoft.dbr.QRCodeDetails.errorCorrectionLevel
+int errorCorrectionLevel
 ```
 
 ## version
@@ -66,7 +66,7 @@ int com.dynamsoft.dbr.QRCodeDetails.errorCorrectionLevel
 The version of the QR Code.
 
 ```java
-int com.dynamsoft.dbr.QRCodeDetails.version
+int version
 ```
 
 ## model
@@ -74,7 +74,7 @@ int com.dynamsoft.dbr.QRCodeDetails.version
 Number of the models.
 
 ```java
-int com.dynamsoft.dbr.QRCodeDetails.model
+int model
 ```
 
 ## mode
@@ -82,7 +82,7 @@ int com.dynamsoft.dbr.QRCodeDetails.model
 Identify the first data encoding mode.
 
 ```java
-int com.dynamsoft.dbr.QRCodeDetails.mode
+int mode
 ```
 
 ## page
@@ -90,7 +90,7 @@ int com.dynamsoft.dbr.QRCodeDetails.mode
 Identify the position of the particular symbol.
 
 ```java
-int com.dynamsoft.dbr.QRCodeDetails.page
+int page
 ```
 
 ## totalPage
@@ -98,7 +98,7 @@ int com.dynamsoft.dbr.QRCodeDetails.page
 Identify the total number of symbols to be concatenated in the Structured Append format.
 
 ```java
-int com.dynamsoft.dbr.QRCodeDetails.totalPage
+int totalPage
 ```
 
 ## parityData
@@ -106,5 +106,5 @@ int com.dynamsoft.dbr.QRCodeDetails.totalPage
 The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks.
 
 ```java
-byte com.dynamsoft.dbr.QRCodeDetails.parityData
+byte parityData
 ```

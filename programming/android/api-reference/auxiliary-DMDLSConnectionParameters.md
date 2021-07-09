@@ -29,7 +29,7 @@ Defines a struct to configure the parameters to connect to license tracking serv
 The URL of the license tracking server.
 
 ```java
-String com.dynamsoft.dbr.DMDLSConnectionParameters.mainServerURL
+String mainServerURL
 ```
 
 - **Value range**
@@ -46,7 +46,7 @@ String com.dynamsoft.dbr.DMDLSConnectionParameters.mainServerURL
 The URL of the standby license tracking server.
 
 ```java
-String com.dynamsoft.dbr.DMDLSConnectionParameters.standbyServerURL
+String standbyServerURL
 ```
 
 - **Value range**
@@ -63,7 +63,7 @@ String com.dynamsoft.dbr.DMDLSConnectionParameters.standbyServerURL
 The handshake code.
 
 ```java
-String com.dynamsoft.dbr.DMDLSConnectionParameters.handshakeCode
+String handshakeCode
 ```
 
 - **Value range**
@@ -77,7 +77,7 @@ String com.dynamsoft.dbr.DMDLSConnectionParameters.handshakeCode
 The session password of the handshake code set in license tracking server.
 
 ```java
-String com.dynamsoft.dbr.DMDLSConnectionParameters.sessionPassword
+String sessionPassword
 ```
 
 - **Value range**
@@ -91,7 +91,7 @@ String com.dynamsoft.dbr.DMDLSConnectionParameters.sessionPassword
 Sets the method to generate UUID.
 
 ```java
-int com.dynamsoft.dbr.DMDLSConnectionParameters.uuidGenerationMethod
+int uuidGenerationMethod
 ```
 
 - **Value range**
@@ -108,7 +108,7 @@ int com.dynamsoft.dbr.DMDLSConnectionParameters.uuidGenerationMethod
 Sets the max days to buffer the license info.
 
 ```java
-int com.dynamsoft.dbr.DMDLSConnectionParameters.maxBufferDays
+int maxBufferDays
 ```
 
 - **Value range**
@@ -122,7 +122,7 @@ int com.dynamsoft.dbr.DMDLSConnectionParameters.maxBufferDays
 Sets the license modules to use.
 
 ```java
-List<Integer> com.dynamsoft.dbr.DMDLSConnectionParameters.limitedLicenseModules
+List<Integer> limitedLicenseModules
 ```
 
 - **Value range**
@@ -139,7 +139,7 @@ List<Integer> com.dynamsoft.dbr.DMDLSConnectionParameters.limitedLicenseModules
 Sets the charge way.
 
 ```java
-int com.dynamsoft.dbr.DMDLSConnectionParameters.chargeWay
+int chargeWay
 ```
 
 - **Value range**
@@ -150,7 +150,7 @@ int com.dynamsoft.dbr.DMDLSConnectionParameters.chargeWay
 The organization ID got from Dynamsoft.
 
 ```java
-String com.dynamsoft.dbr.DMDLSConnectionParameters.organizationID
+String organizationID
 ```
 
 - **Value range**

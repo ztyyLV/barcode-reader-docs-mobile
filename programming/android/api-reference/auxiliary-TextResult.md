@@ -31,7 +31,7 @@ Stores the text result.
 Barcode type in BarcodeFormat group 1.
 
 ```java
-int com.dynamsoft.dbr.TextResult.barcodeFormat
+int barcodeFormat
 ```
 
 Read more in [`Enumerations: BarcodeFormatIds`]({{ site.enumerations }}format-enums.html#barcodeformat)
@@ -41,7 +41,7 @@ Read more in [`Enumerations: BarcodeFormatIds`]({{ site.enumerations }}format-en
 Barcode type in BarcodeFormat group 1 as string.
 
 ```java
-String com.dynamsoft.dbr.TextResult.barcodeFormatString
+String barcodeFormatString
 ```
 
 ## barcodeFormat_2
@@ -49,7 +49,7 @@ String com.dynamsoft.dbr.TextResult.barcodeFormatString
 Barcode type in BarcodeFormat group 2.
 
 ```java
-int com.dynamsoft.dbr.TextResult.barcodeFormat_2
+int barcodeFormat_2
 ```
 
 Read more in [`Enumerations: BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat)
@@ -59,7 +59,7 @@ Read more in [`Enumerations: BarcodeFormat_2`]({{ site.enumerations }}format-enu
 Barcode type in BarcodeFormat group 2 as string.
 
 ```java
-String com.dynamsoft.dbr.TextResult.barcodeFormatString_2
+String barcodeFormatString_2
 ```
 
 ## barcodeText
@@ -67,7 +67,7 @@ String com.dynamsoft.dbr.TextResult.barcodeFormatString_2
 The barcode text, ends by '\0'.
 
 ```java
-String com.dynamsoft.dbr.TextResult.barcodeText
+String barcodeText
 ```
 
 ## barcodeBytes
@@ -75,7 +75,7 @@ String com.dynamsoft.dbr.TextResult.barcodeText
 The barcode content in a byte array.
 
 ```java
-byte[] com.dynamsoft.dbr.TextResult.barcodeBytes
+byte[] barcodeBytes
 ```
 
 ## barcodeBytesLength
@@ -83,7 +83,7 @@ byte[] com.dynamsoft.dbr.TextResult.barcodeBytes
 The length of the byte array.
 
 ```java
-int com.dynamsoft.dbr.TextResult.barcodeBytesLength
+int barcodeBytesLength
 ```
 
 ## localizationResult
@@ -91,7 +91,7 @@ int com.dynamsoft.dbr.TextResult.barcodeBytesLength
 The corresponding localization result.
 
 ```java
-LocalizationResult com.dynamsoft.dbr.TextResult.localizationResult
+LocalizationResult localizationResult
 ```
 
 ## detailedResult
@@ -99,7 +99,7 @@ LocalizationResult com.dynamsoft.dbr.TextResult.localizationResult
 One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.md), [`PDF417Details`](auxiliary-PDF417Details.md), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md), [`AztecDetails`](auxiliary-AztecDetails.md), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.md).
 
 ```java
-Object com.dynamsoft.dbr.TextResult.detailedResult
+Object detailedResult
 ```
 
 ## results
@@ -107,7 +107,7 @@ Object com.dynamsoft.dbr.TextResult.detailedResult
 The extended result array.
 
 ```java
-ExtendedResult[] com.dynamsoft.dbr.TextResult.results
+ExtendedResult[] results
 ```
 
 ## exception
@@ -115,7 +115,7 @@ ExtendedResult[] com.dynamsoft.dbr.TextResult.results
 The exception message.
 
 ```java
-String com.dynamsoft.dbr.TextResult.exception
+String exception
 ```
 
 ## isDPM
@@ -123,7 +123,7 @@ String com.dynamsoft.dbr.TextResult.exception
 This attribute stands for whether the result is a DPM result.
 
 ```java
-int com.dynamsoft.dbr.TextResult.isDPM
+int isDPM
 ```
 
 ## isMirrored
@@ -131,5 +131,5 @@ int com.dynamsoft.dbr.TextResult.isDPM
 This attribute stands for whether the barcode is mirrored.
 
 ```java
-int com.dynamsoft.dbr.TextResult.isMirrored
+int isMirrored
 ```

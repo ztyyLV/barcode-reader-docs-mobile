@@ -25,7 +25,7 @@ Stores the region information.
 The top-most coordinate or percentage of the region.
 
 ```java
-int com.dynamsoft.dbr.RegionDefinition.regionTop
+int regionTop
 ```
 
 - **Value range**
@@ -40,7 +40,7 @@ int com.dynamsoft.dbr.RegionDefinition.regionTop
 The left-most coordinate or percentage of the region.
 
 ```java
-int com.dynamsoft.dbr.RegionDefinition.regionLeft
+int regionLeft
 ```
 
 - **Value range**
@@ -55,7 +55,7 @@ int com.dynamsoft.dbr.RegionDefinition.regionLeft
 The right-most coordinate or percentage of the region.
 
 ```java
-int com.dynamsoft.dbr.RegionDefinition.regionRight
+int regionRight
 ```
 
 - **Value range**
@@ -70,7 +70,7 @@ int com.dynamsoft.dbr.RegionDefinition.regionRight
 The bottom-most coordinate or percentage of the region.
 
 ```java
-int com.dynamsoft.dbr.RegionDefinition.regionBottom
+int regionBottom
 ```
 
 - **Value range**
@@ -85,7 +85,7 @@ int com.dynamsoft.dbr.RegionDefinition.regionBottom
 Sets whether or not to use percentage to measure the region size.
 
 ```java
-int com.dynamsoft.dbr.RegionDefinition.regionMeasuredByPercentage
+int regionMeasuredByPercentage
 ```
 
 - **Value range**
