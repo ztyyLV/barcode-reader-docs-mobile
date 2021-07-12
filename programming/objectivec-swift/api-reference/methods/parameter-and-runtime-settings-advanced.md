@@ -65,7 +65,7 @@ func ltsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
     print("isSucc : \(isSuccess) error : \(String(describing: error))")
 }
 let error: NSError? = NSError()
-barcodeReader.initRuntimeSettingsWithFile(fileName:"your template file path", conflictMode:EnumConflictModeOverwrite, error:&error)
+barcodeReader.initRuntimeSettingsWithFile(fileName:"your template file path", conflictMode:EnumConflictMode.Overwrite, error:&error)
 ```
 
 ## initRuntimeSettingsWithString
