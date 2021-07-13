@@ -12,11 +12,11 @@ needGenerateH3Content: true
 
 Stores line segment data.
 
-| Attribute | Type |
-|---------- | ---- |
-| [`startPoint`](#startpoint) | [`Point`](auxiliary-Point.md) |
-| [`endPoint`](#endpoint) | [`Point`](auxiliary-Point.md) |
-| [`linesConfidenceCoefficients`](#linesconfidencecoefficients) | *byte\[\]* |
+| Attribute | Type | Description |
+|---------- | ---- | ----------- |
+| [`startPoint`](#startpoint) | [`Point`](auxiliary-Point.md) | The start point of the line segment. |
+| [`endPoint`](#endpoint) | [`Point`](auxiliary-Point.md) | The end point of the line segment. |
+| [`linesConfidenceCoefficients`](#linesconfidencecoefficients) | *byte\[\]* | The confidence coefficients for lines. |
 
 ## startPoint
 

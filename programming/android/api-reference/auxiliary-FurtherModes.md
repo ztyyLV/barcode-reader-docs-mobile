@@ -11,21 +11,21 @@ needGenerateH3Content: true
 
 Stores the FurtherModes.
 
-| Attribute | Type |
-|---------- | ---- |
-| [`colourClusteringModes`](#colourclusteringmodes) | *int\[\]* |
-| [`colourConversionModes`](#colourconversionmodes) | *int\[\]* |
-| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *int\[\]* |
-| [`regionPredetectionModes`](#regionpredetectionmodes) | *int\[\]* |
-| [`imagePreprocessingModes`](#imagepreprocessingmodes) | *int\[\]* |
-| [`textureDetectionModes`](#texturedetectionmodes) | *int\[\]* |
-| [`textFilterModes`](#textfiltermodes) | *int\[\]* |
-| [`textAssistedCorrectionMode`](#textassistedcorrectionmode) | *int* |
-| [`dpmCodeReadingModes`](#dpmcodereadingmodes) | *int\[\]* |
-| [`deformationResistingModes`](#deformationresistingmodes) | *int\[\]* |
-| [`barcodeComplementModes`](#barcodecomplementmodes) | *int\[\]* |
-| [`barcodeColourModes`](#barcodecolourmodes) | *int\[\]* |
-| [`accompanyingTextRecognitionModes`](#accompanyingtextrecognitionmodes) | *int\[\]* |
+| Attribute | Type | Descriptions |
+|---------- | ---- | ----- |
+| [`colourClusteringModes`](#colourclusteringmodes) | *int\[\]* | Sets the mode and priority for colour categorization. |
+| [`colourConversionModes`](#colourconversionmodes) | *int\[\]* | Sets the mode and priority for converting a colour image to a grayscale image. |
+| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *int\[\]* | Sets the mode and priority for the grayscale image conversion. |
+| [`regionPredetectionModes`](#regionpredetectionmodes) | *int\[\]* | Sets the region pre-detection mode for barcodes search. |
+| [`imagePreprocessingModes`](#imagepreprocessingmodes) | *int\[\]* | Sets the mode and priority for image preprocessing algorithms. |
+| [`textureDetectionModes`](#texturedetectionmodes) | *int\[\]* | Sets the mode and priority for texture detection. |
+| [`textFilterModes`](#textfiltermodes) | *int\[\]* | Sets the mode and priority for text filter. |
+| [`textAssistedCorrectionMode`](#textassistedcorrectionmode) | *int* | Sets the mode of text assisted correction for barcode decoding. |
+| [`dpmCodeReadingModes`](#dpmcodereadingmodes) | *int\[\]* | Sets the mode and priority for DPM code reading. |
+| [`deformationResistingModes`](#deformationresistingmodes) | *int\[\]* | Sets the mode and priority for deformation resisting. |
+| [`barcodeComplementModes`](#barcodecomplementmodes) | *int\[\]* | Sets the mode and priority to complement the missing parts in the barcode. |
+| [`barcodeColourModes`](#barcodecolourmodes) | *int\[\]* | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
+| [`accompanyingTextRecognitionModes`](#accompanyingtextrecognitionmodes) | *int\[\]* | Sets the mode and priority to recognize accompanying text. |
 
 ## colourClusteringModes
 

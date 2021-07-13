@@ -16,9 +16,9 @@ import com.dynamsoft.dbr.BarcodeReaderException;
 
 Exception for signalling barcode reader errors.
   
-| Method | Type |
-|--------|------|
-| [`getErrorCode`](#geterrorcode)| *int* |
+| Method | Type | Description |
+|--------|------|-------------|
+| [`getErrorCode`](#geterrorcode)| *int* | Get the error code |
 
 ## getErrorCode
 

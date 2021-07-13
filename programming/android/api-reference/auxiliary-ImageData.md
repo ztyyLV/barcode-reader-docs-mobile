@@ -12,13 +12,13 @@ needGenerateH3Content: true
 
 Stores the image data.  
 
-| Attribute | Type |
-|---------- | ---- |
-| [`bytes`](#bytes) | *byte\[\]* |
-| [`width`](#width) | *int* |
-| [`height`](#height) | *int* |
-| [`stride`](#stride) | *int* |
-| [`format`](#format) | *int* |
+| Attribute | Type | Descriptions |
+|---------- | ---- | ------------ |
+| [`bytes`](#bytes) | *byte\[\]* | The image data content in a byte array. |
+| [`width`](#width) | *int* | The width of the image in pixels. |
+| [`height`](#height) | *int* | The height of the image in pixels. |
+| [`stride`](#stride) | *int* | The stride (or scan width) of the image. |
+| [`format`](#format) | *int* | The image pixel format used in the image byte array. |
 
 ## bytes
 
@@ -30,7 +30,7 @@ byte[] bytes
 
 ## width
 
-The width of the image in pixels.  
+The width of the image in pixels.
 
 ```java
 int width

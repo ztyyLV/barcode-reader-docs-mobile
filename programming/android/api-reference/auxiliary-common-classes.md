@@ -19,8 +19,8 @@ The point class Stores the x and y coordinate of the points.
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |
-| `x` | *int* | The X coordinate of the point. |
-| `y` | *int* | The y coordinate of the point. |
+| [`x`](auxiliary-Point.md#x) | *int* | The X coordinate of the point. |
+| [`y`](auxiliary-Point.md#y) | *int* | The y coordinate of the point. |
 
 ## [Quadrilateral](auxiliary-Quadrilateral.md)
 
@@ -32,7 +32,7 @@ import com.dynamsoft.dbr.Point;
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |
-| `points` | [`Point`](auxiliary-Point.md)[] | Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
+| [`points`](auxiliary-Quadrilateral.md#points) | [`Point`](auxiliary-Point.md)[] | Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
 
 ## [RegionDefinition](auxiliary-RegionDefinition.md)
 
@@ -44,8 +44,8 @@ import com.dynamsoft.dbr.RegionDefinition;
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |
-| [`regionTop`](#regiontop) | *int* | The top-most coordinate or percentage of the region. |
-| [`regionLeft`](#regionleft) | *int* | The left-most coordinate or percentage of the region. |
-| [`regionRight`](#regionright) | *int* | The right-most coordinate or percentage of the region. |
-| [`regionBottom`](#regionbottom) | *int* | The bottom-most coordinate or percentage of the region. |
-| [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | *int* | Sets whether or not to use percentage to measure the region size. |
+| [`regionTop`](auxiliary-RegionDefinition.md#regiontop) | *int* | The top-most coordinate or percentage of the region. |
+| [`regionLeft`](auxiliary-RegionDefinition.md#regionleft) | *int* | The left-most coordinate or percentage of the region. |
+| [`regionRight`](auxiliary-RegionDefinition.md#regionright) | *int* | The right-most coordinate or percentage of the region. |
+| [`regionBottom`](auxiliary-RegionDefinition.md#regionbottom) | *int* | The bottom-most coordinate or percentage of the region. |
+| [`regionMeasuredByPercentage`](auxiliary-RegionDefinition.md#regionmeasuredbypercentage) | *int* | Sets whether or not to use percentage to measure the region size. |

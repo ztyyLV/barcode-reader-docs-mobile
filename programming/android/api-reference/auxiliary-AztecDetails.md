@@ -15,13 +15,13 @@ import com.dynamsoft.dbr.AztecDetails;
 ```
 
 `AztecDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the Aztec code details.
-  
-| Attribute | Type |
-|---------- | ----------- |
-| [`moduleSize`](#modulesize) | *int* |
-| [`rows`](#rows) | *int* |
-| [`columns`](#columns) | *int* |
-| [`layerNumber`](#layernumber) | *int* |
+
+| Attribute | Type | Description |
+|---------- | -----|------ |
+| [`moduleSize`](#modulesize) | *int* | The barcode module size (the minimum bar width in pixel). |
+| [`rows`](#rows) | *int* | The row count of the barcode. |
+| [`columns`](#columns) | *int* | The column count of the barcode. |
+| [`layerNumber`](#layernumber) | *int* | A negative number (-1, -2, -3, -4) specifies a compact Aztec code. A positive number (1, 2, .. 32) specifies a normal (full-rang) Aztec code. |
 
 ## moduleSize
 

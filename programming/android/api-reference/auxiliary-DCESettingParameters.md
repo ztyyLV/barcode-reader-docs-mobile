@@ -15,13 +15,13 @@ import com.dynamsoft.dbr.DCESettingParameters;
 
 Stores the DCESettingParameters information.
 
-| Attribute | type |
-|-----------|------|
-| `cameraInstance` | *Object* |
-|  `textResultCallback` | [`TextResultCallback`]({{site.android_api}}interface.html#textresultcallback) |
-| `textResultCallback_UserData` | *Object*  |
-| `intermediateResultCallback` | [`IntermediateResultCallback`]({{site.android_api}}interface.html#intermediateresultcallback) |
-| `IntermediateResultCallback_UserData` | *Object* |
+| Attribute | type | Description |
+|-----------|------|-------------|
+| [`cameraInstance`](#camerainstance) | *Object* | The Camera Enhancer instance |
+| [`textResultCallback`](#textresultcallback) | [`TextResultCallback`]({{site.android_api}}interface.html#textresultcallback) | Set text result callback. |
+| [`textResultCallback_UserData`](#textresultcallback_userdata) | *Object*  | Transfer user data. |
+| [`intermediateResultCallback`](#intermediateresultcallback) | [`IntermediateResultCallback`]({{site.android_api}}interface.html#intermediateresultcallback) | Set intermediate result callback. |
+| [`IntermediateResultCallback_UserData`](#intermediateresultcallback_userdata) | *Object* | Transfer user data. |
 
 ## CameraInstance
 

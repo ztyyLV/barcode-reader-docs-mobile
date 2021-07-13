@@ -12,20 +12,20 @@ needGenerateH3Content: true
 
 `ExtendedResult` is the extension of the class [`TextResult`](auxiliary-TextResult.md). It stores the extended result information.
   
-| Attribute | Type |
-|---------- | ---- |
-| [`resultType`](#resulttype) | *int* |
-| [`barcodeFormat`](#barcodeformat) | *int* |
-| [`barcodeFormatString`](#barcodeformatstring) | *String* |
-| [`barcodeFormat_2`](#barcodeformat_2) | *int* |
-| [`barcodeFormatString_2`](#barcodeformatstring_2) | *String* |
-| [`confidence`](#confidence) | *int* |
-| [`bytes`](#bytes) | *byte\[\]* |
-| [`accompanyingTextBytes`](#accompanyingtextbytes) | *byte\[\]* |
-| [`deformation`](#deformation) | *int* |
-| [`detailedResult`](#detailedresult) | *Object* |
-| [`samplingImage`](#samplingimage) | [`SamplingImageData`](auxiliary-SamplingImageData.md) |
-| [`clarity`](#clarity) | *int* |
+| Attribute | Type | Description |
+|---------- | ---- | ----------- |
+| [`resultType`](#resulttype) | *int* | Extended result type. |
+| [`barcodeFormat`](#barcodeformat) | *int* | Barcode type in BarcodeFormat group 1. |
+| [`barcodeFormatString`](#barcodeformatstring) | *String* | Barcode type in BarcodeFormat group 1 as string. |
+| [`barcodeFormat_2`](#barcodeformat_2) | *int* | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString_2`](#barcodeformatstring_2) | *String* | Barcode type in BarcodeFormat group 2 as string. |
+| [`confidence`](#confidence) | *int* | The confidence of the result. The higher confidence means the higher accuracy. |
+| [`bytes`](#bytes) | *byte\[\]* | The content in a byte array. |
+| [`accompanyingTextBytes`](#accompanyingtextbytes) | *byte\[\]* | The accompanying text content in a byte array. |
+| [`deformation`](#deformation) | *int* | The deformation value. |
+| [`detailedResult`](#detailedresult) | *Object* | One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.md), [`PDF417Details`](auxiliary-PDF417Details.md), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md), [`AztecDetails`](auxiliary-AztecDetails.md), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.md). |
+| [`samplingImage`](#samplingimage) | [`SamplingImageData`](auxiliary-SamplingImageData.md) | The sampling image info. |
+| [`clarity`](#clarity) | *int* | The clarity of the barcode zone in percentage. |
 
 ## resultType
 

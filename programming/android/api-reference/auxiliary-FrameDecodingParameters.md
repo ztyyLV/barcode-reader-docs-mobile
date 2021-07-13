@@ -12,20 +12,20 @@ needGenerateH3Content: true
 
 Defines a struct to configure the frame decoding Parameters.  
 
-| Attribute | Type |
-|---------- | ---- |
-| [`maxQueueLength`](#maxqueuelength) | *int* |
-| [`maxResultQueueLength`](#maxresultqueuelength) | *int* |
-| [`width`](#width) | *int* |
-| [`height`](#height) | *int* |
-| [`stride`](#stride) | *int* |
-| [`imagePixelFormat`](#imagepixelformat) | *int* |
-| [`region`](#region) | [`RegionDefinition`](auxiliary-RegionDefinition.md) |
-| [`threshold`](#threshold) | *float* |
-| [`fps`](#fps) | *int* |
-| [`autoFilter`](#autofilter) | *int* |
-| [`clarityCalculationMethod`](#claritycalculationmethod) | *int* |
-| [`clarityFilterMode`](#clarityfiltermode) | *int* |
+| Attribute | Type | Descriptions |
+|---------- | ---- | ------------ |
+| [`maxQueueLength`](#maxqueuelength) | *int* | The maximum number of frames waiting for decoding. |
+| [`maxResultQueueLength`](#maxresultqueuelength) | *int* | The maximum number of frames waiting results (text result/localization result) will be kept for further reference. |
+| [`width`](#width) | *int* | The width of the frame image in pixels.  |
+| [`height`](#height) | *int* | The height of the frame image in pixels. |
+| [`stride`](#stride) | *int* | The stride (or scan width) of the frame image. |
+| [`imagePixelFormat`](#imagepixelformat) | *int* | The image pixel format used in the image byte array. |
+| [`region`](#region) | [`RegionDefinition`](auxiliary-RegionDefinition.md) | The region definition of the frame to calculate the internal indicator. |
+| [`threshold`](#threshold) | *float* | The threshold used for filtering frames. |
+| [`fps`](#fps) | *int* | The frequency of calling [`appendFrame`]({{site.android_methods}}primary-video.html#appendframe) per second. |
+| [`autoFilter`](#autofilter) | *int* | Sets whether to filter frames automatically. |
+| [`clarityCalculationMethod`](#claritycalculationmethod) | *int* | Sets the method used for calculating the clarity of the frames. |
+| [`clarityFilterMode`](#clarityfiltermode) | *int* | Sets the mode used for filtering frames by calculated clarity. |
 
 ## maxQueueLength
 

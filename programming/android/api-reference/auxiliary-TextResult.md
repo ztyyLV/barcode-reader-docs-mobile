@@ -13,18 +13,19 @@ Stores the text result.
 
 | Attribute | Type |
 |-----------|------|
-| [`barcodeFormat`](#barcodeformat) | *int* |
-| [`barcodeFormatString`](#barcodeformatstring) | *String* |
-| [`barcodeFormat_2`](#barcodeformat_2) | *int* |
-| [`barcodeFormatString_2`](#barcodeformatstring_2) | *String* |
-| [`barcodeText`](#barcodetext) | *String* |
-| [`barcodeBytes`](#barcodebytes) | *byte\[\]* |
-| [`localizationResult`](#localizationresult) | [`LocalizationResult`](auxiliary-LocalizationResult.md)\* |
-| [`detailedResult`](#detailedresult) | *Object* |
-| [`results`](#results) | [`ExtendedResult`](auxiliary-ExtendedResult.md)\[\] |
-| [`exception`](#exception) | *String* |
-| [`isDPM`](#isdpm) | *int* |
-| [`isMirrored`](#ismirrored) | *int* |
+| [`barcodeFormat`](#barcodeformat) | *int* | Barcode type in BarcodeFormat group 1. |
+| [`barcodeFormatString`](#barcodeformatstring) | *String* | Barcode type in BarcodeFormat group 1 as string. |
+| [`barcodeFormat_2`](#barcodeformat_2) | *int* | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString_2`](#barcodeformatstring_2) | *String* | Barcode type in BarcodeFormat group 2 as string. |
+| [`barcodeText`](#barcodetext) | *String* | The barcode text, ends by '\0'. |
+| [`barcodeBytes`](#barcodebytes) | *byte\[\]* | The barcode content in a byte array. |
+| [`barcodeBytesLength`](#barcodebyteslength) | *int* | The length of the byte array. |
+| [`localizationResult`](#localizationresult) | [`LocalizationResult`](auxiliary-LocalizationResult.md)\* | The corresponding localization result. |
+| [`detailedResult`](#detailedresult) | *Object* | One of the following: [`QRCodeDetails`](auxiliary-qrcodedetails.md), [`PDF417Details`](auxiliary-pdf417details.md), [`DataMatrixDetails`](auxiliary-datamatrixdetails.md), [`AztecDetails`](auxiliary-aztecdetails.md), [`OneDCodeDetails`](auxiliary-onedcodedetails.md). |
+| [`results`](#results) | [`ExtendedResult`](auxiliary-ExtendedResult.md)\[\] | The extended result array. |
+| [`exception`](#exception) | *String* | The exception message. |
+| [`isDPM`](#isdpm) | *int* | This attribute stands for whether the result is a DPM result. |
+| [`isMirrored`](#ismirrored) | *int* | This attribute stands for whether the barcode is mirrored. |
 
 ## barcodeFormat
 

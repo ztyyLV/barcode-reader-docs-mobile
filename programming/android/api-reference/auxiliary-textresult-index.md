@@ -15,21 +15,21 @@ needGenerateH3Content: false
 import com.dynamsoft.dbr.TextResult;
 ```
 
-| Attribute | Type | Description |
-|-----------|------| ----------- |
-| `barcodeFormat` | *int* | Barcode type in BarcodeFormat group 1. |
-| `barcodeFormatString` | *String* | Barcode type in BarcodeFormat group 1 as string. |
-| `barcodeFormat_2` | *int* | Barcode type in BarcodeFormat group 2. |
-| `barcodeFormatString_2` | *String* | Barcode type in BarcodeFormat group 2 as string. |
-| `barcodeText` | *String* | The barcode text, ends by '\0'. |
-| `barcodeBytes` | *byte\[\]* | The barcode content in a byte array. |
-| `barcodeBytesLength`| *int* | The length of the byte array. |
-| `localizationResult` | [`LocalizationResult`](auxiliary-LocalizationResult.md)\* | The corresponding localization result. |
-| `detailedResult` | *Object* | One of the following: [`QRCodeDetails`](auxiliary-qrcodedetails.md), [`PDF417Details`](auxiliary-pdf417details.md), [`DataMatrixDetails`](auxiliary-datamatrixdetails.md), [`AztecDetails`](auxiliary-aztecdetails.md), [`OneDCodeDetails`](auxiliary-onedcodedetails.md). |
-| `results` | [`ExtendedResult`](auxiliary-extendedresult.md)\[\] | The extended result array. |
-| `exception` | *String* | The exception message. |
-| `isDPM` | *int* | This attribute stands for whether the result is a DPM result. |
-| `isMirrored` | *int* | This attribute stands for whether the barcode is mirrored. |
+| Attribute | Type |
+|-----------|------|
+| [`barcodeFormat`](auxiliary-TextResult.md#barcodeformat) | *int* | Barcode type in BarcodeFormat group 1. |
+| [`barcodeFormatString`](auxiliary-TextResult.md#barcodeformatstring) | *String* | Barcode type in BarcodeFormat group 1 as string. |
+| [`barcodeFormat_2`](auxiliary-TextResult.md#barcodeformat_2) | *int* | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString_2`](auxiliary-TextResult.md#barcodeformatstring_2) | *String* | Barcode type in BarcodeFormat group 2 as string. |
+| [`barcodeText`](auxiliary-TextResult.md#barcodetext) | *String* | The barcode text, ends by '\0'. |
+| [`barcodeBytes`](auxiliary-TextResult.md#barcodebytes) | *byte\[\]* | The barcode content in a byte array. |
+| [`barcodeBytesLength`](auxiliary-TextResult.md#barcodebyteslength) | *int* | The length of the byte array. |
+| [`localizationResult`](auxiliary-TextResult.md#localizationresult) | [`LocalizationResult`](auxiliary-LocalizationResult.md)\* | The corresponding localization result. |
+| [`detailedResult`](auxiliary-TextResult.md#detailedresult) | *Object* | One of the following: [`QRCodeDetails`](auxiliary-qrcodedetails.md), [`PDF417Details`](auxiliary-pdf417details.md), [`DataMatrixDetails`](auxiliary-datamatrixdetails.md), [`AztecDetails`](auxiliary-aztecdetails.md), [`OneDCodeDetails`](auxiliary-onedcodedetails.md). |
+| [`results`](auxiliary-TextResult.md#results) | [`ExtendedResult`](auxiliary-ExtendedResult.md)\[\] | The extended result array. |
+| [`exception`](auxiliary-TextResult.md#exception) | *String* | The exception message. |
+| [`isDPM`](auxiliary-TextResult.md#isdpm) | *int* | This attribute stands for whether the result is a DPM result. |
+| [`isMirrored`](auxiliary-TextResult.md#ismirrored) | *int* | This attribute stands for whether the barcode is mirrored. |
 
 ```java
 // Get the text result by decode methodes
@@ -46,20 +46,20 @@ import com.dynamsoft.dbr.LocalizationResult;
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
-| `terminatePhase` | *int* | The terminate phase of localization result. |
-| `barcodeFormat` | *int* | Barcode type in BarcodeFormat group 1. |
-| `barcodeFormatString` | *String* | Barcode type in BarcodeFormat group 1 as string. |
-| `barcodeFormat_2` | *int* | Barcode type in BarcodeFormat group 2. |
-| `barcodeFormatString_2` | *String* | Barcode type in BarcodeFormat group 2 as string. |
-| `resultPoints` | [`Point`](auxiliary-Point.md)\[\] | The vertices coordinates information of the barcode region. |
-| `angle` | *int* | The angle of a barcode. Values range is from 0 to 360. |
-| `moduleSize` | *int* | The barcode module size (the minimum bar width in pixel). |
-| `pageNumber` | *int* | The page number the barcode located in. The index is 0-based. |
-| `regionName` | *String* | The region name the barcode located in. |
-| `documentName` | *String* | The document name. |
-| `resultCoordinateType` | *int* | The coordinate type. |
-| `accompanyingTextBytes` | *byte\[\]* | The accompanying text content in a byte array. |
-| `confidence` | *int* | The confidence of the localization result. |
+| [`terminatePhase`](auxiliary-LocalizationResult.md#terminatephase) | *int* | The terminate phase of localization result. |
+| [`barcodeFormat`](auxiliary-LocalizationResult.md#barcodeformat) | *int* | Barcode type in BarcodeFormat group 1. |
+| [`barcodeFormatString`](auxiliary-LocalizationResult.md#barcodeformatstring) | *String* | Barcode type in BarcodeFormat group 1 as string. |
+| [`barcodeFormat_2`](auxiliary-LocalizationResult.md#barcodeformat_2) | *int* | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString_2`](auxiliary-LocalizationResult.md#barcodeformatstring_2) | *String* | Barcode type in BarcodeFormat group 2 as string. |
+| [`resultPoints`](auxiliary-LocalizationResult.md#resultpoints) | [`Point`](auxiliary-Point.md)\[\] | The vertices coordinates information of the barcode region. |
+| [`angle`] |(auxiliary-LocalizationResult.md#angle) *int* | The angle of a barcode. Values range is from 0 to 360. |
+| [`moduleSize`](auxiliary-LocalizationResult.md#modulesize) | *int* | The barcode module size (the minimum bar width in pixel). |
+| [`pageNumber`](auxiliary-LocalizationResult.md#oagenumber) | *int* | The page number the barcode located in. The index is 0-based. |
+| [`regionName`](auxiliary-LocalizationResult.md#regionname) | *String* | The region name the barcode located in. |
+| [`documentName`](auxiliary-LocalizationResult.md#documentname) | *String* | The document name. |
+| [`resultCoordinateType`](auxiliary-LocalizationResult.md#resultcoordinatetype) | *int* | The coordinate type. |
+| [`accompanyingTextBytes`](auxiliary-LocalizationResult.md#accompanyingtextbytes) | *byte\[\]* | The accompanying text content in a byte array. |
+| [`confidence`](auxiliary-LocalizationResult.md#confidence) | *int* | The confidence of the localization result. |
 
 ```java
 if ( textresult != null && textresult.length != 0){
@@ -80,18 +80,18 @@ import com.dynamsoft.dbr.ExtendedResult;
   
 | Attribute | Type | Description |
 |---------- |------|-------------|
-| `resultType` | *int* | The extended result type. |
-| `barcodeFormat` | *int* | Barcode type in BarcodeFormat group 1. |
-| `barcodeFormatString` | *String* | Barcode type in BarcodeFormat group 1 as string. |
-| `barcodeFormat_2` | *int* | Barcode type in BarcodeFormat group 2. |
-| `barcodeFormatString_2` | *String* | Barcode type in BarcodeFormat group 2 as string. |
-| `confidence` | *int* | The confidence of the result. The higher confidence means the higher accuracy. |
-| `bytes` | *byte\[\]* | The content in a byte array. |
-| `accompanyingTextBytes` | *byte\[\]* | The accompanying text content in a byte array. |
-| `deformation` | *int* | The deformation value. |
-| `detailedResult` | *Object* | One of the following: [`QRCodeDetails`](auxiliary-qrcodedetails.md), [`PDF417Details`](auxiliary-pdf417details.md), [`DataMatrixDetails`](auxiliary-datamatrixdetails.md), [`AztecDetails`](auxiliary-aztecdetails.md), [`OneDCodeDetails`](auxiliary-onedcodedetails.md). |
-| `samplingImage` | [`SamplingImageData`](auxiliary-samplingimagedata.md) | The sampling image info. |
-| `clarity` | *int* | The clarity of the barcode zone in percentage. |
+| [`resultType`](auxiliary-ExtendedResult.md#resulttype) | *int* | The extended result type. |
+| [`barcodeFormat`](auxiliary-ExtendedResult.md#barcodeformat) | *int* | Barcode type in BarcodeFormat group 1. |
+| [`barcodeFormatString`](auxiliary-ExtendedResult.md#barcodeformatstring) | *String* | Barcode type in BarcodeFormat group 1 as string. |
+| [`barcodeFormat_2`](auxiliary-ExtendedResult.md#barcodeformat_2) | *int* | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString_2`](auxiliary-ExtendedResult.md#barcodeformatstring_2) | *String* | Barcode type in BarcodeFormat group 2 as string. |
+| [`confidence`](auxiliary-ExtendedResult.md#confidence) | *int* | The confidence of the result. The higher confidence means the higher accuracy. |
+| [`bytes`](auxiliary-ExtendedResult.md#bytes) | *byte\[\]* | The content in a byte array. |
+| [`accompanyingTextBytes`](auxiliary-ExtendedResult.md#accompanyingtextbytes) | *byte\[\]* | The accompanying text content in a byte array. |
+| [`deformation`](auxiliary-ExtendedResult.md#deformation) | *int* | The deformation value. |
+| [`detailedResult`](auxiliary-ExtendedResult.md#detailedresult) | *Object* | One of the following: [`QRCodeDetails`](auxiliary-qrcodedetails.md), [`PDF417Details`](auxiliary-pdf417details.md), [`DataMatrixDetails`](auxiliary-datamatrixdetails.md), [`AztecDetails`](auxiliary-aztecdetails.md), [`OneDCodeDetails`](auxiliary-onedcodedetails.md). |
+| [`samplingImage`](auxiliary-ExtendedResult.md#samplingimage) | [`SamplingImageData`](auxiliary-samplingimagedata.md) | The sampling image info. |
+| [`clarity`](auxiliary-ExtendedResult.md#clarity) | *int* | The clarity of the barcode zone in percentage. |
 
 ```java
 if ( textresult != null && textresult.length != 0){
@@ -112,10 +112,10 @@ import com.dynamsoft.dbr.AztecDetails;
   
 | Attribute | Type | Description |
 |---------- | -----|------ |
-| `moduleSize`| *int* | The barcode module size (the minimum bar width in pixel). |
-| `rows` | *int* | The row count of the barcode. |
-| `columns` | *int* | The column count of the barcode. |
-| `layerNumber` | *int* | A negative number (-1, -2, -3, -4) specifies a compact Aztec code. A positive number (1, 2, .. 32) specifies a normal (full-rang) Aztec code. |
+| [`moduleSize`](auxiliary-AztecDetails.md#modulesize) | *int* | The barcode module size (the minimum bar width in pixel). |
+| [`rows`](auxiliary-AztecDetails.md#rows) | *int* | The row count of the barcode. |
+| [`columns`](auxiliary-AztecDetails.md#columns) | *int* | The column count of the barcode. |
+| [`layerNumber`](auxiliary-AztecDetails.md#layernumber) | *int* | A negative number (-1, -2, -3, -4) specifies a compact Aztec code. A positive number (1, 2, .. 32) specifies a normal (full-rang) Aztec code. |
 
 ```java
 //The textresult[i] is one of the text result you got  
@@ -132,12 +132,12 @@ import com.dynamsoft.dbr.DataMatrixDetails;
   
 | Attribute | Type | Description |
 |---------- |-----|------|
-| `moduleSize` | *int* | The barcode module size (the minimum bar width in pixel). |
-| `rows`| *int* | The row count of the barcode. |
-| `columns` | *int* | The column count of the barcode. |
-| `dataRegionRows` | *int* | The data region row count of the barcode. |
-| `dataRegionColumns` | *int* | The data region column count of the barcode. |
-| `dataRegionNumber` | *int* | The data region count. |
+| [`moduleSize`](auxiliary-DataMatrixDetails.md#modulesize) | *int* | The barcode module size (the minimum bar width in pixel). |
+| [`rows`](auxiliary-DataMatrixDetails.md#rows) | *int* | The row count of the barcode. |
+| [`columns`](auxiliary-DataMatrixDetails.md#columns) | *int* | The column count of the barcode. |
+| [`dataRegionRows`](auxiliary-DataMatrixDetails.md#dataregionrows) | *int* | The data region row count of the barcode. |
+| [`dataRegionColumns`](auxiliary-DataMatrixDetails.md#dataregioncolumns) | *int* | The data region column count of the barcode. |
+| [`dataRegionNumber`](auxiliary-DataMatrixDetails.md#dataregionnumber) | *int* | The data region count. |
 
 ```java
 //The textresult[i] is one of the text result you got  
@@ -154,13 +154,13 @@ import com.dynamsoft.dbr.OneDCodeDetails;
 
 | Attribute | Type | Description |
 |---------- |-----| ---- |
-| `moduleSize` | *int* | The barcode module size (the minimum bar width in pixel). |
-| `startCharsBytes` | *int* | The start chars in a byte array. |
-| `stopCharsBytes` | *int* | The stop chars in a byte array. |
-| `checkDigitBytes` | *int* | The check digit chars in a byte array. |
-| `startPatternRange` | *int* | The start pattern range of the OneDcode. |
-| `middlePatternRange` | *int* | The middle pattern range of the OneDcode. |
-| `endPatternRange` | *int* | The end pattern range of the OneDcode. |
+| [`moduleSize`](auxiliary-OneDCodeDetails.md#modulesize) | *int* | The barcode module size (the minimum bar width in pixel). |
+| [`startCharsBytes`](auxiliary-OneDCodeDetails.md#startcharsbytes) | *int* | The start chars in a byte array. |
+| [`stopCharsBytes`](auxiliary-OneDCodeDetails.md#stopcharsbytes) | *int* | The stop chars in a byte array. |
+| [`checkDigitBytes`](auxiliary-OneDCodeDetails.md#checkdigitbytes) | *int* | The check digit chars in a byte array. |
+| [`startPatternRange`](auxiliary-OneDCodeDetails.md#startpatternrange) | *int* | The start pattern range of the OneDcode. |
+| [`middlePatternRange`](auxiliary-OneDCodeDetails.md#middlepatternrange) | *int* | The middle pattern range of the OneDcode. |
+| [`endPatternRange`](auxiliary-OneDCodeDetails.md#endpatternrange) | *int* | The end pattern range of the OneDcode. |
 
 ```java
 //The textresult[i] is one of the text result you got  
@@ -177,10 +177,10 @@ import com.dynamsoft.dbr.PDF417Details;
   
 | Attribute | Type | Description |
 |---------- |------|------------ |
-| `moduleSize` | *int* | The barcode module size (the minimum bar width in pixel). |
-| `rows` | *int* | The row count of the barcode. |
-| `columns` | *int* | The column count of the barcode. |
-| `errorCorrectionLevel` | *int* | The error correction level of the barcode. |
+| [`moduleSize`](auxiliary-PDF417Details.md#modulesize) | *int* | The barcode module size (the minimum bar width in pixel). |
+| [`rows`](auxiliary-PDF417Details.md#rows) | *int* | The row count of the barcode. |
+| [`columns`](auxiliary-PDF417Details.md#columns) | *int* | The column count of the barcode. |
+| [`errorCorrectionLevel`](auxiliary-PDF417Details.md#errorcorrectionlevel) | *int* | The error correction level of the barcode. |
 
 ```java
 //The textresult[i] is one of the text results you got  
@@ -197,16 +197,16 @@ import com.dynamsoft.dbr.QRCodeDetails;
   
 | Attribute | Type | Description |
 |---------- | ---- |-----|
-| `moduleSize` | *int* | The barcode module size (the minimum bar width in pixels). |
-| `rows`| *int* | The row count of the barcode.   |
-| `columns` | *int* | The column count of the barcode. |
-| `errorCorrectionLevel` | *int* | The error correction level of the barcode.   |
-| `version` | *int* | The version of the QR Code. |
-| `model` | *int* | Number of the models. |
-| `mode` | *int* | Identify the first data encoding mode. |
-| `page` | *int* | Identify the position of the particular symbol. |
-| `totalPage` | *int* | Identify the total number of symbols to be concatenated in the Structured Append format. |
-| `parityData` | *int* | The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks. |
+| [`moduleSize`](auxiliary-QRCodeDetails.md#modulesize) | *int* | The barcode module size (the minimum bar width in pixels). |
+| [`rows`](auxiliary-QRCodeDetails.md#rows) | *int* | The row count of the barcode.   |
+| [`columns`](auxiliary-QRCodeDetails.md#columns) | *int* | The column count of the barcode. |
+| [`errorCorrectionLevel`](auxiliary-QRCodeDetails.md#errorcorrectionlevel) | *int* | The error correction level of the barcode.   |
+| [`version`](auxiliary-QRCodeDetails.md#version) | *int* | The version of the QR Code. |
+| [`model`](auxiliary-QRCodeDetails.md#model) | *int* | Number of the models. |
+| [`mode`](auxiliary-QRCodeDetails.md#mode) | *int* | Identify the first data encoding mode. |
+| [`page`](auxiliary-QRCodeDetails.md#page) | *int* | Identify the position of the particular symbol. |
+| [`totalPage`](auxiliary-QRCodeDetails.md#totalpage) | *int* | Identify the total number of symbols to be concatenated in the Structured Append format. |
+| [`parityData`](auxiliary-QRCodeDetails.md#paritydata) | *int* | The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks. |
 
 ```java
 //The textresult[i] is one of the text results you got  

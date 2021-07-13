@@ -15,14 +15,14 @@ import com.dynamsoft.dbr.DataMatrixDetails;
 
 `DataMatrixDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the DataMatrix code details.
 
-| Attribute | Type |
-|---------- | ---- |
-| [`moduleSize`](#modulesize) | *int* |
-| [`rows`](#rows) | *int* |
-| [`columns`](#columns) | *int* |
-| [`dataRegionRows`](#dataregionrows) | *int* |
-| [`dataRegionColumns`](#dataregioncolumns) | *int* |
-| [`dataRegionNumber`](#dataregionnumber) | *int* |
+| Attribute | Type | Description |
+|---------- | ---- |------|
+| [`moduleSize`](#modulesize) | *int* | The barcode module size (the minimum bar width in pixel). |
+| [`rows`](#rows) | *int* | The row count of the barcode. |
+| [`columns`](#columns) | *int* | The column count of the barcode. |
+| [`dataRegionRows`](#dataregionrows) | *int* | The data region row count of the barcode. |
+| [`dataRegionColumns`](#dataregioncolumns) | *int* | The data region column count of the barcode. |
+| [`dataRegionNumber`](#dataregionnumber) | *int* | The data region count. |
 
 ## moduleSize
 

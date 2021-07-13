@@ -12,11 +12,11 @@ needGenerateH3Content: true
 
 `SamplingImageData` stores the detailed image data in `ExtendedResult`.
 
-| Attribute | Type |
-|---------- | ---- |
-| [`bytes`](#bytes) | *byte\[\]* |
-| [`width`](#width) | *int* |
-| [`height`](#height) | *int* |
+| Attribute | Type | Descriptions |
+|---------- | ---- | ------------ |
+| [`bytes`](#bytes) | *byte\[\]* | The sampling image data in a byte array. |
+| [`width`](#width) | *int* | The width of the sampling image. |
+| [`height`](#height) | *int* | The height of the sampling image. |
 
 ## bytes
 
