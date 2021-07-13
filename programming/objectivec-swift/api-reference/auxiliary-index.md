@@ -9,45 +9,39 @@ breadcrumbText: Auxiliary Class
 
 # Dynamsoft Barcode Reader SDK — Objective-C & Swift Class
 
-<div class="doc-card-prefix doc-card-list-prefix"></div>
+## [License Class](auxiliary-iDMDLSConnectionParameters.md)
 
-> ## [License Class](auxiliary-iDMDLSConnectionParameters.md)
-> <hr>
-> * [iDMDLSConnectionParameters](auxiliary-iDMDLSConnectionParameters.md)
->
-> <hr>
-> ## [Common Classes](auxiliary-common-classes.md)
-> <hr>
-> * [iDBRPoint](auxiliary-iDBRPoint.md)
-> * [iRegionDefinition](auxiliary-iRegionDefinition.md)
-> * [iQuadrilateral](auxiliary-iQuadrilateral.md)
->
-> <hr>
-> ## [Parameter Configuration](auxiliary-parameter-index.md)
-> <hr>
-> * [iPublicRuntimeSettings](auxiliary-iPublicRuntimeSettings.md)
-> * [iFurtherModes](auxiliary-iFurtherModes.md)
-> * [iFrameDecodingParameters](auxiliary-iFrameDecodingParameters.md)
-> * [iDCESettingParameters](auxiliary-iDCESettingParameters.md)
->
-> <hr>
-> ## [Barcode Result Classes](auxiliary-textresult-index.md)
-> <hr>
-> * [iTextResult](auxiliary-iTextResult.md)
-> * [iLocalizationResult](auxiliary-iLocalizationResult.md)
-> * [iExtendedResult](auxiliary-iExtendedResult.md)
-> * [iAztecDetails](auxiliary-iAztecDetails.md)
-> * [iDataMatrixDetails](auxiliary-iDataMatrixDetails.md)
-> * [iOneDCodeDetails](auxiliary-iOneDCodeDetails.md)
-> * [iPDF417Details](auxiliary-iPDF417Details.md)
-> * [iQRCodeDetails](auxiliary-iQRCodeDetails.md)
-> * [iSamplingImageData](auxiliary-iSamplingImageData.md)
->
-> <hr>
-> ## [Intermediate Result Classes](auxiliary-intermediate-index.md)
-> <hr>
-> * [iIntermediateResult](auxiliary-iIntermediateResult.md)
-> * [iContour](auxiliary-iContour.md)
-> * [iImageData](auxiliary-iImageData.md)
-> * [iLineSegment](auxiliary-iLineSegment.md)
-> * [iRegionOfInterest](auxiliary-iRegionOfInterest.md)
+- [`iDMDLSConnectionParameters`](auxiliary-iDMDLSConnectionParameters.md)
+
+## [Common Classes](auxiliary-common-classes.md)
+
+- [`iDBRPoint`](auxiliary-iDBRPoint.md)
+- [`iRegionDefinition`](auxiliary-iRegionDefinition.md)
+- [`iQuadrilateral`](auxiliary-iQuadrilateral.md)
+
+## [Parameter Configuration](auxiliary-parameter-index.md)
+
+- [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md)
+- [`iFurtherModes`](auxiliary-iFurtherModes.md)
+- [`iFrameDecodingParameters`](auxiliary-iFrameDecodingParameters.md)
+- [`iDCESettingParameters`](auxiliary-iDCESettingParameters.md)
+
+## [Barcode Result Classes](auxiliary-textresult-index.md)
+
+- [`iTextResult`](auxiliary-iTextResult.md)
+- [`iLocalizationResult`](auxiliary-iLocalizationResult.md)
+- [`iExtendedResult`](auxiliary-iExtendedResult.md)
+- [`iAztecDetails`](auxiliary-iAztecDetails.md)
+- [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md)
+- [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.md)
+- [`iPDF417Details`](auxiliary-iPDF417Details.md)
+- [`iQRCodeDetails`](auxiliary-iQRCodeDetails.md)
+- [`iSamplingImageData`](auxiliary-iSamplingImageData.md)
+
+## [Intermediate Result Classes](auxiliary-intermediate-index.md)
+
+- [`iIntermediateResult`](auxiliary-iIntermediateResult.md)
+- [`iContour`](auxiliary-iContour.md)
+- [`iImageData`](auxiliary-iImageData.md)
+- [`iLineSegment`](auxiliary-iLineSegment.md)
+- [`iRegionOfInterest`](auxiliary-iRegionOfInterest.md)

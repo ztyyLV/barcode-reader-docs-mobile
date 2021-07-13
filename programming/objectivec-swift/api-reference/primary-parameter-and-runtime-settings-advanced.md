@@ -66,7 +66,7 @@ func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
     print("isSucc : \(isSuccess) error : \(String(describing: error))")
 }
 let error: NSError? = NSError()
-barcodeReader.initRuntimeSettingsWithFile(fileName:"your template file path", conflictMode:EnumConflictModeOverwrite, error:&error)
+barcodeReader.initRuntimeSettingsWithFile(fileName:"your template file path", conflictMode:EnumConflictMode.overwrite, error:&error)
 ```
 
 ## initRuntimeSettingsWithString
@@ -115,7 +115,7 @@ func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
     print("isSucc : \(isSuccess) error : \(String(describing: error))")
 }
 let error: NSError? = NSError()
-barcodeReader.initRuntimeSettingsWithString(content:"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", conflictMode:EnumConflictMode.Overwrite, error:&error)
+barcodeReader.initRuntimeSettingsWithString(content:"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", conflictMode:EnumConflictMode.overwrite, error:&error)
 ```
 
 ## appendTplFileToRuntimeSettings
@@ -164,7 +164,7 @@ func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
     print("isSucc : \(isSuccess) error : \(String(describing: error))")
 }
 let error: NSError? = NSError()
-barcodeReader.appendTplFileToRuntimeSettings(fileName:"your template file path", conflictMode:EnumConflictMode.Ignore, error:&error)
+barcodeReader.appendTplFileToRuntimeSettings(fileName:"your template file path", conflictMode:EnumConflictMode.ignore, error:&error)
 ```
 
 ## appendTplStringToRuntimeSettings
@@ -215,7 +215,7 @@ func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 }
 let error: NSError? = NSError()
 barcodeReader.initRuntimeSettingsWithString(content:"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", conflictMode:EnumConflictMode.Overwrite, error:&error)
-barcodeReader.appendTplStringToRuntimeSettings(content:"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_OneD\"], \"ExpectedBarcodesCount\":20}}", conflictMode:EnumConflictMode.Ignore, error:&error)
+barcodeReader.appendTplStringToRuntimeSettings(content:"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_OneD\"], \"ExpectedBarcodesCount\":20}}", conflictMode:EnumConflictMode.ignore, error:&error)
 ```
 
 ## allParameterTemplateNames
@@ -334,7 +334,7 @@ Output runtime settings to a string.
 
 ### Return value
 
-The output string which stores the content of current settings. 
+The output string which stores the content of current settings.
 
 ### Code Snippet
 
