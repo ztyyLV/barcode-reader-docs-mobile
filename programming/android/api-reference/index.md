@@ -12,14 +12,14 @@ breadcrumbText: Android API Reference
 
 ## BarcodeReader Methods
 
-### [Initialize and Destroy](primary-initialize-and-destroy.md)
+### Initialize and Destroy
 
   | Method               | Description |
   |----------------------|-------------|
   | [`BarcodeReader`](primary-initialize-and-destroy.md#barcodereader) | Initialization of `BarcodeReader` object.|
   | [`destroy`](primary-initialize-and-destroy.md#destroy) | Destroys an instance of `BarcodeReader` object.|
 
-### [Camera Enhancer](primary-camera.md)
+### Camera Enhancer
   
    | Method               | Description |
    |----------------------|-------------|
@@ -29,7 +29,7 @@ breadcrumbText: Android API Reference
    | [`ResumeCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Resume the process of Dynamsoft Camera Enhancer |
    | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
 
-### [Decode](primary-decode.md)
+### Decode
 
   | Method               | Description |
   |----------------------|-------------|
@@ -41,7 +41,7 @@ breadcrumbText: Android API Reference
   | [`initIntermediateResult`](primary-decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
-### [License](primary-license.md)
+### License
   
   | Method               | Description |
   |----------------------|-------------|
@@ -53,7 +53,7 @@ breadcrumbText: Android API Reference
 
 ### Parameter and Runtime Settings
 
-#### [Basic](primary-parameter-and-runtime-settings-basic.md)
+#### Basic
 
   | Method               | Description |
   |----------------------|-------------|
@@ -63,7 +63,7 @@ breadcrumbText: Android API Reference
   | [`updateRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#updateruntimesettings) | Modify and update the current runtime settings. |
   | [`resetRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
 
-#### [Advanced](primary-parameter-and-runtime-settings-advanced.md)
+#### Advanced
   
   | Method               | Description |
   |----------------------|-------------|
@@ -75,19 +75,19 @@ breadcrumbText: Android API Reference
   | [`outputSettingsToFile`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
   | [`outputSettingsToString`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
 
-### [Result](primary-result.md)
+### Result
 
   | Method               | Description |
   |----------------------|-------------|
   | [`getIntermediateResults`](primary-result.md#getintermediateresults) | Get intermediate results. |
 
-### [Status Retrieval](primary-status-retrieval.md)
+### Status Retrieval
 
   | Method               | Description |
   |----------------------|-------------|
   | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
 
-### [Video](primary-video.md)
+### Video
 
 #### Decode
 
@@ -118,7 +118,7 @@ breadcrumbText: Android API Reference
    |----------------------|-------------|
    | [`getLengthOfFrameQueue`](primary-video.md#getlengthofframequeue) | Get length of current inner frame queue. |
 
-## [Interface](interface.md)
+## Interface
 
   | Function | Description |
   |----------|-------------|
@@ -129,7 +129,7 @@ breadcrumbText: Android API Reference
 
 ## [Error Code]({{ site.enumerations }}error-code.html)
 
-## [Classes]({{site.android_class}})
+## Classes
 
 - [`AztecDetails`](auxiliary-AztecDetails.md)
 - [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
@@ -154,7 +154,7 @@ breadcrumbText: Android API Reference
 - [`SamplingImageData`](auxiliary-SamplingImageData.md)
 - [`TextResult`](auxiliary-TextResult.md)
 
-## [Enumerations]({{site.enumerations}})
+## Enumerations
 
 - [`EnumAccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)
 - [`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)

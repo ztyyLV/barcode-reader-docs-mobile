@@ -14,11 +14,16 @@ Dynamsoft Barcode Reader Android SDK enables users to easily develop on Android 
 
 ## High-Speed Barcode Decoding
 
-Dynamsoft Barcode Reader algorithm can deal with 1400+ barcodes in one minute and get 500+ unique barcode results. To enable your app reach the highest barcode decoding speed in different usage scenarios, you must understand what are the factors that influences the decoding speed and how to make specialized parameter settings for your usage scenario. Regardless the image quality, the main factors that influence the barcode decoding speed are:
+Dynamsoft Barcode Reader algorithm can deal with 1400+ barcodes in one minute and get 500+ unique barcode results. To reach the maximum efficiency of Dynamsoft Barcode Reader, you must make the beat parameter configuration for your usage scenarios. Regardless of the image quality, the following three parameters are the main factors that influence the decoding speed of your app.
 
-- The complexity of the expected barcode formats.
-- The pixel size of the scan area.
-- The barcode count in the scan area.
+### The complexity of the expected barcode formats
+
+### The pixel size of the scan area
+
+### The barcode count in the scan area
+
+- If the usage scenarios of your app is unknown, please set this value 0.
+- If the usage scenarios of your app is confirmed, please set this value exactly the number you want to scan
 
 To maximum you app's performance, please firstly define the ranges of these parameters in your usage scenarios. You can update parameters throw [`PublicRuntimeSetting`](api-reference/auxiliary-PublicRuntimeSettings.md) class so that your app can reach the expected performance.
 

@@ -26,19 +26,19 @@ NSString* license
 
 ## BarcodeReader Class
 
-### [Initialize](primary-initialize.md)
+### Initialize
   
   | Method               | Description |
   |----------------------|-------------|
   | [`init`](primary-initialize.md#init) | Create an instance of Dynamsoft Barcode Reader. |
 
-### [Camera Enhancer](primary-camera.md)
+### Camera Enhancer
   
    | Method               | Description |
    |----------------------|-------------|
    | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
 
-### [Decode](primary-decode.md)
+### Decode
 
   | Method               | Description |
   |----------------------|-------------|
@@ -51,7 +51,7 @@ NSString* license
 
 ### Parameter and Runtime Settings
 
-#### [Basic](primary-parameter-and-runtime-settings-basic.md)
+#### Basic
   
   | Method               | Description |
   |----------------------|-------------|
@@ -61,7 +61,7 @@ NSString* license
   | [`updateRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#updateruntimesettings) | Modify and update the current runtime settings. |
   | [`resetRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
 
-#### [Advanced](primary-parameter-and-runtime-settings-advanced.md)
+#### Advanced
   
   | Method               | Description |
   |----------------------|-------------|
@@ -73,7 +73,7 @@ NSString* license
   | [`outputSettingsToFile`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
   | [`outputSettingsToString`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
 
-### [License](primary-license.md)
+### License
 
   | Method               | Description |
   |----------------------|-------------|
@@ -82,13 +82,13 @@ NSString* license
   | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |
   | [`initLicenseFromLTS`](primary-license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
 
-### [Result](primary-result.md)
+### Result
 
   | Method               | Description |
   |----------------------|-------------|
   | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
 
-### [Video](primary-video.md)
+### Video
 
 #### Decode
 
@@ -121,7 +121,7 @@ NSString* license
 
 ## [Error Code]({{ site.enumerations }}error-code.html)
 
-## [Classes](auxiliary-index.md)
+## Classes
 
 - [`iAztecDetails`](auxiliary-iAztecDetails.md)
 - [`iContour`](auxiliary-iContour.md)
@@ -146,7 +146,7 @@ NSString* license
 - [`iSamplingImageData`](auxiliary-iSamplingImageData.md)
 - [`iTextResult`](auxiliary-iTextResult.md)
 
-## [Enumerations]({{ site.enumerations }})
+## Enumerations
 
 - [`EnumAccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)
 - [`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)
