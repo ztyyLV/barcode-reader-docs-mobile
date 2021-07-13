@@ -22,10 +22,12 @@ Dynamsoft Barcode Reader algorithm can deal with 1400+ barcodes in one minute an
 
 ### The barcode count in the scan area
 
-- If the usage scenarios of your app is unknown, please set this value 0.
+The barcode reader will try to find as many barcodes as the given value. As a result, the less expected barcode count is, the higher decoding speed will be.
+
+- If the usage scenarios of your app is unknown, please set this value 0. The barcode reader will try to find at least 1 barcode.
 - If the usage scenarios of your app is confirmed, please set this value exactly the number you want to scan
 
-To maximum you app's performance, please firstly define the ranges of these parameters in your usage scenarios. You can update parameters throw [`PublicRuntimeSetting`](api-reference/auxiliary-PublicRuntimeSettings.md) class so that your app can reach the expected performance.
+To maximum your app's performance, please firstly define the ranges of these parameters in your usage scenarios. You can update parameters throw [`PublicRuntimeSetting`](api-reference/auxiliary-PublicRuntimeSettings.md) class so that your app can reach the expected performance.
 
 ## High-Accuracy Strategies
 

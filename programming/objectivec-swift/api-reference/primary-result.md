@@ -13,11 +13,12 @@ needAutoGenerateSidebar: true
   | [`getIntermediateResult`](#getintermediateresult) | Get intermediate results. |
   | [`enableResultVerification`](#enableresultverification) | Result will be verified before output. |
   | [`enableDuplicateFilter`](#enableduplicatefilter) | Duplicate results will be filtered and output only once for every 3 seconds |
----
+
+  ---
 
 ## getIntermediateResult
 
-Return intermediate results containing the original image, the colour clustered image, the binarized image, contours, lines, text blocks, etc.
+Return intermediate results containing the original image, the color clustered image, the binarized image, contours, lines, text blocks, etc.
 
 ```objc
 -(NSArray<iIntermediateResult*>* _Nullable)getIntermediateResult:(NSError* _Nullable *  _Nullable)error;
