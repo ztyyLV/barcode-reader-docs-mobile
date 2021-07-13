@@ -12,14 +12,14 @@ breadcrumbText: Android API Reference
 
 ## BarcodeReader Methods
 
-### Initialize and Destroy
+### [Initialize and Destroy](primary-initialize-and-destroy.md)
 
   | Method               | Description |
   |----------------------|-------------|
   | [`BarcodeReader`](primary-initialize-and-destroy.md#barcodereader) | Initialization of `BarcodeReader` object.|
   | [`destroy`](primary-initialize-and-destroy.md#destroy) | Destroys an instance of `BarcodeReader` object.|
 
-### Camera Enhancer
+### [Camera Enhancer](primary-camera.md)
   
    | Method               | Description |
    |----------------------|-------------|
@@ -29,7 +29,7 @@ breadcrumbText: Android API Reference
    | [`ResumeCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Resume the process of Dynamsoft Camera Enhancer |
    | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
 
-### Decode
+### [Decode](primary-decode.md)
 
   | Method               | Description |
   |----------------------|-------------|
@@ -41,7 +41,7 @@ breadcrumbText: Android API Reference
   | [`initIntermediateResult`](primary-decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
-### License
+### [License](primary-license.md)
   
   | Method               | Description |
   |----------------------|-------------|
@@ -53,7 +53,7 @@ breadcrumbText: Android API Reference
 
 ### Parameter and Runtime Settings
 
-#### Basic
+#### [Basic](primary-parameter-and-runtime-settings-basic.md)
 
   | Method               | Description |
   |----------------------|-------------|
@@ -63,7 +63,7 @@ breadcrumbText: Android API Reference
   | [`updateRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#updateruntimesettings) | Modify and update the current runtime settings. |
   | [`resetRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
 
-#### Advanced
+#### [Advanced](primary-parameter-and-runtime-settings-advanced.md)
   
   | Method               | Description |
   |----------------------|-------------|
@@ -75,19 +75,19 @@ breadcrumbText: Android API Reference
   | [`outputSettingsToFile`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
   | [`outputSettingsToString`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
 
-### Result
+### [Result](primary-result.md)
 
   | Method               | Description |
   |----------------------|-------------|
   | [`getIntermediateResults`](primary-result.md#getintermediateresults) | Get intermediate results. |
 
-### Status Retrieval
+### [Status Retrieval](primary-status-retrieval.md)
 
   | Method               | Description |
   |----------------------|-------------|
   | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
 
-### Video
+### [Video](primary-video.md)
 
 #### Decode
 
@@ -118,7 +118,7 @@ breadcrumbText: Android API Reference
    |----------------------|-------------|
    | [`getLengthOfFrameQueue`](primary-video.md#getlengthofframequeue) | Get length of current inner frame queue. |
 
-## Interface
+## [Interface](interface.md)
 
   | Function | Description |
   |----------|-------------|

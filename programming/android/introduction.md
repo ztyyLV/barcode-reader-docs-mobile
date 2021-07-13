@@ -10,7 +10,7 @@ breadcrumbText: Android introduction
 
 # Dynamsoft Barcode Reader - Android SDK
 
-Dynamsoft Barcode Reader Android SDK enable users to easily develop on Android barcode reading apps.
+Dynamsoft Barcode Reader Android SDK enables users to easily develop on Android barcode reading apps.
 
 ## High-Speed Barcode Decoding
 
