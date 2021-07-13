@@ -23,7 +23,7 @@ needAutoGenerateSidebar: true
 | `barcodeText` | *NSString \** | The barcode text, ends by '\0'. |
 | `barcodeBytes` | *NSData \** | The barcode content in a byte array. |
 | `localizationResult` | [`iLocalizationResult`](auxiliary-iLocalizationResult.md) | The corresponding localization result. |
-| `detailedResult` | *NSObject \** | One of the following: [`QRCodeDetails`](#qrcodedetails), [`PDF417Details`](#pdf417details), [`DataMatrixDetails`](#datamatrixdetails), [`AztecDetails`](#aztecdetails), [`OneDCodeDetails`](#onedcodedetails). |
+| `detailedResult` | *NSObject \** | One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.md), [`iPDF417Details`](auxiliary-iPDF417Details.md), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`iAztecDetails`](auxiliary-iAztecDetails.md), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.md). |
 | `extendedResults` | [`NSArray<iExtendedResult>`](auxiliary-iExtendedResult.md) | The extended result array. |
 | `exception` | *NSString \** | The exception message. |
 | `isDPM` | *NSInteger* | This attribute stands for whether the result is a DPM result. |
