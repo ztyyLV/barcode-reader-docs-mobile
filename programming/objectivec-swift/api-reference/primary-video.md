@@ -100,7 +100,7 @@ barcodeReader.startFrameDecoding(maxQueueLength:2, maxResultQueueLength:10, widt
 
 ## startFrameDecodingEx
 
-Start a new thread to decode barcodes from the inner frame queue with specific frame decoding setting defined in [`iFrameDecodingParameters`](../class/iFrameDecodingParameters.md) struct.
+Start a new thread to decode barcodes from the inner frame queue with specific frame decoding setting defined in [`iFrameDecodingParameters`](auxiliary-iFrameDecodingParameters.md) struct.
 
 ```objc
 -(void)startFrameDecodingEx:(iFrameDecodingParameters* _Nullable) parameters
@@ -399,7 +399,7 @@ barcodeReader.setDBRTextResultDelegate(textResultDelegate:self, userData:nil)
 Set callback function to process intermediate results generated during frame decoding.
 
 ```objc
--(void)setDBRIntermediateResultDelegate:(id _Nullable)intermediateResultDelegate userData:(NSObject* _Nullable)userData;	
+-(void)setDBRIntermediateResultDelegate:(id _Nullable)intermediateResultDelegate userData:(NSObject* _Nullable)userData;
 ```
 
 ### Parameters

@@ -17,12 +17,13 @@ needGenerateH3Content: false
   | [`initLicenseFromLicenseContent`](#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
   | [`outputLicenseToString`](#outputlicensetostring) | Output the license content to a string from the license server. |
   | [`initLicenseFromDLS`](#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`initLicenseFromLTS`](primary-license.md#initlicensefromlts) | `Deprecated`, please use [initLicenseFromDLS](#initlicensefromdls) instead. |
 
   ---
 
 ## initLicense
 
-Read product key and activate the SDK.
+Read the product key and activate the SDK.
 
 ```java
 void com.dynamsoft.dbr.BarcodeReader.initLicense(String license) throws BarcodeReaderException
@@ -158,3 +159,7 @@ reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
    }
 });
 ```
+
+## initLicenseFromLTS
+
+`Deprecated`, please use [initLicenseFromDLS](#initlicensefromdls) instead.

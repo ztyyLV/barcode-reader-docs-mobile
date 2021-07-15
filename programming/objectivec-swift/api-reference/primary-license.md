@@ -13,7 +13,8 @@ needAutoGenerateSidebar: true
   | [`initWithLicense`](#initwithlicense) | Initializes DynamsoftBarcodeReader with a license. |
   | [`initWithLicenseFromServer`](#initwithlicensefromserver) | Initialize license and connect to the specified server for online verification. |
   | [`outputLicenseToString`](#outputlicensetostring) | Outputs the license content as an encrypted string from the license server to be used for offline license verification. |
-  | [`initLicenseFromDLS`](#initLicenseFromDLS) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`initLicenseFromDLS`](#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`initLicenseFromLTS`](#initlicensefromlts) | `Deprecated`, please use [initLicenseFromDLS](#initlicensefromdls) instead. |
 
   ---
 
@@ -177,3 +178,7 @@ func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
     print("isSucc : \(isSuccess) error : \(String(describing: error))")
 }
 ```
+
+## initLicenseFromLTS
+
+`Deprecated`. Please use [initLicenseFromDLS](#initlicensefromdls) instead.

@@ -49,7 +49,8 @@ breadcrumbText: Android API Reference
   | [`initLicenseFromServer`](primary-license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
   | [`initLicenseFromLicenseContent`](primary-license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
   | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLicenseFromLTS`](primary-license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`initLicenseFromLTS`](primary-license.md#initlicensefromlts) | `Deprecated`, please use [initLicenseFromDLS](#initlicensefromdls) instead. |
 
 ### Parameter and Runtime Settings
 
