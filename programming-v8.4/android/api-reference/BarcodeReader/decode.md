@@ -351,4 +351,3 @@ reader.decodeFile("your file path", "");
 IntermediateResult[] irtResult = reader.getIntermediateResults();
 TextResult[] result = reader.decodeIntermediateResults(irtResult, "");
 ```
-

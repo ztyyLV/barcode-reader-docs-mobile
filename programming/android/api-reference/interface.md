@@ -3,21 +3,19 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Android API Reference - Interface
 description: This page shows all interfaces of Dynamsoft Barcode Reader for Android SDK.
 keywords: ErrorCallback, IntermediateResultCallback, TextResultCallback, DBRServerLicenseVerificationListener, interface, api reference, android
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: false
 ---
 
-
-# Android API Reference - Interface
+# Interfaces
 
   | Function | Description |
   |----------|-------------|
   | [`ErrorCallback`](#errorcallback) | Represents the method that will handle the error code returned by the SDK. |
   | [`IntermediateResultCallback`](#intermediateresultcallback) | Represents the method that will handle the intermediate result array returned by the SDK. |
   | [`TextResultCallback`](#textresultcallback) | Represents the method that will handle the text result array returned by the SDK. |
-  | [`DBRServerLicenseVerificationListener`](#dbrserverlicenseverificationlistener) | Represents the method that will
-   handle callback when license server returns. |
-  | [`DBRLTSLicenseVerificationListener`](#dbrltslicenseverificationlistener) | Represents the method that will
-   handle callback when license tracking server returns. |
+  | [`DBRServerLicenseVerificationListener`](#dbrserverlicenseverificationlistener) | Represents the method that will handle callback when license server returns. |
+  | [`DBRDLSLicenseVerificationListener`](#dbrdlslicenseverificationlistener) | Represents the method that will handle callback when license tracking server returns. |
   
 ---
 
@@ -26,7 +24,7 @@ needAutoGenerateSidebar: false
 Represents the method that will handle the error code returned by the SDK.
 
 ```java
-void com.dynamsoft.dbr.ErrorCallback.errorCallback(int frameId, int errorCode, Object userData)	
+void com.dynamsoft.dbr.ErrorCallback.errorCallback(int frameId, int errorCode, Object userData)
 ```
 
 ### Parameters
@@ -40,7 +38,7 @@ void com.dynamsoft.dbr.ErrorCallback.errorCallback(int frameId, int errorCode, O
 Represents the method that will handle the intermediate result array returned by the SDK.
 
 ```java
-void com.dynamsoft.dbr.IntermediateResultCallback.intermediateResultCallback(int frameId, IntermediateResult[] results, Object userData)	
+void com.dynamsoft.dbr.IntermediateResultCallback.intermediateResultCallback(int frameId, IntermediateResult[] results, Object userData)
 ```
 
 ### Parameters
@@ -51,7 +49,7 @@ void com.dynamsoft.dbr.IntermediateResultCallback.intermediateResultCallback(int
 
 ### See Also
 
-[IntermediateResult](class/IntermediateResult.md)
+[IntermediateResult](auxiliary-IntermediateResult.md)
 
 ## TextResultCallback
 
@@ -69,7 +67,7 @@ void textResultCallback(int frameId, TextResult[] results, Object userData)
 
 ### See Also
 
-[TextResult](class/TextResult.md)
+[TextResult](auxiliary-TextResult.md)
 
 ## DBRServerLicenseVerificationListener
 
@@ -84,12 +82,12 @@ void com.dynamsoft.dbr.DBRServerLicenseVerificationListener.licenseVerificationC
 - `isSuccess`: Whether the license verification was successful.
 - `error`: The error message from license server.
 
-## DBRLTSLicenseVerificationListener
+## DBRDLSLicenseVerificationListener
 
 Represents the method that will handle callback when license tracking server returns.
 
 ```java
-void com.dynamsoft.dbr.DBRLTSLicenseVerificationListener.licenseVerificationCallback (boolean isSuccess, Exception error)
+void com.dynamsoft.dbr.DBRDLSLicenseVerificationListener.licenseVerificationCallback (boolean isSuccess, Exception error)
 ```
 
 ### Parameters

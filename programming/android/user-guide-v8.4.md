@@ -1,10 +1,10 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - User Guide v8.4
+title: Dynamsoft Barcode Reader for Android - User Guide
 description: This is the user guide of Dynamsoft Barcode Reader for Android SDK.
-keywords: user guide v8.4, android
+keywords: user guide, android
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
@@ -31,7 +31,7 @@ You can add Dynamsoft Barcode Reader like below:
 
 1. Add download URL in your project's `build.gradle`.
 
-   ```java
+   ```groovy
     allprojects {
       repositories {
          google()
@@ -45,13 +45,13 @@ You can add Dynamsoft Barcode Reader like below:
 
 2. Implement Dynamsoft Barcode Reader at dependencies in your module's `build.gradle`.
 
-   ```java
+   ```groovy
    implementation 'com.dynamsoft:dynamsoftbarcodereader:{version-number}@aar'
    ```
 
    Please replace `{version-number}` with the correct version number, e.g.
 
-   ```java
+   ```groovy
    implementation 'com.dynamsoft:dynamsoftbarcodereader:8.1.2@aar'
    ```
 
@@ -66,7 +66,7 @@ You can add Dynamsoft Barcode Reader like below:
       ii. Put the .aar file under the directory libs in the project.
       iii. In the project, open build.gradle(Module: app) and add the following code:
 
-      ```java
+      ```groovy
       repositories {
          flatDir {
             dirs 'libs'
@@ -76,7 +76,7 @@ You can add Dynamsoft Barcode Reader like below:
 
       ii. Add `.aar` reference in the dependencies:
 
-      ```java
+      ```groovy
       implementation(name: 'DynamsoftBarcodeReaderAndroid', ext: 'aar')
       ```
 
@@ -86,7 +86,7 @@ You can add Dynamsoft Barcode Reader like below:
 
       i. In the new project, open `build.gradle(module:app)` and add the following code:
 
-      ```java
+      ```groovy
       allprojects {
          repositories {
             maven {
@@ -98,7 +98,7 @@ You can add Dynamsoft Barcode Reader like below:
 
       ii. Then add `.aar` reference in the dependencies as below:
 
-      ```java
+      ```groovy
       implementation 'com.dynamsoft:dynamsoftbarcodereader:{version number}@aar'
       ```
 
@@ -106,7 +106,7 @@ You can add Dynamsoft Barcode Reader like below:
 
 3. Add the following code to initiate and use the Dynamsoft Barcode Reader SDK.
 
-    ```java
+   ```java
    import com.dynamsoft.dbr.BarcodeReader;
    import com.dynamsoft.dbr.TextResult;
    import android.util.Log;
@@ -116,16 +116,7 @@ You can add Dynamsoft Barcode Reader like below:
          super.onCreate(savedInstanceState);
          setContentView(R.layout.activity_main);
          try {
-            BarcodeReader dbr = new BarcodeReader();
-            reader = new BarcodeReader();
-            com.dynamsoft.dbr.DMLTSConnectionParameters parameters = new com.dynamsoft.dbr.DMLTSConnectionParameters();
-            parameters.organizationID = "Put your organizationID here";
-            reader.initLicenseFromLTS(parameters, new DBRLTSLicenseVerificationListener() {
-                @Override
-                public void LTSLicenseVerificationCallback(boolean b, Exception e) {
-                    if (!b) { e.printStackTrace(); }
-                }
-            });
+            BarcodeReader dbr = new BarcodeReader("your license here");
             // Note: If you do not have a valid license for the SDK, some characters of the barcode results will be replaced with "***".
             // Leave the template name empty ("") will use the settings from PublicRuntimeSettings.
             TextResult[] results = dbr.decodeFile("put your file path here", "");
@@ -139,12 +130,12 @@ You can add Dynamsoft Barcode Reader like below:
             } else {
                Log.i("DBR", "No barcode found");
             }
-         } catch (BarcodeReaderException e) {
-            e.printStackTrace();
+         } catch (Exception ex) {
+            ex.printStackTrace();
          }
       }
    }
-    ```
+   ```
 
 4. Run the project.
 
@@ -216,7 +207,7 @@ reader.destroy();
 #### Specify a scan region
 
 By default, the barcode reader will search the whole image for barcodes. This can lead to poor performance especially when
-dealing with high-resolution images. You can speed up the recognition process by restricting the scanning region.   
+dealing with high-resolution images. You can speed up the recognition process by restricting the scanning region.
 
 To specify a region, you will need to define an area. The following code shows how to create a template string and define the region.  
 

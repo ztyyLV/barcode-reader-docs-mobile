@@ -3,17 +3,12 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Android API Reference - Main Page
 description: This is the main page of Dynamsoft Barcode Reader for Android SDK API Reference.
 keywords: api reference, android
-needAutoGenerateSidebar: false
-breadcrumbText: API Reference
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
+breadcrumbText: Android API Reference
 ---
 
 # Dynamsoft Barcode Reader SDK - Android API Reference
-
-- [`BarcodeReader` Methods](#barcodereader-methods)
-- [Interface](#interface)
-- [Error Code](#error-code)
-- [Classes](#classes)  
-- [Enumerations](#enumerations)
 
 ## BarcodeReader Methods
 
@@ -21,40 +16,41 @@ breadcrumbText: API Reference
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`BarcodeReader`](BarcodeReader/initialize-and-destroy.md#barcodereader) | Initialization of `BarcodeReader` object.|
-  | [`destroy`](BarcodeReader/initialize-and-destroy.md#destroy) | Destroys an instance of `BarcodeReader` object.|
+  | [`BarcodeReader`](primary-initialize-and-destroy.md#barcodereader) | Initialization of `BarcodeReader` object.|
+  | [`destroy`](primary-initialize-and-destroy.md#destroy) | Destroys an instance of `BarcodeReader` object.|
 
 ### Camera Enhancer
   
    | Method               | Description |
    |----------------------|-------------|
-   | [`StartCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Start using Dynamsoft Camera Enhancer |
-   | [`StopCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Stop using Dynamsoft Camera Enhancer |
-   | [`PauseCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
-   | [`ResumeCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Resume the process of Dynamsoft Camera Enhancer |
-   | [`SetCameraEnhancerParam`](BarcodeReader/camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
+   | [`StartCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Start using Dynamsoft Camera Enhancer |
+   | [`StopCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Stop using Dynamsoft Camera Enhancer |
+   | [`PauseCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
+   | [`ResumeCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Resume the process of Dynamsoft Camera Enhancer |
+   | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
 
 ### Decode
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`decodeFile`](BarcodeReader/decode.md#decodefile) | Decode barcodes from a specified image file. |
-  | [`decodeFileInMemory`](BarcodeReader/decode.md#decodefileinmemory) | Decode barcodes from an image file in memory. |
-  | [`decodeBuffer`](BarcodeReader/decode.md#decodebuffer) | Decode barcodes from raw buffer. |
-  | [`decodeBase64String`](BarcodeReader/decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
-  | [`decodeBufferedImage`](BarcodeReader/decode.md#decodebufferedimage) | Decodes barcode from a buffered image (bitmap). |
-  | [`initIntermediateResult`](BarcodeReader/decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`decodeIntermediateResults`](BarcodeReader/decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
+  | [`decodeFile`](primary-decode.md#decodefile) | Decode barcodes from a specified image file. |
+  | [`decodeFileInMemory`](primary-decode.md#decodefileinmemory) | Decode barcodes from an image file in memory. |
+  | [`decodeBuffer`](primary-decode.md#decodebuffer) | Decode barcodes from raw buffer. |
+  | [`decodeBase64String`](primary-decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
+  | [`decodeBufferedImage`](primary-decode.md#decodebufferedimage) | Decodes barcode from a buffered image (bitmap). |
+  | [`initIntermediateResult`](primary-decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
+  | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 ### License
   
   | Method               | Description |
   |----------------------|-------------|
-  | [`initLicense`](BarcodeReader/license.md#initlicense) | Read product key and activate the SDK. |
-  | [`initLicenseFromServer`](BarcodeReader/license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
-  | [`initLicenseFromLicenseContent`](BarcodeReader/license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
-  | [`outputLicenseToString`](BarcodeReader/license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLicenseFromLTS`](BarcodeReader/license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
+  | [`initLicenseFromServer`](primary-license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
+  | [`initLicenseFromLicenseContent`](primary-license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
+  | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |
+  | [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`initLicenseFromLTS`](primary-license.md#initlicensefromlts) | `Deprecated`, please use [initLicenseFromDLS](primary-license.md#initlicensefromdls) instead. |
 
 ### Parameter and Runtime Settings
 
@@ -62,35 +58,35 @@ breadcrumbText: API Reference
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`setModeArgument`](BarcodeReader/parameter-and-runtime-settings-basic.md#setmodeargument) | Set argument value for the specified mode parameter. |
-  | [`getModeArgument`](BarcodeReader/parameter-and-runtime-settings-basic.md#getmodeargument) | Get argument value for the specified mode parameter. |
-  | [`getRuntimeSettings`](BarcodeReader/parameter-and-runtime-settings-basic.md#getruntimesettings) | Get current runtime settings. |
-  | [`updateRuntimeSettings`](BarcodeReader/parameter-and-runtime-settings-basic.md#updateruntimesettings) | Modify and update the current runtime settings. |
-  | [`resetRuntimeSettings`](BarcodeReader/parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
+  | [`setModeArgument`](primary-parameter-and-runtime-settings-basic.md#setmodeargument) | Set argument value for the specified mode parameter. |
+  | [`getModeArgument`](primary-parameter-and-runtime-settings-basic.md#getmodeargument) | Get argument value for the specified mode parameter. |
+  | [`getRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#getruntimesettings) | Get current runtime settings. |
+  | [`updateRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#updateruntimesettings) | Modify and update the current runtime settings. |
+  | [`resetRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
 
 #### Advanced
   
   | Method               | Description |
   |----------------------|-------------|
-  | [`initRuntimeSettingsWithFile`](BarcodeReader/parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile)  | Initialize runtime settings with the settings in a given JSON file. |
-  | [`initRuntimeSettingsWithString`](BarcodeReader/parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) | Initialize runtime settings with the settings in a given JSON string. |
-  | [`appendTplFileToRuntimeSettings`](BarcodeReader/parameter-and-runtime-settings-advanced.md#appendtplfiletoruntimesettings) | Append a new template file to the current runtime settings. |
-  | [`appendTplStringToRuntimeSettings`](BarcodeReader/parameter-and-runtime-settings-advanced.md#appendtplstringtoruntimesettings) | Append a new template string to the current runtime settings. |
-  | [`getAllParameterTemplateNames`](BarcodeReader/parameter-and-runtime-settings-advanced.md#getallparametertemplatenames) | Gets the parameter templates name array. |
-  | [`outputSettingsToFile`](BarcodeReader/parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
-  | [`outputSettingsToString`](BarcodeReader/parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
+  | [`initRuntimeSettingsWithFile`](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile)  | Initialize runtime settings with the settings in a given JSON file. |
+  | [`initRuntimeSettingsWithString`](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) | Initialize runtime settings with the settings in a given JSON string. |
+  | [`appendTplFileToRuntimeSettings`](primary-parameter-and-runtime-settings-advanced.md#appendtplfiletoruntimesettings) | Append a new template file to the current runtime settings. |
+  | [`appendTplStringToRuntimeSettings`](primary-parameter-and-runtime-settings-advanced.md#appendtplstringtoruntimesettings) | Append a new template string to the current runtime settings. |
+  | [`getAllParameterTemplateNames`](primary-parameter-and-runtime-settings-advanced.md#getallparametertemplatenames) | Gets the parameter templates name array. |
+  | [`outputSettingsToFile`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
+  | [`outputSettingsToString`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
 
 ### Result
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`getIntermediateResults`](BarcodeReader/result.md#getintermediateresults) | Get intermediate results. |
+  | [`getIntermediateResults`](primary-result.md#getintermediateresults) | Get intermediate results. |
 
 ### Status Retrieval
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`getVersion`](BarcodeReader/status-retrieval.md#getversion) | Get version information of SDK.|
+  | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
 
 ### Video
 
@@ -98,30 +94,30 @@ breadcrumbText: API Reference
 
    | Method               | Description |
    |----------------------|-------------|
-   | [`startFrameDecoding`](BarcodeReader/video.md#startframedecoding) | Decode barcodes from inner frame queue. |
-   | [`startFrameDecodingEx`](BarcodeReader/video.md#startframedecodingex) | Decode barcodes from inner frame queue. |
-   | [`appendFrame`](BarcodeReader/video.md#appendframe) | Append a frame image buffer to the inner frame queue. |
-   | [`stopFrameDecoding`](BarcodeReader/video.md#stopframedecoding) | Stop thread used for frame decoding. |
+   | [`startFrameDecoding`](primary-video.md#startframedecoding) | Decode barcodes from inner frame queue. |
+   | [`startFrameDecodingEx`](primary-video.md#startframedecodingex) | Decode barcodes from inner frame queue. |
+   | [`appendFrame`](primary-video.md#appendframe) | Append a frame image buffer to the inner frame queue. |
+   | [`stopFrameDecoding`](primary-video.md#stopframedecoding) | Stop thread used for frame decoding. |
 
 #### Parameter
 
    | Method               | Description |
    |----------------------|-------------|
-   | [`initFrameDecodingParameters`](BarcodeReader/video.md#initframedecodingparameters) | Initialize frame decoding parameter. |
+   | [`initFrameDecodingParameters`](primary-video.md#initframedecodingparameters) | Initialize frame decoding parameter. |
 
 #### Callback
 
    | Method               | Description |
    |----------------------|-------------|
-   | [`setErrorCallback`](BarcodeReader/video.md#seterrorcallback) | Set callback interface to process errors generated during frame decoding. |
-   | [`setTextResultCallback`](BarcodeReader/video.md#settextresultcallback) | Set callback interface to process text results generated during frame decoding. |
-   | [`setIntermediateResultCallback`](BarcodeReader/video.md#setintermediateresultcallback) | Set callback interface to process intermediate results generated during frame decoding. |
+   | [`setErrorCallback`](primary-video.md#seterrorcallback) | Set callback interface to process errors generated during frame decoding. |
+   | [`setTextResultCallback`](primary-video.md#settextresultcallback) | Set callback interface to process text results generated during frame decoding. |
+   | [`setIntermediateResultCallback`](primary-video.md#setintermediateresultcallback) | Set callback interface to process intermediate results generated during frame decoding. |
 
 #### Status retrieval
 
    | Method               | Description |
    |----------------------|-------------|
-   | [`getLengthOfFrameQueue`](BarcodeReader/video.md#getlengthofframequeue) | Get length of current inner frame queue. |
+   | [`getLengthOfFrameQueue`](primary-video.md#getlengthofframequeue) | Get length of current inner frame queue. |
 
 ## Interface
 
@@ -129,37 +125,37 @@ breadcrumbText: API Reference
   |----------|-------------|
   | [`ErrorCallback`](interface.md#errorcallback) | Represents the method that will handle the error code returned by the SDK. |
   | [`IntermediateResultCallback`](interface.md#intermediateresultcallback) | Represents the method that will handle the intermediate result array returned by the SDK. |
-  | [`TextResultCallback`](interface.md#cb_textresult) | Represents the method that will handle the text result array returned by the SDK. | 
-  | [`DBRServerLicenseVerificationListener`](interface.md#dbrserverlicenseverificationlistener) | Represents the method that will handle callback when license server returns. | 
+  | [`TextResultCallback`](interface.md#cb_textresult) | Represents the method that will handle the text result array returned by the SDK. |
+  | [`DBRServerLicenseVerificationListener`](interface.md#dbrserverlicenseverificationlistener) | Represents the method that will handle callback when license server returns. |
 
 ## [Error Code]({{ site.enumerations }}error-code.html)
 
-## [Classes]({{site.android_class}})
+## Classes
 
-- [`AztecDetails`](class/AztecDetails.md)
-- [`BarcodeReaderException`](class/BarcodeReaderException.md)
-- [`Contour`](class/Contour.md)
-- [`DataMatrixDetails`](class/DataMatrixDetails.md)
-- [`DCESettingParameters`](class/DCESettingParameters.md)
-- [`DMLTSConnectionParameters`](class/DMLTSConnectionParameters.md)
-- [`ExtendedResult`](class/ExtendedResult.md)
-- [`FrameDecodingParameters`](class/FrameDecodingParameters.md)
-- [`FurtherModes`](class/FurtherModes.md)
-- [`ImageData`](class/ImageData.md)
-- [`IntermediateResult`](class/IntermediateResult.md)
-- [`LineSegment`](class/LineSegment.md)
-- [`LocalizationResult`](class/LocalizationResult.md)
-- [`OneDCodeDetails`](class/OneDCodeDetails.md)
-- [`PDF417Details`](class/PDF417Details.md)
-- [`PublicRuntimeSettings`](class/PublicRuntimeSettings.md)
-- [`QRCodeDetails`](class/QRCodeDetails.md)
-- [`Quadrilateral`](class/Quadrilateral.md)
-- [`RegionDefinition`](class/RegionDefinition.md)
-- [`RegionOfInterest`](class/RegionOfInterest.md)
-- [`SamplingImageData`](class/SamplingImageData.md)
-- [`TextResult`](class/TextResult.md)
+- [`AztecDetails`](auxiliary-AztecDetails.md)
+- [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+- [`Contour`](auxiliary-Contour.md)
+- [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md)
+- [`DCESettingParameters`](auxiliary-DCESettingParameters.md)
+- [`DMLTSConnectionParameters`](auxiliary-DMLTSConnectionParameters.md)
+- [`ExtendedResult`](auxiliary-ExtendedResult.md)
+- [`FrameDecodingParameters`](auxiliary-FrameDecodingParameters.md)
+- [`FurtherModes`](auxiliary-FurtherModes.md)
+- [`ImageData`](auxiliary-ImageData.md)
+- [`IntermediateResult`](auxiliary-IntermediateResult.md)
+- [`LineSegment`](auxiliary-LineSegment.md)
+- [`LocalizationResult`](auxiliary-LocalizationResult.md)
+- [`OneDCodeDetails`](auxiliary-OneDCodeDetails.md)
+- [`PDF417Details`](auxiliary-PDF417Details.md)
+- [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md)
+- [`QRCodeDetails`](auxiliary-QRCodeDetails.md)
+- [`Quadrilateral`](auxiliary-Quadrilateral.md)
+- [`RegionDefinition`](auxiliary-RegionDefinition.md)
+- [`RegionOfInterest`](auxiliary-RegionOfInterest.md)
+- [`SamplingImageData`](auxiliary-SamplingImageData.md)
+- [`TextResult`](auxiliary-TextResult.md)
 
-## [Enumerations]({{site.enumerations}})
+## Enumerations
 
 - [`EnumAccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)
 - [`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)
