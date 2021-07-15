@@ -130,8 +130,8 @@ func configurationDCE() {
     dceView = DCECaptureView.init(view: self.view.bounds)
     dceView.addOverlay()
     self.view.addSubview(dceView)
-    let lts = iDCEdlsConnectionParameters()
-    lts.organizationID = "Put your organizationID here"
+    let dls = iDCEdlsConnectionParameters()
+    dls.organizationID = "Put your organizationID here"
     dce = DynamsoftCameraEnhancer.init(licenseFromDLS: dls, view: dceView, verificationDelegate: self)
     dce.setCameraDesiredState(.CAMERA_STATE_ON)
 }
@@ -207,8 +207,8 @@ Add configurations to the barcode reader:
 ```swift
 func initDBR() {
     /*Initialize Dynamsoft Barcode Reader from License Tracking Server.*/
-    let lts = iDMDLSConnectionParameters()
-    lts.organizationID = "Put your organizationID here"
+    let dls = iDMDLSConnectionParameters()
+    dls.organizationID = "Put your organizationID here"
     barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
 }
 ```
@@ -260,8 +260,8 @@ func configurationDCE() {
     dceView = DCECaptureView.init(view: self.view.bounds)
     dceView.addOverlay()
     self.view.addSubview(dceView)
-    let lts = iDCEdlsConnectionParameters()
-    lts.organizationID = "Put your organizationID here"
+    let dls = iDCEdlsConnectionParameters()
+    dls.organizationID = "Put your organizationID here"
     dce = DynamsoftCameraEnhancer.init(licenseFromDLS: dls, view: dceView, verificationDelegate: self)
     dce.setCameraDesiredState(.CAMERA_STATE_ON)
     */
