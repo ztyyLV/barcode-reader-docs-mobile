@@ -11,8 +11,8 @@ needGenerateH3Content: true
 
 Stores the text result.
 
-| Attribute | Type |
-|-----------|------|
+| Attribute | Type | Descriptions |
+| --------- | ---- | ------------ |
 | [`barcodeFormat`](#barcodeformat) | *int* | Barcode type in BarcodeFormat group 1. |
 | [`barcodeFormatString`](#barcodeformatstring) | *String* | Barcode type in BarcodeFormat group 1 as string. |
 | [`barcodeFormat_2`](#barcodeformat_2) | *int* | Barcode type in BarcodeFormat group 2. |

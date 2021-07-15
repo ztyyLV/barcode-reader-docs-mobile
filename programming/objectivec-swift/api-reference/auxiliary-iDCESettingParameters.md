@@ -10,13 +10,13 @@ needAutoGenerateSidebar: true
 
 Stores the iDCESettingParameters information.
 
-| Attribute | type |
-|-----------|------|
-| [`cameraInstance`](#camerainstance) | *DynamsoftCameraEnhancer* |
-| [`textResultDelegate`](#textresultdelegate) | *DBRTextResultDelegate* |
-| [`textResultData`](#textresultdata) | *NSObject* |
-| [`intermediateResultDelegate`](#intermediateresultdelegate) | *DBRIntermediateResultDelegate* |
-| [`intermediateResultData`](#intermediateresultdata) | *NSObject* |
+| Attribute | type | Descriptions |
+|-----------|------| ------------ |
+| [`cameraInstance`](#camerainstance) | *DynamsoftCameraEnhancer* | The Camera Enhancer instance |
+| [`textResultDelegate`](#textresultdelegate) | *DBRTextResultDelegate* | Set text result callback. |
+| [`textResultData`](#textresultdata) | *NSObject* | Transfer user data. |
+| [`intermediateResultDelegate`](#intermediateresultdelegate) | *DBRIntermediateResultDelegate* | Set intermediate result callback. |
+| [`intermediateResultData`](#intermediateresultdata) | *NSObject* | Transfer user data. |
 
 ## cameraInstance
 

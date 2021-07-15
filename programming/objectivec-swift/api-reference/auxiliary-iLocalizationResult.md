@@ -17,23 +17,23 @@ The `iLocalizationResult` extends the class [`iTextResult`](auxiliary-iTextResul
 @interface iLocalizationResult
 ```  
 
-| Attribute | Type |
-|---------- | ---- |
-| [`terminatePhase`](#terminatephase) | [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) |
-| [`barcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) |
-| [`barcodeFormatString`](#barcodeformatstring) | *NSString \** |
-| [`barcodeFormat_2`](#barcodeformat_2 ) | [`EnumBarcodeFormat2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) |
-| [`barcodeFormatString_2`](#barcodeformatstring_2) | *NSString \** |
-| [`resultPoints`](#resultpoints) | *NSArray \** |
-| [`angle`](#angle) | *NSInteger* |
-| [`moduleSize`](#modulesize) | *NSInteger* |
-| [`pageNumber`](#pagenumber) | *NSInteger* |
-| [`regionName`](#regionname) | *NSString \** |
-| [`documentName`](#documentname)| *NSString \** |
-| [`resultCoordinateType`](#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype) |
-| [`accompanyingTextBytes`](#accompanyingtextbytes) | *NSData \** |
-| [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | *NSInteger* |
-| [`confidence`](#confidence) | *NSInteger* |
+| Attribute | Type | Description |
+|---------- | ---- | ----------- |
+| [`terminatePhase`](#terminatephase) | [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) | The terminate phase of localization result. |
+| [`barcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) | Barcode type in BarcodeFormat group 1. |
+| [`barcodeFormatString`](#barcodeformatstring) | *NSString \** | Barcode type in BarcodeFormat group 1 as string. |
+| [`barcodeFormat_2`](#barcodeformat_2 ) | [`EnumBarcodeFormat2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString_2`](#barcodeformatstring_2) | *NSString \** | Barcode type in BarcodeFormat group 2 as string. |
+| [`resultPoints`](#resultpoints) | *NSArray \** | The vertices coordinates information of the barcode region. |
+| [`angle`](#angle) | *NSInteger* | The angle of a barcode. Values range is from 0 to 360. |
+| [`moduleSize`](#modulesize) | *NSInteger* | The barcode module size (the minimum bar width in pixel). |
+| [`pageNumber`](#pagenumber) | *NSInteger* | The page number the barcode located in. The index is 0-based. |
+| [`regionName`](#regionname) | *NSString \** | The region name the barcode located in. |
+| [`documentName`](#documentname)| *NSString \** | The document name. |
+| [`resultCoordinateType`](#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype) | The coordinate type. |
+| [`accompanyingTextBytes`](#accompanyingtextbytes) | *NSData \** | The accompanying text content in a byte array. |
+| [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | *NSInteger* | The length of the accompanying text byte array. |
+| [`confidence`](#confidence) | *NSInteger* | The confidence of the localization result. |
 
 ## terminatePhase
 

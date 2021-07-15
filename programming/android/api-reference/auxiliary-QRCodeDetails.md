@@ -16,18 +16,18 @@ import com.dynamsoft.dbr.QRCodeDetails;
 
 `QRCodeDetails` is one of the [`detailedResult`](class-TextResult.md#detailedresult) in class `TextResult`. It stores the QRCode details.
 
-| Attribute | Type |
-|---------- | ---- |
-| `moduleSize` | *int* |
-| `rows`| *int* |
-| `columns` | *int* |
-| `errorCorrectionLevel` | *int* |
-| `version` | *int* |
-| `model` | *int* |
-| `mode` | *int* |
-| `page` | *int* |
-| `totalPage` | *int* |
-| `parityData` | *int* |
+| Attribute | Type | Descriptions |
+|---------- | ---- | ------------ |
+| [`moduleSize`](#modulesize) | *int* | The barcode module size (the minimum bar width in pixels). |
+| [`rows`](#rows) | *int* | The row count of the barcode.   |
+| [`columns`](#columns) | *int* | The column count of the barcode. |
+| [`errorCorrectionLevel`](#errorcorrectionlevel) | *int* | The error correction level of the barcode.   |
+| [`version`](#version) | *int* | The version of the QR Code. |
+| [`model`](#model) | *int* | Number of the models. |
+| [`mode`](#mode) | *int* | Identify the first data encoding mode. |
+| [`page`](#page) | *int* | Identify the position of the particular symbol. |
+| [`totalPage`](#totalpage) | *int* | Identify the total number of symbols to be concatenated in the Structured Append format. |
+| [`parityData`](#paritydata) | *byte* | The byte parity data |
 
 ## moduleSize
 

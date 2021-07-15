@@ -15,8 +15,8 @@ needGenerateH3Content: false
 import com.dynamsoft.dbr.TextResult;
 ```
 
-| Attribute | Type |
-|-----------|------|
+| Attribute | Type | Descriptions |
+| --------- | ---- | ------------ |
 | [`barcodeFormat`](auxiliary-TextResult.md#barcodeformat) | *int* | Barcode type in BarcodeFormat group 1. |
 | [`barcodeFormatString`](auxiliary-TextResult.md#barcodeformatstring) | *String* | Barcode type in BarcodeFormat group 1 as string. |
 | [`barcodeFormat_2`](auxiliary-TextResult.md#barcodeformat_2) | *int* | Barcode type in BarcodeFormat group 2. |

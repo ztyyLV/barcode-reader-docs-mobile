@@ -17,20 +17,20 @@ Stores the FurtherModes.
 @interface iFurtherModes
 ```  
 
-| Attribute | Type |
-|---------- | ---- |
-| [`colourClusteringModes`](#colourclusteringmodes) | *NSArray*\* |
-| [`colourConversionModes`](#colourconversionmodes) | *NSArray*\* |
-| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *NSArray*\* |
-| [`regionPredetectionModes`](#regionpredetectionmodes) | *NSArray*\* |
-| [`imagePreprocessingModes`](#imagepreprocessingmodes) | *NSArray*\* |
-| [`textureDetectionModes`](#texturedetectionmodes) | *NSArray*\* |
-| [`textFilterModes`](#textfiltermodes) | *NSArray*\* |
-| [`dpmCodeReadingModes`](#dpmcodereadingmodes) | *NSArray*\* |
-| [`deformationResistingModes`](#deformationresistingmodes) | *NSArray*\* |
-| [`barcodeComplementModes`](#barcodecomplementmodes) | *NSArray*\* |
-| [`barcodeColourModes`](#barcodecolourmodes) | *NSArray*\* |
-| [`accompanyingTextRecognitionModes`](#accompanyingtextrecognitionmodes) | *NSArray*\* |
+| Attribute | Type | Descriptions |
+|---------- | ---- | ----- |
+| [`colourClusteringModes`](auxiliary-iFurtherModes.md#colourclusteringmodes) | *NSArray*\* | Sets the mode and priority for colour categorization. |
+| [`colourConversionModes`](auxiliary-iFurtherModes.md#colourconversionmodes) | *NSArray*\* | Sets the mode and priority for converting a colour image to a grayscale image. |
+| [`grayscaleTransformationModes`](auxiliary-iFurtherModes.md#grayscaletransformationmodes) | *NSArray*\* | Sets the mode and priority for the grayscale image conversion. |
+| [`regionPredetectionModes`](auxiliary-iFurtherModes.md#regionpredetectionmodes) | *NSArray*\* | Sets the region pre-detection mode for barcodes search. |
+| [`imagePreprocessingModes`](auxiliary-iFurtherModes.md#imagepreprocessingmodes) | *NSArray*\* | Sets the mode and priority for image preprocessing algorithms. |
+| [`textureDetectionModes`](auxiliary-iFurtherModes.md#texturedetectionmodes) | *NSArray*\* | Sets the mode and priority for texture detection. |
+| [`textFilterModes`](auxiliary-iFurtherModes.md#textfiltermodes) | *NSArray*\* | Sets the mode and priority for text filter. |
+| [`dpmCodeReadingModes`](auxiliary-iFurtherModes.md#dpmcodereadingmodes) | *NSArray*\* | Sets the mode and priority for DPM code reading. |
+| [`deformationResistingModes`](auxiliary-iFurtherModes.md#deformationresistingmodes) | *NSArray*\* | Sets the mode and priority for deformation resisting. |
+| [`barcodeComplementModes`](auxiliary-iFurtherModes.md#barcodecomplementmodes) | *NSArray*\* | Sets the mode and priority to complement the missing parts in the barcode. |
+| [`barcodeColourModes`](auxiliary-iFurtherModes.md#barcodecolourmodes) | *NSArray*\* | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
+| [`accompanyingTextRecognitionModes`](auxiliary-iFurtherModes.md#accompanyingtextrecognitionmodes) | *NSArray*\* | Sets the mode and priority to recognize accompanying text. |
 
 ## colourClusteringModes
 

@@ -14,34 +14,35 @@ Defines a struct to configure the barcode reading runtime settings. These settin
 
 ```objc
 @interface iPublicRuntimeSettings
-```  
+```
 
-| Attribute | Type |
-|---------- | ---- |
-| [`terminatePhase`](#terminatephase) | [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) |
-| [`timeout`](#timeout) | *NSInteger* |
-| [`maxAlgorithmThreadCount`](#maxalgorithmthreadcount) | *NSInteger* |
-| [`expectedBarcodesCount`](#expectedbarcodescount) | *NSInteger* |
-| [`barcodeFormatIds`](#barcodeformatids) | *NSInteger* |
-| [`barcodeFormatIds_2`](#barcodeformatids_2) | *NSInteger* |
-| [`pdfRasterDPI`](#pdfrasterdpi) | *NSInteger* |
-| [`scaleDownThreshold`](#scaledownthreshold) | *NSInteger* |
-| [`binarizationModes`](#binarizationmodes) | *NSArray\** |
-| [`localizationModes`](#localizationmodes) | *NSArray\** |
-| [`furtherModes`](#furthermodes) | [`iFurtherModes`](auxiliary-iFurtherModes.md) |
-| [`deblurLevel`](#deblurlevel) | *NSInteger* |
-| [`intermediateResultTypes`](#intermediateresulttypes) | *NSInteger* |
-| [`intermediateResultSavingMode`](#intermediateresultsavingmode) | [`EnumIntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode) |
-| [`resultCoordinateType`](#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype) |
-| [`textResultOrderModes`](#textresultordermodes) | *NSArray\** |
-| [`returnBarcodeZoneClarity`](#returnbarcodezoneclarity) | *NSInteger* |
-| [`region`](#region) | [`iRegionDefinition`](auxiliary-iRegionDefinition.md) |
-| [`minBarcodeTextLength`](#minbarcodetextlength) | *NSInteger* |
-| [`minResultConfidence`](#minresultconfidence) | *NSInteger* |
-| [`scaleUpModes`](#scaleupmodes) | *NSArray\** |
-| [`pdfReadingMode`](#pdfreadingmode) | [`EnumPDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) |
-| [`deblurModes`](#deblurmodes) | *NSArray\** |
-| [`barcodeZoneMinDistanceToImageBorders`](#barcodezonemindistancetoimageborders) | *NSInteger* |
+| Attribute | Type | Descriptions |
+|---------- | ---- | ----------- |
+| [`terminatePhase`](auxiliary-iPublicRuntimeSettings.md#terminatephase) | [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) | Sets the phase to stop the barcode reading algorithm. |
+| [`timeout`](auxiliary-iPublicRuntimeSettings.md#timeout) | *NSInteger* | Set the maximum time spent on scanning one image (page). |
+| [`maxAlgorithmThreadCount`](auxiliary-iPublicRuntimeSettings.md#maxalgorithmthreadcount) | *NSInteger* | Sets the number of threads the image processing algorithm will use to decode barcodes. |
+| [`expectedBarcodesCount`](auxiliary-iPublicRuntimeSettings.md#expectedbarcodescount) | *NSInteger* | Sets the number of barcodes expected to be detected for each image. |
+| [`barcodeFormatIds`](auxiliary-iPublicRuntimeSettings.md#barcodeformatids) | *NSInteger* | BarcodeFormat group 1. Read more in [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) |
+| [`barcodeFormatIds_2`](auxiliary-iPublicRuntimeSettings.md#barcodeformatids_2) | *NSInteger* | BarcodeFormat group 2. Read more in [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) |
+| [`pdfRasterDPI`](auxiliary-iPublicRuntimeSettings.md#pdfrasterdpi) | *NSInteger* | Sets the output image resolution. |
+| [`scaleDownThreshold`](auxiliary-iPublicRuntimeSettings.md#scaledownthreshold) | *NSInteger* | Sets the threshold for the image shrinking. |
+| [`binarizationModes`](auxiliary-iPublicRuntimeSettings.md#binarizationmodes) | *NSArray\** | Sets the mode and priority for binarization. |
+| [`localizationModes`](auxiliary-iPublicRuntimeSettings.md#localizationmodes) | *NSArray\** | Sets the mode and priority for localization algorithms. |
+| [`furtherModes`](auxiliary-iPublicRuntimeSettings.md#furthermodes) | [`FurtherModes`](auxiliary-iFurtherModes.md) | Further modes settings. Please read more in [`FurtherModes`](auxiliary-iFurtherModes.md) class. |
+| [`deblurLevel`](auxiliary-iPublicRuntimeSettings.md#deblurlevel) | *NSInteger* | Sets the degree of blurriness of the barcode.
+ |
+| [`intermediateResultTypes`](auxiliary-iPublicRuntimeSettings.md#intermediateresulttypes) | *NSInteger* | Sets which types of intermediate result to be kept for further reference. |
+| [`intermediateResultSavingMode`](auxiliary-iPublicRuntimeSettings.md#intermediateresultsavingmode) | [`EnumIntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode) | Sets the mode for saving intermediate result. |
+| [`resultCoordinateType`](auxiliary-iPublicRuntimeSettings.md#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype) | Specifies the format for the coordinates returned. |
+| [`textResultOrderModes`](auxiliary-iPublicRuntimeSettings.md#textresultordermodes) | *NSArray\** | Sets the mode and priority for the order of the text results returned. |
+| [`returnBarcodeZoneClarity`](auxiliary-iPublicRuntimeSettings.md#returnbarcodezoneclarity) | *NSInteger* | Sets whether or not to return the clarity of the barcode zone. |
+| [`region`](auxiliary-iPublicRuntimeSettings.md#region) | [`iRegionDefinition`](auxiliary-iRegionDefinition.md) | Sets the scan region. Please read more in [`iRegionDefinition`](auxiliary-iRegionDefinition.md) Class |
+| [`minBarcodeTextLength`](auxiliary-iPublicRuntimeSettings.md#minbarcodetextlength) | *NSInteger* | Sets the range of barcode text length for barcodes search. |
+| [`minResultConfidence`](auxiliary-iPublicRuntimeSettings.md#minresultconfidence) | *NSInteger* | The minimum confidence of the result. |
+| [`scaleUpModes`](auxiliary-iPublicRuntimeSettings.md#scaleupmodes) | *NSArray\**| Sets the mode and priority to control the sampling methods of scale-up for linear barcode with small module sizes. |
+| [`pdfReadingMode`](auxiliary-iPublicRuntimeSettings.md#pdfreadingmode) | *NSInteger* | Sets the way to detect barcodes from a PDF file when using the DecodeFile method. |
+| [`deblurModes`](auxiliary-iPublicRuntimeSettings.md#deblurmodes) | *NSArray\** | Sets the mode and priority for deblurring. |
+| [`barcodeZoneMinDistanceToImageBorders`](auxiliary-iPublicRuntimeSettings.md#barcodezonemindistancetoimageborders) | *NSInteger* | Sets the minimum distance (in pixels) between the barcode zone and image borders. |
 
 ## terminatePhase
 

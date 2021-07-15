@@ -12,7 +12,7 @@ needGenerateH3Content: true
 
 `ExtendedResult` is the extension of the class [`TextResult`](auxiliary-TextResult.md). It stores the extended result information.
   
-| Attribute | Type | Description |
+| Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
 | [`resultType`](#resulttype) | *int* | Extended result type. |
 | [`barcodeFormat`](#barcodeformat) | *int* | Barcode type in BarcodeFormat group 1. |

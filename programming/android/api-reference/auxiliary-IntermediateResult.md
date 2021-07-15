@@ -12,7 +12,7 @@ needGenerateH3Content: true
 
 Stores the intermediate result.
 
-| Attribute | Type | Description |
+| Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
 | [`results`](#results) | *Object\[\]* | One of the following types: Array of [`Contour`](auxiliary-Contour.md), Array of [`ImageData`](auxiliary-ImageData.md), Array of [`LineSegment`](auxiliary-LineSegment.md), Array of [`LocalizationResult`](auxiliary-LocalizationResult.md), Array of [`RegionOfInterest`](auxiliary-RegionOfInterest.md). |
 | [`dataType`](#datatype) | *int* | The data type of the intermediate result. |

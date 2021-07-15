@@ -16,15 +16,15 @@ needAutoGenerateSidebar: true
 @interface iOneDCodeDetails
 ```  
 
-| Attribute | Type |
-|---------- | ---- |
-| [`moduleSize`](#modulesize) | *NSInteger* |
-| [`startCharsBytes`](#startcharsbytes) | *NSData \** |
-| [`startCharsBytesLength`](#startcharsbyteslength) | *NSInteger* |
-| [`stopCharsBytes`](#stopcharsbytes) | *NSData \** |
-| [`stopCharsBytesLength`](#stopcharsbyteslength) | *NSInteger* |
-| [`checkDigitBytes`](#checkdigitbytes) | *NSData \** |
-| [`checkDigitBytesLength`](#checkdigitbyteslength) | *NSInteger* |
+| Attribute | Type | Descriptions |
+|---------- |-----| ---- |
+| [`moduleSize`](#modulesize) | *NSInteger* | The barcode module size (the minimum bar width in pixel). |
+| [`startCharsBytes`](#startcharsbytes) | *NSData \** | The start chars in a byte array. |
+| [`startCharsBytesLength`](#startcharsbyteslength) | *NSInteger* | The length of the start chars byte array. |
+| [`stopCharsBytes`](#stopcharsbytes) | *NSData \** | The stop chars in a byte array. |
+| [`stopCharsBytesLength`](#stopcharsbyteslength) | *NSInteger* | The length of the stop chars byte array. |
+| [`checkDigitBytes`](#checkdigitbytes) | *NSData \** | The check digit chars in a byte array. |
+| [`checkDigitBytesLength`](#checkdigitbyteslength) | *NSInteger* | The length of the check digit chars byte array. |
 
 ## moduleSize
 

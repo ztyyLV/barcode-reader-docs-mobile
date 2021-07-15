@@ -12,7 +12,7 @@ needGenerateH3Content: true
 
 Defines a struct to configure the parameters to connect to license tracking server.  
 
-| Attributes | Type | Description |
+| Attributes | Type | Descriptions |
 |----------- | ---- | ----------- |
 | [`mainServerURL`](#mainserverurl) | *String* | The URL of the license tracking server. |
 | [`standbyServerURL`](#standbyserverurl) | *String* | The URL of the standby license tracking server. |

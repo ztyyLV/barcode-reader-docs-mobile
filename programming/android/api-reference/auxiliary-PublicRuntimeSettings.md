@@ -12,32 +12,33 @@ needGenerateH3Content: true
 
 Defines a struct to configure the barcode reading runtime settings. These settings control the barcode recognition process such as which barcode types to decode.
 
-| Attribute | Type |
-|---------- | ---- |
-| [`terminatePhase`](#terminatephase) | *int* |
-| [`timeout`](#timeout) | *int* |
-| [`maxAlgorithmThreadCount`](#maxalgorithmthreadcount) | *int* |
-| [`expectedBarcodesCount`](#expectedbarcodescount) | *int* |
-| [`barcodeFormatIds`](#barcodeformatids) | *int* |
-| [`barcodeFormatIds_2`](#barcodeformatids_2) | *int* |
-| [`pdfRasterDPI`](#pdfrasterdpi) | *int* |
-| [`scaleDownThreshold`](#scaledownthreshold) | *int* |
-| [`binarizationModes`](#binarizationmodes) | *int\[\]* |
-| [`localizationModes`](#localizationmodes) | *int\[\]* |
-| [`furtherModes`](#furthermodes) | [`FurtherModes`](auxiliary-FurtherModes.md) |
-| [`deblurLevel`](#deblurlevel) | *int* |
-| [`intermediateResultTypes`](#intermediateresulttypes) | *int* |
-| [`intermediateResultSavingMode`](#intermediateresultsavingmode) | *int* |
-| [`resultCoordinateType`](#resultcoordinatetype) | *int* |
-| [`textResultOrderModes`](#textresultordermodes) | *int\[\]* |
-| [`returnBarcodeZoneClarity`](#returnbarcodezoneclarity) | *int* |
-| [`region`](#region) | [`RegionDefinition`](auxiliary-RegionDefinition.md) |
-| [`minBarcodeTextLength`](#minbarcodetextlength) | *int* |
-| [`minResultConfidence`](#minresultconfidence) | *int* |
-| [`scaleUpModes`](#scaleupmodes) | *int\[\]* |
-| [`pdfReadingMode`](#pdfreadingmode) | *int* |
-| [`deblurModes`](#deblurmodes) | *int\[\]* |
-| [`barcodeZoneMinDistanceToImageBorders`](#barcodezonemindistancetoimageborders) | *int* |
+| Attribute | Type | Descriptions |
+|---------- | ---- | ----------- |
+| [`terminatePhase`](#terminatephase) | *int* | Sets the phase to stop the barcode reading algorithm. |
+| [`timeout`](#timeout) | *int* | Set the maximum time spent on scanning one image (page). |
+| [`maxAlgorithmThreadCount`](#maxalgorithmthreadcount) | *int* | Sets the number of threads the image processing algorithm will use to decode barcodes. |
+| [`expectedBarcodesCount`](#expectedbarcodescount) | *int* | Sets the number of barcodes expected to be detected for each image. |
+| [`barcodeFormatIds`](#barcodeformatids) | *int* | BarcodeFormat group 1. Read more in [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) |
+| [`barcodeFormatIds_2`](#barcodeformatids_2) | *int* | BarcodeFormat group 2. Read more in [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) |
+| [`pdfRasterDPI`](#pdfrasterdpi) | *int* | Sets the output image resolution. |
+| [`scaleDownThreshold`](#scaledownthreshold) | *int* | Sets the threshold for the image shrinking. |
+| [`binarizationModes`](#binarizationmodes) | *int\[\]* | Sets the mode and priority for binarization. |
+| [`localizationModes`](#localizationmodes) | *int\[\]* | Sets the mode and priority for localization algorithms. |
+| [`furtherModes`](#furthermodes) | [`FurtherModes`](auxiliary-FurtherModes.md) | Further modes settings. Please read more in [`FurtherModes`](auxiliary-FurtherModes.md) class. |
+| [`deblurLevel`](#deblurlevel) | *int* | Sets the degree of blurriness of the barcode.
+ |
+| [`intermediateResultTypes`](#intermediateresulttypes) | *int* | Sets which types of intermediate result to be kept for further reference. |
+| [`intermediateResultSavingMode`](#intermediateresultsavingmode) | *int* | Sets the mode for saving intermediate result. |
+| [`resultCoordinateType`](#resultcoordinatetype) | *int* | Specifies the format for the coordinates returned. |
+| [`textResultOrderModes`](#textresultordermodes) | *int\[\]* | Sets the mode and priority for the order of the text results returned. |
+| [`returnBarcodeZoneClarity`](#returnbarcodezoneclarity) | *int* | Sets whether or not to return the clarity of the barcode zone. |
+| [`region`](#region) | [`RegionDefinition`](auxiliary-FurtherModes.md) | Sets the scan region. Please read more in [`RegionDefinition`](auxiliary-RegionDefinition.md) Class |
+| [`minBarcodeTextLength`](#minbarcodetextlength) | *int* | Sets the range of barcode text length for barcodes search. |
+| [`minResultConfidence`](#minresultconfidence) | *int* | The minimum confidence of the result. |
+| [`scaleUpModes`](#scaleupmodes) | *int\[\]* | Sets the mode and priority to control the sampling methods of scale-up for linear barcode with small module sizes. |
+| [`pdfReadingMode`](#pdfreadingmode) | *int* | Sets the way to detect barcodes from a PDF file when using the DecodeFile method. |
+| [`deblurModes`](#deblurmodes) | *int\[\]* | Sets the mode and priority for deblurring. |
+| [`barcodeZoneMinDistanceToImageBorders`](#barcodezonemindistancetoimageborders) | *int* | Sets the minimum distance (in pixels) between the barcode zone and image borders. |
 
 ## terminatePhase
 

@@ -17,12 +17,12 @@ needAutoGenerateSidebar: true
 @interface iPDF417Details
 ```  
 
-| Attribute | Type |
-|---------- | ---- |
-| [`moduleSize`](#modulesize) | *NSInteger* |
-| [`rows`](#rows) | *NSInteger* |
-| [`columns`](#columns) | *NSInteger* |
-| [`errorCorrectionLevel`](#errorcorrectionlevel) | *NSInteger* |
+| Attribute | Type | Descriptions |
+|---------- |------|------------ |
+| [`moduleSize`](#modulesize) | *NSInteger* | The barcode module size (the minimum bar width in pixel). |
+| [`rows`](#rows) | *NSInteger* | The row count of the barcode. |
+| [`columns`](#columns) | *NSInteger* | The column count of the barcode. |
+| [`errorCorrectionLevel`](#errorcorrectionlevel) | *NSInteger* | The error correction level of the barcode. |
 
 ## moduleSize
 

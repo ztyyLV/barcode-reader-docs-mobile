@@ -11,10 +11,10 @@ needGenerateH3Content: true
 
 Stores an x- and y-coordinate pair in two-dimensional space.
 
-| Attribute | Type |
-|---------- | ---- |
-| [`x`](#x) | *int* |
-| [`y`](#y) | *int* |
+| Attribute | Type | Descriptions |
+|---------- | ---- | ------------ |
+| [`x`](#x) | *int* | The X coordinate of the point. |
+| [`y`](#y) | *int* | The y coordinate of the point. |
 
 ## x
 

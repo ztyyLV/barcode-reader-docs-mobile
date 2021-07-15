@@ -9,19 +9,19 @@ needAutoGenerateSidebar: true
 
 # Class iDMDLSConnectionParameters
 
-Defines a struct to configure the parameters to connect to license tracking server.  
+Defines a struct to configure the parameters to connect to the license server.  
 
-| Attribute | Type |
-|---------- | ---- |
-| [`mainServerURL`](#mainserverurl) | *NSString\** |
-| [`standbyServerURL`](#standbyserverurl) | *NSString\** |
-| [`handshakeCode`](#handshakecode) | *NSString\** |
-| [`sessionPassword`](#sessionpassword) | *NSString\** |
-| [`chargeWay`](#chargeway) | *EnumDMChargeWay* |
-| [`UUIDGenerationMethod`](#uuidgenerationmethod) | *EnumDMUUIDGenerationMethod* |
-| [`maxBufferDays`](#maxbufferdays) | *NSInteger* |
-| [`limitedLicenseModules`](#limitedlicensemodules) | *NSArray\** |
-| [`organizationID`](#organizationid) | *NSString\** |
+| Attribute | Type | Descriptions |
+|---------- | ---- | ------------ |
+| [`mainServerURL`](#mainserverurl) | *NSString\** | The URL of the license tracking server. |
+| [`standbyServerURL`](#standbyserverurl) | *NSString\** | The URL of the standby license tracking server. |
+| [`handshakeCode`](#handshakecode) | *NSString\** | The handshake code. |
+| [`sessionPassword`](#sessionpassword) | *NSString\** | The session password of the handshake code set in license tracking server. |
+| [`chargeWay`](#chargeway) | *EnumDMChargeWay* | Sets the charge way. |
+| [`UUIDGenerationMethod`](#uuidgenerationmethod) | *EnumDMUUIDGenerationMethod* | Sets the method to generate UUID. |
+| [`maxBufferDays`](#maxbufferdays) | *NSInteger* | Sets the max days to buffer the license info. |
+| [`limitedLicenseModules`](#limitedlicensemodules) | *NSArray\** | Sets the license modules to use. |
+| [`organizationID`](#organizationid) | *NSString\** | The organization ID got from Dynamsoft. |
 
 ## mainServerURL
 

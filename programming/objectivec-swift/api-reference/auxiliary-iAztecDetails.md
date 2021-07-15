@@ -17,12 +17,12 @@ needAutoGenerateSidebar: true
 @interface iAztecDetails
 ```
 
-| Attribute | Type |
-|---------- | ----------- |
-| [`moduleSize`](#modulesize) | *NSInteger* |
-| [`rows`](#rows) | *NSInteger* |
-| [`columns`](#columns) | *NSInteger* |
-| [`layerNumber`](#layernumber) | *NSInteger* |
+| Attribute | Type | Descriptions |
+| --------- | ---- | ------------ |
+| [`moduleSize`](#modulesize) | *NSInteger* | The barcode module size (the minimum bar width in pixel). |
+| [`rows`](#rows) | *NSInteger* | The row count of the barcode. |
+| [`columns`](#columns) | *NSInteger* | The column count of the barcode. |
+| [`layerNumber`](#layernumber) | *NSInteger* | A negative number (-1, -2, -3, -4) specifies a compact Aztec code. A positive number (1, 2, .. 32) specifies a normal (full-rang) Aztec code. |
 
 ## moduleSize
 

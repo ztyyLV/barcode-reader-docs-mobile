@@ -12,13 +12,13 @@ needGenerateH3Content: true
 
 Stores the region information.
 
-| Attribute | Type |
-|---------- | ---- |
-| [`regionTop`](#regiontop) | *int* |
-| [`regionLeft`](#regionleft) | *int* |
-| [`regionRight`](#regionright) | *int* |
-| [`regionBottom`](#regionbottom) | *int* |
-| [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | *int* |
+| Attribute | Type | Descriptions |
+|---------- | ---- | ------------ |
+| [`regionTop`](#regiontop) | *int* | The top-most coordinate or percentage of the region. |
+| [`regionLeft`](#regionleft) | *int* | The left-most coordinate or percentage of the region. |
+| [`regionRight`](#regionright) | *int* | The right-most coordinate or percentage of the region. |
+| [`regionBottom`](#regionbottom) | *int* | The bottom-most coordinate or percentage of the region. |
+| [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | *int* | Sets whether or not to use percentage to measure the region size. |
 
 ## regionTop
 

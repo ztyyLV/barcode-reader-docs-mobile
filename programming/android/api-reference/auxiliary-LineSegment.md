@@ -12,7 +12,7 @@ needGenerateH3Content: true
 
 Stores line segment data.
 
-| Attribute | Type | Description |
+| Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
 | [`startPoint`](#startpoint) | [`Point`](auxiliary-Point.md) | The start point of the line segment. |
 | [`endPoint`](#endpoint) | [`Point`](auxiliary-Point.md) | The end point of the line segment. |

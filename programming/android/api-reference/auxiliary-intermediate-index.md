@@ -11,7 +11,7 @@ needGenerateH3Content: False
 
 ## [IntermediateResult](auxiliary-IntermediateResult.md)
 
-| Attribute | Type | Description |
+| Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
 | [`results`](auxiliary-IntermediateResult.md#results) | *Object\[\]* | One of the following types: Array of [`Contour`](auxiliary-Contour.md), Array of [`ImageData`](auxiliary-ImageData.md), Array of [`LineSegment`](auxiliary-LineSegment.md), Array of [`LocalizationResult`](auxiliary-LocalizationResult.md), Array of [`RegionOfInterest`](auxiliary-RegionOfInterest.md). |
 | [`dataType`](auxiliary-IntermediateResult.md#datatype) | *int* | The data type of the intermediate result. |

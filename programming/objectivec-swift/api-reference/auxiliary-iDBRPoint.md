@@ -17,10 +17,10 @@ Stores an x- and y-coordinate pair in two-dimensional space.
 @interface iDBRPoint
 ```
 
-| Attribute | Type |
-|---------- | ---- |
-| [`x`](#x) | *NSInteger* |
-| [`y`](#y) | *NSInteger* |
+| Attribute | Type | Descriptions |
+|---------- | ---- | ------------ |
+| [`x`](#x) | *NSInteger* | The X coordinate of the point. |
+| [`y`](#y) | *NSInteger* | The Y coordinate of the point. |
 
 ## x
 

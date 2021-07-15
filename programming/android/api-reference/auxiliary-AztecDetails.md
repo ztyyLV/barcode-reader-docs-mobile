@@ -16,7 +16,7 @@ import com.dynamsoft.dbr.AztecDetails;
 
 `AztecDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the Aztec code details.
 
-| Attribute | Type | Description |
+| Attribute | Type | Descriptions |
 |---------- | -----|------ |
 | [`moduleSize`](#modulesize) | *int* | The barcode module size (the minimum bar width in pixel). |
 | [`rows`](#rows) | *int* | The row count of the barcode. |

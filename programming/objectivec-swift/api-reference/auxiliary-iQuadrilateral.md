@@ -17,13 +17,13 @@ Stores the quadrilateral.
 @interface iQuadrilateral 
 ```  
 
-| Attribute | Type |
-|---------- | ---- |
-| [`points`](#points) | *NSArray\** |
+| Attribute | Type | Description |
+|---------- | ---- | ----------- |
+| [`points`](#points) | *NSArray\** | Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
 
 ## points
 
-Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
+Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex.
 
 ```objc
 NSArray* points[4]

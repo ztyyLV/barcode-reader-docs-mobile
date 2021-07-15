@@ -19,8 +19,8 @@ The point class Stores the x and y coordinate of the points.
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |
-| `x` | *NSInteger* | The X coordinate of the point. |
-| `y` | *NSInteger* | The y coordinate of the point. |
+| [`x`](auxiliary-iDBRPoint.md#x) | *NSInteger* | The X coordinate of the point. |
+| [`y`](auxiliary-iDBRPoint.md#y) | *NSInteger* | The y coordinate of the point. |
 
 ## [iQuadrilateral](auxiliary-iQuadrilateral.md)
 
@@ -32,7 +32,7 @@ This class stores the quadrilateral points data.
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |
-| `points` | *NSArray\** | Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
+| [`points`](auxiliary-iQuadrilateral.md#points) | *NSArray\** | Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
 
 ## [iRegionDefinition](auxiliary-iRegionDefinition.md)
 
@@ -44,8 +44,8 @@ This class stores the region data. You can make settings on scan region through 
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |
-| [`regionTop`](#regiontop) | *NSInteger* | The top-most coordinate or percentage of the region. |
-| [`regionLeft`](#regionleft) | *NSInteger* | The left-most coordinate or percentage of the region. |
-| [`regionRight`](#regionright) | *NSInteger* | The right-most coordinate or percentage of the region. |
-| [`regionBottom`](#regionbottom) | *NSInteger* | The bottom-most coordinate or percentage of the region. |
-| [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | *NSInteger* | Sets whether or not to use percentage to measure the region size. |
+| [`regionTop`](auxiliary-iRegionDefinition.md#regiontop) | *NSInteger* | The top-most coordinate or percentage of the region. |
+| [`regionLeft`](auxiliary-iRegionDefinition.md#regionleft) | *NSInteger* | The left-most coordinate or percentage of the region. |
+| [`regionRight`](auxiliary-iRegionDefinition.md#regionright) | *NSInteger* | The right-most coordinate or percentage of the region. |
+| [`regionBottom`](auxiliary-iRegionDefinition.md#regionbottom) | *NSInteger* | The bottom-most coordinate or percentage of the region. |
+| [`regionMeasuredByPercentage`](auxiliary-iRegionDefinition.md#regionmeasuredbypercentage) | *NSInteger* | Sets whether or not to use percentage to measure the region size. |

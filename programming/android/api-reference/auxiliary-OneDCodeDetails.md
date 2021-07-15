@@ -15,15 +15,15 @@ import com.dynamsoft.dbr.OneDCodeDetails;
 
 `OneDCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the OneD code details.
 
-| Attribute | Type |
-|---------- |-----|
-| `moduleSize` | *int* |
-| `startCharsBytes` | *int* |
-| `stopCharsBytes` | *int* |
-| `checkDigitBytes` | *int* |
-| `startPatternRange` | *int* |
-| `middlePatternRange` | *int* |
-| `endPatternRange` | *int* |
+| Attribute | Type | Descriptions |
+|---------- |----- | -------------|
+| `moduleSize` | *int* | The barcode module size (the minimum bar width in pixel). |
+| `startCharsBytes` | *int* | The start chars in a byte array. |
+| `stopCharsBytes` | *int* | The stop chars in a byte array. |
+| `checkDigitBytes` | *int* | The check digit chars in a byte array. |
+| `startPatternRange` | *int* | The start pattern range of the OneDcode. |
+| `middlePatternRange` | *int* | The middle pattern range of the OneDcode. |
+| `endPatternRange` | *int* | The end pattern range of the OneDcode. |
 
 ## moduleSize
 

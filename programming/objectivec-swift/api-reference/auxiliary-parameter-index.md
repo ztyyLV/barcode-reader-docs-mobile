@@ -78,11 +78,11 @@ Stores the region information.
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |
-| [`regionTop`](auxiliary-RegionDefinition.md#regiontop) | *NSInteger* | The top-most coordinate or percentage of the region. |
-| [`regionLeft`](auxiliary-RegionDefinition.md#regionleft) | *NSInteger* | The Left-most coordinate or percentage of the region. |
-| [`regionRight`](auxiliary-RegionDefinition.md#regionright) | *NSInteger* | The Right-most coordinate or percentage of the region. |
-| [`regionBottom`](auxiliary-RegionDefinition.md#regionbottom) | *NSInteger* | The Bottom-most coordinate or percentage of the region. |
-| [`regionMeasuredByPercentage`](auxiliary-RegionDefinition.md#regionmeasuredbypercentage) | *NSInteger* | Sets whether or not to use percentage to measure the region size. |
+| [`regionTop`](auxiliary-iRegionDefinition.md#regiontop) | *NSInteger* | The top-most coordinate or percentage of the region. |
+| [`regionLeft`](auxiliary-iRegionDefinition.md#regionleft) | *NSInteger* | The Left-most coordinate or percentage of the region. |
+| [`regionRight`](auxiliary-iRegionDefinition.md#regionright) | *NSInteger* | The Right-most coordinate or percentage of the region. |
+| [`regionBottom`](auxiliary-iRegionDefinition.md#regionbottom) | *NSInteger* | The Bottom-most coordinate or percentage of the region. |
+| [`regionMeasuredByPercentage`](auxiliary-iRegionDefinition.md#regionmeasuredbypercentage) | *NSInteger* | Sets whether or not to use percentage to measure the region size. |
 
 ## [FrameDecodingParameters](auxiliary-iFrameDecodingParameters.md)
 
@@ -94,18 +94,18 @@ The parameters that helps you on frame decoding.
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |
-| [`maxQueueLength`](auxiliary-FrameDecodingParameters.md#maxqueuelength) | *NSInteger* | The maximum number of frames waiting for decoding. |
-| [`maxResultQueueLength`](auxiliary-FrameDecodingParameters.md#maxresultqueuelength) | *NSInteger* | The maximum number of frames waiting results (text result/localization result) will be kept for further reference. |
-| [`width`](auxiliary-FrameDecodingParameters.md#width) | *NSInteger* | The width of the frame image in pixels.  |
-| [`height`](auxiliary-FrameDecodingParameters.md#height) | *NSInteger* | The height of the frame image in pixels. |
-| [`stride`](auxiliary-FrameDecodingParameters.md#stride) | *NSInteger* | The stride (or scan width) of the frame image. |
-| [`imagePixelFormat`](auxiliary-FrameDecodingParameters.md#imagepixelformat) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) | The image pixel format used in the image byte array. |
-| [`region`](auxiliary-FrameDecodingParameters.md#region) | [`iRegionDefinition`](auxiliary-iRegionDefinition.md) | The region definition of the frame to calculate the internal indicator. |
-| [`threshold`](auxiliary-FrameDecodingParameters.md#threshold) | *float* | The threshold used for filtering frames. |
-| [`fps`](auxiliary-FrameDecodingParameters.md#fps) | *NSInteger* | The frequency of calling [`appendFrame`]({{site.android_methods}}primary-video.html#appendframe) per second. |
-| [`autoFilter`](auxiliary-FrameDecodingParameters.md#autofilter) | *NSInteger* | Sets whether to filter frames automatically. |
-| [`clarityCalculationMethod`](auxiliary-FrameDecodingParameters.md#claritycalculationmethod) | [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) | Sets the method used for calculating the clarity of the frames. |
-| [`clarityFilterMode`](auxiliary-FrameDecodingParameters.md#clarityfiltermode) | [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) | Sets the mode used for filtering frames by calculated clarity. |
+| [`maxQueueLength`](auxiliary-iFrameDecodingParameters.md#maxqueuelength) | *NSInteger* | The maximum number of frames waiting for decoding. |
+| [`maxResultQueueLength`](auxiliary-iFrameDecodingParameters.md#maxresultqueuelength) | *NSInteger* | The maximum number of frames waiting results (text result/localization result) will be kept for further reference. |
+| [`width`](auxiliary-iFrameDecodingParameters.md#width) | *NSInteger* | The width of the frame image in pixels.  |
+| [`height`](auxiliary-iFrameDecodingParameters.md#height) | *NSInteger* | The height of the frame image in pixels. |
+| [`stride`](auxiliary-iFrameDecodingParameters.md#stride) | *NSInteger* | The stride (or scan width) of the frame image. |
+| [`imagePixelFormat`](auxiliary-iFrameDecodingParameters.md#imagepixelformat) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) | The image pixel format used in the image byte array. |
+| [`region`](auxiliary-iFrameDecodingParameters.md#region) | [`iRegionDefinition`](auxiliary-iRegionDefinition.md) | The region definition of the frame to calculate the internal indicator. |
+| [`threshold`](auxiliary-iFrameDecodingParameters.md#threshold) | *float* | The threshold used for filtering frames. |
+| [`fps`](auxiliary-iFrameDecodingParameters.md#fps) | *NSInteger* | The frequency of calling [`appendFrame`]({{site.android_methods}}primary-video.html#appendframe) per second. |
+| [`autoFilter`](auxiliary-iFrameDecodingParameters.md#autofilter) | *NSInteger* | Sets whether to filter frames automatically. |
+| [`clarityCalculationMethod`](auxiliary-iFrameDecodingParameters.md#claritycalculationmethod) | [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) | Sets the method used for calculating the clarity of the frames. |
+| [`clarityFilterMode`](auxiliary-iFrameDecodingParameters.md#clarityfiltermode) | [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) | Sets the mode used for filtering frames by calculated clarity. |
 
 ## [DCESettingParameters](auxiliary-iDCESettingParameters.md)
 
@@ -115,13 +115,13 @@ The parameters that helps you on configuring Dynamsoft Camera Enhancer in the Ba
 DCESettingParameters* para = [[DCESettingParameter alloc] init];
 ```
 
-| Attribute | type | Description |
-|-----------|------|-------------|
-| [`cameraInstance`](auxiliary-DCESettingParameters.md#camerainstance) | *DynamsoftCameraEnhancer* | The Camera Enhancer instance |
-|  [`textResultCallback`](auxiliary-DCESettingParameters.md#textresultcallback) | *DBRTextResultDelegate* | Set text result callback. |
-| [`textResultCallback_UserData`](auxiliary-DCESettingParameters.md#textresultcallback_userdata) | *NSObject* | Transfer user data. |
-| [`intermediateResultCallback`](auxiliary-DCESettingParameters.md#intermediateresultcallback) | *DBRIntermediateResultDelegate* | Set intermediate result callback. |
-| [`IntermediateResultCallback_UserData`](auxiliary-DCESettingParameters.md#intermediateresultcallback_userdata) | *NSObject* | Transfer user data. |
+| Attribute | type | Descriptions |
+|-----------|------| ------------ |
+| [`cameraInstance`](auxiliary-iDCESettingParameters.md#camerainstance) | *DynamsoftCameraEnhancer* | The Camera Enhancer instance |
+| [`textResultDelegate`](auxiliary-iDCESettingParameters.md#textresultdelegate) | *DBRTextResultDelegate* | Set text result callback. |
+| [`textResultData`](auxiliary-iDCESettingParameters.md#textresultdata) | *NSObject* | Transfer user data. |
+| [`intermediateResultDelegate`](auxiliary-iDCESettingParameters.md#intermediateresultdelegate) | *DBRIntermediateResultDelegate* | Set intermediate result callback. |
+| [`intermediateResultData`](auxiliary-iDCESettingParameters.md#intermediateresultdata) | *NSObject* | Transfer user data. |
 
 ```objc
 let para = DCESettingParameters.init()

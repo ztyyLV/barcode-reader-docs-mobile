@@ -16,22 +16,22 @@ needAutoGenerateSidebar: true
 @interface iExtendedResult
 ```  
 
-| Attribute | Type |
-|---------- | ---- |
-| [`resultType`](#resulttype) | [`EnumResultType`]({{ site.enumerations }}result-enums.html#resulttype) |
-| [`barcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) |
-| [`barcodeFormatString`](#barcodeformatstring) | *NSString \** |
-| [`barcodeFormat_2`](#barcodeformat_2) | [`EnumBarcodeFormat2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) |
-| [`barcodeFormatString_2`](#barcodeformatstring_2) | *NSString \** |
-| [`confidence`](#confidence) | *NSInteger* |
-| [`bytes`](#bytes) | *NSData \** |
-| [`bytesLength`](#byteslength) | *NSInteger* |
-| [`accompanyingTextBytes`](#accompanyingtextbytes) | *NSData \** |
-| [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | *NSInteger* |
-| [`deformation`](#deformation) | *NSInteger* |
-| [`detailedResult`](#detailedresult) | *NSObject \** |
-| [`samplingImage`](#samplingimage) | [`iSamplingImageData*`](auxiliary-iSamplingImageData.md) |
-| [`clarity`](#clarity) | *NSInteger* |
+| Attribute | Type | Descriptions |
+|---------- |------|-------------|
+| [`resultType`](#resulttype) | [`EnumResultType`]({{ site.enumerations }}result-enums.html#resulttype) | The extended result type. |
+| [`barcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) | Barcode type in BarcodeFormat group 1. |
+| [`barcodeFormatString`](#barcodeformatstring) | *NSString \** | Barcode type in BarcodeFormat group 1 as string. |
+| [`barcodeFormat_2`](#barcodeformat_2) | [`EnumBarcodeFormat2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString_2`](#barcodeformatstring_2) | *NSString \** | Barcode type in BarcodeFormat group 2 as string. |
+| [`confidence`](#confidence) | *NSInteger* | The confidence of the result. The higher confidence means the higher accuracy. |
+| [`bytes`](#bytes) | *NSData \** | The content in a byte array. |
+| [`bytesLength`](#byteslength) | *NSInteger* | The length of the byte array. |
+| [`accompanyingTextBytes`](#accompanyingtextbytes) | *NSData \** | The accompanying text content in a byte array. |
+| [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | *NSInteger* | The length of the accompanying text byte array. |
+| [`deformation`](#deformation) | *NSInteger* | The deformation value. |
+| [`detailedResult`](#detailedresult) | *NSObject \** | One of the following: [`QRCodeDetails`](#qrcodedetails), [`PDF417Details`](#pdf417details), [`DataMatrixDetails`](#datamatrixdetails), [`AztecDetails`](#aztecdetails), [`OneDCodeDetails`](#onedcodedetails). |
+| [`samplingImage`](#samplingimage) | [`iSamplingImageData*`](auxiliary-iSamplingImageData.md) | The sampling image info. |
+| [`clarity`](#clarity) | *NSInteger* | The clarity of the barcode zone in percentage. |
 
 ## resultType
 

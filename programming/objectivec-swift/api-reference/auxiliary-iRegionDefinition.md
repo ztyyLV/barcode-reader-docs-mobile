@@ -16,13 +16,13 @@ Stores the region information.
 @interface iRegionDefinition
 ```  
 
-| Attribute | Type |
-|---------- | ---- |
-| [`regionTop`](#regiontop) | *NSInteger* |
-| [`regionLeft`](#regionleft) | *NSInteger* |
-| [`regionRight`](#regionright) | *NSInteger* |
-| [`regionBottom`](#regionbottom) | *NSInteger* |
-| [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | *NSInteger* |
+| Attribute | Type | Descriptions |
+|---------- | ---- | ------------ |
+| [`regionTop`](auxiliary-RegionDefinition.md#regiontop) | *NSInteger* | The top-most coordinate or percentage of the region. |
+| [`regionLeft`](auxiliary-RegionDefinition.md#regionleft) | *NSInteger* | The Left-most coordinate or percentage of the region. |
+| [`regionRight`](auxiliary-RegionDefinition.md#regionright) | *NSInteger* | The Right-most coordinate or percentage of the region. |
+| [`regionBottom`](auxiliary-RegionDefinition.md#regionbottom) | *NSInteger* | The Bottom-most coordinate or percentage of the region. |
+| [`regionMeasuredByPercentage`](auxiliary-RegionDefinition.md#regionmeasuredbypercentage) | *NSInteger* | Sets whether or not to use percentage to measure the region size. |
 
 ## regionTop
 

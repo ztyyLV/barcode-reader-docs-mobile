@@ -15,7 +15,7 @@ import com.dynamsoft.dbr.DCESettingParameters;
 
 Stores the DCESettingParameters information.
 
-| Attribute | type | Description |
+| Attribute | type | Descriptions |
 |-----------|------|-------------|
 | [`cameraInstance`](#camerainstance) | *Object* | The Camera Enhancer instance |
 | [`textResultCallback`](#textresultcallback) | [`TextResultCallback`]({{site.android_api}}interface.html#textresultcallback) | Set text result callback. |

@@ -17,14 +17,14 @@ Stores the image data.
 @interface iImageData
 ```
 
-| Attribute | Type |
-|---------- | ---- |
-| [`bytesLength`](#byteslength) | *NSInteger* |
-| [`bytes`](#bytes) | *unsigned char\** |
-| [`width`](#width) | *NSInteger* |
-| [`height`](#height) | *NSInteger* |
-| [`stride`](#stride) | *NSInteger* |
-| [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) |
+| Attribute | Type | Descriptions |
+|---------- | ---- | ----------- |
+| [`bytesLength`](#byteslength) | *NSInteger* | The length of the image data byte array. |
+| [`bytes`](#bytes) | *unsigned char\** | The image data content in a byte array. |
+| [`width`](#width) | *NSInteger* | The width of the image in pixels. |
+| [`height`](#height) | *NSInteger* | The height of the image in pixels. |
+| [`stride`](#stride) | *NSInteger* | The stride (or scan width) of the image. |
+| [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) | The image pixel format used in the image byte array. |
 
 ## bytesLength
 

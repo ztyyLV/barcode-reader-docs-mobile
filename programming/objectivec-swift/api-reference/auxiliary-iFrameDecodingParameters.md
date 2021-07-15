@@ -17,20 +17,20 @@ Defines a struct to configure the frame decoding Parameters.
 @interface iFrameDecodingParameters
 ```
 
-| Attribute | Type |
-|---------- | ---- |
-| [`maxQueueLength`](#maxqueuelength) | *NSInteger* |
-| [`maxResultQueueLength`](#maxresultqueuelength) | *NSInteger* |
-| [`width`](#width) | *NSInteger* |
-| [`height`](#height) | *NSInteger* |
-| [`stride`](#stride) | *NSInteger* |
-| [`imagePixelFormat`](#imagepixelformat) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) |
-| [`region`](#region) | [`iRegionDefinition`](auxiliary-iRegionDefinition.md) |
-| [`threshold`](#threshold) | *float* |
-| [`fps`](#fps) | *NSInteger* |
-| [`autoFilter`](#autofilter) | *NSInteger* |
-| [`clarityCalculationMethod`](#claritycalculationmethod) | [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) |
-| [`clarityFilterMode`](#clarityfiltermode) | [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) |
+| Attribute | Type | Descriptions |
+|---------- | ---- | ------------ |
+| [`maxQueueLength`](#maxqueuelength) | *NSInteger* | The maximum number of frames waiting for decoding. |
+| [`maxResultQueueLength`](#maxresultqueuelength) | *NSInteger* | The maximum number of frames waiting results (text result/localization result) will be kept for further reference. |
+| [`width`](#width) | *NSInteger* | The width of the frame image in pixels.  |
+| [`height`](#height) | *NSInteger* | The height of the frame image in pixels. |
+| [`stride`](#stride) | *NSInteger* | The stride (or scan width) of the frame image. |
+| [`imagePixelFormat`](#imagepixelformat) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) | The image pixel format used in the image byte array. |
+| [`region`](#region) | [`iRegionDefinition`](auxiliary-iRegionDefinition.md) | The region definition of the frame to calculate the internal indicator. |
+| [`threshold`](#threshold) | *float* | The threshold used for filtering frames. |
+| [`fps`](#fps) | *NSInteger* | The frequency of calling [`appendFrame`]({{site.android_methods}}primary-video.html#appendframe) per second. |
+| [`autoFilter`](#autofilter) | *NSInteger* | Sets whether to filter frames automatically. |
+| [`clarityCalculationMethod`](#claritycalculationmethod) | [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) | Sets the method used for calculating the clarity of the frames. |
+| [`clarityFilterMode`](#clarityfiltermode) | [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) | Sets the mode used for filtering frames by calculated clarity. |
 
 ## maxQueueLength
 

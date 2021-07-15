@@ -16,7 +16,7 @@ import com.dynamsoft.dbr.PDF417Details;
 
 `PDF417Details` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the PDF417 code details.
 
-| Attribute | Type | Description |
+| Attribute | Type | Descriptions |
 |---------- |------|------------ |
 | `moduleSize` | *int* | The barcode module size (the minimum bar width in pixel). |
 | `rows` | *int* | The row count of the barcode. |

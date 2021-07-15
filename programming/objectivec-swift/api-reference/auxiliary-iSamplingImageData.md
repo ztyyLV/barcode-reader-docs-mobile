@@ -16,11 +16,11 @@ needAutoGenerateSidebar: true
 @interface iSamplingImageData
 ```  
 
-| Attribute | Type |
-|---------- | ---- |
-| [`bytes`](#bytes) | *NSData\** |
-| [`width`](#width) | *NSInteger* |
-| [`height`](#height) | *NSInteger* |
+| Attribute | Type | Descriptions |
+|---------- | ---- | ----------- |
+| [`bytes`](#bytes) | *NSData\** | The sampling image data in a byte array. |
+| [`width`](#width) | *NSInteger* | The width of the sampling image. |
+| [`height`](#height) | *NSInteger* | The height of the sampling image. |
 
 ## bytes
 

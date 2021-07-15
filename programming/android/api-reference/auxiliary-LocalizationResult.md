@@ -12,7 +12,7 @@ needGenerateH3Content: false
 
 The `LocalizationResult` extends the class [`TextResult`](auxiliary-TextResult.md) and [`IntermediateResult`](auxiliary-IntermediateResult.md). It stores the barcode localization data.
 
-| Attribute | Type | Description |
+| Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
 | [`terminatePhase`](#terminatephase) | *int* | The terminate phase of localization result. |
 | [`barcodeFormat`](#barcodeformat) | *int* | Barcode type in BarcodeFormat group 1. |
