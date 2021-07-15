@@ -45,8 +45,8 @@ Objective-C:
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-lts.sessionPassword = @"******";
+dls.organizationID = @"200001";
+dls.sessionPassword = @"******";
 barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
 - (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
 {
@@ -60,8 +60,8 @@ Swift:
 
 ```Swift
 let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-lts.sessionPassword = "******"
+dls.organizationID = "200001"
+dls.sessionPassword = "******"
 let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
 func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 {
@@ -96,8 +96,8 @@ Objective-C:
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-lts.sessionPassword = @"******";
+dls.organizationID = @"200001";
+dls.sessionPassword = @"******";
 barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
 - (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
 {
@@ -112,8 +112,8 @@ Swift:
 
 ```Swift
 let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-lts.sessionPassword = "******"
+dls.organizationID = "200001"
+dls.sessionPassword = "******"
 let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
 func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 {
@@ -153,8 +153,8 @@ Objective-C:
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-lts.sessionPassword = @"******";
+dls.organizationID = @"200001";
+dls.sessionPassword = @"******";
 barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
 - (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
 {
@@ -173,8 +173,8 @@ Swift:
 
 ```Swift
 let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-lts.sessionPassword = "******"
+dls.organizationID = "200001"
+dls.sessionPassword = "******"
 let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
 func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 {
@@ -214,8 +214,8 @@ Objective-C:
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-lts.sessionPassword = @"******";
+dls.organizationID = @"200001";
+dls.sessionPassword = @"******";
 barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
 - (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
 {
@@ -229,8 +229,8 @@ Swift:
 
 ```Swift
 let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-lts.sessionPassword = "******"
+dls.organizationID = "200001"
+dls.sessionPassword = "******"
 let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
 func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 {
@@ -266,8 +266,8 @@ NSError __autoreleasing * _Nullable error;
 iIntermediateResult *irResult;
 DynamsoftBarcodeReader *barcodeReader;
 iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-lts.sessionPassword = @"******";
+dls.organizationID = @"200001";
+dls.sessionPassword = @"******";
 barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
 - (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
 {
@@ -310,8 +310,8 @@ Objective-C:
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-lts.sessionPassword = @"******";
+dls.organizationID = @"200001";
+dls.sessionPassword = @"******";
 barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
 - (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
 {
