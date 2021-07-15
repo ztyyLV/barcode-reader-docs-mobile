@@ -10,6 +10,21 @@ noTitleIndex: true
 
 # Release Notes for Android SDK - 8.x
 
+## 8.6 (07/15/2021)
+
+### New
+
+- Added more samples.
+- Added new API `enableResultVerification`. The barcode decoding results will be verified before output if this feature is enabled. This will highly improve the accuracy of barcode scanning.
+- Added new API `enableDuplicateFilter`. The barcode decoding results will be filtered before output if this feature is enabled. The duplicated results will be output only once for every three seconds.
+- Added two DeblurMode Enumerations, `DM_BASED_ON_LOC_BIN` and `DM_SHARPENING_SMOOTHING`, to support more usage scenarios.
+- Added class `DMDLSConnectionParameters` to replace class `DMLTSConnectionParameters`.
+- Added interface `DBRDLSLicenseVerificationListener` and callback `DLSLicenseVerificationCallback` to replace `DBRLTSLicenseVerificationListener` and `LTSLicenseVerificationCallback`.
+
+### Improved
+
+- Improved the confidence calculation algorithm for oneD barcode results. Bounded by 30, the misread results will be scored below 30-confidence as many as possible.
+
 ## 8.4 (06/08/2021)
 
 ### New
