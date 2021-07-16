@@ -43,7 +43,7 @@ noTitleIndex: true
 
 ### Fixed
 
-- Fixed an issue that happens when calling initLicenseFromLTS if [`handShakeCode`]({{site.android_class}}DMLTSConnectionParameters.html#handshakecode) is not set.
+- Fixed an issue that happens when calling initLicenseFromLTS if [`handShakeCode`]({{site.android_class}}DMDLSConnectionParameters.html#handshakecode) is not set.
 - Fixed a bug when trying to build the project in the release mode with code shrinker enabled.
 
 ## 8.2.1 (05/27/2021)
@@ -63,7 +63,7 @@ noTitleIndex: true
 ### New
 
 - Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`.
-- Added a new an attribute, `organizationID` (string) to `DMLTSConnectionParameters`. The attribute adds a new layer of security for both full and trial licenses.
+- Added a new an attribute, `organizationID` (string) to `DMDLSConnectionParameters`. The attribute adds a new layer of security for both full and trial licenses.
 
 ### Improved
 

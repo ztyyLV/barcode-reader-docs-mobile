@@ -1,43 +1,74 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - User Guide
+title: Dynamsoft Barcode Reader for Android - User Guide v8.4
 description: This is the user guide of Dynamsoft Barcode Reader for Android SDK.
-keywords: user guide, android
+keywords: user guide v8.4, android
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 
 # User Guide for Android Edition
 
-## System Requirements
+## Requirements
 
 - Operating systems:
-   - Supported OS: Android 5 or higher (Android 7 or higher recommended)
-   - Supported ABI: armeabi-v7a, arm64-v8a, x86 and x86_64
+  - Supported OS: Android 5 or higher (Android 7 or higher recommended).
+  - Supported ABI: armeabi-v7a, arm64-v8a, x86 and x86_64.
 
 ## Installation
 
-### Option 1: Download from website
+There are two options for you to install Dynamsoft Barcode Reader. You can download the package from our website or use maven to load the packages.
 
-To install Dynamsoft Barcode Reader for Android on your development machine, you can download the SDK from the [Dynamsoft website](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx) and unzip `dbr-android-{version-number}.zip`.
+**Option 1: Download Installation**
 
-After decompression, you can find samples in the **DBRSamples** folder under the **dbr-android-{version-number}** folder.
+If you have downloaded the SDK from the [Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/){:target="_blank"} and unzipped `dbr-android-{version-number}.zip`, you can find two `aar` files and a sample folder. You can simply include `DynamsoftBarcodeReaderAndroid.aar` to your project to start creating a barcode scanning app. The other aar package, `DynamsoftCameraEnhancerAndroid.aar`, is an expansion package which integrates video frame preprocessing algorithms and camera control APIs. In this guide, we will use the `Camera Enhancer` to create the camera module for receiving video input.
 
-### Option 2: Build with Maven
+| Package | Description |
+|---------|-------------|
+| `DynamsoftBarcodeReaderAndroid.aar` | The Barcode Reader package, includes all barcode decoding releated algorithms and APIs. |
+| `DynamsoftCameraEnhancerAndroid.aar` | The Camera Enhancer Package, includes camera control APIs and frame preprocessing algorithm.  |
 
-You can add Dynamsoft Barcode Reader like below:
+You can add your downloaded packages into your project by the following steps:
 
-1. Add download URL in your project's `build.gradle`. 
+1. Create a new Android project in Android Studio.
+2. Import the `DynamsoftBarcodeReaderAndroid.aar` and `DynamsoftCameraEnhancerAndroid.aar` files into the new project.
+3. In the project, open `build.gradle(Module: app)` and add the following code:
 
+   ```groovy
+   repositories {
+      flatDir {
+         dirs 'libs'
+      }
+   }
    ```
-    allprojects {
+
+   Then Add `.aar` reference in the dependencies:
+
+   ```groovy
+   implementation(name: 'DynamsoftBarcodeReaderAndroid', ext: 'aar')
+   implementation(name: 'DynamsoftCameraEnhancerAndroid', ext: 'aar')
+   ```
+
+4. Click `Sync Now`. After the synchronization completes, `DynamsoftBarcodeReaderAndroid.aar` and `DynamsoftCameraEnhancerAndroid.aar` are added to the project.
+
+**Option 2: Install from Gradle**
+
+You can add Dynamsoft Barcode Reader by the following steps:
+
+1. Add download URL in your project's `build.gradle`.
+
+   ```groovy
+   allprojects {
       repositories {
          google()
          jcenter()
          maven {
-            url "http://download2.dynamsoft.com/maven/dbr/aar"
+            url "http://download.dynamsoft.com/maven/dbr/aar"
+         }
+         maven {
+            url "http://download.dynamsoft.com/maven/dce/aar"
          }
       }
    }
@@ -45,100 +76,198 @@ You can add Dynamsoft Barcode Reader like below:
 
 2. Implement Dynamsoft Barcode Reader at dependencies in your module's `build.gradle`.
 
-   ```
-   implementation 'com.dynamsoft:dynamsoftbarcodereader:{version-number}@aar'
-   ```
-   Please replace `{version-number}` with the correct version number, e.g. 
-   ```
-   implementation 'com.dynamsoft:dynamsoftbarcodereader:8.1.2@aar'
+   ```groovy
+   implementation 'com.dynamsoft:dynamsoftbarcodereader:{version number}@aar'
+   implementation 'com.dynamsoft:dynamsoftcameraenhancer:{version number}@aar'
    ```
 
+   Please replace `{version-number}` with the correct version number, e.g.
 
-## Getting Started: HelloWorld
+   ```groovy
+   implementation 'com.dynamsoft:dynamsoftbarcodereader:8.4.1@aar'
+   implementation 'com.dynamsoft:dynamsoftcameraenhancer:1.0.1@aar'
+   ```
 
-1. Create a new Android project in Android Studio.
-2. Import the `DynamsoftBarcodeReaderAndroid.aar` package into the new project. You can manually import the `.aar` file or use maven import.
+## Build Your First Application
 
-   To manually import the `.aar` :
+In this section, you will be guided on creating a Hello world app that can read barcodes from camera video input. `Dynamsoft Camera Enhancer` will be used to deploy the camera module for receiving video input.
 
-      i. Decompress the dbr-android-{version number}.zip file and you will find DynamsoftBarcodeReaderAndroid.aar in the decompressed folder.
-      ii. Put the .aar file under the directory libs in the project.
-      iii. In the project, open build.gradle(Module: app) and add the following code:
+### Initialize Camera Module
 
-      ```
-      repositories {
-         flatDir {
-            dirs 'libs'
-         }
-      }
-      ```
+In the process of video barcode scanning, the camera will provide the video input for the barcode reader. In this section, you will be guided on how to initialize the camera module for barcode scanning with the help of `Dynamsoft Camera Enhancer`.
 
-      ii. Add `.aar` reference in the dependencies:
+1. Import and instantiate the Camera Enhancer. If you have followed the installation guide, you can import Dynamsoft Barcode Reader (dbr) and Camera Enhancer (dce) in your project.
 
-      ```
-      implementation(name: 'DynamsoftBarcodeReaderAndroid', ext: 'aar')
-      ```
+   Import:
 
-      iii. Click **Sync Now**. After the synchronization completes, `DynamsoftBarcodeReaderAndroid.aar` is added to the project.
+   ```java
+   import com.dynamsoft.dce.CameraEnhancer;
+   import com.dynamsoft.dce.CameraDLSLicenseVerificationListener;
+   import com.dynamsoft.dce.CameraState;
+   import com.dynamsoft.dce.CameraView;
+   ```
 
-   Or you can use maven import the `.aar` file into the project.
+   Declare Camera Enhancer and CameraView at the start of the project. The camera view will be the UI of the camera in your app.
 
-      i. In the new project, open `build.gradle(module:app)` and add the following code:
+   ```java
+   CameraView cameraView;            
+   CameraEnhancer mCameraEnhancer;
+   ```
 
-      ```
-      allprojects {
-         repositories {
-            maven {
-               url "http://download.dynamsoft.com/maven/dbr/aar"
-            }
-         }
-      }
-      ```
+2. Initialize the Camera Enhancer
 
-      ii. Then add `.aar` reference in the dependencies as below:
+   In `onCreate`, use the camera enhancer to turn on the camera and start getting video input for barcode scanning.
 
-      ```
-      implementation 'com.dynamsoft:dynamsoftbarcodereader:{version number}@aar'
-      ```
-
-      iii. Click Sync Now. After the synchronization completes, `DynamsoftBarcodeReaderAndroid.aar` is added to the project.
-
-3. Add the following code to initiate and use the Dynamsoft Barcode Reader SDK.
-
-    ```java
-   import com.dynamsoft.dbr.BarcodeReader;
-   import com.dynamsoft.dbr.TextResult;
-   import android.util.Log;
-   public class MainActivity extends AppCompatActivity {
+   ```java
+   cameraView = findViewById(R.id.cameraView);
+   mCameraEnhancer = new CameraEnhancer(MainActivity.this);
+   mCameraEnhancer.addCameraView(cameraView);
+   //Initialize the Camera Enhancer from License Tracking Server.
+   com.dynamsoft.dce.DMDLSConnectionParameters info = new com.dynamsoft.dce.DMDLSConnectionParameters();
+   info.organizationID = "Put your organizationID here.";
+   mCameraEnhancer.initLicenseFromDLS(info,new CameraDLSLicenseVerificationListener() {
       @Override
-      protected void onCreate(Bundle savedInstanceState) {
-         super.onCreate(savedInstanceState);
-         setContentView(R.layout.activity_main);
-         try {
-            BarcodeReader dbr = new BarcodeReader("your license here");
-            // Note: If you do not have a valid license for the SDK, some characters of the barcode results will be replaced with "***".
-            // Leave the template name empty ("") will use the settings from PublicRuntimeSettings.
-            TextResult[] results = dbr.decodeFile("put your file path here", "");
-            // e.g. TextResult[] results = dbr.decodeFile("/storage/dbr-preview-img/test.jpg", "");
-            if (results.length > 0) {
-               String resultContent = "Found " + results.length + " barcode(s):\n";
-               for (int i = 0; i < results.length; i++) {
-                  resultContent += results[i].barcodeText + "\n";
-               }
-               Log.i("DBR", resultContent);
-            } else {
-               Log.i("DBR", "No barcode found");
-            }
-         } catch (Exception ex) {
-            ex.printStackTrace();
+      public void DLSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+         if(!isSuccess){
+            error.printStackTrace();
          }
+      }
+   });
+   //Turn on the camera and start getting video input
+   mCameraEnhancer.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
+   mCameraEnhancer.startScanning();
+   ```
+
+3. Add Camera control on pause and resume (out of `onCreate`).
+
+   ```java
+   @Override
+   public void onResume() {
+      reader.StartCameraEnhancer();
+      super.onResume();
+   }
+
+   @Override
+   public void onPause() {
+      reader.StopCameraEnhancer();
+      super.onPause();
+   }
+   ```
+
+4. Edit layout file. The following code is the necessary content for you to display the camera UI and barcode decode result.
+
+   ```xml
+   <com.dynamsoft.dce.CameraView
+      android:id="@+id/cameraView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      tools:layout_editor_absoluteX="25dp"
+      tools:layout_editor_absoluteY="0dp" />
+   <TextView
+      android:id="@+id/tv_res"
+      android:layout_width="match_parent"
+      android:layout_height="200dp"
+      android:layout_marginTop="430dp"
+      android:textSize="16sp"
+      android:gravity="center"
+      android:scrollbars="vertical"
+      android:textColor="@color/white"
+      android:visibility="visible"/>
+   ```
+
+### Initialize Barcode Reader
+
+Import:
+
+```java
+import com.dynamsoft.dbr.BarcodeReader;
+import com.dynamsoft.dbr.BarcodeReaderException;
+import com.dynamsoft.dbr.DBRDLSLicenseVerificationListener;
+import com.dynamsoft.dbr.DCESettingParameters;
+import com.dynamsoft.dbr.TextResultCallback;
+import com.dynamsoft.dbr.TextResult;
+```
+
+At the beginning of your class, please instantiate the Barcode Reader.
+
+```java
+BarcodeReader reader;
+```
+
+Add the following code to `onCreate`.
+
+```java
+try {
+   reader = new BarcodeReader();
+   com.dynamsoft.dbr.DMDLSConnectionParameters parameters = new com.dynamsoft.dbr.DMDLSConnectionParameters();
+   parameters.organizationID = "Put your organizationID here.";
+   reader.initLicenseFromDLS(parameters, new DBRDLSLicenseVerificationListener() {
+      @Override
+      public void DLSLicenseVerificationCallback(boolean b, Exception e) {
+         if (!b) { e.printStackTrace(); }
+      }
+   });
+} catch (BarcodeReaderException e) {
+   e.printStackTrace();
+}
+```
+
+### Set the Video Input Source
+
+If you are following this guide and using `Dynamsoft Camera Enhancer` to create the camera module, please add the following code to start the barcode scanning. The Barcode Reader will automatically use the `decodeBuffer` method to process the video frames once it has received parameters transferred from the Camera Enhancer. Firstly, please declare the Text result callback. The Text result callback will be sent to the Barcode Reader as a parameter and help you in getting the barcode decode result.
+
+```java
+TextResultCallback mTextResultCallback;
+```
+
+Add the following code in `onCreate`.
+
+```java
+DCESettingParameters dceSettingParameters = new DCESettingParameters();
+dceSettingParameters.cameraInstance = mCameraEnhancer;
+dceSettingParameters.textResultCallback = mTextResultCallback;
+reader.SetCameraEnhancerParam(dceSettingParameters);
+```
+
+### Get & Display Barcode Decode Result
+
+Declare a text view for displaying the result.
+
+```java
+TextView tvRes;
+```
+
+Please put the following code before `DCESettingParameters` code.
+
+```java
+//Settings on text result will help you in getting and displaying the decoding result.
+mTextResultCallback = new TextResultCallback() {
+   @Override
+   public void textResultCallback(int i, TextResult[] textResults, Object o) {
+      if (textResults != null && textResults.length > 0) {
+         String strRes = "";
+         for ( i = 0; i < textResults.length; i++)
+            strRes += textResults[i].barcodeText + "\n\n";
+         tvRes.setText(strRes);
+      } else{
+         tvRes.setText("");
       }
    }
-    ```
+};
+// Please add the code before this line.
+// DCESettingParameters dceSettingParameters = new DCESettingParameters();
+// dceSettingParameters.cameraInstance = mCameraEnhancer;
+// dceSettingParameters.textResultCallback = mTextResultCallback;
+// reader.SetCameraEnhancerParam(dceSettingParameters);
+```
 
-4. Run the project.
+### Run the Project
 
-## Decoding Methods
+If you have followed the above guide step by step, your project will be able to build a video barcode scanner. If the project is not working well, please check the [`template code`](https://github.com/Dynamsoft/barcode-reader-docs-mobile/blob/preview/programming/android/template.java){:target="_blank"} to find out the problems.
+
+## Further Barcode Reading Settings
+
+### Decoding Methods
 
 The SDK provides multiple decoding methods that support reading barcodes from different sources, including static images, video stream, files in memory, base64 string, bitmap, etc. Here is a list of all decoding methods:
 
@@ -148,236 +277,48 @@ The SDK provides multiple decoding methods that support reading barcodes from di
 - [DecodeBuffer](api-reference/BarcodeReader/decode.md#decodebuffer): Reads barcodes from raw buffer.
 - [DecodeFileInMemory](api-reference/BarcodeReader/decode.md#decodefileinmemory): Decodes barcodes from an image file in memory.
 
-You can find more samples in more programming languages at [Code Gallery](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx) or [Github Repositories](https://github.com/dynamsoft-dbr?q=java&type=&language=).
+You can find more samples in more programming languages at [Code Gallery](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx){:target="_blank"} or [Github Repositories](https://github.com/dynamsoft-dbr?q=java&type=&language=){:target="_blank"}.
 
-## Barcode Reading Settings
+Calling the [decoding methods](#decoding-methods) directly will use the default scanning modes and it will satisfy most of the needs. The SDK also allows you to adjust the scanning settings to optimize the scanning performance for different usage scenarios.
 
-Calling the [decoding methods](#decoding-methods) directly will use the default scanning modes and it will satisfy most of the needs. The SDK also allows you to adjust the scanning settings to optimize the scanning performance for different usage scenarios.   
-   
-There are two ways to change the barcode reading settings - using the `PublicRuntimeSettings` class or template. For new developers, We recommend you to start with the `PublicRuntimeSettings` class; For those who are experienced with the SDK, you may use a template which is more flexible and easier to update.   
+### [`PublicRuntimeSettings`](api-reference/class/PublicRuntimeSettings.md)
 
-- [Use `PublicRuntimeSettings` class to Change Settings](#use-publicruntimesettings-class-to-change-settings)   
-- [Use A Template to Change Settings](#use-a-template-to-change-settings)   
+Here are some typical scanning settings you might find helpful:
 
-### Use [`PublicRuntimeSettings`](api-reference/class/PublicRuntimeSettings.md) class to Change Settings
+- [Specify Barcode Type to Read](#specify-barcode-type-to-read)
+- [Specify Maximum Barcode Count](#specify-maximum-barcode-count)
+- [Specify a Scan Region](#specify-a-scan-region)
 
-Here are some common scanning settings you might find helpful:   
-
-- [Specify Barcode Type to Read](#specify-barcode-type-to-read)   
-- [Specify Maximum Barcode Count](#specify-maximum-barcode-count)   
-- [Specify a Scan Region](#specify-a-scan-region)  
-
-For more scanning settings guide, check out the [How To](#how-to-guide) section.
+For more scanning settings guide, please read the [How To Guide]({{site.introduction}}how-to-guide/){:target="_blank"} section.
 
 #### Specify Barcode Type to Read
 
-By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. (See [Product Overview]({{ site.introduction }}overview.html) for the full supported barcode list.) 
-
-If your full license only covers some barcode formats, you can use `BarcodeFormatIds` and `BarcodeFormatIds_2` to specify the barcode format(s). Check out [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2).
-
-For example, to enable only 1D barcode reading, you can use the following code:
-
-```java
-BarcodeReader dbr = new BarcodeReader();
-dbr.initLicense("<Put your license key here>"); //Replace "<Put your license key here>" with your own license
-// Set barcodeFromatIds via PublicRuntimeSettings instance and update it to BarcodeReader instance
-PublicRuntimeSettings runtimeSettings = dbr.getRuntimeSettings();
-runtimeSettings.barcodeFormatIds = 0x7FF;// OneD barcode
-dbr.updateRuntimeSettings(runtimeSettings);
-// Replace "<Put the path of your file here>" with your own file path
-TextResult[] result = dbr.decodeFile("<Put your file path here>","");
-```
+A simple barcode format setting will result in a higher processing speed. By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. Please use the [`BarcodeFormatIds`]({{ site.enumerations }}format-enums.html#barcodeformat) and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) to specify your barcode format(s) so that you can find the balance between speed and readability.
 
 #### Specify maximum barcode count
 
-By default, the SDK will read as many barcodes as it can. To increase the recognition efficiency, you can use `expectedBarcodesCount` to specify the maximum number of barcodes to recognize according to your scenario.
-
-```java
-BarcodeReader dbr = new BarcodeReader();
-dbr.initLicense("<Put your license key here>"); //Replace "<Put your license key here>" with your own license
-PublicRuntimeSettings rts = dbr.getRuntimeSettings();
-rts.expectedBarcodesCount = 10;
-dbr.updateRuntimeSettings(rts);
-//Replace "<Put the path of your file here>" with your own file path
-TextResult[] result = dbr.decodeFile("<Put your file path here>","");
-reader.destroy();
-```
+By default, the SDK will try to find at least one barcode. You can use `expectedBarcodesCount` to specify the maximum number of barcodes. If you set the maximum number of barcodes n, the SDK will try to find at least n barcodes. The scanning process will not stop until n barcodes are found or timeout.
 
 #### Specify a scan region
 
-By default, the barcode reader will search the whole image for barcodes. This can lead to poor performance especially when
-dealing with high-resolution images. You can speed up the recognition process by restricting the scanning region.   
+By default, the barcode reader will scan the whole image for barcodes. This can lead to poor performance, especially when dealing with high-resolution images. You can speed up the recognition process by restricting the scanning region.
 
-To specify a region, you will need to define an area. The following code shows how to create a template string and define the region.  
+#### Code Snippet of PublicRuntimeSettings
 
-```java
-BarcodeReader dbr = new BarcodeReader();
-dbr.initLicense("<Put your license key here>"); //Replace "<Put your license key here>" with your own license
-PublicRuntimeSettings runtimeSettings = dbr.getRuntimeSettings();
-runtimeSettings.region.regionBottom = 100;
-runtimeSettings.region.regionLeft = 0;
-runtimeSettings.region.regionRight = 50;
-runtimeSettings.region.regionTop = 0;
-runtimeSettings.region.regionMeasuredByPercentage = 1; //The region is determined by percentage
-dbr.updateRuntimeSettings(runtimeSettings);
-//Replace "<Put the path of your file here>" with your own file path
-TextResult[] result = dbr.decodeFile("<Put your file path here>","");
-reader.destroy();
-```
-
-### Use A Template to Change Settings
-
-Besides the option of using the PublicRuntimeSettings class, the SDK also provides [`initRuntimeSettingsWithString`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) and [`initRuntimeSettingsWithFile`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) APIs that enable you to use a template to control all the runtime settings. With a template, instead of writing many codes to modify the settings, you can manage all the runtime settings in a JSON file/string. 
+The following code is a template on how to use `PublicRuntimeSettings`.
 
 ```java
-BarcodeReader dbr = new BarcodeReader();
-dbr.initLicense("<Put your license key here>"); //Replace "<Put your license key here>" with your own license
-br.initRuntimeSettingsWithFile("<put your json file here>", EnumConflictMode.CM_OVERWRITE);
-//Replace "<Put the path of your file here>" with your own file path
-TextResult[] result = dbr.decodeFile("<Put your file path here>","");
-reader.destroy();
+PublicRuntimeSettings runtimeSettings = reader.getRuntimeSettings();
+//The barcode is set to OneD barcode.
+runtimeSettings.barcodeFormatIds = 0x7FF;
+//The barcode will try to find 10 barcodes.
+runtimeSettings.expectedBarcodesCount = 10;
+//The following code shrinks the decoding region by 25% on all sides
+runtimeSettings.region.regionTop = 25;
+runtimeSettings.region.regionBottom = 75;
+runtimeSettings.region.regionLeft = 25;
+runtimeSettings.region.regionRight = 75;
+//The region is determined by the percentage
+runtimeSettings.region.regionMeasuredByPercentage = 1;
+reader.updateRuntimeSettings(runtimeSettings);
 ```
-
-Below is a template for your reference. To learn more about the APIs, you can check out [`PublicRuntimeSettings`](api-reference/class/PublicRuntimeSettings.md) Class. 
-
-```json
-{
-   "ImageParameter" : {
-      "BarcodeFormatIds" : [ "BF_ALL" ],
-      "BinarizationModes" : [
-         {
-            "BlockSizeX" : 0,
-            "BlockSizeY" : 0,
-            "EnableFillBinaryVacancy" : 1,
-            "ImagePreprocessingModesIndex" : -1,
-            "Mode" : "BM_LOCAL_BLOCK",
-            "ThreshValueCoefficient" : 10
-         }
-      ],
-      "DeblurLevel" : 9,
-      "Description" : "",
-      "ExpectedBarcodesCount" : 0,
-      "GrayscaleTransformationModes" : [
-         {
-            "Mode" : "GTM_ORIGINAL"
-         }
-      ],
-      "ImagePreprocessingModes" : [
-         {
-            "Mode" : "IPM_GENERAL"
-         }
-      ],
-      "IntermediateResultSavingMode" : {
-         "Mode" : "IRSM_MEMORY"
-      },
-      "IntermediateResultTypes" : [ "IRT_NO_RESULT" ],
-      "MaxAlgorithmThreadCount" : 4,
-      "Name" : "runtimesettings",
-      "PDFRasterDPI" : 300,
-      "Pages" : "",
-      "RegionDefinitionNameArray" : null,
-      "RegionPredetectionModes" : [
-         {
-            "Mode" : "RPM_GENERAL"
-         }
-      ],
-      "ResultCoordinateType" : "RCT_PIXEL",
-      "ScaleDownThreshold" : 2300,
-      "TerminatePhase" : "TP_BARCODE_RECOGNIZED",
-      "TextFilterModes" : [
-         {
-            "MinImageDimension" : 65536,
-            "Mode" : "TFM_GENERAL_CONTOUR",
-            "Sensitivity" : 0
-         }
-      ],
-      "TextResultOrderModes" : [
-         {
-            "Mode" : "TROM_CONFIDENCE"
-         },
-         {
-            "Mode" : "TROM_POSITION"
-         },
-         {
-            "Mode" : "TROM_FORMAT"
-         }
-      ],
-      "TextureDetectionModes" : [
-         {
-            "Mode" : "TDM_GENERAL_WIDTH_CONCENTRATION",
-            "Sensitivity" : 5
-         }
-      ],
-      "Timeout" : 10000
-   },
-   "Version" : "3.0"
-}
-```
-
-## How to Upgrade
-
-### From x8.0 to 8.x
-
-**Update the SDK**
-
-Replace the old `DynamsoftBarcodeReaderAndroid.aar` file with the one in the latest version. If you are using Maven, then change the version number in the `build.gradle` file.
-
-**API changes**
-
-Change Name of Import from `import com.dynamsoft.barcode.***;` to `import com.dynamsoft.dbr.***;`, like this:
-
-Change:
-```java
-import com.dynamsoft.barcode.BarcodeReader;
-import com.dynamsoft.barcode.EnumBarcodeFormat;
-import com.dynamsoft.barcode.EnumImagePixelFormat;
-import com.dynamsoft.barcode.EnumIntermediateResultSavingMode;
-import com.dynamsoft.barcode.EnumIntermediateResultType;
-import com.dynamsoft.barcode.EnumBarcodeFormat_2;
-import com.dynamsoft.barcode.EnumConflictMode;
-import com.dynamsoft.barcode.FrameDecodingParameters;
-import com.dynamsoft.barcode.IntermediateResult;
-import com.dynamsoft.barcode.LocalizationResult;
-import com.dynamsoft.barcode.Point;
-import com.dynamsoft.barcode.PublicRuntimeSettings;
-import com.dynamsoft.barcode.TextResult;
-import com.dynamsoft.barcode.TextResultCallback;
-```
-
-to:
-```java
-import com.dynamsoft.dbr.BarcodeReader;
-import com.dynamsoft.dbr.EnumBarcodeFormat;
-import com.dynamsoft.dbr.EnumImagePixelFormat;
-import com.dynamsoft.dbr.EnumIntermediateResultSavingMode;
-import com.dynamsoft.dbr.EnumIntermediateResultType;
-import com.dynamsoft.dbr.EnumBarcodeFormat_2;
-import com.dynamsoft.dbr.EnumConflictMode;
-import com.dynamsoft.dbr.FrameDecodingParameters;
-import com.dynamsoft.dbr.IntermediateResult;
-import com.dynamsoft.dbr.LocalizationResult;
-import com.dynamsoft.dbr.Point;
-import com.dynamsoft.dbr.PublicRuntimeSettings;
-import com.dynamsoft.dbr.TextResult;
-import com.dynamsoft.dbr.TextResultCallback;
-```
-
-### From v7.x to 8.x
-
-You need to replace the old `DynamsoftBarcodeReaderAndroid.aar` file with the one in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
-
-Your previous SDK license for version 7.x is not compatible with the version 8.x. Please [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to upgrade your license.
-
-In v8.0, we introduced a new license tracking mechanism, <a href="https://www.dynamsoft.com/license-tracking/docs/about/index.html" target="_blank">License 2.0</a>. 
-
-If you wish to use License 2.0, please refer to [this article](../../license-activation/set-full-license.md) to set the license.
-
-After you upgraded your license to version 8.x:
-
-- If you were using `initLicense`, please replace the old license with the newly generated one.
-
-- If you were using `initLicenseFromServer` to connect to Dynamsoft server for license verification, then no need to change the license key. But please make sure the device has Internet connection.
-
-### From v6.x to 8.x
-
-We made some structural updates in the new version. To upgrade from 6.x to 8.x, we recommend you to review our sample code and re-write the barcode scanning module.

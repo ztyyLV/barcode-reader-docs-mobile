@@ -25,9 +25,9 @@ The Android documentation mainly consists of two parts. One is the [User Guide](
 
 ## API Reference
 
-- [BarcodeReader](api-reference/#barcodereader-methods)
-- [Interface](api-reference/#interface)
-- [Class](api-reference/#classes)
+- [Primary APIs](api-reference/primary-index.md)
+- [Auxiliary APIs](api-reference/auxiliary-index.md)
+- [Interface](api-reference/interface.md)
 
 ## Release Notes
 
@@ -37,5 +37,3 @@ The Android documentation mainly consists of two parts. One is the [User Guide](
 ## Online Store
 
 - <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#mobile" target="_blank">For Mobile App</a>
-
-
