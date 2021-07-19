@@ -164,7 +164,7 @@ This specific error references the `x86_64` architecture which is for the iPhone
 
 In order to solve the issue, add a `Run Script` phase after the `Embed Frameworks` step of the `Build Phases`, set it to use `/bin/sh`, and use the following script:
 
-```
+```ruby
 APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
 
 # This script loops through the frameworks embedded in the application and
