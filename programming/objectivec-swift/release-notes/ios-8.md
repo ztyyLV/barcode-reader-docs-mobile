@@ -24,7 +24,7 @@ noTitleIndex: true
 
 ### Improved
 
-- Improved the [`confidence`]({{site.android_api}}auxiliary-ExtendedResult.html#confidence) algorithm for 1D barcode results. Users can get even more accurate results by configuring the `confidence` filter.
+- Improved the [`confidence`]({{site.oc_api}}auxiliary-ExtendedResult.html#confidence) algorithm for 1D barcode results. Users can get even more accurate results by configuring the `confidence` filter.
 
 ### Fixed
 
