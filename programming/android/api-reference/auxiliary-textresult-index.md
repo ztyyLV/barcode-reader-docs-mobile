@@ -52,7 +52,7 @@ import com.dynamsoft.dbr.LocalizationResult;
 | [`barcodeFormat_2`](auxiliary-LocalizationResult.md#barcodeformat_2) | *int* | Barcode type in BarcodeFormat group 2. |
 | [`barcodeFormatString_2`](auxiliary-LocalizationResult.md#barcodeformatstring_2) | *String* | Barcode type in BarcodeFormat group 2 as string. |
 | [`resultPoints`](auxiliary-LocalizationResult.md#resultpoints) | [`Point`](auxiliary-Point.md)\[\] | The vertices coordinates information of the barcode region. |
-| [`angle`] |(auxiliary-LocalizationResult.md#angle) *int* | The angle of a barcode. Values range is from 0 to 360. |
+| [`angle`](auxiliary-LocalizationResult.md#angle) | *int* | The angle of a barcode. Values range is from 0 to 360. |
 | [`moduleSize`](auxiliary-LocalizationResult.md#modulesize) | *int* | The barcode module size (the minimum bar width in pixel). |
 | [`pageNumber`](auxiliary-LocalizationResult.md#oagenumber) | *int* | The page number the barcode located in. The index is 0-based. |
 | [`regionName`](auxiliary-LocalizationResult.md#regionname) | *String* | The region name the barcode located in. |
