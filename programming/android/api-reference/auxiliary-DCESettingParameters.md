@@ -23,7 +23,7 @@ Stores the DCESettingParameters information.
 | [`intermediateResultCallback`](#intermediateresultcallback) | [`IntermediateResultCallback`]({{site.android_api}}interface.html#intermediateresultcallback) | Set intermediate result callback. |
 | [`IntermediateResultCallback_UserData`](#intermediateresultcallback_userdata) | *Object* | Transfer user data. |
 
-## CameraInstance
+## cameraInstance
 
 The Camera Enhancer instance.
 

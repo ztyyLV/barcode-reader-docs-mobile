@@ -30,7 +30,7 @@ Initialization of `BarcodeReader` with a license.
 com.dynamsoft.dbr.BarcodeReader.BarcodeReader(String license) throws Exception
 ```
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
@@ -38,7 +38,7 @@ com.dynamsoft.dbr.BarcodeReader.BarcodeReader(String license) throws Exception
 
 If you initialize DynamsoftBarcodeReader without a license, the decoding results may be unreliable.
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
@@ -54,7 +54,7 @@ BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 void com.dynamsoft.dbr.BarcodeReader.destroy()
 ```
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");

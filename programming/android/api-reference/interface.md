@@ -27,7 +27,7 @@ Represents the method that will handle the error code returned by the SDK.
 void com.dynamsoft.dbr.ErrorCallback.errorCallback(int frameId, int errorCode, Object userData)
 ```
 
-### Parameters
+**Parameters**
 
 - `frameId`: The ID of the frame.
 - `errorCode`: Error Code generated when decoding the frame.
@@ -41,7 +41,7 @@ Represents the method that will handle the intermediate result array returned by
 void com.dynamsoft.dbr.IntermediateResultCallback.intermediateResultCallback(int frameId, IntermediateResult[] results, Object userData)
 ```
 
-### Parameters
+**Parameters**
 
 - `frameId`: The ID of the frame.  
 - `results`: The intermediate results of the frame.
@@ -59,7 +59,7 @@ Represents the method that will handle the error code returned by the SDK.
 void textResultCallback(int frameId, TextResult[] results, Object userData)
 ```
 
-### Parameters
+**Parameters**
 
 - `frameId`: The ID of the frame.  
 - `results`: Recognized barcode results of the frame.
@@ -77,7 +77,7 @@ Represents the method that will handle the error code returned by the SDK.
 void com.dynamsoft.dbr.DBRServerLicenseVerificationListener.licenseVerificationCallback (boolean isSuccess, Exception error)
 ```
 
-### Parameters
+**Parameters**
 
 - `isSuccess`: Whether the license verification was successful.
 - `error`: The error message from license server.
@@ -90,7 +90,7 @@ Represents the method that will handle callback when license tracking server ret
 void com.dynamsoft.dbr.DBRDLSLicenseVerificationListener.licenseVerificationCallback (boolean isSuccess, Exception error)
 ```
 
-### Parameters
+**Parameters**
 
 - `isSuccess`: Whether the license verification was successful.
 - `error`: The error message from license server.

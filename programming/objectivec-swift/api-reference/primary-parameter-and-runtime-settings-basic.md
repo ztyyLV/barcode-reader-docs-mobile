@@ -30,7 +30,7 @@ Sets the optional argument for a specified mode in Modes parameters.
                     error:(NSError* _Nullable * _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in] modesName` The mode parameter name to set argument.  
 `[in] index` The array index of mode parameter to indicate a specific mode.  
@@ -55,7 +55,7 @@ Check follow link for available modes and arguments:
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
 - [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes) 
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -111,14 +111,14 @@ Gets the optional argument for a specified mode in Modes parameters.
                             error:(NSError* _Nullable * _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in] modesName` The mode parameter name to get argument.  
 `[in] index` The array index of mode parameter to indicate a specific mode.  
 `[in] argumentName` The name of the argument to get.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 the optional argument for a specified mode
 
@@ -139,7 +139,7 @@ Check follow link for available modes and arguments:
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
 - [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes) 
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -195,15 +195,15 @@ Get current settings and save them into a [`iPublicRuntimeSettings`](auxiliary-i
 - (iPublicRuntimeSettings* _Nullable)getRuntimeSettings:(NSError* _Nullable * _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in, out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 A DBRPublicRuntimeSettings storing current runtime settings.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -245,12 +245,12 @@ Update runtime settings with a given [`iPublicRuntimeSettings`](auxiliary-iPubli
                         error:(NSError* _Nullable * _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in] settings` The struct of template settings.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -294,11 +294,11 @@ Reset all parameters to default values.
 - (void)resetRuntimeSettings:(NSError* _Nullable * _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 

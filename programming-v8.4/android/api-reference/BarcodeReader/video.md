@@ -47,7 +47,7 @@ Start a new thread to decode barcodes from the inner frame queue with specific f
 void com.dynamsoft.dbr.BarcodeReader.startFrameDecoding	(final int maxQueueLength, final int maxResultQueueLength, final int width, final int height, final int stride, final int enumImagePixelFormat, final String templateName) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
 - `maxQueueLength`: The max number of frames waiting for decoding.  
 - `maxResultQueueLength`: The max number of frames whose results (text result/localization result) will be kept.  
@@ -58,11 +58,11 @@ void com.dynamsoft.dbr.BarcodeReader.startFrameDecoding	(final int maxQueueLengt
 - `templateName`: The template name.  
 
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
@@ -94,16 +94,16 @@ Start a new thread to decode barcodes from the inner frame queue with specific f
 void com.dynamsoft.dbr.BarcodeReader.startFrameDecodingEx(FrameDecodingParameters parameters, String templateName) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
 - `parameters`: The frame decoding parameters.
 - `templateName`: The template name.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
@@ -143,15 +143,15 @@ Append a frame image buffer to the inner frame queue.
 int com.dynamsoft.dbr.BarcodeReader.appendFrame(byte[] bufferBytes)	 
 ```
 
-### Parameters
+**Parameters**
 
 `bufferBytes`: The array of bytes which contain the image data.
 
-### Return value
+**Return value**
 
 Returns the ID of the appended frame.
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
@@ -179,11 +179,11 @@ Stop the frame decoding thread created by [`StartFrameDecoding`](#startframedeco
 void com.dynamsoft.dbr.BarcodeReader.stopFrameDecoding() throws BarcodeReaderException
 ```  
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
@@ -211,15 +211,15 @@ Initialize frame decoding parameters with default values.
 FrameDecodingParameters com.dynamsoft.dbr.BarcodeReader.initFrameDecodingParameters() throws BarcodeReaderException
 ```
 
-### Return value
+**Return value**
 
 The frame decoding parameters.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
@@ -246,16 +246,16 @@ Set callback interface to process errors generated during frame decoding.
 void com.dynamsoft.dbr.BarcodeReader.setErrorCallback(ErrorCallback errorCallback, Object userData) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
 - `errorCallback`: Callback interface.
 - `userData`: Customized arguments passed to your function.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
@@ -287,16 +287,16 @@ Set callback interface to process text results generated during frame decoding.
 void com.dynamsoft.dbr.BarcodeReader.setTextResultCallback(TextResultCallback textResultCallback, Object userData) throws BarcodeReaderException	
 ```
 
-### Parameters
+**Parameters**
 
 - `textResultCallback`: Callback interface.
 - `userData`: Customized arguments passed to your function.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
@@ -328,16 +328,16 @@ Set callback interface to process intermediate results generated during frame de
 void com.dynamsoft.dbr.BarcodeReader.setIntermediateResultCallback(IntermediateResultCallback intermediateResultCallback, Object userData} throws BarcodeReaderException
 ```
    
-### Parameters
+**Parameters**
 
 - `intermediateResultCallback`: Callback interface.   
 - `userData`: Customized arguments passed to your function.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
@@ -372,11 +372,11 @@ Get length of current inner frame queue.
 int com.dynamsoft.dbr.BarcodeReader.getLengthOfFrameQueue()	
 ```
 
-### Return value
+**Return value**
 
 Returns length of current inner frame queue.
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();

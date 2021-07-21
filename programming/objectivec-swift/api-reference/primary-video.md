@@ -54,7 +54,7 @@ Starts a new thread to decode barcodes from the inner frame queue.
     error:(NSError* _Nullable * _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in] maxQueueLength` The max number of frames waiting for decoding.  
 `[in] maxResultQueueLength` The max number of frames whose results (text result/localization result) will be kept.  
@@ -65,7 +65,7 @@ Starts a new thread to decode barcodes from the inner frame queue.
 `[in] templateName` The template name.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -108,13 +108,13 @@ Start a new thread to decode barcodes from the inner frame queue with specific f
                     error:(NSError* _Nullable __autoreleasing* _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in] parameters` The frame decoding parameters.  
 `[in] templateName` The template name.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -169,15 +169,15 @@ Appends a frame image buffer to the inner frame queue.
 -(NSInteger)appendFrame:(NSData* _Nullable) bufferBytes;
 ```
 
-### Parameters
+**Parameters**
 
 `[in] bufferBytes` The array of bytes which contain the image data.  
 
-### Return value
+**Return value**
 
 Returns the ID of the appended frame.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -220,11 +220,11 @@ Stops the frame decoding thread created by [`startFrameDecoding`](#startframedec
 -(void)stopFrameDecoding:(NSError* _Nullable * _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -267,15 +267,15 @@ Initialize frame decoding parameters with default values.
 -(iFrameDecodingParameters*_Nullable)getFrameDecodingParameters:(NSError* _Nullable * _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 Returns frame decoding parameters.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -314,12 +314,12 @@ Sets callback function to process errors generated during frame decoding.
 -(void)setDBRErrorDelegate:(id _Nullable)errorDelegate userData:(NSObject* _Nullable)userData;
 ```
 
-### Parameters
+**Parameters**
 
 `[in] errorDelegate` Callback function.  
 `[in] userData` Customized arguments passed to your function.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -358,12 +358,12 @@ Set callback function to process text results generated during frame decoding.
 -(void)setDBRTextResultDelegate:(id _Nullable)textResultDelegate userData:(NSObject* _Nullable)userData;
 ```
 
-### Parameters
+**Parameters**
 
 `[in] textResultDelegate` Callback function.  
 `[in] userData`Customized arguments passed to your function.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -402,12 +402,12 @@ Set callback function to process intermediate results generated during frame dec
 -(void)setDBRIntermediateResultDelegate:(id _Nullable)intermediateResultDelegate userData:(NSObject* _Nullable)userData;
 ```
 
-### Parameters
+**Parameters**
 
 `[in] intermediateResultDelegate` Callback function.  
 `[in] userData` Customized arguments passed to your function.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -448,13 +448,13 @@ Get length of current inner frame queue.
 
 ---
 
-### Return value
+**Return value**
 
 Returns the length of the inner frame queue.
 
 ---
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 

@@ -50,7 +50,17 @@ Resume
 
 ## SetCameraEnhancerParam
 
-Set the callback parameters for Camera Enhancer
+**Parameters**
+
+- `cameraInstance`: The instance of Dynamsoft Camera Enhancer.
+- [`textResultCallback`](interface.md#textresultcallback): The text result callback.
+- [`intermediateResultCallback`](interface.md#intermediateresultcallback): The intermediate result callback.
+
+**Exceptions**
+
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+
+**Code Snippet**
 
 ```java
     DCESettingParameters dceSettingParameters = new DCESettingParameters();

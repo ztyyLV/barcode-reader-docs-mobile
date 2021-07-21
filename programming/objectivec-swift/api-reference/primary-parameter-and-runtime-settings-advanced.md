@@ -30,13 +30,13 @@ Initialize runtime settings with the parameters obtained from a JSON file.
                         error:(NSError* _Nullable * _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in] fileName` The settings file path.  
 `[in] conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template settings or to overwrite previous settings with the new template.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.  
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -79,13 +79,13 @@ Initialize runtime settings with the parameters obtained from a JSON string.
                         error:(NSError* _Nullable * _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in] content` A JSON string that represents the content of the settings.  
 `[in] conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -128,13 +128,13 @@ Append a new template file to the current runtime settings.
                                 error:(NSError * _Nullable *_Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in] fileName` The settings file path.
 `[in] conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template settings or to overwrite previous settings with the new template.
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -177,13 +177,13 @@ Append a new template string to the current runtime settings.
                                     error:(NSError *_Nullable *_Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in] content` A JSON string that represents the content of the settings.
 `[in] conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -226,15 +226,15 @@ Get count of parameter templates.
 - (NSArray<NSString*>* _Nullable)allParameterTemplateNames: (NSError *__autoreleasing  _Nullable * _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 The template name array.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -278,13 +278,13 @@ Outputs runtime settings and save them into a settings file (JSON file).
                         error:(NSError*_Nullable *_Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in] filePath` The path of the output file which stores current settings.  
 `[in] settingsName` A unique name for declaring current runtime settings.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -327,16 +327,16 @@ Output runtime settings to a string.
                                         error:(NSError* _Nullable * _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in] settingsName` A unique name for declaring current runtime settings.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 The output string which stores the content of current settings.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 

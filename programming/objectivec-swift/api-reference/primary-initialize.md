@@ -23,7 +23,7 @@ Initializes DynamsoftBarcodeReader.
 - (instancetype _Nonnull)init;
 ```
 
-### Return value
+**Return value**
 
 The instance of DynamsoftBarcodeReader.
 
@@ -31,7 +31,7 @@ The instance of DynamsoftBarcodeReader.
 
 Partial of the decoding result will be masked with "*" without a valid license key.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 

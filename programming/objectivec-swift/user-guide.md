@@ -382,7 +382,7 @@ By default, the SDK will try to find at least one barcode. You can use `expected
 
 By default, the barcode reader will scan the whole image for barcodes. This can lead to poor performance, especially when dealing with high-resolution images. You can speed up the recognition process by restricting the scanning region.
 
-#### Code snippet of publicRuntimeSettings
+#**Code Snippet** of publicRuntimeSettings
 
 The following code is a template on how to use `PublicRuntimeSettings`.
 

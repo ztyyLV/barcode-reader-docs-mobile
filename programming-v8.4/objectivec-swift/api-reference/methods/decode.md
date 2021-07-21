@@ -29,17 +29,17 @@ Decode barcodes from a specified image file.
 - (NSArray<iTextResult*>* _Nullable)decodeFileWithName:(NSString* _Nonnull)name templateName:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;	
 ```   
    
-### Parameters
+**Parameters**
 
 `[in] name` The local path of the file.
 `[in] templateName` The template name.
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 All barcode text results decoded successfully.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -85,17 +85,17 @@ Decode barcodes from an image file in memory.
 - (NSArray<iTextResult*>* _Nullable)decodeImage:(UIImage* _Nonnull)image withTemplate:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;	
 ```  
    
-### Parameters
+**Parameters**
 
 `[in] image` The image file in memory.
 `[in] templateName` The template name.
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 All barcode text results decoded successfully.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -137,7 +137,7 @@ Decode barcodes from the memory buffer containing image pixels in defined format
 - (NSArray<iTextResult*>* _Nullable)decodeBuffer:(NSData* _Nonnull)buffer withWidth:(NSInteger)width height:(NSInteger)height stride:(NSInteger)stride format:(EnumImagePixelFormat)format templateName:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
 ```   
    
-### Parameters
+**Parameters**
 
 `[in] buffer` The array of bytes which contain the image data.  
 `[in] width` The width of the image in pixels.  
@@ -147,11 +147,11 @@ Decode barcodes from the memory buffer containing image pixels in defined format
 `[in] templateName` The template name.
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 All barcode text results decoded successfully.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -205,17 +205,17 @@ Decode barcodes from an image file encoded as a base64 string.
 DBR_API int DBR_DecodeBase64String (void* barcodeReader, const char* pBase64String, const char* pTemplateName)	
 ```   
 
-### Parameters
+**Parameters**
 
 `[in] base64` A base64 encoded string that represents an image.  
 `[in] templateName` The template name.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 All barcode text results decoded successfully.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -258,16 +258,16 @@ Inits an intermediateResult struct with default values.
 - (iIntermediateResult* _Nullable)createIntermediateResult:(EnumIntermediateResultType)type error:(NSError* _Nullable * _Nullable)error;	
 ```   
    
-### Parameters
+**Parameters**
 
 `[in] type` The type of the intermediate result to init.
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 An intermediateResult struct with default values.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -307,17 +307,17 @@ Decodes barcode from intermediate results.
 - (NSArray<iTextResult*>* _Nullable)decodeIntermediateResults:(NSArray<iIntermediateResult*>* _Nullable)array templateName:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;	
 ```   
    
-### Parameters
+**Parameters**
 
 `[in] array` The intermediate result array for decoding.
 `[in] templateName` The template name.
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 All barcode text results decoded successfully.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
