@@ -8,16 +8,16 @@ needGenerateH3Content: true
 ---
 
 
-# Class DMDLSConnectionParameters
+# Class DMLTSConnectionParameters
 
-Defines a struct to configure the parameters to connect to Dynamsoft License Server.  
+Defines a struct to configure the parameters to connect to License Tracking Server.  
 
 | Attributes | Type | Descriptions |
 |----------- | ---- | ----------- |
-| [`mainServerURL`](#mainserverurl) | *String* | The URL of the Dynamsoft License Server. |
-| [`standbyServerURL`](#standbyserverurl) | *String* | The URL of the standby Dynamsoft License Server. |
+| [`mainServerURL`](#mainserverurl) | *String* | The URL of the License Tracking Server. |
+| [`standbyServerURL`](#standbyserverurl) | *String* | The URL of the standby License Tracking Server. |
 | [`handshakeCode`](#handshakecode) | *String* | The handshake code. |
-| [`sessionPassword`](#sessionpassword) | *String* | The session password of the handshake code set in Dynamsoft License Server. |
+| [`sessionPassword`](#sessionpassword) | *String* | The session password of the handshake code set in License Tracking Server. |
 | [`uuidGenerationMethod`](#uuidgenerationmethod) | *int* | Sets the method to generate UUID. |
 | [`maxBufferDays`](#maxbufferdays) | *int* | Sets the max days to buffer the license info. |
 | [`limitedLicenseModules`](#limitedlicensemodules) | *int[]* | Sets the license modules to use. |
@@ -39,11 +39,11 @@ String mainServerURL
     null
 
 - **Remarks**
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft License Servers for online verification.
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's License Tracking Server for online verification.
 
 ## standbyServerURL
 
-The URL of the standby Dynamsoft License Server.
+The URL of the standby License Tracking Server.
 
 ```java
 String standbyServerURL
@@ -56,7 +56,7 @@ String standbyServerURL
     null
 
 - **Remarks**
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft License Servers for online verification.
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to License Tracking Server for online verification.
 
 ## handshakeCode
 
@@ -74,7 +74,7 @@ String handshakeCode
 
 ## sessionPassword
 
-The session password of the handshake code set in Dynamsoft License Server.
+The session password of the handshake code set in License Tracking Server.
 
 ```java
 String sessionPassword

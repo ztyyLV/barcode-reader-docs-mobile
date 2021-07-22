@@ -96,6 +96,7 @@ Use the following codes to deploy the camera module.
     [_dceView addOverlay];
     [self.view addSubview:_dceView];
     iDCEdlsConnectionParameters* dcePara = [[iDCEdlsConnectionParameters alloc] init];
+    /*Set the organizationID = 200001 to use the public trial*/
     dcePara.organizationID = @"Put your organizationID here";
     _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromDLS:dcePara;        
     view:_dceView verificationDelegate:self];
@@ -131,6 +132,7 @@ func configurationDCE() {
     dceView.addOverlay()
     self.view.addSubview(dceView)
     let dls = iDCEdlsConnectionParameters()
+    /*Set the organizationID = 200001 to use the public trial*/
     dls.organizationID = "Put your organizationID here"
     dce = DynamsoftCameraEnhancer.init(licenseFromDLS: dls, view: dceView, verificationDelegate: self)
     dce.setCameraDesiredState(.CAMERA_STATE_ON)
@@ -170,7 +172,7 @@ override func viewWillAppear(_ animated: Bool) {
 Add configurations to the barcode reader:
 
 ```objectivec
-/*Initialize Dynamsoft Barcode Reader from License Tracking Server.*/
+/*Initialize Dynamsoft Barcode Reader from Dynamsoft License Server.*/
 - (void)initDBR{
     iDMDLSConnectionParameters* dbrPara = [[iDMDLSConnectionParameters alloc] init];
     //Initialize DBR License
@@ -206,7 +208,7 @@ Add configurations to the barcode reader:
 
 ```swift
 func initDBR() {
-    /*Initialize Dynamsoft Barcode Reader from License Tracking Server.*/
+    /*Initialize Dynamsoft Barcode Reader from Dynamsoft License Server.*/
     let dls = iDMDLSConnectionParameters()
     dls.organizationID = "Put your organizationID here"
     barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)

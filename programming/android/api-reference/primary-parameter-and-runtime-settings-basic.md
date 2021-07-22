@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Parameter 
 description: This page shows BarcodeReader basic runtime settings methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: setModeArgument, getModeArgument, getRuntimeSettings, updateRuntimeSettings, resetRuntimeSettings, parameter and runtime settings basic methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 
@@ -60,17 +60,6 @@ Check the available modes and arguments below:
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.binarizationModes[0] = EnumBinarizationMode.BM_LOCAL_BLOCK;
 reader.updateRuntimeSettings(settings);
@@ -121,17 +110,6 @@ Check the available modes and arguments below:
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.binarizationModes[0] = EnumBinarizationMode.BM_LOCAL_BLOCK;
 reader.updateRuntimeSettings(settings);
@@ -160,17 +138,6 @@ The struct of template settings.
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 reader.destroy();
 ```
@@ -195,17 +162,6 @@ void com.dynamsoft.dbr.BarcodeReader.updateRuntimeSettings(PublicRuntimeSettings
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.deblurLevel = 9;
 reader.updateRuntimeSettings(settings);
@@ -227,17 +183,6 @@ void com.dynamsoft.dbr.BarcodeReader.resetRuntimeSettings() throws BarcodeReader
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.deblurLevel = 9;
 reader.updateRuntimeSettings(settings);

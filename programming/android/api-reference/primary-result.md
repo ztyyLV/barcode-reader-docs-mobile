@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Result Met
 description: This page shows BarcodeReader result methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: getIntermediateResults, result methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 # Result Methods
@@ -37,17 +37,6 @@ The intermediate results returned by the SDK.
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CLUSTERED_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE;
 reader.updateRuntimeSettings(settings);

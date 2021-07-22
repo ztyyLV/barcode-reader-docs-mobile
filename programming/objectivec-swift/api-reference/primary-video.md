@@ -70,15 +70,6 @@ Starts a new thread to decode barcodes from the inner frame queue.
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 NSError __autoreleasing * _Nullable error;
 [barcodeReader startFrameDecoding:2 maxResultQueueLength:10 width:1024 height:720 stride:720 format:EnumImagePixelFormatBinary templateName:@"" error:&error];
 ```
@@ -86,14 +77,6 @@ NSError __autoreleasing * _Nullable error;
 Swift:
 
 ```Swift
-let dls = iDMDLSConnectionParameters()
-dls.organizationID = "200001"
-dls.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-}
 let error: NSError? = NSError()
 barcodeReader.startFrameDecoding(maxQueueLength:2, maxResultQueueLength:10, width:1024, height:720, stride:720, format:EnumImagePixelFormat.Binary, templateName:"", error:&error)
 ```
@@ -119,15 +102,6 @@ Start a new thread to decode barcodes from the inner frame queue with specific f
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 NSError __autoreleasing * _Nullable error;
 iFrameDecodingParameters *parameters = [barcodeReader getFrameDecodingParameters:nil];
 parameters.maxQueueLength = 2;
@@ -142,14 +116,6 @@ parameters.imagePixelFormat = EnumImagePixelFormatBinary;
 Swift:
 
 ```Swift
-let dls = iDMDLSConnectionParameters()
-dls.organizationID = "200001"
-dls.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-}
 let error: NSError? = NSError()
 let parameters = barcodeReader.getFrameDecodingParameters
 parameters?.maxQueueLength = 2
@@ -182,15 +148,6 @@ Returns the ID of the appended frame.
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 NSError __autoreleasing * _Nullable error;
 [barcodeReader startFrameDecoding:2 maxResultQueueLength:10 width:1024 height:720 stride:720 format:EnumImagePixelFormatBinary templateName:@"" error:&error];
 NSInteger frameId = [barcodeReader appendFrame:bufferBytes];
@@ -199,14 +156,6 @@ NSInteger frameId = [barcodeReader appendFrame:bufferBytes];
 Swift:
 
 ```Swift
-let dls = iDMDLSConnectionParameters()
-dls.organizationID = "200001"
-dls.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-}
 let error: NSError? = NSError()
 barcodeReader.startFrameDecoding(maxQueueLength:2, maxResultQueueLength:10, width:1024, height:720, stride:720, format:EnumImagePixelFormat.Binary, templateName:"", error:&error)
 let frameId = barcodeReader.appendFrame(bufferBytes:bufferBytes)
@@ -229,15 +178,6 @@ Stops the frame decoding thread created by [`startFrameDecoding`](#startframedec
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 NSError __autoreleasing * _Nullable error;
 [barcodeReader startFrameDecoding:2 maxResultQueueLength:10 width:1024 height:720 stride:720 format:EnumImagePixelFormatBinary templateName:@"" error:&error];
 [barcodeReader stopFrameDecoding:&error];
@@ -246,14 +186,6 @@ NSError __autoreleasing * _Nullable error;
 Swift:
 
 ```Swift
-let dls = iDMDLSConnectionParameters()
-dls.organizationID = "200001"
-dls.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-}
 let error: NSError? = NSError()
 barcodeReader.startFrameDecoding(maxQueueLength:2, maxResultQueueLength:10, width:1024, height:720, stride:720, format:EnumImagePixelFormat.Binary, templateName:"", error:nil)
 barcodeReader.stopFrameDecoding(error:&error)
@@ -280,29 +212,12 @@ Returns frame decoding parameters.
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 iFrameDecodingParameters *parameters = [barcodeReader getFrameDecodingParameters:nil];
 ```
 
 Swift:
 
 ```Swift
-let dls = iDMDLSConnectionParameters()
-dls.organizationID = "200001"
-dls.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-}
 let parameters = barcodeReader.getFrameDecodingParameters(error: nil)
 ```
 
@@ -324,29 +239,12 @@ Sets callback function to process errors generated during frame decoding.
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 [barcodeReader setDBRErrorDelegate:self userData:nil];
 ```
 
 Swift:
 
 ```Swift
-let dls = iDMDLSConnectionParameters()
-dls.organizationID = "200001"
-dls.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-}
 barcodeReader.setDBRErrorDelegate(errorDelegate:self, userData:nil)
 ```
 
@@ -368,29 +266,12 @@ Set callback function to process text results generated during frame decoding.
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 [barcodeReader setDBRTextResultDelegate:self userData:nil];
 ```
 
 Swift:
 
 ```Swift
-let dls = iDMDLSConnectionParameters()
-dls.organizationID = "200001"
-dls.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-}
 barcodeReader.setDBRTextResultDelegate(textResultDelegate:self, userData:nil)
 ```
 
@@ -413,28 +294,12 @@ Objective-C:
 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 [barcodeReader setDBRIntermediateResultDelegate:self userData:nil];
 ```
 
 Swift:
 
 ```Swift
-let dls = iDMDLSConnectionParameters()
-dls.organizationID = "200001"
-dls.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-}
 barcodeReader.setDBRIntermediateResultDelegate(intermediateResultDelegate:self, userData:nil)
 ```
 
@@ -459,28 +324,11 @@ Returns the length of the inner frame queue.
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 NSInteger length = [barcodeReader getLengthOfFrameQueue];
 ```
 
 Swift:
 
 ```Swift
-let dls = iDMDLSConnectionParameters()
-dls.organizationID = "200001"
-dls.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-}
 let length = barcodeReader.getLengthOfFrameQueue()
 ```

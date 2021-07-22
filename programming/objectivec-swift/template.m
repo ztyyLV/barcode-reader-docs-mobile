@@ -20,7 +20,7 @@
     [super viewWillAppear:animated];
 }
 
-/*Initialize Dynamsoft Barcode Reader from License Tracking Server.*/
+/*Initialize Dynamsoft Barcode Reader from Dynamsoft License Server.*/
 - (void)initDBR{
     iDMDLSConnectionParameters* dbrPara = [[iDMDLSConnectionParameters alloc] init];
     //Initialize DBR License

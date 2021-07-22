@@ -1,22 +1,22 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iDMDLSConnectionParameters Class
-description: This page shows the iDMDLSConnectionParameters Class of Dynamsoft Barcode Reader for iOS SDK.
-keywords: iDMDLSConnectionParameters, class, api reference, objective-c, oc, swift
+title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iDMLTSConnectionParameters Class
+description: This page shows the iDMLTSConnectionParameters Class of Dynamsoft Barcode Reader for iOS SDK.
+keywords: iDMLTSConnectionParameters, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 ---
 
 
-# Class iDMDLSConnectionParameters
+# Class iDMLTSConnectionParameters
 
 Defines a struct to configure the parameters to connect to the license server.  
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |
-| [`mainServerURL`](#mainserverurl) | *NSString\** | The URL of the Dynamsoft License Server. |
-| [`standbyServerURL`](#standbyserverurl) | *NSString\** | The URL of the standby Dynamsoft License Server. |
+| [`mainServerURL`](#mainserverurl) | *NSString\** | The URL of the license tracking server. |
+| [`standbyServerURL`](#standbyserverurl) | *NSString\** | The URL of the standby license tracking server. |
 | [`handshakeCode`](#handshakecode) | *NSString\** | The handshake code. |
-| [`sessionPassword`](#sessionpassword) | *NSString\** | The session password of the handshake code set in Dynamsoft License Server. |
+| [`sessionPassword`](#sessionpassword) | *NSString\** | The session password of the handshake code set in license tracking server. |
 | [`chargeWay`](#chargeway) | *EnumDMChargeWay* | Sets the charge way. |
 | [`UUIDGenerationMethod`](#uuidgenerationmethod) | *EnumDMUUIDGenerationMethod* | Sets the method to generate UUID. |
 | [`maxBufferDays`](#maxbufferdays) | *NSInteger* | Sets the max days to buffer the license info. |
@@ -25,7 +25,7 @@ Defines a struct to configure the parameters to connect to the license server.
 
 ## mainServerURL
 
-The URL of the Dynamsoft License Server.
+The URL of the license tracking server.
 
 ```objc
 NSString* mainServerURL
@@ -38,11 +38,11 @@ NSString* mainServerURL
     nil
 
 - **Remarks**
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to nil (default value), it will connect to Dynamsoft's Dynamsoft License Servers for online verification.
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to nil (default value), it will connect to Dynamsoft's license tracking servers for online verification.
 
 ## standbyServerURL
 
-The URL of the standby Dynamsoft License Server.
+The URL of the standby license tracking server.
 
 ```objc
 NSString* standbyServerURL
@@ -55,7 +55,7 @@ NSString* standbyServerURL
     nil
 
 - **Remarks**
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to nil (default value), it will connect to Dynamsoft's Dynamsoft License Servers for online verification.
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to nil (default value), it will connect to Dynamsoft's license tracking servers for online verification.
 
 ## handshakeCode
 
@@ -73,7 +73,7 @@ NSString* handshakeCode
 
 ## sessionPassword
 
-The session password of the handshake code set in Dynamsoft License Server.
+The session password of the handshake code set in license tracking server.
 
 ```objc
 NSString* sessionPassword

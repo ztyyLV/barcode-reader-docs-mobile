@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 ---
 
 
-# ClassiDBRPoint
+# Class iDBRPoint
 
 Stores an x- and y-coordinate pair in two-dimensional space.
 

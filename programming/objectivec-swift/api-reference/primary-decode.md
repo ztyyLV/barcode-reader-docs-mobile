@@ -43,30 +43,12 @@ All barcode text results decoded successfully.
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
-NSError __autoreleasing * _Nullable error;
 NSArray<iTextResult*>* result = [barcodeReader decodeFileWithName:@"your file path" templateName:@"" error:&error];
 ```
 
 Swift:
 
 ```Swift
-let lts = iDMDLSConnectionParameters()
-dls.organizationID = "200001"
-dls.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-}
 let error: NSError? = NSError()
 let result = barcodeReader.decodeFileWithName(name:"your file path",templateName:"",error:&error)
 ```
@@ -94,15 +76,6 @@ All barcode text results decoded successfully.
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 UIImage *image = [[UIImage alloc] init];
 NSError __autoreleasing * _Nullable error;
 NSArray<iTextResult*>* result = [barcodeReader decodeImage:image withTemplate:@"" error:&error];
@@ -111,14 +84,6 @@ NSArray<iTextResult*>* result = [barcodeReader decodeImage:image withTemplate:@"
 Swift:
 
 ```Swift
-let lts = iDMDLSConnectionParameters()
-dls.organizationID = "200001"
-dls.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-}
 let image: UIImage? = UIImage()
 let error: NSError? = NSError()
 let result = barcodeReader.decodeImage(image:image withTemplate:"" error:&error)
@@ -151,15 +116,6 @@ All barcode text results decoded successfully.
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 NSData *bufferBytes;
 NSInteger iWidth = 0;
 NSInteger iHeight = 0;
@@ -172,14 +128,6 @@ NSArray<iTextResult*>* result = [barcodeReader decodeBuffer:bufferBytes withWidt
 Swift:
 
 ```Swift
-let lts = iDMDLSConnectionParameters()
-dls.organizationID = "200001"
-dls.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-}
 let error: NSError? = NSError()
 let bufferBytes:Data?
 let width = 0
@@ -212,15 +160,6 @@ All barcode text results decoded successfully.
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 NSError __autoreleasing * _Nullable error;
 NSArray<iTextResult*>* result = [barcodeReader decodeBase64:@"file in base64 string" withTemplate:@"" error:&error];
 ```
@@ -228,14 +167,6 @@ NSArray<iTextResult*>* result = [barcodeReader decodeBase64:@"file in base64 str
 Swift:
 
 ```Swift
-let lts = iDMDLSConnectionParameters()
-dls.organizationID = "200001"
-dls.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-} 
 let error: NSError? = NSError() 
 let result = barcodeReader.decodeBase64(base64: file in base64 string, withTemplate: "", error: &error)
 ```
@@ -264,15 +195,6 @@ Objective-C:
 ```objc
 NSError __autoreleasing * _Nullable error;
 iIntermediateResult *irResult;
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 irResult = [barcodeReader createIntermediateResult:EnumIntermediateResultTypeOriginalImage error:&error];
 ```
 
@@ -281,7 +203,6 @@ Swift:
 ```Swift
 var error:NSError? = NSError()
 var irResult:iIntermediateResult!
-barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
 irResult = try! barcodeReader?.createIntermediateResult(EnumIntermediateResultType(rawValue: EnumIntermediateResultType.originalImage.rawValue)!)
 ```
 
@@ -308,15 +229,6 @@ All barcode text results decoded successfully.
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 NSError __autoreleasing * _Nullable error;
 [barcodeReader getRuntimeSettings:&error];
 settings.intermediateResultTypes = EnumIntermediateResultTypeOriginalImage | EnumIntermediateResultTypeTypedBarcodeZone;
@@ -330,7 +242,6 @@ NSArray<iTextResult*>* result = [barcodeReader decodeIntermediateResults:array w
 Swift:
 
 ```Swift
-barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
 var result:[iTextResult]?
 var error:NSError? = NSError()
 var settings:iPublicRuntimeSettings! = try! barcodeReader?.getRuntimeSettings()

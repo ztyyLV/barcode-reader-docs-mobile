@@ -16,8 +16,7 @@ noTitleIndex: true
   | [`initLicenseFromServer`](#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
   | [`initLicenseFromLicenseContent`](#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
   | [`outputLicenseToString`](#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLicenseFromDLS`](#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
-  | [`initLicenseFromLTS`](primary-license.md#initlicensefromlts) | `Deprecated`, please use [initLicenseFromDLS](primary-license.md#initlicensefromdls) instead. |
+  | [`initLicenseFromLTS`](#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
 
   ---
 
@@ -130,29 +129,29 @@ String licenseContent = reader.outputLicenseToString();
 reader.destroy();
 ```
 
-## initLicenseFromDLS
+## initLicenseFromLTS
 
 Initializes the barcode reader license and connects to the specified server for online verification.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.initLicenseFromDLS(DMDLSConnectionParameters dlsInfo, DBRDLSLicenseVerificationListener listener)
+void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLTS(DMLTSConnectionParameters ltsInfo, DBRLTSLicenseVerificationListener listener)
 ```
 
 **Parameters**
 
-- `dlsInfo`: The struct DMDLSConnectionParameters with customized settings.  
+- `ltsInfo`: The struct DMLTSConnectionParameters with customized settings.  
 - `listener`: The delegate to handle callback when license server returns.
 
 **Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
+DMLTSConnectionParameters info = new DMLTSConnectionParameters();
 info.organizationID = "200001";
 info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
+reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
    @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
+   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
       if (!b && e != null) {
          e.printStackTrace();
       }
@@ -162,4 +161,4 @@ reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
 
 ## initLicenseFromLTS
 
-`Deprecated`, please use [initLicenseFromDLS](#initlicensefromdls) instead.
+`Deprecated`, please use [initLicenseFromLTS](#initlicensefromlts) instead.

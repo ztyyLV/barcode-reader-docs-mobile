@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Video Meth
 description: This page shows BarcodeReader video methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: startFrameDecoding, startFrameDecodingEx, appendFrame, stopFrameDecoding, initFrameDecodingParameters, setErrorCallback, setTextResultCallback, setIntermediateResultCallback, getLengthOfFrameQueue, video methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 # Video Methods
@@ -66,17 +66,6 @@ void com.dynamsoft.dbr.BarcodeReader.startFrameDecoding (final int maxQueueLengt
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 reader.setErrorCallback(new ErrorCallback() {
     @Override
     public void errorCallback(int frameId, int errorCode, Object userData) {
@@ -107,17 +96,6 @@ void com.dynamsoft.dbr.BarcodeReader.startFrameDecodingEx(FrameDecodingParameter
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 FrameDecodingParameters parameters = reader.initFrameDecodingParameters();
 parameters.maxQueueLength = 2;
 parameters.maxResultQueueLength = 10;
@@ -155,17 +133,6 @@ Returns the ID of the appended frame.
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYSCALED, "");
 int frameId = reader.appendFrame(bufferBytes);
 reader.destroy();
@@ -187,17 +154,6 @@ void com.dynamsoft.dbr.BarcodeReader.stopFrameDecoding() throws BarcodeReaderExc
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYSCALED, "");
 reader.stopFrameDecoding();
 reader.destroy();
@@ -223,17 +179,6 @@ The frame decoding parameters.
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 FrameDecodingParameters parameters = reader.initFrameDecodingParameters();
 reader.destroy();
 ```
@@ -259,17 +204,6 @@ void com.dynamsoft.dbr.BarcodeReader.setErrorCallback(ErrorCallback errorCallbac
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 reader.setErrorCallback(new ErrorCallback() {
     @Override
     public void errorCallback(int frameId, int errorCode, Object userData) {
@@ -284,7 +218,7 @@ reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYS
 Set callback interface to process text results generated during frame decoding.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.setTextResultCallback(TextResultCallback textResultCallback, Object userData) throws BarcodeReaderException	
+void com.dynamsoft.dbr.BarcodeReader.setTextResultCallback(TextResultCallback textResultCallback, Object userData) throws BarcodeReaderException
 ```
 
 **Parameters**
@@ -300,17 +234,6 @@ void com.dynamsoft.dbr.BarcodeReader.setTextResultCallback(TextResultCallback te
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 reader.setTextResultCallback(new TextResultCallback() {
     @Override
     public void textResultCallback(int frameId, TextResult[] results, Object userData) {
@@ -341,17 +264,6 @@ void com.dynamsoft.dbr.BarcodeReader.setIntermediateResultCallback(IntermediateR
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CLUSTERED_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE;
 reader.updateRuntimeSettings(settings);
@@ -380,17 +292,6 @@ Returns length of current inner frame queue.
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 int length = reader.getLengthOfFrameQueue();
 reader.destroy();
 ```

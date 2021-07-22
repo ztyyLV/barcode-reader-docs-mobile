@@ -15,7 +15,7 @@ needGenerateH3Content: false
   | [`IntermediateResultCallback`](#intermediateresultcallback) | Represents the method that will handle the intermediate result array returned by the SDK. |
   | [`TextResultCallback`](#textresultcallback) | Represents the method that will handle the text result array returned by the SDK. |
   | [`DBRServerLicenseVerificationListener`](#dbrserverlicenseverificationlistener) | Represents the method that will handle callback when license server returns. |
-  | [`DBRDLSLicenseVerificationListener`](#dbrdlslicenseverificationlistener) | Represents the method that will handle callback when Dynamsoft License Server returns. |
+  | [`DBRLTSLicenseVerificationListener`](#dbrltslicenseverificationlistener) | Represents the method that will handle callback when Dynamsoft License Server returns. |
   
 ---
 
@@ -82,12 +82,12 @@ void com.dynamsoft.dbr.DBRServerLicenseVerificationListener.licenseVerificationC
 - `isSuccess`: Whether the license verification was successful.
 - `error`: The error message from license server.
 
-## DBRDLSLicenseVerificationListener
+## DBRLTSLicenseVerificationListener
 
 Represents the method that will handle callback when Dynamsoft License Server returns.
 
 ```java
-void com.dynamsoft.dbr.DBRDLSLicenseVerificationListener.licenseVerificationCallback (boolean isSuccess, Exception error)
+void com.dynamsoft.dbr.DBRLTSLicenseVerificationListener.licenseVerificationCallback (boolean isSuccess, Exception error)
 ```
 
 **Parameters**

@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
       mCameraEnhancer.setCameraDesiredState(CameraState.CAMERA_STATE_ON);
       mCameraEnhancer.startScanning();
 
-      //Initialize Dynamsoft Barcode Reader from License Tracking Server.
+      //Initialize Dynamsoft Barcode Reader from Dynamsoft License Server.
       try {
          reader = new BarcodeReader();
          com.dynamsoft.dbr.DMDLSConnectionParameters parameters = new com.dynamsoft.dbr.DMDLSConnectionParameters();

@@ -18,7 +18,7 @@ class ViewController: UIViewController, CameraDLSLicenseVerificationDelegate, DB
     }
         
     func initDBR() {
-        /*Initialize Dynamsoft Barcode Reader from License Tracking Server.*/
+        /*Initialize Dynamsoft Barcode Reader from Dynamsoft License Server.*/
         let lts = iDMDLSConnectionParameters()
         lts.organizationID = "Put your organizationID here"
         barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)

@@ -11,7 +11,7 @@ breadcrumbText: Auxiliary Class
 
 ## [License Class](auxiliary-DMDLSConnectionParameters.md)
 
-- [`DMDLSConnectionParameters`](auxiliary-DMDLSConnectionParameters.md)
+- [`DMLTSConnectionParameters`](auxiliary-DMDLSConnectionParameters.md)
 
 ## [Common Classes](auxiliary-common-classes.md)
 
