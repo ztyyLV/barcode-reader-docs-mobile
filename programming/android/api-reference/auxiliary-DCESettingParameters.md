@@ -39,7 +39,7 @@ Set text result callback.
 settingParameters.textResultCallback =mTextResultCallback;
 ```
 
-The `TextResultCallback` includes the following Parameters:
+**Parameters**
 
 - `frameID`: The ID of frame.
 - `results`: The recognized barcode result of the frame.
@@ -61,7 +61,7 @@ Set intermediate result call back.
 settingParameters.intermediateResultCallback = mIntermediateResultCallback;
 ```
 
-The `IntermediateResultCallback` includes the following Parameters:
+**Parameters**
 
 - `frameID`: The ID of frame.
 - `results`: The intermediate result of the frame.

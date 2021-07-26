@@ -19,7 +19,6 @@ Stores the text result.
 | [`barcodeFormatString_2`](#barcodeformatstring_2) | *String* | Barcode type in BarcodeFormat group 2 as string. |
 | [`barcodeText`](#barcodetext) | *String* | The barcode text, ends by '\0'. |
 | [`barcodeBytes`](#barcodebytes) | *byte\[\]* | The barcode content in a byte array. |
-| [`barcodeBytesLength`](#barcodebyteslength) | *int* | The length of the byte array. |
 | [`localizationResult`](#localizationresult) | [`LocalizationResult`](auxiliary-LocalizationResult.md)\* | The corresponding localization result. |
 | [`detailedResult`](#detailedresult) | *Object* | One of the following: [`QRCodeDetails`](auxiliary-qrcodedetails.md), [`PDF417Details`](auxiliary-pdf417details.md), [`DataMatrixDetails`](auxiliary-datamatrixdetails.md), [`AztecDetails`](auxiliary-aztecdetails.md), [`OneDCodeDetails`](auxiliary-onedcodedetails.md). |
 | [`results`](#results) | [`ExtendedResult`](auxiliary-ExtendedResult.md)\[\] | The extended result array. |
@@ -35,7 +34,11 @@ Barcode type in BarcodeFormat group 1.
 int barcodeFormat
 ```
 
-Read more in [`Enumerations: BarcodeFormatIds`]({{ site.enumerations }}format-enums.html#barcodeformat)
+- **Value range**
+    One of the [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) Enumeration value.
+
+- **See also**  
+    [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ## barcodeFormatString
 
@@ -45,6 +48,12 @@ Barcode type in BarcodeFormat group 1 as string.
 String barcodeFormatString
 ```
 
+- **Value range**
+    One of the barcode type in [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat).
+
+- **See also**  
+    [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
+
 ## barcodeFormat_2
 
 Barcode type in BarcodeFormat group 2.
@@ -53,7 +62,11 @@ Barcode type in BarcodeFormat group 2.
 int barcodeFormat_2
 ```
 
-Read more in [`Enumerations: BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat)
+- **Value range**
+    One of the [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) Enumeration items
+
+- **See also**  
+    [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ## barcodeFormatString_2
 
@@ -63,9 +76,15 @@ Barcode type in BarcodeFormat group 2 as string.
 String barcodeFormatString_2
 ```
 
+- **Value range**
+    One of the barcode type in [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2).
+
+- **See also**  
+    [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
+
 ## barcodeText
 
-The barcode text, ends by '\0'.
+The text barcode decoding result. Ends by '\0'.
 
 ```java
 String barcodeText
@@ -77,14 +96,6 @@ The barcode content in a byte array.
 
 ```java
 byte[] barcodeBytes
-```
-
-## barcodeBytesLength
-
-The length of the byte array.
-
-```java
-int barcodeBytesLength
 ```
 
 ## localizationResult
