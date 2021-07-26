@@ -9,36 +9,19 @@ noTitleIndex: true
 
 # Video Methods
 
-- Decode
+| Methods              | Descriptions |
+|----------------------|--------------|
+| [`startFrameDecoding`](#startframedecoding) | Decode barcodes from inner frame queue. |
+| [`startFrameDecodingEx`](#startframedecodingex) | Decode barcodes from inner frame queue. |
+| [`appendFrame`](#appendframe) | Append a frame image buffer to the inner frame queue. |
+| [`stopFrameDecoding`](#stopframedecoding) | Stop thread used for frame decoding. |
+| [`initFrameDecodingParameters`](#initframedecodingparameters) | Initialize frame decoding parameter. |
+| [`setErrorCallback`](#seterrorcallback) | Set callback interface to process errors generated during frame decoding. |
+| [`setTextResultCallback`](#settextresultcallback) | Set callback interface to process text results generated during frame decoding. |
+| [`setIntermediateResultCallback`](#setintermediateresultcallback) | Set callback interface to process intermediate results generated during frame decoding. |
+| [`getLengthOfFrameQueue`](#getlengthofframequeue) | Get length of current inner frame queue. |
 
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`startFrameDecoding`](#startframedecoding) | Decode barcodes from inner frame queue. |
-   | [`startFrameDecodingEx`](#startframedecodingex) | Decode barcodes from inner frame queue. |
-   | [`appendFrame`](#appendframe) | Append a frame image buffer to the inner frame queue. |
-   | [`stopFrameDecoding`](#stopframedecoding) | Stop thread used for frame decoding. |
-
-- Parameter
-
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`initFrameDecodingParameters`](#initframedecodingparameters) | Initialize frame decoding parameter. |
-
-- Callback
-
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`setErrorCallback`](#seterrorcallback) | Set callback interface to process errors generated during frame decoding. |
-   | [`setTextResultCallback`](#settextresultcallback) | Set callback interface to process text results generated during frame decoding. |
-   | [`setIntermediateResultCallback`](#setintermediateresultcallback) | Set callback interface to process intermediate results generated during frame decoding. |
-
-- Status retrieval
-
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`getLengthOfFrameQueue`](#getlengthofframequeue) | Get length of current inner frame queue. |
-
-  ---
+---
 
 ## startFrameDecoding
 
