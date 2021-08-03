@@ -56,7 +56,7 @@ void com.dynamsoft.dbr.BarcodeReader.initRuntimeSettingsWithString(String conten
 
 **Parameters**
 
-`content`: A JSON string that represents the content of the settings.
+`content`: A JSON string that represents the content of the settings.  
 `enumConflictMode`: The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings and replace with the new template.
 
 **Exceptions**

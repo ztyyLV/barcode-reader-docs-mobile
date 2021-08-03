@@ -97,8 +97,8 @@ Append a new template file to the current runtime settings.
 
 **Parameters**
 
-`[in] fileName` The settings file path.
-`[in] conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template settings or to overwrite previous settings with the new template.
+`[in] fileName` The settings file path.  
+`[in] conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template settings or to overwrite previous settings with the new template.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
@@ -129,8 +129,8 @@ Append a new template string to the current runtime settings.
 
 **Parameters**
 
-`[in] content` A JSON string that represents the content of the settings.
-`[in] conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.
+`[in] content` A JSON string that represents the content of the settings.  
+`[in] conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**

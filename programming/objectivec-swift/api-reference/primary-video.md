@@ -43,7 +43,7 @@ Starts a new thread to decode barcodes from the inner frame queue.
 `[in] maxQueueLength` The max number of frames waiting for decoding.  
 `[in] maxResultQueueLength` The max number of frames whose results (text result/localization result) will be kept.  
 `[in] width` The width of the frame image in pixels.  
-`[in] height` The height of the frame image in pixels.
+`[in] height` The height of the frame image in pixels.  
 `[in] stride` The stride (or scan width) of the frame image.  
 `[in] format` The image pixel format used in the image byte array.  
 `[in] templateName` The template name.  

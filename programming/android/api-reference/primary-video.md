@@ -68,7 +68,7 @@ void com.dynamsoft.dbr.BarcodeReader.startFrameDecodingEx(FrameDecodingParameter
 
 **Parameters**
 
-`parameters`: The frame decoding parameters.
+`parameters`: The frame decoding parameters.  
 `templateName`: The template name.
 
 **Exceptions**
@@ -176,7 +176,7 @@ void com.dynamsoft.dbr.BarcodeReader.setErrorCallback(ErrorCallback errorCallbac
 
 **Parameters**
 
-`errorCallback`: Callback interface.
+`errorCallback`: Callback interface.  
 `userData`: Customized arguments passed to your function.
 
 **Exceptions**
@@ -206,7 +206,7 @@ void com.dynamsoft.dbr.BarcodeReader.setTextResultCallback(TextResultCallback te
 
 **Parameters**
 
-`textResultCallback`: Callback interface.
+`textResultCallback`: Callback interface.  
 `userData`: Customized arguments passed to your function.
 
 **Exceptions**
@@ -236,7 +236,7 @@ void com.dynamsoft.dbr.BarcodeReader.setIntermediateResultCallback(IntermediateR
 
 **Parameters**
 
-`intermediateResultCallback`: Callback interface.
+`intermediateResultCallback`: Callback interface.  
 `userData`: Customized arguments passed to your function.
 
 **Exceptions**

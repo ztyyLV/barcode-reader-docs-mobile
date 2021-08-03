@@ -61,7 +61,7 @@ Initializes the license and connects to the specified server for online verifica
 **Parameters**
 
 `[in] licenseSeServer` The name/IP of the license server.  
-`[in] licenseKey` The license key.
+`[in] licenseKey` The license key.  
 `[in,out] connectionDelegate` The delegate to handle callback when license server returns.
 
 **Return value**

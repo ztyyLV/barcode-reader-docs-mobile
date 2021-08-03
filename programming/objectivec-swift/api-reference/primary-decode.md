@@ -31,8 +31,8 @@ Decode barcodes from a specified image file.
 
 **Parameters**
 
-`[in] name` The local path of the file.
-`[in] templateName` The template name.
+`[in] name` The local path of the file.  
+`[in] templateName` The template name.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return value**
@@ -64,8 +64,8 @@ Decode barcodes from an image file in memory.
 
 **Parameters**
 
-`[in] image` The image file in memory.
-`[in] templateName` The template name.
+`[in] image` The image file in memory.  
+`[in] templateName` The template name.  
 `[in, out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return value**
@@ -105,7 +105,7 @@ Decode barcodes from the memory buffer containing image pixels in defined format
 `[in] height` The height of the image in pixels.  
 `[in] stride` The stride (or scan width) of the image.  
 `[in] format` The image pixel format used in the image byte array.  
-`[in] templateName` The template name.
+`[in] templateName` The template name.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return value**
@@ -182,7 +182,7 @@ Inits an intermediateResult struct with default values.
 
 **Parameters**
 
-`[in] type` The type of the intermediate result to init.
+`[in] type` The type of the intermediate result to init.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return value**
@@ -217,8 +217,8 @@ Decodes barcode from intermediate results.
 
 **Parameters**
 
-`[in] array` The intermediate result array for decoding.
-`[in] templateName` The template name.
+`[in] array` The intermediate result array for decoding.  
+`[in] templateName` The template name.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return value**

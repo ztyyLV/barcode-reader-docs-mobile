@@ -32,7 +32,7 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeFile(String fileFullPath, Str
 
 **Parameters**
 
-`fileFullPath`: A string defining the file path.
+`fileFullPath`: A string defining the file path.  
 `templateName`: The template name.
 
 **Return value**
@@ -124,12 +124,12 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBuffer(byte[] buffer, int wid
 
 **Parameters**
 
-`buffer`: The array of bytes which contain the image data.
-`Width`: The width of the image in pixels.
-`Height`: The height of the image in pixels.
-`Stride`: The stride (or scan width) of the image.
-`format`: The image pixel format used in the image byte array.
-`templateName` The template name.
+`buffer`: The array of bytes which contain the image data.  
+`Width`: The width of the image in pixels.  
+`Height`: The height of the image in pixels.  
+`Stride`: The stride (or scan width) of the image.  
+`format`: The image pixel format used in the image byte array.  
+`templateName`: The template name.
 
 **Return value**
 
@@ -164,8 +164,8 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBase64String(String base64, S
 
 **Parameters**
 
-- `base64`: A base64 encoded string that represents an image.
-- `templateName`: The template name.
+`base64`: A base64 encoded string that represents an image.  
+`templateName`: The template name.
 
 **Return value**
 
@@ -253,7 +253,7 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeIntermediateResults(Intermedi
 
 **Parameters**
 
-`results`: An array of intermediate result.
+`results`: An array of intermediate result.  
 `templateName`: The template name.
 
 **Return value**

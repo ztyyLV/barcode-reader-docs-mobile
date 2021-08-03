@@ -30,7 +30,7 @@ void com.dynamsoft.dbr.BarcodeReader.setModeArgument(String modesName, int index
 
 **Parameters**
 
-`modesName`: The mode parameter name to set argument.
+`modesName`: The mode parameter name to set argument.  
 `index`: The array index of mode parameter to indicate a specific mode.  
 `argumentName`: The name of the argument to set.  
 `argumentValue`: The value of the argument to set.

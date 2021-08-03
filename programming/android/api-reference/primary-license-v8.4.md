@@ -55,7 +55,7 @@ void com.dynamsoft.dbr.BarcodeReader.initLicenseFromServer(String licenseServer,
 **Parameters**
 
 - `licenseServer`: The URL of the license server.  
-- `licenseKey`: The license key.
+- `licenseKey`: The license key.  
 - `dbrServerLicenseVerificationListener`: The delegate to handle callback when license server returns.
 
 **Code Snippet**
@@ -80,8 +80,8 @@ void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLicenseContent(String licens
 
 **Parameters**
 
-- `licenseKey`: The license key.  
-- `licenseContent`: An encrypted string representing the license content (quota, expiration date, barcode type, etc.) obtained from the method [`OutputLicenseToString`](#outputlicensetostring).
+`licenseKey`: The license key.  
+`licenseContent`: An encrypted string representing the license content (quota, expiration date, barcode type, etc.) obtained from the method [`OutputLicenseToString`](#outputlicensetostring).
 
 **Exceptions**
 
@@ -139,8 +139,8 @@ void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLTS(DMLTSConnectionParameter
 
 **Parameters**
 
-- `ltsInfo`: The struct DMLTSConnectionParameters with customized settings.  
-- `listener`: The delegate to handle callback when license server returns.
+`ltsInfo`: The struct DMLTSConnectionParameters with customized settings.  
+`listener`: The delegate to handle callback when license server returns.
 
 **Code Snippet**
 
