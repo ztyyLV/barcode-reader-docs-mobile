@@ -5,6 +5,7 @@ description: This page shows the DMDLSConnectionParameters Class of Dynamsoft Ba
 keywords: DMDLSConnectionParameters, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 
@@ -32,14 +33,17 @@ The URL of the Dynamsoft License Server.
 String mainServerURL
 ```
 
-**Value range**
-    Any string value
+**Value Range**
 
-**Default value**
-    null
+Any string value
+
+**Default Value**
+
+null
 
 **Remarks**
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's License Tracking Server for online verification.
+
+If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's License Tracking Server for online verification.
 
 ## standbyServerURL
 
@@ -49,14 +53,17 @@ The URL of the standby License Tracking Server.
 String standbyServerURL
 ```
 
-**Value range**
-    Any string value
+**Value Range**
 
-**Default value**
-    null
+Any string value
+
+**Default Value**
+
+null
 
 **Remarks**
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to License Tracking Server for online verification.
+
+If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to License Tracking Server for online verification.
 
 ## handshakeCode
 
@@ -66,11 +73,13 @@ The handshake code.
 String handshakeCode
 ```
 
-**Value range**
-    Any string value
+**Value Range**
 
-**Default value**
-    null
+Any string value
+
+**Default Value**
+
+null
 
 ## sessionPassword
 
@@ -80,11 +89,13 @@ The session password of the handshake code set in License Tracking Server.
 String sessionPassword
 ```
 
-**Value range**
-    Any string value
+**Value Range**
 
-**Default value**
-    null
+Any string value
+
+**Default Value**
+
+null
 
 ## uuidGenerationMethod
 
@@ -94,14 +105,17 @@ Sets the method to generate UUID.
 int uuidGenerationMethod
 ```
 
-**Value range**
-    Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
+**Value Range**
 
-**Default value**
-    DM_UUIDGM_RANDOM
+Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
 
-**See also**  
-    [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
+**Default Value**
+
+DM_UUIDGM_RANDOM
+
+**See Also**  
+
+[`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
 
 ## maxBufferDays
 
@@ -111,11 +125,13 @@ Sets the max days to buffer the license info.
 int maxBufferDays
 ```
 
-**Value range**
-    [7,0x7fffffff]  
+**Value Range**
 
-**Default value**
-    7
+[7,0x7fffffff]  
+
+**Default Value**
+
+7
 
 ## limitedLicenseModules
 
@@ -125,14 +141,17 @@ Sets the license modules to use.
 List<Integer> limitedLicenseModules
 ```
 
-**Value range**
-    A list of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.
+**Value Range**
 
-**Default value**
-    null
+A list of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.
 
-**See also**  
-    [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
+**Default Value**
+
+null
+
+**See Also**  
+
+[`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
 
 ## chargeWay
 
@@ -142,8 +161,9 @@ Sets the charge way.
 int chargeWay
 ```
 
-**Value range**
-    Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay) Enumeration items.
+**Value Range**
+
+Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay) Enumeration items.
 
 ## organizationID
 
@@ -153,8 +173,10 @@ The organization ID got from Dynamsoft.
 String organizationID
 ```
 
-**Value range**
-    Any string value
+**Value Range**
 
-**Default value**
-    ""
+Any string value
+
+**Default Value**
+
+""

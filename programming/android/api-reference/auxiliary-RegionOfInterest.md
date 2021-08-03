@@ -5,6 +5,7 @@ description: This page shows the RegionOfInterest Class of Dynamsoft Barcode Rea
 keywords: RegionOfInterest, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 # Class RegionOfInterest

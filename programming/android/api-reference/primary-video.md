@@ -108,7 +108,7 @@ int com.dynamsoft.dbr.BarcodeReader.appendFrame(byte[] bufferBytes)
 
 `bufferBytes`: The array of bytes which contain the image data.
 
-**Return value**
+**Return Value**
 
 Returns the ID of the appended frame.
 
@@ -150,7 +150,7 @@ Initialize frame decoding parameters with default values.
 FrameDecodingParameters com.dynamsoft.dbr.BarcodeReader.initFrameDecodingParameters() throws BarcodeReaderException
 ```
 
-**Return value**
+**Return Value**
 
 The frame decoding parameters.
 
@@ -267,7 +267,7 @@ Get length of current inner frame queue.
 int com.dynamsoft.dbr.BarcodeReader.getLengthOfFrameQueue()
 ```
 
-**Return value**
+**Return Value**
 
 Returns length of current inner frame queue.
 

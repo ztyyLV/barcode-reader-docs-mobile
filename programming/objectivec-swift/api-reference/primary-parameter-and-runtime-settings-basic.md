@@ -103,7 +103,7 @@ Gets the optional argument for a specified mode in Modes parameters.
 `[in] argumentName` The name of the argument to get.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-**Return value**
+**Return Value**
 
 the optional argument for a specified mode
 
@@ -167,7 +167,7 @@ Get current settings and save them into a [`iPublicRuntimeSettings`](auxiliary-i
 
 `[in, out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-**Return value**
+**Return Value**
 
 A DBRPublicRuntimeSettings storing current runtime settings.
 

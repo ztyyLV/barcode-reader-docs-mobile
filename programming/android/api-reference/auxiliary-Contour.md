@@ -5,6 +5,7 @@ description: This page shows the Contour Class of Dynamsoft Barcode Reader for A
 keywords: Contour, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

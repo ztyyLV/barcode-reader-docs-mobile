@@ -130,7 +130,7 @@ Gets the parameter templates name array.
 String [] com.dynamsoft.dbr.BarcodeReader.getAllParameterTemplateNames()
 ```
 
-**Return value**
+**Return Value**
 
 The template name array.
 
@@ -183,7 +183,7 @@ String com.dynamsoft.dbr.BarcodeReader.outputSettingsToString(String settingsNam
 
 `settingsName` A unique name for declaring current runtime settings.  
 
-**Return value**
+**Return Value**
 
 The output string which stores the contents of current settings.
 

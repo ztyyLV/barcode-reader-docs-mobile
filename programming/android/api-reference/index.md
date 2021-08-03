@@ -6,6 +6,7 @@ keywords: api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: Android API Reference
+noTitleIndex: true
 ---
 
 # API Reference - Android

@@ -5,6 +5,7 @@ description: This page shows the TextResult index of Dynamsoft Barcode Reader fo
 keywords: TextResult index, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 # Barcode Result Classes

@@ -32,13 +32,16 @@ The URL of the Dynamsoft License Server.
 NSString* mainServerURL
 ```
 
-**Value range**
+**Value Range**
+
 Any string value
 
-**Default value**
+**Default Value**
+
 nil
 
 **Remarks**
+
 If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to nil (default value), it will connect to Dynamsoft's Dynamsoft License Servers for online verification.
 
 ## standbyServerURL
@@ -49,13 +52,16 @@ The URL of the standby Dynamsoft License Server.
 NSString* standbyServerURL
 ```
 
-**Value range**
+**Value Range**
+
 Any string value
 
-**Default value**
+**Default Value**
+
 nil
 
 **Remarks**
+
 If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to nil (default value), it will connect to Dynamsoft's Dynamsoft License Servers for online verification.
 
 ## handshakeCode
@@ -66,10 +72,12 @@ The handshake code.
 NSString* handshakeCode
 ```
 
-**Value range**
+**Value Range**
+
 Any string value
 
-**Default value**
+**Default Value**
+
 nil
 
 ## sessionPassword
@@ -80,10 +88,12 @@ The session password of the handshake code set in Dynamsoft License Server.
 NSString* sessionPassword
 ```
 
-**Value range**
+**Value Range**
+
 Any string value
 
-**Default value**
+**Default Value**
+
 nil
 
 ## chargeWay
@@ -94,13 +104,16 @@ Sets the charge way.
 EnumDMChargeWay chargeWay
 ```
 
-**Value range**
+**Value Range**
+
 Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay) Enumeration items.
 
-**Default value**
+**Default Value**
+
 EnumDMChargeWayAuto
 
-**See also**  
+**See Also**
+
 [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay)
 
 ## UUIDGenerationMethod
@@ -111,13 +124,16 @@ Sets the method to generate UUID.
 EnumDMUUIDGenerationMethod UUIDGenerationMethod
 ```
 
-**Value range**
+**Value Range**
+
 Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
 
-**Default value**
+**Default Value**
+
 EnumDMUUIDGenerationMethodRandom
 
-**See also**  
+**See Also**
+
 [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
 
 ## maxBufferDays
@@ -128,10 +144,12 @@ Sets the max days to buffer the license info.
 NSInteger maxBufferDays
 ```
 
-**Value range**
+**Value Range**
+
 [7,0x7fffffff]
 
-**Default value**
+**Default Value**
+
 7
 
 ## limitedLicenseModules
@@ -142,13 +160,16 @@ Sets the license modules to use.
 NSArray* limitedLicenseModules
 ```
 
-**Value range**
+**Value Range**
+
 Each array item can be any one of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.
 
-**Default value**
+**Default Value**
+
 nil
 
-**See also**  
+**See Also**
+
 [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
 
 ## organizationID
@@ -159,8 +180,10 @@ The organization ID got from Dynamsoft.
 NSString* organizationID
 ```
 
-**Value range**
+**Value Range**
+
 Any string value
 
-**Default value**
+**Default Value**
+
 ""

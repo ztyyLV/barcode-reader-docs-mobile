@@ -24,7 +24,7 @@ Initializes DynamsoftBarcodeReader.
 - (instancetype _Nonnull)init;
 ```
 
-**Return value**
+**Return Value**
 
 The instance of DynamsoftBarcodeReader.
 

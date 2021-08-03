@@ -123,7 +123,7 @@ Appends a frame image buffer to the inner frame queue.
 
 `[in] bufferBytes` The array of bytes which contain the image data.  
 
-**Return value**
+**Return Value**
 
 Returns the ID of the appended frame.
 
@@ -187,7 +187,7 @@ Initialize frame decoding parameters with default values.
 
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-**Return value**
+**Return Value**
 
 Returns frame decoding parameters.
 
@@ -295,7 +295,7 @@ Get length of current inner frame queue.
 -(NSInteger)getLengthOfFrameQueue;
 ```
 
-**Return value**
+**Return Value**
 
 Returns the length of the inner frame queue.
 

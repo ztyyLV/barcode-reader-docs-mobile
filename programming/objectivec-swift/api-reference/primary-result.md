@@ -29,7 +29,7 @@ Return intermediate results containing the original image, the color clustered i
 
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-**Return value**
+**Return Value**
 
 Returns intermediate result array.
 

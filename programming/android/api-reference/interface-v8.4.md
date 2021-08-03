@@ -5,6 +5,7 @@ description: This page shows all interfaces of Dynamsoft Barcode Reader for Andr
 keywords: ErrorCallback, IntermediateResultCallback, TextResultCallback, DBRServerLicenseVerificationListener, interface, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 # Interfaces

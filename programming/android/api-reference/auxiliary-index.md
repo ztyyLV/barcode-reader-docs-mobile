@@ -5,6 +5,7 @@ description: This page shows all classes of Dynamsoft Barcode Reader for Android
 keywords: class, api reference, android
 needAutoGenerateSidebar: true
 breadcrumbText: Auxiliary Class
+noTitleIndex: true
 ---
 
 # Android Classes

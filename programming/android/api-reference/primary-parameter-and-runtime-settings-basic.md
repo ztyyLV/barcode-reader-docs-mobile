@@ -81,7 +81,7 @@ String com.dynamsoft.dbr.BarcodeReader.getModeArgument(String modesName, int ind
 `index`: The array index of mode parameter to indicate a specific mode.  
 `argumentName`: The name of the argument to get.
 
-**Return value**
+**Return Value**
 
 the optional argument for a specified mode in Modes parameters.
 
@@ -126,7 +126,7 @@ Get current settings and save them into a [`PublicRuntimeSettings`](auxiliary-Pu
 PublicRuntimeSettings com.dynamsoft.dbr.BarcodeReader.getRuntimeSettings() throws BarcodeReaderException
 ```
 
-**Return value**
+**Return Value**
 
 The struct of template settings.
 
@@ -177,6 +177,7 @@ void com.dynamsoft.dbr.BarcodeReader.resetRuntimeSettings() throws BarcodeReader
 ```
 
 **Exceptions**
+
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**

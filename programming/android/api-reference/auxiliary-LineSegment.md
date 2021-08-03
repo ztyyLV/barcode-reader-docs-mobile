@@ -5,6 +5,7 @@ description: This page shows the LineSegment Class of Dynamsoft Barcode Reader f
 keywords: LineSegment, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

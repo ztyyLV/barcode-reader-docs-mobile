@@ -5,6 +5,7 @@ description: This page shows the Common Classes of Dynamsoft Barcode Reader for 
 keywords: Common Classes, API reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 # Common Classes

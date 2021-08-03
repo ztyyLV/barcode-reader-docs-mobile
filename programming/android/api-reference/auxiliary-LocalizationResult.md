@@ -5,6 +5,7 @@ description: This page shows the LocalizationResult Class of Dynamsoft Barcode R
 keywords: LocalizationResult, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 
@@ -37,16 +38,16 @@ The terminate phase of localization result.
 int terminatePhase
 ```
 
-**Value range**
+**Value Range**
 Any one of the [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) Enumeration items
 
-**Default value**
+**Default Value**
 `TP_BARCODE_RECOGNIZED`
 
 **Remarks**
 When the recognition result is not desired, you can set this parameter can be set to skip certain processing stages.
 
-**See also**  
+**See Also**  
 [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase)
 
 ## barcodeFormat
@@ -57,10 +58,10 @@ Barcode type in BarcodeFormat group 1.
 int barcodeFormat
 ```
 
-**Value range**
+**Value Range**
 One of the [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) Enumeration value.
 
-**See also**  
+**See Also**  
 [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ## barcodeFormatString
@@ -71,10 +72,10 @@ Barcode type in BarcodeFormat group 1 as string.
 String barcodeFormatString
 ```
 
-**Value range**
+**Value Range**
 One of the barcode type in [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat).
 
-**See also**  
+**See Also**  
 [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ## barcodeFormat_2
@@ -85,10 +86,10 @@ Barcode type in BarcodeFormat group 2.
 int barcodeFormat_2
 ```
 
-**Value range**
+**Value Range**
 One of the [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) Enumeration items
 
-**See also**  
+**See Also**  
 [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ## barcodeFormatString_2
@@ -99,10 +100,10 @@ Barcode type in BarcodeFormat group 2 as string.
 String barcodeFormatString_2
 ```
 
-**Value range**
+**Value Range**
 One of the barcode type in [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2).
 
-**See also**  
+**See Also**  
 [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ## resultPoints

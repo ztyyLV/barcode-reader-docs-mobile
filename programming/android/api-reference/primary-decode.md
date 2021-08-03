@@ -35,7 +35,7 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeFile(String fileFullPath, Str
 `fileFullPath`: A string defining the file path.  
 `templateName`: The template name.
 
-**Return value**
+**Return Value**
 
 All barcode text results decoded successfully.
 
@@ -67,7 +67,7 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeFileInMemory(byte[] fileBytes
 `fileBytes`: The image file bytes in memory.  
 `templateName`: The template name.
 
-**Return value**
+**Return Value**
 
 All barcode text results decoded successfully.
 
@@ -96,7 +96,7 @@ TextResult [] com.dynamsoft.dbr.BarcodeReader.decodeFileInMemory(InputStream fil
 `fileStream`: The image file bytes in memory.  
 `templateName`: The template name.
 
-**Return value**
+**Return Value**
 
 All barcode text results decoded successfully.
 
@@ -131,7 +131,7 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBuffer(byte[] buffer, int wid
 `format`: The image pixel format used in the image byte array.  
 `templateName`: The template name.
 
-**Return value**
+**Return Value**
 
 All barcode text results decoded successfully.  
 
@@ -167,7 +167,7 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBase64String(String base64, S
 `base64`: A base64 encoded string that represents an image.  
 `templateName`: The template name.
 
-**Return value**
+**Return Value**
 
 All barcode text results decoded successfully.
 
@@ -197,7 +197,7 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBufferedImage(Bitmap image, S
 `image`: The image to be decoded.  
 `templateName`: The template name.
 
-**Return value**
+**Return Value**
 
 All barcode text results decoded successfully.  
 
@@ -227,7 +227,7 @@ IntermediateResult com.dynamsoft.dbr.BarcodeReader.initIntermediateResults(int r
 
 `resultType`: The type of the intermediate result to init.
 
-**Return value**
+**Return Value**
 
 An intermediateResult struct with default values.
 
@@ -256,7 +256,7 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeIntermediateResults(Intermedi
 `results`: An array of intermediate result.  
 `templateName`: The template name.
 
-**Return value**
+**Return Value**
 
 All barcode text results decoded successfully.
 

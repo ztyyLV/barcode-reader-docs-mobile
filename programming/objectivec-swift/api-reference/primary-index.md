@@ -5,6 +5,7 @@ description: This page shows all methods of Dynamsoft Barcode Reader for iOS SDK
 keywords: methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 breadcrumbText: Methods
+noTitleIndex: true
 ---
 
 # BarcodeReader Class

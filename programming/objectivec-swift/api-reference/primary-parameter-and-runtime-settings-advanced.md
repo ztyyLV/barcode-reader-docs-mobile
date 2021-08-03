@@ -163,7 +163,7 @@ Get count of parameter templates.
 
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-**Return value**
+**Return Value**
 
 The template name array.
 
@@ -230,7 +230,7 @@ Output runtime settings to a string.
 `[in] settingsName` A unique name for declaring current runtime settings.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-**Return value**
+**Return Value**
 
 The output string which stores the content of current settings.
 

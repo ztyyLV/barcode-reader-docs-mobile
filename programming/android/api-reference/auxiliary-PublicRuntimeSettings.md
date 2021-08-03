@@ -5,6 +5,7 @@ description: This page shows the PublicRuntimeSettings Class of Dynamsoft Barcod
 keywords: PublicRuntimeSettings, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 
@@ -48,16 +49,20 @@ Sets the phase to stop the barcode reading algorithm.
 int terminatePhase
 ```
 
-**Value range**
+**Value Range**
+
 Any one of the [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) Enumeration items
 
-**Default value**
+**Default Value**
+
 `TP_BARCODE_RECOGNIZED`
 
 **Remarks**
+
 When the recognition result is not desired, you can set this parameter can be set to skip certain processing stages.
 
-**See also**  
+**See Also**
+
 [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase)
 
 ## timeout
@@ -68,13 +73,16 @@ Sets the maximum amount of time (in milliseconds) that should be spent searching
 int timeout
 ```
 
-**Value range**
+**Value Range**
+
 [0, 0x7fffffff]
 
-**Default value**
+**Default Value**
+
 10000
 
 **Remarks**
+
 If you want to stop reading barcodes after a certain period of time, you can use this parameter to set a timeout.
 
 ## maxAlgorithmThreadCount
@@ -85,13 +93,16 @@ Sets the number of threads the image processing algorithm will use to decode bar
 int timeout
 ```
 
-**Value range**
+**Value Range**
+
 [1, 4]
 
-**Default value**
+**Default Value**
+
 4
 
 **Remarks**
+
 To keep a balance between speed and quality, the library concurrently runs four different threads for barcode decoding by default.
 
 ## expectedBarcodesCount
@@ -102,13 +113,16 @@ Sets the number of barcodes expected to be detected for each image.
 int expectedBarcodesCount
 ```
 
-**Value range**
+**Value Range**
+
 [0, 0x7fffffff]
 
-**Default value**
+**Default Value**
+
 0
 
 **Remarks**
+
 0: means Unknown and it will find at least one barcode. 1: try to find one barcode. If one barcode is found, the library will stop the localization process and perform barcode decoding. n: try to find n barcodes. If the library only finds m (m<n) barcode, it will try different algorithms till n barcodes are found or all algorithms are tried.
 
 ## barcodeFormatIds
@@ -119,16 +133,20 @@ Sets the formats of the barcode in BarcodeFormat group 1 to be read. Barcode for
 int barcodeFormatIds
 ```
 
-**Value range**
+**Value Range**
+
 A combined value of [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) Enumeration items
 
-**Default value**
+**Default Value**
+
 `BF_ALL`
 
 **Remarks**
+
 If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process. The barcode format our library will search for is composed of [BarcodeFormat group 1]({{ site.enumerations }}format-enums.html#barcodeformat) and [BarcodeFormat group 2]({{ site.enumerations }}format-enums.html#barcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
 
-**See also**  
+**See Also**
+
 [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ## barcodeFormatIds_2
@@ -139,16 +157,20 @@ Sets the formats of the barcode in BarcodeFormat group 2 to be read. Barcode for
 int barcodeFormatIds_2
 ```
 
-**Value range**
+**Value Range**
+
 A combined value of [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) Enumeration items
 
-**Default value**
+**Default Value**
+
 `BF2_NULL`
 
 **Remarks**
+
 If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process. The barcode format our library will search for is composed of [BarcodeFormat group 1]({{ site.enumerations }}format-enums.html#barcodeformat) and [BarcodeFormat group 2]({{ site.enumerations }}format-enums.html#barcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
 
-**See also**  
+**See Also**
+
 [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ## pdfRasterDPI
@@ -159,13 +181,16 @@ Sets the output image resolution.
 int pdfRasterDPI
 ```
 
-**Value range**
+**Value Range**
+
 [100, 600]
 
-**Default value**
+**Default Value**
+
 300
 
 **Remarks**
+
 When decoding barcodes from a PDF file using the DecodeFile method, the library will convert the PDF file to image(s) first, then perform barcode recognition.
 
 ## scaleDownThreshold
@@ -176,13 +201,16 @@ Sets the threshold for the image shrinking.
 int scaleDownThreshold
 ```
 
-**Value range**
+**Value Range**
+
 [512, 0x7fffffff]
 
-**Default value**
+**Default Value**
+
 2300
 
 **Remarks**
+
 If the shorter edge size is larger than the given threshold value, the library will calculate the required height and width of the barcode image and shrink the image to that size before localization. Otherwise, the library will perform barcode localization on the original image.
 
 ## binarizationModes
@@ -193,16 +221,20 @@ Sets the mode and priority for binarization.
 int[] binarizationModes
 ```
 
-**Value range**
+**Value Range**
+
 Each array item can be any one of the [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) Enumeration items.
 
-**Default value**
+**Default Value**
+
 `[BM_LOCAL_BLOCK,BM_SKIP,BM_SKIP,BM_SKIP,BM_SKIP,BM_SKIP,BM_SKIP,BM_SKIP]`
 
 **Remarks**
+
 The array index represents the priority of the item. The smaller index is, the higher priority is.
 
-**See also**
+**See Also**
+
 [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
 
 ## localizationModes
@@ -213,16 +245,20 @@ Sets the mode and priority for localization algorithms.
 int[] localizationModes
 ```
 
-**Value range**
+**Value Range**
+
 Each array item can be any one of the [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) Enumeration items.
 
-**Default value**
+**Default Value**
+
 `[LM_CONNECTED_BLOCKS, LM_SCAN_DIRECTLY, LM_STATISTICS, LM_LINES, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP]`
 
 **Remarks**
+
 The array index represents the priority of the item. The smaller index is, the higher priority is.
 
-**See also**
+**See Also**
+
 [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode)  
 
 ## furtherModes
@@ -241,13 +277,16 @@ Sets the degree of blurriness of the barcode.
 int deblurLevel
 ```
 
-**Value range**
+**Value Range**
+
 [0, 9]
 
-**Default value**
+**Default Value**
+
 9
 
 **Remarks**
+
 If you have a blurry image, you can set this property to a larger value. The higher the value set, the more effort the library will spend to decode images, but it may also slow down the recognition process.
 
 ## intermediateResultTypes
@@ -258,13 +297,16 @@ Sets which types of intermediate result to be kept for further reference. Interm
 int intermediateResultTypes
 ```
 
-**Value range**
+**Value Range**
+
 A combined value of [`EnumIntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype) Enumeration items
 
-**Default value**
+**Default Value**
+
 0
 
-**See also**
+**See Also**
+
 [`EnumIntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype)
 
 ## intermediateResultSavingMode
@@ -275,13 +317,16 @@ Sets the mode for saving intermediate result.
 int intermediateResultSavingMode
 ```
 
-**Value range**
+**Value Range**
+
 A value of [`EnumIntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode) Enumeration items
 
-**Default value**
+**Default Value**
+
 IRSM_MEMORY
 
-**See also**
+**See Also**
+
 [`EnumIntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode)
 
 ## resultCoordinateType
@@ -292,13 +337,16 @@ Specifies the format for the coordinates returned.
 int resultCoordinateType
 ```
 
-**Value range**
+**Value Range**
+
 Any one of the [`ResultCoordinateType`]({{ site.parameters_reference }}image-parameter/result-control.html#resultcoordinatetype) Enumeration items
 
-**Default value**
+**Default Value**
+
 IRSM_MEMORY
 
-**See also**
+**See Also**
+
 [`EnumResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype)
 
 ## textResultOrderModes
@@ -309,16 +357,20 @@ Sets the mode and priority for the order of the text results returned.
 int[] textResultOrderModes
 ```
 
-**Value range**
+**Value Range**
+
 Each array item can be any one of the [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode) Enumeration items.
 
-**Default value**
+**Default Value**
+
 `[TROM_CONFIDENCE, TROM_POSITION, TROM_FORMAT, TROM_SKIP, TROM_SKIP, TROM_SKIP, TROM_SKIP, TROM_SKIP]`
 
 **Remarks**
+
 The array index represents the priority of the item. The smaller the index, the higher the priority.
 
-**See also**
+**See Also**
+
 [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)
 
 ## returnBarcodeZoneClarity
@@ -329,13 +381,16 @@ Sets whether or not to return the clarity of the barcode zone.
 int returnBarcodeZoneClarity
 ```
 
-**Value range**
+**Value Range**
+
 [0,1]
 
-**Default value**
+**Default Value**
+
 0
 
 **Remarks**
+
 0: Do not return the clarity of the barcode zone; 1: Return the clarity of the barcode zone.  
 
 ## region
@@ -354,13 +409,16 @@ Sets the range of barcode text length for barcodes search.
 int minBarcodeTextLength
 ```
 
-**Value range**
+**Value Range**
+
 [0, 0x7fffffff]
 
-**Default value**
+**Default Value**
+
 0
 
 **Remarks**
+
 0: means no limitation on the barcode text length.
 
 ## minResultConfidence
@@ -371,13 +429,16 @@ The minimum confidence of the result.
 int minResultConfidence
 ```
 
-**Value range**
+**Value Range**
+
 [0, 100]
 
-**Default value**
+**Default Value**
+
 0
 
 **Remarks**
+
 0: means no limitation on the result confidence.
 
 ## scaleUpModes
@@ -388,16 +449,20 @@ Sets the mode and priority to control the sampling methods of scale-up for linea
 int[] scaleUpModes[]
 ```
 
-**Value range**
+**Value Range**
+
 Each array item can be any one of the [`EnumScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode) Enumeration items.
 
-**Default value**
+**Default Value**
+
 `[SUM_AUTO, SUM_SKIP, SUM_SKIP, SUM_SKIP, SUM_SKIP, SUM_SKIP, SUM_SKIP, SUM_SKIP]`
 
 **Remarks**
+
 The array index represents the priority of the item. The smaller the index, the higher the priority.
 
-**See also**
+**See Also**
+
 [`EnumScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)
 
 ## pdfReadingMode
@@ -408,13 +473,16 @@ Sets the way to detect barcodes from a PDF file when using the DecodeFile method
 int pdfReadingMode
 ```
 
-**Value range**
+**Value Range**
+
 Any one of the [`EnumPDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) Enumeration items.
 
-**Default value**
+**Default Value**
+
 `PDFRM_AUTO`  
 
-**See also**
+**See Also**
+
 [`EnumPDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode)
 
 ## deblurModes
@@ -425,16 +493,20 @@ Sets the mode and priority for deblurring.
 int[] deblurModes
 ```
 
-**Value range**
+**Value Range**
+
 Each array item can be any one of the [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) Enumeration items.
 
-**Default value**
+**Default Value**
+
 `[DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP]`
 
 **Remarks**
+
 The array index represents the priority of the item. The smaller index is, the higher priority is.
 
-**See also**
+**See Also**
+
     [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)
 
 ## barcodeZoneMinDistanceToImageBorders
@@ -445,11 +517,14 @@ Sets the minimum distance (in pixels) between the barcode zone and image borders
 int barcodeZoneMinDistanceToImageBorders
 ```
 
-**Value range**
+**Value Range**
+
 [0, 0x7fffffff]
 
-**Default value**
+**Default Value**
+
 0
 
 **Remarks**
+
 0: means no limitation on the distance.

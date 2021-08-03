@@ -5,6 +5,7 @@ description: This page shows the OneDCodeDetails Class of Dynamsoft Barcode Read
 keywords: OneDCodeDetails, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 # Class OneDCodeDetails

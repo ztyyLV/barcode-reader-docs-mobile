@@ -105,7 +105,7 @@ Output the license content as an encrypted string from the license server to be 
 String com.dynamsoft.dbr.BarcodeReader.outputLicenseToString() throws BarcodeReaderException
 ```
 
-**Return value**
+**Return Value**
 
 The output string which stores the contents of license.
 

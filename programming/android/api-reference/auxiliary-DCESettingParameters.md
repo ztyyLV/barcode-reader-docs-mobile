@@ -5,6 +5,7 @@ description: This page shows the DCESettingParameters Class of Dynamsoft Barcode
 keywords: DCESettingParameters, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 # Class DCESettingParameters

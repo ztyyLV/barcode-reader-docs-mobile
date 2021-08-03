@@ -25,7 +25,7 @@ Get intermediate results containing the original image, the color clustered imag
 IntermediateResult[] com.dynamsoft.dbr.BarcodeReader.getIntermediateResults() throws BarcodeReaderException 
 ```
 
-**Return value**
+**Return Value**
 
 The intermediate results were returned by the SDK.
 

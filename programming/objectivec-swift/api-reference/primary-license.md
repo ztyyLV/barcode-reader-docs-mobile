@@ -31,7 +31,7 @@ Initializes DynamsoftBarcodeReader with a license.
 
 `[in] license` The license key.
 
-**Return value**
+**Return Value**
 
 The instance of DynamsoftBarcodeReader.
 
@@ -64,7 +64,7 @@ Initializes the license and connects to the specified server for online verifica
 `[in] licenseKey` The license key.  
 `[in,out] connectionDelegate` The delegate to handle callback when license server returns.
 
-**Return value**
+**Return Value**
 
 The instance of DynamsoftBarcodeReader.
 
@@ -111,7 +111,7 @@ Output the license content as an encrypted string from the license server to be 
 
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-**Return value**
+**Return Value**
 
 The output string which stores the contents of license.
 
@@ -147,7 +147,7 @@ Initializes the barcode reader license and connects to the specified server for 
 `[in] dlsConnectionParameters` The struct DMDLSConnectionParameters with customized settings.  
 `[in,out] connectionDelegate` The delegate to handle callback when license server returns.
 
-**Return value**
+**Return Value**
 
 The instance of DynamsoftBarcodeReader.
 

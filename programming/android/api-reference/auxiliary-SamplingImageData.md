@@ -5,6 +5,7 @@ description: This page shows the SamplingImageData Class of Dynamsoft Barcode Re
 keywords: SamplingImageData, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 
