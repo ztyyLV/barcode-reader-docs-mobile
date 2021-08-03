@@ -5,6 +5,7 @@ description: This page shows the iIntermediateResult index of Dynamsoft Barcode 
 keywords: IntermediateResult, api reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: False
+noTitleIndex: true
 ---
 
 # Intermediate Result Classes

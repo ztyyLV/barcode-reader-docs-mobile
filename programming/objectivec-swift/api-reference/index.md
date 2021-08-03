@@ -5,10 +5,11 @@ description: This is the main page of Dynamsoft Barcode Reader for iOS SDK API R
 keywords: api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 breadcrumbText: iOS API Reference
 ---
 
-# Dynamsoft Barcode Reader SDK - Objective-C & Swift API Reference
+# API Reference - Objective-C & Swift 
 
 ## Attributes
   

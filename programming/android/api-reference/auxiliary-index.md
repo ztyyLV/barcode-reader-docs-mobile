@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 breadcrumbText: Auxiliary Class
 ---
 
-# Dynamsoft Barcode Reader SDK - Android Class
+# Android Classes
 
 ## [License Class](auxiliary-DMDLSConnectionParameters.md)
 

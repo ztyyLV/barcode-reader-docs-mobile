@@ -23,7 +23,7 @@ Stores line segment data.
 The start point of the line segment.
 
 ```java
-Point startPoint
+Point[] startPoint
 ```
 
 ## endPoint
@@ -31,7 +31,7 @@ Point startPoint
 The end point of the line segment.
 
 ```java
-Point endPoint
+Point[] endPoint
 ```
 
 ## linesConfidenceCoefficients

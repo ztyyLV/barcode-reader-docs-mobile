@@ -37,6 +37,18 @@ The terminate phase of localization result.
 int terminatePhase
 ```
 
+**Value range**
+Any one of the [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) Enumeration items
+
+**Default value**
+`TP_BARCODE_RECOGNIZED`
+
+**Remarks**
+When the recognition result is not desired, you can set this parameter can be set to skip certain processing stages.
+
+**See also**  
+[`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase)
+
 ## barcodeFormat
 
 Barcode type in BarcodeFormat group 1.
@@ -44,6 +56,12 @@ Barcode type in BarcodeFormat group 1.
 ```java
 int barcodeFormat
 ```
+
+**Value range**
+One of the [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) Enumeration value.
+
+**See also**  
+[`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ## barcodeFormatString
 
@@ -53,6 +71,12 @@ Barcode type in BarcodeFormat group 1 as string.
 String barcodeFormatString
 ```
 
+**Value range**
+One of the barcode type in [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat).
+
+**See also**  
+[`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
+
 ## barcodeFormat_2
 
 Barcode type in BarcodeFormat group 2.
@@ -60,6 +84,12 @@ Barcode type in BarcodeFormat group 2.
 ```java
 int barcodeFormat_2
 ```
+
+**Value range**
+One of the [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) Enumeration items
+
+**See also**  
+[`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ## barcodeFormatString_2
 
@@ -69,6 +99,12 @@ Barcode type in BarcodeFormat group 2 as string.
 String barcodeFormatString_2
 ```
 
+**Value range**
+One of the barcode type in [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2).
+
+**See also**  
+[`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
+
 ## resultPoints
 
 The vertices coordinates information of the barcode region.
@@ -76,6 +112,10 @@ The vertices coordinates information of the barcode region.
 ```java
 Point[] resultPoints
 ```
+
+**Related Class**
+
+Class [`Point`](auxiliary-Point.md).
 
 ## angle
 
@@ -95,7 +135,7 @@ int moduleSize
 
 ## pageNumber
 
-The page number the barcode located in. The index is 0-based.
+The page number the barcode located in. The index is 0-based. Only available when decoding files.
 
 ```java
 int pageNumber
@@ -111,7 +151,7 @@ String regionName
 
 ## documentName
 
-The document name.
+The document name. Only available when decoding files.
 
 ```java
 String documentName

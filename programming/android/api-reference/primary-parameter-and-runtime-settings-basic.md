@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Parameter 
 description: This page shows BarcodeReader basic runtime settings methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: setModeArgument, getModeArgument, getRuntimeSettings, updateRuntimeSettings, resetRuntimeSettings, parameter and runtime settings basic methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 
@@ -28,18 +28,29 @@ Sets the optional argument for a specified mode in Modes parameters.
 void com.dynamsoft.dbr.BarcodeReader.setModeArgument(String modesName, int index, String argumentName, String argumentValue) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
-- `modesName`: The mode parameter name to set argument.
-- `index`: The array index of mode parameter to indicate a specific mode.  
-- `argumentName`: The name of the argument to set.  
-- `argumentValue`: The value of the argument to set.
+`modesName`: The mode parameter name to set argument.  
+`index`: The array index of mode parameter to indicate a specific mode.  
+`argumentName`: The name of the argument to set.  
+`argumentValue`: The value of the argument to set.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Remark
+**Code Snippet**
+
+```java
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+settings.binarizationModes[0] = EnumBinarizationMode.BM_LOCAL_BLOCK;
+reader.updateRuntimeSettings(settings);
+reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
+reader.destroy();
+```
+
+**Remarks**
 
 Check the available modes and arguments below:
 
@@ -55,28 +66,6 @@ Check the available modes and arguments below:
 - [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes)
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
 - [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)
-
-### Code Snippet
-
-```java
-BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.binarizationModes[0] = EnumBinarizationMode.BM_LOCAL_BLOCK;
-reader.updateRuntimeSettings(settings);
-reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
-reader.destroy();
-```
 
 ## getModeArgument
 
@@ -86,21 +75,33 @@ Gets the optional argument for a specified mode in Modes parameters.
 String com.dynamsoft.dbr.BarcodeReader.getModeArgument(String modesName, int index, String argumentName) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
-- `modesName`: The mode parameter name to get argument.  
-- `index`: The array index of mode parameter to indicate a specific mode.  
-- `argumentName`: The name of the argument to get.
+`modesName`: The mode parameter name to get argument.  
+`index`: The array index of mode parameter to indicate a specific mode.  
+`argumentName`: The name of the argument to get.
 
-### Return value
+**Return value**
 
 the optional argument for a specified mode in Modes parameters.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Remark
+**Code Snippet**
+
+```java
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+settings.binarizationModes[0] = EnumBinarizationMode.BM_LOCAL_BLOCK;
+reader.updateRuntimeSettings(settings);
+reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
+String argumentValue = reader.getModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy");
+reader.destroy();
+```
+
+**Remarks**
 
 Check the available modes and arguments below:
 
@@ -117,29 +118,6 @@ Check the available modes and arguments below:
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
 - [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)
 
-### Code Snippet
-
-```java
-BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.binarizationModes[0] = EnumBinarizationMode.BM_LOCAL_BLOCK;
-reader.updateRuntimeSettings(settings);
-reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
-String argumentValue = reader.getModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy");
-reader.destroy();
-```
-
 ## getRuntimeSettings
 
 Get current settings and save them into a [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct.
@@ -148,29 +126,18 @@ Get current settings and save them into a [`PublicRuntimeSettings`](auxiliary-Pu
 PublicRuntimeSettings com.dynamsoft.dbr.BarcodeReader.getRuntimeSettings() throws BarcodeReaderException
 ```
 
-### Return value
+**Return value**
 
 The struct of template settings.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 reader.destroy();
 ```
@@ -183,29 +150,18 @@ Update runtime settings with a given [`PublicRuntimeSettings`](auxiliary-PublicR
 void com.dynamsoft.dbr.BarcodeReader.updateRuntimeSettings(PublicRuntimeSettings settings) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
-`settings`:	The struct of template settings.
+`settings`: The struct of template settings.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.deblurLevel = 9;
 reader.updateRuntimeSettings(settings);
@@ -220,24 +176,13 @@ Reset all parameters to default values.
 void com.dynamsoft.dbr.BarcodeReader.resetRuntimeSettings() throws BarcodeReaderException
 ```
 
-### Exceptions
+**Exceptions**
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.deblurLevel = 9;
 reader.updateRuntimeSettings(settings);

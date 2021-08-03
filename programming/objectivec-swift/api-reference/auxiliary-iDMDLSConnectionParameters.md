@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iDMDLSConnec
 description: This page shows the iDMDLSConnectionParameters Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iDMDLSConnectionParameters, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 
@@ -13,10 +14,10 @@ Defines a struct to configure the parameters to connect to the license server.
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |
-| [`mainServerURL`](#mainserverurl) | *NSString\** | The URL of the license tracking server. |
-| [`standbyServerURL`](#standbyserverurl) | *NSString\** | The URL of the standby license tracking server. |
+| [`mainServerURL`](#mainserverurl) | *NSString\** | The URL of the Dynamsoft License Server. |
+| [`standbyServerURL`](#standbyserverurl) | *NSString\** | The URL of the standby Dynamsoft License Server. |
 | [`handshakeCode`](#handshakecode) | *NSString\** | The handshake code. |
-| [`sessionPassword`](#sessionpassword) | *NSString\** | The session password of the handshake code set in license tracking server. |
+| [`sessionPassword`](#sessionpassword) | *NSString\** | The session password of the handshake code set in Dynamsoft License Server. |
 | [`chargeWay`](#chargeway) | *EnumDMChargeWay* | Sets the charge way. |
 | [`UUIDGenerationMethod`](#uuidgenerationmethod) | *EnumDMUUIDGenerationMethod* | Sets the method to generate UUID. |
 | [`maxBufferDays`](#maxbufferdays) | *NSInteger* | Sets the max days to buffer the license info. |
@@ -25,37 +26,37 @@ Defines a struct to configure the parameters to connect to the license server.
 
 ## mainServerURL
 
-The URL of the license tracking server.
+The URL of the Dynamsoft License Server.
 
 ```objc
 NSString* mainServerURL
 ```
 
-- **Value range**
-    Any string value
+**Value range**
+Any string value
 
-- **Default value**
-    nil
+**Default value**
+nil
 
-- **Remarks**
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to nil (default value), it will connect to Dynamsoft's license tracking servers for online verification.
+**Remarks**
+If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to nil (default value), it will connect to Dynamsoft's Dynamsoft License Servers for online verification.
 
 ## standbyServerURL
 
-The URL of the standby license tracking server.
+The URL of the standby Dynamsoft License Server.
 
 ```objc
 NSString* standbyServerURL
 ```
 
-- **Value range**
-    Any string value
+**Value range**
+Any string value
 
-- **Default value**
-    nil
+**Default value**
+nil
 
-- **Remarks**
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to nil (default value), it will connect to Dynamsoft's license tracking servers for online verification.
+**Remarks**
+If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to nil (default value), it will connect to Dynamsoft's Dynamsoft License Servers for online verification.
 
 ## handshakeCode
 
@@ -65,25 +66,25 @@ The handshake code.
 NSString* handshakeCode
 ```
 
-- **Value range**
-    Any string value
+**Value range**
+Any string value
 
-- **Default value**
-    nil
+**Default value**
+nil
 
 ## sessionPassword
 
-The session password of the handshake code set in license tracking server.
+The session password of the handshake code set in Dynamsoft License Server.
 
 ```objc
 NSString* sessionPassword
 ```
 
-- **Value range**
-    Any string value
+**Value range**
+Any string value
 
-- **Default value**
-    nil
+**Default value**
+nil
 
 ## chargeWay
 
@@ -93,14 +94,14 @@ Sets the charge way.
 EnumDMChargeWay chargeWay
 ```
 
-- **Value range**
-    Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay) Enumeration items.
+**Value range**
+Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay) Enumeration items.
 
-- **Default value**
-    EnumDMChargeWayAuto
+**Default value**
+EnumDMChargeWayAuto
 
-- **See also**  
-    [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay)
+**See also**  
+[`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay)
 
 ## UUIDGenerationMethod
 
@@ -110,14 +111,14 @@ Sets the method to generate UUID.
 EnumDMUUIDGenerationMethod UUIDGenerationMethod
 ```
 
-- **Value range**
-    Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
+**Value range**
+Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
 
-- **Default value**
-    EnumDMUUIDGenerationMethodRandom
+**Default value**
+EnumDMUUIDGenerationMethodRandom
 
-- **See also**  
-    [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
+**See also**  
+[`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
 
 ## maxBufferDays
 
@@ -127,11 +128,11 @@ Sets the max days to buffer the license info.
 NSInteger maxBufferDays
 ```
 
-- **Value range**
-    [7,0x7fffffff]
+**Value range**
+[7,0x7fffffff]
 
-- **Default value**
-    7
+**Default value**
+7
 
 ## limitedLicenseModules
 
@@ -141,14 +142,14 @@ Sets the license modules to use.
 NSArray* limitedLicenseModules
 ```
 
-- **Value range**
-    Each array item can be any one of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.
+**Value range**
+Each array item can be any one of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.
 
-- **Default value**
-    nil
+**Default value**
+nil
 
-- **See also**  
-    [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
+**See also**  
+[`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
 
 ## organizationID
 
@@ -158,8 +159,8 @@ The organization ID got from Dynamsoft.
 NSString* organizationID
 ```
 
-- **Value range**
-    Any string value
+**Value range**
+Any string value
 
-- **Default value**
-    ""
+**Default value**
+""

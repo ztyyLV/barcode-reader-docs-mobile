@@ -5,6 +5,7 @@ description: This page shows the DynamsoftBarcodeReader Class of Dynamsoft Barco
 keywords: DynamsoftBarcodeReader, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

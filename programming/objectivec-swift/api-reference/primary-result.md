@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Result Metho
 description: This page shows Result methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: getIntermediateResult, result methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 # Result Methods
@@ -24,15 +25,15 @@ Return intermediate results containing the original image, the color clustered i
 -(NSArray<iIntermediateResult*>* _Nullable)getIntermediateResult:(NSError* _Nullable *  _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 Returns intermediate result array.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -41,16 +42,6 @@ iPublicRuntimeSettings *settings;
 NSError __autoreleasing * _Nullable error;
 NSArray<iTextResult *> *result;
 NSArray<iIntermediateResult *> *irResult;
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
-
 [m_barcodeReader getRuntimeSettings:&error];
 settings.intermediateResultTypes = EnumIntermediateResultTypeColourConvertedGrayScaleImage|EnumIntermediateResultTypeOriginalImage|EnumIntermediateResultTypeColourClusteredImage;
 [m_barcodeReader updateRuntimeSettings:settings error:&error];
@@ -62,14 +53,6 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError()
-let dls = iDMDLSConnectionParameters()
-dls.organizationID = "200001"
-dls.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-}
 let settings = barcodeReader.getRuntimeSettings(error: nil)
 settings.intermediateResultTypes = EnumIntermediateResultType.ColourConvertedGrayScaleImage.rawValue | EnumIntermediateResultType.OriginalImage.rawValue | EnumIntermediateResultType.ColourClusteredImage.rawValue
 barcodeReader.updateRuntimeSettings(settings:settings, error:nil)
@@ -80,6 +63,16 @@ let irResult = barcodeReader.getIntermediateResult(error: &error)
 ## enableResultVerification
 
 The text results will be verified before output if the result verification is enabled.
+
+```objectivec
+@property (nonatomic, assign) BOOL enableResultVerification;
+```
+
+**Parameters**
+
+`boolean` value which stands for the target status of result verification mode.
+
+**Code Snippet**
 
 Objective-C:
 
@@ -100,6 +93,16 @@ let x = barcodeReader.enableResultVerification
 ## enableDuplicateFilter
 
 The duplicated text result will be filtered. The barcode reader will not output the result for the same barcode a second time in 3 seconds.
+
+```objectivec
+@property (nonatomic, assign) BOOL enableDuplicateFilter;
+```
+
+**Parameters**
+
+`boolean` value which stands for the target status of result duplicate filter mode.
+
+**Code Snippet**
 
 Objective-C:
 

@@ -15,7 +15,7 @@ needGenerateH3Content: false
   | [`IntermediateResultCallback`](#intermediateresultcallback) | Represents the method that will handle the intermediate result array returned by the SDK. |
   | [`TextResultCallback`](#textresultcallback) | Represents the method that will handle the text result array returned by the SDK. |
   | [`DBRServerLicenseVerificationListener`](#dbrserverlicenseverificationlistener) | Represents the method that will handle callback when license server returns. |
-  | [`DBRDLSLicenseVerificationListener`](#dbrdlslicenseverificationlistener) | Represents the method that will handle callback when license tracking server returns. |
+  | [`DBRDLSLicenseVerificationListener`](#dbrdlslicenseverificationlistener) | Represents the method that will handle callback when Dynamsoft License Server returns. |
   
 ---
 
@@ -27,7 +27,7 @@ Represents the method that will handle the error code returned by the SDK.
 void com.dynamsoft.dbr.ErrorCallback.errorCallback(int frameId, int errorCode, Object userData)
 ```
 
-### Parameters
+**Parameters**
 
 - `frameId`: The ID of the frame.
 - `errorCode`: Error Code generated when decoding the frame.
@@ -41,13 +41,13 @@ Represents the method that will handle the intermediate result array returned by
 void com.dynamsoft.dbr.IntermediateResultCallback.intermediateResultCallback(int frameId, IntermediateResult[] results, Object userData)
 ```
 
-### Parameters
+**Parameters**
 
 - `frameId`: The ID of the frame.  
 - `results`: The intermediate results of the frame.
 - `userData`: Arguments passed to your function.
 
-### See Also
+**See Also**
 
 [IntermediateResult](auxiliary-IntermediateResult.md)
 
@@ -59,13 +59,13 @@ Represents the method that will handle the error code returned by the SDK.
 void textResultCallback(int frameId, TextResult[] results, Object userData)
 ```
 
-### Parameters
+**Parameters**
 
 - `frameId`: The ID of the frame.  
 - `results`: Recognized barcode results of the frame.
 - `userData`: Arguments passed to your function.
 
-### See Also
+**See Also**
 
 [TextResult](auxiliary-TextResult.md)
 
@@ -77,20 +77,20 @@ Represents the method that will handle the error code returned by the SDK.
 void com.dynamsoft.dbr.DBRServerLicenseVerificationListener.licenseVerificationCallback (boolean isSuccess, Exception error)
 ```
 
-### Parameters
+**Parameters**
 
 - `isSuccess`: Whether the license verification was successful.
 - `error`: The error message from license server.
 
 ## DBRDLSLicenseVerificationListener
 
-Represents the method that will handle callback when license tracking server returns.
+Represents the method that will handle callback when Dynamsoft License Server returns.
 
 ```java
 void com.dynamsoft.dbr.DBRDLSLicenseVerificationListener.licenseVerificationCallback (boolean isSuccess, Exception error)
 ```
 
-### Parameters
+**Parameters**
 
 - `isSuccess`: Whether the license verification was successful.
 - `error`: The error message from license server.

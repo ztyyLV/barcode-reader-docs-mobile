@@ -5,9 +5,10 @@ description: This page shows all Classes of Dynamsoft Barcode Reader for iOS SDK
 keywords: class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 breadcrumbText: Auxiliary Class
+noTitleIndex: true
 ---
 
-# Dynamsoft Barcode Reader SDK — Objective-C & Swift Class
+# Objective-C & Swift Classes
 
 ## [License Class](auxiliary-iDMDLSConnectionParameters.md)
 
