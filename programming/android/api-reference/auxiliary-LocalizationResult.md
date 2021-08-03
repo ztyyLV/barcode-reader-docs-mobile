@@ -37,17 +37,17 @@ The terminate phase of localization result.
 int terminatePhase
 ```
 
-- **Value range**
-    Any one of the [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) Enumeration items
+**Value range**
+Any one of the [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) Enumeration items
 
-- **Default value**
-    `TP_BARCODE_RECOGNIZED`
+**Default value**
+`TP_BARCODE_RECOGNIZED`
 
-- **Remarks**
-    When the recognition result is not desired, you can set this parameter can be set to skip certain processing stages.
+**Remarks**
+When the recognition result is not desired, you can set this parameter can be set to skip certain processing stages.
 
-- **See also**  
-    [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase)
+**See also**  
+[`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase)
 
 ## barcodeFormat
 
@@ -57,11 +57,11 @@ Barcode type in BarcodeFormat group 1.
 int barcodeFormat
 ```
 
-- **Value range**
-    One of the [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) Enumeration value.
+**Value range**
+One of the [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) Enumeration value.
 
-- **See also**  
-    [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
+**See also**  
+[`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ## barcodeFormatString
 
@@ -71,11 +71,11 @@ Barcode type in BarcodeFormat group 1 as string.
 String barcodeFormatString
 ```
 
-- **Value range**
-    One of the barcode type in [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat).
+**Value range**
+One of the barcode type in [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat).
 
-- **See also**  
-    [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
+**See also**  
+[`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ## barcodeFormat_2
 
@@ -85,11 +85,11 @@ Barcode type in BarcodeFormat group 2.
 int barcodeFormat_2
 ```
 
-- **Value range**
-    One of the [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) Enumeration items
+**Value range**
+One of the [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) Enumeration items
 
-- **See also**  
-    [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
+**See also**  
+[`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ## barcodeFormatString_2
 
@@ -99,11 +99,11 @@ Barcode type in BarcodeFormat group 2 as string.
 String barcodeFormatString_2
 ```
 
-- **Value range**
-    One of the barcode type in [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2).
+**Value range**
+One of the barcode type in [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2).
 
-- **See also**  
-    [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
+**See also**  
+[`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ## resultPoints
 
@@ -113,9 +113,9 @@ The vertices coordinates information of the barcode region.
 Point[] resultPoints
 ```
 
-- **Related Class**
+**Related Class**
 
-    Class [`Point`](auxiliary-Point.md).
+Class [`Point`](auxiliary-Point.md).
 
 ## angle
 

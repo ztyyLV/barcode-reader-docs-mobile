@@ -19,7 +19,7 @@ noTitleIndex: true
 
 ## getIntermediateResults
 
-Get intermediate results containing the original image, the colour clustered image, the binarized Image, contours, Lines, TextBlocks, etc.
+Get intermediate results containing the original image, the color clustered image, the binarized Image, contours, Lines, TextBlocks, etc.
 
 ```java
 IntermediateResult[] com.dynamsoft.dbr.BarcodeReader.getIntermediateResults() throws BarcodeReaderException 
@@ -27,7 +27,7 @@ IntermediateResult[] com.dynamsoft.dbr.BarcodeReader.getIntermediateResults() th
 
 **Return value**
 
-The intermediate results returned by the SDK.
+The intermediate results were returned by the SDK.
 
 **Exceptions**
 
@@ -50,6 +50,16 @@ reader.destroy();
 The text results will be verified before output if the result verification is enabled.
 
 ```java
+IntermediateResult[] com.dynamsoft.dbr.BarcodeReader.enableResultVerification() throws BarcodeReaderException 
+```
+
+**Exceptions**
+
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+
+**Code Snippet**
+
+```java
 reader.enableResultVerification(true)
 // To check the status of this mode:
 boolean x = reader.getEnableResultVerificationStatus();
@@ -58,6 +68,16 @@ boolean x = reader.getEnableResultVerificationStatus();
 ## enableDuplicateFilter
 
 The duplicated text result will be filtered. The barcode reader will not output the result for the same barcode a second time in 3 seconds.
+
+```java
+IntermediateResult[] com.dynamsoft.dbr.BarcodeReader.enableDuplicateFilter() throws BarcodeReaderException
+```
+
+**Exceptions**
+
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+
+**Code Snippet**
 
 ```java
 reader.enableDuplicateFilter(true)

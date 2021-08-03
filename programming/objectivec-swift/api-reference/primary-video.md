@@ -4,39 +4,23 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Video Method
 description: This page shows Video methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: startFrameDecoding, startFrameDecodingEx, appendFrame, stopFrameDecoding, getFrameDecodingParameters, setDBRErrorDelegate, setDBRTextResultDelegate, setDBRIntermediateResultDelegate, getLengthOfFrameQueue, video methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 # Video Methods
 
-- Decode
+| Method               | Description |
+|----------------------|-------------|
+| [`startFrameDecoding`](#startframedecoding) | Starts a new thread to decode barcodes from the inner frame queue. |
+| [`startFrameDecodingEx`](#startframedecodingex) | Starts a new thread to decode barcodes from the inner frame queue. |
+| [`appendFrame`](#appendframe) | Appends a frame image buffer to the inner frame queue. |
+| [`stopFrameDecoding`](#stopframedecoding) | Stops the frame decoding thread created by StartFrameDecoding. |
+| [`getFrameDecodingParameters`](#getframedecodingparameters) | Initialize frame decoding parameter. |
+| [`setDBRErrorDelegate`](#setdbrerrordelegate) | Set callback function to process errors generated during frame decoding. |
+| [`setDBRTextResultDelegate`](#setdbrtextresultdelegate) | Set callback function to process text results generated during frame decoding. |
+| [`setDBRIntermediateResultDelegate`](#setdbrintermediateresultdelegate) | Set callback function to process intermediate results generated during frame decoding. |
+| [`getLengthOfFrameQueue`](#getlengthofframequeue) | Get length of current inner frame queue. |
 
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`startFrameDecoding`](#startframedecoding) | Starts a new thread to decode barcodes from the inner frame queue. |
-  | [`startFrameDecodingEx`](#startframedecodingex) | Starts a new thread to decode barcodes from the inner frame queue. |
-  | [`appendFrame`](#appendframe) | Appends a frame image buffer to the inner frame queue. |
-  | [`stopFrameDecoding`](#stopframedecoding) | Stops the frame decoding thread created by StartFrameDecoding. |
-
-- Parameter
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`getFrameDecodingParameters`](#getframedecodingparameters) | Initialize frame decoding parameter. |
-
-- Delegate
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`setDBRErrorDelegate`](#setdbrerrordelegate) | Set callback function to process errors generated during frame decoding. |
-  | [`setDBRTextResultDelegate`](#setdbrtextresultdelegate) | Set callback function to process text results generated during frame decoding. |
-  | [`setDBRIntermediateResultDelegate`](#setdbrintermediateresultdelegate) | Set callback function to process intermediate results generated during frame decoding. |
-
-- Status retrieval
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`getLengthOfFrameQueue`](#getlengthofframequeue) | Get length of current inner frame queue. |
-  
 ---
 
 ## startFrameDecoding
@@ -311,13 +295,9 @@ Get length of current inner frame queue.
 -(NSInteger)getLengthOfFrameQueue;
 ```
 
----
-
 **Return value**
 
 Returns the length of the inner frame queue.
-
----
 
 **Code Snippet**
 

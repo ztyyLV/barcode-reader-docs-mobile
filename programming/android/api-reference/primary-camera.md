@@ -12,49 +12,83 @@ noTitleIndex: true
 
 | Method | Description |
 |--------|-------------|
-| [`StartCameraEnhancer`](#start-stop-pause-resume-camera-enhancer) | Start using Dynamsoft Camera Enhancer |
-| [`StopCameraEnhancer`](#start-stop-pause-resume-camera-enhancer) | Stop using Dynamsoft Camera Enhancer |
-| [`PauseCameraEnhancer`](#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
-| [`ResumeCameraEnhancer`](#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
+| [`StartCameraEnhancer`](#startcameraenhancer) | Start using Dynamsoft Camera Enhancer |
+| [`StopCameraEnhancer`](#stopcameraenhancer) | Stop using Dynamsoft Camera Enhancer |
+| [`PauseCameraEnhancer`](#pausecameraenhancer) | Pause the process of Dynamsoft Camera Enhancer |
+| [`ResumeCameraEnhancer`](#resumecameraenhancer) | Pause the process of Dynamsoft Camera Enhancer |
 | [`SetCameraEnhancerParam`](#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
 
 This page illustrates the controlling of `Dynamsoft Camera Enhancer`. To get a better understanding of this section, please read more about [`Dynamsoft Camera Enhancer`](https://www.dynamsoft.com/camera-enhancer/docs/introduction/?ver=latest).
 
-## Start, Stop, Pause, Resume Camera Enhancer
+## StartCameraEnhancer
 
-APIs that controlling the start, stop, pause and resume of  `Dynamsoft Camera Enhancer`.
+APIs that controlling the start of `Dynamsoft Camera Enhancer`.
 
-Start
+```java
+void com.dynamsoft.dbr.BarcodeReader.StartCameraEnhancer()
+```
+
+**Code Snippet**
 
 ```java
     reader.StartCameraEnhancer();
 ```
 
-Stop
+## StopCameraEnhancer
+
+APIs that controlling the start of `Dynamsoft Camera Enhancer`.
+
+```java
+void com.dynamsoft.dbr.BarcodeReader.StopCameraEnhancer()
+```
+
+**Code Snippet**
 
 ```java
     reader.StopCameraEnhancer();
 ```
 
-Pause
+## PauseCameraEnhancer
+
+APIs that controlling the pause of `Dynamsoft Camera Enhancer`.
 
 ```java
-    reader.PauseCameraEnhancer();
+void com.dynamsoft.dbr.BarcodeReader.PauseCameraEnhancer()
 ```
 
-Resume
+**Code Snippet**
 
 ```java
-    reader.ResumeCameraEnhancer();
+reader.PauseCameraEnhancer();
+```
+
+## ResumeCameraEnhancer
+
+APIs that controlling the resume of `Dynamsoft Camera Enhancer`.
+
+```java
+void com.dynamsoft.dbr.BarcodeReader.ResumeCameraEnhancer()
+```
+
+**Code Snippet**
+
+```java
+reader.ResumeCameraEnhancer();
 ```
 
 ## SetCameraEnhancerParam
 
+Set the CameraEnhancer parameters.
+
+```java
+void com.dynamsoft.dbr.BarcodeReader.ResumeCameraEnhancer()
+```
+
 **Parameters**
 
-- `cameraInstance`: The instance of Dynamsoft Camera Enhancer.
-- [`textResultCallback`](interface.md#textresultcallback): The text result callback.
-- [`intermediateResultCallback`](interface.md#intermediateresultcallback): The intermediate result callback.
+`cameraInstance`: The instance of Dynamsoft Camera Enhancer.
+[`textResultCallback`](interface.md#textresultcallback): The text result callback.
+[`intermediateResultCallback`](interface.md#intermediateresultcallback): The intermediate result callback.
 
 **Exceptions**
 
@@ -69,3 +103,7 @@ Resume
     dceSettingParameters._irtCallback = mIntermediateResultCallback;
     reader.SetCameraEnhancerParam(dceSettingParameters);
 ```
+
+**See Also**
+
+[`DCESettingParameters`](auxiliary-DCESettingParameters.md): The parameters that will be used in `SetCameraEnhancerParam`.

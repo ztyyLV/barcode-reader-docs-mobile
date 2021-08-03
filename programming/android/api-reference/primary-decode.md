@@ -32,8 +32,8 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeFile(String fileFullPath, Str
 
 **Parameters**
 
-- `fileFullPath`: A string defining the file path.
-- `templateName`: The template name.
+`fileFullPath`: A string defining the file path.
+`templateName`: The template name.
 
 **Return value**
 
@@ -56,14 +56,16 @@ reader.destroy();
 
 Decode barcodes from an image file in memory.
 
+### fileBytes
+
 ```java
 TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeFileInMemory(byte[] fileBytes, String templateName) throws BarcodeReaderException
 ```
 
 **Parameters**
 
-- `fileBytes`: The image file bytes in memory.  
-- `templateName`: The template name.
+`fileBytes`: The image file bytes in memory.  
+`templateName`: The template name.
 
 **Return value**
 
@@ -83,14 +85,16 @@ TextResult[] result = reader.decodeFileInMemory(bufferBytes, "");
 reader.destroy();
 ```
 
+### fileStream
+
 ```java
 TextResult [] com.dynamsoft.dbr.BarcodeReader.decodeFileInMemory(InputStream fileStream, String templateName) throws BarcodeReaderException, IOException
 ```
 
 **Parameters**
 
-- `fileStream`: The image file bytes in memory.  
-- `templateName`: The template name.
+`fileStream`: The image file bytes in memory.  
+`templateName`: The template name.
 
 **Return value**
 
@@ -120,12 +124,12 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBuffer(byte[] buffer, int wid
 
 **Parameters**
 
-- `buffer`: The array of bytes which contain the image data.
-- `Width`: The width of the image in pixels.
-- `Height`: The height of the image in pixels.
-- `Stride`: The stride (or scan width) of the image.
-- `format`: The image pixel format used in the image byte array.
-- `templateName` The template name.
+`buffer`: The array of bytes which contain the image data.
+`Width`: The width of the image in pixels.
+`Height`: The height of the image in pixels.
+`Stride`: The stride (or scan width) of the image.
+`format`: The image pixel format used in the image byte array.
+`templateName` The template name.
 
 **Return value**
 
@@ -190,8 +194,8 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBufferedImage(Bitmap image, S
 
 **Parameters**
 
-- `image`: The image to be decoded.  
-- `templateName`: The template name.
+`image`: The image to be decoded.  
+`templateName`: The template name.
 
 **Return value**
 
@@ -216,12 +220,12 @@ reader.destroy();
 Inits an intermediateResult struct with default values.
 
 ```java
-IntermediateResult com.dynamsoft.dbr.BarcodeReader.initIntermediateResults(int resultType) throws BarcodeReaderException	
+IntermediateResult com.dynamsoft.dbr.BarcodeReader.initIntermediateResults(int resultType) throws BarcodeReaderException
 ```
 
 **Parameters**
 
-- `resultType`: The type of the intermediate result to init.
+`resultType`: The type of the intermediate result to init.
 
 **Return value**
 
@@ -249,8 +253,8 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeIntermediateResults(Intermedi
 
 **Parameters**
 
-- `results`: An array of intermediate result.
-- `templateName`: The template name.
+`results`: An array of intermediate result.
+`templateName`: The template name.
 
 **Return value**
 

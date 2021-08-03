@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iDBRPoint Cl
 description: This page shows the iDBRPoint Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iDBRPoint, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 

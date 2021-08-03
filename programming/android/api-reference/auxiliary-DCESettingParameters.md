@@ -41,9 +41,9 @@ settingParameters.textResultCallback =mTextResultCallback;
 
 **Parameters**
 
-- `frameID`: The ID of frame.
-- `results`: The recognized barcode result of the frame.
-- `userData`: Arguments passed to your function.
+`frameID`: The ID of frame.
+`results`: The recognized barcode result of the frame.
+`userData`: Arguments passed to your function.
 
 ## textResultCallback_UserData
 
@@ -63,9 +63,9 @@ settingParameters.intermediateResultCallback = mIntermediateResultCallback;
 
 **Parameters**
 
-- `frameID`: The ID of frame.
-- `results`: The intermediate result of the frame.
-- `userData`: Arguments passed to your function.
+`frameID`: The ID of frame.
+`results`: The intermediate result of the frame.
+`userData`: Arguments passed to your function.
 
 ## intermediateResultCallback_UserData
 

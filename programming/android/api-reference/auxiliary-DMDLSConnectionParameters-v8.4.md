@@ -32,13 +32,13 @@ The URL of the Dynamsoft License Server.
 String mainServerURL
 ```
 
-- **Value range**
+**Value range**
     Any string value
 
-- **Default value**
+**Default value**
     null
 
-- **Remarks**
+**Remarks**
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's License Tracking Server for online verification.
 
 ## standbyServerURL
@@ -49,13 +49,13 @@ The URL of the standby License Tracking Server.
 String standbyServerURL
 ```
 
-- **Value range**
+**Value range**
     Any string value
 
-- **Default value**
+**Default value**
     null
 
-- **Remarks**
+**Remarks**
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to License Tracking Server for online verification.
 
 ## handshakeCode
@@ -66,10 +66,10 @@ The handshake code.
 String handshakeCode
 ```
 
-- **Value range**
+**Value range**
     Any string value
 
-- **Default value**
+**Default value**
     null
 
 ## sessionPassword
@@ -80,10 +80,10 @@ The session password of the handshake code set in License Tracking Server.
 String sessionPassword
 ```
 
-- **Value range**
+**Value range**
     Any string value
 
-- **Default value**
+**Default value**
     null
 
 ## uuidGenerationMethod
@@ -94,13 +94,13 @@ Sets the method to generate UUID.
 int uuidGenerationMethod
 ```
 
-- **Value range**
+**Value range**
     Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
 
-- **Default value**
+**Default value**
     DM_UUIDGM_RANDOM
 
-- **See also**  
+**See also**  
     [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
 
 ## maxBufferDays
@@ -111,10 +111,10 @@ Sets the max days to buffer the license info.
 int maxBufferDays
 ```
 
-- **Value range**
+**Value range**
     [7,0x7fffffff]  
 
-- **Default value**
+**Default value**
     7
 
 ## limitedLicenseModules
@@ -125,13 +125,13 @@ Sets the license modules to use.
 List<Integer> limitedLicenseModules
 ```
 
-- **Value range**
+**Value range**
     A list of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.
 
-- **Default value**
+**Default value**
     null
 
-- **See also**  
+**See also**  
     [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
 
 ## chargeWay
@@ -142,7 +142,7 @@ Sets the charge way.
 int chargeWay
 ```
 
-- **Value range**
+**Value range**
     Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay) Enumeration items.
 
 ## organizationID
@@ -153,8 +153,8 @@ The organization ID got from Dynamsoft.
 String organizationID
 ```
 
-- **Value range**
+**Value range**
     Any string value
 
-- **Default value**
+**Default value**
     ""

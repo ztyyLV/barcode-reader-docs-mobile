@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iLocalizatio
 description: This page shows the iLocalizationResult Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iLocalizationResult, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 

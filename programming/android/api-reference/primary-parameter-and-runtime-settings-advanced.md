@@ -31,8 +31,8 @@ void com.dynamsoft.dbr.BarcodeReader.initRuntimeSettingsWithFile(String filePath
 
 **Parameters**
 
-- `filePath`: The path of the settings file.  
-- `enumConflictMode`: The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings and replace with the new template.
+`filePath`: The path of the settings file.  
+`enumConflictMode`: The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings and replace with the new template.
 
 **Exceptions**
 
@@ -56,8 +56,8 @@ void com.dynamsoft.dbr.BarcodeReader.initRuntimeSettingsWithString(String conten
 
 **Parameters**
 
-- `content`: A JSON string that represents the content of the settings.
-- `enumConflictMode`: The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings and replace with the new template.
+`content`: A JSON string that represents the content of the settings.
+`enumConflictMode`: The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings and replace with the new template.
 
 **Exceptions**
 
@@ -81,8 +81,8 @@ void com.dynamsoft.dbr.BarcodeReader.appendTplFileToRuntimeSettings(String fileP
 
 **Parameters**
 
-- `filePath`: The path of the settings file.  
-- `enumConflictMode`: The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.
+`filePath`: The path of the settings file.  
+`enumConflictMode`: The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.
 
 **Exceptions**
 
@@ -101,13 +101,13 @@ reader.destroy();
 Append a new template string to the current runtime settings.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.appendTplStringToRuntimeSettings(String content, int enumConflictMode)	throws BarcodeReaderException
+void com.dynamsoft.dbr.BarcodeReader.appendTplStringToRuntimeSettings(String content, int enumConflictMode) throws BarcodeReaderException
 ```
 
 **Parameters**
 
-- `content`: A JSON string that represents the content of the settings.  
-- `enumConflictMode`: The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.  
+`content`: A JSON string that represents the content of the settings.  
+`enumConflictMode`: The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.  
 
 **Exceptions**
 
@@ -156,8 +156,8 @@ void com.dynamsoft.dbr.BarcodeReader.outputSettingsToFile(String filePath, Strin
 
 **Parameters**
 
-- `filePath`: The output file path which stores current settings.  
-- `settingsName`: A unique name for declaring current runtime settings.
+`filePath`: The output file path which stores current settings.  
+`settingsName`: A unique name for declaring current runtime settings.
 
 **Exceptions**
 

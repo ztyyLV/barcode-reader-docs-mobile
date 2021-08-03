@@ -30,31 +30,14 @@ void com.dynamsoft.dbr.BarcodeReader.setModeArgument(String modesName, int index
 
 **Parameters**
 
-- `modesName`: The mode parameter name to set argument.
-- `index`: The array index of mode parameter to indicate a specific mode.  
-- `argumentName`: The name of the argument to set.  
-- `argumentValue`: The value of the argument to set.
+`modesName`: The mode parameter name to set argument.
+`index`: The array index of mode parameter to indicate a specific mode.  
+`argumentName`: The name of the argument to set.  
+`argumentValue`: The value of the argument to set.
 
 **Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
-
-### Remark
-
-Check the available modes and arguments below:
-
-- [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
-- [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes)
-- [`ColourClusteringModes`]({{ site.parameters_reference }}image-parameter/ColourClusteringModes.html#colourclusteringmodes)
-- [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#colourconversionmodes)
-- [`DeformationResistingModes`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#deformationresistingmodes)
-- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#imagepreprocessingmodes)
-- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#intermediateresultsavingmode)
-- [`LocalizationModes`]({{ site.parameters_reference }}image-parameter/LocalizationModes.html#localizationmodes)
-- [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes)
-- [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes)
-- [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
-- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)
 
 **Code Snippet**
 
@@ -67,29 +50,7 @@ reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
 reader.destroy();
 ```
 
-## getModeArgument
-
-Gets the optional argument for a specified mode in Modes parameters.
-
-```java
-String com.dynamsoft.dbr.BarcodeReader.getModeArgument(String modesName, int index, String argumentName) throws BarcodeReaderException
-```
-
-**Parameters**
-
-- `modesName`: The mode parameter name to get argument.  
-- `index`: The array index of mode parameter to indicate a specific mode.  
-- `argumentName`: The name of the argument to get.
-
-**Return value**
-
-the optional argument for a specified mode in Modes parameters.
-
-**Exceptions**
-
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
-
-### Remark
+**Remarks**
 
 Check the available modes and arguments below:
 
@@ -105,6 +66,28 @@ Check the available modes and arguments below:
 - [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes)
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
 - [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)
+
+## getModeArgument
+
+Gets the optional argument for a specified mode in Modes parameters.
+
+```java
+String com.dynamsoft.dbr.BarcodeReader.getModeArgument(String modesName, int index, String argumentName) throws BarcodeReaderException
+```
+
+**Parameters**
+
+`modesName`: The mode parameter name to get argument.  
+`index`: The array index of mode parameter to indicate a specific mode.  
+`argumentName`: The name of the argument to get.
+
+**Return value**
+
+the optional argument for a specified mode in Modes parameters.
+
+**Exceptions**
+
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 
@@ -117,6 +100,23 @@ reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
 String argumentValue = reader.getModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy");
 reader.destroy();
 ```
+
+**Remarks**
+
+Check the available modes and arguments below:
+
+- [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
+- [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes)
+- [`ColourClusteringModes`]({{ site.parameters_reference }}image-parameter/ColourClusteringModes.html#colourclusteringmodes)
+- [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#colourconversionmodes)
+- [`DeformationResistingModes`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#deformationresistingmodes)
+- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#imagepreprocessingmodes)
+- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#intermediateresultsavingmode)
+- [`LocalizationModes`]({{ site.parameters_reference }}image-parameter/LocalizationModes.html#localizationmodes)
+- [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes)
+- [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes)
+- [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
+- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)
 
 ## getRuntimeSettings
 
@@ -152,7 +152,7 @@ void com.dynamsoft.dbr.BarcodeReader.updateRuntimeSettings(PublicRuntimeSettings
 
 **Parameters**
 
-`settings`:	The struct of template settings.
+`settings`: The struct of template settings.
 
 **Exceptions**
 

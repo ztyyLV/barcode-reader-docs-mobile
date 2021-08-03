@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Result Metho
 description: This page shows Result methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: getIntermediateResult, result methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 # Result Methods
@@ -63,6 +64,16 @@ let irResult = barcodeReader.getIntermediateResult(error: &error)
 
 The text results will be verified before output if the result verification is enabled.
 
+```objectivec
+@property (nonatomic, assign) BOOL enableResultVerification;
+```
+
+**Parameters**
+
+`boolean` value which stands for the target status of result verification mode.
+
+**Code Snippet**
+
 Objective-C:
 
 ```objectivec
@@ -82,6 +93,16 @@ let x = barcodeReader.enableResultVerification
 ## enableDuplicateFilter
 
 The duplicated text result will be filtered. The barcode reader will not output the result for the same barcode a second time in 3 seconds.
+
+```objectivec
+@property (nonatomic, assign) BOOL enableDuplicateFilter;
+```
+
+**Parameters**
+
+`boolean` value which stands for the target status of result duplicate filter mode.
+
+**Code Snippet**
 
 Objective-C:
 

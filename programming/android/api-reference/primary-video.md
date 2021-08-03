@@ -33,13 +33,13 @@ void com.dynamsoft.dbr.BarcodeReader.startFrameDecoding (final int maxQueueLengt
 
 **Parameters**
 
-- `maxQueueLength`: The max number of frames waiting for decoding.  
-- `maxResultQueueLength`: The max number of frames whose results (text result/localization result) will be kept.  
-- `width`: The width of the frame image in pixels.  
-- `height`: The height of the frame image in pixels.  
-- `stride`: The stride (or scan width) of the frame image.  
-- `format`: The image pixel format used in the image byte array.  
-- `templateName`: The template name.  
+`maxQueueLength`: The max number of frames waiting for decoding.  
+`maxResultQueueLength`: The max number of frames whose results (text result/localization result) will be kept.  
+`width`: The width of the frame image in pixels.  
+`height`: The height of the frame image in pixels.  
+`stride`: The stride (or scan width) of the frame image.  
+`format`: The image pixel format used in the image byte array.  
+`templateName`: The template name.  
 
 **Exceptions**
 
@@ -68,8 +68,8 @@ void com.dynamsoft.dbr.BarcodeReader.startFrameDecodingEx(FrameDecodingParameter
 
 **Parameters**
 
-- `parameters`: The frame decoding parameters.
-- `templateName`: The template name.
+`parameters`: The frame decoding parameters.
+`templateName`: The template name.
 
 **Exceptions**
 
@@ -176,8 +176,8 @@ void com.dynamsoft.dbr.BarcodeReader.setErrorCallback(ErrorCallback errorCallbac
 
 **Parameters**
 
-- `errorCallback`: Callback interface.
-- `userData`: Customized arguments passed to your function.
+`errorCallback`: Callback interface.
+`userData`: Customized arguments passed to your function.
 
 **Exceptions**
 
@@ -206,8 +206,8 @@ void com.dynamsoft.dbr.BarcodeReader.setTextResultCallback(TextResultCallback te
 
 **Parameters**
 
-- `textResultCallback`: Callback interface.
-- `userData`: Customized arguments passed to your function.
+`textResultCallback`: Callback interface.
+`userData`: Customized arguments passed to your function.
 
 **Exceptions**
 
@@ -236,8 +236,8 @@ void com.dynamsoft.dbr.BarcodeReader.setIntermediateResultCallback(IntermediateR
 
 **Parameters**
 
-- `intermediateResultCallback`: Callback interface.
-- `userData`: Customized arguments passed to your function.
+`intermediateResultCallback`: Callback interface.
+`userData`: Customized arguments passed to your function.
 
 **Exceptions**
 
@@ -264,7 +264,7 @@ reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYS
 Get length of current inner frame queue.
 
 ```java
-int com.dynamsoft.dbr.BarcodeReader.getLengthOfFrameQueue()	
+int com.dynamsoft.dbr.BarcodeReader.getLengthOfFrameQueue()
 ```
 
 **Return value**

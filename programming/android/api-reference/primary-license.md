@@ -55,9 +55,9 @@ void com.dynamsoft.dbr.BarcodeReader.initLicenseFromServer(String licenseServer,
 
 **Parameters**
 
-- `licenseServer`: The URL of the license server.  
-- `licenseKey`: The license key.
-- `dbrServerLicenseVerificationListener`: The delegate to handle callback when license server returns.
+`licenseServer`: The URL of the license server.  
+`licenseKey`: The license key.
+`dbrServerLicenseVerificationListener`: The delegate to handle callback when license server returns.
 
 **Code Snippet**
 
@@ -81,8 +81,8 @@ void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLicenseContent(String licens
 
 **Parameters**
 
-- `licenseKey`: The license key.  
-- `licenseContent`: An encrypted string representing the license content (quota, expiration date, barcode type, etc.) obtained from the method [`OutputLicenseToString`](#outputlicensetostring).
+`licenseKey`: The license key.  
+`licenseContent`: An encrypted string representing the license content (quota, expiration date, barcode type, etc.) obtained from the method [`OutputLicenseToString`](#outputlicensetostring).
 
 **Exceptions**
 
@@ -113,10 +113,6 @@ The output string which stores the contents of license.
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Remark
-
-[`InitLicenseFromServer`](#initlicensefromserver) has to be successfully called before calling this method.
-
 **Code Snippet**
 
 ```java
@@ -130,6 +126,10 @@ String licenseContent = reader.outputLicenseToString();
 reader.destroy();
 ```
 
+**Remarks**
+
+[`InitLicenseFromServer`](#initlicensefromserver) has to be successfully called before calling this method.
+
 ## initLicenseFromDLS
 
 Initializes the barcode reader license and connects to the specified server for online verification.
@@ -140,8 +140,8 @@ void com.dynamsoft.dbr.BarcodeReader.initLicenseFromDLS(DMDLSConnectionParameter
 
 **Parameters**
 
-- `dlsInfo`: The struct DMDLSConnectionParameters with customized settings.  
-- `listener`: The delegate to handle callback when license server returns.
+`dlsInfo`: The struct DMDLSConnectionParameters with customized settings.  
+`listener`: The delegate to handle callback when license server returns.
 
 **Code Snippet**
 
