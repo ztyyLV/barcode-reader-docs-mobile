@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Decode Met
 description: This page shows BarcodeReader Decode methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: decodeFile, decodeFileInMemory, decodeBuffer, decodeBase64String, decodeBufferedImage, decode methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 
@@ -27,37 +27,27 @@ needGenerateH3Content: false
 Decode barcodes from a specified image file.
 
 ```java
-TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeFile(String fileFullPath, String templateName) throws BarcodeReaderException
+TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeFile(String fileFullPath, String templateName)
 ```
 
-### Parameters
+**Parameters**
 
-- `fileFullPath`: A string defining the file path.
-- `templateName`: The template name.
+`fileFullPath`: A string defining the file path.  
+`templateName`: The template name.
 
-### Return value
+**Return value**
 
 All barcode text results decoded successfully.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
+/*Init DBR license before decoding*/
 TextResult[] result = reader.decodeFile("your file path", "");
 reader.destroy();
 ```
@@ -66,76 +56,60 @@ reader.destroy();
 
 Decode barcodes from an image file in memory.
 
+### fileBytes
+
 ```java
 TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeFileInMemory(byte[] fileBytes, String templateName) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
-- `fileBytes`: The image file bytes in memory.  
-- `templateName`: The template name.
+`fileBytes`: The image file bytes in memory.  
+`templateName`: The template name.
 
-### Return value
+**Return value**
 
 All barcode text results decoded successfully.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
-//get bufferBytes from other component
+/*Init DBR license before decoding
+get bufferBytes from other component*/
 TextResult[] result = reader.decodeFileInMemory(bufferBytes, "");
 reader.destroy();
 ```
+
+### fileStream
 
 ```java
 TextResult [] com.dynamsoft.dbr.BarcodeReader.decodeFileInMemory(InputStream fileStream, String templateName) throws BarcodeReaderException, IOException
 ```
 
-### Parameters
+**Parameters**
 
-- `fileStream`: The image file bytes in memory.  
-- `templateName`: The template name.
+`fileStream`: The image file bytes in memory.  
+`templateName`: The template name.
 
-### Return value
+**Return value**
 
 All barcode text results decoded successfully.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md), IOException
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
-//get FileInputStream fis from other component
+/*Init DBR license before decoding
+get bufferBytes from other component*/
 TextResult[] result = reader.decodeFileInMemory(fis, "");
 reader.destroy();
 ```
@@ -148,38 +122,28 @@ Decode barcodes from the memory buffer containing image pixels in defined format
 TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBuffer(byte[] buffer, int width, int height, int stride, int enumImagePixelFormat, String templateName) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
-- `buffer`: The array of bytes which contain the image data.
-- `Width`: The width of the image in pixels.
-- `Height`: The height of the image in pixels.
-- `Stride`: The stride (or scan width) of the image.
-- `format`: The image pixel format used in the image byte array.
-- `templateName` The template name.
+`buffer`: The array of bytes which contain the image data.  
+`Width`: The width of the image in pixels.  
+`Height`: The height of the image in pixels.  
+`Stride`: The stride (or scan width) of the image.  
+`format`: The image pixel format used in the image byte array.  
+`templateName`: The template name.
 
-### Return value
+**Return value**
 
 All barcode text results decoded successfully.  
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
+/*Init DBR license before decoding*/
 byte[] bufferBytes;
 int iWidth = 0;
 int iHeight = 0;
@@ -198,34 +162,24 @@ Decode barcode from an image file encoded as a base64 string.
 TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBase64String(String base64, String templateName)	throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
-- `base64`:	A base64 encoded string that represents an image.
-- `templateName`: The template name.
+`base64`: A base64 encoded string that represents an image.  
+`templateName`: The template name.
 
-### Return value
+**Return value**
 
 All barcode text results decoded successfully.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
+/*Init DBR license before decoding*/
 TextResult[] result = reader.decodeBase64String("file in base64 string", "");
 reader.destroy();
 ```
@@ -238,35 +192,25 @@ Decodes barcode from a buffered image (bitmap).
 TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBufferedImage(Bitmap image, String templateName)	throws IOException, BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
-- `image`: The image to be decoded.  
-- `templateName`: The template name.
+`image`: The image to be decoded.  
+`templateName`: The template name.
 
-### Return value
+**Return value**
 
 All barcode text results decoded successfully.  
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md), IOException
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
-//get BufferedImage input from other component
+/*Init DBR license before decoding*/
+/*get BufferedImage input from other component*/
 TextResult[] result = reader.decodeBufferedImage(input, "");
 reader.destroy();
 ```
@@ -276,36 +220,26 @@ reader.destroy();
 Inits an intermediateResult struct with default values.
 
 ```java
-IntermediateResult com.dynamsoft.dbr.BarcodeReader.initIntermediateResults(int resultType) throws BarcodeReaderException	
+IntermediateResult com.dynamsoft.dbr.BarcodeReader.initIntermediateResults(int resultType) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
-- `resultType`: The type of the intermediate result to init.
+`resultType`: The type of the intermediate result to init.
 
-### Return value
+**Return value**
 
 An intermediateResult struct with default values.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
+/*Init DBR license before decoding*/
 IntermediateResult imResult = reader.initIntermediateResult(EnumIntermediateResultType.IRT_ORIGINAL_IMAGE);
 ```
 
@@ -317,34 +251,24 @@ Decodes barcode from intermediate results.
 TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeIntermediateResults(IntermediateResult[] results, String templateName) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
-- `results`: An array of intermediate result.
-- `templateName`: The template name.
+`results`: An array of intermediate result.  
+`templateName`: The template name.
 
-### Return value
+**Return value**
 
 All barcode text results decoded successfully.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
+/*Init DBR license before decoding*/
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
 reader.updateRuntimeSettings(settings);

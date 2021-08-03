@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iLineSegment
 description: This page shows the iLineSegment Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iLineSegment, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 

@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - License Meth
 description: This page shows License methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: initWithLicense, initWithLicenseFromServer, outputLicenseToString, license methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 # License Methods
@@ -26,15 +27,15 @@ Initializes DynamsoftBarcodeReader with a license.
 - (instancetype _Nonnull)initWithLicense:(NSString* _Nonnull)license;
 ```
 
-### Parameters
+**Parameters**
 
 `[in] license` The license key.
 
-### Return value
+**Return value**
 
 The instance of DynamsoftBarcodeReader.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -57,17 +58,17 @@ Initializes the license and connects to the specified server for online verifica
 - (instancetype _Nonnull)initWithLicenseFromServer:(NSString* _Nullable)licenseSeServer licenseKey:(NSString* _Nonnull)licenseKey verificationDelegate:(id _Nullable)connectionDelegate;
 ```
 
-### Parameters
+**Parameters**
 
 `[in] licenseSeServer` The name/IP of the license server.  
-`[in] licenseKey` The license key.
+`[in] licenseKey` The license key.  
 `[in,out] connectionDelegate` The delegate to handle callback when license server returns.
 
-### Return value
+**Return value**
 
 The instance of DynamsoftBarcodeReader.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -106,15 +107,15 @@ Output the license content as an encrypted string from the license server to be 
 - (NSString *_Nullable)outputLicenseToString:(NSError* _Nullable * _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 The output string which stores the contents of license.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -141,16 +142,16 @@ Initializes the barcode reader license and connects to the specified server for 
 - (instancetype _Nonnull)initLicenseFromDLS:(iDMDLSConnectionParameters* _Nullable)dlsConnectionParameters verificationDelegate:(id _Nullable)connectionDelegate;
 ```
 
-### Parameters
+**Parameters**
 
 `[in] dlsConnectionParameters` The struct DMDLSConnectionParameters with customized settings.  
 `[in,out] connectionDelegate` The delegate to handle callback when license server returns.
 
-### Return value
+**Return value**
 
 The instance of DynamsoftBarcodeReader.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 

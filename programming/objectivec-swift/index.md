@@ -8,7 +8,7 @@ needGenerateH3Content: true
 breadcrumbText: Objective-C & Swift
 ---
 
-# Dynamsoft Barcode Reader - for Objective-C and Swift Documentation
+# Dynamsoft Barcode Reader Documents - Objective-C and Swift 
 
 The Objective-C and Swift documentation mainly consists of two parts. One is the [User Guide](#getting-started) that provides a brief guide for how to integrate the Dynamsoft Barcode Reader to your application or run the samples. The other is the [API Reference](#api-reference) that offers the manual of interfaces used for reading barcodes.
 

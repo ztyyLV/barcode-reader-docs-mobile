@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Parameter an
 description: This page shows basic Runtime Settings methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: setModeArgument, getModeArgument, getRuntimeSettings, updateRuntimeSettings, resetRuntimeSettings, parameter and runtime settings basic methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 # Parameter and Runtime Settings Basic Methods
@@ -30,7 +31,7 @@ Sets the optional argument for a specified mode in Modes parameters.
                     error:(NSError* _Nullable * _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in] modesName` The mode parameter name to set argument.  
 `[in] index` The array index of mode parameter to indicate a specific mode.  
@@ -38,37 +39,12 @@ Sets the optional argument for a specified mode in Modes parameters.
 `[in] argumentValue` The value of the argument to set.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Remark
-
-Check follow link for available modes and arguments:
-
-- [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
-- [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes)
-- [`ColourClusteringModes`]({{ site.parameters_reference }}image-parameter/ColourClusteringModes.html#colourclusteringmodes)
-- [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#colourconversionmodes)
-- [`DeformationResistingModes`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#deformationresistingmodes)
-- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#imagepreprocessingmodes)
-- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#intermediateresultsavingmode)
-- [`LocalizationModes`]({{ site.parameters_reference }}image-parameter/LocalizationModes.html#localizationmodes)
-- [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes)
-- [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes)
-- [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
-- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes) 
-
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-lts.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 iPublicRuntimeSettings *settings;
 NSError __autoreleasing * _Nullable error;
 NSMutableArray *mArray = [NSMutableArray arrayWithArray:settings.binarizationModes];
@@ -84,14 +60,6 @@ Swift:
 ```Swift
 let error: NSError? = NSError()
 let mArray: NSMutableArray? = NSMutableArray()
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-lts.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-}
 let settings = barcodeReader.getRuntimeSettings(error: nil)
 mArray!.setArray(settings.binarizationModes as! [Any])
 mArray![0] = EnumBinarizationMode.LocalBlock
@@ -100,29 +68,7 @@ barcodeReader.updateRuntimeSettings(settings: settings, error: nil)
 barcodeReader.setModeArgument(modeName: "BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1", error: &error)
 ```
 
-## getModeArgument
-
-Gets the optional argument for a specified mode in Modes parameters.
-
-```objc
--(NSString* _Nonnull)getModeArgument:(NSString* _Nonnull)modeName
-                            index:(NSInteger)index
-                            argumentName:(NSString* _Nonnull)argumentName
-                            error:(NSError* _Nullable * _Nullable)error;
-```
-
-### Parameters
-
-`[in] modesName` The mode parameter name to get argument.  
-`[in] index` The array index of mode parameter to indicate a specific mode.  
-`[in] argumentName` The name of the argument to get.  
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
-
-### Return value
-
-the optional argument for a specified mode
-
-### Remark
+**Remarks**
 
 Check follow link for available modes and arguments:
 
@@ -137,22 +83,35 @@ Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes)
 - [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes)
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
-- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes) 
+- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)
 
-### Code Snippet
+## getModeArgument
+
+Gets the optional argument for a specified mode in Modes parameters.
+
+```objc
+-(NSString* _Nonnull)getModeArgument:(NSString* _Nonnull)modeName
+                            index:(NSInteger)index
+                            argumentName:(NSString* _Nonnull)argumentName
+                            error:(NSError* _Nullable * _Nullable)error;
+```
+
+**Parameters**
+
+`[in] modesName` The mode parameter name to get argument.  
+`[in] index` The array index of mode parameter to indicate a specific mode.  
+`[in] argumentName` The name of the argument to get.  
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+
+**Return value**
+
+the optional argument for a specified mode
+
+**Code Snippet**
 
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-lts.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 iPublicRuntimeSettings *settings;
 NSError __autoreleasing * _Nullable error;
 NSString *argumentValue;
@@ -170,14 +129,6 @@ Swift:
 ```Swift
 let error: NSError? = NSError()
 let mArray: NSMutableArray? = NSMutableArray()
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-lts.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-}
 let settings = barcodeReader.getRuntimeSettings(error: nil)
 mArray!.setArray(settings.binarizationModes as! [Any])
 mArray![0] = EnumBinarizationMode.LocalBlock
@@ -187,6 +138,23 @@ barcodeReader.setModeArgument(modeName: "BinarizationModes", index: 0, argumentN
 let argumentValue = barcodeReader.getModeArgument(modeName: "BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", error: &error)
 ```
 
+**Remarks**
+
+Check follow link for available modes and arguments:
+
+- [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
+- [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes)
+- [`ColourClusteringModes`]({{ site.parameters_reference }}image-parameter/ColourClusteringModes.html#colourclusteringmodes)
+- [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#colourconversionmodes)
+- [`DeformationResistingModes`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#deformationresistingmodes)
+- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#imagepreprocessingmodes)
+- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#intermediateresultsavingmode)
+- [`LocalizationModes`]({{ site.parameters_reference }}image-parameter/LocalizationModes.html#localizationmodes)
+- [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes)
+- [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes)
+- [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
+- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)
+
 ## getRuntimeSettings
 
 Get current settings and save them into a [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md) struct.
@@ -195,28 +163,19 @@ Get current settings and save them into a [`iPublicRuntimeSettings`](auxiliary-i
 - (iPublicRuntimeSettings* _Nullable)getRuntimeSettings:(NSError* _Nullable * _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in, out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 A DBRPublicRuntimeSettings storing current runtime settings.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-lts.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 NSError __autoreleasing * _Nullable error;
 [barcodeReader getRuntimeSettings:&error];
 ```
@@ -225,14 +184,6 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError()
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-lts.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-}
 let licenseString = barcodeReader.getRuntimeSettings(error: &error)
 ```
 
@@ -245,25 +196,16 @@ Update runtime settings with a given [`iPublicRuntimeSettings`](auxiliary-iPubli
                         error:(NSError* _Nullable * _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in] settings` The struct of template settings.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-lts.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 NSError __autoreleasing * _Nullable error;
 iPublicRuntimeSettings *settings;
 
@@ -274,14 +216,6 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError()
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-lts.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-}
 let settings = barcodeReader.getRuntimeSettings(error: nil)
 barcodeReader.updateRuntimeSettings(settings: settings, error: &error)
 ```
@@ -294,26 +228,16 @@ Reset all parameters to default values.
 - (void)resetRuntimeSettings:(NSError* _Nullable * _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-lts.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 NSError __autoreleasing * _Nullable error;
-
 [barcodeReader resetRuntimeSettings:&error];
 ```
 
@@ -321,13 +245,5 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError()
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-lts.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-}
 barcodeReader.resetRuntimeSettings(error: &error)
 ```

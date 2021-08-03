@@ -22,6 +22,12 @@ Exception for signalling barcode reader errors.
 
 ## getErrorCode
 
+**Return value**
+
+This method returns the DBR error code. Please view more about the error code in [`EnumErrorCode`]({{site.enumerations}}error-code.html)
+
+**Code Snippet**
+
 ```java
 try {
     //Do something here

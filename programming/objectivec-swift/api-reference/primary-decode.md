@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Decode Metho
 description: This page shows Decode methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: decodeFileWithName, decodeImage, decodeBuffer, decodeBase64, decode methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 
@@ -28,45 +29,27 @@ Decode barcodes from a specified image file.
 - (NSArray<iTextResult*>* _Nullable)decodeFileWithName:(NSString* _Nonnull)name templateName:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
-`[in] name` The local path of the file.
-`[in] templateName` The template name.
+`[in] name` The local path of the file.  
+`[in] templateName` The template name.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 All barcode text results decoded successfully.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
-NSError __autoreleasing * _Nullable error;
 NSArray<iTextResult*>* result = [barcodeReader decodeFileWithName:@"your file path" templateName:@"" error:&error];
 ```
 
 Swift:
 
 ```Swift
-let lts = iDMDLSConnectionParameters()
-dls.organizationID = "200001"
-dls.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-}
 let error: NSError? = NSError()
 let result = barcodeReader.decodeFileWithName(name:"your file path",templateName:"",error:&error)
 ```
@@ -79,30 +62,21 @@ Decode barcodes from an image file in memory.
 - (NSArray<iTextResult*>* _Nullable)decodeImage:(UIImage* _Nonnull)image withTemplate:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
 ```  
 
-### Parameters
+**Parameters**
 
-`[in] image` The image file in memory.
-`[in] templateName` The template name.
+`[in] image` The image file in memory.  
+`[in] templateName` The template name.  
 `[in, out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 All barcode text results decoded successfully.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 UIImage *image = [[UIImage alloc] init];
 NSError __autoreleasing * _Nullable error;
 NSArray<iTextResult*>* result = [barcodeReader decodeImage:image withTemplate:@"" error:&error];
@@ -111,14 +85,6 @@ NSArray<iTextResult*>* result = [barcodeReader decodeImage:image withTemplate:@"
 Swift:
 
 ```Swift
-let lts = iDMDLSConnectionParameters()
-dls.organizationID = "200001"
-dls.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-}
 let image: UIImage? = UIImage()
 let error: NSError? = NSError()
 let result = barcodeReader.decodeImage(image:image withTemplate:"" error:&error)
@@ -132,34 +98,25 @@ Decode barcodes from the memory buffer containing image pixels in defined format
 - (NSArray<iTextResult*>* _Nullable)decodeBuffer:(NSData* _Nonnull)buffer withWidth:(NSInteger)width height:(NSInteger)height stride:(NSInteger)stride format:(EnumImagePixelFormat)format templateName:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
 `[in] buffer` The array of bytes which contain the image data.  
 `[in] width` The width of the image in pixels.  
 `[in] height` The height of the image in pixels.  
 `[in] stride` The stride (or scan width) of the image.  
 `[in] format` The image pixel format used in the image byte array.  
-`[in] templateName` The template name.
+`[in] templateName` The template name.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 All barcode text results decoded successfully.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 NSData *bufferBytes;
 NSInteger iWidth = 0;
 NSInteger iHeight = 0;
@@ -172,14 +129,6 @@ NSArray<iTextResult*>* result = [barcodeReader decodeBuffer:bufferBytes withWidt
 Swift:
 
 ```Swift
-let lts = iDMDLSConnectionParameters()
-dls.organizationID = "200001"
-dls.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-}
 let error: NSError? = NSError()
 let bufferBytes:Data?
 let width = 0
@@ -197,30 +146,21 @@ Decode barcodes from an image file encoded as a base64 string.
 DBR_API int DBR_DecodeBase64String (void* barcodeReader, const char* pBase64String, const char* pTemplateName)	
 ```
 
-### Parameters
+**Parameters**
 
 `[in] base64` A base64 encoded string that represents an image.  
 `[in] templateName` The template name.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 All barcode text results decoded successfully.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 NSError __autoreleasing * _Nullable error;
 NSArray<iTextResult*>* result = [barcodeReader decodeBase64:@"file in base64 string" withTemplate:@"" error:&error];
 ```
@@ -228,14 +168,6 @@ NSArray<iTextResult*>* result = [barcodeReader decodeBase64:@"file in base64 str
 Swift:
 
 ```Swift
-let lts = iDMDLSConnectionParameters()
-dls.organizationID = "200001"
-dls.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
-} 
 let error: NSError? = NSError() 
 let result = barcodeReader.decodeBase64(base64: file in base64 string, withTemplate: "", error: &error)
 ```
@@ -248,31 +180,22 @@ Inits an intermediateResult struct with default values.
 - (iIntermediateResult* _Nullable)createIntermediateResult:(EnumIntermediateResultType)type error:(NSError* _Nullable * _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
-`[in] type` The type of the intermediate result to init.
+`[in] type` The type of the intermediate result to init.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 An intermediateResult struct with default values.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
 ```objc
 NSError __autoreleasing * _Nullable error;
 iIntermediateResult *irResult;
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 irResult = [barcodeReader createIntermediateResult:EnumIntermediateResultTypeOriginalImage error:&error];
 ```
 
@@ -281,7 +204,6 @@ Swift:
 ```Swift
 var error:NSError? = NSError()
 var irResult:iIntermediateResult!
-barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
 irResult = try! barcodeReader?.createIntermediateResult(EnumIntermediateResultType(rawValue: EnumIntermediateResultType.originalImage.rawValue)!)
 ```
 
@@ -293,30 +215,21 @@ Decodes barcode from intermediate results.
 - (NSArray<iTextResult*>* _Nullable)decodeIntermediateResults:(NSArray<iIntermediateResult*>* _Nullable)array templateName:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
 ```
 
-### Parameters
+**Parameters**
 
-`[in] array` The intermediate result array for decoding.
-`[in] templateName` The template name.
+`[in] array` The intermediate result array for decoding.  
+`[in] templateName` The template name.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 All barcode text results decoded successfully.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-dls.organizationID = @"200001";
-dls.sessionPassword = @"******";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-        //TODO add your code for license verification
-}
 NSError __autoreleasing * _Nullable error;
 [barcodeReader getRuntimeSettings:&error];
 settings.intermediateResultTypes = EnumIntermediateResultTypeOriginalImage | EnumIntermediateResultTypeTypedBarcodeZone;
@@ -330,7 +243,6 @@ NSArray<iTextResult*>* result = [barcodeReader decodeIntermediateResults:array w
 Swift:
 
 ```Swift
-barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
 var result:[iTextResult]?
 var error:NSError? = NSError()
 var settings:iPublicRuntimeSettings! = try! barcodeReader?.getRuntimeSettings()

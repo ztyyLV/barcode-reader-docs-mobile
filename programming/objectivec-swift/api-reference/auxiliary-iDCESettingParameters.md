@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iDCESettingP
 description: This page shows the iDCESettingParameters Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iDCESettingParameters, class, api reference, iOS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 # Class iDCESettingParameters
@@ -36,10 +37,10 @@ DBRTextResultDelegate* textResultDelegate
 
 The `textResultDelegate` includes the following Parameters:
 
-- `frame`: The frame data.
-- `frameID`: The ID of frame.
-- `results`: The recognized barcode result of the frame.
-- `userData`: Arguments passed to your function.
+`frame`: The frame data.
+`frameID`: The ID of frame.
+`results`: The recognized barcode result of the frame.
+`userData`: Arguments passed to your function.
 
 ## textResultData
 
@@ -59,9 +60,9 @@ DBRIntermediateResultDelegate* intermediateResultDelegate
 
 The `intermediateResultDelegate` includes the following Parameters:
 
-- `frameID`: The ID of frame.
-- `results`: The intermediate result of the frame.
-- `userData`: Arguments passed to your function.
+`frameID`: The ID of frame.
+`results`: The intermediate result of the frame.
+`userData`: Arguments passed to your function.
 
 ## intermediateResultData
 

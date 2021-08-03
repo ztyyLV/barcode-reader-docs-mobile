@@ -8,7 +8,7 @@ needGenerateH3Content: true
 breadcrumbText: Android API Reference
 ---
 
-# Dynamsoft Barcode Reader SDK - Android API Reference
+# API Reference - Android
 
 ## BarcodeReader Methods
 

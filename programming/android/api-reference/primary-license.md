@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader License Me
 description: This page shows BarcodeReader license methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: initLicense, initLicenseFromServer, initLicenseFromLicenseContent, outputLicenseToString, license methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 
@@ -29,15 +29,15 @@ Read the product key and activate the SDK.
 void com.dynamsoft.dbr.BarcodeReader.initLicense(String license) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
 `license`: The product keys.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
@@ -53,13 +53,13 @@ Initialize the license and connect to the specified server for online verificati
 void com.dynamsoft.dbr.BarcodeReader.initLicenseFromServer(String licenseServer, String licenseKey, DBRServerLicenseVerificationListener dbrServerLicenseVerificationListener)
 ```
 
-### Parameters
+**Parameters**
 
-- `licenseServer`: The URL of the license server.  
-- `licenseKey`: The license key.
-- `dbrServerLicenseVerificationListener`: The delegate to handle callback when license server returns.
+`licenseServer`: The URL of the license server.  
+`licenseKey`: The license key.  
+`dbrServerLicenseVerificationListener`: The delegate to handle callback when license server returns.
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
@@ -79,16 +79,16 @@ Initialize barcode reader license from the license content on the client machine
 void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLicenseContent(String licenseKey, String licenseContent) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
-- `licenseKey`: The license key.  
-- `licenseContent`: An encrypted string representing the license content (quota, expiration date, barcode type, etc.) obtained from the method [`OutputLicenseToString`](#outputlicensetostring).
+`licenseKey`: The license key.  
+`licenseContent`: An encrypted string representing the license content (quota, expiration date, barcode type, etc.) obtained from the method [`OutputLicenseToString`](#outputlicensetostring).
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
@@ -105,19 +105,15 @@ Output the license content as an encrypted string from the license server to be 
 String com.dynamsoft.dbr.BarcodeReader.outputLicenseToString() throws BarcodeReaderException
 ```
 
-### Return value
+**Return value**
 
 The output string which stores the contents of license.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Remark
-
-[`InitLicenseFromServer`](#initlicensefromserver) has to be successfully called before calling this method.
-
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
@@ -130,6 +126,10 @@ String licenseContent = reader.outputLicenseToString();
 reader.destroy();
 ```
 
+**Remarks**
+
+[`InitLicenseFromServer`](#initlicensefromserver) has to be successfully called before calling this method.
+
 ## initLicenseFromDLS
 
 Initializes the barcode reader license and connects to the specified server for online verification.
@@ -138,12 +138,12 @@ Initializes the barcode reader license and connects to the specified server for 
 void com.dynamsoft.dbr.BarcodeReader.initLicenseFromDLS(DMDLSConnectionParameters dlsInfo, DBRDLSLicenseVerificationListener listener)
 ```
 
-### Parameters
+**Parameters**
 
-- `dlsInfo`: The struct DMDLSConnectionParameters with customized settings.  
-- `listener`: The delegate to handle callback when license server returns.
+`dlsInfo`: The struct DMDLSConnectionParameters with customized settings.  
+`listener`: The delegate to handle callback when license server returns.
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();

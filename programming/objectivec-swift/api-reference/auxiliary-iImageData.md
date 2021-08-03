@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iImageData C
 description: This page shows the iImageData Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iImageData, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 
