@@ -5,6 +5,7 @@ description: This page shows the Quadrilateral Class of Dynamsoft Barcode Reader
 keywords: Quadrilateral, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

@@ -6,9 +6,10 @@ keywords: api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: Android API Reference
+noTitleIndex: true
 ---
 
-# Dynamsoft Barcode Reader SDK - Android API Reference
+# API Reference - Android
 
 ## BarcodeReader Methods
 

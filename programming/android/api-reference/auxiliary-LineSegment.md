@@ -5,6 +5,7 @@ description: This page shows the LineSegment Class of Dynamsoft Barcode Reader f
 keywords: LineSegment, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 
@@ -23,7 +24,7 @@ Stores line segment data.
 The start point of the line segment.
 
 ```java
-Point startPoint
+Point[] startPoint
 ```
 
 ## endPoint
@@ -31,7 +32,7 @@ Point startPoint
 The end point of the line segment.
 
 ```java
-Point endPoint
+Point[] endPoint
 ```
 
 ## linesConfidenceCoefficients

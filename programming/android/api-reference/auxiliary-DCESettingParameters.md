@@ -5,6 +5,7 @@ description: This page shows the DCESettingParameters Class of Dynamsoft Barcode
 keywords: DCESettingParameters, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 # Class DCESettingParameters
@@ -23,7 +24,7 @@ Stores the DCESettingParameters information.
 | [`intermediateResultCallback`](#intermediateresultcallback) | [`IntermediateResultCallback`]({{site.android_api}}interface.html#intermediateresultcallback) | Set intermediate result callback. |
 | [`IntermediateResultCallback_UserData`](#intermediateresultcallback_userdata) | *Object* | Transfer user data. |
 
-## CameraInstance
+## cameraInstance
 
 The Camera Enhancer instance.
 
@@ -39,11 +40,11 @@ Set text result callback.
 settingParameters.textResultCallback =mTextResultCallback;
 ```
 
-The `TextResultCallback` includes the following Parameters:
+**Parameters**
 
-- `frameID`: The ID of frame.
-- `results`: The recognized barcode result of the frame.
-- `userData`: Arguments passed to your function.
+`frameID`: The ID of frame.
+`results`: The recognized barcode result of the frame.
+`userData`: Arguments passed to your function.
 
 ## textResultCallback_UserData
 
@@ -61,11 +62,11 @@ Set intermediate result call back.
 settingParameters.intermediateResultCallback = mIntermediateResultCallback;
 ```
 
-The `IntermediateResultCallback` includes the following Parameters:
+**Parameters**
 
-- `frameID`: The ID of frame.
-- `results`: The intermediate result of the frame.
-- `userData`: Arguments passed to your function.
+`frameID`: The ID of frame.
+`results`: The intermediate result of the frame.
+`userData`: Arguments passed to your function.
 
 ## intermediateResultCallback_UserData
 

@@ -5,6 +5,7 @@ description: This page shows the QRCodeDetails Class of Dynamsoft Barcode Reader
 keywords: QRCodeDetails, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

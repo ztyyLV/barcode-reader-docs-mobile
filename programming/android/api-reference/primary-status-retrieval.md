@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Status Ret
 description: This page shows BarcodeReader status retrieval methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: getVersion, status retrieval methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 # Status Retrieval Methods
@@ -23,25 +23,14 @@ Get version information of SDK.
 String com.dynamsoft.dbr.BarcodeReader.getVersion()
 ```
 
-### Return value
+**Return Value**
 
 The version information string.
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 String versionInfo = reader.getVersion();
 reader.destroy();
 ```

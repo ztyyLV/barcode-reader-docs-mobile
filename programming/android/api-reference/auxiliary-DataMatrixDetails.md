@@ -5,6 +5,7 @@ description: This page shows the DataMatrixDetails Class of Dynamsoft Barcode Re
 keywords: DataMatrixDetails, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 # Class DataMatrixDetails

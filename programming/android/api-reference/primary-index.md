@@ -4,11 +4,11 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Methods
 description: This page shows BarcodeReader methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
-breadcrumbText: BarcodeReader Methods
+noTitleIndex: true
+breadcrumbText: BarcodeReader Class
 ---
 
-# Dynamsoft Barcode Reader SDK - Android BarcodeReader Methods
+# BarcodeReader Class
 
 ## Initialize and Destroy
 

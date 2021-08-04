@@ -5,6 +5,7 @@ description: This page shows the Parameter Configurations of Dynamsoft Barcode R
 keywords: Parameter Configurations, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 # Parameter Configuration Classes

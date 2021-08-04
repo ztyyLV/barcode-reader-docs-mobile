@@ -5,6 +5,7 @@ description: This page shows the IntermediateResult index of Dynamsoft Barcode R
 keywords: IntermediateResult, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: False
+noTitleIndex: true
 ---
 
 # Intermediate Result Classes

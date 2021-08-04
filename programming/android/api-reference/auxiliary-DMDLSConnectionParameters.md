@@ -5,19 +5,20 @@ description: This page shows the DMDLSConnectionParameters Class of Dynamsoft Ba
 keywords: DMDLSConnectionParameters, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 
 # Class DMDLSConnectionParameters
 
-Defines a struct to configure the parameters to connect to license tracking server.  
+Defines a struct to configure the parameters to connect to Dynamsoft License Server.  
 
 | Attributes | Type | Descriptions |
 |----------- | ---- | ----------- |
-| [`mainServerURL`](#mainserverurl) | *String* | The URL of the license tracking server. |
-| [`standbyServerURL`](#standbyserverurl) | *String* | The URL of the standby license tracking server. |
+| [`mainServerURL`](#mainserverurl) | *String* | The URL of the Dynamsoft License Server. |
+| [`standbyServerURL`](#standbyserverurl) | *String* | The URL of the standby Dynamsoft License Server. |
 | [`handshakeCode`](#handshakecode) | *String* | The handshake code. |
-| [`sessionPassword`](#sessionpassword) | *String* | The session password of the handshake code set in license tracking server. |
+| [`sessionPassword`](#sessionpassword) | *String* | The session password of the handshake code set in Dynamsoft License Server. |
 | [`uuidGenerationMethod`](#uuidgenerationmethod) | *int* | Sets the method to generate UUID. |
 | [`maxBufferDays`](#maxbufferdays) | *int* | Sets the max days to buffer the license info. |
 | [`limitedLicenseModules`](#limitedlicensemodules) | *int[]* | Sets the license modules to use. |
@@ -26,37 +27,43 @@ Defines a struct to configure the parameters to connect to license tracking serv
 
 ## mainServerURL
 
-The URL of the license tracking server.
+The URL of the Dynamsoft License Server.
 
 ```java
 String mainServerURL
 ```
 
-- **Value range**
-    Any string value
+**Value Range**
 
-- **Default value**
-    null
+Any string value
 
-- **Remarks**
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.
+**Default Value**
+
+null
+
+**Remarks**
+
+If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft License Servers for online verification.
 
 ## standbyServerURL
 
-The URL of the standby license tracking server.
+The URL of the standby Dynamsoft License Server.
 
 ```java
 String standbyServerURL
 ```
 
-- **Value range**
-    Any string value
+**Value Range**
 
-- **Default value**
-    null
+Any string value
 
-- **Remarks**
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.
+**Default Value**
+
+null
+
+**Remarks**
+
+If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft License Servers for online verification.
 
 ## handshakeCode
 
@@ -66,25 +73,29 @@ The handshake code.
 String handshakeCode
 ```
 
-- **Value range**
-    Any string value
+**Value Range**
 
-- **Default value**
-    null
+Any string value
+
+**Default Value**
+
+null
 
 ## sessionPassword
 
-The session password of the handshake code set in license tracking server.
+The session password of the handshake code set in Dynamsoft License Server.
 
 ```java
 String sessionPassword
 ```
 
-- **Value range**
-    Any string value
+**Value Range**
 
-- **Default value**
-    null
+Any string value
+
+**Default Value**
+
+null
 
 ## uuidGenerationMethod
 
@@ -94,14 +105,17 @@ Sets the method to generate UUID.
 int uuidGenerationMethod
 ```
 
-- **Value range**
-    Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
+**Value Range**
 
-- **Default value**
-    DM_UUIDGM_RANDOM
+Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
 
-- **See also**  
-    [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
+**Default Value**
+
+DM_UUIDGM_RANDOM
+
+**See Also**
+
+[`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
 
 ## maxBufferDays
 
@@ -111,11 +125,13 @@ Sets the max days to buffer the license info.
 int maxBufferDays
 ```
 
-- **Value range**
-    [7,0x7fffffff]  
+**Value Range**
 
-- **Default value**
-    7
+[7,0x7fffffff]  
+
+**Default Value**
+
+7
 
 ## limitedLicenseModules
 
@@ -125,14 +141,17 @@ Sets the license modules to use.
 List<Integer> limitedLicenseModules
 ```
 
-- **Value range**
-    A list of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.
+**Value Range**
 
-- **Default value**
-    null
+A list of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.
 
-- **See also**  
-    [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
+**Default Value**
+
+null
+
+**See Also**
+
+[`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
 
 ## chargeWay
 
@@ -142,8 +161,9 @@ Sets the charge way.
 int chargeWay
 ```
 
-- **Value range**
-    Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay) Enumeration items.
+**Value Range**
+
+Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay) Enumeration items.
 
 ## organizationID
 
@@ -153,8 +173,10 @@ The organization ID got from Dynamsoft.
 String organizationID
 ```
 
-- **Value range**
-    Any string value
+**Value Range**
 
-- **Default value**
-    ""
+Any string value
+
+**Default Value**
+
+"200001"

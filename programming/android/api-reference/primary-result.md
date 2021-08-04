@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Result Met
 description: This page shows BarcodeReader result methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: getIntermediateResults, result methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 # Result Methods
@@ -19,35 +19,24 @@ needGenerateH3Content: false
 
 ## getIntermediateResults
 
-Get intermediate results containing the original image, the colour clustered image, the binarized Image, contours, Lines, TextBlocks, etc.
+Get intermediate results containing the original image, the color clustered image, the binarized Image, contours, Lines, TextBlocks, etc.
 
 ```java
 IntermediateResult[] com.dynamsoft.dbr.BarcodeReader.getIntermediateResults() throws BarcodeReaderException 
 ```
 
-### Return value
+**Return Value**
 
-The intermediate results returned by the SDK.
+The intermediate results were returned by the SDK.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CLUSTERED_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE;
 reader.updateRuntimeSettings(settings);
@@ -61,6 +50,16 @@ reader.destroy();
 The text results will be verified before output if the result verification is enabled.
 
 ```java
+IntermediateResult[] com.dynamsoft.dbr.BarcodeReader.enableResultVerification() throws BarcodeReaderException 
+```
+
+**Exceptions**
+
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+
+**Code Snippet**
+
+```java
 reader.enableResultVerification(true)
 // To check the status of this mode:
 boolean x = reader.getEnableResultVerificationStatus();
@@ -69,6 +68,16 @@ boolean x = reader.getEnableResultVerificationStatus();
 ## enableDuplicateFilter
 
 The duplicated text result will be filtered. The barcode reader will not output the result for the same barcode a second time in 3 seconds.
+
+```java
+IntermediateResult[] com.dynamsoft.dbr.BarcodeReader.enableDuplicateFilter() throws BarcodeReaderException
+```
+
+**Exceptions**
+
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+
+**Code Snippet**
 
 ```java
 reader.enableDuplicateFilter(true)

@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iQuadrilater
 description: This page shows the iQuadrilateral Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iQuadrilateral, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 

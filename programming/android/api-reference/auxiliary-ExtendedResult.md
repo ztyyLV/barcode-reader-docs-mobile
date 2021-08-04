@@ -5,6 +5,7 @@ description: This page shows the ExtendedResult Class of Dynamsoft Barcode Reade
 keywords: ExtendedResult, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 
@@ -43,6 +44,12 @@ Barcode type in BarcodeFormat group 1.
 int barcodeFormat
 ```
 
+**Value Range**
+One of the [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) Enumeration value.
+
+**See Also**  
+[`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
+
 ## barcodeFormatString
 
 Barcode type in BarcodeFormat group 1 as string.
@@ -50,6 +57,12 @@ Barcode type in BarcodeFormat group 1 as string.
 ```java
 String barcodeFormatString
 ```
+
+**Value Range**
+One of the barcode type in [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat).
+
+**See Also**  
+[`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ## barcodeFormat_2
 
@@ -59,6 +72,12 @@ Barcode type in BarcodeFormat group 2.
 int barcodeFormat_2
 ```
 
+**Value Range**
+One of the [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) Enumeration items
+
+**See Also**  
+[`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
+
 ## barcodeFormatString_2
 
 Barcode type in BarcodeFormat group 2 as string.
@@ -67,9 +86,15 @@ Barcode type in BarcodeFormat group 2 as string.
 String barcodeFormatString_2
 ```
 
+**Value Range**
+One of the barcode type in [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2).
+
+**See Also**  
+[`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
+
 ## confidence
 
-The confidence of the result. The higher confidence means the higher accuracy.
+The confidence of the result. The higher confidence means the higher accuracy. You can make the confidence filter throw the [`PublicRuntimeSettings.minResultConfidence`](auxiliary-PublicRuntimeSettings.md#minresultconfidence). The recommended minimum confidence value is 30.
 
 ```java
 int confidence

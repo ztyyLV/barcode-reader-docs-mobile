@@ -4,41 +4,24 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Video Meth
 description: This page shows BarcodeReader video methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: startFrameDecoding, startFrameDecodingEx, appendFrame, stopFrameDecoding, initFrameDecodingParameters, setErrorCallback, setTextResultCallback, setIntermediateResultCallback, getLengthOfFrameQueue, video methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 # Video Methods
 
-- Decode
+| Methods              | Descriptions |
+|----------------------|--------------|
+| [`startFrameDecoding`](#startframedecoding) | Decode barcodes from inner frame queue. |
+| [`startFrameDecodingEx`](#startframedecodingex) | Decode barcodes from inner frame queue. |
+| [`appendFrame`](#appendframe) | Append a frame image buffer to the inner frame queue. |
+| [`stopFrameDecoding`](#stopframedecoding) | Stop thread used for frame decoding. |
+| [`initFrameDecodingParameters`](#initframedecodingparameters) | Initialize frame decoding parameter. |
+| [`setErrorCallback`](#seterrorcallback) | Set callback interface to process errors generated during frame decoding. |
+| [`setTextResultCallback`](#settextresultcallback) | Set callback interface to process text results generated during frame decoding. |
+| [`setIntermediateResultCallback`](#setintermediateresultcallback) | Set callback interface to process intermediate results generated during frame decoding. |
+| [`getLengthOfFrameQueue`](#getlengthofframequeue) | Get length of current inner frame queue. |
 
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`startFrameDecoding`](#startframedecoding) | Decode barcodes from inner frame queue. |
-   | [`startFrameDecodingEx`](#startframedecodingex) | Decode barcodes from inner frame queue. |
-   | [`appendFrame`](#appendframe) | Append a frame image buffer to the inner frame queue. |
-   | [`stopFrameDecoding`](#stopframedecoding) | Stop thread used for frame decoding. |
-
-- Parameter
-
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`initFrameDecodingParameters`](#initframedecodingparameters) | Initialize frame decoding parameter. |
-
-- Callback
-
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`setErrorCallback`](#seterrorcallback) | Set callback interface to process errors generated during frame decoding. |
-   | [`setTextResultCallback`](#settextresultcallback) | Set callback interface to process text results generated during frame decoding. |
-   | [`setIntermediateResultCallback`](#setintermediateresultcallback) | Set callback interface to process intermediate results generated during frame decoding. |
-
-- Status retrieval
-
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`getLengthOfFrameQueue`](#getlengthofframequeue) | Get length of current inner frame queue. |
-
-  ---
+---
 
 ## startFrameDecoding
 
@@ -48,35 +31,24 @@ Start a new thread to decode barcodes from the inner frame queue with specific f
 void com.dynamsoft.dbr.BarcodeReader.startFrameDecoding (final int maxQueueLength, final int maxResultQueueLength, final int width, final int height, final int stride, final int enumImagePixelFormat, final String templateName) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
-- `maxQueueLength`: The max number of frames waiting for decoding.  
-- `maxResultQueueLength`: The max number of frames whose results (text result/localization result) will be kept.  
-- `width`: The width of the frame image in pixels.  
-- `height`: The height of the frame image in pixels.  
-- `stride`: The stride (or scan width) of the frame image.  
-- `format`: The image pixel format used in the image byte array.  
-- `templateName`: The template name.  
+`maxQueueLength`: The max number of frames waiting for decoding.  
+`maxResultQueueLength`: The max number of frames whose results (text result/localization result) will be kept.  
+`width`: The width of the frame image in pixels.  
+`height`: The height of the frame image in pixels.  
+`stride`: The stride (or scan width) of the frame image.  
+`format`: The image pixel format used in the image byte array.  
+`templateName`: The template name.  
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 reader.setErrorCallback(new ErrorCallback() {
     @Override
     public void errorCallback(int frameId, int errorCode, Object userData) {
@@ -94,30 +66,19 @@ Start a new thread to decode barcodes from the inner frame queue with specific f
 void com.dynamsoft.dbr.BarcodeReader.startFrameDecodingEx(FrameDecodingParameters parameters, String templateName) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
-- `parameters`: The frame decoding parameters.
-- `templateName`: The template name.
+`parameters`: The frame decoding parameters.  
+`templateName`: The template name.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 FrameDecodingParameters parameters = reader.initFrameDecodingParameters();
 parameters.maxQueueLength = 2;
 parameters.maxResultQueueLength = 10;
@@ -143,29 +104,18 @@ Append a frame image buffer to the inner frame queue.
 int com.dynamsoft.dbr.BarcodeReader.appendFrame(byte[] bufferBytes)
 ```
 
-### Parameters
+**Parameters**
 
 `bufferBytes`: The array of bytes which contain the image data.
 
-### Return value
+**Return Value**
 
 Returns the ID of the appended frame.
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYSCALED, "");
 int frameId = reader.appendFrame(bufferBytes);
 reader.destroy();
@@ -179,25 +129,14 @@ Stop the frame decoding thread created by [`StartFrameDecoding`](#startframedeco
 void com.dynamsoft.dbr.BarcodeReader.stopFrameDecoding() throws BarcodeReaderException
 ```  
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYSCALED, "");
 reader.stopFrameDecoding();
 reader.destroy();
@@ -211,29 +150,18 @@ Initialize frame decoding parameters with default values.
 FrameDecodingParameters com.dynamsoft.dbr.BarcodeReader.initFrameDecodingParameters() throws BarcodeReaderException
 ```
 
-### Return value
+**Return Value**
 
 The frame decoding parameters.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 FrameDecodingParameters parameters = reader.initFrameDecodingParameters();
 reader.destroy();
 ```
@@ -246,30 +174,19 @@ Set callback interface to process errors generated during frame decoding.
 void com.dynamsoft.dbr.BarcodeReader.setErrorCallback(ErrorCallback errorCallback, Object userData) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
-- `errorCallback`: Callback interface.
-- `userData`: Customized arguments passed to your function.
+`errorCallback`: Callback interface.  
+`userData`: Customized arguments passed to your function.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 reader.setErrorCallback(new ErrorCallback() {
     @Override
     public void errorCallback(int frameId, int errorCode, Object userData) {
@@ -284,33 +201,22 @@ reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYS
 Set callback interface to process text results generated during frame decoding.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.setTextResultCallback(TextResultCallback textResultCallback, Object userData) throws BarcodeReaderException	
+void com.dynamsoft.dbr.BarcodeReader.setTextResultCallback(TextResultCallback textResultCallback, Object userData) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
-- `textResultCallback`: Callback interface.
-- `userData`: Customized arguments passed to your function.
+`textResultCallback`: Callback interface.  
+`userData`: Customized arguments passed to your function.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 reader.setTextResultCallback(new TextResultCallback() {
     @Override
     public void textResultCallback(int frameId, TextResult[] results, Object userData) {
@@ -328,30 +234,19 @@ Set callback interface to process intermediate results generated during frame de
 void com.dynamsoft.dbr.BarcodeReader.setIntermediateResultCallback(IntermediateResultCallback intermediateResultCallback, Object userData} throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
-- `intermediateResultCallback`: Callback interface.
-- `userData`: Customized arguments passed to your function.
+`intermediateResultCallback`: Callback interface.  
+`userData`: Customized arguments passed to your function.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CLUSTERED_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE;
 reader.updateRuntimeSettings(settings);
@@ -369,28 +264,17 @@ reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYS
 Get length of current inner frame queue.
 
 ```java
-int com.dynamsoft.dbr.BarcodeReader.getLengthOfFrameQueue()	
+int com.dynamsoft.dbr.BarcodeReader.getLengthOfFrameQueue()
 ```
 
-### Return value
+**Return Value**
 
 Returns length of current inner frame queue.
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-DMDLSConnectionParameters info = new DMDLSConnectionParameters();
-info.organizationID = "200001";
-info.sessionPassword = "******";
-reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
-   @Override
-   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-      if (!b && e != null) {
-         e.printStackTrace();
-      }
-   }
-});
 int length = reader.getLengthOfFrameQueue();
 reader.destroy();
 ```

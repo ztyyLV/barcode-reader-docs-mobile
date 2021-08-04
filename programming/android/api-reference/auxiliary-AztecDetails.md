@@ -5,6 +5,7 @@ description: This page shows the AztecDetails Class of Dynamsoft Barcode Reader 
 keywords: AztecDetails, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

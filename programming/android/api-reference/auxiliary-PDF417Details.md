@@ -5,6 +5,7 @@ description: This page shows the PDF417Details Class of Dynamsoft Barcode Reader
 keywords: PDF417Details, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

@@ -5,6 +5,7 @@ description: This page shows the Point Class of Dynamsoft Barcode Reader for And
 keywords: Point, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 # Class Point

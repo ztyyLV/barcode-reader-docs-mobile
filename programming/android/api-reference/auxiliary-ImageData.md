@@ -5,6 +5,7 @@ description: This page shows the ImageData Class of Dynamsoft Barcode Reader for
 keywords: ImageData, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 
