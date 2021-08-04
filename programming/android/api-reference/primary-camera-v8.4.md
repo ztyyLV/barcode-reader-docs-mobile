@@ -86,7 +86,7 @@ void com.dynamsoft.dbr.BarcodeReader.ResumeCameraEnhancer()
 
 **Parameters**
 
-`cameraInstance`: The instance of Dynamsoft Camera Enhancer.  
+`_cameraInstance`: The instance of Dynamsoft Camera Enhancer.  
 [`_textResultCallback`](interface.md#textresultcallback): The text result callback.  
 [`_intermediateResultCallback`](interface.md#intermediateresultcallback): The intermediate result callback.
 
