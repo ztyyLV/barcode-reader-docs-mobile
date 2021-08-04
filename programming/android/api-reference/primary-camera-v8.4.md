@@ -87,8 +87,8 @@ void com.dynamsoft.dbr.BarcodeReader.ResumeCameraEnhancer()
 **Parameters**
 
 `cameraInstance`: The instance of Dynamsoft Camera Enhancer.  
-[`textResultCallback`](interface.md#textresultcallback): The text result callback.  
-[`intermediateResultCallback`](interface.md#intermediateresultcallback): The intermediate result callback.
+[`_textResultCallback`](interface.md#textresultcallback): The text result callback.  
+[`_intermediateResultCallback`](interface.md#intermediateresultcallback): The intermediate result callback.
 
 **Exceptions**
 
@@ -98,9 +98,9 @@ void com.dynamsoft.dbr.BarcodeReader.ResumeCameraEnhancer()
 
 ```java
     DCESettingParameters dceSettingParameters = new DCESettingParameters();
-    dceSettingParameters.cameraInstance = mCameraEnhancer;
-    dceSettingParameters.textResultCallback = mTextResultCallback;
-    dceSettingParameters.irtCallback = mIntermediateResultCallback;
+    dceSettingParameters._cameraInstance = mCameraEnhancer;
+    dceSettingParameters._textResultCallback = mTextResultCallback;
+    dceSettingParameters._irtCallback = mIntermediateResultCallback;
     reader.SetCameraEnhancerParam(dceSettingParameters);
 ```
 
