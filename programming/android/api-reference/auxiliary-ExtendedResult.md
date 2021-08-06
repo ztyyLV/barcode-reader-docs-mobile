@@ -9,7 +9,7 @@ noTitleIndex: true
 ---
 
 
-# Class ExtendedResult
+# Class com.dynamsoft.dbr.ExtendedResult
 
 `ExtendedResult` is the extension of the class [`TextResult`](auxiliary-TextResult.md). It stores the extended result information.
   

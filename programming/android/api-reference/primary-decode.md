@@ -27,7 +27,7 @@ noTitleIndex: true
 Decode barcodes from a specified image file.
 
 ```java
-TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeFile(String fileFullPath, String templateName)
+TextResult[] decodeFile(String fileFullPath, String templateName) throws BarcodeReaderException
 ```
 
 **Parameters**
@@ -59,7 +59,7 @@ Decode barcodes from an image file in memory.
 ### fileBytes
 
 ```java
-TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeFileInMemory(byte[] fileBytes, String templateName) throws BarcodeReaderException
+TextResult[] decodeFileInMemory(byte[] fileBytes, String templateName) throws BarcodeReaderException
 ```
 
 **Parameters**
@@ -88,7 +88,7 @@ reader.destroy();
 ### fileStream
 
 ```java
-TextResult [] com.dynamsoft.dbr.BarcodeReader.decodeFileInMemory(InputStream fileStream, String templateName) throws BarcodeReaderException, IOException
+TextResult [] decodeFileInMemory(InputStream fileStream, String templateName) throws BarcodeReaderException, IOException
 ```
 
 **Parameters**
@@ -119,7 +119,7 @@ reader.destroy();
 Decode barcodes from the memory buffer containing image pixels in defined format.
 
 ```java
-TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBuffer(byte[] buffer, int width, int height, int stride, int enumImagePixelFormat, String templateName) throws BarcodeReaderException
+TextResult[] decodeBuffer(byte[] buffer, int width, int height, int stride, int enumImagePixelFormat, String templateName) throws BarcodeReaderException
 ```
 
 **Parameters**
@@ -159,7 +159,7 @@ reader.destroy();
 Decode barcode from an image file encoded as a base64 string.
 
 ```java
-TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBase64String(String base64, String templateName)	throws BarcodeReaderException
+TextResult[] decodeBase64String(String base64, String templateName) throws BarcodeReaderException
 ```
 
 **Parameters**
@@ -189,7 +189,7 @@ reader.destroy();
 Decodes barcode from a buffered image (bitmap).
 
 ```java
-TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBufferedImage(Bitmap image, String templateName)	throws IOException, BarcodeReaderException
+TextResult[] decodeBufferedImage(Bitmap image, String templateName)	throws IOException, BarcodeReaderException
 ```
 
 **Parameters**
@@ -220,7 +220,7 @@ reader.destroy();
 Inits an intermediateResult struct with default values.
 
 ```java
-IntermediateResult com.dynamsoft.dbr.BarcodeReader.initIntermediateResults(int resultType) throws BarcodeReaderException
+IntermediateResult initIntermediateResults(int resultType) throws BarcodeReaderException
 ```
 
 **Parameters**
@@ -248,7 +248,7 @@ IntermediateResult imResult = reader.initIntermediateResult(EnumIntermediateResu
 Decodes barcode from intermediate results.
 
 ```java
-TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeIntermediateResults(IntermediateResult[] results, String templateName) throws BarcodeReaderException
+TextResult[] decodeIntermediateResults(IntermediateResult[] results, String templateName) throws BarcodeReaderException
 ```
 
 **Parameters**

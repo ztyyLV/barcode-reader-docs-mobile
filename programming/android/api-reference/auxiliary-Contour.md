@@ -9,7 +9,7 @@ noTitleIndex: true
 ---
 
 
-# Class Contour
+# Class com.dynamsoft.dbr.Contour
 
 ```java
 import com.dynamsoft.dbr.Contour;

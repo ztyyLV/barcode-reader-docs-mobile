@@ -9,7 +9,7 @@ noTitleIndex: true
 ---
 
 
-# Class IntermediateResult
+# Class com.dynamsoft.dbr.IntermediateResult
 
 Stores the intermediate result.
 

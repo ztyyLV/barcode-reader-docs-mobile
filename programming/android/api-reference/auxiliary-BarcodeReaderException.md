@@ -9,7 +9,7 @@ noTitleIndex: true
 ---
 
 
-# Class BarcodeReaderException
+# Class com.dynamsoft.dbr.BarcodeReaderException
 
 ```java
 import com.dynamsoft.dbr.BarcodeReaderException;

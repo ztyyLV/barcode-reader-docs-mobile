@@ -9,7 +9,7 @@ noTitleIndex: true
 ---
 
 
-# Class DMLTSConnectionParameters
+# Class com.dynamsoft.dbr.DMLTSConnectionParameters
 
 Defines a struct to configure the parameters to connect to License Tracking Server.  
 

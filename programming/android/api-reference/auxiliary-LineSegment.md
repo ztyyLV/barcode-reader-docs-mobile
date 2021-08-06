@@ -9,7 +9,7 @@ noTitleIndex: true
 ---
 
 
-# Class LineSegment
+# Class com.dynamsoft.dbr.LineSegment
 
 Stores line segment data.
 

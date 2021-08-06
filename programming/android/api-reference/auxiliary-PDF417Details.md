@@ -9,7 +9,7 @@ noTitleIndex: true
 ---
 
 
-# Class PDF417Details
+# Class com.dynamsoft.dbr.PDF417Details
 
 ```java
 import com.dynamsoft.dbr.PDF417Details;

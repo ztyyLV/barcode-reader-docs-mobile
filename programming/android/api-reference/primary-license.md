@@ -26,7 +26,7 @@ noTitleIndex: true
 Read the product key and activate the SDK.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.initLicense(String license) throws BarcodeReaderException
+void initLicense(String license) throws BarcodeReaderException
 ```
 
 **Parameters**
@@ -50,7 +50,7 @@ reader.destroy();
 Initialize the license and connect to the specified server for online verification.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.initLicenseFromServer(String licenseServer, String licenseKey, DBRServerLicenseVerificationListener dbrServerLicenseVerificationListener)
+void initLicenseFromServer(String licenseServer, String licenseKey, DBRServerLicenseVerificationListener dbrServerLicenseVerificationListener)
 ```
 
 **Parameters**
@@ -76,7 +76,7 @@ reader.destroy();
 Initialize barcode reader license from the license content on the client machine for offline verification.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLicenseContent(String licenseKey, String licenseContent) throws BarcodeReaderException
+void initLicenseFromLicenseContent(String licenseKey, String licenseContent) throws BarcodeReaderException
 ```
 
 **Parameters**
@@ -102,7 +102,7 @@ reader.destroy();
 Output the license content as an encrypted string from the license server to be used for offline license verification.
 
 ```java
-String com.dynamsoft.dbr.BarcodeReader.outputLicenseToString() throws BarcodeReaderException
+String outputLicenseToString() throws BarcodeReaderException
 ```
 
 **Return Value**
@@ -135,7 +135,7 @@ reader.destroy();
 Initializes the barcode reader license and connects to the specified server for online verification.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.initLicenseFromDLS(DMDLSConnectionParameters dlsInfo, DBRDLSLicenseVerificationListener listener)
+void initLicenseFromDLS(DMDLSConnectionParameters dlsInfo, DBRDLSLicenseVerificationListener listener)
 ```
 
 **Parameters**

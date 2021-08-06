@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Intermediate Result Classes
 
-## [IntermediateResult](auxiliary-IntermediateResult.md)
+## [com.dynamsoft.dbr.IntermediateResult](auxiliary-IntermediateResult.md)
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
@@ -50,7 +50,7 @@ barcodeReader.initIntermediateResults(EnumIntermediateResultType.IRT_ORIGINAL_IM
 IntermediateResult[] intermediateResults = barcodeReader.getIntermediateResults();
 ```
 
-## [Contour](auxiliary-Contour.md)
+## [com.dynamsoft.dbr.Contour](auxiliary-Contour.md)
 
 ```java
 import com.dynamsoft.dbr.Contour;
@@ -66,7 +66,7 @@ import com.dynamsoft.dbr.Contour;
 Contour[] contours = (Contour[]) intermediateResults[i].results;
 ```
 
-## [ImageData](auxiliary-ImageData.md)
+## [com.dynamsoft.dbr.ImageData](auxiliary-ImageData.md)
 
 ```java
 import com.dynamsoft.dbr.ImageData;
@@ -86,7 +86,7 @@ import com.dynamsoft.dbr.ImageData;
 ImageData[] imageData = (ImageData[]) intermediateResults[i].results;
 ```
 
-## [LineSegment](auxiliary-LineSegment.md)
+## [com.dynamsoft.dbr.LineSegment](auxiliary-LineSegment.md)
 
 ```java
 import com.dynamsoft.dbr.LineSegment;
@@ -104,7 +104,7 @@ import com.dynamsoft.dbr.LineSegment;
 LineSegment[] lineSegment = (LineSegment[]) intermediateResults[i].results;
 ```
 
-## [RegionOfInterest](auxiliary-RegionOfInterest.md)
+## [com.dynamsoft.dbr.RegionOfInterest](auxiliary-RegionOfInterest.md)
 
 `RegionOfInterest` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
 
@@ -123,7 +123,7 @@ import com.dynamsoft.dbr.LineSegment;
 RegionOfInterest[] regionOfInterest = (RegionOfInterest[]) intermediateResults[i].results;
 ```
 
-## LocalizationResult
+## com.dynamsoft.dbr.LocalizationResult
 
 View more in [TextResult >> LocalizationResult](auxiliary-LocalizationResult.md)
 

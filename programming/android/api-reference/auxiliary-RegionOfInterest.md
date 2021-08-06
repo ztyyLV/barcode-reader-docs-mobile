@@ -8,7 +8,7 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Class RegionOfInterest
+# Class com.dynamsoft.dbr.RegionOfInterest
 
 Stores the region of interest.  
 

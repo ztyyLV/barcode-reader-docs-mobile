@@ -8,7 +8,7 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Class Point
+# Class com.dynamsoft.dbr.Point
 
 Stores an x- and y-coordinate pair in two-dimensional space.
 

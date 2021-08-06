@@ -9,7 +9,7 @@ noTitleIndex: true
 ---
 
 
-# Class RegionDefinition
+# Class com.dynamsoft.dbr.RegionDefinition
 
 Stores the region information.
 

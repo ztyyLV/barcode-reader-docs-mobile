@@ -8,7 +8,7 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Class FurtherModes
+# Class com.dynamsoft.dbr.FurtherModes
 
 Stores the FurtherModes.
 

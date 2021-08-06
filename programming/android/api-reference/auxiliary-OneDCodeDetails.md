@@ -8,7 +8,7 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Class OneDCodeDetails
+# Class com.dynamsoft.dbr.OneDCodeDetails
 
 ```java
 import com.dynamsoft.dbr.OneDCodeDetails;

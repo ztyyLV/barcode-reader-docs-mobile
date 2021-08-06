@@ -8,7 +8,7 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Class DataMatrixDetails
+# Class com.dynamsoft.dbr.DataMatrixDetails
 
 ```java
 import com.dynamsoft.dbr.DataMatrixDetails;

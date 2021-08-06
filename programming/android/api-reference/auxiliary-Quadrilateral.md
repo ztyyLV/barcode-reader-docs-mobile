@@ -9,7 +9,7 @@ noTitleIndex: true
 ---
 
 
-# Class Quadrilateral
+# Class com.dynamsoft.dbr.Quadrilateral
 
 Stores the quadrilateral.
 

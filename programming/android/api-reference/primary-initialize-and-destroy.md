@@ -21,13 +21,13 @@ noTitleIndex: true
 Initialization of `BarcodeReader` object without a license.
 
 ```java
-com.dynamsoft.dbr.BarcodeReader.BarcodeReader() throws BarcodeReaderException
+BarcodeReader() throws BarcodeReaderException
 ```
 
 Initialization of `BarcodeReader` with a license.
 
 ```java
-com.dynamsoft.dbr.BarcodeReader.BarcodeReader(String license) throws Exception
+BarcodeReader(String license) throws Exception
 ```
 
 **Exceptions**
@@ -53,7 +53,7 @@ If you initialize DynamsoftBarcodeReader without a license, the decoding results
 Destroy the `BarcodeReader` object.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.destroy()
+void destroy()
 ```
 
 **Code Snippet**

@@ -9,7 +9,7 @@ noTitleIndex: true
 ---
 
 
-# Class DMDLSConnectionParameters
+# Class com.dynamsoft.dbr.DMDLSConnectionParameters
 
 Defines a struct to configure the parameters to connect to Dynamsoft License Server.  
 

@@ -9,7 +9,7 @@ noTitleIndex: true
 ---
 
 
-# Class ImageData
+# Class com.dynamsoft.dbr.ImageData
 
 Stores the image data.  
 

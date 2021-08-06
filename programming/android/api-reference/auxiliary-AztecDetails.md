@@ -9,7 +9,7 @@ noTitleIndex: true
 ---
 
 
-# Class AztecDetails
+# Class com.dynamsoft.dbr.AztecDetails
 
 ```java
 import com.dynamsoft.dbr.AztecDetails;

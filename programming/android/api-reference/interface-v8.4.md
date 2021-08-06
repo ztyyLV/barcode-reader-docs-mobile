@@ -30,9 +30,9 @@ void com.dynamsoft.dbr.ErrorCallback.errorCallback(int frameId, int errorCode, O
 
 **Parameters**
 
-- `frameId`: The ID of the frame.
-- `errorCode`: Error Code generated when decoding the frame.
-- `userData`: Arguments passed to your function.
+`frameId`: The ID of the frame.  
+`errorCode`: Error Code generated when decoding the frame.  
+`userData`: Arguments passed to your function.
 
 ## IntermediateResultCallback
 
@@ -44,9 +44,9 @@ void com.dynamsoft.dbr.IntermediateResultCallback.intermediateResultCallback(int
 
 **Parameters**
 
-- `frameId`: The ID of the frame.  
-- `results`: The intermediate results of the frame.
-- `userData`: Arguments passed to your function.
+`frameId`: The ID of the frame.  
+`results`: The intermediate results of the frame.  
+`userData`: Arguments passed to your function.
 
 **See Also**
 
@@ -62,9 +62,9 @@ void textResultCallback(int frameId, TextResult[] results, Object userData)
 
 **Parameters**
 
-- `frameId`: The ID of the frame.  
-- `results`: Recognized barcode results of the frame.
-- `userData`: Arguments passed to your function.
+`frameId`: The ID of the frame.  
+`results`: Recognized barcode results of the frame.  
+`userData`: Arguments passed to your function.
 
 **See Also**
 
@@ -80,8 +80,8 @@ void com.dynamsoft.dbr.DBRServerLicenseVerificationListener.licenseVerificationC
 
 **Parameters**
 
-- `isSuccess`: Whether the license verification was successful.
-- `error`: The error message from license server.
+`isSuccess`: Whether the license verification was successful.  
+`error`: The error message from license server.
 
 ## DBRLTSLicenseVerificationListener
 
@@ -93,5 +93,5 @@ void com.dynamsoft.dbr.DBRLTSLicenseVerificationListener.licenseVerificationCall
 
 **Parameters**
 
-- `isSuccess`: Whether the license verification was successful.
-- `error`: The error message from license server.
+`isSuccess`: Whether the license verification was successful.  
+`error`: The error message from license server.

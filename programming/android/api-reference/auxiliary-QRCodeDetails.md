@@ -9,7 +9,7 @@ noTitleIndex: true
 ---
 
 
-# Class QRCodeDetails
+# Class com.dynamsoft.dbr.QRCodeDetails
 
 ```java
 import com.dynamsoft.dbr.QRCodeDetails;

@@ -20,7 +20,7 @@ noTitleIndex: true
 Get version information of SDK.
 
 ```java
-String com.dynamsoft.dbr.BarcodeReader.getVersion()
+String getVersion()
 ```
 
 **Return Value**
