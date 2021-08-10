@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Interfaces
 
-  | Function | Description |
+  | Interfaces | Description |
   |----------|-------------|
   | [`ErrorCallback`](interface-errorcallback.md) | Represents the method that will handle the error code returned by the SDK. |
   | [`IntermediateResultCallback`](interface-intermediateresultcallback.md) | Represents the method that will handle the intermediate result array returned by the SDK. |
