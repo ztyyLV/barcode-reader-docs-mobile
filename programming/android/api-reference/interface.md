@@ -12,12 +12,12 @@ noTitleIndex: true
 
   | Function | Description |
   |----------|-------------|
-  | [`ErrorCallback`](#errorcallback) | Represents the method that will handle the error code returned by the SDK. |
-  | [`IntermediateResultCallback`](#intermediateresultcallback) | Represents the method that will handle the intermediate result array returned by the SDK. |
-  | [`TextResultCallback`](#textresultcallback) | Represents the method that will handle the text result array returned by the SDK. |
-  | [`DBRServerLicenseVerificationListener`](#dbrserverlicenseverificationlistener) | Represents the method that will handle callback when license server returns. |
-  | [`DBRDLSLicenseVerificationListener`](#dbrdlslicenseverificationlistener) | Represents the method that will handle callback when Dynamsoft License Server returns. |
-  
+  | [`ErrorCallback`](interface-errorcallback.md) | Represents the method that will handle the error code returned by the SDK. |
+  | [`IntermediateResultCallback`](interface-intermediateresultcallback.md) | Represents the method that will handle the intermediate result array returned by the SDK. |
+  | [`TextResultCallback`](interface-textresultcallback.md) | Represents the method that will handle the text result array returned by the SDK. |
+  | [`DBRServerLicenseVerificationListener`](interface-dbrserverlicenseverificationlistener.md) | Represents the method that will handle callback when license server returns. |
+  | [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | Represents the method that will handle callback when Dynamsoft License Server returns. |
+
 ---
 
 ## ErrorCallback
