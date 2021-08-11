@@ -8,7 +8,7 @@ breadcrumbText: Auxiliary Class
 noTitleIndex: true
 ---
 
-# Android Classes
+# Android Auxiliary Classes
 
 ## [License Class](auxiliary-DMDLSConnectionParameters.md)
 

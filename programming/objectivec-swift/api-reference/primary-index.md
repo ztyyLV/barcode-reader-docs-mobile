@@ -27,7 +27,7 @@ noTitleIndex: true
   | [`createIntermediateResult`](primary-decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
-### Camera Enhancer
+## Camera Enhancer
   
    | Method               | Description |
    |----------------------|-------------|
