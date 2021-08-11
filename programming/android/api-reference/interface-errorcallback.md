@@ -29,7 +29,7 @@ void errorCallback(int var1, int var2, Object var3);
 **Parameters**
 
 `frameId`: The ID of the frame.  
-`errorCode`: Error Code generated when decoding the frame.
+`errorCode`: Error Code generated when decoding the frame.  
 `userData`: Arguments passed to your function.
 
 **Code Snippet**

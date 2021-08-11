@@ -31,6 +31,6 @@ The method for users to add code for using intermediate results.
 
 **Parameters**
 
-`frameID`: The ID of the frame.
-`results`: The intermediate results of the frame.
+`frameID`: The ID of the frame.  
+`results`: The intermediate results of the frame.  
 `userData`: Arguments to pass to your function(s).

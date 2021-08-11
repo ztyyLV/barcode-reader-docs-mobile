@@ -31,6 +31,6 @@ The method for users to add code for using error code.
 
 **Parameters**
 
-`frameID`: The ID of the frame.
-`errorCode`: Error Code generated when decoding the frame.
+`frameID`: The ID of the frame.  
+`errorCode`: Error Code generated when decoding the frame.  
 `userData`: Arguments to pass to your function(s).

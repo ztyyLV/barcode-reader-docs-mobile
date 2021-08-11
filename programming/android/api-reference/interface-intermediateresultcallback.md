@@ -31,7 +31,7 @@ void intermediateResultCallback(int var1, TextResult[] var2, Object var3);
 **Parameters**
 
 `frameId`: The ID of the frame.  
-`results`: The intermediate result of the frame.
+`results`: The intermediate result of the frame.  
 `userData`: Arguments passed to your function.
 
 **Code Snippet**
