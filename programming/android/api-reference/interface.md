@@ -12,8 +12,8 @@ noTitleIndex: true
 
   | Interfaces | Description |
   |----------|-------------|
-  | [`ErrorCallback`](interface-errorcallback.md) | Represents the method that will handle the error code returned by the SDK. |
-  | [`IntermediateResultCallback`](interface-intermediateresultcallback.md) | Represents the method that will handle the intermediate result array returned by the SDK. |
-  | [`TextResultCallback`](interface-textresultcallback.md) | Represents the method that will handle the text result array returned by the SDK. |
-  | [`DBRServerLicenseVerificationListener`](interface-dbrserverlicenseverificationlistener.md) | Represents the method that will handle callback when license server returns. |
-  | [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | Represents the method that will handle callback when Dynamsoft License Server returns. |
+  | [`ErrorCallback`](interface-errorcallback.md) | The interface to handle callback when an error returned. |
+  | [`IntermediateResultCallback`](interface-intermediateresultcallback.md) | The interface to handle callback when intermediate result returned. |
+  | [`TextResultCallback`](interface-textresultcallback.md) | The interface to handle callback when text result returned. |
+  | [`DBRServerLicenseVerificationListener`](interface-dbrserverlicenseverificationlistener.md) | The interface to handle callback when license verification message returned. |
+  | [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback when license verification message returned. |
