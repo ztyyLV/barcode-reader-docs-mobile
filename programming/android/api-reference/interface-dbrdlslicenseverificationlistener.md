@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DBRDLSLicenseVerificationListener
 
-The interface `DBRDLSLicenseVerificationListener` includes methods for users to get Dynamsoft license server callback.
+`DBRDLSLicenseVerificationListener` is the interface to handle callback when license verification messages are returned.
 
 ```java
 interface com.dynamsoft.dbr.DBRDLSLicenseVerificationListener
@@ -18,7 +18,7 @@ interface com.dynamsoft.dbr.DBRDLSLicenseVerificationListener
 
 | Method | Description |
 | ------ | ----------- |
-| `DLSLicenseVerificationCallback` | The abstract method for users to get the license server callback. |
+| `DLSLicenseVerificationCallback` | The callback of license server. |
 
 ## DLSLicenseVerificationCallback
 

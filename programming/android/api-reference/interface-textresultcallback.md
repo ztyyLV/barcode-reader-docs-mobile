@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # TextResultCallback
 
-The interface `TextResultCallback` includes the abstract method(s) for users to operate on the text results.
+`TextResultCallback` is The interface to handle callback when the text results are returned.
 
 ```java
 interface com.dynamsoft.dbr.TextResultCallback
@@ -18,7 +18,7 @@ interface com.dynamsoft.dbr.TextResultCallback
 
 | Method | Description |
 | ------ | ----------- |
-| `textResultCallback` | The abstract class for users to get text result from the callback. |
+| `textResultCallback` | Represents the method to handle the text result array returned by the library. |
 
 ## textResultCallback
 

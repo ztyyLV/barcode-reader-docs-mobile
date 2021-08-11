@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # ErrorCallback
 
-Represents the method that will handle the error code returned by the SDK.
+`ErrorCallback` is the interface to handle callback when an error is returned.
 
 ```java
 interface com.dynamsoft.dbr.ErrorCallback
@@ -18,7 +18,7 @@ interface com.dynamsoft.dbr.ErrorCallback
 
 | Method | Description |
 | ------ | ----------- |
-| `errorCallback` | The abstract method for users to get the error code. |
+| `errorCallback` | Represents the method to handle the error code returned by the library. |
 
 ## errorCallback
 

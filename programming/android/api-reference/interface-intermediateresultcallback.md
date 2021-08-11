@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # IntermediateResultCallback
 
-The interface `IntermediateResultCallback` includes the abstract method(s) for users to operate on the intermediate results.
+`IntermediateResultCallback` is the interface to handle callback when intermediate results are returned.
 
 ```java
 interface com.dynamsoft.dbr.IntermediateResultCallback
@@ -18,7 +18,7 @@ interface com.dynamsoft.dbr.IntermediateResultCallback
 
 | Method | Description |
 | ------ | ----------- |
-| `intermediateResultCallback` | The abstract class for users to get intermediate results from the callback. |
+| `intermediateResultCallback` | Represents the method to handle the intermediate result array returned by the library. |
 
 ## intermediateResultCallback
 
