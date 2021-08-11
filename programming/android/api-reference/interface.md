@@ -12,8 +12,8 @@ noTitleIndex: true
 
   | Interfaces | Description |
   |----------|-------------|
-  | [`ErrorCallback`](interface-errorcallback.md) | The interface to handle callback when an error returned. |
-  | [`IntermediateResultCallback`](interface-intermediateresultcallback.md) | The interface to handle callback when intermediate result returned. |
-  | [`TextResultCallback`](interface-textresultcallback.md) | The interface to handle callback when text result returned. |
-  | [`DBRServerLicenseVerificationListener`](interface-dbrserverlicenseverificationlistener.md) | The interface to handle callback when license verification message returned. |
-  | [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback when license verification message returned. |
+  | [`TextResultCallback`](interface-textresultcallback.md) | The interface to handle callback when text results are returned. |
+  | [`IntermediateResultCallback`](interface-intermediateresultcallback.md) | The interface to handle callback when intermediate results are returned. |
+  | [`ErrorCallback`](interface-errorcallback.md) | The interface to handle callback when an error is returned. |
+  | [`DBRServerLicenseVerificationListener`](interface-dbrserverlicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
+  | [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
