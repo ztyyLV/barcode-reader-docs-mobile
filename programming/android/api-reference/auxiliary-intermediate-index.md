@@ -51,6 +51,8 @@ class com.dynamsoft.dbr.IntermediateResult;
 | [`frameId`](auxiliary-IntermediateResult.md#frameid) | *int* | The ID of the operated frame. |
 | [`rpmColourArgumentIndex`](auxiliary-IntermediateResult.md#rpmcolourargumentindex) | *int* | The index of the rpm colour argument. |
 
+**Code Snippet**
+
 ```java
 barcodeReader.initIntermediateResults(EnumIntermediateResultType.IRT_ORIGINAL_IMAGE);
 IntermediateResult[] intermediateResults = barcodeReader.getIntermediateResults();
@@ -67,6 +69,8 @@ class com.dynamsoft.dbr.Contour;
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
 | [`points`](auxiliary-Contour.md#points) | *Point\[\]* | The array of the points that surround the barcode area. |
+
+**Code Snippet**
 
 ```java
 Contour[] contours = (Contour[]) intermediateResults[i].results;
@@ -88,6 +92,8 @@ class com.dynamsoft.dbr.ImageData;
 | [`stride`](auxiliary-ImageData.md#stride) | *int* | The stride (or scan width) of the image. |
 | [`format`](auxiliary-ImageData.md#format) | *int* | The image pixel format used in the image byte array. |
 
+**Code Snippet**
+
 ```java
 ImageData[] imageData = (ImageData[]) intermediateResults[i].results;
 ```
@@ -106,6 +112,8 @@ class com.dynamsoft.dbr.LineSegment;
 | [`endPoint`](auxiliary-LineSegment.md#endpoint) | [`Point`](auxiliary-Point.md) | The end point of the line segment. |
 | [`linesConfidenceCoefficients`](auxiliary-LineSegment.md#linesconfidencecoefficients) | *byte\[\]* | The confidence coefficients for lines. |
 
+**Code Snippet**
+
 ```java
 LineSegment[] lineSegment = (LineSegment[]) intermediateResults[i].results;
 ```
@@ -115,7 +123,7 @@ LineSegment[] lineSegment = (LineSegment[]) intermediateResults[i].results;
 `RegionOfInterest` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
 
 ```java
-class com.dynamsoft.dbr.LineSegment;
+class com.dynamsoft.dbr.RegionOfInterest;
 ```
 
 | Attribute | Type | Description |
@@ -124,6 +132,8 @@ class com.dynamsoft.dbr.LineSegment;
 | [`point`](#point) | [`Point`](auxiliary-Point.md) | The left top point of the region. |
 | [`width`](#width) | *int* | The width of the region. |
 | [`height`](#height) | *int* | The height of the region. |
+
+**Code Snippet**
 
 ```java
 RegionOfInterest[] regionOfInterest = (RegionOfInterest[]) intermediateResults[i].results;
@@ -155,6 +165,8 @@ class com.dynamsoft.dbr.LocalizationResult;
 | [`resultCoordinateType`](auxiliary-LocalizationResult.md#resultcoordinatetype) | *int* | The coordinate type. |
 | [`accompanyingTextBytes`](auxiliary-LocalizationResult.md#accompanyingtextbytes) | *byte\[\]* | The accompanying text content in a byte array. |
 | [`confidence`](auxiliary-LocalizationResult.md#confidence) | *int* | The confidence of the localization result. |
+
+**Code Snippet**
 
 ```java
 LocalizationResult[] localizationResult = (LocalizationResult[]) intermediateResults[i].results;

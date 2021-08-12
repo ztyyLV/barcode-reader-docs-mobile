@@ -33,6 +33,8 @@ class com.dynamsoft.dbr.TextResult;
 | [`isDPM`](auxiliary-TextResult.md#isdpm) | *int* | This attribute stands for whether the result is a DPM result. |
 | [`isMirrored`](auxiliary-TextResult.md#ismirrored) | *int* | This attribute stands for whether the barcode is mirrored. |
 
+**Code Snippet**
+
 ```java
 // Get the text result by decode methodes
 TextResult[] textresult = barcodeReader.decodeBuffer(frame.getData(),frame.getWidth(),frame.getHeight(),frame.getStrides()[0],frame.getFormat(),"");
@@ -62,6 +64,8 @@ class com.dynamsoft.dbr.LocalizationResult;
 | [`resultCoordinateType`](auxiliary-LocalizationResult.md#resultcoordinatetype) | *int* | The coordinate type. |
 | [`accompanyingTextBytes`](auxiliary-LocalizationResult.md#accompanyingtextbytes) | *byte\[\]* | The accompanying text content in a byte array. |
 | [`confidence`](auxiliary-LocalizationResult.md#confidence) | *int* | The confidence of the localization result. |
+
+**Code Snippet**
 
 ```java
 if ( textresult != null && textresult.length != 0){
@@ -95,6 +99,8 @@ class com.dynamsoft.dbr.ExtendedResult;
 | [`samplingImage`](auxiliary-ExtendedResult.md#samplingimage) | [`SamplingImageData`](auxiliary-samplingimagedata.md) | The sampling image info. |
 | [`clarity`](auxiliary-ExtendedResult.md#clarity) | *int* | The clarity of the barcode zone in percentage. |
 
+**Code Snippet**
+
 ```java
 if ( textresult != null && textresult.length != 0){
     for ( int i = 0; i < textresult.length; i++ ) {
@@ -119,6 +125,8 @@ class com.dynamsoft.dbr.AztecDetails;
 | [`columns`](auxiliary-AztecDetails.md#columns) | *int* | The column count of the barcode. |
 | [`layerNumber`](auxiliary-AztecDetails.md#layernumber) | *int* | A negative number (-1, -2, -3, -4) specifies a compact Aztec code. A positive number (1, 2, .. 32) specifies a normal (full-rang) Aztec code. |
 
+**Code Snippet**
+
 ```java
 //The textresult[i] is one of the text result you got  
 AztecDetails aztecDetails = (AztecDetails) textresult[i].detailedResult;
@@ -140,6 +148,8 @@ class com.dynamsoft.dbr.DataMatrixDetails;
 | [`dataRegionRows`](auxiliary-DataMatrixDetails.md#dataregionrows) | *int* | The data region row count of the barcode. |
 | [`dataRegionColumns`](auxiliary-DataMatrixDetails.md#dataregioncolumns) | *int* | The data region column count of the barcode. |
 | [`dataRegionNumber`](auxiliary-DataMatrixDetails.md#dataregionnumber) | *int* | The data region count. |
+
+**Code Snippet**
 
 ```java
 //The textresult[i] is one of the text result you got  
@@ -164,6 +174,8 @@ class com.dynamsoft.dbr.OneDCodeDetails;
 | [`middlePatternRange`](auxiliary-OneDCodeDetails.md#middlepatternrange) | *int* | The middle pattern range of the OneDcode. |
 | [`endPatternRange`](auxiliary-OneDCodeDetails.md#endpatternrange) | *int* | The end pattern range of the OneDcode. |
 
+**Code Snippet**
+
 ```java
 //The textresult[i] is one of the text result you got  
 OneDCodeDetails oneDDetails = (OneDCodeDetails) textresult[i].detailedResult;
@@ -183,6 +195,8 @@ class com.dynamsoft.dbr.PDF417Details;
 | [`rows`](auxiliary-PDF417Details.md#rows) | *int* | The row count of the barcode. |
 | [`columns`](auxiliary-PDF417Details.md#columns) | *int* | The column count of the barcode. |
 | [`errorCorrectionLevel`](auxiliary-PDF417Details.md#errorcorrectionlevel) | *int* | The error correction level of the barcode. |
+
+**Code Snippet**
 
 ```java
 //The textresult[i] is one of the text results you got  
@@ -210,6 +224,8 @@ class com.dynamsoft.dbr.QRCodeDetails;
 | [`totalPage`](auxiliary-QRCodeDetails.md#totalpage) | *int* | Identify the total number of symbols to be concatenated in the Structured Append format. |
 | [`parityData`](auxiliary-QRCodeDetails.md#paritydata) | *int* | The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks. |
 
+**Code Snippet**
+
 ```java
 //The textresult[i] is one of the text results you got  
 QRCodeDetails qrDetails = (QRCodeDetails) textresult[i].detailedResult;
@@ -228,6 +244,8 @@ class com.dynamsoft.dbr.SamplingImageData;
 | [`bytes`](#bytes) | *byte\[\]* | The sampling image data in a byte array. |
 | [`width`](#width) | *int* | The width of the sampling image. |
 | [`height`](#height) | *int* | The height of the sampling image. |
+
+**Code Snippet**
 
 ```java
 SamplingImageData samplingImageData = extendedResult[j].samplingImage;

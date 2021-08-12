@@ -40,9 +40,11 @@ int barcodeFormat
 ```
 
 **Value Range**
+
 One of the [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) Enumeration value.
 
-**See Also**  
+**See Also**
+
 [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ## barcodeFormatString
@@ -54,9 +56,11 @@ String barcodeFormatString
 ```
 
 **Value Range**
+
 One of the barcode type in [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat).
 
-**See Also**  
+**See Also**
+
 [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ## barcodeFormat_2
@@ -68,9 +72,11 @@ int barcodeFormat_2
 ```
 
 **Value Range**
+
 One of the [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) Enumeration items
 
-**See Also**  
+**See Also**
+
 [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ## barcodeFormatString_2
@@ -82,9 +88,11 @@ String barcodeFormatString_2
 ```
 
 **Value Range**
+
 One of the barcode type in [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2).
 
-**See Also**  
+**See Also**
+
 [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ## barcodeText

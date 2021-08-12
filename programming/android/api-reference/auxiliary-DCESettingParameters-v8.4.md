@@ -10,11 +10,11 @@ noTitleIndex: true
 
 # DCESettingParameters
 
+Stores the DCESettingParameters information.
+
 ```java
 class com.dynamsoft.dbr.DCESettingParameters;
 ```
-
-Stores the DCESettingParameters information.
 
 | Attribute | type | Descriptions |
 |-----------|------|-------------|
@@ -42,8 +42,8 @@ settingParameters._textResultCallback =mTextResultCallback;
 
 **Parameters**
 
-`frameID`: The ID of frame.
-`results`: The recognized barcode result of the frame.
+`frameID`: The ID of frame.  
+`results`: The recognized barcode result of the frame.  
 `userData`: Arguments passed to your function.
 
 ## _textResultCallback_UserData
@@ -64,8 +64,8 @@ settingParameters._intermediateResultCallback = mIntermediateResultCallback;
 
 **Parameters**
 
-`frameID`: The ID of frame.
-`results`: The intermediate result of the frame.
+`frameID`: The ID of frame.  
+`results`: The intermediate result of the frame.  
 `userData`: Arguments passed to your function.
 
 ## _intermediateResultCallback_UserData

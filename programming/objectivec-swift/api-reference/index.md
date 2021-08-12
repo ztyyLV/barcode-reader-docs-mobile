@@ -13,17 +13,9 @@ breadcrumbText: iOS API Reference
 
 ## Attributes
   
-| Attribute | Type |
-|---------- | ---- |
-| [`license`](#license) | *NSString\** |
-
-### license
-
-Stores the license used in DynamsoftBarcodeReader.
-
-```objc
-NSString* license
-```
+| Attribute | Type | Description |
+|---------- | ---- | ----------- |
+| [`license`](#license) | *NSString\** | Stores the license used in DynamsoftBarcodeReader. |
 
 ## BarcodeReader Class
 

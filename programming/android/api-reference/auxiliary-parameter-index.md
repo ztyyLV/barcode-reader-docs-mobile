@@ -45,6 +45,8 @@ class com.dynamsoft.dbr.PublicRuntimeSettings;
 | [`deblurModes`](auxiliary-PublicRuntimeSettings.md#deblurmodes) | *int\[\]* | Sets the mode and priority for deblurring. |
 | [`barcodeZoneMinDistanceToImageBorders`](auxiliary-PublicRuntimeSettings.md#barcodezonemindistancetoimageborders) | *int* | Sets the minimum distance (in pixels) between the barcode zone and image borders. |
 
+**Code Snippet**
+
 ```java
 PublicRuntimeSettings runtimeSettings = barcodeReader.getRuntimeSettings();
 // Make some settings here
@@ -76,6 +78,8 @@ class com.dynamsoft.dbr.FurtherModes;
 | [`barcodeColourModes`](auxiliary-FurtherModes.md#barcodecolourmodes) | *int\[\]* | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
 | [`accompanyingTextRecognitionModes`](auxiliary-FurtherModes.md#accompanyingtextrecognitionmodes) | *int\[\]* | Sets the mode and priority to recognize accompanying text. |
 
+**Code Snippet**
+
 ```java
 FurtherModes furtherModes = runtimeSettings.furtherModes;
 ```
@@ -93,6 +97,8 @@ class com.dynamsoft.dbr.RegionDefinition;
 | [`regionRight`](auxiliary-RegionDefinition.md#regionright) | *int* | The Right-most coordinate or percentage of the region. |
 | [`regionBottom`](auxiliary-RegionDefinition.md#regionbottom) | *int* | The Bottom-most coordinate or percentage of the region. |
 | [`regionMeasuredByPercentage`](auxiliary-RegionDefinition.md#regionmeasuredbypercentage) | *int* | Sets whether or not to use percentage to measure the region size. |
+
+**Code Snippet**
 
 ```java
 RegionDefinition regionDefinition = runtimeSettings.region;
@@ -136,6 +142,8 @@ class com.dynamsoft.dbr.DCESettingParameters;
 | [`textResultCallback_UserData`](auxiliary-DCESettingParameters.md#textresultcallback_userdata) | *Object*  | Transfer user data. |
 | [`intermediateResultCallback`](auxiliary-DCESettingParameters.md#intermediateresultcallback) | [`IntermediateResultCallback`]({{site.android_api}}interface.html#intermediateresultcallback) | Set intermediate result callback. |
 | [`IntermediateResultCallback_UserData`](auxiliary-DCESettingParameters.md#intermediateresultcallback_userdata) | *Object* | Transfer user data. |
+
+**Code Snippet**
 
 ```java
 DCESettingParameters dceSettingParameters = new DCESettingParameters();

@@ -28,7 +28,7 @@ The point class Stores the x and y coordinate of the points.
 This class stores the quadrilateral points data.
 
 ```java
-class com.dynamsoft.dbr.Point;
+class com.dynamsoft.dbr.Quadrilateral;
 ```
 
 | Attribute | Type | Descriptions |
