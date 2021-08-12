@@ -86,6 +86,8 @@ FurtherModes furtherModes = runtimeSettings.furtherModes;
 
 ## [RegionDefinition](auxiliary-RegionDefinition.md)
 
+The class stores the defined region information.
+
 ```java
 class com.dynamsoft.dbr.RegionDefinition;
 ```

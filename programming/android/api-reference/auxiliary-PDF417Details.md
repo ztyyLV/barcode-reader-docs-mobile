@@ -11,11 +11,11 @@ noTitleIndex: true
 
 # PDF417Details
 
+`PDF417Details` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the PDF417 code details.
+
 ```java
 class com.dynamsoft.dbr.PDF417Details;
 ```
-
-`PDF417Details` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the PDF417 code details.
 
 | Attribute | Type | Descriptions |
 |---------- |------|------------ |

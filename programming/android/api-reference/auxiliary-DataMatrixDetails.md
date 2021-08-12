@@ -10,11 +10,11 @@ noTitleIndex: true
 
 # DataMatrixDetails
 
+`DataMatrixDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the DataMatrix code details.
+
 ```java
 class com.dynamsoft.dbr.DataMatrixDetails;
 ```
-
-`DataMatrixDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the DataMatrix code details.
 
 | Attribute | Type | Descriptions |
 |---------- | ---- |------|

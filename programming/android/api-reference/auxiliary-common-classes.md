@@ -12,11 +12,11 @@ noTitleIndex: true
 
 ## [Point](auxiliary-Point.md)
 
+The point class Stores the x and y coordinate of the points.
+
 ```java
 class com.dynamsoft.dbr.Point;
 ```
-
-The point class Stores the x and y coordinate of the points.
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |

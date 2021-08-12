@@ -60,11 +60,11 @@ IntermediateResult[] intermediateResults = barcodeReader.getIntermediateResults(
 
 ## [Contour](auxiliary-Contour.md)
 
+`contour` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
+
 ```java
 class com.dynamsoft.dbr.Contour;
 ```
-
-`contour` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
@@ -78,11 +78,11 @@ Contour[] contours = (Contour[]) intermediateResults[i].results;
 
 ## [ImageData](auxiliary-ImageData.md)
 
+`ImageData` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
+
 ```java
 class com.dynamsoft.dbr.ImageData;
 ```
-
-`ImageData` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
@@ -100,11 +100,11 @@ ImageData[] imageData = (ImageData[]) intermediateResults[i].results;
 
 ## [LineSegment](auxiliary-LineSegment.md)
 
+`LineSegment` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
+
 ```java
 class com.dynamsoft.dbr.LineSegment;
 ```
-
-`LineSegment` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |

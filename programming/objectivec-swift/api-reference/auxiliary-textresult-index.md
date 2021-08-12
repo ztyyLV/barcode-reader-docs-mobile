@@ -34,11 +34,11 @@ noTitleIndex: true
 
 ## [iLocalizationResult](auxiliary-iLocalizationResult.md)
 
+`iLocalizationResult` is the extension of the class [`iTextResult`](auxiliary-TextResult.md). It stores the localization result information.
+
 ```objc
 @interface iLocalizationResult
 ```  
-
-`iLocalizationResult` is the extension of the class [`iTextResult`](auxiliary-TextResult.md). It stores the localization result information.
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
