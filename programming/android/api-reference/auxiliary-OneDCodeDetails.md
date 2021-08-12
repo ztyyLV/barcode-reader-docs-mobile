@@ -8,13 +8,13 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Class com.dynamsoft.dbr.OneDCodeDetails
-
-```java
-import com.dynamsoft.dbr.OneDCodeDetails;
-```
+# OneDCodeDetails
 
 `OneDCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the OneD code details.
+
+```java
+class com.dynamsoft.dbr.OneDCodeDetails;
+```
 
 | Attribute | Type | Descriptions |
 |---------- |----- | -------------|

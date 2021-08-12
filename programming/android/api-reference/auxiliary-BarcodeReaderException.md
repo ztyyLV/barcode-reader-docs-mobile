@@ -9,10 +9,10 @@ noTitleIndex: true
 ---
 
 
-# Class com.dynamsoft.dbr.BarcodeReaderException
+# BarcodeReaderException
 
 ```java
-import com.dynamsoft.dbr.BarcodeReaderException;
+class com.dynamsoft.dbr.BarcodeReaderException;
 ```
 
 Exception for signalling barcode reader errors.

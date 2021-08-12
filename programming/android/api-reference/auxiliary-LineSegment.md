@@ -9,9 +9,13 @@ noTitleIndex: true
 ---
 
 
-# Class com.dynamsoft.dbr.LineSegment
+# LineSegment
 
 Stores line segment data.
+
+```java
+class com.dynamsoft.dbr.LineSegment;
+```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |

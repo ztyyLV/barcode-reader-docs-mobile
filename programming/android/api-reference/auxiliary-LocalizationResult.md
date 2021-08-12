@@ -8,10 +8,13 @@ needGenerateH3Content: false
 noTitleIndex: true
 ---
 
-
-# Class com.dynamsoft.dbr.LocalizationResult
+# LocalizationResult
 
 The `LocalizationResult` extends the class [`TextResult`](auxiliary-TextResult.md) and [`IntermediateResult`](auxiliary-IntermediateResult.md). It stores the barcode localization data.
+
+```java
+class com.dynamsoft.dbr.LocalizationResult;
+```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |

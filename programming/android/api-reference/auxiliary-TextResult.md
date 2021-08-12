@@ -8,9 +8,13 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Class com.dynamsoft.dbr.TextResult
+# TextResult
 
 Stores the text result.
+
+```java
+class com.dynamsoft.dbr.TextResult;
+```
 
 | Attribute | Type | Descriptions |
 | --------- | ---- | ------------ |

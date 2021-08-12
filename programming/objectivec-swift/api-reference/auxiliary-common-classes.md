@@ -12,11 +12,11 @@ noTitleIndex: true
 
 ## [iDBRPoint](auxiliary-iDBRPoint.md)
 
+The point class Stores the x and y coordinate of the points.
+
 ```objc
 @interface iDBRPoint
 ```
-
-The point class Stores the x and y coordinate of the points.
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |

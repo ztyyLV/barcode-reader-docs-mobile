@@ -11,8 +11,6 @@ noTitleIndex: true
 
 Stores the text result.
 
-## Typedefs
-
 ```objc
 @interface iTextResult
 ```  

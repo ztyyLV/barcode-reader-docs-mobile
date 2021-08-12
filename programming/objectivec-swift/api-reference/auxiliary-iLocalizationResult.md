@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `iLocalizationResult` extends the class [`iTextResult`](auxiliary-iTextResult.md) and [`iIntermediateResult`](auxiliary-iIntermediateResult.md). It stores the barcode localization data.
 
-## Typedefs
-
 ```objc
 @interface iLocalizationResult
 ```  

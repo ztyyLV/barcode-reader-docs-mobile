@@ -9,9 +9,13 @@ noTitleIndex: true
 ---
 
 
-# Class com.dynamsoft.dbr.PublicRuntimeSettings
+# PublicRuntimeSettings
 
 Defines a struct to configure the barcode reading runtime settings. These settings control the barcode recognition process such as which barcode types to decode.
+
+```java
+class com.dynamsoft.dbr.PublicRuntimeSettings;
+```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |

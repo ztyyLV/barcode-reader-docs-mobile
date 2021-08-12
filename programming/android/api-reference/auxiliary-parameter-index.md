@@ -10,12 +10,12 @@ noTitleIndex: true
 
 # Parameter Configuration Classes
 
-## [com.dynamsoft.dbr.PublicRuntimeSettings](auxiliary-PublicRuntimeSettings.md)
+## [PublicRuntimeSettings](auxiliary-PublicRuntimeSettings.md)
 
 You can update most of the parameter settings through the `PublicRuntimeSettings` class.
 
 ```java
-import com.dynamsoft.dbr.PublicRuntimeSettings;
+class com.dynamsoft.dbr.PublicRuntimeSettings;
 ```
 
 | Attribute | Type | Descriptions |
@@ -52,12 +52,12 @@ PublicRuntimeSettings runtimeSettings = barcodeReader.getRuntimeSettings();
 barcodeReader.updateRuntimeSettings(runtimeSettings);
 ```
 
-## [com.dynamsoft.dbr.FurtherModes](auxiliary-FurtherModes.md)
+## [FurtherModes](auxiliary-FurtherModes.md)
 
 `FurtherModes` is an extension of the `PublicRuntimeSettings` class. Through the `FurtherModes`, you can make advanced settings to process the image for barcode reading.
 
 ```java
-import com.dynamsoft.dbr.FurtherModes;
+class com.dynamsoft.dbr.FurtherModes;
 ```
 
 | Attribute | Type | Descriptions |
@@ -80,10 +80,10 @@ import com.dynamsoft.dbr.FurtherModes;
 FurtherModes furtherModes = runtimeSettings.furtherModes;
 ```
 
-## [com.dynamsoft.dbr.RegionDefinition](auxiliary-RegionDefinition.md)
+## [RegionDefinition](auxiliary-RegionDefinition.md)
 
 ```java
-import com.dynamsoft.dbr.RegionDefinition;
+class com.dynamsoft.dbr.RegionDefinition;
 ```
 
 | Attribute | Type | Descriptions |
@@ -98,12 +98,12 @@ import com.dynamsoft.dbr.RegionDefinition;
 RegionDefinition regionDefinition = runtimeSettings.region;
 ```
 
-## [com.dynamsoft.dbr.FrameDecodingParameters](auxiliary-FrameDecodingParameters.md)
+## [FrameDecodingParameters](auxiliary-FrameDecodingParameters.md)
 
 The parameters that helps you on frame decoding.
 
 ```java
-import com.dynamsoft.dbr.FrameDecodingParameters;
+class com.dynamsoft.dbr.FrameDecodingParameters;
 ```
 
 | Attribute | Type | Descriptions |
@@ -121,12 +121,12 @@ import com.dynamsoft.dbr.FrameDecodingParameters;
 | [`clarityCalculationMethod`](auxiliary-FrameDecodingParameters.md#claritycalculationmethod) | *int* | Sets the method used for calculating the clarity of the frames. |
 | [`clarityFilterMode`](auxiliary-FrameDecodingParameters.md#clarityfiltermode) | *int* | Sets the mode used for filtering frames by calculated clarity. |
 
-## [com.dynamsoft.dbr.DCESettingParameters](auxiliary-DCESettingParameters.md)
+## [DCESettingParameters](auxiliary-DCESettingParameters.md)
 
 The parameters that helps you on configuring Dynamsoft Camera Enhancer in the Barcode Reader.
 
 ```java
-import com.dynamsoft.dbr.DCESettingParameters;
+class com.dynamsoft.dbr.DCESettingParameters;
 ```
 
 | Attribute | type | Description |

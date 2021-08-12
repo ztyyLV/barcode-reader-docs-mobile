@@ -11,8 +11,6 @@ noTitleIndex: true
 
 `SamplingImageData` stores the detailed image data in `ExtendedResult`.
 
-## Typedefs
-
 ```objc
 @interface iSamplingImageData
 ```  

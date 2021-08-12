@@ -9,9 +9,13 @@ noTitleIndex: true
 ---
 
 
-# Class com.dynamsoft.dbr.ImageData
+# ImageData
 
 Stores the image data.  
+
+```java
+class com.dynamsoft.dbr.ImageData
+```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |

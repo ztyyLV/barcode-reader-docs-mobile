@@ -9,9 +9,13 @@ noTitleIndex: true
 ---
 
 
-# Class com.dynamsoft.dbr.SamplingImageData
+# SamplingImageData
 
 `SamplingImageData` stores the detailed image data in `ExtendedResult`.
+
+```java
+class com.dynamsoft.dbr.SamplingImageData;
+```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |

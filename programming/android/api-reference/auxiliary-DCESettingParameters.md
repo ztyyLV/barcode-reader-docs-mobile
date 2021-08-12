@@ -8,10 +8,10 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Class com.dynamsoft.dbr.DCESettingParameters
+# DCESettingParameters
 
 ```java
-import com.dynamsoft.dbr.DCESettingParameters;
+class com.dynamsoft.dbr.DCESettingParameters;
 ```
 
 Stores the DCESettingParameters information.

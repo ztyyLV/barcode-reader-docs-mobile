@@ -11,6 +11,10 @@ noTitleIndex: true
 
 Stores the iDCESettingParameters information.
 
+```objc
+@interface iDCESettingParameters
+```
+
 | Attribute | type | Descriptions |
 |-----------|------| ------------ |
 | [`cameraInstance`](#camerainstance) | *DynamsoftCameraEnhancer* | The Camera Enhancer instance |

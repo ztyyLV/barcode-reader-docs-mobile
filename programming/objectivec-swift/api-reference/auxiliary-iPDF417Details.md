@@ -12,8 +12,6 @@ noTitleIndex: true
 
 `iPDF417Details` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the PDF417 code details.
 
-## Typedefs
-
 ```objc
 @interface iPDF417Details
 ```  

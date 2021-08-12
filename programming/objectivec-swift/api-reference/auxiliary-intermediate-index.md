@@ -12,6 +12,8 @@ noTitleIndex: true
 
 ## [iIntermediateResult](auxiliary-iIntermediateResult.md)
 
+`iIntermediateResult` is the class that stores the intermediate result data.
+
 ```objc
 @interface iIntermediateResult 
 ```  
@@ -51,11 +53,11 @@ noTitleIndex: true
 
 ## [iContour](auxiliary-icontour.md)
 
+`contour` is one of the [`results`](#intermediateresult) type in `IntermediateResult`.
+
 ```objc
 @interface iContour
 ```  
-
-`contour` is one of the [`results`](#intermediateresult) type in `IntermediateResult`.
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
@@ -64,11 +66,11 @@ noTitleIndex: true
 
 ## [iImageData](auxiliary-iimagedata.md)
 
+`ImageData` is one of the [`results`](#intermediateresult) type in `IntermediateResult`.
+
 ```objc
 @interface iImageData
 ```
-
-`ImageData` is one of the [`results`](#intermediateresult) type in `IntermediateResult`.
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
@@ -81,11 +83,11 @@ noTitleIndex: true
 
 ## [iLineSegment](auxiliary-ilinesegment.md)
 
+`LineSegment` is one of the [`results`](auxiliary-intermediateresult.md#results) type in `IntermediateResult`.
+
 ```objc
 @interface iLineSegment
 ```  
-
-`LineSegment` is one of the [`results`](auxiliary-intermediateresult.md#results) type in `IntermediateResult`.
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
@@ -95,11 +97,11 @@ noTitleIndex: true
 
 ## [iRegionOfInterest](auxiliary-iregionofinterest.md)
 
+`RegionOfInterest` is one of the [`results`](auxiliary-intermediateresult.md#results) type in `IntermediateResult`.
+
 ```objc
 @interface iRegionOfInterest
 ```
-
-`RegionOfInterest` is one of the [`results`](auxiliary-intermediateresult.md#results) type in `IntermediateResult`.
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
@@ -112,11 +114,11 @@ noTitleIndex: true
 
 View more in [TextResult >> LocalizationResult](auxiliary-iLocalizationResult.md)
 
+`LocalizationResult` can be the extension of the class [`IntermediateResult`](auxiliary-intermediateresult.md). It stores the localization result information.
+
 ```objc
 @interface iLocalizationResult
 ```
-
-`LocalizationResult` can be the extension of the class [`IntermediateResult`](auxiliary-intermediateresult.md). It stores the localization result information.
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |

@@ -12,8 +12,6 @@ noTitleIndex: true
 
 Stores the FurtherModes.
 
-## Typedefs
-
 ```objc
 @interface iFurtherModes
 ```  

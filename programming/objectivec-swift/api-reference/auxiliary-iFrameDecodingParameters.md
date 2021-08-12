@@ -12,8 +12,6 @@ noTitleIndex: true
 
 Defines a struct to configure the frame decoding Parameters.  
 
-## Typedefs
-
 ```objc
 @interface iFrameDecodingParameters
 ```

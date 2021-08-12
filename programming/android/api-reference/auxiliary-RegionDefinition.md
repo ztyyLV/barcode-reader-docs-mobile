@@ -9,9 +9,13 @@ noTitleIndex: true
 ---
 
 
-# Class com.dynamsoft.dbr.RegionDefinition
+# RegionDefinition
 
 Stores the region information.
+
+```java
+class com.dynamsoft.dbr.RegionDefinition;
+```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |

@@ -9,10 +9,10 @@ noTitleIndex: true
 ---
 
 
-# Class com.dynamsoft.dbr.Contour
+# Contour
 
 ```java
-import com.dynamsoft.dbr.Contour;
+class com.dynamsoft.dbr.Contour;
 ```
 
 The `Contour` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.

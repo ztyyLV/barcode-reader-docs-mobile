@@ -10,10 +10,10 @@ noTitleIndex: true
 
 # Common Classes
 
-## [com.dynamsoft.dbr.Point](auxiliary-Point.md)
+## [Point](auxiliary-Point.md)
 
 ```java
-import com.dynamsoft.dbr.Point;
+class com.dynamsoft.dbr.Point;
 ```
 
 The point class Stores the x and y coordinate of the points.
@@ -23,24 +23,24 @@ The point class Stores the x and y coordinate of the points.
 | [`x`](auxiliary-Point.md#x) | *int* | The X coordinate of the point. |
 | [`y`](auxiliary-Point.md#y) | *int* | The y coordinate of the point. |
 
-## [com.dynamsoft.dbr.Quadrilateral](auxiliary-Quadrilateral.md)
+## [Quadrilateral](auxiliary-Quadrilateral.md)
 
 This class stores the quadrilateral points data.
 
 ```java
-import com.dynamsoft.dbr.Point;
+class com.dynamsoft.dbr.Point;
 ```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |
 | [`points`](auxiliary-Quadrilateral.md#points) | [`Point`](auxiliary-Point.md)[] | Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
 
-## [com.dynamsoft.dbr.RegionDefinition](auxiliary-RegionDefinition.md)
+## [RegionDefinition](auxiliary-RegionDefinition.md)
 
 This class stores the region data. You can make settings on scan region through this class.
 
 ```java
-import com.dynamsoft.dbr.RegionDefinition;
+class com.dynamsoft.dbr.RegionDefinition;
 ```
 
 | Attribute | Type | Descriptions |

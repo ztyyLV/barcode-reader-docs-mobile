@@ -11,8 +11,6 @@ noTitleIndex: true
 
 Stores the intermediate result.
 
-## Typedefs
-
 ```objc
 @interface iIntermediateResult 
 ```  

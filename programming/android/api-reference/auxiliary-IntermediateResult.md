@@ -9,9 +9,13 @@ noTitleIndex: true
 ---
 
 
-# Class com.dynamsoft.dbr.IntermediateResult
+# IntermediateResult
 
 Stores the intermediate result.
+
+```java
+class com.dynamsoft.dbr.IntermediateResult;
+```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |

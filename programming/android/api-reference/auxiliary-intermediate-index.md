@@ -10,7 +10,13 @@ noTitleIndex: true
 
 # Intermediate Result Classes
 
-## [com.dynamsoft.dbr.IntermediateResult](auxiliary-IntermediateResult.md)
+## [IntermediateResult](auxiliary-IntermediateResult.md)
+
+`IntermediateResult` is the class that stores the intermediate result data.
+
+```java
+class com.dynamsoft.dbr.IntermediateResult;
+```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
@@ -50,10 +56,10 @@ barcodeReader.initIntermediateResults(EnumIntermediateResultType.IRT_ORIGINAL_IM
 IntermediateResult[] intermediateResults = barcodeReader.getIntermediateResults();
 ```
 
-## [com.dynamsoft.dbr.Contour](auxiliary-Contour.md)
+## [Contour](auxiliary-Contour.md)
 
 ```java
-import com.dynamsoft.dbr.Contour;
+class com.dynamsoft.dbr.Contour;
 ```
 
 `contour` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
@@ -66,10 +72,10 @@ import com.dynamsoft.dbr.Contour;
 Contour[] contours = (Contour[]) intermediateResults[i].results;
 ```
 
-## [com.dynamsoft.dbr.ImageData](auxiliary-ImageData.md)
+## [ImageData](auxiliary-ImageData.md)
 
 ```java
-import com.dynamsoft.dbr.ImageData;
+class com.dynamsoft.dbr.ImageData;
 ```
 
 `ImageData` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
@@ -86,10 +92,10 @@ import com.dynamsoft.dbr.ImageData;
 ImageData[] imageData = (ImageData[]) intermediateResults[i].results;
 ```
 
-## [com.dynamsoft.dbr.LineSegment](auxiliary-LineSegment.md)
+## [LineSegment](auxiliary-LineSegment.md)
 
 ```java
-import com.dynamsoft.dbr.LineSegment;
+class com.dynamsoft.dbr.LineSegment;
 ```
 
 `LineSegment` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
@@ -104,12 +110,12 @@ import com.dynamsoft.dbr.LineSegment;
 LineSegment[] lineSegment = (LineSegment[]) intermediateResults[i].results;
 ```
 
-## [com.dynamsoft.dbr.RegionOfInterest](auxiliary-RegionOfInterest.md)
+## [RegionOfInterest](auxiliary-RegionOfInterest.md)
 
 `RegionOfInterest` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
 
 ```java
-import com.dynamsoft.dbr.LineSegment;
+class com.dynamsoft.dbr.LineSegment;
 ```
 
 | Attribute | Type | Description |
@@ -123,12 +129,12 @@ import com.dynamsoft.dbr.LineSegment;
 RegionOfInterest[] regionOfInterest = (RegionOfInterest[]) intermediateResults[i].results;
 ```
 
-## com.dynamsoft.dbr.LocalizationResult
+## LocalizationResult
 
 View more in [TextResult >> LocalizationResult](auxiliary-LocalizationResult.md)
 
 ```java
-import com.dynamsoft.dbr.LocalizationResult;
+class com.dynamsoft.dbr.LocalizationResult;
 ```
 
 `LocalizationResult` can be the extension of class [`TextResult`](auxiliary-TextResult.md) and class [`IntermediateResult`](auxiliary-IntermediateResult.md). It stores the localization result information.

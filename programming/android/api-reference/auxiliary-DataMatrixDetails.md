@@ -8,10 +8,10 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Class com.dynamsoft.dbr.DataMatrixDetails
+# DataMatrixDetails
 
 ```java
-import com.dynamsoft.dbr.DataMatrixDetails;
+class com.dynamsoft.dbr.DataMatrixDetails;
 ```
 
 `DataMatrixDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the DataMatrix code details.

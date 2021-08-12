@@ -11,8 +11,6 @@ noTitleIndex: true
 
 Stores the region of interest.  
 
-## Typedefs
-
 ```objc
 @interface iRegionOfInterest
 ```  

@@ -7,7 +7,6 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-
 # Camera Methods
 
 | Method | Description |
@@ -31,7 +30,7 @@ void StartCameraEnhancer()
 **Code Snippet**
 
 ```java
-    reader.StartCameraEnhancer();
+reader.StartCameraEnhancer();
 ```
 
 ## StopCameraEnhancer

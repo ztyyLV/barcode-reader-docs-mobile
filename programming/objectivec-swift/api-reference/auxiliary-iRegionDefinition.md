@@ -11,8 +11,6 @@ noTitleIndex: true
 
 Stores the region information.  
 
-## Typedefs
-
 ```objc
 @interface iRegionDefinition
 ```  

@@ -10,10 +10,12 @@ noTitleIndex: true
 
 # Barcode Result Classes
 
-## [com.dynamsoft.dbr.TextResult](auxiliary-TextResult.md)
+## [TextResult](auxiliary-TextResult.md)
+
+`TextResult` is the class that stores the text result data.
 
 ```java
-import com.dynamsoft.dbr.TextResult;
+class com.dynamsoft.dbr.TextResult;
 ```
 
 | Attribute | Type | Descriptions |
@@ -36,13 +38,13 @@ import com.dynamsoft.dbr.TextResult;
 TextResult[] textresult = barcodeReader.decodeBuffer(frame.getData(),frame.getWidth(),frame.getHeight(),frame.getStrides()[0],frame.getFormat(),"");
 ```
 
-## [com.dynamsoft.dbr.LocalizationResult](auxiliary-LocalizationResult.md)
-
-```java
-import com.dynamsoft.dbr.LocalizationResult;
-```
+## [LocalizationResult](auxiliary-LocalizationResult.md)
 
 `LocalizationResult` is the extension of the class [`TextResult`](auxiliary-TextResult.md). It stores the localization result information.
+
+```java
+class com.dynamsoft.dbr.LocalizationResult;
+```
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
@@ -70,14 +72,14 @@ if ( textresult != null && textresult.length != 0){
 }
 ```
 
-## [com.dynamsoft.dbr.ExtendedResult](auxiliary-ExtendedResult.md)
-
-```java
-import com.dynamsoft.dbr.ExtendedResult;
-```
+## [ExtendedResult](auxiliary-ExtendedResult.md)
 
 `ExtendedResult` is the extension of the class [`TextResult`](auxiliary-TextResult.md). It stores the extended result information.
-  
+
+```java
+class com.dynamsoft.dbr.ExtendedResult;
+```
+
 | Attribute | Type | Description |
 |---------- |------|-------------|
 | [`resultType`](auxiliary-ExtendedResult.md#resulttype) | *int* | The extended result type. |
@@ -102,14 +104,14 @@ if ( textresult != null && textresult.length != 0){
 }
 ```
 
-## [com.dynamsoft.dbr.AztecDetails](auxiliary-AztecDetails.md)
-
-```java
-import com.dynamsoft.dbr.AztecDetails;
-```
+## [AztecDetails](auxiliary-AztecDetails.md)
 
 `AztecDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the Aztec code details.
-  
+
+```java
+class com.dynamsoft.dbr.AztecDetails;
+```
+
 | Attribute | Type | Description |
 |---------- | -----|------ |
 | [`moduleSize`](auxiliary-AztecDetails.md#modulesize) | *int* | The barcode module size (the minimum bar width in pixel). |
@@ -122,14 +124,14 @@ import com.dynamsoft.dbr.AztecDetails;
 AztecDetails aztecDetails = (AztecDetails) textresult[i].detailedResult;
 ```
 
-## [com.dynamsoft.dbr.DataMatrixDetails](auxiliary-DataMatrixDetails.md)
-
-```java
-import com.dynamsoft.dbr.DataMatrixDetails;
-```
+## [DataMatrixDetails](auxiliary-DataMatrixDetails.md)
 
 `DataMatrixDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the DataMatrix code details.
-  
+
+```java
+class com.dynamsoft.dbr.DataMatrixDetails;
+```
+
 | Attribute | Type | Description |
 |---------- |-----|------|
 | [`moduleSize`](auxiliary-DataMatrixDetails.md#modulesize) | *int* | The barcode module size (the minimum bar width in pixel). |
@@ -144,13 +146,13 @@ import com.dynamsoft.dbr.DataMatrixDetails;
 DataMatrixDetails dataMatrixDetails = (DataMatrixDetails) textresult[i].detailedResult;
 ```
 
-## [com.dynamsoft.dbr.OneDCodeDetails](auxiliary-OneDCodeDetails.md)
-
-```java
-import com.dynamsoft.dbr.OneDCodeDetails;
-```
+## [OneDCodeDetails](auxiliary-OneDCodeDetails.md)
 
 `OneDCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the OneD code details.
+
+```java
+class com.dynamsoft.dbr.OneDCodeDetails;
+```
 
 | Attribute | Type | Description |
 |---------- |-----| ---- |
@@ -167,14 +169,14 @@ import com.dynamsoft.dbr.OneDCodeDetails;
 OneDCodeDetails oneDDetails = (OneDCodeDetails) textresult[i].detailedResult;
 ```
 
-## [com.dynamsoft.dbr.PDF417Details](auxiliary-PDF417Details.md)
-
-```java
-import com.dynamsoft.dbr.PDF417Details;
-```
+## [PDF417Details](auxiliary-PDF417Details.md)
 
 `PDF417Details` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the PDF417 code details.
-  
+
+```java
+class com.dynamsoft.dbr.PDF417Details;
+```
+
 | Attribute | Type | Description |
 |---------- |------|------------ |
 | [`moduleSize`](auxiliary-PDF417Details.md#modulesize) | *int* | The barcode module size (the minimum bar width in pixel). |
@@ -187,14 +189,14 @@ import com.dynamsoft.dbr.PDF417Details;
 PDF417Details pdf417Details = (PDF417Details) textresult[i].detailedResult;
 ```
 
-## [com.dynamsoft.dbr.QRCodeDetails](auxiliary-QRCodeDetails.md)
-
-```java
-import com.dynamsoft.dbr.QRCodeDetails;
-```
+## [QRCodeDetails](auxiliary-QRCodeDetails.md)
 
 `QRCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the QRCode details.
-  
+
+```java
+class com.dynamsoft.dbr.QRCodeDetails;
+```
+
 | Attribute | Type | Description |
 |---------- | ---- |-----|
 | [`moduleSize`](auxiliary-QRCodeDetails.md#modulesize) | *int* | The barcode module size (the minimum bar width in pixels). |
@@ -213,13 +215,13 @@ import com.dynamsoft.dbr.QRCodeDetails;
 QRCodeDetails qrDetails = (QRCodeDetails) textresult[i].detailedResult;
 ```
 
-## [com.dynamsoft.dbr.SamplingImageData](auxiliary-SamplingImageData.md)
-
-```java
-import com.dynamsoft.dbr.SamplingImageData;
-```
+## [SamplingImageData](auxiliary-SamplingImageData.md)
 
 `SamplingImageData` stores the detailed image data in `ExtendedResult`.
+
+```java
+class com.dynamsoft.dbr.SamplingImageData;
+```
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
