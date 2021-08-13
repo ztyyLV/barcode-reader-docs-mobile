@@ -11,7 +11,7 @@ noTitleIndex: true
 
 # API Reference - Android
 
-## BarcodeReader Methods
+## BarcodeReader Class
 
 ### Initialize and Destroy
 
