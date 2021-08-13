@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # BarcodeReader Class
 
-### Attributes
+## Attributes
   
   | Attribute | Type | Description |
   |---------- | ---- | ----------- |
