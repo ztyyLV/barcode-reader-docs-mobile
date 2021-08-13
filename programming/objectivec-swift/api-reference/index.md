@@ -132,7 +132,7 @@ breadcrumbText: iOS API Reference
 - [`iSamplingImageData`](auxiliary-iSamplingImageData.md)
 - [`iTextResult`](auxiliary-iTextResult.md)
 
-### Protocol
+## Protocol
 
   | Protocol | Description |
   | -------- | ----------- |
