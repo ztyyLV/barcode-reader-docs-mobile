@@ -10,6 +10,12 @@ noTitleIndex: true
 
 # BarcodeReader Class
 
+### Attributes
+  
+  | Attribute | Type | Description |
+  |---------- | ---- | ----------- |
+  | [`license`](#license) | *NSString\** | Stores the license used in DynamsoftBarcodeReader. |
+
 ## Initialize
   
   | Method               | Description |
