@@ -34,7 +34,7 @@ noTitleIndex: true
 
 ### New
 
-- Added new attributes [`isMirrored`]({{site.oc_class}}iTextResult.html#ismirrored) to the `iTextResultEx` class. `IsMirrored` returns whether the barcode is mirrored.
+- Added a new attribute [`isMirrored`]({{site.oc_class}}iTextResult.html#ismirrored) to the `iTextResultEx` class. `isMirrored` returns whether the barcode is mirrored.
 - Added a new attribute [`isDPM`]({{site.oc_class}}iTextResult.html#isdpm) to the `iTextResultEx` class. `isDPM` returns whether the barcode is recognized by the DPM mode.
 - Added a new argument, `ThresholdCompensation`, to the `BinarizationModes` mode arguments.
 
