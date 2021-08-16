@@ -12,8 +12,6 @@ noTitleIndex: true
 
 `iAztecDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the Aztec code details.
 
-## Typedefs
-
 ```objc
 @interface iAztecDetails
 ```

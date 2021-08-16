@@ -12,8 +12,6 @@ noTitleIndex: true
 
 Stores the quadrilateral.  
 
-## Typedefs
-
 ```objc
 @interface iQuadrilateral 
 ```  

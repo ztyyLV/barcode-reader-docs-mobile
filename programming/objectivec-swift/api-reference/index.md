@@ -9,21 +9,7 @@ noTitleIndex: true
 breadcrumbText: iOS API Reference
 ---
 
-# API Reference - Objective-C & Swift 
-
-## Attributes
-  
-| Attribute | Type |
-|---------- | ---- |
-| [`license`](#license) | *NSString\** |
-
-### license
-
-Stores the license used in DynamsoftBarcodeReader.
-
-```objc
-NSString* license
-```
+# API Reference - iOS
 
 ## BarcodeReader Class
 
@@ -32,12 +18,6 @@ NSString* license
   | Method               | Description |
   |----------------------|-------------|
   | [`init`](primary-initialize.md#init) | Create an instance of Dynamsoft Barcode Reader. |
-
-### Camera Enhancer
-  
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
 
 ### Decode
 
@@ -49,6 +29,23 @@ NSString* license
   | [`decodeBase64`](primary-decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
   | [`createIntermediateResult`](primary-decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
+
+### Camera Enhancer
+  
+   | Method               | Description |
+   |----------------------|-------------|
+   | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
+
+### License
+
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`license`](primary-license.md#license) | Stores the license used in DynamsoftBarcodeReader. |
+  | [`initWithLicense`](primary-license.md#initwithlicense) | Read product key and activate the SDK. |
+  | [`initWithLicenseFromServer`](primary-license.md#initwithlicensefromserver) | Initialize license and connect to the specified server for online verification. |
+  | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |
+  | [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`initLicenseFromLTS`](primary-license.md#initlicensefromlts) | `Deprecated`, please use [initLicenseFromDLS](primary-license.md#initlicensefromdls) instead. |
 
 ### Parameter and Runtime Settings
 
@@ -74,16 +71,6 @@ NSString* license
   | [`outputSettingsToFile`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
   | [`outputSettingsToString`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
 
-### License
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`initWithLicense`](primary-license.md#initwithlicense) | Read product key and activate the SDK. |
-  | [`initWithLicenseFromServer`](primary-license.md#initwithlicensefromserver) | Initialize license and connect to the specified server for online verification. |
-  | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
-  | [`initLicenseFromLTS`](primary-license.md#initlicensefromlts) | `Deprecated`, please use [initLicenseFromDLS](primary-license.md#initlicensefromdls) instead. |
-
 ### Result
 
   | Method               | Description |
@@ -107,14 +94,6 @@ NSString* license
   |----------------------|-------------|
   | [`getFrameDecodingParameters`](primary-video.md#getframedecodingparameters) | Initialize frame decoding parameter. |
 
-#### Delegate
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`setDBRErrorDelegate`](primary-video.md#setdbrerrordelegate) | Set callback function to process errors generated during frame decoding. |
-  | [`setDBRTextResultDelegate`](primary-video.md#setdbrtextresultdelegate) | Set callback function to process text results generated during frame decoding. |
-  | [`setDBRIntermediateResultDelegate`](primary-video.md#setdbrintermediateresultdelegate) | Set callback function to process intermediate results generated during frame decoding. |
-
 #### Status retrieval
 
   | Method               | Description |
@@ -123,7 +102,7 @@ NSString* license
 
 ## [Error Code]({{ site.enumerations }}error-code.html)
 
-## Classes
+## Auxiliary Classes
 
 - [`iAztecDetails`](auxiliary-iAztecDetails.md)
 - [`iContour`](auxiliary-iContour.md)
@@ -147,6 +126,16 @@ NSString* license
 - [`iRegionOfInterest`](auxiliary-iRegionOfInterest.md)
 - [`iSamplingImageData`](auxiliary-iSamplingImageData.md)
 - [`iTextResult`](auxiliary-iTextResult.md)
+
+## Protocol
+
+  | Protocol | Description |
+  | -------- | ----------- |
+  | [`DBRTextResultDelegate`]({{ site.oc_api }}protocol-dbrtextresultdelegate.html) | Protocol for a delegate to handle callback when text result returned. |
+  | [`DBRIntermediateResultDelegate`]({{ site.oc_api }}protocol-dbrintermediateresultdelegate.html) | Protocol for a delegate to handle callback when intermediate result returned. |
+  | [`DBRErrorDelegate`]({{ site.oc_api }}protocol-dbrerrordelegate.html) | Protocol for a delegate to handle callback when an error returned. |
+  | [`DBRServerLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dbrserverlicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |
+  | [`DMDLSLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |
 
 ## Enumerations
 

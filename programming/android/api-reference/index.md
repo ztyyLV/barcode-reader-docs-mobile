@@ -11,7 +11,7 @@ noTitleIndex: true
 
 # API Reference - Android
 
-## BarcodeReader Methods
+## BarcodeReader Class
 
 ### Initialize and Destroy
 
@@ -19,16 +19,6 @@ noTitleIndex: true
   |----------------------|-------------|
   | [`BarcodeReader`](primary-initialize-and-destroy.md#barcodereader) | Initialization of `BarcodeReader` object.|
   | [`destroy`](primary-initialize-and-destroy.md#destroy) | Destroys an instance of `BarcodeReader` object.|
-
-### Camera Enhancer
-  
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`StartCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Start using Dynamsoft Camera Enhancer |
-   | [`StopCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Stop using Dynamsoft Camera Enhancer |
-   | [`PauseCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
-   | [`ResumeCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Resume the process of Dynamsoft Camera Enhancer |
-   | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
 
 ### Decode
 
@@ -41,6 +31,16 @@ noTitleIndex: true
   | [`decodeBufferedImage`](primary-decode.md#decodebufferedimage) | Decodes barcode from a buffered image (bitmap). |
   | [`initIntermediateResult`](primary-decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
+
+### Camera Enhancer
+  
+   | Method               | Description |
+   |----------------------|-------------|
+   | [`StartCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Start using Dynamsoft Camera Enhancer |
+   | [`StopCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Stop using Dynamsoft Camera Enhancer |
+   | [`PauseCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
+   | [`ResumeCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Resume the process of Dynamsoft Camera Enhancer |
+   | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
 
 ### License
   
@@ -120,18 +120,9 @@ noTitleIndex: true
    |----------------------|-------------|
    | [`getLengthOfFrameQueue`](primary-video.md#getlengthofframequeue) | Get length of current inner frame queue. |
 
-## Interface
-
-  | Function | Description |
-  |----------|-------------|
-  | [`ErrorCallback`](interface.md#errorcallback) | Represents the method that will handle the error code returned by the SDK. |
-  | [`IntermediateResultCallback`](interface.md#intermediateresultcallback) | Represents the method that will handle the intermediate result array returned by the SDK. |
-  | [`TextResultCallback`](interface.md#cb_textresult) | Represents the method that will handle the text result array returned by the SDK. |
-  | [`DBRServerLicenseVerificationListener`](interface.md#dbrserverlicenseverificationlistener) | Represents the method that will handle callback when license server returns. |
-
 ## [Error Code]({{ site.enumerations }}error-code.html)
 
-## Classes
+## Auxiliary Classes
 
 - [`AztecDetails`](auxiliary-AztecDetails.md)
 - [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
@@ -155,6 +146,16 @@ noTitleIndex: true
 - [`RegionOfInterest`](auxiliary-RegionOfInterest.md)
 - [`SamplingImageData`](auxiliary-SamplingImageData.md)
 - [`TextResult`](auxiliary-TextResult.md)
+
+## Interfaces
+
+  | Interfaces | Description |
+  |----------|-------------|
+  | [`TextResultCallback`](interface-textresultcallback.md) | The interface to handle callback when text results are returned. |
+  | [`IntermediateResultCallback`](interface-intermediateresultcallback.md) | The interface to handle callback when intermediate results are returned. |
+  | [`ErrorCallback`](interface-errorcallback.md) | The interface to handle callback when an error is returned. |
+  | [`DBRServerLicenseVerificationListener`](interface-dbrserverlicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
+  | [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
 
 ## Enumerations
 

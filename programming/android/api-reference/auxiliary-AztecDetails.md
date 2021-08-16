@@ -9,13 +9,13 @@ noTitleIndex: true
 ---
 
 
-# Class AztecDetails
-
-```java
-import com.dynamsoft.dbr.AztecDetails;
-```
+# AztecDetails
 
 `AztecDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the Aztec code details.
+
+```java
+class com.dynamsoft.dbr.AztecDetails;
+```
 
 | Attribute | Type | Descriptions |
 |---------- | -----|------ |

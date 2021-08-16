@@ -15,7 +15,7 @@ noTitleIndex: true
 You can update most of the parameter settings through the `PublicRuntimeSettings` class.
 
 ```java
-import com.dynamsoft.dbr.PublicRuntimeSettings;
+class com.dynamsoft.dbr.PublicRuntimeSettings;
 ```
 
 | Attribute | Type | Descriptions |
@@ -45,6 +45,8 @@ import com.dynamsoft.dbr.PublicRuntimeSettings;
 | [`deblurModes`](auxiliary-PublicRuntimeSettings.md#deblurmodes) | *int\[\]* | Sets the mode and priority for deblurring. |
 | [`barcodeZoneMinDistanceToImageBorders`](auxiliary-PublicRuntimeSettings.md#barcodezonemindistancetoimageborders) | *int* | Sets the minimum distance (in pixels) between the barcode zone and image borders. |
 
+**Code Snippet**
+
 ```java
 PublicRuntimeSettings runtimeSettings = barcodeReader.getRuntimeSettings();
 // Make some settings here
@@ -57,7 +59,7 @@ barcodeReader.updateRuntimeSettings(runtimeSettings);
 `FurtherModes` is an extension of the `PublicRuntimeSettings` class. Through the `FurtherModes`, you can make advanced settings to process the image for barcode reading.
 
 ```java
-import com.dynamsoft.dbr.FurtherModes;
+class com.dynamsoft.dbr.FurtherModes;
 ```
 
 | Attribute | Type | Descriptions |
@@ -76,14 +78,18 @@ import com.dynamsoft.dbr.FurtherModes;
 | [`barcodeColourModes`](auxiliary-FurtherModes.md#barcodecolourmodes) | *int\[\]* | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
 | [`accompanyingTextRecognitionModes`](auxiliary-FurtherModes.md#accompanyingtextrecognitionmodes) | *int\[\]* | Sets the mode and priority to recognize accompanying text. |
 
+**Code Snippet**
+
 ```java
 FurtherModes furtherModes = runtimeSettings.furtherModes;
 ```
 
 ## [RegionDefinition](auxiliary-RegionDefinition.md)
 
+The class stores the defined region information.
+
 ```java
-import com.dynamsoft.dbr.RegionDefinition;
+class com.dynamsoft.dbr.RegionDefinition;
 ```
 
 | Attribute | Type | Descriptions |
@@ -94,6 +100,8 @@ import com.dynamsoft.dbr.RegionDefinition;
 | [`regionBottom`](auxiliary-RegionDefinition.md#regionbottom) | *int* | The Bottom-most coordinate or percentage of the region. |
 | [`regionMeasuredByPercentage`](auxiliary-RegionDefinition.md#regionmeasuredbypercentage) | *int* | Sets whether or not to use percentage to measure the region size. |
 
+**Code Snippet**
+
 ```java
 RegionDefinition regionDefinition = runtimeSettings.region;
 ```
@@ -103,7 +111,7 @@ RegionDefinition regionDefinition = runtimeSettings.region;
 The parameters that helps you on frame decoding.
 
 ```java
-import com.dynamsoft.dbr.FrameDecodingParameters;
+class com.dynamsoft.dbr.FrameDecodingParameters;
 ```
 
 | Attribute | Type | Descriptions |
@@ -126,7 +134,7 @@ import com.dynamsoft.dbr.FrameDecodingParameters;
 The parameters that helps you on configuring Dynamsoft Camera Enhancer in the Barcode Reader.
 
 ```java
-import com.dynamsoft.dbr.DCESettingParameters;
+class com.dynamsoft.dbr.DCESettingParameters;
 ```
 
 | Attribute | type | Description |
@@ -136,6 +144,8 @@ import com.dynamsoft.dbr.DCESettingParameters;
 | [`textResultCallback_UserData`](auxiliary-DCESettingParameters.md#textresultcallback_userdata) | *Object*  | Transfer user data. |
 | [`intermediateResultCallback`](auxiliary-DCESettingParameters.md#intermediateresultcallback) | [`IntermediateResultCallback`]({{site.android_api}}interface.html#intermediateresultcallback) | Set intermediate result callback. |
 | [`IntermediateResultCallback_UserData`](auxiliary-DCESettingParameters.md#intermediateresultcallback_userdata) | *Object* | Transfer user data. |
+
+**Code Snippet**
 
 ```java
 DCESettingParameters dceSettingParameters = new DCESettingParameters();

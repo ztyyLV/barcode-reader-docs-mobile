@@ -11,6 +11,8 @@ noTitleIndex: true
 
 ## [iTextResult](auxiliary-iTextResult.md)
 
+`iTextResult` is the class that stores the text result data.
+
 ```objc
 @interface iTextResult
 ```  
@@ -32,11 +34,11 @@ noTitleIndex: true
 
 ## [iLocalizationResult](auxiliary-iLocalizationResult.md)
 
+`iLocalizationResult` is the extension of the class [`iTextResult`](auxiliary-TextResult.md). It stores the localization result information.
+
 ```objc
 @interface iLocalizationResult
 ```  
-
-`LocalizationResult` is the extension of the class [`TextResult`](auxiliary-TextResult.md). It stores the localization result information.
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
@@ -58,12 +60,12 @@ noTitleIndex: true
 
 ## [iExtendedResult](auxiliary-iExtendedResult.md)
 
+`iExtendedResult` is the extension of the class [`iTextResult`](auxiliary-TextResult.md). It stores the extended result information.
+
 ```objc
 @interface iExtendedResult
 ```  
 
-`ExtendedResult` is the extension of the class [`TextResult`](auxiliary-TextResult.md). It stores the extended result information.
-  
 | Attribute | Type | Descriptions |
 |---------- |------|-------------|
 | [`resultType`](auxiliary-iExtendedResult.md#resulttype) | [`EnumResultType`]({{ site.enumerations }}result-enums.html#resulttype) | The extended result type. |
@@ -83,12 +85,12 @@ noTitleIndex: true
 
 ## [iAztecDetails](auxiliary-iAztecDetails.md)
 
+`iAztecDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `iTextResult`. It stores the Aztec code details.
+
 ```objc
 @interface iAztecDetails
 ```
 
-`AztecDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the Aztec code details.
-  
 | Attribute | Type | Descriptions |
 |---------- | -----|------ |
 | [`moduleSize`](auxiliary-iAztecDetails.md#modulesize) | *NSInteger* | The barcode module size (the minimum bar width in pixel). |
@@ -98,11 +100,11 @@ noTitleIndex: true
 
 ## [iDataMatrixDetails](auxiliary-iDataMatrixDetails.md)
 
+`iDataMatrixDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `iTextResult`. It stores the DataMatrix code details.
+
 ```objc
 @interface iDataMatrixDetails
 ```  
-
-`DataMatrixDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the DataMatrix code details.
 
 | Attribute | Type | Descriptions |
 |---------- |-----|------|
@@ -115,11 +117,11 @@ noTitleIndex: true
 
 ## [iOneDCodeDetails](auxiliary-iOneDCodeDetails.md)
 
+`iOneDCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `iTextResult`. It stores the OneD code details.
+
 ```objc
 @interface iOneDCodeDetails
 ```  
-
-`OneDCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the OneD code details.
 
 | Attribute | Type | Descriptions |
 |---------- |-----| ---- |
@@ -133,11 +135,11 @@ noTitleIndex: true
 
 ## [iPDF417Details](auxiliary-iPDF417Details.md)
 
+`iPDF417Details` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `iTextResult`. It stores the PDF417 code details.
+
 ```objc
 @interface iPDF417Details
 ```
-
-`PDF417Details` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the PDF417 code details.
 
 | Attribute | Type | Descriptions |
 |---------- |------|------------ |
@@ -148,12 +150,12 @@ noTitleIndex: true
 
 ## [iQRCodeDetails](auxiliary-iQRCodeDetails.md)
 
+`iQRCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `iTextResult`. It stores the QRCode details.
+
 ```objc
 @interface iQRCodeDetails
 ```  
 
-`QRCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the QRCode details.
-  
 | Attribute | Type | Descriptions |
 |---------- | ---- |-----|
 | [`moduleSize`](auxiliary-iQRCodeDetails.md#modulesize) | *NSInteger* | The barcode module size (the minimum bar width in pixels). |
@@ -169,11 +171,11 @@ noTitleIndex: true
 
 ## [iSamplingImageData](auxiliary-iSamplingImageData.md)
 
+`iSamplingImageData` stores the detailed image data in `iExtendedResult`.
+
 ```objc
 @interface iSamplingImageData
 ```  
-
-`SamplingImageData` stores the detailed image data in `ExtendedResult`.
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |

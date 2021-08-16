@@ -9,14 +9,14 @@ noTitleIndex: true
 ---
 
 
-# Class BarcodeReaderException
-
-```java
-import com.dynamsoft.dbr.BarcodeReaderException;
-```
+# BarcodeReaderException
 
 Exception for signalling barcode reader errors.
-  
+
+```java
+class com.dynamsoft.dbr.BarcodeReaderException;
+```
+
 | Method | Type | Description |
 |--------|------|-------------|
 | [`getErrorCode`](#geterrorcode)| *int* | Get the error code |

@@ -12,8 +12,6 @@ noTitleIndex: true
 
 Stores the image data.  
 
-## Typedefs
-
 ```objc
 @interface iImageData
 ```

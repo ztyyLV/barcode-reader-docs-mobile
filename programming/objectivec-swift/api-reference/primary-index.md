@@ -27,7 +27,7 @@ noTitleIndex: true
   | [`createIntermediateResult`](primary-decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
-### Camera Enhancer
+## Camera Enhancer
   
    | Method               | Description |
    |----------------------|-------------|
@@ -37,6 +37,7 @@ noTitleIndex: true
 
   | Method               | Description |
   |----------------------|-------------|
+  | [`license`](primary-license.md#license) | Stores the license used in DynamsoftBarcodeReader. |
   | [`initWithLicense`](primary-license.md#initwithlicense) | Read product key and activate the SDK. |
   | [`initWithLicenseFromServer`](primary-license.md#initwithlicensefromserver) | Initialize license and connect to the specified server for online verification. |
   | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |

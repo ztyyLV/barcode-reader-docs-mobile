@@ -22,35 +22,35 @@ This page illustrates the controlling of `Dynamsoft Camera Enhancer`. To get a b
 
 ## StartCameraEnhancer
 
-APIs that controlling the start of `Dynamsoft Camera Enhancer`.
+The API that controlling the start of `Dynamsoft Camera Enhancer`.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.StartCameraEnhancer()
+void StartCameraEnhancer()
 ```
 
 **Code Snippet**
 
 ```java
-    reader.StartCameraEnhancer();
+reader.StartCameraEnhancer();
 ```
 
 ## StopCameraEnhancer
 
-APIs that controlling the start of `Dynamsoft Camera Enhancer`.
+The API that controlling the start of `Dynamsoft Camera Enhancer`.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.StopCameraEnhancer()
+void StopCameraEnhancer()
 ```
 
 **Code Snippet**
 
 ```java
-    reader.StopCameraEnhancer();
+reader.StopCameraEnhancer();
 ```
 
 ## PauseCameraEnhancer
 
-APIs that controlling the pause of `Dynamsoft Camera Enhancer`.
+The API that controlling the pause of `Dynamsoft Camera Enhancer`.
 
 ```java
 void com.dynamsoft.dbr.BarcodeReader.PauseCameraEnhancer()
@@ -64,10 +64,10 @@ reader.PauseCameraEnhancer();
 
 ## ResumeCameraEnhancer
 
-APIs that controlling the resume of `Dynamsoft Camera Enhancer`.
+The API that controlling the resume of `Dynamsoft Camera Enhancer`.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.ResumeCameraEnhancer()
+void ResumeCameraEnhancer()
 ```
 
 **Code Snippet**
@@ -81,7 +81,7 @@ reader.ResumeCameraEnhancer();
 Set the CameraEnhancer parameters.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.ResumeCameraEnhancer()
+void SetCameraEnhancerParam(DCESettingParameters _param)
 ```
 
 **Parameters**
@@ -90,18 +90,14 @@ void com.dynamsoft.dbr.BarcodeReader.ResumeCameraEnhancer()
 [`textResultCallback`](interface.md#textresultcallback): The text result callback.  
 [`intermediateResultCallback`](interface.md#intermediateresultcallback): The intermediate result callback.
 
-**Exceptions**
-
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
-
 **Code Snippet**
 
 ```java
-    DCESettingParameters dceSettingParameters = new DCESettingParameters();
-    dceSettingParameters._cameraInstance = mCameraEnhancer;
-    dceSettingParameters._textResultCallback = mTextResultCallback;
-    dceSettingParameters._irtCallback = mIntermediateResultCallback;
-    reader.SetCameraEnhancerParam(dceSettingParameters);
+DCESettingParameters dceSettingParameters = new DCESettingParameters();
+dceSettingParameters.cameraInstance = mCameraEnhancer;
+dceSettingParameters.textResultCallback = mTextResultCallback;
+dceSettingParameters.intermediateResultCallback = mIntermediateResultCallback;
+reader.SetCameraEnhancerParam(dceSettingParameters);
 ```
 
 **See Also**

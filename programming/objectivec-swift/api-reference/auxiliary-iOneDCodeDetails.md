@@ -11,8 +11,6 @@ noTitleIndex: true
 
 `iOneDCodeDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the OneD code details.
 
-## Typedefs
-
 ```objc
 @interface iOneDCodeDetails
 ```  

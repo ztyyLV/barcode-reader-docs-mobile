@@ -22,7 +22,7 @@ noTitleIndex: true
 Get intermediate results containing the original image, the color clustered image, the binarized Image, contours, Lines, TextBlocks, etc.
 
 ```java
-IntermediateResult[] com.dynamsoft.dbr.BarcodeReader.getIntermediateResults() throws BarcodeReaderException 
+IntermediateResult[] getIntermediateResults() throws BarcodeReaderException 
 ```
 
 **Return Value**
@@ -50,7 +50,7 @@ reader.destroy();
 The text results will be verified before output if the result verification is enabled.
 
 ```java
-IntermediateResult[] com.dynamsoft.dbr.BarcodeReader.enableResultVerification() throws BarcodeReaderException 
+IntermediateResult[] enableResultVerification() throws BarcodeReaderException 
 ```
 
 **Exceptions**
@@ -70,7 +70,7 @@ boolean x = reader.getEnableResultVerificationStatus();
 The duplicated text result will be filtered. The barcode reader will not output the result for the same barcode a second time in 3 seconds.
 
 ```java
-IntermediateResult[] com.dynamsoft.dbr.BarcodeReader.enableDuplicateFilter() throws BarcodeReaderException
+IntermediateResult[] enableDuplicateFilter() throws BarcodeReaderException
 ```
 
 **Exceptions**

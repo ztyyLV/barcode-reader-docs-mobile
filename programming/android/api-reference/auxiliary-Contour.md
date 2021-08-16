@@ -9,14 +9,14 @@ noTitleIndex: true
 ---
 
 
-# Class Contour
-
-```java
-import com.dynamsoft.dbr.Contour;
-```
+# Contour
 
 The `Contour` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
-  
+
+```java
+class com.dynamsoft.dbr.Contour;
+```
+
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
 | [`points`](#points) | [`Point`](auxiliary-Point.md)[] | The array of the points that surround the barcode area. |

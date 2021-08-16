@@ -9,9 +9,13 @@ noTitleIndex: true
 ---
 
 
-# Class FrameDecodingParameters
+# FrameDecodingParameters
 
 Defines a struct to configure the frame decoding Parameters.  
+
+```java
+class com.dynamsoft.dbr.FrameDecodingParameters
+```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |

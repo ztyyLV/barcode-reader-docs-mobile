@@ -11,8 +11,6 @@ noTitleIndex: true
 
 `iExtendedResult` is the extension of the class [`iTextResult`](auxiliary-iTextResult.md). It stores the extended result information.
 
-## Typedefs
-
 ```objc
 @interface iExtendedResult
 ```  

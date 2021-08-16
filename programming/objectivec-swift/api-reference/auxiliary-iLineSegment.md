@@ -12,8 +12,6 @@ noTitleIndex: true
 
 Stores line segment data.
 
-## Typedefs
-
 ```objc
 @interface iLineSegment
 ```  

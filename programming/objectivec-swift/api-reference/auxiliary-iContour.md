@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The iContour is one of the [`results`](auxiliary-iIntermediateResult.md#results) type in `iIntermediateResult`.
 
-## Typedefs
-
 ```objc
 @interface iContour
 ```

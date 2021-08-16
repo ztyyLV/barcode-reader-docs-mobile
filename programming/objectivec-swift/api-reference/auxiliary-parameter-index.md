@@ -10,9 +10,9 @@ noTitleIndex: true
 
 # Parameter Configuration Classes
 
-## [PublicRuntimeSettings](auxiliary-iPublicRuntimeSettings.md)
+## [iPublicRuntimeSettings](auxiliary-iPublicRuntimeSettings.md)
 
-You can update most of the parameter settings through the `PublicRuntimeSettings` class.
+You can update most of the parameter settings through the `iPublicRuntimeSettings` class.
 
 ```objc
 @interface iPublicRuntimeSettings
@@ -46,7 +46,7 @@ You can update most of the parameter settings through the `PublicRuntimeSettings
 | [`deblurModes`](auxiliary-iPublicRuntimeSettings.md#deblurmodes) | *NSArray\** | Sets the mode and priority for deblurring. |
 | [`barcodeZoneMinDistanceToImageBorders`](auxiliary-iPublicRuntimeSettings.md#barcodezonemindistancetoimageborders) | *NSInteger* | Sets the minimum distance (in pixels) between the barcode zone and image borders. |
 
-## [FurtherModes](auxiliary-iFurtherModes.md)
+## [iFurtherModes](auxiliary-iFurtherModes.md)
 
 `FurtherModes` is an extension of the `PublicRuntimeSettings` class. Through the `FurtherModes`, you can make advanced settings to process the image for barcode reading.
 
@@ -69,7 +69,7 @@ You can update most of the parameter settings through the `PublicRuntimeSettings
 | [`barcodeColourModes`](auxiliary-iFurtherModes.md#barcodecolourmodes) | *NSArray*\* | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
 | [`accompanyingTextRecognitionModes`](auxiliary-iFurtherModes.md#accompanyingtextrecognitionmodes) | *NSArray*\* | Sets the mode and priority to recognize accompanying text. |
 
-## [RegionDefinition](auxiliary-iRegionDefinition.md)
+## [iRegionDefinition](auxiliary-iRegionDefinition.md)
 
 Stores the region information.
 
@@ -85,7 +85,7 @@ Stores the region information.
 | [`regionBottom`](auxiliary-iRegionDefinition.md#regionbottom) | *NSInteger* | The Bottom-most coordinate or percentage of the region. |
 | [`regionMeasuredByPercentage`](auxiliary-iRegionDefinition.md#regionmeasuredbypercentage) | *NSInteger* | Sets whether or not to use percentage to measure the region size. |
 
-## [FrameDecodingParameters](auxiliary-iFrameDecodingParameters.md)
+## [iFrameDecodingParameters](auxiliary-iFrameDecodingParameters.md)
 
 The parameters that helps you on frame decoding.
 
@@ -108,12 +108,12 @@ The parameters that helps you on frame decoding.
 | [`clarityCalculationMethod`](auxiliary-iFrameDecodingParameters.md#claritycalculationmethod) | [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) | Sets the method used for calculating the clarity of the frames. |
 | [`clarityFilterMode`](auxiliary-iFrameDecodingParameters.md#clarityfiltermode) | [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) | Sets the mode used for filtering frames by calculated clarity. |
 
-## [DCESettingParameters](auxiliary-iDCESettingParameters.md)
+## [iDCESettingParameters](auxiliary-iDCESettingParameters.md)
 
 The parameters that helps you on configuring Dynamsoft Camera Enhancer in the Barcode Reader.
 
 ```objc
-DCESettingParameters* para = [[DCESettingParameter alloc] init];
+@interface iDCESettingParameters
 ```
 
 | Attribute | type | Descriptions |
@@ -123,10 +123,3 @@ DCESettingParameters* para = [[DCESettingParameter alloc] init];
 | [`textResultData`](auxiliary-iDCESettingParameters.md#textresultdata) | *NSObject* | Transfer user data. |
 | [`intermediateResultDelegate`](auxiliary-iDCESettingParameters.md#intermediateresultdelegate) | *DBRIntermediateResultDelegate* | Set intermediate result callback. |
 | [`intermediateResultData`](auxiliary-iDCESettingParameters.md#intermediateresultdata) | *NSObject* | Transfer user data. |
-
-```objc
-let para = DCESettingParameters.init()
-para.cameraInstance = dce
-para.textResultDelegate = self
-barcodeReader.setCameraEnhancerPara(para)
-```

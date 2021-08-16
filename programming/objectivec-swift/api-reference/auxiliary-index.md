@@ -8,7 +8,7 @@ breadcrumbText: Auxiliary Class
 noTitleIndex: true
 ---
 
-# Objective-C & Swift Classes
+# iOS Auxiliary Classes
 
 ## [License Class](auxiliary-iDMDLSConnectionParameters.md)
 

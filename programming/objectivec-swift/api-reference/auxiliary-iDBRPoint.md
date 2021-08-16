@@ -12,8 +12,6 @@ noTitleIndex: true
 
 Stores an x- and y-coordinate pair in two-dimensional space.
 
-## Typedefs
-
 ```objc
 @interface iDBRPoint
 ```

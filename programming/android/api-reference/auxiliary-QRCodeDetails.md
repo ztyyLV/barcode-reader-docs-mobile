@@ -9,13 +9,13 @@ noTitleIndex: true
 ---
 
 
-# Class QRCodeDetails
-
-```java
-import com.dynamsoft.dbr.QRCodeDetails;
-```
+# QRCodeDetails
 
 `QRCodeDetails` is one of the [`detailedResult`](class-TextResult.md#detailedresult) in class `TextResult`. It stores the QRCode details.
+
+```java
+class com.dynamsoft.dbr.QRCodeDetails;
+```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |

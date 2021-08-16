@@ -12,8 +12,6 @@ noTitleIndex: true
 
 `iDataMatrixDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the DataMatrix code details.
 
-## Typedefs
-
 ```objc
 @interface iDataMatrixDetails
 ```  

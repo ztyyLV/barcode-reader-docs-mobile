@@ -12,6 +12,10 @@ noTitleIndex: true
 
 Defines a struct to configure the parameters to connect to the license server.  
 
+```objc
+@interface iDMDLSConnectionParameters
+```
+
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |
 | [`mainServerURL`](#mainserverurl) | *NSString\** | The URL of the Dynamsoft License Server. |

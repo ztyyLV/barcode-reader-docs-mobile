@@ -11,6 +11,10 @@ noTitleIndex: true
 
 Stores the iDCESettingParameters information.
 
+```objc
+@interface iDCESettingParameters
+```
+
 | Attribute | type | Descriptions |
 |-----------|------| ------------ |
 | [`cameraInstance`](#camerainstance) | *DynamsoftCameraEnhancer* | The Camera Enhancer instance |
@@ -37,9 +41,9 @@ DBRTextResultDelegate* textResultDelegate
 
 The `textResultDelegate` includes the following Parameters:
 
-`frame`: The frame data.
-`frameID`: The ID of frame.
-`results`: The recognized barcode result of the frame.
+`frame`: The frame data.  
+`frameID`: The ID of frame.  
+`results`: The recognized barcode result of the frame.  
 `userData`: Arguments passed to your function.
 
 ## textResultData
@@ -60,8 +64,8 @@ DBRIntermediateResultDelegate* intermediateResultDelegate
 
 The `intermediateResultDelegate` includes the following Parameters:
 
-`frameID`: The ID of frame.
-`results`: The intermediate result of the frame.
+`frameID`: The ID of frame.  
+`results`: The intermediate result of the frame.  
 `userData`: Arguments passed to your function.
 
 ## intermediateResultData

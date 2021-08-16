@@ -25,7 +25,7 @@ noTitleIndex: true
 Sets the optional argument for a specified mode in Modes parameters.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.setModeArgument(String modesName, int index, String argumentName, String argumentValue) throws BarcodeReaderException
+void setModeArgument(String modesName, int index, String argumentName, String argumentValue) throws BarcodeReaderException
 ```
 
 **Parameters**
@@ -72,7 +72,7 @@ Check the available modes and arguments below:
 Gets the optional argument for a specified mode in Modes parameters.
 
 ```java
-String com.dynamsoft.dbr.BarcodeReader.getModeArgument(String modesName, int index, String argumentName) throws BarcodeReaderException
+String getModeArgument(String modesName, int index, String argumentName) throws BarcodeReaderException
 ```
 
 **Parameters**
@@ -123,7 +123,7 @@ Check the available modes and arguments below:
 Get current settings and save them into a [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct.
 
 ```java
-PublicRuntimeSettings com.dynamsoft.dbr.BarcodeReader.getRuntimeSettings() throws BarcodeReaderException
+PublicRuntimeSettings getRuntimeSettings() throws BarcodeReaderException
 ```
 
 **Return Value**
@@ -147,7 +147,7 @@ reader.destroy();
 Update runtime settings with a given [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.updateRuntimeSettings(PublicRuntimeSettings settings) throws BarcodeReaderException
+void updateRuntimeSettings(PublicRuntimeSettings settings) throws BarcodeReaderException
 ```
 
 **Parameters**
@@ -173,7 +173,7 @@ reader.destroy();
 Reset all parameters to default values.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.resetRuntimeSettings() throws BarcodeReaderException
+void resetRuntimeSettings() throws BarcodeReaderException
 ```
 
 **Exceptions**

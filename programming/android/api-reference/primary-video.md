@@ -28,7 +28,7 @@ noTitleIndex: true
 Start a new thread to decode barcodes from the inner frame queue with specific frame decoding setting passed in.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.startFrameDecoding (final int maxQueueLength, final int maxResultQueueLength, final int width, final int height, final int stride, final int enumImagePixelFormat, final String templateName) throws BarcodeReaderException
+void startFrameDecoding (final int maxQueueLength, final int maxResultQueueLength, final int width, final int height, final int stride, final int enumImagePixelFormat, final String templateName) throws BarcodeReaderException
 ```
 
 **Parameters**
@@ -63,7 +63,7 @@ reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYS
 Start a new thread to decode barcodes from the inner frame queue with specific frame decoding setting defined in [`FrameDecodingParameters`](auxiliary-FrameDecodingParameters.md) struct.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.startFrameDecodingEx(FrameDecodingParameters parameters, String templateName) throws BarcodeReaderException
+void startFrameDecodingEx(FrameDecodingParameters parameters, String templateName) throws BarcodeReaderException
 ```
 
 **Parameters**
@@ -101,7 +101,7 @@ reader.destroy();
 Append a frame image buffer to the inner frame queue.  
 
 ```java
-int com.dynamsoft.dbr.BarcodeReader.appendFrame(byte[] bufferBytes)
+int appendFrame(byte[] bufferBytes)
 ```
 
 **Parameters**
@@ -126,7 +126,7 @@ reader.destroy();
 Stop the frame decoding thread created by [`StartFrameDecoding`](#startframedecoding) or [`StartFrameDecodingEx`](#startframedecodingex).
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.stopFrameDecoding() throws BarcodeReaderException
+void stopFrameDecoding() throws BarcodeReaderException
 ```  
 
 **Exceptions**
@@ -147,7 +147,7 @@ reader.destroy();
 Initialize frame decoding parameters with default values.
 
 ```java
-FrameDecodingParameters com.dynamsoft.dbr.BarcodeReader.initFrameDecodingParameters() throws BarcodeReaderException
+FrameDecodingParameters initFrameDecodingParameters() throws BarcodeReaderException
 ```
 
 **Return Value**
@@ -171,7 +171,7 @@ reader.destroy();
 Set callback interface to process errors generated during frame decoding.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.setErrorCallback(ErrorCallback errorCallback, Object userData) throws BarcodeReaderException
+void setErrorCallback(ErrorCallback errorCallback, Object userData) throws BarcodeReaderException
 ```
 
 **Parameters**
@@ -201,7 +201,7 @@ reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYS
 Set callback interface to process text results generated during frame decoding.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.setTextResultCallback(TextResultCallback textResultCallback, Object userData) throws BarcodeReaderException
+void setTextResultCallback(TextResultCallback textResultCallback, Object userData) throws BarcodeReaderException
 ```
 
 **Parameters**
@@ -231,7 +231,7 @@ reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYS
 Set callback interface to process intermediate results generated during frame decoding.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.setIntermediateResultCallback(IntermediateResultCallback intermediateResultCallback, Object userData} throws BarcodeReaderException
+void setIntermediateResultCallback(IntermediateResultCallback intermediateResultCallback, Object userData} throws BarcodeReaderException
 ```
 
 **Parameters**
@@ -264,7 +264,7 @@ reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYS
 Get length of current inner frame queue.
 
 ```java
-int com.dynamsoft.dbr.BarcodeReader.getLengthOfFrameQueue()
+int getLengthOfFrameQueue()
 ```
 
 **Return Value**

@@ -12,8 +12,6 @@ noTitleIndex: true
 
 `iQRCodeDetails` is one of the [`detailedResult`](class-iTextResult.md#detailedresult) in class `iTextResult`. It stores the QRCode details.
 
-## Typedefs
-
 ```objc
 @interface iQRCodeDetails
 ```  

@@ -12,11 +12,11 @@ noTitleIndex: true
 
 ## [Point](auxiliary-Point.md)
 
-```java
-import com.dynamsoft.dbr.Point;
-```
-
 The point class Stores the x and y coordinate of the points.
+
+```java
+class com.dynamsoft.dbr.Point;
+```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |
@@ -28,7 +28,7 @@ The point class Stores the x and y coordinate of the points.
 This class stores the quadrilateral points data.
 
 ```java
-import com.dynamsoft.dbr.Point;
+class com.dynamsoft.dbr.Quadrilateral;
 ```
 
 | Attribute | Type | Descriptions |
@@ -40,7 +40,7 @@ import com.dynamsoft.dbr.Point;
 This class stores the region data. You can make settings on scan region through this class.
 
 ```java
-import com.dynamsoft.dbr.RegionDefinition;
+class com.dynamsoft.dbr.RegionDefinition;
 ```
 
 | Attribute | Type | Descriptions |

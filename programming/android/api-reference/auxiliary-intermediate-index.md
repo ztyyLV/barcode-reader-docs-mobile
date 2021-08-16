@@ -12,6 +12,12 @@ noTitleIndex: true
 
 ## [IntermediateResult](auxiliary-IntermediateResult.md)
 
+`IntermediateResult` is the class that stores the intermediate result data.
+
+```java
+class com.dynamsoft.dbr.IntermediateResult;
+```
+
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
 | [`results`](auxiliary-IntermediateResult.md#results) | *Object\[\]* | One of the following types: Array of [`Contour`](auxiliary-Contour.md), Array of [`ImageData`](auxiliary-ImageData.md), Array of [`LineSegment`](auxiliary-LineSegment.md), Array of [`LocalizationResult`](auxiliary-LocalizationResult.md), Array of [`RegionOfInterest`](auxiliary-RegionOfInterest.md). |
@@ -45,6 +51,8 @@ noTitleIndex: true
 | [`frameId`](auxiliary-IntermediateResult.md#frameid) | *int* | The ID of the operated frame. |
 | [`rpmColourArgumentIndex`](auxiliary-IntermediateResult.md#rpmcolourargumentindex) | *int* | The index of the rpm colour argument. |
 
+**Code Snippet**
+
 ```java
 barcodeReader.initIntermediateResults(EnumIntermediateResultType.IRT_ORIGINAL_IMAGE);
 IntermediateResult[] intermediateResults = barcodeReader.getIntermediateResults();
@@ -52,15 +60,17 @@ IntermediateResult[] intermediateResults = barcodeReader.getIntermediateResults(
 
 ## [Contour](auxiliary-Contour.md)
 
-```java
-import com.dynamsoft.dbr.Contour;
-```
-
 `contour` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
+
+```java
+class com.dynamsoft.dbr.Contour;
+```
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
 | [`points`](auxiliary-Contour.md#points) | *Point\[\]* | The array of the points that surround the barcode area. |
+
+**Code Snippet**
 
 ```java
 Contour[] contours = (Contour[]) intermediateResults[i].results;
@@ -68,11 +78,11 @@ Contour[] contours = (Contour[]) intermediateResults[i].results;
 
 ## [ImageData](auxiliary-ImageData.md)
 
-```java
-import com.dynamsoft.dbr.ImageData;
-```
-
 `ImageData` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
+
+```java
+class com.dynamsoft.dbr.ImageData;
+```
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
@@ -82,23 +92,27 @@ import com.dynamsoft.dbr.ImageData;
 | [`stride`](auxiliary-ImageData.md#stride) | *int* | The stride (or scan width) of the image. |
 | [`format`](auxiliary-ImageData.md#format) | *int* | The image pixel format used in the image byte array. |
 
+**Code Snippet**
+
 ```java
 ImageData[] imageData = (ImageData[]) intermediateResults[i].results;
 ```
 
 ## [LineSegment](auxiliary-LineSegment.md)
 
-```java
-import com.dynamsoft.dbr.LineSegment;
-```
-
 `LineSegment` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
+
+```java
+class com.dynamsoft.dbr.LineSegment;
+```
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
 | [`startPoint`](auxiliary-LineSegment.md#startpoint) | [`Point`](auxiliary-Point.md) | The start point of the line segment. |
 | [`endPoint`](auxiliary-LineSegment.md#endpoint) | [`Point`](auxiliary-Point.md) | The end point of the line segment. |
 | [`linesConfidenceCoefficients`](auxiliary-LineSegment.md#linesconfidencecoefficients) | *byte\[\]* | The confidence coefficients for lines. |
+
+**Code Snippet**
 
 ```java
 LineSegment[] lineSegment = (LineSegment[]) intermediateResults[i].results;
@@ -109,7 +123,7 @@ LineSegment[] lineSegment = (LineSegment[]) intermediateResults[i].results;
 `RegionOfInterest` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
 
 ```java
-import com.dynamsoft.dbr.LineSegment;
+class com.dynamsoft.dbr.RegionOfInterest;
 ```
 
 | Attribute | Type | Description |
@@ -118,6 +132,8 @@ import com.dynamsoft.dbr.LineSegment;
 | [`point`](#point) | [`Point`](auxiliary-Point.md) | The left top point of the region. |
 | [`width`](#width) | *int* | The width of the region. |
 | [`height`](#height) | *int* | The height of the region. |
+
+**Code Snippet**
 
 ```java
 RegionOfInterest[] regionOfInterest = (RegionOfInterest[]) intermediateResults[i].results;
@@ -128,7 +144,7 @@ RegionOfInterest[] regionOfInterest = (RegionOfInterest[]) intermediateResults[i
 View more in [TextResult >> LocalizationResult](auxiliary-LocalizationResult.md)
 
 ```java
-import com.dynamsoft.dbr.LocalizationResult;
+class com.dynamsoft.dbr.LocalizationResult;
 ```
 
 `LocalizationResult` can be the extension of class [`TextResult`](auxiliary-TextResult.md) and class [`IntermediateResult`](auxiliary-IntermediateResult.md). It stores the localization result information.
@@ -149,6 +165,8 @@ import com.dynamsoft.dbr.LocalizationResult;
 | [`resultCoordinateType`](auxiliary-LocalizationResult.md#resultcoordinatetype) | *int* | The coordinate type. |
 | [`accompanyingTextBytes`](auxiliary-LocalizationResult.md#accompanyingtextbytes) | *byte\[\]* | The accompanying text content in a byte array. |
 | [`confidence`](auxiliary-LocalizationResult.md#confidence) | *int* | The confidence of the localization result. |
+
+**Code Snippet**
 
 ```java
 LocalizationResult[] localizationResult = (LocalizationResult[]) intermediateResults[i].results;
