@@ -10,12 +10,6 @@ noTitleIndex: true
 
 # BarcodeReader Class
 
-## Attributes
-  
-  | Attribute | Type | Description |
-  |---------- | ---- | ----------- |
-  | [`license`](#license) | *NSString\** | Stores the license used in DynamsoftBarcodeReader. |
-
 ## Initialize
   
   | Method               | Description |
@@ -43,6 +37,7 @@ noTitleIndex: true
 
   | Method               | Description |
   |----------------------|-------------|
+  | [`license`](primary-license.md#license) | Stores the license used in DynamsoftBarcodeReader. |
   | [`initWithLicense`](primary-license.md#initwithlicense) | Read product key and activate the SDK. |
   | [`initWithLicenseFromServer`](primary-license.md#initwithlicensefromserver) | Initialize license and connect to the specified server for online verification. |
   | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |

@@ -11,6 +11,7 @@ noTitleIndex: true
 
   | Method               | Description |
   |----------------------|-------------|
+  | [`license`](#license) | Stores the license used in DynamsoftBarcodeReader. |
   | [`initWithLicense`](#initwithlicense) | Initializes DynamsoftBarcodeReader with a license. |
   | [`initWithLicenseFromServer`](#initwithlicensefromserver) | Initialize license and connect to the specified server for online verification. |
   | [`outputLicenseToString`](#outputlicensetostring) | Outputs the license content as an encrypted string from the license server to be used for offline license verification. |
@@ -18,6 +19,14 @@ noTitleIndex: true
   | [`initLicenseFromLTS`](#initlicensefromlts) | `Deprecated`, please use [initLicenseFromDLS](#initlicensefromdls) instead. |
 
   ---
+
+## license
+
+A property that stores the license.
+
+```objc
+@property (nonatomic, nonnull) NSString* license;
+```
 
 ## initWithLicense
 
