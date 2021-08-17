@@ -30,8 +30,7 @@ class com.dynamsoft.dbr.PublicRuntimeSettings;
 | [`binarizationModes`](#binarizationmodes) | *int\[\]* | Sets the mode and priority for binarization. |
 | [`localizationModes`](#localizationmodes) | *int\[\]* | Sets the mode and priority for localization algorithms. |
 | [`furtherModes`](#furthermodes) | [`FurtherModes`](auxiliary-FurtherModes.md) | Further modes settings. Please read more in [`FurtherModes`](auxiliary-FurtherModes.md) class. |
-| [`deblurLevel`](#deblurlevel) | *int* | Sets the degree of blurriness of the barcode.
- |
+| [`deblurLevel`](#deblurlevel) | *int* | Sets the degree of blurriness of the barcode. |
 | [`intermediateResultTypes`](#intermediateresulttypes) | *int* | Sets which types of intermediate result to be kept for further reference. |
 | [`intermediateResultSavingMode`](#intermediateresultsavingmode) | *int* | Sets the mode for saving intermediate result. |
 | [`resultCoordinateType`](#resultcoordinatetype) | *int* | Specifies the format for the coordinates returned. |
