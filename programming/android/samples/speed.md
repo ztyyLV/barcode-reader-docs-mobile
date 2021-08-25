@@ -9,7 +9,7 @@ breadcrumbText: Best Speed
 
 # Speed-first Settings
 
-The Speed-first Settings sample illustrates how to improve the speed performance of the barcode decoding apps. Generally, users can improve the barcode decoding speed by reducing the size of the scan region or simplifying the complexity of the barcode settings. Further more, for certain scenarios, configuring parameter settings also contributes to the barcode reading speed. In this page, you will be guide on how to make personalized speed-friendly parameter settings for your barcode decoding app.
+The Speed-first Settings sample illustrates how to improve the speed performance of the barcode decoding apps. Generally, users can improve the barcode decoding speed by reducing the size of the scan region or simplifying the complexity of the barcode settings. Furthermore, for certain scenarios, configuring parameter settings also contributes to the barcode reading speed. On this page, you will be guided on how to make personalized speed-friendly parameter settings for your barcode decoding app.
 
 View the sample
 
@@ -17,9 +17,14 @@ View the sample
 
 ## Size of the Scan Region
 
-Reducing the scan region size is the most efficive way to speed up on the barcode reading. To reduce the scan region size, you can make settings on the border of the scan region via `PublicRuntimeSettings` and `RegionDefinition` class.
+Reducing the scan region size is the most effective way to speed up the barcode reading. To reduce the scan region size, you can restrict the border of the scan region via `PublicRuntimeSettings` and `RegionDefinition` classes. Displaying the scan region on the UI can also guide the users to manually approach the barcode area.
 
-## The Barcode Setting
+<div align="center">
+    <p><img src="assets/region-definition.png" width="70%" alt="region-def"></p>
+    <p>Reduce the Size of Scan Area</p>
+</div>
+
+## Simplify the Barcode Setting
 
 **The barcode count**
 
@@ -27,20 +32,18 @@ Normally, the barcode reader will try different parameter combinations to find a
 
 **The barcode format**
 
+The barcode reader will switch between the preset barcode formats until it finds as many barcodes as the expected value. Supporting more barcode formats will benefit the coverage of your app but at the same time be negative on the reading speed. Please confirm that you have set the supporting barcode formats exactly the same as your expected usage scenario. So that you can enable your app to reach the balance between speed and coverage.
 
+## Parameter Control
 
-## BarcodeFormat
+**LocalizationModes**
 
-The barcode reader will try all the preset barcode formats until it finds as many barcodes as the expected value. Supporting more barcode formats will definitely improve the read rate of your app on unknown usage scenarios. However, the reading speed will be sharply declined as well. If the supporting scope of your app is confirmed, please make sure to set the barcode format parameter exactly the same as your scope. This can save your computing resource to the greatest extent and help your app on improving its decoding speed.
+**BinarizationModes**
 
-## LocalizationModes
-
-The Barcode Reader has several different barcode localization methods. Users can set the localization modes via the parameter `LocalizationModes`. The selection of localization mode can effectively improve the decoding speed.
+**ColourConversionModes**
 
 ## Templates
 
-### For single barcode scanning
+**For single barcode scanning**
 
-### For single barcode continuous scanning
-
-### For general usage
+**For general usage**

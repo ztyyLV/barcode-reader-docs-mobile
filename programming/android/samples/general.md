@@ -11,7 +11,7 @@ breadcrumbText: General
 
 The general setting sample shows how to use the `PublicRuntimeSetting` class to make the general settings when using Dynamsoft Barcode Reader.
 
-View the samples
+**View the samples**
 
 - [Java (Android) General Settings Sample]()
 - [Xamarins General Settings Sample]()
@@ -46,7 +46,7 @@ Please note, the orientation of mobile frame is always Rotated 90 degrees counte
 
 <div align="center">
     <p><img src="assets/orientation-example.png" width="70%" alt="region"></p>
-    <p>Region definition</p>
+    <p>Region Orientation</p>
 </div>
 
 The `regionTop`, `regionBottom`, `regionLeft` and `regionRight` parameters in the class `RegionDefinition` stand for the region of frame but not the device. Therefore, please makesure that you are setting the correct parameters for the border of your scan region. For example if you are going to create a scan region that margins 30% from the top and bottom of the frame. Actually, you have to set the `regionLeft` 30 to make the bottom of the scan region margin 30% from the top of the mobile screen.
@@ -68,7 +68,7 @@ reader.updateRuntimeSettings(runtimeSettings);
 
 <div align="center">
     <p><img src="assets/dbr-region.png" width="70%" alt="region"></p>
-    <p>Region definition</p>
+    <p>How to Configure the Scan Region</p>
 </div>
 
 **Related APIs**
@@ -103,6 +103,6 @@ reader.initRuntimeSettingsWithFile("your template file path", EnumConflictMode.C
 ```
 
 - Class [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html)
-- Method [updateRuntimeSettings]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#updateruntimesettings)
-- Method [initRuntimeSettingsWithString]({{ site.android_api }}primary-parameter-and-runtime-settings-advanced.html#initruntimesettingswithstring)
-- Method [initRuntimeSettingsWithFile]({{ site.android_api }}primary-parameter-and-runtime-settings-advanced.html#initruntimesettingswithfile)
+- Method [`updateRuntimeSettings`]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#updateruntimesettings)
+- Method [`initRuntimeSettingsWithString`]({{ site.android_api }}primary-parameter-and-runtime-settings-advanced.html#initruntimesettingswithstring)
+- Method [`initRuntimeSettingsWithFile`]({{ site.android_api }}primary-parameter-and-runtime-settings-advanced.html#initruntimesettingswithfile)
