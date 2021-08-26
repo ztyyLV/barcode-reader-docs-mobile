@@ -17,11 +17,10 @@ View the samples
 - [Xamarins Helloworld]()
 - [Cordova Helloworld]()
 - [React-native Helloworld]()
-- [Flutter Helloworld]()
 
 ## The License
 
-You have to initialize the Barcode Reader with a valid license to get access to the full feature of DBR.
+In the samples, there are license activation
 
 ```java
 barcodeReader.initLicense("Your license", new DBRLicenseVerificationListener() {

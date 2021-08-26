@@ -36,18 +36,46 @@ The barcode reader will switch between the preset barcode formats until it finds
 
 ## Parameter Control
 
-Dynamsoft Barcode Reader enable user to make advanced parameter settings to cope with certain harsh scenarios.
+Dynamsoft Barcode Reader provides APIs that enable users to make advanced mode & parameter settings. These modes and parameters can benefit the read rate of the barcode reader in different scenarios or maximum the speed and accuracy of a certain scenario.
 
 **LocalizationModes**
 
-The LocalizationModes members are designed for different specified scenarios. In the aspect of barcode reading speed, `ONED_FAST_SCAN` is specially designed for accelerating 1D barcode localization. In addition, `SCAN_DIRECTLY` turns out to performs well when deployed together with `RegionDefinition`. Please read more about the localization modes in the page of parameter `LocalizationModes`.
+The LocalizationModes members are designed for different specified scenarios. In the aspect of barcode reading speed, `ONED_FAST_SCAN` is specially designed for accelerating 1D barcode localization. In addition, `SCAN_DIRECTLY` turns out to performs well when deployed together with `RegionDefinition`. Please read more about the localization modes on the page of parameter `LocalizationModes`.
 
 **BinarizationModes**
 
-**ColourConversionModes**
+If the binarization mode is not skipped, the barcode reader will spend some time on filling the binary vacancy. You can set the `EnableFillBinaryVacancy` value to 0 to disable this activity. Please be sure that your app is working with high-quality images if you want to skip filling the vacancy.
+
+**GrayscaleTransformationModes**
+
+Normally, the barcodes are always colored black and the background colors are always white. `GTM_INVERTED` is enabled to recognize the unusual colored barcodes. If this is not necessary for your usage scenarios, you can remove the `GTM_INVERTED` from your parameter list to reduce the time consumption.
 
 ## Templates
 
-**For single barcode scanning**
+**For 1D Single Barcode Scanning**
+
+```java
+regionDefinition.regionTop = 15;
+regionDefinition.regionBottom = 85;
+regionDefinition.regionLeft = 30;
+regionDefinition.regionRight = 70;
+runtimeSettings.region = regionDefinition;
+runtimeSettings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED;
+runtimeSettings.expectedBarcodesCount = 1;
+runtimeSettings.localizationModes = new int[]{EnumLocalizationMode.LM_SCAN_DIRECTLY,0,0,0,0,0,0,0};
+runtimeSettings.deblurModes = new int[]{EnumDeblurMode.DM_SKIP,0,0,0,0,0,0,0,0,0};
+runtimeSettings.furtherModes.grayscaleTransformationModes = new int[]{EnumGrayscaleTransformationMode.GTM_ORIGINAL,EnumGrayscaleTransformationMode.GTM_INVERTED,0,0,0,0,0,0};
+settings.binarizationModes = new int[]{EnumBinarizationMode.BM_LOCAL_BLOCK,0,0,0,0,0,0,0};
+reader.setModeArgument("localizationModes",0,"ScanDirection","0");
+reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "0");
+```
 
 **For general usage**
+
+Generally, we can sacrifice a bit speed
+
+```java
+runtimeSettings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_PDF417 | EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_DATAMATRIX |EnumBarcodeFormat.BF_AZTEC;
+runtimeSettings.expectedBarcodesCount = 0;
+// We can use the default settings of the advanced modes
+```
