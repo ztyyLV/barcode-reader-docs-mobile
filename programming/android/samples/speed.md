@@ -36,7 +36,11 @@ The barcode reader will switch between the preset barcode formats until it finds
 
 ## Parameter Control
 
+Dynamsoft Barcode Reader enable user to make advanced parameter settings to cope with certain harsh scenarios.
+
 **LocalizationModes**
+
+The LocalizationModes members are designed for different specified scenarios. In the aspect of barcode reading speed, `ONED_FAST_SCAN` is specially designed for accelerating 1D barcode localization. In addition, `SCAN_DIRECTLY` turns out to performs well when deployed together with `RegionDefinition`. Please read more about the localization modes in the page of parameter `LocalizationModes`.
 
 **BinarizationModes**
 
