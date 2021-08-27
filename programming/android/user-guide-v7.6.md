@@ -13,8 +13,8 @@ needGenerateH3Content: true
 ## System Requirements
 
 - Operating systems:
-   - Supported OS: Android 5 or higher
-   - Supported ABI: armeabi-v7a/arm64-v8a
+  - Supported OS: Android 5 or higher
+  - Supported ABI: armeabi-v7a/arm64-v8a
 
 ## Installation
 
@@ -28,9 +28,9 @@ After decompression, you can find samples in the **DBRSamples** folder under the
 
 You can add Dynamsoft Barcode Reader like below:
 
-1. Add download URL in your project's `build.gradle`. 
+1. Add download URL in your project's `build.gradle`.
 
-   ```
+   ```groovy
     allprojects {
       repositories {
          google()
@@ -44,7 +44,7 @@ You can add Dynamsoft Barcode Reader like below:
 
 2. implement Dynamsoft Barcode Reader at dependencies in your module's `build.gradle`.
 
-   ```
+   ```groovy
    implementation 'com.dynamsoft:dynamsoftbarcodereader:{version-number}@aar'
    ```
 
@@ -59,7 +59,7 @@ You can add Dynamsoft Barcode Reader like below:
       ii. Put the .aar file under the directory libs in the project.
       iii. In the project, open build.gradle(Module: app) and add the following code:
 
-      ```
+      ```groovy
       repositories {
          flatDir {
             dirs 'libs'
@@ -69,7 +69,7 @@ You can add Dynamsoft Barcode Reader like below:
 
       ii. Add `.aar` reference in the dependencies:
 
-      ```
+      ```groovy
       implementation(name: 'DynamsoftBarcodeReaderAndroid', ext: 'aar')
       ```
 
@@ -79,7 +79,7 @@ You can add Dynamsoft Barcode Reader like below:
 
       i. In the new project, open `build.gradle(module:app)` and add the following code:
 
-      ```
+      ```groovy
       allprojects {
          repositories {
             maven {
@@ -91,7 +91,7 @@ You can add Dynamsoft Barcode Reader like below:
 
       ii. Then add `.aar` reference in the dependencies as below:
 
-      ```
+      ```groovy
       implementation 'com.dynamsoft:dynamsoftbarcodereader:{version number}@aar'
       ```
 
@@ -145,26 +145,26 @@ You can find more samples in more programming languages at [Code Gallery](https:
 
 ## Barcode Reading Settings
 
-Calling the [decoding methods](#decoding-methods) directly will use the default scanning modes and it will satisfy most of the needs. The SDK also allows you to adjust the scanning settings to optimize the scanning performance for different usage scenarios.   
-   
+Calling the [decoding methods](#decoding-methods) directly will use the default scanning modes and it will satisfy most of the needs. The SDK also allows you to adjust the scanning settings to optimize the scanning performance for different usage scenarios.
+
 There are two ways to change the barcode reading settings - using the `PublicRuntimeSettings` class or template. For new developers, We recommend you to start with the `PublicRuntimeSettings` class; For those who are experienced with the SDK, you may use a template which is more flexible and easier to update.   
 
-- [Use `PublicRuntimeSettings` class to Change Settings](#use-publicruntimesettings-class-to-change-settings)   
-- [Use A Template to Change Settings](#use-a-template-to-change-settings)   
+- [Use `PublicRuntimeSettings` class to Change Settings](#use-publicruntimesettings-class-to-change-settings)
+- [Use A Template to Change Settings](#use-a-template-to-change-settings)
 
 ### Use [`PublicRuntimeSettings`](api-reference/class/PublicRuntimeSettings.md) class to Change Settings
 
-Here are some common scanning settings you might find helpful:   
+Here are some common scanning settings you might find helpful:
 
-- [Specify Barcode Type to Read](#specify-barcode-type-to-read)   
-- [Specify Maximum Barcode Count](#specify-maximum-barcode-count)   
+- [Specify Barcode Type to Read](#specify-barcode-type-to-read)
+- [Specify Maximum Barcode Count](#specify-maximum-barcode-count)
 - [Specify a Scan Region](#specify-a-scan-region)  
 
 For more scanning settings guide, check out the [How To](#how-to-guide) section.
 
 #### Specify Barcode Type to Read
 
-By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. (See [Product Overview]({{ site.introduction }}overview.html) for the full supported barcode list.) 
+By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. (See [Product Overview]({{ site.introduction }}overview.html) for the full supported barcode list.)
 
 If your full license only covers some barcode formats, you can use `BarcodeFormatIds` and `BarcodeFormatIds_2` to specify the barcode format(s). Check out [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2).
 
@@ -231,7 +231,7 @@ TextResult[] result = dbr.decodeFile("<Put your file path here>","");
 reader.destroy();
 ```
 
-Below is a template for your reference. To learn more about the APIs, you can check out [`PublicRuntimeSettings`](api-reference/class/PublicRuntimeSettings.md) Class. 
+Below is a template for your reference. To learn more about the APIs, you can check out [`PublicRuntimeSettings`](api-reference/class/PublicRuntimeSettings.md) Class.
 
 ```json
 {

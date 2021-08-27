@@ -8,5 +8,3 @@ breadcrumbText: Accuracy-First Settings
 ---
 
 # Accuracy-First Settings
-
-This 
