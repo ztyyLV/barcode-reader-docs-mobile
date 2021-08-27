@@ -7,9 +7,9 @@ needAutoGenerateSidebar: false
 breadcrumbText: API Reference
 ---
 
-# Dynamsoft Barcode Reader SDK - Android API Reference
+# API Reference - Android - v7.6
 
-- [`BarcodeReader` Methods](#barcodereader-methods) 
+- [`BarcodeReader` Methods](#barcodereader-methods)
 - [Interface](#interface)
 - [Error Code](#error-code)
 - [Classes](#classes)  

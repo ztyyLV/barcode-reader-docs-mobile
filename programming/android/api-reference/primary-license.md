@@ -5,6 +5,7 @@ description: This page shows BarcodeReader license methods of Dynamsoft Barcode 
 keywords: initLicense, initLicenseFromServer, initLicenseFromLicenseContent, outputLicenseToString, license methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
 noTitleIndex: true
+pageStartVer: 8.6
 ---
 
 
