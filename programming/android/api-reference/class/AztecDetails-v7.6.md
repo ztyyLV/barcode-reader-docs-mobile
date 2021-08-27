@@ -8,7 +8,7 @@ pageStartVer: 7.6
 ---
 
 
-# AztecDetails
+# AztecDetails - v7.6
 
 Stores the Aztec details.
 
