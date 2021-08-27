@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Android API Reference - AztecDetails Class
 description: This page shows the AztecDetails Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: AztecDetails, class, api reference, android
 needAutoGenerateSidebar: false
+pageStartVer: 7.6
 ---
 
 
