@@ -28,7 +28,6 @@ class com.dynamsoft.dbr.DMLTSConnectionParameters
 | [`maxBufferDays`](#maxbufferdays) | *int* | Sets the max days to buffer the license info. |
 | [`limitedLicenseModules`](#limitedlicensemodules) | *int[]* | Sets the license modules to use. |
 | [`chargeWay`](#chargeway) | *int* | Sets the charge way. |
-| [`organizationID`](#organizationid) | *String* | The organization ID got from Dynamsoft. |
 
 ## mainServerURL
 
@@ -169,19 +168,3 @@ int chargeWay
 **Value Range**
 
 Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay) Enumeration items.
-
-## organizationID
-
-The organization ID got from Dynamsoft.
-
-```java
-String organizationID
-```
-
-**Value Range**
-
-Any string value
-
-**Default Value**
-
-""

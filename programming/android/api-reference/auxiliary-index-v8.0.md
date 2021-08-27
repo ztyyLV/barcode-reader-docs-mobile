@@ -3,11 +3,16 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Android API Reference - Class
 description: This page shows all classes of Dynamsoft Barcode Reader for Android SDK.
 keywords: class, api reference, android
-needAutoGenerateSidebar: false
-breadcrumbText: Class
+needAutoGenerateSidebar: true
+breadcrumbText: Auxiliary Class
+noTitleIndex: true
 ---
 
 # Android Classes
+
+## [License Class](auxiliary-DMDLSConnectionParameters.md)
+
+- [`DMLTSConnectionParameters`](auxiliary-DMDLSConnectionParameters.md)
 
 ## [Common Classes](auxiliary-common-classes.md)
 

@@ -6,7 +6,6 @@ keywords: decodeFileWithName, decodeImage, decodeBuffer, decodeBase64, decode me
 needAutoGenerateSidebar: true
 ---
 
-
 # Objective-C API Reference - Decode Methods
 
   | Method               | Description |
@@ -18,15 +17,14 @@ needAutoGenerateSidebar: true
   
 ---
 
-
 ## decodeFileWithName
 
 Decode barcodes from a specified image file.
 
 ```objc
-- (NSArray<iTextResult*>* _Nullable)decodeFileWithName:(NSString* _Nonnull)name templateName:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;	
-```   
-   
+- (NSArray<iTextResult*>* _Nullable)decodeFileWithName:(NSString* _Nonnull)name templateName:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
+```
+
 ### Parameters
 
 `[in] name` The local path of the file.
@@ -56,20 +54,17 @@ let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV**********
 let error: NSError? = NSError()
 let result = barcodeReader.decodeFileWithName(name:"your file path",templateName:"",error:&error)
 ```
+
 &nbsp;
-
-
-
-
 
 ## decodeImage
 
 Decode barcodes from an image file in memory.
 
 ```objc
-- (NSArray<iTextResult*>* _Nullable)decodeImage:(UIImage* _Nonnull)image withTemplate:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;	
+- (NSArray<iTextResult*>* _Nullable)decodeImage:(UIImage* _Nonnull)image withTemplate:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
 ```  
-   
+
 ### Parameters
 
 `[in] image` The image file in memory.
@@ -92,6 +87,7 @@ UIImage *image;
 NSError __autoreleasing * _Nullable error;
 result = [barcodeReader decodeImage:image withTemplate:@"" error:&error];
 ```
+
 Swift:
 
 ```Swift
@@ -107,8 +103,8 @@ Decode barcodes from the memory buffer containing image pixels in defined format
 
 ```objc
 - (NSArray<iTextResult*>* _Nullable)decodeBuffer:(NSData* _Nonnull)buffer withWidth:(NSInteger)width height:(NSInteger)height stride:(NSInteger)stride format:(EnumImagePixelFormat)format templateName:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
-```   
-   
+```
+
 ### Parameters
 
 `[in] buffer` The array of bytes which contain the image data.  
@@ -139,6 +135,7 @@ NSInteger format;
 NSError __autoreleasing * _Nullable error;
 result = [barcodeReader decodeBuffer:bufferBytes withWidth:iWidth height:iHeight stride:iStride format:format templateName:@"" error:&error];
 ```
+
 Swift:
 
 ```Swift
@@ -151,13 +148,14 @@ let stride = 0
 let format:Int
 let result = barcodeReader.decodeBuffer(buffer: bufferBytes!, width: width, height: height, stride: stride, format: format, templateName: "", error: &error)
 ```
+
 ## decodeBase64
 
 Decode barcodes from an image file encoded as a base64 string.
 
 ```objc
-DBR_API int DBR_DecodeBase64String (void* barcodeReader, const char* pBase64String, const char* pTemplateName)	
-```   
+DBR_API int DBR_DecodeBase64String (void* barcodeReader, const char* pBase64String, const char* pTemplateName)
+```
 
 ### Parameters
 
@@ -180,6 +178,7 @@ iTextResult *result;
 NSError __autoreleasing * _Nullable error;
 result = [barcodeReader decodeBase64:@"file in base64 string" withTemplate:@"" error:&error];
 ```
+
 Swift:
 
 ```Swift
@@ -187,4 +186,5 @@ let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV**********
 let error: NSError? = NSError() 
 let result = barcodeReader.decodeBase64(base64: file in base64 string, withTemplate: "", error: &error)
 ```
+
 &nbsp;

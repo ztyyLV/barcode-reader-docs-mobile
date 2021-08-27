@@ -5,6 +5,7 @@ description: This page shows Camera methods of Dynamsoft Barcode Reader for Andr
 keywords: Camera methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
 noTitleIndex: true
+pageStartVer: 8.2.1
 ---
 
 # Camera Methods

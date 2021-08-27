@@ -78,8 +78,6 @@ breadcrumbText: BarcodeReader Class
   | Method               | Description |
   |----------------------|-------------|
   | [`getIntermediateResults`](primary-result.md#getintermediateresults) | Get intermediate results. |
-  | [`enableResultVerification`](primary-result.md#enableresultverification) | Verify the results before output. |
-  | [`enableDuplicateFiter`](primary-result.md#enableduplicatefiter) | Output the duplicated result only once for every 3 seconds. |
 
 ## Status Retrieval
 

@@ -109,7 +109,7 @@ breadcrumbText: iOS API Reference
 - [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md)
 - [`iDBRPoint`](auxiliary-iDBRPoint.md)
 - [`iDCESettingParameters`](auxiliary-iDCESettingParameters.md)
-- [`iDMLTSConnectionParameters`](auxiliary-iDMLTSConnectionParameters.md)
+- [`iDMDLSConnectionParameters`](auxiliary-iDMDLSConnectionParameters.md)
 - [`iExtendedResult`](auxiliary-iExtendedResult.md)
 - [`iFrameDecodingParameters`](auxiliary-iFrameDecodingParameters.md)
 - [`iFurtherModes`](auxiliary-iFurtherModes.md)

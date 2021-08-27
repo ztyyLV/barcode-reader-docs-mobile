@@ -6,6 +6,7 @@ keywords: DMDLSLicenseVerificationDelegate, api reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+pageStartVer: 8.4
 ---
 
 # DMDLSLicenseVerificationDelegate

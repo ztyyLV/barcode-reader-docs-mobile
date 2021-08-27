@@ -3,66 +3,42 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Main Page
 description: This is the main page of Dynamsoft Barcode Reader for iOS SDK API Reference.
 keywords: api reference, objective-c, oc, swift
-needAutoGenerateSidebar: false
-breadcrumbText: API Reference
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
+noTitleIndex: true
+breadcrumbText: iOS API Reference
 ---
 
-# Dynamsoft Barcode Reader SDK - Objective-C & Swift API Reference
+# API Reference - iOS
 
-- [Attributes](#attributes)
-- [Methods](#methods)
-- [Error Code](#error-code)
-- [Classes](#classes)
-- [Enumerations](#enumerations)  
-
-&nbsp;
-
-## Attributes
-
-| Attribute | Type |
-|---------- | ---- |
-| [`license`](#license) | *NSString\** |
-
-### license
-
-Stores the license used in DynamsoftBarcodeReader.
-
-```objc
-NSString* license
-```
-
-&nbsp;
-
-## Methods
+## BarcodeReader Class
 
 ### Initialize
   
   | Method               | Description |
   |----------------------|-------------|
-  | [`init`](methods/initialize.md#init) | Create an instance of Dynamsoft Barcode Reader. |
-
-&nbsp;
-
-### Camera Enhancer
-  
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`SetCameraEnhancerParam`](methods/camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
-
-&nbsp;
+  | [`init`](primary-initialize.md#init) | Create an instance of Dynamsoft Barcode Reader. |
 
 ### Decode
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`decodeFileWithName`](methods/decode.md#decodefilewithname) | Decode barcodes from a specified image file. |
-  | [`decodeImage`](methods/decode.md#decodeimage) | Decode barcodes from an image file in memory. |
-  | [`decodeBuffer`](methods/decode.md#decodebuffer) | Decode barcodes from raw buffer. |
-  | [`decodeBase64`](methods/decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
-  | [`createIntermediateResult`](methods/decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`decodeIntermediateResults`](methods/decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
+  | [`decodeFileWithName`](primary-decode.md#decodefilewithname) | Decode barcodes from a specified image file. |
+  | [`decodeImage`](primary-decode.md#decodeimage) | Decode barcodes from an image file in memory. |
+  | [`decodeBuffer`](primary-decode.md#decodebuffer) | Decode barcodes from raw buffer. |
+  | [`decodeBase64`](primary-decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
+  | [`createIntermediateResult`](primary-decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
+  | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
-&nbsp;
+### License
+
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`license`](primary-license.md#license) | Stores the license used in DynamsoftBarcodeReader. |
+  | [`initWithLicense`](primary-license.md#initwithlicense) | Read product key and activate the SDK. |
+  | [`initWithLicenseFromServer`](primary-license.md#initwithlicensefromserver) | Initialize license and connect to the specified server for online verification. |
+  | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |
+  | [`initLicenseFromLTS`](primary-license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
 
 ### Parameter and Runtime Settings
 
@@ -70,44 +46,29 @@ NSString* license
   
   | Method               | Description |
   |----------------------|-------------|
-  | [`setModeArgument`](methods/parameter-and-runtime-settings-basic.md#setmodeargument) | Set argument value for the specified mode parameter. |
-  | [`getModeArgument`](methods/parameter-and-runtime-settings-basic.md#getmodeargument) | Get argument value for the specified mode parameter. |
-  | [`getRuntimeSettings`](methods/parameter-and-runtime-settings-basic.md#getruntimesettings) | Get current runtime settings. |
-  | [`updateRuntimeSettings`](methods/parameter-and-runtime-settings-basic.md#updateruntimesettings) | Modify and update the current runtime settings. |
-  | [`resetRuntimeSettings`](methods/parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
+  | [`setModeArgument`](primary-parameter-and-runtime-settings-basic.md#setmodeargument) | Set argument value for the specified mode parameter. |
+  | [`getModeArgument`](primary-parameter-and-runtime-settings-basic.md#getmodeargument) | Get argument value for the specified mode parameter. |
+  | [`getRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#getruntimesettings) | Get current runtime settings. |
+  | [`updateRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#updateruntimesettings) | Modify and update the current runtime settings. |
+  | [`resetRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
 
 #### Advanced
   
   | Method               | Description |
   |----------------------|-------------|
-  | [`initRuntimeSettingsWithFile`](methods/parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) | Initialize runtime settings with the settings in a given JSON file. |
-  | [`initRuntimeSettingsWithString`](methods/parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) | Initialize runtime settings with the settings in a given JSON string. |
-  | [`appendTplFileToRuntimeSettings`](methods/parameter-and-runtime-settings-advanced.md#appendtplfiletoruntimesettings) | Append a new template file to the current runtime settings. |
-  | [`appendTplStringToRuntimeSettings`](methods/parameter-and-runtime-settings-advanced.md#appendtplstringtoruntimesettings) | Append a new template string to the current runtime settings. |
-  | [`allParameterTemplateNames`](methods/parameter-and-runtime-settings-advanced.md#allparametertemplatenames) | Get the count of the parameter templates. |
-  | [`outputSettingsToFile`](methods/parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
-  | [`outputSettingsToString`](methods/parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
-
-&nbsp;
-
-### License
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`initWithLicense`](methods/license.md#initwithlicense) | Read product key and activate the SDK. |
-  | [`initWithLicenseFromServer`](methods/license.md#initwithlicensefromserver) | Initialize license and connect to the specified server for online verification. |
-  | [`outputLicenseToString`](methods/license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLicenseFromLTS`](methods/license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
-
-&nbsp;
+  | [`initRuntimeSettingsWithFile`](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) | Initialize runtime settings with the settings in a given JSON file. |
+  | [`initRuntimeSettingsWithString`](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) | Initialize runtime settings with the settings in a given JSON string. |
+  | [`appendTplFileToRuntimeSettings`](primary-parameter-and-runtime-settings-advanced.md#appendtplfiletoruntimesettings) | Append a new template file to the current runtime settings. |
+  | [`appendTplStringToRuntimeSettings`](primary-parameter-and-runtime-settings-advanced.md#appendtplstringtoruntimesettings) | Append a new template string to the current runtime settings. |
+  | [`allParameterTemplateNames`](primary-parameter-and-runtime-settings-advanced.md#allparametertemplatenames) | Get the count of the parameter templates. |
+  | [`outputSettingsToFile`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
+  | [`outputSettingsToString`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
 
 ### Result
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`getIntermediateResult`](methods/result.md#getintermediateresult) | Get intermediate results. |
-
-&nbsp;
+  | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
 
 ### Video
 
@@ -115,65 +76,60 @@ NSString* license
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`startFrameDecoding`](methods/video.md#startframedecoding) | Decode barcodes from inner frame queue. |
-  | [`startFrameDecodingEx`](methods/video.md#startframedecodingex) | Decode barcodes from inner frame queue. |
-  | [`appendFrame`](methods/video.md#appendframe) | Append a frame image buffer to the inner frame queue. |
-  | [`stopFrameDecoding`](methods/video.md#stopframedecoding) | Stop thread used for frame decoding. |
+  | [`startFrameDecoding`](primary-video.md#startframedecoding) | Decode barcodes from inner frame queue. |
+  | [`startFrameDecodingEx`](primary-video.md#startframedecodingex) | Decode barcodes from inner frame queue. |
+  | [`appendFrame`](primary-video.md#appendframe) | Append a frame image buffer to the inner frame queue. |
+  | [`stopFrameDecoding`](primary-video.md#stopframedecoding) | Stop thread used for frame decoding. |
 
 #### Parameter
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`getFrameDecodingParameters`](methods/video.md#getframedecodingparameters) | Initialize frame decoding parameter. |
-
-#### Delegate
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`setDBRErrorDelegate`](methods/video.md#setdbrerrordelegate) | Set callback function to process errors generated during frame decoding. |
-  | [`setDBRTextResultDelegate`](methods/video.md#setdbrtextresultdelegate) | Set callback function to process text results generated during frame decoding. |
-  | [`setDBRIntermediateResultDelegate`](methods/video.md#setdbrintermediateresultdelegate) | Set callback function to process intermediate results generated during frame decoding. |
+  | [`getFrameDecodingParameters`](primary-video.md#getframedecodingparameters) | Initialize frame decoding parameter. |
 
 #### Status retrieval
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`getLengthOfFrameQueue`](methods/video.md#getlengthofframequeue) | Get length of current inner frame queue. |
-
-&nbsp;
+  | [`getLengthOfFrameQueue`](primary-video.md#getlengthofframequeue) | Get length of current inner frame queue. |
 
 ## [Error Code]({{ site.enumerations }}error-code.html)
 
-&nbsp;
+## Auxiliary Classes
 
-## [Classes]({{site.oc_class}})
+- [`iAztecDetails`](auxiliary-iAztecDetails.md)
+- [`iContour`](auxiliary-iContour.md)
+- [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md)
+- [`iDBRPoint`](auxiliary-iDBRPoint.md)
+- [`iDMLTSConnectionParameters`](auxiliary-iDMLTSConnectionParameters.md)
+- [`iExtendedResult`](auxiliary-iExtendedResult.md)
+- [`iFrameDecodingParameters`](auxiliary-iFrameDecodingParameters.md)
+- [`iFurtherModes`](auxiliary-iFurtherModes.md)
+- [`iImageData`](auxiliary-iImageData.md)
+- [`iIntermediateResult`](auxiliary-iIntermediateResult.md)
+- [`iLineSegment`](auxiliary-iLineSegment.md)
+- [`iLocalizationResult`](auxiliary-iLocalizationResult.md)
+- [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.md)
+- [`iPDF417Details`](auxiliary-iPDF417Details.md)
+- [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md)
+- [`iQRCodeDetails`](auxiliary-iQRCodeDetails.md)
+- [`iQuadrilateral`](auxiliary-iQuadrilateral.md)
+- [`iRegionDefinition`](auxiliary-iRegionDefinition.md)
+- [`iRegionOfInterest`](auxiliary-iRegionOfInterest.md)
+- [`iSamplingImageData`](auxiliary-iSamplingImageData.md)
+- [`iTextResult`](auxiliary-iTextResult.md)
 
-- [`iAztecDetails`](class/iAztecDetails.md)
-- [`iContour`](class/iContour.md)
-- [`iDataMatrixDetails`](class/iDataMatrixDetails.md)
-- [`iDBRPoint`](class/iDBRPoint.md)
-- [`iDCESettingParameters`](class/iDCESettingParameters.md)
-- [`iDMLTSConnectionParameters`](class/iDMLTSConnectionParameters.md)
-- [`iExtendedResult`](class/iExtendedResult.md)
-- [`iFrameDecodingParameters`](class/iFrameDecodingParameters.md)
-- [`iFurtherModes`](class/iFurtherModes.md)
-- [`iImageData`](class/iImageData.md)
-- [`iIntermediateResult`](class/iIntermediateResult.md)
-- [`iLineSegment`](class/iLineSegment.md)
-- [`iLocalizationResult`](class/iLocalizationResult.md)
-- [`iOneDCodeDetails`](class/iOneDCodeDetails.md)
-- [`iPDF417Details`](class/iPDF417Details.md)
-- [`iPublicRuntimeSettings`](class/iPublicRuntimeSettings.md)
-- [`iQRCodeDetails`](class/iQRCodeDetails.md)
-- [`iQuadrilateral`](class/iQuadrilateral.md)
-- [`iRegionDefinition`](class/iRegionDefinition.md)
-- [`iRegionOfInterest`](class/iRegionOfInterest.md)
-- [`iSamplingImageData`](class/iSamplingImageData.md)
-- [`iTextResult`](class/iTextResult.md)
+## Protocol
 
-&nbsp;
+  | Protocol | Description |
+  | -------- | ----------- |
+  | [`DBRTextResultDelegate`]({{ site.oc_api }}protocol-dbrtextresultdelegate.html) | Protocol for a delegate to handle callback when text result returned. |
+  | [`DBRIntermediateResultDelegate`]({{ site.oc_api }}protocol-dbrintermediateresultdelegate.html) | Protocol for a delegate to handle callback when intermediate result returned. |
+  | [`DBRErrorDelegate`]({{ site.oc_api }}protocol-dbrerrordelegate.html) | Protocol for a delegate to handle callback when an error returned. |
+  | [`DBRServerLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dbrserverlicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |
+  | [`DMLTSLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dmltslicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |
 
-## [Enumerations]({{ site.enumerations }})
+## Enumerations
 
 - [`EnumAccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)
 - [`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)
@@ -206,7 +162,6 @@ NSString* license
 - [`EnumResultType`]({{ site.enumerations }}result-enums.html#resulttype)
 - [`EnumScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)
 - [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase)
-- [`EnumTextAssistedCorrectionMode`]({{ site.enumerations }}parameter-mode-enums.html#textassistedcorrectionmode)
 - [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)
 - [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)
 - [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)

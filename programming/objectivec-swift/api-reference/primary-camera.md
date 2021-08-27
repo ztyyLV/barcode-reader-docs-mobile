@@ -5,6 +5,7 @@ description: This page shows Camera methods of Dynamsoft Barcode Reader for iOS 
 keywords: getIntermediateResult, Camera methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+pageStartVer: 8.4
 ---
 
 # Camera Methods

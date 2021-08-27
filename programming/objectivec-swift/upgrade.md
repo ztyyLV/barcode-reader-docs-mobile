@@ -6,6 +6,7 @@ keywords: How to upgrade, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+pageStartVer: 8.0
 ---
 
 # How to Upgrade

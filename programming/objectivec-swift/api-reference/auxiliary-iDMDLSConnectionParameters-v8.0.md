@@ -27,7 +27,6 @@ Defines a struct to configure the parameters to connect to the license server.
 | [`UUIDGenerationMethod`](#uuidgenerationmethod) | *EnumDMUUIDGenerationMethod* | Sets the method to generate UUID. |
 | [`maxBufferDays`](#maxbufferdays) | *NSInteger* | Sets the max days to buffer the license info. |
 | [`limitedLicenseModules`](#limitedlicensemodules) | *NSArray\** | Sets the license modules to use. |
-| [`organizationID`](#organizationid) | *NSString\** | The organization ID got from Dynamsoft. |
 
 ## mainServerURL
 
@@ -176,19 +175,3 @@ nil
 **See Also**
 
 [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
-
-## organizationID
-
-The organization ID got from Dynamsoft.
-
-```objc
-NSString* organizationID
-```
-
-**Value Range**
-
-Any string value
-
-**Default Value**
-
-""
