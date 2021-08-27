@@ -1,17 +1,17 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - General Sample
-description: This is the General Sample page of Dynamsoft Barcode Reader for Android SDK.
+title: Dynamsoft Barcode Reader for Android - General Settings Sample
+description: This is the General Settings Sample page of Dynamsoft Barcode Reader for Android SDK.
 keywords: android, samples, General
 needAutoGenerateSidebar: false
-breadcrumbText: General
+breadcrumbText: General Settings
 ---
 
-# Android General Sample
+# Android General Settings Sample
 
-The general setting sample shows how to use the `PublicRuntimeSetting` class to make the general settings when using Dynamsoft Barcode Reader.
+The general setting sample shows how to make the general settings via `PublicRuntimeSetting` class when using Dynamsoft Barcode Reader. This General Settings sample is also available for the popular mobile frameworks.
 
-**View the samples**
+**View Samples (on GitHub)**
 
 - [Java (Android) General Settings Sample]()
 - [Xamarins General Settings Sample]()
