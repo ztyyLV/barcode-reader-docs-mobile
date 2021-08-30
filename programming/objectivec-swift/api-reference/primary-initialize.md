@@ -46,3 +46,21 @@ let barcodeReader = DynamsoftBarcodeReader.init()
 **Remarks**
 
 Partial of the decoding result will be masked with "*" without a valid license key.
+
+## dispose
+
+Destroy the instance of Dynamsoft Barcode Reader.
+
+**Code Snippet**
+
+Objective-C:
+
+```objc
+[barcodeReader dispose];
+```
+
+Swift:
+
+```swift
+barcodeReader.dispose()
+```
