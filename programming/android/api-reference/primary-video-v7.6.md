@@ -8,33 +8,16 @@ needAutoGenerateSidebar: true
 
 # Android API Reference - BarcodeReader Video Methods
 
-- Decode
-    
    | Method               | Description |
    |----------------------|-------------|
    | [`startFrameDecoding`](#startframedecoding) | Decode barcodes from inner frame queue. |
    | [`startFrameDecodingEx`](#startframedecodingex) | Decode barcodes from inner frame queue. |
    | [`appendFrame`](#appendframe) | Append a frame image buffer to the inner frame queue. |
    | [`stopFrameDecoding`](#stopframedecoding) | Stop thread used for frame decoding. |
-
-- Parameter
-   
-   | Method               | Description |
-   |----------------------|-------------|
    | [`initFrameDecodingParameters`](#initframedecodingparameters) | Initialize frame decoding parameter. |
-
-- Callback
-   
-   | Method               | Description |
-   |----------------------|-------------|
    | [`setErrorCallback`](#seterrorcallback) | Set callback interface to process errors generated during frame decoding. |
    | [`setTextResultCallback`](#settextresultcallback) | Set callback interface to process text results generated during frame decoding. |
    | [`setIntermediateResultCallback`](#setintermediateresultcallback) | Set callback interface to process intermediate results generated during frame decoding. |
-
-- Status retrieval
-   
-   | Method               | Description |
-   |----------------------|-------------|
    | [`getLengthOfFrameQueue`](#getlengthofframequeue) | Get length of current inner frame queue. |
 
   ---
@@ -47,22 +30,21 @@ Start a new thread to decode barcodes from the inner frame queue with specific f
 void com.dynamsoft.barcode.BarcodeReader.startFrameDecoding	(final int maxQueueLength, final int maxResultQueueLength, final int width, final int height, final int stride, final int enumImagePixelFormat, final String templateName) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
-- `maxQueueLength`: The max number of frames waiting for decoding.  
-- `maxResultQueueLength`: The max number of frames whose results (text result/localization result) will be kept.  
-- `width`: The width of the frame image in pixels.  
-- `height`: The height of the frame image in pixels.  
-- `stride`: The stride (or scan width) of the frame image.  
-- `format`: The image pixel format used in the image byte array.  
-- `templateName`: The template name.  
+`maxQueueLength`: The max number of frames waiting for decoding.  
+`maxResultQueueLength`: The max number of frames whose results (text result/localization result) will be kept.  
+`width`: The width of the frame image in pixels.  
+`height`: The height of the frame image in pixels.  
+`stride`: The stride (or scan width) of the frame image.  
+`format`: The image pixel format used in the image byte array.  
+`templateName`: The template name.  
 
-
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -83,16 +65,16 @@ Start a new thread to decode barcodes from the inner frame queue with specific f
 void com.dynamsoft.barcode.BarcodeReader.startFrameDecodingEx(FrameDecodingParameters parameters, String templateName) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
-- `parameters`: The frame decoding parameters.
-- `templateName`: The template name.
+`parameters`: The frame decoding parameters.  
+`templateName`: The template name.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -118,18 +100,18 @@ reader.destroy();
 Append a frame image buffer to the inner frame queue.  
 
 ```java
-int com.dynamsoft.barcode.BarcodeReader.appendFrame(byte[] bufferBytes)	 
+int com.dynamsoft.barcode.BarcodeReader.appendFrame(byte[] bufferBytes)
 ```
 
-### Parameters
+**Parameters**
 
 `bufferBytes`: The array of bytes which contain the image data.
 
-### Return value
+**Return value**
 
 Returns the ID of the appended frame.
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -146,11 +128,11 @@ Stop the frame decoding thread created by [`StartFrameDecoding`](#startframedeco
 void com.dynamsoft.barcode.BarcodeReader.stopFrameDecoding() throws BarcodeReaderException
 ```  
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -167,15 +149,15 @@ Initialize frame decoding parameters with default values.
 FrameDecodingParameters com.dynamsoft.barcode.BarcodeReader.initFrameDecodingParameters() throws BarcodeReaderException
 ```
 
-### Return value
+**Return value**
 
 The frame decoding parameters.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -191,16 +173,16 @@ Set callback interface to process errors generated during frame decoding.
 void com.dynamsoft.barcode.BarcodeReader.setErrorCallback(ErrorCallback errorCallback, Object userData) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
-- `errorCallback`: Callback interface.
-- `userData`: Customized arguments passed to your function.
+`errorCallback`: Callback interface.  
+`userData`: Customized arguments passed to your function.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -218,19 +200,19 @@ reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYS
 Set callback interface to process text results generated during frame decoding.
 
 ```java
-void com.dynamsoft.barcode.BarcodeReader.setTextResultCallback(TextResultCallback textResultCallback, Object userData) throws BarcodeReaderException	
+void com.dynamsoft.barcode.BarcodeReader.setTextResultCallback(TextResultCallback textResultCallback, Object userData) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
-- `textResultCallback`: Callback interface.
-- `userData`: Customized arguments passed to your function.
+`textResultCallback`: Callback interface.  
+`userData`: Customized arguments passed to your function.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -250,17 +232,17 @@ Set callback interface to process intermediate results generated during frame de
 ```java
 void com.dynamsoft.barcode.BarcodeReader.setIntermediateResultCallback(IntermediateResultCallback intermediateResultCallback, Object userData} throws BarcodeReaderException
 ```
-   
-### Parameters
 
-- `intermediateResultCallback`: Callback interface.   
-- `userData`: Customized arguments passed to your function.
+**Parameters**
 
-### Exceptions
+`intermediateResultCallback`: Callback interface.  
+`userData`: Customized arguments passed to your function.
+
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -281,14 +263,14 @@ reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYS
 Get length of current inner frame queue.
 
 ```java
-int com.dynamsoft.barcode.BarcodeReader.getLengthOfFrameQueue()	
+int com.dynamsoft.barcode.BarcodeReader.getLengthOfFrameQueue()
 ```
 
-### Return value
+**Return value**
 
 Returns length of current inner frame queue.
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");

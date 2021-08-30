@@ -19,7 +19,6 @@ Stores the OneD code details.
 | [`stopCharsBytes`](#stopcharsbytes) | *byte\[\]* |
 | [`checkDigitBytes`](#checkdigitbytes) | *byte\[\]* |
 
-
 ### moduleSize
 
 The barcode module size (the minimum bar width in pixel).
@@ -51,4 +50,3 @@ The check digit chars in a byte array.
 ```java
 byte[] com.dynamsoft.barcode.LocalizationResult.checkDigitBytes
 ```
-

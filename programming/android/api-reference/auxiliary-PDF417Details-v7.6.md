@@ -20,7 +20,6 @@ Stores the PDF417 details.
 | [`columns`](#columns) | *int* |
 | [`errorCorrectionLevel`](#errorcorrectionlevel) | *int* |
 
-
 ### moduleSize
 
 The barcode module size (the minimum bar width in pixel).

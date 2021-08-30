@@ -18,7 +18,6 @@ Stores the QRCode details.
 ```  
   
 ---
-  
 
 ## Attributes
   
@@ -30,7 +29,6 @@ Stores the QRCode details.
 | [`errorCorrectionLevel`](#errorcorrectionlevel) | [`EnumQRCodeErrorCorrectionLevel`]({{ site.enumerations }}other-enums.html#qrcodeerrorcorrectionlevel) |
 | [`version`](#version) | *NSInteger* |
 | [`model`](#model) | *NSInteger* |
-
 
 ### moduleSize
 
@@ -50,7 +48,7 @@ NSInteger rows
 
 ### columns
 
-The column count of the barcode. 
+The column count of the barcode.
 
 ```objc
 NSInteger columns

@@ -26,17 +26,15 @@ Read product key and activate the SDK.
 void com.dynamsoft.barcode.BarcodeReader.initLicense(String license) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
 `license`: The product keys.
 
-
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
@@ -51,14 +49,14 @@ Initialize the license and connect to the specified server for online verificati
 ```java
 void com.dynamsoft.barcode.BarcodeReader.initLicenseFromServer(String licenseServer, String licenseKey, DBRServerLicenseVerificationListener dbrServerLicenseVerificationListener)
 ```
-   
-### Parameters
+
+**Parameters**
 
 - `licenseServer`: The URL of the license server.  
 - `licenseKey`: The license key.
 - `dbrServerLicenseVerificationListener`: The delegate to handle callback when license server returns.
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -76,18 +74,18 @@ Initialize barcode reader license from the license content on the client machine
 
 ```java
 void com.dynamsoft.barcode.BarcodeReader.initLicenseFromLicenseContent(String licenseKey, String licenseContent) throws BarcodeReaderException
-```   
+```
 
-### Parameters
+**Parameters**
 
 - `licenseKey`: The license key.  
 - `licenseContent`: An encrypted string representing the license content (quota, expiration date, barcode type, etc.) obtained from the method [`OutputLicenseToString`](#outputlicensetostring).
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -102,20 +100,20 @@ Output the license content as an encrypted string from the license server to be 
 ```java
 String com.dynamsoft.barcode.BarcodeReader.outputLicenseToString() throws BarcodeReaderException
 ```
-   
-### Return value
+
+**Return value**
 
 The output string which stores the contents of license.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Remark
+**Remark**
 
 [`InitLicenseFromServer`](#initlicensefromserver) has to be successfully called before calling this method.
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");

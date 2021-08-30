@@ -25,7 +25,6 @@ Stores the text result.
 | [`detailedResult`](#detailedresult) | *Object* |
 | [`results`](#results) | [`ExtendedResult`](ExtendedResult.md)\[\] |
 
-
 ### barcodeFormat
 
 Barcode type in BarcodeFormat group 1.

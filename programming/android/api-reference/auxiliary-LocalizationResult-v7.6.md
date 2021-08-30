@@ -141,4 +141,3 @@ The confidence of the localization result.
 ```java
 int com.dynamsoft.barcode.LocalizationResult.confidence
 ```
-

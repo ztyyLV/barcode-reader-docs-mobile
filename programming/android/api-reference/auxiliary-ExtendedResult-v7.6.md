@@ -15,22 +15,22 @@ Stores the extended result.
   
 | Attribute | Type |
 |---------- | ---- |
-| [`resultType`](#resulttype) | *int * |
-| [`barcodeFormat`](#barcodeformat) | *int * |
-| [`barcodeFormatString`](#barcodeformatstring) | *String * |
-| [`barcodeFormat_2`](#barcodeformat_2) | *int * |
-| [`barcodeFormatString_2`](#barcodeformatstring_2) | *String * | 
-| [`confidence`](#confidence) | *int* | 
-| [`bytes`](#bytes) | *byte\[\]* | 
-| [`accompanyingTextBytes`](#accompanyingtextbytes) | *byte\[\]* | 
-| [`deformation`](#deformation) | *int* | 
+| [`resultType`](#resulttype) | *int* |
+| [`barcodeFormat`](#barcodeformat) | *int* |
+| [`barcodeFormatString`](#barcodeformatstring) | *String* |
+| [`barcodeFormat_2`](#barcodeformat_2) | *int* |
+| [`barcodeFormatString_2`](#barcodeformatstring_2) | *String* |
+| [`confidence`](#confidence) | *int* |
+| [`bytes`](#bytes) | *byte\[\]* |
+| [`accompanyingTextBytes`](#accompanyingtextbytes) | *byte\[\]* |
+| [`deformation`](#deformation) | *int* |
 | [`detailedResult`](#detailedresult) | *Object* |
 | [`samplingImage`](#samplingimage) | [`SamplingImageData`](SamplingImageData.md) |
-| [`clarity`](#clarity) | *int* | 
+| [`clarity`](#clarity) | *int* |
 
 ### resultType
 
-Extended result type. 
+Extended result type.
 
 ```java
 int com.dynamsoft.barcode.ExtendedResult.resultType
@@ -38,7 +38,7 @@ int com.dynamsoft.barcode.ExtendedResult.resultType
 
 ### barcodeFormat
 
-Barcode type in BarcodeFormat group 1. 
+Barcode type in BarcodeFormat group 1.
 
 ```java
 int com.dynamsoft.barcode.ExtendedResult.barcodeFormat
@@ -59,7 +59,7 @@ Barcode type in BarcodeFormat group 2.
 ```java
 int com.dynamsoft.barcode.ExtendedResult.barcodeFormat_2
 ```
- 
+
 ### barcodeFormatString_2
 
 Barcode type in BarcodeFormat group 2 as string.
@@ -115,7 +115,7 @@ The sampling image info.
 ```java
 SamplingImageData com.dynamsoft.barcode.ExtendedResult.samplingImage
 ```
- 
+
 ### clarity
 
 The clarity of the barcode zone in percentage.

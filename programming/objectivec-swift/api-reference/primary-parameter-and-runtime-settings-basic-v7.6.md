@@ -28,17 +28,17 @@ Sets the optional argument for a specified mode in Modes parameters.
                     argumentName:(NSString* _Nonnull)argumentName
                     argumentValue:(NSString* _Nonnull)argumentValue
                     error:(NSError* _Nullable * _Nullable)error;
-```   
-   
-### Parameters
+```
+
+**Parameters**
 
 `[in] modesName` The mode parameter name to set argument.  
 `[in] index` The array index of mode parameter to indicate a specific mode.  
 `[in] argumentName` The name of the argument to set.  
 `[in] argumentValue` The value of the argument to set.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
-    
-### Remark
+
+**Remark**
 
 Check follow link for available modes and arguments:
 - [`AccompanyingTextRecognitionModes`]({{ site.parameters_reference }}image-parameter/AccompanyingTextRecognitionModes.html#accompanyingtextrecognitionmodes)
@@ -56,7 +56,7 @@ Check follow link for available modes and arguments:
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
 - [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes) 
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -95,22 +95,23 @@ Gets the optional argument for a specified mode in Modes parameters.
                             index:(NSInteger)index
                             argumentName:(NSString* _Nonnull)argumentName
                             error:(NSError* _Nullable * _Nullable)error;
-```   
-   
-### Parameters 
+```
+
+**Parameters**
 
 `[in] modesName` The mode parameter name to get argument.  
 `[in] index` The array index of mode parameter to indicate a specific mode.  
 `[in] argumentName` The name of the argument to get.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 the optional argument for a specified mode
 
-### Remark
+**Remark**
 
 Check follow link for available modes and arguments:
+
 - [`AccompanyingTextRecognitionModes`]({{ site.parameters_reference }}image-parameter/AccompanyingTextRecognitionModes.html#accompanyingtextrecognitionmodes)
 - [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
 - [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes)
@@ -124,9 +125,9 @@ Check follow link for available modes and arguments:
 - [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes)
 - [`TextAssistedCorrectionMode`]({{ site.parameters_reference }}image-parameter/TextAssistedCorrectionMode.html#textassistedcorrectionmode)
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
-- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes) 
+- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -144,6 +145,7 @@ settings.binarizationModes = mArray;
 [barcodeReader setModeArgument:@"BinarizationModes" index:0 argumentName:@"EnableFillBinaryVacancy" argumentValue:"1" error:&error];
 argumentValue = [barcodeReader getModeArgument:@"BinarizationModes" index:0 argumentName:@"EnableFillBinaryVacancy" error:&error];
 ```
+
 Swift:
 
 ```Swift
@@ -165,17 +167,17 @@ Get current settings and save them into a [`iPublicRuntimeSettings`](../class/iP
 
 ```objc
 - (iPublicRuntimeSettings* _Nullable)getRuntimeSettings:(NSError* _Nullable * _Nullable)error;
-```   
-   
-### Parameters
+```
 
-`[in,out]	error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+**Parameters**
 
-### Return value
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+
+**Return value**
 
 A DBRPublicRuntimeSettings storing current runtime settings.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -185,6 +187,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV**
 NSError __autoreleasing * _Nullable error;
 [barcodeReader getRuntimeSettings:&error];
 ```
+
 Swift:
 
 ```Swift
@@ -200,14 +203,14 @@ Update runtime settings with a given [`iPublicRuntimeSettings`](../class/iPublic
 ```objc
 - (void)updateRuntimeSettings:(iPublicRuntimeSettings* _Nonnull)settings
                         error:(NSError* _Nullable * _Nullable)error;
-```   
-   
-### Parameters
+```
+
+**Parameters**
 
 `[in] settings` The struct of template settings.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -219,6 +222,7 @@ iPublicRuntimeSettings *settings;
 
 [barcodeReader updateRuntimeSettings:settings error:&error];
 ```
+
 Swift:
 
 ```Swift
@@ -234,13 +238,13 @@ Reset all parameters to default values.
 
 ```objc
 - (void)resetRuntimeSettings:(NSError* _Nullable * _Nullable)error;
-```   
-   
-### Parameters
+```
+
+**Parameters**
 
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -251,6 +255,7 @@ NSError __autoreleasing * _Nullable error;
 
 [barcodeReader resetRuntimeSettings:&error];
 ```
+
 Swift:
 
 ```Swift

@@ -13,11 +13,10 @@ Stores an x- and y-coordinate pair in two-dimensional space.
 
 ## Attributes
   
-| Attribute | Type | 
-|---------- | ---- | 
+| Attribute | Type |
+|---------- | ---- |
 | [`x`](#x) | *int* |
 | [`y`](#y) | *int* |
-
 
 ### x
 

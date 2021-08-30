@@ -18,7 +18,6 @@ Stores the text result.
 ```  
   
 ---
-  
 
 ## Attributes
   
@@ -33,7 +32,6 @@ Stores the text result.
 | [`localizationResult`](#localizationresult) | [`iLocalizationResult`](iLocalizationResult.md)\* |
 | [`detailedResult`](#detailedresult) | *NSObject \** |
 | [`extendedResults`](#extendedResults) | [`NSArray<iExtendedResult*>*`](iExtendedResult.md)\* |
-
 
 ### barcodeFormat
 

@@ -18,27 +18,27 @@ needAutoGenerateSidebar: true
   | [`resetRuntimeSettings`](#resetruntimesettings) | Reset runtime settings to default. |
 
   ---
- 
+
 ## setModeArgument
 
 Sets the optional argument for a specified mode in Modes parameters.
 
 ```java
 void com.dynamsoft.barcode.BarcodeReader.setModeArgument(String modesName, int index, String argumentName, String argumentValue)	throws BarcodeReaderException
-```   
+```
 
-### Parameters
+**Parameters**
 
-- `modesName`: The mode parameter name to set argument.
-- `index`: The array index of mode parameter to indicate a specific mode.  
-- `argumentName`: The name of the argument to set.  
-- `argumentValue`: The value of the argument to set. 
+`modesName`: The mode parameter name to set argument.  
+`index`: The array index of mode parameter to indicate a specific mode.  
+`argumentName`: The name of the argument to set.  
+`argumentValue`: The value of the argument to set.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Remark
+**Remark**
 
 Check the available modes and arguments below:
 
@@ -57,7 +57,7 @@ Check the available modes and arguments below:
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
 - [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes) 
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -76,21 +76,21 @@ Gets the optional argument for a specified mode in Modes parameters.
 String com.dynamsoft.barcode.BarcodeReader.getModeArgument(String modesName, int index, String argumentName) throws BarcodeReaderException
 ```
 
-### Parameters  
+**Parameters**
 
-- `modesName`: The mode parameter name to get argument.  
-- `index`: The array index of mode parameter to indicate a specific mode.  
-- `argumentName`: The name of the argument to get.
+`modesName`: The mode parameter name to get argument.  
+`index`: The array index of mode parameter to indicate a specific mode.  
+`argumentName`: The name of the argument to get.
 
-### Return value
+**Return value**
 
 the optional argument for a specified mode in Modes parameters.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Remark
+**Remark**
 
 Check the available modes and arguments below:
 
@@ -109,7 +109,7 @@ Check the available modes and arguments below:
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
 - [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)    
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -129,15 +129,15 @@ Get current settings and save them into a [`PublicRuntimeSettings`](../class/Pub
 PublicRuntimeSettings com.dynamsoft.barcode.BarcodeReader.getRuntimeSettings() throws BarcodeReaderException	
 ```
 
-### Return value
+**Return value**
 
 The struct of template settings.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -153,15 +153,15 @@ Update runtime settings with a given [`PublicRuntimeSettings`](../class/PublicRu
 void com.dynamsoft.barcode.BarcodeReader.updateRuntimeSettings(PublicRuntimeSettings settings) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
-`settings`:	The struct of template settings.
+`settings`: The struct of template settings.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -179,11 +179,10 @@ Reset all parameters to default values.
 void com.dynamsoft.barcode.BarcodeReader.resetRuntimeSettings()	throws BarcodeReaderException
 ```
 
-### Exceptions
+**Exceptions**
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");

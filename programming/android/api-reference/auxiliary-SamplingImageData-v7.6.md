@@ -19,7 +19,6 @@ Stores the sampling image data.
 | [`width`](#width) | *int* |
 | [`height`](#height) | *int* |
 
-
 ### bytes
 
 The sampling image data in a byte array.

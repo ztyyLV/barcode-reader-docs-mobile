@@ -45,7 +45,6 @@ Stores the intermediate result.
 | [`scaleDownRatio`](#scaledownratio) | *int* |
 | [`frameId`](#frameid) | *int* |
 
-
 ### results
 
 One of the following types: Array of [`Contour`](Contour.md), Array of [`ImageData`](ImageData.md), Array of [`LineSegment`](LineSegment.md), Array of [`LocalizationResult`](LocalizationResult.md), Array of [`RegionOfInterest`](RegionOfInterest.md).
@@ -277,4 +276,3 @@ The ID of the operated frame.
 ```java
 int com.dynamsoft.barcode.IntermediateResult.frameId
 ```
-

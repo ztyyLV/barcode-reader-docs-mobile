@@ -9,7 +9,7 @@ needAutoGenerateSidebar: false
 
 # Quadrilateral
 
-Stores the quadrilateral. 
+Stores the quadrilateral.
 
 ## Attributes
   
@@ -19,11 +19,8 @@ Stores the quadrilateral.
 
 ### points
 
-Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
+Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex.
 
 ```java
 Point[] com.dynamsoft.barcode.Quadrilateral.points
 ```
-
-
-

@@ -39,9 +39,9 @@ Point com.dynamsoft.barcode.LineSegment.endPoint
 
 The confidence coefficients for lines. There are 4 coefficients in this set:  
 
-1. linesConfidenceCoefficients\[0\] is average positive amplitude;   
-2. linesConfidenceCoefficients\[1\] is max positive amplitude; 
-3. linesConfidenceCoefficients\[2\] is average negative amplitude;   
+1. linesConfidenceCoefficients\[0\] is average positive amplitude;  
+2. linesConfidenceCoefficients\[1\] is max positive amplitude;  
+3. linesConfidenceCoefficients\[2\] is average negative amplitude;  
 4. linesConfidenceCoefficients\[3\] is max negative amplitude.
 
 ```java

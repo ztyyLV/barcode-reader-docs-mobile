@@ -25,22 +25,22 @@ Decode barcodes from a specified image file.
 
 ```java
 TextResult[] com.dynamsoft.barcode.BarcodeReader.decodeFile(String fileFullPath, String templateName)	throws BarcodeReaderException	
-```   
+```
 
-### Parameters
+**Parameters**
 
-- `fileFullPath`: A string defining the file path.
-- `templateName`: The template name.
+`fileFullPath`: A string defining the file path.  
+`templateName`: The template name.
 
-### Return value
+**Return value**
 
 All barcode text results decoded successfully.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -54,22 +54,22 @@ Decode barcodes from an image file in memory.
 
 ```java
 TextResult[] com.dynamsoft.barcode.BarcodeReader.decodeFileInMemory(byte[] fileBytes, String templateName) throws BarcodeReaderException
-```   
-   
-### Parameters
+```
 
-- `fileBytes`: The image file bytes in memory.  
-- `templateName`: The template name.
+**Parameters**
 
-### Return value
+`fileBytes`: The image file bytes in memory.  
+`templateName`: The template name.
+
+**Return value**
 
 All barcode text results decoded successfully.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -81,22 +81,22 @@ reader.destroy();
 
 ```java
 TextResult [] com.dynamsoft.barcode.BarcodeReader.decodeFileInMemory(InputStream fileStream, String templateName) throws BarcodeReaderException, IOException
-```   
-   
-### Parameters
+```
 
-- `fileStream`: The image file bytes in memory.  
-- `templateName`: The template name.
+**Parameters**
 
-### Return value
+`fileStream`: The image file bytes in memory.  
+`templateName`: The template name.
+
+**Return value**
 
 All barcode text results decoded successfully.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md), IOException
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -110,27 +110,27 @@ reader.destroy();
 Decode barcodes from the memory buffer containing image pixels in defined format.
 
 ```java
-TextResult[] com.dynamsoft.barcode.BarcodeReader.decodeBuffer(byte[] buffer, int width, int height, int stride, int enumImagePixelFormat, String templateName)	throws BarcodeReaderException	
+TextResult[] com.dynamsoft.barcode.BarcodeReader.decodeBuffer(byte[] buffer, int width, int height, int stride, int enumImagePixelFormat, String templateName) throws BarcodeReaderException
 ```
-   
-### Parameters
 
-- `buffer`: The array of bytes which contain the image data.
-- `Width`: The width of the image in pixels.
-- `Height`: The height of the image in pixels.
-- `Stride`: The stride (or scan width) of the image.
-- `format`: The image pixel format used in the image byte array.
-- `templateName` The template name.
+**Parameters**
 
-### Return value
+`buffer`: The array of bytes which contain the image data.  
+`Width`: The width of the image in pixels.  
+`Height`: The height of the image in pixels.  
+`Stride`: The stride (or scan width) of the image.  
+`format`: The image pixel format used in the image byte array.  
+`templateName` The template name.  
+
+**Return value**
 
 All barcode text results decoded successfully.  
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -150,22 +150,22 @@ Decode barcode from an image file encoded as a base64 string.
 
 ```java
 TextResult[] com.dynamsoft.barcode.BarcodeReader.decodeBase64String(String base64, String templateName)	throws BarcodeReaderException
-```   
-   
-### Parameters
+```
 
-- `base64`:	A base64 encoded string that represents an image.
-- `templateName`: The template name.
+**Parameters**
 
-### Return value
+`base64`: A base64 encoded string that represents an image.  
+`templateName`: The template name.
+
+**Return value**
 
 All barcode text results decoded successfully.
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -180,21 +180,21 @@ Decodes barcode from a buffered image (bitmap).
 ```java
 TextResult[] com.dynamsoft.barcode.BarcodeReader.decodeBufferedImage(BufferedImage image, String templateName)	throws IOException, BarcodeReaderException
 ```
-   
-### Parameters
 
-- `image`: The image to be decoded.  
-- `templateName`: The template name.
+**Parameters**
 
-### Return value
+`image`: The image to be decoded.  
+`templateName`: The template name.
+
+**Return value**
 
 All barcode text results decoded successfully.  
 
-### Exceptions
+**Exceptions**
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md), IOException
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");

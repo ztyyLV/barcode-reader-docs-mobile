@@ -13,10 +13,8 @@ needAutoGenerateSidebar: true
   | [`initWithLicense`](#initwithlicense) | Initializes DynamsoftBarcodeReader with a license. |
   | [`initWithLicenseFromServer`](#initwithlicensefromserver) | Initialize license and connect to the specified server for online verification. |
   | [`outputLicenseToString`](#outputlicensetostring) | Outputs the license content as an encrypted string from the license server to be used for offline license verification. |
-  
-  
+
   ---
-  
 
 ## initWithLicense
 
@@ -24,17 +22,17 @@ Initializes DynamsoftBarcodeReader with a license.
 
 ```objc
 - (instancetype _Nonnull)initWithLicense:(NSString* _Nonnull)license;
-```   
-   
-### Parameters
+```
 
-`[in] license` The license key.
+**Parameters**
 
-### Return value
+`[in] license` The license key.  
+
+**Return value**
 
 The instance of DynamsoftBarcodeReader.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -42,6 +40,7 @@ Objective-C:
 DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
 ```
+
 Swift:
 
 ```Swift
@@ -54,19 +53,19 @@ Initializes the license and connects to the specified server for online verifica
 
 ```objc
 - (instancetype _Nonnull)initWithLicenseFromServer:(NSString* _Nullable)licenseSeServer licenseKey:(NSString* _Nonnull)licenseKey verificationDelegate:(id _Nullable)connectionDelegate;
-```   
+```
 
-### Parameters
+**Parameters**
 
 `[in] licenseSeServer` The name/IP of the license server.  
-`[in] licenseKey` The license key.
+`[in] licenseKey` The license key.  
 `[in,out] connectionDelegate` The delegate to handle callback when license server returns.
 
-### Return value
+**Return value**
 
 The instance of DynamsoftBarcodeReader.
 
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -82,6 +81,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicenseFromServer:@"" li
     });
 }
 ```
+
 Swift:
 
 ```Swift
@@ -102,18 +102,17 @@ Output the license content as an encrypted string from the license server to be 
 
 ```objc
 - (NSString *_Nullable)outputLicenseToString:(NSError* _Nullable * _Nullable)error;
-```   
-   
-### Parameters
+```
+
+**Parameters**
 
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return value**
 
 The output string which stores the contents of license.
 
-
-### Code Snippet
+**Code Snippet**
 
 Objective-C:
 
@@ -123,6 +122,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV**
 NSError __autoreleasing * _Nullable error;
 [barcodeReader outputLicenseToString:&error];
 ```
+
 Swift:
 
 ```Swift

@@ -22,10 +22,9 @@ Stores the QRCode details.
 | [`version`](#version) | *int* |
 | [`model`](#model) | *int* |
 
-
 ### moduleSize
 
-The barcode module size (the minimum bar width in pixels). 
+The barcode module size (the minimum bar width in pixels).
 
 ```java
 int com.dynamsoft.dbr.QRCodeDetails.moduleSize
@@ -41,7 +40,7 @@ int com.dynamsoft.dbr.QRCodeDetails.rows
 
 ### columns
 
-The column count of the barcode. 
+The column count of the barcode.
 
 ```java
 int com.dynamsoft.dbr.QRCodeDetails.columns
@@ -70,4 +69,3 @@ Number of the models.
 ```java
 int com.dynamsoft.dbr.QRCodeDetails.model
 ```
-

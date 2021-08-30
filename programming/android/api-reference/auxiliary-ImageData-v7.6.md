@@ -12,7 +12,7 @@ needAutoGenerateSidebar: false
 Stores the image data.  
 
 ## Attributes
-    
+
 | Attribute | Type |
 |---------- | ---- |
 | [`bytes`](#bytes) | *byte\[\]* |
@@ -21,10 +21,9 @@ Stores the image data.
 | [`stride`](#stride) | *int* |
 | [`format`](#format) | *int* |
 
-
 ### bytes
 
-The image data content in a byte array. 
+The image data content in a byte array.
 
 ```java
 byte[] com.dynamsoft.barcode.ImageData.bytes
@@ -40,7 +39,7 @@ int com.dynamsoft.barcode.ImageData.width
 
 ### height
 
-The height of the image in pixels. 
+The height of the image in pixels.
 
 ```java
 int com.dynamsoft.barcode.ImageData.height
@@ -48,7 +47,7 @@ int com.dynamsoft.barcode.ImageData.height
 
 ### stride
 
-The stride (or scan width) of the image. 
+The stride (or scan width) of the image.
 
 ```java
 int com.dynamsoft.barcode.ImageData.stride
@@ -56,7 +55,7 @@ int com.dynamsoft.barcode.ImageData.stride
 
 ### format
 
-The image pixel format used in the image byte array. 
+The image pixel format used in the image byte array.
 
 ```java
 int com.dynamsoft.barcode.ImageData.format

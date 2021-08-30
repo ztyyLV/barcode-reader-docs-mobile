@@ -117,7 +117,7 @@ Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums
 
 DM_UUIDGM_RANDOM
 
-**See Also**  
+**See Also**
 
 [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
 
@@ -153,7 +153,7 @@ A list of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm
 
 null
 
-**See Also**  
+**See Also**
 
 [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
 

@@ -26,11 +26,11 @@ Represents the method that will handle the error code returned by the SDK.
 void com.dynamsoft.barcode.ErrorCallback.errorCallback(int frameId, int errorCode, Object userData)	
 ```
 
-### Parameters
+**Parameters**
 
-- `frameId`: 	The ID of the frame.
-- `errorCode`: Error Code generated when decoding the frame.
-- `userData`: Arguments passed to your function.
+`frameId`: The ID of the frame.
+`errorCode`: Error Code generated when decoding the frame.
+`userData`: Arguments passed to your function.
 
 ## IntermediateResultCallback
 
@@ -40,13 +40,13 @@ Represents the method that will handle the intermediate result array returned by
 void com.dynamsoft.barcode.IntermediateResultCallback.intermediateResultCallback(int frameId, IntermediateResult[] results, Object userData)	
 ```
 
-### Parameters
+**Parameters**
 
-- `frameId`: The ID of the frame.  
-- `results`: The intermediate results of the frame.
-- `userData`: Arguments passed to your function.
+`frameId`: The ID of the frame.  
+`results`: The intermediate results of the frame.
+`userData`: Arguments passed to your function.
 
-### See Also
+**See Also**
 
 [IntermediateResult](class/IntermediateResult.md)
 
@@ -58,13 +58,13 @@ Represents the method that will handle the error code returned by the SDK.
 void textResultCallback(int frameId, TextResult[] results, Object userData)
 ```
 
-### Parameters
+**Parameters**
 
-- `frameId`: The ID of the frame.  
-- `results`: Recognized barcode results of the frame.
-- `userData`: Arguments passed to your function.
+`frameId`: The ID of the frame.  
+`results`: Recognized barcode results of the frame.
+`userData`: Arguments passed to your function.
 
-### See Also
+**See Also**
 
 [TextResult](class/TextResult.md)
 
@@ -76,7 +76,7 @@ Represents the method that will handle the error code returned by the SDK.
 void com.dynamsoft.barcode.DBRServerLicenseVerificationListener.licenseVerificationCallback (boolean isSuccess, Exception error)
 ```
 
-### Parameters
+**Parameters**
 
-- `isSuccess`: Whether the license verification was successful.
-- `error`: The error message from license server.
+`isSuccess`: Whether the license verification was successful.
+`error`: The error message from license server.
