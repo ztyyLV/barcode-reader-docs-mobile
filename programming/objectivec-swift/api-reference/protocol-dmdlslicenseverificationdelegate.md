@@ -34,3 +34,7 @@ The method for users to add code for license verification.
 
 `[in, out] isSuccess`: Whether the license verification was successful.  
 `[in, out] error`: The error message from the license server.
+
+**Remarks**
+
+`DMLTSLicenseVerificationDelegate` is deprecated, please use `DMDLSLicenseVerificationDelegate`.

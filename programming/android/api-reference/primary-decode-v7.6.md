@@ -24,7 +24,7 @@ needAutoGenerateSidebar: true
 Decode barcodes from a specified image file.
 
 ```java
-TextResult[] com.dynamsoft.barcode.BarcodeReader.decodeFile(String fileFullPath, String templateName)	throws BarcodeReaderException	
+TextResult[] com.dynamsoft.barcode.BarcodeReader.decodeFile(String fileFullPath, String templateName) throws BarcodeReaderException
 ```
 
 **Parameters**

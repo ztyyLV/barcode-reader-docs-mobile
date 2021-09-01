@@ -28,7 +28,6 @@ noTitleIndex: true
 | [`localizationResult`](auxiliary-iTextResult.md#localizationresult) | [`iLocalizationResult`](auxiliary-iLocalizationResult.md) | The corresponding localization result. |
 | [`detailedResult`](auxiliary-iTextResult.md#detailedresult) | *NSObject \** | One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.md), [`iPDF417Details`](auxiliary-iPDF417Details.md), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`iAztecDetails`](auxiliary-iAztecDetails.md), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.md). |
 | [`extendedResults`](auxiliary-iTextResult.md#extendedresults) | [`NSArray<iExtendedResult>`](auxiliary-iExtendedResult.md) | The extended result array. |
-| [`exception`](auxiliary-iTextResult.md#exception) | *NSString \** | The exception message. |
 
 ## [iLocalizationResult](auxiliary-iLocalizationResult.md)
 

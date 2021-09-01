@@ -158,7 +158,3 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
    }
 });
 ```
-
-## initLicenseFromLTS
-
-`Deprecated`, please use [initLicenseFromLTS](#initlicensefromlts) instead.

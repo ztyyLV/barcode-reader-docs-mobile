@@ -47,7 +47,6 @@ Stores the intermediate result.
 | [`ccmIndex`](#ccmindex) | *NSInteger* | The array index of current used [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) in the [`colourClusteringModes`](auxiliary-FurtherModes.md#colourclusteringmodes) setting. |
 | [`scaleDownRatio`](#scaledownratio) | *NSInteger* | The scale down ratio. |
 | [`frameId`](#frameid) | *NSInteger* | The ID of the operated frame. |
-| [`rpmColourArgumentIndex`](#rpmcolourargumentindex) | *NSInteger* | The index of the rpm colour argument. |
 
 ## resultsCount
 
@@ -287,12 +286,4 @@ The ID of the operated frame.
 
 ```objc
 NSInteger frameId
-```
-
-## rpmColourArgumentIndex
-
-The index of the rpm colour argument.
-
-```objc
-NSInteger rpmColourArgumentIndex
 ```
