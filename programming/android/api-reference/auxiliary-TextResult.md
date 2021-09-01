@@ -142,14 +142,6 @@ The exception message.
 String exception
 ```
 
-## isDPM
-
-This attribute stands for whether the result is a DPM result.
-
-```java
-int isDPM
-```
-
 ## isMirrored
 
 This attribute stands for whether the barcode is mirrored.

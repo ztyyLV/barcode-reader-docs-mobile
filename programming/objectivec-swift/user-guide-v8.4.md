@@ -42,21 +42,15 @@ To build a Hello World app that reads barcodes from an image, you can follow the
 
    Objective-C:
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->-
->
->1.
-[![Copy Code]({{site.copy_icon}})](javascript:;)
-```objc
-#import <DynamsoftBarcodeSDK/DynamsoftBarcodeSDK.h>
-```
-2.
-[![Copy Code]({{site.copy_icon}})](javascript:;)
-```Swift
-import DynamsoftBarcodeReader
-```
+   ```objc
+   #import <DynamsoftBarcodeSDK/DynamsoftBarcodeSDK.h>
+   ```
+
+   Swift:
+
+   ```Swift
+   import DynamsoftBarcodeReader
+   ```
 
 5. Add code for barcode scanning
 
