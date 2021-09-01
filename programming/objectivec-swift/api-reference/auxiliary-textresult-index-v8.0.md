@@ -161,10 +161,6 @@ noTitleIndex: true
 | [`errorCorrectionLevel`](auxiliary-iQRCodeDetails.md#errorcorrectionlevel) | *NSInteger* | The error correction level of the barcode.   |
 | [`version`](auxiliary-iQRCodeDetails.md#version) | *NSInteger* | The version of the QR Code. |
 | [`model`](auxiliary-iQRCodeDetails.md#model) | *NSInteger* | Number of the models. |
-| [`mode`](auxiliary-iQRCodeDetails.md#mode) | *NSInteger* | Identify the first data encoding mode. |
-| [`page`](auxiliary-iQRCodeDetails.md#page) | *NSInteger* | Identify the position of the particular symbol. |
-| [`totalPage`](auxiliary-iQRCodeDetails.md#totalpage) | *NSInteger* | Identify the total number of symbols to be concatenated in the Structured Append format. |
-| [`parityData`](auxiliary-iQRCodeDetails.md#paritydata) | *byte* | The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks. |
 
 ## [iSamplingImageData](auxiliary-iSamplingImageData.md)
 

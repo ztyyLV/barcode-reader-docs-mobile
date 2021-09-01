@@ -216,10 +216,6 @@ class com.dynamsoft.dbr.QRCodeDetails;
 | [`errorCorrectionLevel`](auxiliary-QRCodeDetails.md#errorcorrectionlevel) | *int* | The error correction level of the barcode.   |
 | [`version`](auxiliary-QRCodeDetails.md#version) | *int* | The version of the QR Code. |
 | [`model`](auxiliary-QRCodeDetails.md#model) | *int* | Number of the models. |
-| [`mode`](auxiliary-QRCodeDetails.md#mode) | *int* | Identify the first data encoding mode. |
-| [`page`](auxiliary-QRCodeDetails.md#page) | *int* | Identify the position of the particular symbol. |
-| [`totalPage`](auxiliary-QRCodeDetails.md#totalpage) | *int* | Identify the total number of symbols to be concatenated in the Structured Append format. |
-| [`parityData`](auxiliary-QRCodeDetails.md#paritydata) | *int* | The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks. |
 
 **Code Snippet**
 
