@@ -50,7 +50,7 @@ reader.destroy();
 The text results will be verified before output if the result verification is enabled.
 
 ```java
-IntermediateResult[] enableResultVerification() throws BarcodeReaderException 
+void enableResultVerification(boolean) throws BarcodeReaderException 
 ```
 
 **Exceptions**
@@ -70,7 +70,7 @@ boolean x = reader.getEnableResultVerificationStatus();
 The duplicated text result will be filtered. The barcode reader will not output the result for the same barcode a second time in 3 seconds.
 
 ```java
-IntermediateResult[] enableDuplicateFilter() throws BarcodeReaderException
+void enableDuplicateFilter(boolean) throws BarcodeReaderException
 ```
 
 **Exceptions**

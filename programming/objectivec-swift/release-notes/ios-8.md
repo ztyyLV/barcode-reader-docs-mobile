@@ -24,13 +24,18 @@ noTitleIndex: true
 
 ### Improved
 
-- Improved the confidence calculation algorithm for oneD barcode results. Bounded by 30, the misread results will be scored below 30-confidence as many as possible.
+- Improved the [`confidence`]({{site.oc_api}}auxiliary-ExtendedResult.html#confidence) algorithm for 1D barcode results. Users can get even more accurate results by configuring the `confidence` filter.
+
+### Fixed
+
+- Fixed a bug that `licenseVerificationCallback` not triggered.
 
 ## 8.4 (06/08/2021)
 
 ### New
 
-- Added new attributes [`isMirrored`]({{site.oc_class}}iTextResult.html#ismirrored) to the `TextResult` class. `IsMirrored` returns whether the barcode is mirrored.
+- Added a new attribute [`isMirrored`]({{site.oc_class}}iTextResult.html#ismirrored) to the `iTextResultEx` class. `isMirrored` returns whether the barcode is mirrored.
+- Added a new attribute [`isDPM`]({{site.oc_class}}iTextResult.html#isdpm) to the `iTextResultEx` class. `isDPM` returns whether the barcode is recognized by the DPM mode.
 - Added a new argument, `ThresholdCompensation`, to the `BinarizationModes` mode arguments.
 
 ### Improved
