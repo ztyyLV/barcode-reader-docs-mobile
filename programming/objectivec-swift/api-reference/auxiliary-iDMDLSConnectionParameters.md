@@ -5,6 +5,7 @@ description: This page shows the iDMDLSConnectionParameters Class of Dynamsoft B
 keywords: iDMDLSConnectionParameters, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+pageStartVer: 8.6
 ---
 
 

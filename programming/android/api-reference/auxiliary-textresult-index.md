@@ -30,7 +30,6 @@ class com.dynamsoft.dbr.TextResult;
 | [`detailedResult`](auxiliary-TextResult.md#detailedresult) | *Object* | One of the following: [`QRCodeDetails`](auxiliary-qrcodedetails.md), [`PDF417Details`](auxiliary-pdf417details.md), [`DataMatrixDetails`](auxiliary-datamatrixdetails.md), [`AztecDetails`](auxiliary-aztecdetails.md), [`OneDCodeDetails`](auxiliary-onedcodedetails.md). |
 | [`results`](auxiliary-TextResult.md#results) | [`ExtendedResult`](auxiliary-ExtendedResult.md)\[\] | The extended result array. |
 | [`exception`](auxiliary-TextResult.md#exception) | *String* | The exception message. |
-| [`isDPM`](auxiliary-TextResult.md#isdpm) | *int* | This attribute stands for whether the result is a DPM result. |
 | [`isMirrored`](auxiliary-TextResult.md#ismirrored) | *int* | This attribute stands for whether the barcode is mirrored. |
 
 **Code Snippet**

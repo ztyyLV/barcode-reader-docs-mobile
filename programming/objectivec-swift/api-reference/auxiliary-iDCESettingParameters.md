@@ -5,6 +5,7 @@ description: This page shows the iDCESettingParameters Class of Dynamsoft Barcod
 keywords: iDCESettingParameters, class, api reference, iOS
 needAutoGenerateSidebar: true
 noTitleIndex: true
+pageStartVer: 8.2.1
 ---
 
 # Class iDCESettingParameters

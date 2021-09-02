@@ -178,7 +178,3 @@ func LTSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
     print("isSucc : \(isSuccess) error : \(String(describing: error))")
 }
 ```
-
-## initLicenseFromLTS
-
-`Deprecated`. Please use [initLicenseFromLTS](#initlicensefromlts) instead.

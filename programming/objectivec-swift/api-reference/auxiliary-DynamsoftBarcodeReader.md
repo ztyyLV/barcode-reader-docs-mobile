@@ -20,7 +20,7 @@ noTitleIndex: true
   - [Result](#result)
   - [Video](#video)
 
-Defines a class that provides functions for working with extracting barcode data. 
+Defines a class that provides functions for working with extracting barcode data.
 
 Four methods are now supported for editing runtime settings — reset, initialize, append, and update:
 
@@ -34,7 +34,7 @@ Four methods are now supported for editing runtime settings — reset, initializ
 ```objc
 @interface DynamsoftBarcodeReader
 ```  
-  
+
 ---
 
 ## Attributes

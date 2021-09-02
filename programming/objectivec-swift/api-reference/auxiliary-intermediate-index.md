@@ -50,6 +50,7 @@ noTitleIndex: true
 | [`ccmIndex`](auxiliary-iIntermediateResult.md#ccmindex) | *NSInteger* | The array index of current used [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) in the [`colourClusteringModes`](auxiliary-FurtherModes.md#colourclusteringmodes) setting. |
 | [`scaleDownRatio`](auxiliary-iIntermediateResult.md#scaledownratio) | *NSInteger* | The scale down ratio. |
 | [`frameId`](auxiliary-iIntermediateResult.md#frameid) | *NSInteger* | The ID of the operated frame. |
+| [`rpmColourArgumentIndex`](auxiliary-iIntermediateResult.md#rpmcolourargumentindex) | *NSInteger* | The index of the rpm colour argument. |
 
 ## [iContour](auxiliary-icontour.md)
 

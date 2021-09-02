@@ -15,6 +15,7 @@ noTitleIndex: true
   | Method               | Description |
   |----------------------|-------------|
   | [`init`](primary-initialize.md#init) | Create an instance of Dynamsoft Barcode Reader. |
+  | [`dispose`](primary-initialize.md#dispose) | Destroy the instance of Dynamsoft Barcode Reader. |
 
 ## Decode
 
@@ -92,14 +93,6 @@ noTitleIndex: true
   | Method               | Description |
   |----------------------|-------------|
   | [`getFrameDecodingParameters`](primary-video.md#getframedecodingparameters) | Initialize frame decoding parameter. |
-
-### Delegate
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`setDBRErrorDelegate`](primary-video.md#setdbrerrordelegate) | Set callback function to process errors generated during frame decoding. |
-  | [`setDBRTextResultDelegate`](primary-video.md#setdbrtextresultdelegate) | Set callback function to process text results generated during frame decoding. |
-  | [`setDBRIntermediateResultDelegate`](primary-video.md#setdbrintermediateresultdelegate) | Set callback function to process intermediate results generated during frame decoding. |
 
 ### Status retrieval
 

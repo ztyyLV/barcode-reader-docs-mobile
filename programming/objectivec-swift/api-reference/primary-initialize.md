@@ -61,6 +61,6 @@ Objective-C:
 
 Swift:
 
-```Swift
+```swift
 barcodeReader.dispose()
 ```

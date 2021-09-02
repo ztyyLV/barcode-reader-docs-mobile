@@ -37,7 +37,7 @@ This class stores the quadrilateral points data.
 
 ## [iRegionDefinition](auxiliary-iRegionDefinition.md)
 
-This class stores the region data. You can make settings on scan region through this class.
+This class stores the region data. You can make settings on the scan region through this class.
 
 ```objc
 @interface iRegionDefinition

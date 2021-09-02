@@ -6,6 +6,7 @@ keywords: methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: BarcodeReader Class
+pageStartVer: 8.6
 ---
 
 # BarcodeReader Class

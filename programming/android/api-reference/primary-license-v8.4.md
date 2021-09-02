@@ -112,7 +112,7 @@ The output string which stores the contents of license.
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
-### Remark
+**Remark**
 
 [`InitLicenseFromServer`](#initlicensefromserver) has to be successfully called before calling this method.
 
@@ -158,7 +158,3 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
    }
 });
 ```
-
-## initLicenseFromLTS
-
-`Deprecated`, please use [initLicenseFromLTS](#initlicensefromlts) instead.

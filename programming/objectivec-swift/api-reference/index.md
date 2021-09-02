@@ -18,6 +18,7 @@ breadcrumbText: iOS API Reference
   | Method               | Description |
   |----------------------|-------------|
   | [`init`](primary-initialize.md#init) | Create an instance of Dynamsoft Barcode Reader. |
+  | [`dispose`](primary-initialize.md#dispose) | Destroy the instance of Dynamsoft Barcode Reader. |
 
 ### Decode
 
@@ -109,7 +110,7 @@ breadcrumbText: iOS API Reference
 - [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md)
 - [`iDBRPoint`](auxiliary-iDBRPoint.md)
 - [`iDCESettingParameters`](auxiliary-iDCESettingParameters.md)
-- [`iDMLTSConnectionParameters`](auxiliary-iDMLTSConnectionParameters.md)
+- [`iDMDLSConnectionParameters`](auxiliary-iDMDLSConnectionParameters.md)
 - [`iExtendedResult`](auxiliary-iExtendedResult.md)
 - [`iFrameDecodingParameters`](auxiliary-iFrameDecodingParameters.md)
 - [`iFurtherModes`](auxiliary-iFurtherModes.md)
