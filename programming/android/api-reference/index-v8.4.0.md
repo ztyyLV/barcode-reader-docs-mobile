@@ -154,7 +154,7 @@ noTitleIndex: true
   | [`IntermediateResultCallback`](interface-intermediateresultcallback.md) | The interface to handle callback when intermediate results are returned. |
   | [`ErrorCallback`](interface-errorcallback.md) | The interface to handle callback when an error is returned. |
   | [`DBRServerLicenseVerificationListener`](interface-dbrserverlicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
-  | [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
+  | [`DBRLTSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
 
 ## Enumerations
 
