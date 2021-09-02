@@ -36,11 +36,11 @@ noTitleIndex: true
 - Added a new binarization mode BM_THRESHOLD to set the BinarizationThreshold value which is used to convert the grayscale image to binary image.
 - Added startPatternRange, middlePatternRange and endPatternRange properties to the struct OneDCodeDetails for UPC_A, UPC_E, EAN_8 and EAN_13 codes.
 - Added the following new arguments for RegionPredetectionMode.RPM_GENERAL_RGB_CONTRAST and RegionPredetectionMode.RPM_GENERAL_GRAY_CONTRAST:
- - RelativeBarcodeRegions: Sets the barcode regions relative to the pre-detected region.
- - ForeAndBackgroundColours: Specifies a set (or multiple sets) of the foreground and background colours used for region pre-detection algorithm.
- - AspectRatioRange: Sets the height range of the bounding rectangle of the pre-detected region.
- - HeightRange: Sets the width range of the bounding rectangle of the pre-detected region.
- - WidthRange: Sets the aspect ratio range of the bounding rectangle of the pre-detected region.
+  - RelativeBarcodeRegions: Sets the barcode regions relative to the pre-detected region.
+  - ForeAndBackgroundColours: Specifies a set (or multiple sets) of the foreground and background colours used for region pre-detection algorithm.
+  - AspectRatioRange: Sets the height range of the bounding rectangle of the pre-detected region.
+  - HeightRange: Sets the width range of the bounding rectangle of the pre-detected region.
+  - WidthRange: Sets the aspect ratio range of the bounding rectangle of the pre-detected region.
 
 ### IMPROVED
 
@@ -77,9 +77,9 @@ noTitleIndex: true
 - Optimized deblurring algorithm for linear barcodes.
 - Improved a character display issue on some platforms where BarcodeText returns an extra "\uFEFF" if the barcode is encoded in UTF-8 with BOM (Byte Order Mark).
 - Simplified the process to enable DPM, DotCode and Postal Codes. Now the library will automatically turn on the corresponding localization mode while following settings are applied:
- - DPMCRM_GENEARL
- - BF2_DOTCODE
- - BF2_POSTALCODE
+  - DPMCRM_GENEARL
+  - BF2_DOTCODE
+  - BF2_POSTALCODE
 
 ### FIXED
 
@@ -141,13 +141,13 @@ noTitleIndex: true
 ### NEW
 
 - Added more barcode formats:
- - GS1 Databar (Omnidirectional, Truncated, Stacked, Stacked Omnidirectional, Limited, Expanded, Expanded Stacked)
- - PatchCode
- - Maxicode (mode 2-5)
- - Micro PDF417
- - Micro QR
- - GS1 COMPOSITE (combination of OneD and PDF417/Micro PDF 417)
- - Non-standard Barcode
+  - GS1 Databar (Omnidirectional, Truncated, Stacked, Stacked Omnidirectional, Limited, Expanded, Expanded Stacked)
+  - PatchCode
+  - Maxicode (mode 2-5)
+  - Micro PDF417
+  - Micro QR
+  - GS1 COMPOSITE (combination of OneD and PDF417/Micro PDF 417)
+  - Non-standard Barcode
 - Added the capability of reading DPM code. It can be enabled by turning on the struct PublicRuntimeSettings->furtherMode-> DPMCodeReadingModes and adding LM_STATISTICS_MARKS to the PublicRuntimeSettings->localizationModes.
 - Added a ReactNative package for iOS.
 - Licensing is required to obtain the intermediate results, except the original image in the intermediate results.
@@ -171,7 +171,6 @@ noTitleIndex: true
 - Added automatic blurry frame filtering for the video frame decoding, reducing incorrect barcode recognition.
 - Added three arguments for the CICM_GENERAL of ColourConversionModes to set the weights for the color conversion, providing more flexibility to deal with various kinds of backgrounds by using different weights of three colors: red, green and blue.
 - Added two new methods, StartFrameDecodingEx(), which can be used to start a new thread to decode barcodes, and InitFrameDecodingParameters(), and a new struct, iFrameDecodingParameters.
-
 
 ### IMPROVED
 
@@ -260,7 +259,7 @@ noTitleIndex: true
 
 - Added a BatchDecode tool which helps developers evaluate the recognition performance and speed of the Dynamsoft Barcode Reader SDK.
 - Added a new sample demonstrates how to use Dynamsoft Barcode Reader in multiple threads.
-- Added the runtime licensing mode. 
+- Added the runtime licensing mode.
 
 ### IMPROVED
 
@@ -316,8 +315,8 @@ Version 4.2 marks the initial release of Dynamsoft Barcode Reader iOS SDK.
 
 - Supports reading a single barcode from images (UIImage) and mobile cameras (NV21). Both synchronous and asynchronous barcode decoding methods are provided.
 - Supported barcode types include:
- - 1D Barcode – Code39, Code93, Code128, Codabar, ITF, EAN13, EAN8, UPCA, UPCE and INDUSTRIAL 2 OF 5.
- - 2D Barcode – QR Code, PDF 417, Aztec and DataMatrix.
+  - 1D Barcode – Code39, Code93, Code128, Codabar, ITF, EAN13, EAN8, UPCA, UPCE and INDUSTRIAL 2 OF 5.
+  - 2D Barcode – QR Code, PDF 417, Aztec and DataMatrix.
 - Supports iOS 7- 9; iPhone 4s and higher.
 - Supported architectures: armv7/arm64/i386/x86_64.
 
