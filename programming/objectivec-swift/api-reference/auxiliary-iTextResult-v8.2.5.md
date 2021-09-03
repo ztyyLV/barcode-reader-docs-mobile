@@ -107,19 +107,3 @@ The exception message.
 ```objc
 NSString* exception
 ```
-
-## isDPM
-
-This attribute stands for whether the result is a DPM result.
-
-```objc
-NSInteger isDPM
-```
-
-## isMirrored
-
-This attribute stands for whether the barcode is mirrored.
-
-```objc
-NSInteger isMirrored
-```

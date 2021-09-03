@@ -32,16 +32,6 @@ noTitleIndex: true
   | [`initIntermediateResult`](primary-decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
-### Camera Enhancer
-  
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`StartCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Start using Dynamsoft Camera Enhancer |
-   | [`StopCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Stop using Dynamsoft Camera Enhancer |
-   | [`PauseCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
-   | [`ResumeCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Resume the process of Dynamsoft Camera Enhancer |
-   | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
-
 ### License
   
   | Method               | Description |
@@ -127,7 +117,6 @@ noTitleIndex: true
 - [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 - [`Contour`](auxiliary-Contour.md)
 - [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md)
-- [`DCESettingParameters`](auxiliary-DCESettingParameters.md)
 - [`DMLTSConnectionParameters`](auxiliary-DMLTSConnectionParameters.md)
 - [`ExtendedResult`](auxiliary-ExtendedResult.md)
 - [`FrameDecodingParameters`](auxiliary-FrameDecodingParameters.md)
@@ -154,7 +143,7 @@ noTitleIndex: true
   | [`IntermediateResultCallback`](interface-intermediateresultcallback.md) | The interface to handle callback when intermediate results are returned. |
   | [`ErrorCallback`](interface-errorcallback.md) | The interface to handle callback when an error is returned. |
   | [`DBRServerLicenseVerificationListener`](interface-dbrserverlicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
-  | [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
+  | [`DBRLTSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
 
 ## Enumerations
 
