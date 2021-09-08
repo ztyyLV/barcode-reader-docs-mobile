@@ -23,20 +23,34 @@ needGenerateH3Content: false
 - [Android](../programming/android/release-notes/android-8.md#86-07152021)
 - [iOS](../programming/objectivec-swift/release-notes/ios-8.md#86-07152021)
 
-## Other editions
+## Other 8.X Versions
 
 **8.4.0**
 
-- Updated license activation parameters.
-- Faster recognition speeds when detecting dense QR Codes.
+- Improved the recognition speeds when detecting dense QR Codes.
 - Improved the performance of boundary identification for DataMatrix codes.
+- Added a new `BinarizationModes` parameter `ThresholdCompensation` to replace the deprecated parameter `ThreshValueCoefficient`.
 
 **8.2.0**
 
-- Add a new `RegionPredetectionModes` parameter `FindAccurateBoundary`.
+- Improved the performance on localizing and processing the Postal Codes
+
+**8.1.2**
+
 - Improved the recognition accuracy for GS1 Databar.
 
 **8.1.0**
 
 - Added support for MSI code (Modified Plessey).
-- Added exception error message to TextResult when license initialization fails or decoding authorization fails.
+- Improved the localization robustness for QR Code.
+- Improved the localization for low quality 1D barcodes.
+- Improved the deblurring performance and recognition rate for DataMatrix.
+- Improved the recognition rate for Aztec.
+
+**8.0.0**
+
+- Added a new license activation mechanism, license 2.0.
+- Improved the localization speed for the ScanDirectly mode.
+- Improved the localization accuracy for DataMatrix codes with a narrow quiet zone.
+- Added new a parameter `DeblurModes` for user to apply different deblur algorithm for different scenarios.
+- Added support for decoding `IntermediateResult`.
