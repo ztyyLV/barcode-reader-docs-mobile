@@ -12,13 +12,13 @@ needGenerateH3Content: false
 
 {%- include release-notes/product-highlight-8.6.0.md -%}
 
-## Edition Changelogs
+## View Edition Changelogs
 
 | [JavaScript](../programming/javascript/release-notes/js-8.md#860-08312021) | [C](../programming/c/release-notes/c-8.md#86-07152021) | [C++](../programming/cplusplus/release-notes/cpp-8.md#86-07152021) | [DotNet](../programming/dotnet/release-notes/dotnet-8.md#86-07152021) |
 |----------|-|---|------|
 | **[Python](../programming/python/release-notes/python-8.md#86-07152021)** | **[Java](../programming/java/release-notes/java-8.md#86-07152021)** | **[Android](../programming/android/release-notes/android-8.md#86-07152021)** | **[iOS](../programming/objectivec-swift/release-notes/ios-8.md#86-07152021)** |
 
-## Other 8.X Versions
+## Other 8.X Version Highlights
 
 **8.4.0**
 
