@@ -15,7 +15,6 @@ Conclusion first, to maximize the accuracy of DBR in your project, you can:
   - Enable frame filter by using `Dynamsoft camera Enhancer`.
 - Exclude the uninterest formats or areas by:
   - Specifying the supporting barcode formats.
-  - Filtering the uninterested formats and areas.
   - Excluding the small-module barcodes.
 - Filter the results by enabling:
   - Multi-frame confirmation.
@@ -44,7 +43,7 @@ Barcode format is one of the most typical settings of a barcode reader. This wil
 
 ### Skip Small-Size Barcodes
 
-It is always a harsh task for a generally configured barcode reader to recognize a small-size barcode. DBR has `scaleupMode` which is specially designed for improving the read rate of small-size barcodes but contributes little to the accuracy. As a result, if your decoding program is designed for general usage, it is suggested to skip decoding on these small-size barcodes. You can configure the `FormatSpecification` parameters `BarcodeHeightRangeArray` and `BarcodeWidthRangeArray` to define the smallest acceptable barcode size of your barcode reading program.
+It is always a harsh task for a generally configured barcode reader to recognize a small-size barcode. DBR has `scaleupMode` which is specially designed for improving the read rate of small-size barcodes but contributes little to the accuracy. As a result, if your decoding program is designed for general usage, it is suggested to skip decoding on these small-size barcodes. You can configure the `FormatSpecification` parameters `BarcodeHeightRangeArray` and `BarcodeWidthRangeArray` to define the smallest acceptable barcode size of your barcode reading program. In addition, by configuring the range of barcode height and width, you can also filter out some incompatible shaped barcodes before decoding.
 
 **Related APIs**
 
