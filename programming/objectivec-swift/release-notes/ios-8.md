@@ -12,7 +12,13 @@ noTitleIndex: true
 
 ## 8.6 (07/15/2021)
 
-### New
+### Highlights
+
+{%- include release-notes/product-highlight-8.6.0.md -%}
+
+### Changelog
+
+#### New
 
 - Added more samples.
 - Added new API `enableResultVerification`. The barcode decoding results will be verified before output if this feature is enabled. This will highly improve the accuracy of barcode scanning.
@@ -22,7 +28,7 @@ noTitleIndex: true
 - Added class `iDMDLSConnectionParameters` to replace class `iDMLTSConnectionParameters`.
 - Added delegate `DMDLSLicenseVerificationDelegate` and callback `DLSLicenseVerificationCallback` to replace `DMLTSLicenseVerificationDelegate` and `LTSLicenseVerificationCallback`.
 
-### Improved
+#### Improved
 
 - Improved the [`confidence`]({{site.oc_api}}auxiliary-ExtendedResult.html#confidence) algorithm for 1D barcode results. Users can get even more accurate results by configuring the `confidence` filter.
 

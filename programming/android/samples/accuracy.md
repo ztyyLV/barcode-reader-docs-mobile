@@ -24,19 +24,17 @@ Conclusion first, to maximize the accuracy of DBR in your project, you can:
 
 ## Enhance the input
 
-Normally, the misreading is caused by the low-quality source. The low-quality source can be the badly() printed barcodes or the blurry images/frames. To solve these issues, we can either enhance the quality of the source or recognize the quality issue and avoid decoding these low-quality resources.
+Normally, the misreading is caused by the low-quality source. The low-quality source can be terribly printed barcodes or blurry images/frames. These low-quality barcodes can be recognized and localized. However, the barcode reader will take a lot of time to further process these barcodes and it is difficult to guarantee the accuracy of the results. It would be better to optimize the barcode source rather than try decoding on these low-quality barcodes.
 
-### Enhance the Device Performance
+### Optimize the Video Input
 
-Decoding on blurry frames might cause misreading to a certain extent.
+`Dynamsoft Camera Enhancer` (DCE) is an SDK that provides video streaming pre-processing APIs which enable users to avoid decoding barcodes on low-quality frames. By enabling the frame filter feature of DCE, the sharpness of each frame will be detected
 
-For video streaming barcode scanning, `Dynamsoft Camera Enhancer` is available for mobile and JavaScript developers to filter out the blurry frames before the barcode reader start processing the images.
-
-## Exclude the Uninterest
+## Exclude the Uninterest (Before decoding)
 
 ### Specify the Barcode Format
 
-Barcode format is one of the most typical settings of a barcode reader. This will help you to improve the speed and accuracy of your barcode reading program by excluding the uninterested formats. You can update the barcode formats in the struct/class `PublicRuntimeSettings` via API `updateRuntimeSettings`.
+Barcode format is one of the most typical settings of a barcode reader. This will help you to improve the speed and accuracy of your barcode reading program by excluding the uninterested formats. You can update the barcode format settings in the struct/class `PublicRuntimeSettings` via API `updateRuntimeSettings`.
 
 **Related APIs**
 
@@ -75,14 +73,16 @@ For some scenarios, the following features can be applied to verify the correctn
 
 **The Text Length**
 
-Set the minimum and maximum length of the barcode text to filter out the uninterested results. This feature can be set via `FormatSpecification` parameter `BarcodeTextLengthRangeArray`.
+Set the minimum and maximum length of the barcode text to filter out the uninterested results. This feature can be configured via `FormatSpecification` parameter [`BarcodeTextLengthRangeArray`]({{ site.parameters_reference }}format-specification/format-control.html#barcodetextlengthrangearray).
 
 **The Regular Expression Pattern**
+
+Set the regular expression pattern of the barcode text to filter out the uninsterested results. This feature can be configured via `FormatSpecification` parameter [`BarcodeTextRegExPattern`]({{ site.parameters_reference }}format-specification/format-control.html#barcodetextregexpattern).
 
 ## Further links
 
 Dynamsoft Barcode Reader Accuracy-First Samples:
 
-- [`Accuracy-First Settings for mobile Editions`]()
-- [`Accuracy-First Settings for JS Editions`]()
-- [`Accuracy-First Settings for Desktop Editions`]()
+- [`Accuracy-First Settings Sample for mobile Editions`]()
+- [`Accuracy-First Settings Sample for JS Editions`]()
+- [`Accuracy-First Settings Sample for Desktop Editions`]()
