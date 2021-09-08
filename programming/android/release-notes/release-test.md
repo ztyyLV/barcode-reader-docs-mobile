@@ -12,7 +12,7 @@ needGenerateH3Content: false
 
 {%- include release-notes/product-highlight-8.6.0.md -%}
 
-## Editions
+## Edition Changelogs
 
 | [JavaScript](../programming/javascript/release-notes/js-8.md#860-08312021) | [C](../programming/c/release-notes/c-8.md#86-07152021) | [C++](../programming/cplusplus/release-notes/cpp-8.md#86-07152021) | [DotNet](../programming/dotnet/release-notes/dotnet-8.md#86-07152021) |
 |----------|-|---|------|
