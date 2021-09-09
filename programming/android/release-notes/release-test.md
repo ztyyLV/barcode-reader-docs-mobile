@@ -26,24 +26,24 @@ needGenerateH3Content: false
 
 **8.2.0**
 
-- Improved the performance on localizing and processing the Postal Codes
+- Improved the performance when localizing and processing the Postal Codes
 
 **8.1.2**
 
-- Improved the recognition accuracy for GS1 Databar.
+- Improved the accuracy when recognizing GS1 Databar.
 
 **8.1.0**
 
 - Added support for MSI code (Modified Plessey).
-- Improved the localization robustness for QR Code.
-- Improved the localization for low-quality 1D barcodes.
-- Improved the deblurring performance and recognition rate for DataMatrix.
-- Improved the recognition rate for Aztec.
+- Improved the robustness when localizing QR Code.
+- Improved the performance when localizing low-quality 1D barcodes.
+- Improved the deblurring performance and read rate of DataMatrix.
+- Improved the read rate of Aztec.
 
 **8.0.0**
 
 - Added a new license activation mechanism, license 2.0.
 - Improved the localization speed for the ScanDirectly mode.
 - Improved the localization accuracy for DataMatrix codes with a narrow quiet zone.
-- Added a new parameter `DeblurModes` for users to apply different deblur algorithms for different scenarios.
-- Added support for decoding `IntermediateResult`.
+- Added a new Image process control mode, `DeblurModes`. `DeblurModes` enables users to apply different deblur algorithms for different scenarios.
+- Added supports for decoding `IntermediateResult`.
