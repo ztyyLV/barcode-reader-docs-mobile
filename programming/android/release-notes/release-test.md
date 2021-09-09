@@ -36,7 +36,7 @@ needGenerateH3Content: false
 
 - Added support for MSI code (Modified Plessey).
 - Improved the localization robustness for QR Code.
-- Improved the localization for low quality 1D barcodes.
+- Improved the localization for low-quality 1D barcodes.
 - Improved the deblurring performance and recognition rate for DataMatrix.
 - Improved the recognition rate for Aztec.
 
@@ -45,5 +45,5 @@ needGenerateH3Content: false
 - Added a new license activation mechanism, license 2.0.
 - Improved the localization speed for the ScanDirectly mode.
 - Improved the localization accuracy for DataMatrix codes with a narrow quiet zone.
-- Added new a parameter `DeblurModes` for user to apply different deblur algorithm for different scenarios.
+- Added a new parameter `DeblurModes` for users to apply different deblur algorithms for different scenarios.
 - Added support for decoding `IntermediateResult`.
