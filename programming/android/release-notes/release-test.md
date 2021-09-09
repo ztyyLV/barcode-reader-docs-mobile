@@ -21,7 +21,7 @@ needGenerateH3Content: false
 **8.4.0**
 
 - Improved the recognition speeds when detecting dense QR Codes.
-- Improved the performance of boundary identification for DataMatrix codes.
+- Improved the performance of boundary identification when processing DataMatrix codes.
 - Added a new `BinarizationModes` parameter `ThresholdCompensation` to replace the deprecated parameter `ThreshValueCoefficient`.
 
 **8.2.0**
@@ -35,10 +35,10 @@ needGenerateH3Content: false
 **8.1.0**
 
 - Added support for MSI code (Modified Plessey).
-- Improved the robustness when localizing QR Code.
+- Improved the robustness when localizing QR Codes.
 - Improved the performance when localizing low-quality 1D barcodes.
-- Improved the deblurring performance and read rate of DataMatrix.
-- Improved the read rate of Aztec.
+- Improved the deblurring performance and read rate of DataMatrix codes.
+- Improved the read rate of Aztec codes.
 
 **8.0.0**
 
