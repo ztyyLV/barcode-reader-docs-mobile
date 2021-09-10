@@ -14,7 +14,7 @@ noTitleIndex: true
 
 ### FIXED
 
-- Fixed an SSL certificate validation and hostname verification issue which may cause the App to be rejected by Google Play if the InitLicenseFromServer() method was used in the App.
+- Fixed an SSL certificate validation and hostname verification issue which may cause the App to be rejected by Google Play if the `initLicenseFromServer` method was used in the App.
 
 ## 7.6 (09/01/2020)
 
@@ -31,7 +31,7 @@ noTitleIndex: true
 ### FIXED
 
 - Fixed a bug where the coordinates of barcodes are calculated incorrectly under some situations.
-- Fixed a crash issue which occurs under some situations.
+- Fixed a crash issue that occurs under some situations.
 
 ## 7.5 (07/22/2020)
 
@@ -43,7 +43,7 @@ noTitleIndex: true
 - Added startPatternRange, middlePatternRange and endPatternRange properties to the struct OneDCodeDetails for UPC_A, UPC_E, EAN_8 and EAN_13 codes.
 - Added the following new arguments for RegionPredetectionMode.RPM_GENERAL_RGB_CONTRAST and RegionPredetectionMode.RPM_GENERAL_GRAY_CONTRAST:
   - RelativeBarcodeRegions: Sets the barcode regions relative to the pre-detected region.
-  - ForeAndBackgroundColours: Specifies a set (or multiple sets) of the foreground and background colours used for region pre-detection algorithm.
+  - ForeAndBackgroundColours: Specifies a set (or multiple sets) of the foreground and background colours used for the region pre-detection algorithm.
   - AspectRatioRange: Sets the height range of the bounding rectangle of the pre-detected region.
   - HeightRange: Sets the width range of the bounding rectangle of the pre-detected region.
   - WidthRange: Sets the aspect ratio range of the bounding rectangle of the pre-detected region.

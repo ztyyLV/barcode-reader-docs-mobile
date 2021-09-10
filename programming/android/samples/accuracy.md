@@ -11,22 +11,21 @@ breadcrumbText: Accuracy-First Settings
 
 Conclusion first, to maximize the accuracy of DBR in your project, you can:
 
-- Enhance the video input by:
-  - Using Dynamsoft Camera Enhancer for video streaming barcode scanning (JS & mobile edition).
+- Skip processing the blurry frames:
+  - Enable frame filter by using `Dynamsoft camera Enhancer`.
 - Exclude the uninterest formats or areas by:
   - Specifying the supporting barcode formats.
-  - Filtering the uninterested formats and areas.
   - Excluding the small-module barcodes.
 - Filter the results by enabling:
   - Multi-frame confirmation.
   - Confidence score filter.
   - RegEx and length filter.
 
-## Optimize the Input
+## Skip the Blurry Frames
 
 Normally, the misreading is caused by the low-quality source. The low-quality source can be terribly printed barcodes or blurry images/frames. These low-quality barcodes can be recognized and localized. However, the barcode reader will take a lot of time to further process these barcodes and it is difficult to guarantee the accuracy of the results. It would be better to optimize the barcode source rather than try decoding on these low-quality barcodes.
 
-### Skip the Blurry Frames
+### Frame Filter
 
 Generally, the quality of input video streaming is determined by the performance of hardware. However, we still have solutions to deal with the blurry frames in the video streaming from the software end. `Dynamsoft Camera Enhancer` (DCE) is an SDK that provides video streaming pre-processing APIs which enable users to avoid decoding barcodes on low-quality frames. By enabling the frame filter feature of DCE, the sharpness of each frame will be detected and the low sharpness frames will be skipped in the barcode decoding process.
 
@@ -44,7 +43,7 @@ Barcode format is one of the most typical settings of a barcode reader. This wil
 
 ### Skip Small-Size Barcodes
 
-It is always a harsh task for a generally configured barcode reader to recognize a small-size barcode. DBR has `scaleupMode` which is specially designed for improving the read rate of small-size barcodes but contributes little to the accuracy. As a result, if your decoding program is designed for general usage, it is suggested to skip decoding on these small-size barcodes. You can configure the `FormatSpecification` parameters `BarcodeHeightRangeArray` and `BarcodeWidthRangeArray` to define the smallest acceptable barcode size of your barcode reading program.
+It is always a harsh task for a generally configured barcode reader to recognize a small-size barcode. DBR has `scaleupMode` which is specially designed for improving the read rate of small-size barcodes but contributes little to the accuracy. As a result, if your decoding program is designed for general usage, it is suggested to skip decoding on these small-size barcodes. You can configure the `FormatSpecification` parameters `BarcodeHeightRangeArray` and `BarcodeWidthRangeArray` to define the smallest acceptable barcode size of your barcode reading program. In addition, by configuring the range of barcode height and width, you can also filter out some incompatible shaped barcodes before decoding.
 
 **Related APIs**
 
@@ -63,13 +62,15 @@ The multi-frame confirmation is a solution that eliminates misreading on oneD ba
 **Available Editions**
 
 - Mobile
+  - For mobile efitions, please use `BarcodeReader.enableResultVerification` to enable/disable the Muti-frame confirmation.
 - JavaScript
+  - For JavaScript edition, the multi-frame confirmation is enabled by default.
 
 **Related APIs**
 
 ### Exclude the Uninterest results
 
-For some scenarios, the following features can be applied to verify the correctness of the barcode results.
+For some scenarios, there might have some common features that can be applied to verify the correctness of the barcode result texts.
 
 **The Text Length**
 
@@ -81,7 +82,7 @@ Set the regular expression pattern of the barcode text to filter out the uninste
 
 ## Further links
 
-Dynamsoft Barcode Reader Accuracy-First Samples:
+Check the Accuracy-First setting sample for further reading.
 
 - [`Accuracy-First Settings Sample for mobile Editions`]()
 - [`Accuracy-First Settings Sample for JS Editions`]()

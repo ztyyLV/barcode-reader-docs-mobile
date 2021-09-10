@@ -11,7 +11,7 @@ breadcrumbText: iOS API Reference
 
 # API Reference - iOS
 
-## BarcodeReader Class
+## DynamsoftBarcodeReader Class
 
 ### Initialize
   
