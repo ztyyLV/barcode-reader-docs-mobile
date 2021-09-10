@@ -23,7 +23,8 @@ noTitleIndex: true
 - Added more samples.
 - Added new API `enableResultVerification`. The barcode decoding results will be verified before output if this feature is enabled. This will highly improve the accuracy of barcode scanning.
 - Added new API `enableDuplicateFilter`. The barcode decoding results will be filtered before output if this feature is enabled. The duplicated results will be output only once for every three seconds.
-- Added two DeblurMode Enumerations, `DM_BASED_ON_LOC_BIN` and `DM_SHARPENING_SMOOTHING`, to support more usage scenarios.
+- Added two `DeblurMode` Enumerations, `DM_BASED_ON_LOC_BIN` and `DM_SHARPENING_SMOOTHING`, to support more usage scenarios.
+- Added method `initLicenseFromDLS` in `BarcodeReader` class to replace `initLicenseFromLTS`.
 - Added class `DMDLSConnectionParameters` to replace class `DMLTSConnectionParameters`.
 - Added interface `DBRDLSLicenseVerificationListener` and callback `DLSLicenseVerificationCallback` to replace `DBRLTSLicenseVerificationListener` and `LTSLicenseVerificationCallback`.
 
@@ -36,7 +37,6 @@ noTitleIndex: true
 ### New
 
 - Added a new attribute [`isMirrored`]({{site.android_class}}TextResult.html#ismirrored) to the `TextResult` class. `isMirrored` returns whether the barcode is mirrored.
-- Added a new attribute [`isDPM`]({{site.android_class}}TextResult.html#isdpm) to the `TextResult` class. `isDPM` returns whether the barcode is recognized by the DPM mode.
 - Added a new argument, `ThresholdCompensation`, to the `BinarizationModes` mode arguments.
 
 ### Improved
@@ -46,11 +46,11 @@ noTitleIndex: true
 
 ### Deprecated
 
-- `ThreshValueCoefficient` is now deprecated. It still works in this version but could be removed in the near future. We recommend using ThresholdCompensation instead.
+- `ThreshValueCoefficient` is now deprecated. It still works in this version but could be removed in the near future. We recommend using `ThresholdCompensation` instead.
 
 ### Fixed
 
-- Fixed an issue that happens when calling initLicenseFromLTS if [`handShakeCode`]({{site.android_class}}DMLTSConnectionParameters.html#handshakecode) is not set.
+- Fixed an issue that happens when calling `initLicenseFromLTS` if [`handShakeCode`]({{site.android_class}}DMLTSConnectionParameters.html#handshakecode) is not set.
 - Fixed a bug when trying to build the project in the release mode with code shrinker enabled.
 
 ## 8.2.1 (05/27/2021)
@@ -69,13 +69,13 @@ noTitleIndex: true
 
 ### New
 
-- Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`.
+- Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when `RegionPredetectionModes` is set to `RPM_GENERAL_HSV_CONTRAST`.
 - Added a new an attribute, `organizationID` (string) to `DMLTSConnectionParameters`. The attribute adds a new layer of security for both full and trial licenses.
 
 ### Improved
 
 - Improved both the localization and decoding algorithms for Postal Codes.
-- LocalizationMode `LM_STATISTICS_POSTAL_CODE` will not be added automatically when enabling Postal Code in your runtime settings. Instead, users must manually add it to the LocalizationMode array if it is required.
+- `LocalizationMode.LM_STATISTICS_POSTAL_CODE` will not be added automatically when enabling Postal Code in your runtime settings. Instead, users must manually add it to the `LocalizationMode` array if it is required.
 
 ### Fixed
 
@@ -127,19 +127,19 @@ noTitleIndex: true
 
 ### New
 
-- (For IntermediateResult Advanced Module) Added support for decoding IntermediateResult. For example, users with a binarized image could use this function to skip some image preprocessing steps.
+- (For `IntermediateResult` Advanced Module) Added support for decoding `IntermediateResult`. For example, users with a binarized image could use this function to skip some image preprocessing steps.
 - Implemented a new licensing tracking mechanism, License 2.0, which makes it easier for users to track license usage.
-- Added a new format control parameter, BarcodeZoneMinDistanceToImageBorders, to set the minimum distance (in pixels) between the barcode zone and image borders.
-- Added a new format control parameter, MinRatioOfBarcodeZoneWidthToHeight, to set the minimum ratio (width/height) of the barcode zone.
-- Added a new format control parameter, BarcodeZoneBarCountRangeArray, to set the barcode zone’s range of bar count for barcode search.
-- Added a new argument, SpatialIndexBlockSize, for RPM_GENERAL_RGB_CONTRAST, RPM_GENERAL_GRAY_CONTRAST and RPM_GENERAL_HSV_CONTRAST.
-- Added a new parameter, DeblurModes, so users can use different deblur algorithms for different scenarios. DeblurModes has the following enum types: DirectBinarization, ThresholdBinarization, GrayEqulization, Smoothing, Morphing, DeepAnalysis and Sharpening.
+- Added a new format control parameter, `BarcodeZoneMinDistanceToImageBorders`, to set the minimum distance (in pixels) between the barcode zone and image borders.
+- Added a new format control parameter, `MinRatioOfBarcodeZoneWidthToHeight`, to set the minimum ratio (width/height) of the barcode zone.
+- Added a new format control parameter, `BarcodeZoneBarCountRangeArray`, to set the barcode zone’s range of bar count for barcode search.
+- Added a new argument, `SpatialIndexBlockSize`, for `RPM_GENERAL_RGB_CONTRAST`, `RPM_GENERAL_GRAY_CONTRAST` and `RPM_GENERAL_HSV_CONTRAST`.
+- Added a new parameter, `DeblurModes`, so users can use different deblur algorithms for different scenarios. `DeblurModes` has the following enum types: `DirectBinarization`, `ThresholdBinarization`, `GrayEqulization`, `Smoothing`, `Morphing`, `DeepAnalysis` and `Sharpening`.
 
 ### Improved
 
-- Improved the localization speed for the ScanDirectly mode.
+- Improved the localization speed for the `ScanDirectly` mode.
 - Improved the localization accuracy for DataMatrix codes with a narrow quiet zone.
 
 ### Feature Deprecated
 
-- DeblurLevel is now deprecated. It still works in this version but could be removed in the near future. We recommend using DeblurModes instead.
+- `DeblurLevel` is now deprecated. It still works in this version but could be removed in the near future. We recommend using `DeblurModes` instead.
