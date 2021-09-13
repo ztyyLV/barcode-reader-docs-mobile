@@ -189,7 +189,7 @@ reader.destroy();
 Decodes barcode from a buffered image (bitmap).
 
 ```java
-TextResult[] decodeBufferedImage(Bitmap image, String templateName) throws BarcodeReaderException
+TextResult[] decodeBufferedImage(Bitmap image, String templateName) throws IOException, BarcodeReaderException
 ```
 
 **Parameters**
