@@ -9,7 +9,11 @@ breadcrumbText: Accuracy-First Settings
 
 # Android Accuracy-First Settings Sample
 
-The Accuracy-First setting sample illustrates how to use DBR APIs to improve the barcode reading accuracy. The barcode misreading is always caused by decoding the terribly printed barcodes or blurry images. You can use the following methods to improve the accuracy of your barcode reading app.
+The Accuracy-First setting sample illustrates how to use DBR APIs to improve the barcode reading accuracy. Normally the barcode misreading is caused by decoding the terribly printed barcodes or blurry images. On this page, you can find the guides on how to deal with these issues to avoid misreading when using Dynamsoft Barcode Reader.
+
+View the sample
+
+- [Speed-first Settings Sample (Android Java)]()
 
 ## Regular Accuracy Settings
 
@@ -23,9 +27,15 @@ Generally, the quality of input video streaming is determined by the performance
 
 For every barcode result returned by DBR, it has a confidence value. The higher the confidence is, the more possible it is to be correct. Currently, the barcode reader will always return the barcode result with the highest confidence and the confidence filter is enabled as well. The default value of the confidence filter is 30，which means the result with lower confidence will not be returned.
 
+**Related APIs**
+
+`MinResultConfidence`
+
 ### Multi-frame Confirmation
 
 The multi-frame confirmation is a solution that eliminates misreading on oneD barcodes by double-checking the barcode results between multiple video frames before the results are returned. Since this feature will halve the average reading speed, please enable this feature when the misreading is intolerable.
+
+- Use [`enableResultVerification`]({{ site.android_api }}primary-result.html#enableresultverification) to enable the result confirmation.
 
 ## Advanced Accuracy Settings
 

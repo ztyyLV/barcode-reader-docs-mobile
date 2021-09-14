@@ -13,7 +13,7 @@ The Speed-first Settings sample illustrates how to improve the speed performance
 
 View the sample
 
-- [Speed-first Settings Sample]()
+- [Speed-first Settings Sample (Android Java)]()
 
 ## Size of the Scan Region
 
