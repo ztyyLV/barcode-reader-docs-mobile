@@ -95,7 +95,10 @@ Use the following codes to deploy the camera module.
     _dceView = [DCECaptureView captureWithFrame:self.view.bounds];
     [_dceView addOverlay];
     [self.view addSubview:_dceView];
-    _dce = [[DynamsoftCameraEnhancer alloc] initLicense:dcePara;        
+    iDCEdlsConnectionParameters* dcePara = [[iDCEdlsConnectionParameters alloc] init];
+    /*Set the organizationID = 200001 to use the public trial*/
+    dcePara.organizationID = @"Put your organizationID here";
+    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromDLS:dcePara;        
     view:_dceView verificationDelegate:self];
     [_dce setCameraDesiredState:CAMERA_STATE_ON];
     _dce.isEnable = YES;
