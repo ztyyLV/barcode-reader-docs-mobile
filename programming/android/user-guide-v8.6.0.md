@@ -123,9 +123,12 @@ In the process of video barcode scanning, the camera will provide the video inpu
    mCameraEnhancer = new CameraEnhancer(MainActivity.this);
    mCameraEnhancer.addCameraView(cameraView);
    // Initialize the Camera Enhancer from Dynamsoft License Server.
-   mCameraEnhancer.initLicense(info,new DCELicenseVerificationListener() {
+   com.dynamsoft.dce.DMDLSConnectionParameters info = new com.dynamsoft.dce.DMDLSConnectionParameters();
+   // Set the organizationID = 200001 to use the public trial.
+   info.organizationID = "Put your organizationID here.";
+   mCameraEnhancer.initLicenseFromDLS(info,new CameraDLSLicenseVerificationListener() {
       @Override
-      public void DCELicenseVerificationCallback(boolean isSuccess, Exception error) {
+      public void DLSLicenseVerificationCallback(boolean isSuccess, Exception error) {
          if(!isSuccess){
             error.printStackTrace();
          }

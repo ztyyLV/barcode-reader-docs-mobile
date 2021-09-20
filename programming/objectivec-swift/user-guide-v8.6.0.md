@@ -71,7 +71,7 @@ Initialize the Camera Enhancer:
 ```objectivec
 @interface ViewController ()
 @property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
-@property(nonatomic, strong) DCECameraView *dceView;
+@property(nonatomic, strong) DCECaptureView *dceView;
 
 @end
 
@@ -92,10 +92,14 @@ Use the following codes to deploy the camera module.
 ```objectivec
 /*Deploy the camera with Dynamsoft Camera Enhancer.*/
 - (void)configurationDCE{
-    _dceView = [DCECameraView captureWithFrame:self.view.bounds];
+    _dceView = [DCECaptureView captureWithFrame:self.view.bounds];
     [_dceView addOverlay];
     [self.view addSubview:_dceView];
-    [DynamsoftCameraEnhancer initLicense:@"DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==" verificationDelegate:self];
+    iDCEdlsConnectionParameters* dcePara = [[iDCEdlsConnectionParameters alloc] init];
+    /*Set the organizationID = 200001 to use the public trial*/
+    dcePara.organizationID = @"Put your organizationID here";
+    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromDLS:dcePara;        
+    view:_dceView verificationDelegate:self];
     [_dce setCameraDesiredState:CAMERA_STATE_ON];
     _dce.isEnable = YES;
 }
@@ -107,7 +111,7 @@ Initialize the Camera Enhancer:
 
 ```swift
 var dce:DynamsoftCameraEnhancer! = nil
-var dceView:DCECameraView! = nil
+var dceView:DCECaptureView! = nil
 
 override func viewDidLoad() {
     super.viewDidLoad()
@@ -124,10 +128,13 @@ Use the following codes to deploy the camera module:
 ```swift
 /*Deploy the camera with Dynamsoft Camera Enhancer.*/
 func configurationDCE() {
-    dceView = DCECameraView.init(view: self.view.bounds)
+    dceView = DCECaptureView.init(view: self.view.bounds)
     dceView.addOverlay()
     self.view.addSubview(dceView)
-    DynamsoftCameraEnhancer.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==",verificationDelegate:self)
+    let dls = iDCEdlsConnectionParameters()
+    /*Set the organizationID = 200001 to use the public trial*/
+    dls.organizationID = "Put your organizationID here"
+    dce = DynamsoftCameraEnhancer.init(licenseFromDLS: dls, view: dceView, verificationDelegate: self)
     dce.setCameraDesiredState(.CAMERA_STATE_ON)
 }
 ```
@@ -144,7 +151,7 @@ Add code to initialize the Barcode reader:
 @interface ViewController ()
 @property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
 /*@property(nonatomic, strong) DynamsoftCameraEnhancer *dce;*/
-/*@property(nonatomic, strong) DCECameraView *dceView;*/
+/*@property(nonatomic, strong) DCECaptureView *dceView;*/
 
 @end
     
@@ -181,7 +188,7 @@ Add code to initialize the Barcode reader:
 ```swift
 /*
 var dce:DynamsoftCameraEnhancer! = nil
-var dceView:DCECameraView! = nil
+var dceView:DCECaptureView! = nil
 */
 var barcodeReader:DynamsoftBarcodeReader! = nil
 override func viewDidLoad() {
@@ -220,10 +227,13 @@ In `configurationDCE` add the following code to set camera enhancer parameter:
 /*Deploy the camera with Dynamsoft Camera Enhancer.*/
 - (void)configurationDCE{
     /*
-    _dceView = [DCECameraView captureWithFrame:self.view.bounds];
+    _dceView = [DCECaptureView captureWithFrame:self.view.bounds];
     [_dceView addOverlay];
     [self.view addSubview:_dceView];
-    [DynamsoftCameraEnhancer initLicense:@"DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==" verificationDelegate:self];
+    iDCEdlsConnectionParameters* dcePara = [[iDCEdlsConnectionParameters alloc] init];
+    dcePara.organizationID = @"Put your organizationID here";
+    _dce = [[DynamsoftCameraEnhancer alloc] initLicenseFromDLS:dcePara;        
+    view:_dceView verificationDelegate:self];
     [_dce setCameraDesiredState:CAMERA_STATE_ON];
     _dce.isEnable = YES;
     */
@@ -249,10 +259,12 @@ In `configurationDCE` add the following code to set camera enhancer parameter:
 /*Deploy the camera with Dynamsoft Camera Enhancer.*/
 func configurationDCE() {
     /*
-    dceView = DCECameraView.init(view: self.view.bounds)
+    dceView = DCECaptureView.init(view: self.view.bounds)
     dceView.addOverlay()
     self.view.addSubview(dceView)
-    DynamsoftCameraEnhancer.initLicense("DCE2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==",verificationDelegate:self)
+    let dls = iDCEdlsConnectionParameters()
+    dls.organizationID = "Put your organizationID here"
+    dce = DynamsoftCameraEnhancer.init(licenseFromDLS: dls, view: dceView, verificationDelegate: self)
     dce.setCameraDesiredState(.CAMERA_STATE_ON)
     */
     /*
