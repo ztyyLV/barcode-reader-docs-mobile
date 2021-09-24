@@ -334,7 +334,7 @@ If you have followed the above guide step by step, your project will be able to 
 - [`Objective-C template`](https://github.com/Dynamsoft/barcode-reader-docs-mobile/blob/preview/programming/objectivec-swift/template.m){:target="_blank"}
 - [`Swift template`](https://github.com/Dynamsoft/barcode-reader-docs-mobile/blob/preview/programming/objectivec-swift/template.swift){:target="_blank"}
 
-## Further Barcode Reading Settings
+## Barcode Reader Methods and Settings
 
 ### Decoding Methods
 
@@ -371,8 +371,6 @@ By default, the SDK will try to find at least one barcode. You can use `expected
 #### Specify a scan region
 
 By default, the barcode reader will scan the whole image for barcodes. This can lead to poor performance, especially when dealing with high-resolution images. You can speed up the recognition process by restricting the scanning region.
-
-#**Code Snippet** of publicRuntimeSettings
 
 The following code is a template on how to use `PublicRuntimeSettings`.
 
@@ -411,3 +409,51 @@ settings.region.regionRight = 75
 settings.region.regionMeasuredByPercentage = 1
 reader.update(settings, error: nil)
 ```
+## Known Issues
+
+#### "dyld: Library not loaded" error on app initialization
+You might run into this error in the app initialization phase - and in order to resolve this, a slight change needs to be done to the build settings of the project. Please make sure that you take the following steps to avoid this error:
+
+- When adding the Barcode Reader framework in step 2 of the above instructions, make sure to tick off the `Copy items if needed` and `Create groups` options.
+- In the `Build Settings` of the project, find the `Validate Workspace` setting and make sure it is set to `Yes`.
+- In `General`, under `Frameworks, Libraries, and Embedded Content`, make sure that the `DynamsoftBarcodeReader.framework` is set to `Embed & Sign`.
+
+#### "Unsupported Architectures" error when building and releasing the application for the App Store
+The error seems to stem from the inclusion of the `x86_64` architecture in `DynamsoftBarcodeReader.framework`. This error can potentially happen with dynamic libraries (like DBR iOS) that have pieces for all architectures, including devices and simulators.
+
+This specific error references the `x86_64` architecture which is for the iPhone simulator. When releasing to the App Store, the simulator architectures (`x86_64`) need to be removed from the dynamic library before the project is built for the App Store.
+
+In order to solve the issue, add a `Run Script` phase after the `Embed Frameworks` step of the `Build Phases`, set it to use `/bin/sh`, and use the following script:
+
+```ruby
+APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
+
+# This script loops through the frameworks embedded in the application and
+# removes unused architectures.
+find "$APP_PATH" -name '*.framework' -type d | while read -r FRAMEWORK
+do
+    FRAMEWORK_EXECUTABLE_NAME=$(defaults read "$FRAMEWORK/Info.plist" CFBundleExecutable)
+    FRAMEWORK_EXECUTABLE_PATH="$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME"
+    echo "Executable is $FRAMEWORK_EXECUTABLE_PATH"
+
+    EXTRACTED_ARCHS=()
+
+    for ARCH in $ARCHS
+    do
+        echo "Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME"
+        lipo -extract "$ARCH" "$FRAMEWORK_EXECUTABLE_PATH" -o "$FRAMEWORK_EXECUTABLE_PATH-$ARCH"
+        EXTRACTED_ARCHS+=("$FRAMEWORK_EXECUTABLE_PATH-$ARCH")
+    done
+
+    echo "Merging extracted architectures: ${ARCHS}"
+    lipo -o "$FRAMEWORK_EXECUTABLE_PATH-merged" -create "${EXTRACTED_ARCHS[@]}"
+    rm "${EXTRACTED_ARCHS[@]}"
+
+    echo "Replacing original executable with thinned version"
+    rm "$FRAMEWORK_EXECUTABLE_PATH"
+    mv "$FRAMEWORK_EXECUTABLE_PATH-merged" "$FRAMEWORK_EXECUTABLE_PATH"
+
+done
+```
+
+The script looks through your built application's `Frameworks` folder and make sure only the architectures you're building for are the only ones included in each framework. This way, you don't have to worry about dealing with those arcitectures during the build process.
