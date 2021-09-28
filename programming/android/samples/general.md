@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: General Settings
 ---
 
-# Android General Settings Sample
+# Android GeneralSettings Sample
 
 The general setting sample shows how to make the general settings via `PublicRuntimeSetting` class when using Dynamsoft Barcode Reader Android SDK. This General Settings sample is also available for the popular mobile frameworks.
 
