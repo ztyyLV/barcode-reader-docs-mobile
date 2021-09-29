@@ -38,7 +38,7 @@ noTitleIndex: true
 
 #### API changes
 
-- Removed IOException from the exceptions of method [`decodeBufferedImage`]({{site.android_api}}primary-deocde.html#decodeBufferedImage).
+- Removed IOException from the exceptions of method [`decodeBufferedImage`]({{site.android_api}}primary-decode.html#decodeBufferedImage).
 
 ## 8.6 (07/15/2021)
 
