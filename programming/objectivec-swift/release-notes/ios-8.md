@@ -12,17 +12,15 @@ noTitleIndex: true
 
 ## 8.8.0 (10/12/2021)
 
-<div class="fold-panel-prefix"></div>
-
-### Version Highlights <i class="fa fa-caret-down"></i>
-
-<div class="fold-panel-start"></div>
+### Highlights
 
 {%- include release-notes/product-highlight-8.8.0.md -%}
 
-<div class="fold-panel-end"></div>
-
 ### Changelog
+
+#### Breaking Change(s)
+
+- The default value of the parameter [`minResultConfidence`]({{site.parameters_reference}}min-result-confidence.html) is set to 30.
 
 #### New
 
