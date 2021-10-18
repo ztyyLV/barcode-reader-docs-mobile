@@ -217,29 +217,33 @@ func configurationDCE() {
     Objective-C:
 
     ```objc
-    func textResultCallback(_ frameId: Int, results: [iTextResult]?, userData: NSObject?) {
-        if results!.count > 0 {
-            dce.pause()
-            var msgText:String = ""
-            var title:String = "Results"
-            let msg = "Please visit: https://www.dynamsoft.com/customer/license/trialLicense?"
-            for item in results! {
-                if results!.first!.exception != nil && results!.first!.exception!.contains(msg) {
-                    msgText = "\(msg)product=dbr&utm_source=installer&package=ios to request for 30 days extension."
-                    title = "Exception"
-                    break
+    - (void)textResultCallback:(NSInteger)frameId results:(NSArray<iTextResult *> *)results userData:(NSObject *)userData{
+        if (results.count > 0) {
+            [_dce pause];
+            __weak ViewController *weakSelf = self;
+            NSString *title = @"Results";
+            NSString *msgText = @"";
+            NSString *msg = @"Please visit: https://www.dynamsoft.com/customer/license/trialLicense?";
+            for (NSInteger i = 0; i< [results count]; i++) {
+                if (results[i].exception != nil && [results[i].exception containsString:msg]) {
+                    msgText = [msg stringByAppendingString:@"product=dbr&utm_source=installer&package=ios to request for 30 days extension."];
+                    title = @"Exception";
+                    break;
                 }
-                if item.barcodeFormat_2.rawValue != 0 {
-                    msgText = msgText + String(format:"\nFormat: %@\nText: %@\n", item.barcodeFormatString_2!, item.barcodeText ?? "noResuslt")
+                if (results[i].barcodeFormat_2 != 0) {
+                    msgText = [msgText stringByAppendingString:[NSString stringWithFormat:@"\nFormat: %@\nText: %@\n", results[i].barcodeFormatString_2, results[i].barcodeText]];
                 }else{
-                    msgText = msgText + String(format:"\nFormat: %@\nText: %@\n", item.barcodeFormatString!,item.barcodeText ?? "noResuslt")
+                    msgText = [msgText stringByAppendingString:[NSString stringWithFormat:@"\nFormat: %@\nText: %@\n", results[i].barcodeFormatString, results[i].barcodeText]];
                 }
             }
-            showResult(title, msgText, "OK") {[weak self] in
-                self?.dce.resume()
-            }
+            [self showResult:title
+                        msg:msgText
+                    acTitle:@"OK"
+                completion:^{
+                    [weakSelf.dce resume];
+                }];
         }else{
-            return
+            return;
         }
     }
     ```
