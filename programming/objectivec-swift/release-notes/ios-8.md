@@ -18,10 +18,6 @@ noTitleIndex: true
 
 ### Changelog
 
-#### Breaking Change(s)
-
-- The default value of the parameter [`minResultConfidence`]({{site.parameters_reference}}min-result-confidence.html) is set to 30.
-
 #### New
 
 - Added xcframework to the install package.
@@ -33,7 +29,11 @@ noTitleIndex: true
 - Improved the barcode reading speed by applying the localized barcodes filter. The barcodes will be filtered according to the parameters [`BarcodeHeightRangeArray`]({{site.parameters_reference}}barcode-height-range-array.html), [`BarcodeWidthRangeArray`]({{site.parameters_reference}}barcode-width-range-array.html), [`BarcodeAngleRangeArray`]({{site.parameters_reference}}barcode-angle-range-array.html) and [`MinRatioOfBarcodeZoneWidthToHeight`]({{site.parameters_reference}}min-ratio-of-barcode-zone-width-to-height.html).
 - Updated the exception message when the full license is invalid or has expired.
 
-#### Fixed
+#### Breaking Change(s)
+
+- The low confidence barcode results will no longer be returned by default. The default value of parameter [`minResultConfidence`]({{site.parameters_reference}}min-result-confidence.html) is preset to 30, which can filter out the majority of misreading results and keep as many correct results as possible.
+
+#### API Changes
 
 - Removed the class `iTextResultEx`. Merged all `iTextResultEx` properties to [`iTextResult`]({{site.oc_api}}auxiliary-iTextResult.html).
 - Removed the method `getEnabledResultVerificationStatus` from the `BarcodeReader` Class.
