@@ -27,6 +27,15 @@ Stores the text result data.
 | [`detailedResult`](#detailedresult) | *NSObject \** | One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.md), [`iPDF417Details`](auxiliary-iPDF417Details.md), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`iAztecDetails`](auxiliary-iAztecDetails.md), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.md). |
 | [`extendedResults`](#extendedresults) | [`NSArray<iExtendedResult>`](auxiliary-iExtendedResult.md) | The extended result array. |
 | [`exception`](#exception) | *NSString \** | The exception message. |
+
+`iTextResultEx` is the Extension of the `iTextResult`.
+
+```objc
+@interface iTextResultEx
+```
+
+| Attribute | Type | Description |
+|-----------|------| ----------- |
 | [`isDPM`](#isdpm) | *NSInteger* | This attribute stands for whether the result is a DPM result. |
 | [`isMirrored`](#ismirrored) | *NSInteger* | This attribute stands for whether the barcode is mirrored. |
 

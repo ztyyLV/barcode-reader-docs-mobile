@@ -32,7 +32,7 @@ TextResult[] decodeFile(String fileFullPath, String templateName) throws Barcode
 
 **Parameters**
 
-`fileFullPath`: A string defining the file path. It supports BMP, TIFF, JPG, PNG and PDF files.  
+`fileFullPath`: A string defining the file path.  
 `templateName`: The template name.
 
 **Return Value**
@@ -189,7 +189,7 @@ reader.destroy();
 Decodes barcode from a buffered image (bitmap).
 
 ```java
-TextResult[] decodeBufferedImage(Bitmap image, String templateName) throws BarcodeReaderException
+TextResult[] decodeBufferedImage(Bitmap image, String templateName) throws IOException, BarcodeReaderException
 ```
 
 **Parameters**

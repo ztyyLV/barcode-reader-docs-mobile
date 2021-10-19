@@ -10,7 +10,36 @@ noTitleIndex: true
 
 # Release Notes for iOS SDK - 8.x
 
-## 8.6 (07/15/2021)
+## 8.8.0 (10/12/2021)
+
+### Highlights
+
+{%- include release-notes/product-highlight-8.8.0.md -%}
+
+### Changelog
+
+#### New
+
+- Added xcframework to the install package.
+- Added a new `LocalizationModes` item [`LM_ONED_FAST_SCAN`]({{site.parameters_reference}}localization-modes.html#lm_oned_fast_scan), which significantly improved the localization speed for 1D barcodes.
+
+#### Improved
+
+- Improved the confidence calculation algorithm for 2D barcode results. Users can get even more accurate results by configuring the confidence filter.
+- Improved the barcode reading speed by applying the localized barcodes filter. The barcodes will be filtered according to the parameters [`BarcodeHeightRangeArray`]({{site.parameters_reference}}barcode-height-range-array.html), [`BarcodeWidthRangeArray`]({{site.parameters_reference}}barcode-width-range-array.html), [`BarcodeAngleRangeArray`]({{site.parameters_reference}}barcode-angle-range-array.html) and [`MinRatioOfBarcodeZoneWidthToHeight`]({{site.parameters_reference}}min-ratio-of-barcode-zone-width-to-height.html).
+- Updated the exception message when the full license is invalid or has expired.
+
+#### Breaking Change(s)
+
+- The low confidence barcode results will no longer be returned by default. The default value of parameter [`minResultConfidence`]({{site.parameters_reference}}min-result-confidence.html) is preset to 30, which can filter out the majority of misreading results and keep as many correct results as possible.
+
+#### API Changes
+
+- Removed the class `iTextResultEx`. Merged all `iTextResultEx` properties to [`iTextResult`]({{site.oc_api}}auxiliary-iTextResult.html).
+- Removed the method `getEnabledResultVerificationStatus` from the `BarcodeReader` Class.
+- Removed the method `getEnabledDuplicateFilterStatus` from the `BarcodeReader` Class.
+
+## 8.6.0 (07/15/2021)
 
 ### Highlights
 
@@ -36,7 +65,7 @@ noTitleIndex: true
 
 - Fixed a bug that `licenseVerificationCallback` not triggered.
 
-## 8.4 (06/08/2021)
+## 8.4.0 (06/08/2021)
 
 ### New
 
@@ -69,7 +98,7 @@ noTitleIndex: true
 
 - Samples are updated. DCE is handling the camera-related settings in the samples.
 
-## 8.2 (03/17/2021)
+## 8.2.0 (03/17/2021)
 
 ### New
 
@@ -100,7 +129,7 @@ noTitleIndex: true
 
 - Fixed a bug where `barcodeFormatString`, `barcodeFormatString_2`, `regionName` and `documentName` don't have value in the `IRT_TYPED_BARCODE_ZONE` intermediate result.
 
-## 8.1 (01/12/2021)
+## 8.1.0 (01/12/2021)
 
 ### New
 
@@ -120,7 +149,7 @@ noTitleIndex: true
 - Fixed a bug where Micro PDF417 may not be localized in multiple-barcode scenarios.
 - Fixed a bug where the `ExpectedBarcodesCount` and `BarcodeFormat` parameters do not work in the `RegionDefinition`.
 
-## 8.0 (11/17/2020)
+## 8.0.0 (11/17/2020)
 
 ### New
 

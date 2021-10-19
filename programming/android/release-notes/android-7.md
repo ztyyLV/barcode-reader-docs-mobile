@@ -16,7 +16,7 @@ noTitleIndex: true
 
 - Fixed an SSL certificate validation and hostname verification issue which may cause the App to be rejected by Google Play if the `initLicenseFromServer` method was used in the App.
 
-## 7.6 (09/01/2020)
+## 7.6.0 (09/01/2020)
 
 ### NEW
 
@@ -33,7 +33,7 @@ noTitleIndex: true
 - Fixed a bug where the coordinates of barcodes are calculated incorrectly under some situations.
 - Fixed a crash issue that occurs under some situations.
 
-## 7.5 (07/22/2020)
+## 7.5.0 (07/22/2020)
 
 ### NEW
 
@@ -59,7 +59,7 @@ noTitleIndex: true
 
 - Fixed a bug where the coordinates of barcodes are calculated incorrectly under some situations.
 
-## 7.4 (04/16/2020)
+## 7.4.0 (04/16/2020)
 
 ### NEW
 
@@ -89,7 +89,7 @@ noTitleIndex: true
 - Fixed a bug where the ColourConversionModes RGB weights setting does not work when CICM_GENERAL is enabled.
 - Other small fixes and tweaks.
 
-## 7.3 (01/02/2020)
+## 7.3.0 (01/02/2020)
 
 ### NEW
 
@@ -136,7 +136,7 @@ noTitleIndex: true
 - Fixed a bug where OneDCodeDetails doesn't work.
 - Fixed a memory leak issue when decoding multiple barcodes in our sample App.
 
-## 7.2 (09/24/2019)
+## 7.2.0 (09/24/2019)
 
 ### NEW
 
@@ -163,7 +163,7 @@ noTitleIndex: true
 
 - Fixed minor bugs
 
-## 7.1 (08/15/2019)
+## 7.1.0 (08/15/2019)
 
 ### NEW
 
@@ -183,7 +183,7 @@ noTitleIndex: true
 - Fixed a bug that the parameter, RequireStartStopChars, might malfunction in some rare cases.
 - Fixed a bug that the angle of barcodes might not be calculated correctly sometimes.
 
-## 7.0 (07/11/2019)
+## 7.0.0 (07/11/2019)
 
 ### NEW
 
@@ -228,7 +228,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 6.5 (02/26/2019)
+## 6.5.0 (02/26/2019)
 
 ### IMPROVED
 
@@ -253,13 +253,13 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 6.4 (10/15/2018)
+## 6.4.0 (10/15/2018)
 
 ### NEW
 
 - Added a BatchDecode tool which helps developers evaluate the recognition performance and speed of the Dynamsoft Barcode Reader SDK.
 - Added a new sample demonstrates how to use Dynamsoft Barcode Reader in multiple threads.
-- Added the runtime licensing mode. 
+- Added the runtime licensing mode.
 
 ### IMPROVED
 
@@ -271,7 +271,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 6.3 (08/16/2018)
+## 6.3.0 (08/16/2018)
 
 ### NEW
 
@@ -292,7 +292,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 6.2 (06/28/2018)
+## 6.2.0 (06/28/2018)
 
 ### IMPROVED
 
@@ -307,9 +307,9 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 4.2 (08/09/2016)
+## 4.2.0 (08/09/2016)
 
-Version 4.2 marks the initial release of Dynamsoft Barcode Reader Android SDK. 
+Version 4.2.0 marks the initial release of Dynamsoft Barcode Reader Android SDK. 
 
 ### NEW
 

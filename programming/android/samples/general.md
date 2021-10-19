@@ -7,17 +7,17 @@ needAutoGenerateSidebar: false
 breadcrumbText: General Settings
 ---
 
-# Android General Settings Sample
+# Android GeneralSettings Sample
 
-The general setting sample shows how to make the general settings via `PublicRuntimeSetting` class when using Dynamsoft Barcode Reader. This General Settings sample is also available for the popular mobile frameworks.
+The general setting sample shows how to make the general settings via `PublicRuntimeSetting` class when using Dynamsoft Barcode Reader Android SDK. This General Settings sample is also available for the popular mobile frameworks.
 
 **View Samples (on GitHub)**
 
-- [Java (Android) General Settings Sample]()
-- [Xamarins General Settings Sample]()
-- [Cordova General Settings Sample]()
-- [React-native General Settings Sample]()
-- [Flutter General Settings Sample]()
+- [General Settings Sample (Android-Java) ]()
+- [General Settings Sample (Xamarins)]()
+- [General Settings Sample (Cordova)]()
+- [General Settings Sample (React-native)]()
+- [General Settings Sample (Flutter)]()
 
 ## The Barcode Settings
 
@@ -80,7 +80,7 @@ reader.updateRuntimeSettings(runtimeSettings);
 
 The `PublicRuntimeSettings` class is the class that stores nearly all the barcode reading setting parameters. These parameters cover the basic barcode format settings as well as further algorithm configuring parameters.
 
-**Update the settings via the APIs**
+**Update the Settings Via the APIs**
 
 ```java
 PublicRuntimeSettings runtimeSettings = reader.getRuntimeSettings();
@@ -89,13 +89,13 @@ runtimeSettings.expectedBarcodesCount = 1;
 reader.updateRuntimeSettings(runtimeSettings);
 ```
 
-**Update the runtime settings via Json String**
+**Update the Runtime Settings Via Json String**
 
 ```java
 reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", EnumConflictMode.CM_OVERWRITE);
 ```
 
-**Update the runtime settings via Json File**
+**Update the Runtime Settings Via Json File**
 
 ```java
 // Overwrite the settings if the settings already exist.
