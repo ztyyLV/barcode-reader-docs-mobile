@@ -34,7 +34,7 @@ In this section, you will be guided on creating a `HelloWorld` app that can read
 
 >Note: 
 >- The following steps are completed in Android Studio 4.2.
->- You can download the similar complete source code from [Here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/master/android/HelloWorld).
+>- You can download the similar complete source code from [Here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld).
 
 ### Create a New Project 
 
@@ -269,7 +269,7 @@ There are two ways to include the SDK into your project：
    }
    ```
 
-You can download the similar complete source code from [Here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/master/android/HelloWorld).
+You can download the similar complete source code from [Here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld).
 
 ### Build and Run the Project
 

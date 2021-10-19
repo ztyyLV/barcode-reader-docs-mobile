@@ -21,7 +21,7 @@ noTitleIndex: true
 
 ## Installation
 
-If you have downloaded the SDK from the [Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/){:target="_blank"} and unzipped `dbr-ios-{version-number}.zip`, you can find two `frameworks`  and a sample folder. You can simply include `DynamsoftBarcodeReader` to your project to start creating a barcode scanning app. The other framework, `DynamsoftCameraEnhancer`, is an expansion package which integrates video frame preprocessing algorithms and camera control APIs. In this guide, we will use the `Camera Enhancer` to create the camera module for receiving video input.
+If you have downloaded the SDK from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> and unzipped `dbr-ios-{version-number}.zip`, you can find two `frameworks` in the root folder. You can simply include `DynamsoftBarcodeReader.framework` to your project to start creating a barcode scanning app. The other framework, `DynamsoftCameraEnhancer.framework`, is an extension package which integrates video frame preprocessing algorithms and camera control APIs.
 
 | Framework | Description |
 |---------|-------------|
@@ -33,7 +33,8 @@ If you have downloaded the SDK from the [Dynamsoft website](https://www.dynamsof
 In this section, you will be guided on creating a `HelloWorld` app that can read barcodes from camera video input.
 
 > Note:
-> - You can download the similar complete source code from [Here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/master/android/HelloWorld).
+>- You can download the similar complete Objective-C source code from [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorldObjc)
+>- You can download the similar complete Swift source code from [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorldSwift)
 
 ### Create a New Project
 
@@ -64,7 +65,7 @@ You can add your downloaded frameworks into your project by the following steps:
    Objective-C:
 
    ```objc
-   #import <DynamsoftBarcodeReader/DynamsoftBarcodeSDK.h>
+   #import <DynamsoftBarcodeReader/DynamsoftBarcodeReader.h>
    #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
    ```
 
@@ -341,10 +342,9 @@ private func showResult(_ title: String, _ msg: String, _ acTitle: String, compl
 
 ### Run the Project
 
-If you have followed the above guide step by step, your project will be able to build a video barcode scanner. If the project is not working well, please check the template code to find out the problems.
-
-- [`Objective-C template`](https://github.com/Dynamsoft/barcode-reader-docs-mobile/blob/preview/programming/objectivec-swift/template.m){:target="_blank"}
-- [`Swift template`](https://github.com/Dynamsoft/barcode-reader-docs-mobile/blob/preview/programming/objectivec-swift/template.swift){:target="_blank"}
+If you have followed the above guide step by step, your project will be able to build a video barcode scanner. If the project is not working well, please visit the github to get the similar complete source code:
+>- [Objective-C source code](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorldObjc)
+>- [Swift source code](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorldSwift)
 
 ## Barcode Reader Methods and Settings
 
