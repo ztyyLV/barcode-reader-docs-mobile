@@ -1,58 +1,55 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - Best Speed Settings Samples
-description: This is the Best Speed Settings Samples page of Dynamsoft Barcode Reader for Android SDK.
-keywords: android, samples, speed
+title: Dynamsoft Barcode Reader for Android - Speed-first Settings Sample
+description: This is the Speed-first Settings Sample page of Dynamsoft Barcode Reader for Android SDK.
+keywords: android, sample, speed
 needAutoGenerateSidebar: false
-breadcrumbText: Best Speed
+breadcrumbText: Speed-First Settings
 ---
 
-# Speed-first Settings
+# Android Speed-first Settings
 
-On this page, you can find useful guidelines on improving the decoding speed of the barcode reader.
+The Speed-first Settings sample illustrates how to improve the speed performance of the barcode decoding apps. Generally, users can improve the barcode decoding speed by reducing the size of the scan region or simplifying the complexity of the barcode settings. Furthermore, for certain scenarios, configuring parameter settings also contributes to the barcode reading speed. On this page, you will be guided on how to make personalized speed-friendly parameter settings for your barcode decoding app.
 
-The speed related parameters:
+View the sample
 
-| Parameter Name | Description |
-| -------------- | ----------- |
-| [`ExpectedBarcodeCount`](#expectedbarcodecount) | The expected barcode count in the scan region. |
-| [`BarcodeFormat`](#barcodeformat) | The barcode types in barcode format enumerations. |
-| [`region`](#region) | The scan region. |
-| [`BinarizationModes`](#binarizationmodes) | Configurations of the binarization mode parameters. |
-| [`LocalizationModes`](#localizationmodes) | Configurations of the localization mode parameters. |
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Performance" target="_blank">Speed-first Settings Sample (Android Java)</a>
 
-## ExpectedBarcodeCount
+## Size of the Scan Region
+
+Reducing the scan region size is the most effective way to speed up the barcode reading. To reduce the scan region size, you can restrict the border of the scan region via `PublicRuntimeSettings` and `RegionDefinition` classes. Displaying the scan region on the UI can also guide the users to manually approach the barcode area.
+
+<div align="center">
+    <p><img src="assets/region-definition.png" width="70%" alt="region-def"></p>
+    <p>Reduce the Size of Scan Area</p>
+</div>
+
+## Simplify the Barcode Setting
+
+**The barcode count**
 
 Normally, the barcode reader will try different parameter combinations to find as many barcodes as the expected number. If the expected barcode count is far more than the actual value, the barcode decoding speed will be decreased. As a result, to maximum the barcode decoding speed, please make sure to set the expected barcode count to an appropriate value.
 
-**Default Value**
+**The barcode format**
 
-0: The barcode count is unknown. The barcode reader will try to find at least one barcode.
+The barcode reader will switch between the preset barcode formats until it finds as many barcodes as the expected value. Supporting more barcode formats will benefit the coverage of your app but at the same time be negative on the reading speed. Please confirm that you have set the supporting barcode formats exactly the same as your expected usage scenario. So that you can enable your app to reach the balance between speed and coverage.
 
-**Parameter Setting**
+## Parameter Control
 
-| Usage Scenario | Barcode count setting | Explanation |
-| -------------- | --------------------- | ----------- |
-| Single barcode usage scenarios | 1 | The barcode reader will focus on decoding a single barcode and reach the highest speed. |
-| Fixed count multiple barcode decoding | n | N equals the number of barcodes in your usage scenario. |
-| Unkown usage scenarios | 0 | The barcode reader will return at least one result. |
+Dynamsoft Barcode Reader provides APIs that enable users to make advanced mode & parameter settings. These modes and parameters can benefit the read rate of the barcode reader in different scenarios or maximum the speed and accuracy of a certain scenario.
 
-## BarcodeFormat
+**LocalizationModes**
 
-The barcode reader will try all the preset barcode formats until it finds as many barcodes as the expected value. Supporting more barcode formats will definitely improve the read rate of your app on unknown usage scenarios. However, the reading speed will be sharply declined as well. If the supporting scope of your app is confirmed, please make sure to set the barcode format parameter exactly the same as your scope. This can save your computing resource to the greatest extent and help your app on improving its decoding speed.
+The LocalizationModes members are designed for different specified scenarios. On the aspect of barcode reading speed, `ONED_FAST_SCAN` is the fastest mode for only one_D barcode scenarios and `SCAN_DIRECTLY` is the best mode for multiple barcode formats scenarios. Please read more about the localization modes on the page of parameter `LocalizationModes`.
 
-## region
+**BinarizationModes**
 
-A smaller scan region alway means less time consuming. Without the scan region settings, the barcode reader will scan the whole image to get the barcode result. Configuring a specific scan area for your app can not only guide the users to manually approcah the barcode area, but also greatly reduce the size of the scan region, which sharply reduce the barcode reading time.
+The fewer binarization modes are set, the faster the barcode reading speed will be. If the binarization mode is not skipped, the barcode reader will spend some time filling the binary vacancy. You can set the `EnableFillBinaryVacancy` value to 0 to disable this activity. Please be sure that your app is working with high-quality images if you want to skip filling the vacancy.
 
-## LocalizationModes
+**ScaleDownThreshold**
 
-The Barcode Reader has several different barcode localiaztion methods. Users can set the localization modes via the parameter `LocalizationModes`. The selection of localization mode can effectively improve the decoding speed.
+Scale-down mode can improve the barcode reading speed by reducing the size of scan area. When `ScaleDownThreshold` value is configured, the barcode reader will try to shrink the input image continuously until the size of the image is smaller than the `ScaleDownThreshold` value.
 
-## Templates
+**Timeout**
 
-### For single barcode scanning
-
-### For single barcode continuous scanning
-
-### For general usage
+The parameter `Timeout` can not directly reduce the processing time but enable the barcode reader to stop wasting time on decoding a single image. This parameter will be helpful on video barcode decoding or dealing with a large batch of barcodes.

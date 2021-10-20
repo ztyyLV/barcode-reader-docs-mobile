@@ -13,35 +13,23 @@ breadcrumbText: Samples
 
 | Sample Name | Description |
 | ----------- | ----------- |
-| [Helloworld](#helloworld) | The simplest video streaming barcode scanner. |
-| [General Settings](#generalsettings) | Illustrating some typical barcode decoding settings. |
-| [Best Speed Settings](#bestspeedsettings) | Solutions on improving the barcode decoding speed. |
-| [Best Coverage Settings](#bestcoveragesettings) | Parameter configuration guide on enlarging the coverage of the barcode reader. |
-| [Best Accuracy Settings](#bestaccuracysettings) | Parameter configuration guide on improving the accuracy of barcode results. |
-| [Read A Drivers License](#readadriverslicense) | A drivers' license reader sample. |
+| [Helloworld](helloworld.md) | The simplest video streaming barcode scanner. |
+| [GeneralSettings](general.md) | Illustrating some typical barcode decoding settings. |
+| [SpeedFirstSettings](speed.md) | Solutions on improving the barcode decoding speed. |
+| [ReadRateFirstSettings](read-rate.md) | Parameter configuration guide on enlarging the coverage of the barcode reader. |
+| [AccuracyFirstSettings](accuracy.md) | Parameter configuration guide on improving the accuracy of barcode results. |
 
 ## About Dynamsoft Barcode Reader Android Samples
 
-Before you start on viewing the samples, the following concepts may help you on understanding how DBR is working.
+Before you start viewing the samples, the following concepts may help you understand how DBR is working.
 
 ### The License
 
-You have to initialize the Barcode Reader with a valid license to get access to the full feature of DBR.
-
-```java
-barcodeReader.initLicense("Your license", new DBRLicenseVerificationListener() {
-    @Override
-    public void DBRLicenseVerificationCallback(boolean isSuccess, Exception e) {
-        if (!isSuccess) {
-            e.printStackTrace();
-        }
-    }
-});
-```
+In the samples, there is a public trial license that is available for 7 days and a network connection is required for this license to work. If your license is expired, you can still request a 30-day trial license in the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=documents" target="_blank">customer portal</a>.
 
 ### The Camera
 
-DCE is an SDK that enable users to easily create a camera module on mobile platform. In the DBR samples, we are using DCE-deployed camera module as the video streaming input for video barcode decoding.
+`Dynamsoft Camera Enhancer` is an SDK that enables users to easily create a camera module on the mobile platform. In the DBR samples, we are using the DCE-deployed camera module as the video streaming input for video barcode decoding.
 
 ### The Result
 

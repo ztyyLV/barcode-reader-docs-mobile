@@ -1,19 +1,20 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - Accuracy-First Settings Samples
-description: This is the Accuracy-First Settings Sample page of Dynamsoft Barcode Reader for Android SDK.
-keywords: android, samples, speed
+title: Dynamsoft Barcode Reader for iOS - Accuracy-First Settings Samples
+description: This is the Accuracy-First Settings Sample page of Dynamsoft Barcode Reader for iOS SDK.
+keywords: iOS, samples, speed
 needAutoGenerateSidebar: false
 breadcrumbText: Accuracy-First Settings
 ---
 
-# Android Accuracy-First Settings Sample
+# iOS Accuracy-First Settings Sample
 
 The Accuracy-First setting sample illustrates how to use DBR APIs to improve the barcode reading accuracy. Normally the barcode misreading is caused by decoding the terribly printed barcodes or blurry images. On this page, you can find the guides on how to deal with these issues to avoid misreading when using Dynamsoft Barcode Reader.
 
 View the sample
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Performance" target="_blank">Speed-first Settings Sample (Android Java)</a>
+- <a href="" target="_blank">Speed-first Settings Sample (Objective-C)</a>
+- <a href="" target="_blank">Speed-first Settings Sample (Swift)</a>
 
 ## Regular Accuracy Settings
 
@@ -35,7 +36,7 @@ For every barcode result output by DBR, it has a confidence value. The higher th
 
 The multi-frame confirmation is a solution that eliminates misreading on oneD barcodes by double-checking the barcode results between multiple video frames before the results are output. Since this feature will halve the average reading speed, please enable this feature when the misreading is intolerable.
 
-- Use [`enableResultVerification`]({{ site.android_api }}primary-result.html#enableresultverification) to enable the result confirmation.
+- Use [`enableResultVerification`]({{ site.iOS_api }}primary-result.html#enableresultverification) to enable the result confirmation.
 
 ## Advanced Accuracy Settings
 

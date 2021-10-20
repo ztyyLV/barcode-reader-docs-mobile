@@ -13,7 +13,7 @@ The Speed-first Settings sample illustrates how to improve the speed performance
 
 View the sample
 
-- [Speed-first Settings Sample (Android Java)]()
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Performance" target="_blank">Speed-first Settings Sample (Android Java)</a>
 
 ## Size of the Scan Region
 
@@ -40,42 +40,16 @@ Dynamsoft Barcode Reader provides APIs that enable users to make advanced mode &
 
 **LocalizationModes**
 
-The LocalizationModes members are designed for different specified scenarios. In the aspect of barcode reading speed, `ONED_FAST_SCAN` is specially designed for accelerating 1D barcode localization. In addition, `SCAN_DIRECTLY` turns out to performs well when deployed together with `RegionDefinition`. Please read more about the localization modes on the page of parameter `LocalizationModes`.
+The `LocalizationModes` members are designed for different specified scenarios. On the aspect of barcode reading speed, `ONED_FAST_SCAN` is the fastest mode for only one_D barcode scenarios and `SCAN_DIRECTLY` is the best mode for multiple barcode formats scenarios. Please read more about the localization modes on the page of parameter `LocalizationModes`.
 
 **BinarizationModes**
 
-If the binarization mode is not skipped, the barcode reader will spend some time on filling the binary vacancy. You can set the `EnableFillBinaryVacancy` value to 0 to disable this activity. Please be sure that your app is working with high-quality images if you want to skip filling the vacancy.
+The fewer binarization modes are set, the faster the barcode reading speed will be. If the binarization mode is not skipped, the barcode reader will spend some time filling the binary vacancy. You can set the `EnableFillBinaryVacancy` value to 0 to disable this activity. Please be sure that your app is working with high-quality images if you want to skip filling the vacancy.
 
-**GrayscaleTransformationModes**
+**ScaleDownThreshold**
 
-Normally, the barcodes are always colored black and the background colors are always white. `GTM_INVERTED` is enabled to recognize the unusual colored barcodes. If this is not necessary for your usage scenarios, you can remove the `GTM_INVERTED` from your parameter list to reduce the time consumption.
+Scale-down mode can improve the barcode reading speed by reducing the size of scan area. When `ScaleDownThreshold` value is configured, the barcode reader will try to shrink the input image continuously until the size of the image is smaller than the `ScaleDownThreshold` value.
 
-## Templates
+**Timeout**
 
-**For 1D Single Barcode Scanning**
-
-```java
-regionDefinition.regionTop = 15;
-regionDefinition.regionBottom = 85;
-regionDefinition.regionLeft = 30;
-regionDefinition.regionRight = 70;
-runtimeSettings.region = regionDefinition;
-runtimeSettings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED;
-runtimeSettings.expectedBarcodesCount = 1;
-runtimeSettings.localizationModes = new int[]{EnumLocalizationMode.LM_SCAN_DIRECTLY,0,0,0,0,0,0,0};
-runtimeSettings.deblurModes = new int[]{EnumDeblurMode.DM_SKIP,0,0,0,0,0,0,0,0,0};
-runtimeSettings.furtherModes.grayscaleTransformationModes = new int[]{EnumGrayscaleTransformationMode.GTM_ORIGINAL,EnumGrayscaleTransformationMode.GTM_INVERTED,0,0,0,0,0,0};
-settings.binarizationModes = new int[]{EnumBinarizationMode.BM_LOCAL_BLOCK,0,0,0,0,0,0,0};
-reader.setModeArgument("localizationModes",0,"ScanDirection","0");
-reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "0");
-```
-
-**For general usage**
-
-Generally, we can sacrifice a bit speed
-
-```java
-runtimeSettings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_PDF417 | EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_DATAMATRIX |EnumBarcodeFormat.BF_AZTEC;
-runtimeSettings.expectedBarcodesCount = 0;
-// We can use the default settings of the advanced modes
-```
+The parameter `Timeout` can not directly reduce the processing time but enable the barcode reader to stop wasting time on decoding a single image. This parameter will be helpful on video barcode decoding or dealing with a large batch of barcodes.

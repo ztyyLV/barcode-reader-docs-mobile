@@ -13,11 +13,11 @@ The general setting sample shows how to make the general settings via `PublicRun
 
 **View Samples (on GitHub)**
 
-- [General Settings Sample (Android-Java) ]()
-- [General Settings Sample (Xamarins)]()
-- [General Settings Sample (Cordova)]()
-- [General Settings Sample (React-native)]()
-- [General Settings Sample (Flutter)]()
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android" target="_blank">General Settings Sample (Android-Java)</a>
+- Xamarins General Settings Sample (Coming soon)
+- Cordova General Settings Sample (Coming soon)
+- React-native General Settings Sample (Coming soon)
+- Flutter General Settings Sample (Coming soon)
 
 ## The Barcode Settings
 

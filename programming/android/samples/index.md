@@ -18,7 +18,6 @@ breadcrumbText: Samples
 | [SpeedFirstSettings](speed.md) | Solutions on improving the barcode decoding speed. |
 | [ReadRateFirstSettings](read-rate.md) | Parameter configuration guide on enlarging the coverage of the barcode reader. |
 | [AccuracyFirstSettings](accuracy.md) | Parameter configuration guide on improving the accuracy of barcode results. |
-| [ReadADriversLicense](driver-license.md) | A drivers' license reader sample. |
 
 ## About Dynamsoft Barcode Reader Android Samples
 
@@ -26,22 +25,11 @@ Before you start viewing the samples, the following concepts may help you unders
 
 ### The License
 
-You have to initialize the Barcode Reader with a valid license to get access to the full feature of DBR.
-
-```java
-barcodeReader.initLicense("Your license", new DBRLicenseVerificationListener() {
-    @Override
-    public void DBRLicenseVerificationCallback(boolean isSuccess, Exception e) {
-        if (!isSuccess) {
-            e.printStackTrace();
-        }
-    }
-});
-```
+In the samples, there is a public trial license that is available for 7 days and a network connection is required for this license to work. If your license is expired, you can still request a 30-day trial license in the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=documents" target="_blank">customer portal</a>.
 
 ### The Camera
 
-DCE is an SDK that enables users to easily create a camera module on the mobile platform. In the DBR samples, we are using the DCE-deployed camera module as the video streaming input for video barcode decoding.
+`Dynamsoft Camera Enhancer` is an SDK that enables users to easily create a camera module on the mobile platform. In the DBR samples, we are using the DCE-deployed camera module as the video streaming input for video barcode decoding.
 
 ### The Result
 
