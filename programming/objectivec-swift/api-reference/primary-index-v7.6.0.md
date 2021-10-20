@@ -26,12 +26,6 @@ noTitleIndex: true
   | [`decodeBuffer`](primary-decode.md#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64`](primary-decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
 
-### Camera Enhancer
-  
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
-
 ## License
 
   | Method               | Description |
