@@ -353,7 +353,7 @@ If you have followed the above guide step by step, your project will be able to 
 The SDK provides multiple decoding methods that support reading barcodes from different sources, including static images,
 video stream, files in memory, base64 string, bitmap, etc. Here is a list of all decoding methods:
 
-- [decodeFile](api-reference/primary-decode.md#decodefilewithname): Reads barcodes from a specified file (BMP, JPEG, PNG, GIF, TIFF or PDF).
+- [decodeFileWithName](api-reference/primary-decode.md#decodefilewithname): Reads barcodes from a specified file (BMP, JPEG, PNG, GIF, TIFF or PDF).
 - [decodebase64](api-reference/primary-decode.md#decodebase64): Reads barcodes from a base64 encoded string of a file.  
 - [decodeBuffer](api-reference/primary-decode.md#decodebuffer): Reads barcodes from raw buffer.
 - [decodeImage](api-reference/primary-decode.md#decodeimage): Decodes barcodes from an image file in memory.
