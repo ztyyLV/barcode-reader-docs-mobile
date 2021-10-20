@@ -152,11 +152,12 @@ To build a Hello World app that reads barcodes from an image, you can follow the
 ## Decoding Methods
 The SDK provides multiple decoding methods that support reading barcodes from different sources, including static images,
 video stream, files in memory, base64 string, bitmap, etc. Here is a list of all decoding methods:
-- [decodeFile](api-reference/methods/decode.md#decodefilewithname): Reads barcodes from a specified file (BMP, JPEG, PNG, GIF, TIFF or PDF).   
-- [decodebase64](api-reference/methods/decode.md#decodebase64): Reads barcodes from a base64 encoded string of a file.  
-- [decodeBuffer](api-reference/methods/decode.md#decodebuffer): Reads barcodes from raw buffer.
-- [decodeImage](api-reference/methods/decode.md#decodeimage): Decodes barcodes from an image file in memory.   
-   
+
+- [decodeBuffer](api-reference/primary-decode.md#decodebuffer): Reads barcodes from raw buffer.
+- [decodeFileWithName](api-reference/primary-decode.md#decodefilewithname): Reads barcodes from a specified file (BMP, JPEG, PNG, GIF, TIFF or PDF).
+- [decodeImage](api-reference/primary-decode.md#decodeimage): Decode barcodes from an image file in memory.
+- [decodeBase64](api-reference/primary-decode.md#decodebase64): Reads barcodes from a base64 encoded string of a file.
+
 You can find more samples in more programming languages at [Code Gallery](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx).
 
 
