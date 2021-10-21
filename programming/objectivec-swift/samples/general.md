@@ -50,7 +50,7 @@ Please note, the orientation of the mobile frame is always Rotated 90 degrees co
     <p>Region Orientation</p>
 </div>
 
-The `regionTop`, `regionBottom`, `regionLeft` and `regionRight` parameters in the class `RegionDefinition` stand for the region of frame but not the device. Therefore, please make sure that you are setting the correct parameters for the border of your scan region. For example, if you are going to create a scan region that margins 30% from the top and bottom of the frame. Actually, you have to set the `regionLeft` 30 to make the bottom of the scan region margin 30% from the top of the mobile screen.
+The **regionTop**, **regionBottom**, **regionLeft** and **regionRight** parameters in the class [`RegionDefinition`]({{ site.oc_api }}auxiliary-iRegionDefinition.html) stand for the region of frame but not the device. Therefore, please make sure that you are setting the correct parameters for the border of your scan region. For example, if you are going to create a scan region that margins 30% from the top and bottom of the frame. Actually, you have to set the **regionLeft** 30 to make the bottom of the scan region margin 30% from the top of the mobile screen.
 
 **Code Snippet**
 

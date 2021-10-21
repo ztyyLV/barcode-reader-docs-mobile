@@ -33,7 +33,7 @@ Normally, the barcode reader will try different parameter combinations to find a
 
 **The barcode format**
 
-The barcode reader will switch between the preset barcode formats until it finds as many barcodes as the expected value. Supporting more barcode formats will benefit the coverage of your app but at the same time be negative on the reading speed. Please confirm that you have set the supporting barcode formats exactly the same as your expected usage scenario. So that you can enable your app to reach the balance between speed and coverage.
+The barcode reader will switch between the preset barcode formats until it finds as many barcodes as the expected value. Supporting more barcode formats will benefit the coverage of your app but at the same time be negative on the reading speed. Please confirm that you have set the supporting barcode formats exactly the same as your expected usage scenario so that you can enable your app to reach the balance between speed and coverage.
 
 ## Parameter Control
 
@@ -41,15 +41,15 @@ Dynamsoft Barcode Reader provides APIs that enable users to make advanced mode &
 
 **LocalizationModes**
 
-The `LocalizationModes` members are designed for different specified scenarios. On the aspect of barcode reading speed, `ONED_FAST_SCAN` is the fastest mode for only one_D barcode scenarios and `SCAN_DIRECTLY` is the best mode for multiple barcode formats scenarios. Please read more about the localization modes on the page of parameter [`LocalizationModes`]({{ site.parameters_reference }}localization-modes.html).
+The [`LocalizationModes`]({{ site.parameters_reference }}localization-modes.html) members are designed for different specified scenarios. On the aspect of barcode reading speed, **LM_ONED_FAST_SCAN** is the fastest mode for only one_D barcode scenarios and **LM_SCAN_DIRECTLY** is the best mode for multiple barcode formats scenarios. Please read more about the localization modes on the page of parameter [`LocalizationModes`]({{ site.parameters_reference }}localization-modes.html).
 
 **BinarizationModes**
 
-The fewer [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html) are set, the faster the barcode reading speed will be. If the binarization mode is not skipped, the barcode reader will spend some time filling the binary vacancy. You can set the `EnableFillBinaryVacancy` value to 0 to disable this activity. Please be sure that your app is working with high-quality images if you want to skip filling the vacancy.
+The fewer [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html) are set, the faster the barcode reading speed will be. If the binarization mode is not skipped, the barcode reader will spend some time filling the binary vacancy. You can set the [`EnableFillBinaryVacancy`]({{ site.parameters_reference }}binarization-modes.html#enablefillbinaryvacancy) value to 0 to disable this activity. Please be sure that your app is working with high-quality images if you want to skip filling the vacancy.
 
 **ScaleDownThreshold**
 
-Parameter [`ScaleDownThreshold`]({{ site.parameters_reference }}scale-down-threshold.html) can improve the barcode reading speed by reducing the size of the scan area. When the `ScaleDownThreshold` value is configured, the barcode reader will try to shrink the input image continuously until the size of the image is smaller than the `ScaleDownThreshold` value.
+Parameter [`ScaleDownThreshold`]({{ site.parameters_reference }}scale-down-threshold.html) can improve the barcode reading speed by reducing the size of the scan area. When the [`ScaleDownThreshold`]({{ site.parameters_reference }}scale-down-threshold.html) value is configured, the barcode reader will try to shrink the input image continuously until the size of the image is smaller than the [`ScaleDownThreshold`]({{ site.parameters_reference }}scale-down-threshold.html) value.
 
 **Timeout**
 

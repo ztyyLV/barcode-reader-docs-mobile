@@ -9,7 +9,7 @@ breadcrumbText: General Settings
 
 # Android GeneralSettings Sample
 
-The general setting sample shows how to make the general settings via `PublicRuntimeSetting` class when using Dynamsoft Barcode Reader Android SDK. This General Settings sample is also available for the popular mobile frameworks.
+The general setting sample shows how to make the general settings via [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) class when using Dynamsoft Barcode Reader Android SDK. This General Settings sample is also available for the popular mobile frameworks.
 
 **View Samples (on GitHub)**
 
@@ -38,7 +38,7 @@ reader.updateRuntimeSettings(runtimeSettings);
 - Enum [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat)
 - Enum [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
-## The Scan Region Settings
+## RegionDefinition - Set the Region
 
 The scan region information is stored in [`RegionDefinition`]({{ site.android_api }}auxiliary-RegionDefinition.html) class. To set the scan region, you can make the region settings in class [`RegionDefinition`]({{ site.android_api }}auxiliary-RegionDefinition.html) and upload the settings through the class [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html).
 
@@ -49,7 +49,7 @@ Please note, the orientation of the mobile frame is always Rotated 90 degrees co
     <p>Region Orientation</p>
 </div>
 
-The `regionTop`, `regionBottom`, `regionLeft` and `regionRight` parameters in the class [`RegionDefinition`]({{ site.android_api }}auxiliary-RegionDefinition.html) stand for the region of frame but not the device. Therefore, please make sure that you are setting the correct parameters for the border of your scan region. For example, if you are going to create a scan region that margins 30% from the top and bottom of the frame. Actually, you have to set the `regionLeft` 30 to make the bottom of the scan region margin 30% from the top of the mobile screen.
+The **regionTop**, **regionBottom**, **regionLeft** and **regionRight** parameters in the class [`RegionDefinition`]({{ site.android_api }}auxiliary-RegionDefinition.html) stand for the region of frame but not the device. Therefore, please make sure that you are setting the correct parameters for the border of your scan region. For example, if you are going to create a scan region that margins 30% from the top and bottom of the frame. Actually, you have to set the **regionLeft** 30 to make the bottom of the scan region margin 30% from the top of the mobile screen.
 
 **Code Snippet**
 

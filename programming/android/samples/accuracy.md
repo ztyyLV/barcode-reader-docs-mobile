@@ -21,7 +21,7 @@ Normally, the misreading is caused by the low-quality source. The low-quality so
 
 ### Frame Filter
 
-Generally, the quality of input video streaming is determined by the performance of hardware. However, we still have solutions to deal with the blurry frames in the video streaming from the software end. `Dynamsoft Camera Enhancer` (DCE) is an SDK that provides video streaming pre-processing APIs which enable users to avoid decoding barcodes on low-quality frames. By enabling the frame filter feature of DCE, the sharpness of each frame will be detected and the low sharpness frames will be skipped in the barcode decoding process.
+Generally, the quality of input video streaming is determined by the performance of hardware. However, we still have solutions to deal with the blurry frames in the video streaming from the software end. <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/?ver=latest" target="_blank">Dynamsoft Camera Enhancer (DCE)</a> is an SDK that provides video streaming pre-processing APIs which enable users to avoid decoding barcodes on low-quality frames. By enabling the frame filter feature of DCE, the sharpness of each frame will be detected and the low sharpness frames will be skipped in the barcode decoding process.
 
 ### Confidence
 
@@ -29,7 +29,7 @@ For every barcode result output by DBR, it has a confidence value. The higher th
 
 **Related APIs**
 
-`MinResultConfidence`
+[`MinResultConfidence`]({{ site.parameters_reference }}min-result-confidence.html)
 
 ### Multi-frame Confirmation
 
@@ -52,7 +52,7 @@ Barcode format is one of the most typical settings of a barcode reader. This wil
 ### Skip Small-Sized Barcodes
 
 It is always a harsh task for a generally configured barcode reader to recognize a small-sized barcode. The read rate of small-sized barcodes can be improved by configuring the mode parameters. However, the accuracy issue is still unresolved. As a result, when sacrificing the read rate on the small-sized barcodes is acceptable, you can make filters on the localized barcode to skip decoding on these non-interest barcodes.
-To make the small-sized barcode filter, `FormatSpecification` parameters [`BarcodeHeightRangeArray`]({{ site.parameters_reference }}barcode-height-range-array.html) and [`BarcodeWidthRangeArray`]({{ site.parameters_reference }}barcode-width-range-array.html) will help on defining the range of the barcode size. In addition, by configuring the above parameters, you can also filter out the incompatible shaped barcodes before decoding.
+To make the small-sized barcode filter, **FormatSpecification** parameters [`BarcodeHeightRangeArray`]({{ site.parameters_reference }}barcode-height-range-array.html) and [`BarcodeWidthRangeArray`]({{ site.parameters_reference }}barcode-width-range-array.html) will help on defining the range of the barcode size. In addition, by configuring the above parameters, you can also filter out the incompatible shaped barcodes before decoding.
 
 **Related APIs**
 
@@ -64,8 +64,8 @@ For some scenarios, there might have some common features that can be applied to
 
 **The Text Length**
 
-Set the minimum and maximum length of the barcode text to filter out the uninterested results. This feature can be configured via `FormatSpecification` parameter [`BarcodeTextLengthRangeArray`]({{ site.parameters_reference }}barcode-text-length-range-array.html).
+Set the minimum and maximum length of the barcode text to filter out the uninterested results. This feature can be configured via **FormatSpecification** parameter [`BarcodeTextLengthRangeArray`]({{ site.parameters_reference }}barcode-text-length-range-array.html).
 
 **The Regular Expression Pattern**
 
-Set the regular expression pattern of the barcode text to filter out the uninsterested results. This feature can be configured via `FormatSpecification` parameter [`BarcodeTextRegExPattern`]({{ site.parameters_reference }}barcode-text-regex-pattern.html).
+Set the regular expression pattern of the barcode text to filter out the uninsterested results. This feature can be configured via **FormatSpecification** parameter [`BarcodeTextRegExPattern`]({{ site.parameters_reference }}barcode-text-regex-pattern.html).
