@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: Helloworld
 ---
 
-# Android Helloworld Sample
+# iOS Helloworld Sample
 
 The Android Helloworld sample illustrates how to create the simplest video streaming barcode reading app with Dynamsoft Barcode Reader (DBR) Android SDK. This Helloworld sample is also available for the popular mobile frameworks.
 

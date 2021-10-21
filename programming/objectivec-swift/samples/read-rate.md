@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: Read-Rate-First Settings
 ---
 
-# Android ReadRateFirstSettings Sample
+# iOS ReadRateFirstSettings Sample
 
 The Read-Rate-First Settings Sample illustrates how to maximize the rate when using Dynamsoft Barcode Reader Android SDK. Generally, the Read Rate of a barcode reader refers to the rate of successfully recognized barcode among all barcodes in the given image in one scan.
 

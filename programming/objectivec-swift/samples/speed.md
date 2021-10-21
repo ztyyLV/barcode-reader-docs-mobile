@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: Speed-First Settings
 ---
 
-# Android Speed-first Settings
+# iOS Speed-first Settings
 
 The Speed-first Settings sample illustrates how to improve the speed performance of the barcode decoding apps. Generally, users can improve the barcode decoding speed by reducing the size of the scan region or simplifying the complexity of the barcode settings. Furthermore, for certain scenarios, configuring parameter settings also contributes to the barcode reading speed. On this page, you will be guided on how to make personalized speed-friendly parameter settings for your barcode decoding app.
 

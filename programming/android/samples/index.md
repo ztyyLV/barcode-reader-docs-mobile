@@ -7,17 +7,18 @@ needAutoGenerateSidebar: false
 breadcrumbText: Samples
 ---
 
-# Samples and demos
+# Android Samples and Demos
 
 ## Samples
 
 | Sample Name | Description |
 | ----------- | ----------- |
 | [Helloworld](helloworld.md) | The simplest video streaming barcode scanner. |
-| [GeneralSettings](general.md) | Illustrating some typical barcode decoding settings. |
+| [GeneralSettings](general.md) | Illustrates some typical barcode decoding settings. |
 | [SpeedFirstSettings](speed.md) | Solutions on improving the barcode decoding speed. |
 | [ReadRateFirstSettings](read-rate.md) | Parameter configuration guide on enlarging the coverage of the barcode reader. |
 | [AccuracyFirstSettings](accuracy.md) | Parameter configuration guide on improving the accuracy of barcode results. |
+| [ReadADriversLicense](drivers-license.md) | Illustrates how to read and extract the information of a driver's license. |
 
 ## About Dynamsoft Barcode Reader iOS Samples
 
