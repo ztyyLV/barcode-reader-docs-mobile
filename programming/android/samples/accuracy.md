@@ -13,7 +13,7 @@ The Accuracy-First setting sample illustrates how to use DBR APIs to improve the
 
 View the sample
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Performance" target="_blank">Speed-first Settings Sample (Android Java)</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Performance" target="_blank">Java (Android) Speed-first Settings Sample</a>
 
 ## Regular Accuracy Settings
 
@@ -41,23 +41,22 @@ The multi-frame confirmation is a solution that eliminates misreading on oneD ba
 
 ### Specify the Barcode Format
 
-Barcode format is one of the most typical settings of a barcode reader. This will help you to improve the speed and accuracy of your barcode reading program by excluding the uninterested formats. You can update the barcode format settings in the struct/class `PublicRuntimeSettings` via API `updateRuntimeSettings`.
+Barcode format is one of the most typical settings of a barcode reader. This will help you to improve the speed and accuracy of your barcode reading program by excluding the uninterested formats. You can update the barcode format settings in the struct/class [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) via API [`updateRuntimeSettings`]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#updateruntimesettings).
 
 **Related APIs**
 
-- Struct/class `PublicRuntimeSettings`
-- API `BarcodeReader.updateRuntimeSettings`
-- Enum `BarcodeFormat` and `BarcodeFormat_2`
+- Struct/class [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html)
+- API [`updateRuntimeSettings`]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#updateruntimesettings)
+- Enum [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ### Skip Small-Sized Barcodes
 
-It is always a harsh task for a generally configured barcode reader to recognize a small-size barcode.
-Though the read rate of small-size barcodes can be improved by configuring the mode parameters, the accuracy issue is still unresolved. 
-As a result, if your decoding program is designed for general usage, it is suggested to skip decoding on these small-size barcodes. You can configure the `FormatSpecification` parameters `BarcodeHeightRangeArray` and `BarcodeWidthRangeArray` to define the smallest acceptable barcode size of your barcode reading program. In addition, by configuring the range of barcode height and width, you can also filter out some incompatible shaped barcodes before decoding.
+It is always a harsh task for a generally configured barcode reader to recognize a small-sized barcode. The read rate of small-sized barcodes can be improved by configuring the mode parameters. However, the accuracy issue is still unresolved. As a result, when sacrificing the read rate on the small-sized barcodes is acceptable, you can make filters on the localized barcode to skip decoding on these non-interest barcodes.
+To make the small-sized barcode filter, `FormatSpecification` parameters [`BarcodeHeightRangeArray`]({{ site.parameters_reference }}barcode-height-range-array.html) and [`BarcodeWidthRangeArray`]({{ site.parameters_reference }}barcode-width-range-array.html) will help on defining the range of the barcode size. In addition, by configuring the above parameters, you can also filter out the incompatible shaped barcodes before decoding.
 
 **Related APIs**
 
-- Parameters `BarcodeHeightRangeArray` and `BarcodeWidthRangeArray`.
+- Parameters [`BarcodeHeightRangeArray`]({{ site.parameters_reference }}barcode-height-range-array.html) and [`BarcodeWidthRangeArray`]({{ site.parameters_reference }}barcode-width-range-array.html).
 
 ### Exclude the Non-interest Results
 
@@ -65,8 +64,8 @@ For some scenarios, there might have some common features that can be applied to
 
 **The Text Length**
 
-Set the minimum and maximum length of the barcode text to filter out the uninterested results. This feature can be configured via `FormatSpecification` parameter [`BarcodeTextLengthRangeArray`]({{ site.parameters_reference }}format-specification/format-control.html#barcodetextlengthrangearray).
+Set the minimum and maximum length of the barcode text to filter out the uninterested results. This feature can be configured via `FormatSpecification` parameter [`BarcodeTextLengthRangeArray`]({{ site.parameters_reference }}barcode-text-length-range-array.html).
 
 **The Regular Expression Pattern**
 
-Set the regular expression pattern of the barcode text to filter out the uninsterested results. This feature can be configured via `FormatSpecification` parameter [`BarcodeTextRegExPattern`]({{ site.parameters_reference }}format-specification/format-control.html#barcodetextregexpattern).
+Set the regular expression pattern of the barcode text to filter out the uninsterested results. This feature can be configured via `FormatSpecification` parameter [`BarcodeTextRegExPattern`]({{ site.parameters_reference }}barcode-text-regex-pattern.html).

@@ -13,7 +13,7 @@ The general setting sample shows how to make the general settings via `PublicRun
 
 **View Samples (on GitHub)**
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android" target="_blank">General Settings Sample (Android-Java)</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android" target="_blank">Java (Android) General Settings Sample</a>
 - Xamarins General Settings Sample (Coming soon)
 - Cordova General Settings Sample (Coming soon)
 - React-native General Settings Sample (Coming soon)
@@ -21,7 +21,7 @@ The general setting sample shows how to make the general settings via `PublicRun
 
 ## The Barcode Settings
 
-The barcode formats settings and the barcode count settings are the most basic settings that determine the readability of your scan app. These parameters are all available for users to make changes through the class `PublicRuntimeSettings`. To view the all available barcode formats, please view the enumeration `BarcodeFormat` and `BarcodeFormat_2`.
+The barcode formats settings and the barcode count settings are the most basic settings that determine the readability of your scan app. These parameters are all available for users to make changes through the class [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html). To view all available barcode formats, please view the enumeration [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2).
 
 **Code Snippet**
 
@@ -40,16 +40,16 @@ reader.updateRuntimeSettings(runtimeSettings);
 
 ## The Scan Region Settings
 
-The scan region information is stored in `RegionDefinition` class. To set the scan region, you can make the region settings in class `RegionDefinition` and upload the settings through the class `PublicRuntimeSettings`.
+The scan region information is stored in [`RegionDefinition`]({{ site.android_api }}auxiliary-RegionDefinition.html) class. To set the scan region, you can make the region settings in class [`RegionDefinition`]({{ site.android_api }}auxiliary-RegionDefinition.html) and upload the settings through the class [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html).
 
-Please note, the orientation of mobile frame is always Rotated 90 degrees counterclockwise from the orientation from of your device. The following image is illustrating the mobile frames' orientation.
+Please note, the orientation of the mobile frame is always Rotated 90 degrees counterclockwise from the orientation of your device. The following image illustrates the mobile frames' orientation.
 
 <div align="center">
     <p><img src="assets/orientation-example.png" width="70%" alt="region"></p>
     <p>Region Orientation</p>
 </div>
 
-The `regionTop`, `regionBottom`, `regionLeft` and `regionRight` parameters in the class `RegionDefinition` stand for the region of frame but not the device. Therefore, please makesure that you are setting the correct parameters for the border of your scan region. For example if you are going to create a scan region that margins 30% from the top and bottom of the frame. Actually, you have to set the `regionLeft` 30 to make the bottom of the scan region margin 30% from the top of the mobile screen.
+The `regionTop`, `regionBottom`, `regionLeft` and `regionRight` parameters in the class [`RegionDefinition`]({{ site.android_api }}auxiliary-RegionDefinition.html) stand for the region of frame but not the device. Therefore, please make sure that you are setting the correct parameters for the border of your scan region. For example, if you are going to create a scan region that margins 30% from the top and bottom of the frame. Actually, you have to set the `regionLeft` 30 to make the bottom of the scan region margin 30% from the top of the mobile screen.
 
 **Code Snippet**
 
@@ -78,7 +78,7 @@ reader.updateRuntimeSettings(runtimeSettings);
 
 ## To Updated the Settings
 
-The `PublicRuntimeSettings` class is the class that stores nearly all the barcode reading setting parameters. These parameters cover the basic barcode format settings as well as further algorithm configuring parameters.
+The [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) class is the class that stores nearly all the barcode reading setting parameters. These parameters cover the basic barcode format settings as well as further algorithm configuring parameters.
 
 **Update the Settings Via the APIs**
 

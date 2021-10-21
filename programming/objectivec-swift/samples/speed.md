@@ -13,7 +13,8 @@ The Speed-first Settings sample illustrates how to improve the speed performance
 
 View the sample
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Performance" target="_blank">Speed-first Settings Sample (Android Java)</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/Performance" target="_blank">Objective-C Speed-first Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/Performance" target="_blank">Swift Speed-first Settings Sample</a>
 
 ## Size of the Scan Region
 
