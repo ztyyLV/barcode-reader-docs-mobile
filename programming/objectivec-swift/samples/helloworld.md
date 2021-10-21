@@ -19,3 +19,5 @@ View the samples
 - Cordova HelloWorld (Coming soon)
 - React-native HelloWorld (Coming soon)
 - Flutter HelloWorld (Coming soon)
+
+For more details about how to get started with Dynamsoft Barcode Reader, please view the [user guide]({{ site.oc }}user-guide.html).

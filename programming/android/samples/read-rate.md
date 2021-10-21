@@ -17,9 +17,9 @@ The Read-Rate-First Settings Sample illustrates how to maximize the rate when us
 
 ## Regular Settings
 
-### The Scan Region
+### The Region Definition
 
-It is not recommened to make configurations on the scan region if the app is focusing on improving the Read-Rate. Dynamsoft Barcode Reader Android SDK will scan the full image by default.
+It is not recommended to make configurations on the scan region if the app is focusing on improving the Read-Rate. Dynamsoft Barcode Reader Android SDK will scan the full image by default.
 
 ### The Format Specification
 

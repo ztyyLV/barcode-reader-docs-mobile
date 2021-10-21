@@ -2,7 +2,7 @@
 layout: default-layout
 title: Dynamsoft Barcode Reader for Android - Demos & Samples
 description: This is the Demos & Samples page of Dynamsoft Barcode Reader for Android SDK.
-keywords: android, samples
+keywords: Android, samples
 needAutoGenerateSidebar: false
 breadcrumbText: Samples
 ---
@@ -19,18 +19,18 @@ breadcrumbText: Samples
 | [ReadRateFirstSettings](read-rate.md) | Parameter configuration guide on enlarging the coverage of the barcode reader. |
 | [AccuracyFirstSettings](accuracy.md) | Parameter configuration guide on improving the accuracy of barcode results. |
 
-## About Dynamsoft Barcode Reader Android Samples
+## About Dynamsoft Barcode Reader iOS Samples
 
-Before you start viewing the samples, the following concepts may help you understand how DBR is working.
+Before you start viewing the samples, the following concepts may help you understand how to get started with Dynamsoft Barcode Reader.
 
 ### The License
 
 In the samples, there is a public trial license that is available for 7 days and a network connection is required for this license to work. If your license is expired, you can still request a 30-day trial license in the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=documents" target="_blank">customer portal</a>.
 
-### The Camera
+### The Performance
 
-`Dynamsoft Camera Enhancer` is an SDK that enables users to easily create a camera module on the mobile platform. In the DBR samples, we are using the DCE-deployed camera module as the video streaming input for video barcode decoding.
+In the samples, we are illustrating the performance settings from 3 different aspects: **Speed**, **Read Rate** and **Accuracy**. The parameter configurations are generally speed-friendly, read-rate-friendly and accuracy-friendly settings but might not be the best settings for your own usage scenario. The samples can help you on getting a basic understanding on the Dynamsoft Barcode Reader parameters. Please feel free to <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> for further support on optimizing the parameters.
 
-### The Result
+### The Video Barcode Decoding
 
-The [`TextResult`]({{ site.android_api }}auxiliary-TextResult.html) class stores the barcode result data including the barcode text result, detailed result, extended barcode result and other barcode information.
+Most of the Dynamsoft Barcode Reader mobile samples are designed for video barcode decoding. Dynamsoft Camera Enhancer (DCE) is applied to the video barcode decoding samples to support the acquisition of video input. At the same time, some of the DCE features benefit the barcode decoding, which is illustrated in the samples. For more usage about DCE, please view more in <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/?ver=latest" target="_blank">DCE online documents</a>.
