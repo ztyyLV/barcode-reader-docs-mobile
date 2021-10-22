@@ -13,8 +13,8 @@ The Android Helloworld sample illustrates how to create the simplest video strea
 
 View the samples
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C" target="_blank">Objective-C HelloWorld</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift" target="_blank">Swift HelloWorld</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC/" target="_blank">Objective-C HelloWorld</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/HelloWorldSwift/" target="_blank">Swift HelloWorld</a>
 - Xamarins HelloWorld (Coming soon)
 - Cordova HelloWorld (Coming soon)
 - React-native HelloWorld (Coming soon)

@@ -13,8 +13,8 @@ The general setting sample shows how to make the general settings via [`PublicRu
 
 **View Samples (on GitHub)**
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C" target="_blank">Objective-C General Settings Sample</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift" target="_blank">Swift General Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/GeneralSettingsObjC/" target="_blank">Objective-C General Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/GeneralSettingsSwift/" target="_blank">Swift General Settings Sample</a>
 - Xamarins General Settings Sample (Coming soon)
 - Cordova General Settings Sample (Coming soon)
 - React-native General Settings Sample (Coming soon)

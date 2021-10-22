@@ -13,7 +13,7 @@ The general setting sample shows how to make the general settings via [`PublicRu
 
 **View Samples (on GitHub)**
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android" target="_blank">Java (Android) General Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/GeneralSettings/" target="_blank">Java (Android) General Settings Sample</a>
 - Xamarins General Settings Sample (Coming soon)
 - Cordova General Settings Sample (Coming soon)
 - React-native General Settings Sample (Coming soon)

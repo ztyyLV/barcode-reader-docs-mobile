@@ -13,7 +13,7 @@ The Android Helloworld sample illustrates how to create the simplest video strea
 
 View the samples
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android" target="_blank">Java (Android) HelloWorld</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/" target="_blank">Java (Android) HelloWorld</a>
 - Xamarins HelloWorld (Coming soon)
 - Cordova HelloWorld (Coming soon)
 - React-native HelloWorld (Coming soon)
