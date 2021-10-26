@@ -24,11 +24,11 @@ It is not recommended to make configurations on the scan region if the app is fo
 
 ### The Format Specification
 
-The barcode formats can be specified via [`PublicRuntimeSetting`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html). The default value of DBR is not supporting all available barcode formats. Optimizing the barcode format settings to cover the requirements will help you to create a high-efficiency and high-read-rate barcode reader that covers your usage scenario.
+The barcode formats can be specified via [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html). The default value of DBR is not supporting all available barcode formats. Optimizing the barcode format settings to cover the requirements will help you to create a high-efficiency and high-read-rate barcode reader that covers your usage scenario.
 
 **Related APIs**
 
-- View class [`PublicRuntimeSetting`]({{ site.oc-api }}auxiliary-iPublicRuntimeSettings.html) to learn about the default barcode formats.
+- View class [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html) to learn about the default barcode formats.
 - View Enum [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) to learn about all available barcode formats.
 
 ### The Barcode Count
