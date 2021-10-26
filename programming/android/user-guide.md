@@ -305,15 +305,15 @@ Here are some typical scanning settings you might find helpful:
 
 For more scanning settings guide, please check the [How To Guide]({{site.introduction}}how-to-guide/){:target="_blank"} section.
 
-#### Specify barcode type to read
+#### Specify Barcode Type to Read
 
 A simple barcode format setting will result in a higher processing speed. By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. Please use the [`BarcodeFormatIds`]({{ site.enumerations }}format-enums.html#barcodeformat) and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) to specify your barcode format(s) so that you can find the balance between speed and readability.
 
-#### Specify maximum barcode count
+#### Specify Maximum Barcode Count
 
 By default, the SDK will try to find at least one barcode. You can use `expectedBarcodesCount` to specify the maximum number of barcodes. If you set the maximum number of barcodes n, the SDK will try to find at least n barcodes. The scanning process will not stop until n barcodes are found or timeout.
 
-#### Specify a scan region
+#### Specify a Scan Region
 
 By default, the barcode reader will scan the whole image for barcodes. This can lead to poor performance, especially when dealing with high-resolution images. You can speed up the recognition process by restricting the scanning region.
 
