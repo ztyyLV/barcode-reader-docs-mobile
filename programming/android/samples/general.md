@@ -9,15 +9,11 @@ breadcrumbText: General Settings
 
 # Android GeneralSettings Sample
 
-The general setting sample shows how to make the general settings via [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) class when using Dynamsoft Barcode Reader Android SDK. This General Settings sample is also available for the popular mobile frameworks.
+The general setting sample shows how to make the general settings via [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) class when using Dynamsoft Barcode Reader Android SDK.
 
 **View Samples (on GitHub)**
 
 - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/GeneralSettings/" target="_blank">Java (Android) General Settings Sample</a>
-- Xamarins General Settings Sample (Coming soon)
-- Cordova General Settings Sample (Coming soon)
-- React-native General Settings Sample (Coming soon)
-- Flutter General Settings Sample (Coming soon)
 
 ## The Barcode Settings
 
