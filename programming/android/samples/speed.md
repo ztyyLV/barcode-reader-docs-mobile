@@ -47,7 +47,7 @@ The [`LocalizationModes`]({{ site.parameters_reference }}localization-modes.html
 The fewer [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html) are set, the faster the barcode reading speed will be. The default value of parameter [`EnableFillBinaryVacancy`]({{ site.parameters_reference }}binarization-modes.html#enablefillbinaryvacancy) is true, which means the vacant hollows will be filled by default. You can set [`EnableFillBinaryVacancy`]({{ site.parameters_reference }}binarization-modes.html#enablefillbinaryvacancy)
 value false to improve the barcode reading speed but the read rate might be decreased at the same time.
 
-For more information about `BinarizationModes`, please read the following article.
+For more information about **BinarizationModes**, please read the following article.
 
 - [`BinarizationModes`]({{ site.scenario_settings }}how-to-set-binarization-modes.html)
 

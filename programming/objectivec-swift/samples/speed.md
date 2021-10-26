@@ -18,7 +18,7 @@ View the sample
 
 ## Size of the Scan Region
 
-Reducing the scan region size is the most effective way to speed up the barcode reading. To reduce the scan region size, you can restrict the border of the scan region via [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-PublicRuntimeSettings.html) and [`RegionDefinition`]({{ site.oc_api }}auxiliary-RegionDefinition.html) classes. Displaying the scan region on the UI can also guide the users to manually approach the barcode area.
+Reducing the scan region size is the most effective way to speed up the barcode reading. To reduce the scan region size, you can restrict the border of the scan region via [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html) and [`RegionDefinition`]({{ site.oc_api }}auxiliary-iRegionDefinition.html) classes. Displaying the scan region on the UI can also guide the users to manually approach the barcode area.
 
 <div align="center">
     <p><img src="assets/region-definition.png" width="70%" alt="region-def"></p>
@@ -48,7 +48,7 @@ The [`LocalizationModes`]({{ site.parameters_reference }}localization-modes.html
 The fewer [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html) are set, the faster the barcode reading speed will be. The default value of parameter [`EnableFillBinaryVacancy`]({{ site.parameters_reference }}binarization-modes.html#enablefillbinaryvacancy) is true, which means the vacant hollows will be filled by default. You can set [`EnableFillBinaryVacancy`]({{ site.parameters_reference }}binarization-modes.html#enablefillbinaryvacancy)
 value false to improve the barcode reading speed but the read rate might be decreased at the same time.
 
-For more information about `BinarizationModes`, please read the following article.
+For more information about **BinarizationModes**, please read the following article.
 
 - [`BinarizationModes`]({{ site.scenario_settings }}how-to-set-binarization-modes.html)
 

@@ -36,7 +36,7 @@ For every barcode result output by DBR, it has a confidence value. The higher th
 
 The multi-frame confirmation is a solution that eliminates misreading on oneD barcodes by double-checking the barcode results between multiple video frames before the results are output. Since this feature will halve the average reading speed, please enable this feature when the misreading is intolerable.
 
-- Use [`enableResultVerification`]({{ site.ios_api }}primary-result.html#enableresultverification) to enable the result confirmation.
+- Use [`enableResultVerification`]({{ site.oc_api }}primary-result.html#enableresultverification) to enable the result confirmation.
 
 ## Advanced Accuracy Settings
 
