@@ -9,7 +9,7 @@ breadcrumbText: General Settings
 
 # GeneralSettings Sample
 
-The general setting sample shows how to make the general settings via [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html) class when using Dynamsoft Barcode Reader iOS SDK.
+This sample shows how to configure general barcode settings like the barcode formats, expected barcode count and the scan region when using Dynamsoft Barcode Reader iOS SDK.
 
 **View Samples (on GitHub)**
 
