@@ -3,7 +3,7 @@ layout: default-layout
 title: Dynamsoft Barcode Reader for iOS - Accuracy-First Settings Samples
 description: This is the Accuracy-First Settings Sample page of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iOS, samples, speed
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 breadcrumbText: Accuracy-First Settings
 ---
 

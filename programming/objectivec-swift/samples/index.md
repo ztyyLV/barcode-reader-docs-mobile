@@ -3,7 +3,7 @@ layout: default-layout
 title: Dynamsoft Barcode Reader for iOS - Demos & Samples
 description: This is the Demos & Samples page of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iOS, samples
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 breadcrumbText: Samples
 ---
 

@@ -3,7 +3,7 @@ layout: default-layout
 title: Dynamsoft Barcode Reader for Android - Speed-first Settings Sample
 description: This is the Speed-first Settings Sample page of Dynamsoft Barcode Reader for Android SDK.
 keywords: android, sample, speed
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 breadcrumbText: Speed-First Settings
 ---
 
