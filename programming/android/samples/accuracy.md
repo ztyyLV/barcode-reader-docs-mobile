@@ -51,8 +51,7 @@ Barcode format is one of the most typical settings of a barcode reader. This wil
 
 ### Skip Small-Sized Barcodes
 
-It is always a harsh task for a generally configured barcode reader to recognize a small-sized barcode. The read rate of small-sized barcodes can be improved by configuring the mode parameters. However, the accuracy issue is still unresolved. As a result, when sacrificing the read rate on the small-sized barcodes is acceptable, you can make filters on the localized barcode to skip decoding on these non-interest barcodes.
-To make the small-sized barcode filter, **FormatSpecification** parameters [`BarcodeHeightRangeArray`]({{ site.parameters_reference }}barcode-height-range-array.html) and [`BarcodeWidthRangeArray`]({{ site.parameters_reference }}barcode-width-range-array.html) will help on defining the range of the barcode size. In addition, by configuring the above parameters, you can also filter out the incompatible shaped barcodes before decoding.
+It is always a harsh task for a generally configured barcode reader to recognize a small-sized barcode. The read rate of small-sized barcodes can be improved by configuring the mode parameters. However, the accuracy issue is still unresolved. As a result, when sacrificing the read rate on the small-sized barcodes is acceptable, you can make filters on the localized barcode to skip decoding on these non-interest barcodes. To make the small-sized barcode filter, **FormatSpecification** parameters [`BarcodeHeightRangeArray`]({{ site.parameters_reference }}barcode-height-range-array.html) and [`BarcodeWidthRangeArray`]({{ site.parameters_reference }}barcode-width-range-array.html) will help on defining the range of the barcode size. In addition, by configuring the above parameters, you can also filter out the incompatible shaped barcodes before decoding.
 
 **Related APIs**
 
