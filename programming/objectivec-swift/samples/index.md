@@ -20,6 +20,10 @@ breadcrumbText: Samples
 | [AccuracyFirstSettings](accuracy.md) | Parameter configuration guide on improving the accuracy of barcode results. |
 | [ReadADriversLicense](drivers-license.md) | Illustrates how to read and extract the information of a driver's license. |
 
+## Demo
+
+- <a href="https://apps.apple.com/us/app/barcode-scanner-x/id1120581630" target="_blank">Download Barcode Scanner X.</a>
+
 ## About Dynamsoft Barcode Reader iOS Samples
 
 Before you start viewing the samples, the following concepts may help you understand how to get started with Dynamsoft Barcode Reader.

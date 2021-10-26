@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: Samples
 ---
 
-# Samples and Demos
+# Demo and Samples
 
 ## Samples
 
@@ -19,6 +19,10 @@ breadcrumbText: Samples
 | [ReadRateFirstSettings](read-rate.md) | Parameter configuration guide on improving the read rate of the barcode reader. |
 | [AccuracyFirstSettings](accuracy.md) | Parameter configuration guide on improving the accuracy of barcode results. |
 | [ReadADriversLicense](drivers-license.md) | Illustrates how to read and extract the information of a driver's license. |
+
+## Demo
+
+- <a href="https://download2.dynamsoft.com/dbr/android/DynamsoftBarcodeReaderDemoAndroid-8.4.1.apk" target="_blank">Download Barcode Scanner X.</a>
 
 ## About Dynamsoft Barcode Reader Android Samples
 
