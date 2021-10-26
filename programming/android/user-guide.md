@@ -21,39 +21,41 @@ noTitleIndex: true
 
 ## Installation
 
-If you don’t have SDK yet, please download the Dynamsoft Barcode Reader(DBR) SDK from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> and unzip the package. After decompression, the root directory of the DBR installation package is `DynamsoftBarcodeReader`, which is represented by `[INSTALLATION FOLDER]`. You can also find the following two `aar` files in the `[INSTALLATION FOLDER]\Lib` directory: 
+You can download the Dynamsoft Barcode Reader (DBR) SDK from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> if you don't have the SDK installed yet. 
+
+After unzipping, the root directory of the DBR installation package is **DynamsoftBarcodeReader** (the `[INSTALLATION FOLDER]`). You can find the following two `aar` files under the `[INSTALLATION FOLDER]\Lib` directory: 
 
 | File | Description |
 |---------|-------------|
-| `DynamsoftBarcodeReaderAndroid.aar` | The Barcode Reader library, includes all barcode decoding releated algorithms and APIs. |
-| `DynamsoftCameraEnhancerAndroid.aar` | The Camera Enhancer library, includes camera control APIs and frame preprocessing algorithm.  |.
+| `DynamsoftBarcodeReaderAndroid.aar` | The Barcode Reader library, including all barcode decoding releated algorithms and APIs. |
+| `DynamsoftCameraEnhancerAndroid.aar` | The Camera Enhancer library, including camera control APIs and frame preprocessing algorithm.  |
 
 ## Build Your First Application
 
-In this section, you will be guided on creating a `HelloWorld` app that can read barcodes from camera video input.
+In this section, let's see how to create a HelloWorld app for reading barcodes from camera video input.
 
 >Note: 
->- The following steps are completed in Android Studio 4.2.
->- You can download the similar complete source code from [Here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld).
+>- Android Studio 4.2 is used here in this guide.
+>- You can get the source code of the HelloWord app [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld).
 
 ### Create a New Project 
 
-1. Open Android Studio and select New Project… in the File > New > New Project… menu to create a new project.
+1. Open Android Studio, select **File > New > New Project**.
 
-2. Choose the correct template for your project. In this sample, we’ll use `Empty Activity`.
+2. Choose the correct template for your project. In this sample, we use `Empty Activity`.
 
-3. When prompted, choose your app name (`HelloWorld`) and set the Save location, Language, and Minimum SDK (21)
-    >Note: With minSdkVersion set to 21, your app is available on more than 94.1% of devices on the Google Play Store (last update: March 2021).
+3. When prompted, choose your app name 'HelloWorld' and set the **Save** location, **Language**, and **Minimum SDK** (we use 21 here).
+    > Note: With `minSdkVersion` set to 21, your app is compatible with more than 94.1% of devices on the Google Play Store (last update: March 2021).
 
-### Include the library
+### Include the Library
 
-There are two ways to include the SDK into your project：
+There are two ways to include the SDK into your project - local binary dependency and remote binary dependency.
 
 #### Local Binary Dependency
 
 1. Copy the file `[INSTALLATION FOLDER]\Lib\DynamsoftBarcodeReaderAndroid.aar` and `[INSTALLATION FOLDER]\Lib\DynamsoftCameraEnhancerAndroid.aar` to the target directory `HelloWorld\app\libs`
 
-2. Open the file `HelloWorld\app\build.gradle`, and add reference in the dependencies:
+2. Open the file `HelloWorld\app\build.gradle` and add reference in the dependencies:
    
     ```groovy
     dependencies {
@@ -61,9 +63,9 @@ There are two ways to include the SDK into your project：
     }
     ```
 
-3. Click `Sync Now`. After the synchronization completes, the SDK is added to the project.
+3. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
 
-4. import the package in the file `MainActivity.java`
+4. Import the package in the file `MainActivity.java`
 
    ```java
    import com.dynamsoft.dbr.*;
@@ -72,7 +74,7 @@ There are two ways to include the SDK into your project：
    
 #### Remote Binary Dependency
 
-1. Open the file `HelloWorld\app\build.gradle`, and add the remote repository:
+1. Open the file `HelloWorld\app\build.gradle` and add the remote repository:
     
     ```groovy
     repositories {
@@ -86,6 +88,7 @@ There are two ways to include the SDK into your project：
     ```
 
 2. Add reference in the dependencies:
+
    ```groovy
    dependencies {
       implementation 'com.dynamsoft:dynamsoftbarcodereader:{version-number}@aar'
@@ -93,11 +96,11 @@ There are two ways to include the SDK into your project：
    }
    ```
 
-   >Note:Please replace {version-number} with the correct version number.
+   > Note: Please replace {version-number} with the correct version number.
 
-3. Click `Sync Now`. After the synchronization completes, the SDK is added to the project.
+3. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
 
-4. import the package in the file `MainActivity.java`
+4. Import the package in the file `MainActivity.java`
 
    ```java
    import com.dynamsoft.dbr.*;
@@ -106,7 +109,7 @@ There are two ways to include the SDK into your project：
     
 ### Initialize Camera Module
 
-1. Initialize the license
+1. Initialize the license.
 
    ```java
    CameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELicenseVerificationListener() {
@@ -117,21 +120,21 @@ There are two ways to include the SDK into your project：
          }
       }
    });
-   ```    
+   ```  
 
-   >Note:
-   >- Network connection is required for the license to work.
-   >- "DLS2***" is a default 7-day trial license used in the sample.
-   >- If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
+   > Note:
+   > - Network connection is required for the license to work.
+   > - "DLS2***" is a default 7-day trial license used in the sample.
+   > - If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
 
-2. Create an instance of Camera Enhancer
+2. Create an instance of Camera Enhancer.
 
    ```java
    CameraEnhancer mCameraEnhancer;
    mCameraEnhancer = new CameraEnhancer(MainActivity.this);
    ```
 
-3. In the Project window, open app > res > layout > `activity_main.xml`, create a DCE camera view section under the root node.
+3. In the Project window, open **app > res > layout > `activity_main.xml`** and create a DCE camera view section under the root node.
 
     ```xml
    <com.dynamsoft.dce.DCECameraView
@@ -142,7 +145,7 @@ There are two ways to include the SDK into your project：
       tools:layout_editor_absoluteY="0dp" />
     ```
 
-4. Initialize the camera view, and bind to the Camera Enhancer object.
+4. Initialize the camera view and bind to the Camera Enhancer object.
 
     ```java
     DCECameraView mCameraView;
@@ -151,17 +154,16 @@ There are two ways to include the SDK into your project：
     mCameraEnhancer.setCameraView(cameraView);
     ```
 
-
 ### Initialize Barcode Reader
 
-1. Create an instance of Dynamsoft Barcode Reader
+1. Create an instance of Dynamsoft Barcode Reader.
 
    ```java
    BarcodeReader reader;
    reader = new BarcodeReader();
    ```
 
-2. Initialize the license
+2. Initialize the license.
 
    ```java
    DMDLSConnectionParameters dbrParameters = new DMDLSConnectionParameters();
@@ -174,7 +176,7 @@ There are two ways to include the SDK into your project：
             }
          }
    });
-   ```    
+   ```
 
    >Note:
    >- Network connection is required for the license to work.
@@ -215,7 +217,7 @@ There are two ways to include the SDK into your project：
    reader.SetCameraEnhancerParam(dceSettingParameters);
    ```
 
-5. Override the MainActivity.onResume and MainActivity.onPause function to start/stop video barcode scanning. After start scanning, the Barcode Reader will automatically invoke the `decodeBuffer` API to process the video frames from the Camera Enhancer, then send the recognized barcode result to the text result callback.
+5. Override the `MainActivity.onResume` and `MainActivity.onPause` functions to start/stop video barcode scanning. After scanning starts, the Barcode Reader will automatically invoke the `decodeBuffer` API to process the video frames from the Camera Enhancer, then send the recognized barcode results to the text result callback.
 
    ```java
    @Override
@@ -235,7 +237,7 @@ There are two ways to include the SDK into your project：
 
 ### Additional Steps
 
-1. In the Project window, open app > res > layout > `activity_main.xml`, create a text view section under the root node to display recognized barcode result.
+1. In the Project window, open **app > res > layout > `activity_main.xml`**, create a text view section under the root node to display recognized barcode result.
 
    ```xml
     <TextView
@@ -269,13 +271,13 @@ There are two ways to include the SDK into your project：
    }
    ```
 
-You can download the similar complete source code from [Here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld).
+You can download the complete source code [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld).
 
 ### Build and Run the Project
 
 1. Select the device that you want to run your app on from the target device drop-down menu in the toolbar.
 
-2. Click `Run app` button, then Android Studio installs your app on your connected device and starts it.
+2. Click the **Run app** button, then Android Studio installs your app on your connected device and starts it.
 
 ## Further Barcode Reading Settings
 
@@ -291,7 +293,7 @@ The SDK provides multiple decoding methods that support reading barcodes from di
 
 You can find more samples in more programming languages at [Code Gallery](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx){:target="_blank"} or [Github Repositories](https://github.com/dynamsoft-dbr?q=java&type=&language=){:target="_blank"}.
 
-Calling the [decoding methods](#decoding-methods) directly will use the default scanning modes and it will satisfy most of the needs. The SDK also allows you to adjust the scanning settings to optimize the scanning performance for different usage scenarios.
+Calling the [decoding methods](#decoding-methods) directly uses the default scanning modes which shall satisfy most of the needs. The SDK also allows you to adjust the scanning settings to optimize the scanning performance for different usage scenarios.
 
 ### [`PublicRuntimeSettings`](api-reference/auxiliary-PublicRuntimeSettings.md)
 
@@ -301,23 +303,23 @@ Here are some typical scanning settings you might find helpful:
 - [Specify Maximum Barcode Count](#specify-maximum-barcode-count)
 - [Specify a Scan Region](#specify-a-scan-region)
 
-For more scanning settings guide, please read the [How To Guide]({{site.introduction}}how-to-guide/){:target="_blank"} section.
+For more scanning settings guide, please check the [How To Guide]({{site.introduction}}how-to-guide/){:target="_blank"} section.
 
 #### Specify Barcode Type to Read
 
 A simple barcode format setting will result in a higher processing speed. By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. Please use the [`BarcodeFormatIds`]({{ site.enumerations }}format-enums.html#barcodeformat) and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) to specify your barcode format(s) so that you can find the balance between speed and readability.
 
-#### Specify maximum barcode count
+#### Specify Maximum Barcode Count
 
 By default, the SDK will try to find at least one barcode. You can use `expectedBarcodesCount` to specify the maximum number of barcodes. If you set the maximum number of barcodes n, the SDK will try to find at least n barcodes. The scanning process will not stop until n barcodes are found or timeout.
 
-#### Specify a scan region
+#### Specify a Scan Region
 
 By default, the barcode reader will scan the whole image for barcodes. This can lead to poor performance, especially when dealing with high-resolution images. You can speed up the recognition process by restricting the scanning region.
 
-**Code Snippet** of PublicRuntimeSettings
+**Code Snippet of PublicRuntimeSettings**
 
-The following code is a template on how to use `PublicRuntimeSettings`.
+Below is a sample on how to use `PublicRuntimeSettings`.
 
 ```java
 PublicRuntimeSettings runtimeSettings = reader.getRuntimeSettings();
