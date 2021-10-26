@@ -13,7 +13,7 @@ breadcrumbText: Samples
 
 | Sample Name | Description |
 | ----------- | ----------- |
-| [Helloworld](helloworld.md) | The simplest video streaming barcode scanner. |
+| [HelloWorld](helloworld.md) | The simplest video streaming barcode scanner. |
 | [GeneralSettings](general.md) | Illustrates how to make barcode formats, barcode count and scan region settings. |
 | [SpeedFirstSettings](speed.md) | Parameter configuration guide on improving the speed of barcode results. |
 | [ReadRateFirstSettings](read-rate.md) | Parameter configuration guide on improving the read rate of the barcode reader. |

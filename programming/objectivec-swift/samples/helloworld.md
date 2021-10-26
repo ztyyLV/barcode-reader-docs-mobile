@@ -1,10 +1,10 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for iOS - Helloworld Sample
-description: This is the Helloworld Sample page of Dynamsoft Barcode Reader for iOS SDK.
-keywords: iOS, samples, Helloworld
+title: Dynamsoft Barcode Reader for iOS - HelloWorld Sample
+description: This is the HelloWorld Sample page of Dynamsoft Barcode Reader for iOS SDK.
+keywords: iOS, samples, HelloWorld
 needAutoGenerateSidebar: false
-breadcrumbText: Helloworld
+breadcrumbText: HelloWorld
 ---
 
 # HelloWorld Sample
