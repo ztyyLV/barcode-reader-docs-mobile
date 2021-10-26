@@ -4,10 +4,10 @@ title: Dynamsoft Barcode Reader for Android - Accuracy-First Settings Samples
 description: This is the Accuracy-First Settings Sample page of Dynamsoft Barcode Reader for Android SDK.
 keywords: android, samples, speed
 needAutoGenerateSidebar: true
-breadcrumbText: Accuracy-First Settings
+breadcrumbText: AccuracyFirstSettings
 ---
 
-# Accuracy-First Settings Sample
+# AccuracyFirstSettings Sample
 
 The Accuracy-First setting sample illustrates how to use DBR APIs to improve the barcode reading accuracy. Normally the barcode misreading is caused by decoding the terribly printed barcodes or blurry images. On this page, you can find the guides on how to deal with these issues to avoid misreading when using Dynamsoft Barcode Reader.
 

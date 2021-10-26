@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader for Android - General Settings Sample
 description: This is the General Settings Sample page of Dynamsoft Barcode Reader for Android SDK.
 keywords: android, samples, General
 needAutoGenerateSidebar: true
-breadcrumbText: General Settings
+breadcrumbText: GeneralSettings
 ---
 
 # GeneralSettings Sample
