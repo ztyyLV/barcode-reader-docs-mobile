@@ -1,33 +1,34 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - Read-Rate-First Settings Samples
-description: This is the Read-Rate-First Settings Sample page of Dynamsoft Barcode Reader for Android SDK.
-keywords: android, samples, speed
+title: Dynamsoft Barcode Reader for iOS - Read-Rate-First Settings Samples
+description: This is the Read-Rate-First Settings Sample page of Dynamsoft Barcode Reader for iOS SDK.
+keywords: iOS, samples, speed
 needAutoGenerateSidebar: true
 breadcrumbText: Read-Rate-First Settings
 ---
 
 # ReadRateFirstSettings Sample
 
-The Read-Rate-First Settings Sample illustrates how to maximize the rate when using Dynamsoft Barcode Reader Android SDK. Generally, the Read Rate of a barcode reader refers to the rate of successfully recognized barcode among all barcodes in the given image in one scan.
+The Read-Rate-First Settings Sample illustrates how to maximize the rate when using Dynamsoft Barcode Reader iOS SDK. Generally, the Read Rate of a barcode reader refers to the rate of successfully recognized barcode among all barcodes in the given image in one scan.
 
 **View Samples (on GitHub)**
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Performance/ReadRateFirstSettings/" target="_blank">Java (Android) Read-Rate-First Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/Performance/ReadRateFirstSettingsObjC/" target="_blank">Objective-C Read-Rate-First Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/Performance/ReadRateFirstSettingsSwift/" target="_blank">Swift Read-Rate-First Settings Sample</a>
 
 ## Regular Settings
 
 ### The Region Definition
 
-It is not recommended to make configurations on the scan region if the app is focusing on improving the Read-Rate. Dynamsoft Barcode Reader Android SDK will scan the full image by default.
+It is not recommended to make configurations on the scan region if the app is focusing on improving the Read-Rate. Dynamsoft Barcode Reader iOS SDK will scan the full image by default.
 
 ### The Format Specification
 
-The barcode formats can be specified via [`PublicRuntimeSetting`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html). The default value of DBR is not supporting all available barcode formats. Optimizing the barcode format settings to cover the requirements will help you to create a high-efficiency and high-read-rate barcode reader that covers your usage scenario.
+The barcode formats can be specified via [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html). The default value of DBR is not supporting all available barcode formats. Optimizing the barcode format settings to cover the requirements will help you to create a high-efficiency and high-read-rate barcode reader that covers your usage scenario.
 
 **Related APIs**
 
-- View class [`PublicRuntimeSetting`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) to learn about the default barcode formats.
+- View class [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html) to learn about the default barcode formats.
 - View Enum [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) to learn about all available barcode formats.
 
 ### The Barcode Count

@@ -10,7 +10,7 @@ breadcrumbText: Release Notes
 # Dynamsoft Barcode Reader iOS SDK - Release Notes
 
 
-- [8.8.0 (10/12/2021)](ios-8.md#880-10122021)
+- [8.8.0 (10/19/2021)](ios-8.md#880-10192021)
 - [8.6.0 (07/15/2021)](ios-8.md#860-07152021)
 - [8.4.0 (06/08/2021)](ios-8.md#840-06082021)
 - [8.2.1 (05/27/2021)](ios-8.md#821-05272021)

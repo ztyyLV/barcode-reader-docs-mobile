@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - Accuracy-First Settings Samples
-description: This is the Accuracy-First Settings Sample page of Dynamsoft Barcode Reader for Android SDK.
-keywords: android, samples, speed
+title: Dynamsoft Barcode Reader for iOS - Accuracy-First Settings Samples
+description: This is the Accuracy-First Settings Sample page of Dynamsoft Barcode Reader for iOS SDK.
+keywords: iOS, samples, speed
 needAutoGenerateSidebar: true
 breadcrumbText: Accuracy-First Settings
 ---
@@ -13,7 +13,8 @@ The Accuracy-First setting sample illustrates how to use DBR APIs to improve the
 
 View the sample
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Performance/AccuracyFirstSettings/" target="_blank">Java (Android) Speed-first Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/Performance/AccuracyFirstSettingsObjC/" target="_blank">Speed-first Settings Sample (Objective-C)</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/Performance/AccuracyFirstSettingsSwift/" target="_blank">Speed-first Settings Sample (Swift)</a>
 
 ## Regular Accuracy Settings
 
@@ -35,18 +36,18 @@ For every barcode result output by DBR, it has a confidence value. The higher th
 
 The multi-frame confirmation is a solution that eliminates misreading on oneD barcodes by double-checking the barcode results between multiple video frames before the results are output. Since this feature will halve the average reading speed, please enable this feature when the misreading is intolerable.
 
-- Use [`enableResultVerification`]({{ site.android_api }}primary-result.html#enableresultverification) to enable the result confirmation.
+- Use [`enableResultVerification`]({{ site.oc_api }}primary-result.html#enableresultverification) to enable the result confirmation.
 
 ## Advanced Accuracy Settings
 
 ### Specify the Barcode Format
 
-Barcode format is one of the most typical settings of a barcode reader. This will help you to improve the speed and accuracy of your barcode reading program by excluding the uninterested formats. You can update the barcode format settings in the struct/class [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) via API [`updateRuntimeSettings`]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#updateruntimesettings).
+Barcode format is one of the most typical settings of a barcode reader. This will help you to improve the speed and accuracy of your barcode reading program by excluding the uninterested formats. You can update the barcode format settings in the struct/class [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html) via API [`updateRuntimeSettings`]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#updateruntimesettings).
 
 **Related APIs**
 
-- Struct/class [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html)
-- API [`updateRuntimeSettings`]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#updateruntimesettings)
+- Struct/class [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
+- API [`updateRuntimeSettings`]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#updateruntimesettings)
 - Enum [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ### Skip Small-Sized Barcodes

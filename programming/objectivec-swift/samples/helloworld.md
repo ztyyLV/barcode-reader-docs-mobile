@@ -1,37 +1,19 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - Helloworld Sample
-description: This is the Helloworld Sample page of Dynamsoft Barcode Reader for Android SDK.
-keywords: android, samples, Helloworld
+title: Dynamsoft Barcode Reader for iOS - HelloWorld Sample
+description: This is the HelloWorld Sample page of Dynamsoft Barcode Reader for iOS SDK.
+keywords: iOS, samples, HelloWorld
 needAutoGenerateSidebar: false
-breadcrumbText: Helloworld
+breadcrumbText: HelloWorld
 ---
 
-# Android Helloworld Sample
+# HelloWorld Sample
 
-The Android Helloworld sample illustrates how to create the simplest video barcode scanner with Dynamsoft Barcode Reader (DBR) Android SDK.
+The iOS Helloworld sample illustrates how to create the simplest video streaming barcode reading app with Dynamsoft Barcode Reader (DBR) iOS SDK.
 
-[Download the Helloworld sample]().
+View the samples
 
-## The License
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC/" target="_blank">Objective-C HelloWorld</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/HelloWorldSwift/" target="_blank">Swift HelloWorld</a>
 
-You have to initialize the Barcode Reader with a valid license to get access to the full feature of DBR.
-
-```java
-barcodeReader.initLicense("Your license", new DBRLicenseVerificationListener() {
-    @Override
-    public void DBRLicenseVerificationCallback(boolean isSuccess, Exception e) {
-        if (!isSuccess) {
-            e.printStackTrace();
-        }
-    }
-});
-```
-
-## The Camera
-
-Dynamsoft Camera Enhancer is an SDK for users to easily develop a camera module for getting video input. In this Helloworld sample, we are using DCE developed camera module.
-
-## The Result
-
-The [`TextResult`]({{ site.android_api }}auxiliary-TextResult.html) class stores the barcode result data including the barcode text result, detailed result, extended barcode result and other barcode information.
+For more details about how to get started with Dynamsoft Barcode Reader, please view the [user guide]({{ site.oc }}user-guide.html).
