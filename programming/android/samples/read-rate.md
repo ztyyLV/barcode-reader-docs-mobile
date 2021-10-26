@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: Read-Rate-First Settings
 ---
 
-# Android ReadRateFirstSettings Sample
+# ReadRateFirstSettings Sample
 
 The Read-Rate-First Settings Sample illustrates how to maximize the rate when using Dynamsoft Barcode Reader Android SDK. Generally, the Read Rate of a barcode reader refers to the rate of successfully recognized barcode among all barcodes in the given image in one scan.
 
@@ -23,7 +23,7 @@ It is not recommended to make configurations on the scan region if the app is fo
 
 ### The Format Specification
 
-The barcode formats can be specified via [`PublicRuntimeSetting`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html). The default value of DBR is not supporting all available barcode formats. Optimize the barcode format settings to cover the requirements will help you to create a high-efficiency and high-read-rate barcode reader that covers your usage scenario.
+The barcode formats can be specified via [`PublicRuntimeSetting`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html). The default value of DBR is not supporting all available barcode formats. Optimizing the barcode format settings to cover the requirements will help you to create a high-efficiency and high-read-rate barcode reader that covers your usage scenario.
 
 **Related APIs**
 

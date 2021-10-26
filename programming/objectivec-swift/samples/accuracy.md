@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: Accuracy-First Settings
 ---
 
-# iOS Accuracy-First Settings Sample
+# Accuracy-First Settings Sample
 
 The Accuracy-First setting sample illustrates how to use DBR APIs to improve the barcode reading accuracy. Normally the barcode misreading is caused by decoding the terribly printed barcodes or blurry images. On this page, you can find the guides on how to deal with these issues to avoid misreading when using Dynamsoft Barcode Reader.
 

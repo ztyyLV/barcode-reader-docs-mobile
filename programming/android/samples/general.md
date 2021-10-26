@@ -26,9 +26,17 @@ The barcode formats settings and the barcode count settings are the most basic s
 **Code Snippet**
 
 ```java
+// General settings (including barcode format, barcode count and scan region) for the instance.
+// Obtain current runtime settings of instance.
 PublicRuntimeSettings runtimeSettings = reader.getRuntimeSettings();
+// Set the expected barcode format you want to read.
+// The barcode format our library will search for is composed of BarcodeFormat group 1 and BarcodeFormat group 2.
+// So you need to specify the barcode format in group 1 and group 2 individually.
 runtimeSettings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_PDF417 | EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_DATAMATRIX |EnumBarcodeFormat.BF_AZTEC;
 runtimeSettings.barcodeFormatIds_2 = 0;
+// Set the expected barcode count you want to read.
+runtimeSettings.expectedBarcodesCount = 5;
+// Apply the new settings to the instance
 reader.updateRuntimeSettings(runtimeSettings);
 ```
 
@@ -54,15 +62,20 @@ The **regionTop**, **regionBottom**, **regionLeft** and **regionRight** paramete
 **Code Snippet**
 
 ```java
+// General settings (including barcode format, barcode count and scan region) for the instance.
+// Obtain current runtime settings of instance.
 PublicRuntimeSettings runtimeSettings = reader.getRuntimeSettings();
 RegionDefinition regionDefinition = new RegionDefinition();
-//The int value 15 means the top of the scan region margins 15% from the top of screen.
+// Set the ROI(region of insterest) to speed up the barcode reading process.
+// Note: DBR supports setting coordinates by pixels or percentages. The origin of the coordinate system is the upper left corner point.
+// The int value 15 means the top of the scan region margins 15% from the top of screen.
 regionDefinition.regionTop = 15;
 regionDefinition.regionBottom = 85;
 regionDefinition.regionLeft = 30;
 regionDefinition.regionRight = 70;
 regionDefinition.regionMeasuredByPercentage = 1;
 runtimeSettings.region = regionDefinition;
+// Apply the new settings to the instance
 reader.updateRuntimeSettings(runtimeSettings);
 ```
 
@@ -76,33 +89,27 @@ reader.updateRuntimeSettings(runtimeSettings);
 - Class [`RegionDefinition`]({{ site.android_api }}auxiliary-RegionDefinition.html)
 - Class [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html)
 
-## To Updated the Settings
+## Configure the Settings via JSON Template
 
-The [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) class is the class that stores nearly all the barcode reading setting parameters. These parameters cover the basic barcode format settings as well as further algorithm configuring parameters.
+Besides using the [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-iPublicRuntimeSettings.html) class, you can also upload the general barcode settings from stringified JSON data or a JSON file.
 
-**Update the Settings Via the APIs**
+### Update the Runtime Settings via JSON String
 
-```java
-PublicRuntimeSettings runtimeSettings = reader.getRuntimeSettings();
-runtimeSettings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED;
-runtimeSettings.expectedBarcodesCount = 1;
-reader.updateRuntimeSettings(runtimeSettings);
-```
+Use method [`initRuntimeSettingsWithString`]({{ site.android_api }}primary-parameter-and-runtime-settings-advanced.html#initruntimesettingswithstring) to upload the settings via a JSON string.
 
-**Update the Runtime Settings Via Json String**
+**Code Snippet**
 
 ```java
 reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", EnumConflictMode.CM_OVERWRITE);
 ```
 
-**Update the Runtime Settings Via Json File**
+### Update the Runtime Settings via JSON File
+
+Use method [`initRuntimeSettingsWithFile`]({{ site.android_api }}primary-parameter-and-runtime-settings-advanced.html#initruntimesettingswithfile) to upload the settings via a JSON file.
+
+**Code Snippet**
 
 ```java
 // Overwrite the settings if the settings already exist.
 reader.initRuntimeSettingsWithFile("your template file path", EnumConflictMode.CM_OVERWRITE);
 ```
-
-- Class [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html)
-- Method [`updateRuntimeSettings`]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#updateruntimesettings)
-- Method [`initRuntimeSettingsWithString`]({{ site.android_api }}primary-parameter-and-runtime-settings-advanced.html#initruntimesettingswithstring)
-- Method [`initRuntimeSettingsWithFile`]({{ site.android_api }}primary-parameter-and-runtime-settings-advanced.html#initruntimesettingswithfile)

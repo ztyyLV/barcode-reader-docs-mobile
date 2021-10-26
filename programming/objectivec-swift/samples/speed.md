@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: Speed-First Settings
 ---
 
-# iOS Speed-first Settings
+# Speed-first Settings
 
 The Speed-first Settings sample illustrates how to improve the speed performance of the barcode decoding apps. Generally, users can improve the barcode decoding speed by reducing the size of the scan region or simplifying the complexity of the barcode settings. Furthermore, for certain scenarios, configuring parameter settings also contributes to the barcode reading speed. On this page, you will be guided on how to make personalized speed-friendly parameter settings for your barcode decoding app.
 
@@ -45,7 +45,8 @@ The [`LocalizationModes`]({{ site.parameters_reference }}localization-modes.html
 
 **BinarizationModes**
 
-The fewer [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html) are set, the faster the barcode reading speed will be. If the binarization mode is not skipped, the barcode reader will spend some time filling the binary vacancy. You can set the [`EnableFillBinaryVacancy`]({{ site.parameters_reference }}binarization-modes.html#enablefillbinaryvacancy) value to 0 to disable this activity. Please be sure that your app is working with high-quality images if you want to skip filling the vacancy.
+The fewer [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html) are set, the faster the barcode reading speed will be. The default value of parameter [`EnableFillBinaryVacancy`]({{ site.parameters_reference }}binarization-modes.html#enablefillbinaryvacancy) is true, which means the vacant hollows will be filled by default. You can set [`EnableFillBinaryVacancy`]({{ site.parameters_reference }}binarization-modes.html#enablefillbinaryvacancy)
+value false to improve the barcode reading speed but the read rate might be decreased at the same time.
 
 **ScaleDownThreshold**
 
