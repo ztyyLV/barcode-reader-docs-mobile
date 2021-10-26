@@ -23,11 +23,11 @@ The Objective-C and Swift documentation mainly consists of two parts. One is the
 - <a href="https://www.dynamsoft.com/barcode-reader/resources/code-gallery/?tag=swift" target="_blank">Code Gallery - Swift</a>
 - <a href="https://www.dynamsoft.com/barcode-reader/resources/code-gallery/?SampleID=218" target="_blank">Code Gallery - Xamarin</a>
 - <a href="https://www.dynamsoft.com/barcode-reader/resources/code-gallery/?SampleID=221" target="_blank">Code Gallery - Cordova</a>
-
+a
 ## API Reference
 
 - [Primary APIs](api-reference/primary-index.md)
-- [Auxiliary APIs](api-reference/Auxiliary-index.md)
+- [Auxiliary APIs](api-reference/auxiliary-index.md)
 
 ## Release Notes
 
