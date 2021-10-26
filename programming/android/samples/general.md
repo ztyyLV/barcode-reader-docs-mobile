@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: General Settings
 ---
 
-# Android GeneralSettings Sample
+# GeneralSettings Sample
 
 This sample shows how to configure general barcode settings like the barcode formats, expected barcode count and the scan region when using Dynamsoft Barcode Reader Android SDK.
 
