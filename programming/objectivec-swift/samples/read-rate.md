@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader for iOS - Read-Rate-First Settings Samples
 description: This is the Read-Rate-First Settings Sample page of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iOS, samples, speed
 needAutoGenerateSidebar: true
-breadcrumbText: Read-Rate-First Settings
+breadcrumbText: ReadRateFirstSettings
 ---
 
 # ReadRateFirstSettings Sample

@@ -4,10 +4,10 @@ title: Dynamsoft Barcode Reader for Android - Speed-first Settings Sample
 description: This is the Speed-first Settings Sample page of Dynamsoft Barcode Reader for Android SDK.
 keywords: android, sample, speed
 needAutoGenerateSidebar: true
-breadcrumbText: Speed-First Settings
+breadcrumbText: SpeedFirstSettings
 ---
 
-# Speed-first Settings
+# SpeedFirstSettings Sample
 
 The Speed-first Settings sample illustrates how to improve the speed performance of the barcode decoding apps. Generally, users can improve the barcode decoding speed by reducing the size of the scan region or simplifying the complexity of the barcode settings. Furthermore, for certain scenarios, configuring parameter settings also contributes to the barcode reading speed. On this page, you will be guided on how to make personalized speed-friendly parameter settings for your barcode decoding app.
 
