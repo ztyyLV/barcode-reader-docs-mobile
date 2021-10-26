@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: Samples
 ---
 
-# Samples and Demos
+# Demo and Samples
 
 ## Samples
 
