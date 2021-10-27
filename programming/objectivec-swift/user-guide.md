@@ -21,12 +21,12 @@ noTitleIndex: true
 
 ## Installation
 
-If you have downloaded the SDK from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> and unzipped **dbr-ios-{version-number}.zip**, you can find two **frameworks** in the root folder. You can simply include **DynamsoftBarcodeReader.framework** to your project to start creating a barcode scanning app. The other framework, **DynamsoftCameraEnhancer.framework**, is an extension package that integrates video frame preprocessing algorithms and camera control APIs.
+If you have downloaded the SDK from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> and unzipped **dbr-ios-{version-number}.zip**, you can find two **frameworks** in the root folder. You can simply include `DynamsoftBarcodeReader.framework` to your project to start creating a barcode scanning app. The other framework, `DynamsoftCameraEnhancer.framework`, is an extension package that integrates video frame preprocessing algorithms and camera control APIs.
 
 | Framework | Description |
 | --------- | ----------- |
-| **DynamsoftBarcodeReader.framework** | The Barcode Reader package, including all barcode decoding related algorithms and APIs. |
-| **DynamsoftCameraEnhancer.framework** | The Camera Enhancer package, including camera control APIs and frame preprocessing algorithm.  |
+| `DynamsoftBarcodeReader.framework` | The Barcode Reader package, including all barcode decoding related algorithms and APIs. |
+| `DynamsoftCameraEnhancer.framework` | The Camera Enhancer package, including camera control APIs and frame preprocessing algorithm.  |
 
 ## Build Your First Application
 
@@ -359,6 +359,8 @@ Regular barcode reading settings and modes parameter settings are available via 
 - [Speed first barcode reading settings]({{ site.oc }}samples/speed.html)
 - [Read-rate first barcode reading settings]({{ site.oc }}samples/read-rate.html)
 - [Accuracy first barcode reading settings]({{ site.oc }}samples/accuracy.html)
+
+For more scanning settings guide, please check the [How To Guide]({{site.introduction}}how-to-guide/){:target="_blank"} section.
 
 ## Known Issues
 

@@ -21,9 +21,9 @@ noTitleIndex: true
 
 ## Installation
 
-You can download the Dynamsoft Barcode Reader (DBR) SDK from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> if you don't have the SDK installed yet. 
+You can download the Dynamsoft Barcode Reader (DBR) SDK from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> if you don't have the SDK installed yet.
 
-After unzipping, the root directory of the DBR installation package is **DynamsoftBarcodeReader** (the `[INSTALLATION FOLDER]`). You can find the following two `aar` files under the `[INSTALLATION FOLDER]\Lib` directory: 
+After unzipping, the root directory of the DBR installation package is **DynamsoftBarcodeReader** (the `[INSTALLATION FOLDER]`). You can find the following two **aar** files under the **[INSTALLATION FOLDER]\Lib** directory:
 
 | File | Description |
 |---------|-------------|
@@ -34,18 +34,18 @@ After unzipping, the root directory of the DBR installation package is **Dynamso
 
 In this section, let's see how to create a HelloWorld app for reading barcodes from camera video input.
 
->Note: 
+>Note:
 >- Android Studio 4.2 is used here in this guide.
 >- You can get the source code of the HelloWord app [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld).
 
-### Create a New Project 
+### Create a New Project
 
 1. Open Android Studio, select **File > New > New Project**.
 
-2. Choose the correct template for your project. In this sample, we use `Empty Activity`.
+2. Choose the correct template for your project. In this sample, we use **Empty Activity**.
 
 3. When prompted, choose your app name 'HelloWorld' and set the **Save** location, **Language**, and **Minimum SDK** (we use 21 here).
-    > Note: With `minSdkVersion` set to 21, your app is compatible with more than 94.1% of devices on the Google Play Store (last update: March 2021).
+    > Note: With **minSdkVersion** set to 21, your app is compatible with more than 94.1% of devices on the Google Play Store (last update: March 2021).
 
 ### Include the Library
 
@@ -56,7 +56,7 @@ There are two ways to include the SDK into your project - local binary dependenc
 1. Copy the file `[INSTALLATION FOLDER]\Lib\DynamsoftBarcodeReaderAndroid.aar` and `[INSTALLATION FOLDER]\Lib\DynamsoftCameraEnhancerAndroid.aar` to the target directory `HelloWorld\app\libs`
 
 2. Open the file `HelloWorld\app\build.gradle` and add reference in the dependencies:
-   
+
     ```groovy
     dependencies {
         implementation fileTree(dir: 'libs', include: ['*.aar'])
@@ -71,11 +71,11 @@ There are two ways to include the SDK into your project - local binary dependenc
    import com.dynamsoft.dbr.*;
    import com.dynamsoft.dce.*;
    ```
-   
+
 #### Remote Binary Dependency
 
 1. Open the file `HelloWorld\app\build.gradle` and add the remote repository:
-    
+
     ```groovy
     repositories {
          maven {
@@ -106,7 +106,7 @@ There are two ways to include the SDK into your project - local binary dependenc
    import com.dynamsoft.dbr.*;
    import com.dynamsoft.dce.*;
    ```
-    
+
 ### Initialize Camera Module
 
 1. Initialize the license.
@@ -283,56 +283,13 @@ You can download the complete source code [here](https://github.com/Dynamsoft/ba
 
 ### Decoding Methods
 
-The SDK provides multiple decoding methods that support reading barcodes from different sources, including static images, video stream, files in memory, base64 string, bitmap, etc. Here is a list of all decoding methods:
+Regular barcode reading settings and modes parameter settings are available via [`PublicRuntimeSettings`](api-reference/auxiliary-iPublicRuntimeSettings.md) and JSON templates. The following typical settings you might find helpful:
 
-- [decodeBuffer](api-reference/primary-decode.md#decodebuffer): Reads barcodes from raw buffer.
-- [decodeFile](api-reference/primary-decode.md#decodefile): Reads barcodes from a specified file (BMP, JPEG, PNG, GIF, TIFF or PDF).
-- [decodeFileInMemory](api-reference/primary-decode.md#decodefileinmemory): Decodes barcodes from an image file in memory.
-- [decodeBase64String](api-reference/primary-decode.md#decodebase64string): Reads barcodes from a base64 encoded string of a file.
-- [decodeBufferedImage](api-reference/primary-decode.md#decodebufferedimage): Reads barcodes from a bitmap. When handling multi-page images, it will only decode the current page.
-
-You can find more samples in more programming languages at [Code Gallery](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx){:target="_blank"} or [Github Repositories](https://github.com/dynamsoft-dbr?q=java&type=&language=){:target="_blank"}.
-
-Calling the [decoding methods](#decoding-methods) directly uses the default scanning modes which shall satisfy most of the needs. The SDK also allows you to adjust the scanning settings to optimize the scanning performance for different usage scenarios.
-
-### [`PublicRuntimeSettings`](api-reference/auxiliary-PublicRuntimeSettings.md)
-
-Here are some typical scanning settings you might find helpful:
-
-- [Specify Barcode Type to Read](#specify-barcode-type-to-read)
-- [Specify Maximum Barcode Count](#specify-maximum-barcode-count)
-- [Specify a Scan Region](#specify-a-scan-region)
+- [Specify Barcode Formats]({{ site.android }}samples/general.html#specify-barcode-format-and-barcode-count)
+- [Specify the Barcode Count]({{ site.android }}samples/general.html#specify-barcode-format-and-barcode-count)
+- [Specify the Scan Region]({{ site.android }}samples/general.html#specify-the-scan-region)
+- [Speed first barcode reading settings]({{ site.android }}samples/speed.html)
+- [Read-rate first barcode reading settings]({{ site.android }}samples/read-rate.html)
+- [Accuracy first barcode reading settings]({{ site.android }}samples/accuracy.html)
 
 For more scanning settings guide, please check the [How To Guide]({{site.introduction}}how-to-guide/){:target="_blank"} section.
-
-#### Specify Barcode Type to Read
-
-A simple barcode format setting will result in a higher processing speed. By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. Please use the [`BarcodeFormatIds`]({{ site.enumerations }}format-enums.html#barcodeformat) and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) to specify your barcode format(s) so that you can find the balance between speed and readability.
-
-#### Specify Maximum Barcode Count
-
-By default, the SDK will try to find at least one barcode. You can use `expectedBarcodesCount` to specify the maximum number of barcodes. If you set the maximum number of barcodes n, the SDK will try to find at least n barcodes. The scanning process will not stop until n barcodes are found or timeout.
-
-#### Specify a Scan Region
-
-By default, the barcode reader will scan the whole image for barcodes. This can lead to poor performance, especially when dealing with high-resolution images. You can speed up the recognition process by restricting the scanning region.
-
-**Code Snippet of PublicRuntimeSettings**
-
-Below is a sample on how to use `PublicRuntimeSettings`.
-
-```java
-PublicRuntimeSettings runtimeSettings = reader.getRuntimeSettings();
-//The barcode is set to OneD barcode.
-runtimeSettings.barcodeFormatIds = 0x7FF;
-//The barcode will try to find 10 barcodes.
-runtimeSettings.expectedBarcodesCount = 10;
-//The following code shrinks the decoding region by 25% on all sides
-runtimeSettings.region.regionTop = 25;
-runtimeSettings.region.regionBottom = 75;
-runtimeSettings.region.regionLeft = 25;
-runtimeSettings.region.regionRight = 75;
-//The region is determined by the percentage
-runtimeSettings.region.regionMeasuredByPercentage = 1;
-reader.updateRuntimeSettings(runtimeSettings);
-```
