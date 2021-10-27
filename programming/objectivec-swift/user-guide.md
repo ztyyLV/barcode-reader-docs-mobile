@@ -353,8 +353,7 @@ If you have followed the above guide step by step, your project will be able to 
 
 Regular barcode reading settings and modes parameter settings are available via [`PublicRuntimeSettings`](api-reference/auxiliary-iPublicRuntimeSettings.md) and JSON templates. The following typical settings you might find helpful:
 
-- [Specify Barcode Formats]({{ site.oc }}samples/general.html#specify-barcode-format-and-barcode-count)
-- [Specify the Barcode Count]({{ site.oc }}samples/general.html#specify-barcode-format-and-barcode-count)
+- [Specify the barcode formats and the expected barcode count]({{ site.oc }}samples/general.html#specify-barcode-format-and-barcode-count)
 - [Specify the Scan Region]({{ site.oc }}samples/general.html#specify-the-scan-region)
 - [Speed first barcode reading settings]({{ site.oc }}samples/speed.html)
 - [Read-rate first barcode reading settings]({{ site.oc }}samples/read-rate.html)
