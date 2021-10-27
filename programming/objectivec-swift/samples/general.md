@@ -18,7 +18,7 @@ This sample shows how to configure general barcode settings like the barcode for
 
 ## Configure the Settings via PublicRuntimeSettings
 
-### Barcode Format and Barcode Count Settings
+### Specify Barcode Format and Barcode Count
 
 The barcode formats settings and the barcode count settings are the most basic settings that determine the readability of your scan app. These parameters are all available for users to make changes through the class [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html). To view all available barcode formats, please view the enumeration [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2).
 
@@ -62,7 +62,7 @@ barcodeReader.update(settings!, error: &error)
 - Enum [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat)
 - Enum [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
-### RegionDefinition - Set the Region
+### Specify the Scan Region
 
 The scan region information is stored in [`RegionDefinition`]({{ site.oc_api }}auxiliary-iRegionDefinition.html) class. To set the scan region, you can make the region settings in class [`RegionDefinition`]({{ site.oc_api }}auxiliary-iRegionDefinition.html) and upload the settings through the class [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html).
 
