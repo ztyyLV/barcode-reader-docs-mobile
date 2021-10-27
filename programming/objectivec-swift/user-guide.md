@@ -366,17 +366,17 @@ Regular barcode reading settings and modes parameter settings are available via 
 
 You might run into this error in the app initialization phase - and in order to resolve this, a slight change needs to be done to the build settings of the project. Please make sure that you take the following steps to avoid this error:
 
-- When adding the Barcode Reader framework in step 2 of the above instructions, make sure to tick off the `Copy items if needed` and `Create groups` options.
-- In the `Build Settings` of the project, find the `Validate Workspace` setting and make sure it is set to `Yes`.
-- In `General`, under `Frameworks, Libraries, and Embedded Content`, make sure that the `DynamsoftBarcodeReader.framework` is set to `Embed & Sign`.
+- When adding the Barcode Reader framework in step 2 of the above instructions, make sure to tick off the **Copy items if needed** and **Create groups** options.
+- In the **Build Settings** of the project, find the **Validate Workspace** setting and make sure it is set to **Yes**.
+- In **General > Frameworks > Libraries and Embedded Content**, make sure that the **DynamsoftBarcodeReader.framework** is set to **Embed & Sign**.
 
 ### "Unsupported Architectures" error when building and releasing the application for the App Store
 
-The error seems to stem from the inclusion of the `x86_64` architecture in `DynamsoftBarcodeReader.framework`. This error can potentially happen with dynamic libraries (like DBR iOS) that have pieces for all architectures, including devices and simulators.
+The error seems to stem from the inclusion of the **x86_64** architecture in **DynamsoftBarcodeReader.framework**. This error can potentially happen with dynamic libraries (like DBR iOS) that have pieces for all architectures, including devices and simulators.
 
-This specific error references the `x86_64` architecture which is for the iPhone simulator. When releasing to the App Store, the simulator architectures (`x86_64`) need to be removed from the dynamic library before the project is built for the App Store.
+This specific error references the **x86_64** architecture which is for the iPhone simulator. When releasing to the App Store, the simulator architectures (**x86_64**) need to be removed from the dynamic library before the project is built for the App Store.
 
-In order to solve the issue, add a `Run Script` phase after the `Embed Frameworks` step of the `Build Phases`, set it to use `/bin/sh`, and use the following script:
+In order to solve the issue, add a **Run Script** phase after the **Embed Frameworks** step of the **Build Phases**, set it to use **/bin/sh**, and use the following script:
 
 ```ruby
 APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
@@ -409,4 +409,4 @@ do
 done
 ```
 
-The script looks through your built application's `Frameworks` folder and make sure only the architectures you're building for are the only ones included in each framework. This way, you don't have to worry about dealing with those arcitectures during the build process.
+The script looks through your built application's **Frameworks** folder and make sure only the architectures you're building for are the only ones included in each framework. This way, you don't have to worry about dealing with those arcitectures during the build process.
