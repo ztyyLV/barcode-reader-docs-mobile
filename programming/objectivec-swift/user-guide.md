@@ -21,16 +21,16 @@ noTitleIndex: true
 
 ## Installation
 
-If you have downloaded the SDK from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> and unzipped `dbr-ios-{version-number}.zip`, you can find two `frameworks` in the root folder. You can simply include `DynamsoftBarcodeReader.framework` to your project to start creating a barcode scanning app. The other framework, `DynamsoftCameraEnhancer.framework`, is an extension package which integrates video frame preprocessing algorithms and camera control APIs.
+If you have downloaded the SDK from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> and unzipped **dbr-ios-{version-number}.zip**, you can find two **frameworks** in the root folder. You can simply include **DynamsoftBarcodeReader.framework** to your project to start creating a barcode scanning app. The other framework, **DynamsoftCameraEnhancer.framework**, is an extension package that integrates video frame preprocessing algorithms and camera control APIs.
 
 | Framework | Description |
-|---------|-------------|
-| `DynamsoftBarcodeReader.framework` | The Barcode Reader package, includes all barcode decoding releated algorithms and APIs. |
-| `DynamsoftCameraEnhancer.framework` | The Camera Enhancer package, includes camera control APIs and frame preprocessing algorithm.  |
+| --------- | ----------- |
+| **DynamsoftBarcodeReader.framework** | The Barcode Reader package, including all barcode decoding related algorithms and APIs. |
+| **DynamsoftCameraEnhancer.framework** | The Camera Enhancer package, including camera control APIs and frame preprocessing algorithm.  |
 
 ## Build Your First Application
 
-In this section, you will be guided on creating a `HelloWorld` app that can read barcodes from camera video input.
+In this section, let’s see how to create a **HelloWorld** app for reading barcodes from camera video input.
 
 > Note:
 >- You can download the similar complete Objective-C source code from [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorldObjc)
@@ -40,25 +40,23 @@ In this section, you will be guided on creating a `HelloWorld` app that can read
 
 1. Open the Xcode and select create a new project.
 
-2. Select `iOS -> App` for your application.
+2. Select **iOS > App** for your application.
 
 3. Input your product name (DBRHelloworld), interface (StoryBoard) and language (Objective-C/Swift).
 
-4. Click on the Next button and select the location to save the project.
+4. Click on the **Next** button and select the location to save the project.
 
-5. Click on the Create button to finish.
+5. Click on the **Create** button to finish.
 
 ### Include the Frameworks
 
-In this section, you will be guided on creating a Hello world app which can read barcodes from camera video input. `Dynamsoft Camera Enhancer` will be used to deploy the camera video input module in this guide. Please follow the steps below.
-
 You can add your downloaded frameworks into your project by the following steps:
 
-1. Drag and drop the `DynamsoftBarcodeReader` and `DynamsoftCameraEnhancer` frameworks into your Xcode project. Make sure to check Copy items if needed and Create groups to copy the framework into your project’s folder.
+1. Drag and drop the **DynamsoftBarcodeReader** and **DynamsoftCameraEnhancer** frameworks into your Xcode project. Make sure to check Copy items if needed and Create groups to copy the framework into your project's folder.
 
-2. Click on the project. `Go to the General --> Frameworks --> Libraries and Embedded Content`. Set the `embed type` to `Embed & Sign`.
+2. Click on the project. Go to the **General > Frameworks > Libraries and Embedded Content**. Set the **embed type** to **Embed & Sign**.
 
-3. Add the required `.tbd/.dylib` file to your project. Go to the `Build Phases` tab of your Xcode project, under `Link Binary with Libraries` section, click + button. Search for the file `libc++.tbd`, select it and click Add button. Then the libc++.tbd file will be copied to your project.
+3. Add the required **.tbd/.dylib** file to your project. Go to the **Build Phases** tab of your Xcode project, under **Link Binary with Libraries** section, click + button. Search for the file **libc++.tbd**, select it and click Add button. Then the **libc++.tbd** file will be copied to your project.
 
 4. Import the headers.
 
@@ -78,90 +76,93 @@ You can add your downloaded frameworks into your project by the following steps:
 
 ### Configure the Camera
 
-In the process of video barcode scanning, the camera will provide the video input for the barcode reader. In this section, you will be guided on how to initialize the camera module for barcode scanning with the help of `Dynamsoft Camera Enhancer`. You can skip this step if you are not going to use `Dynamsoft Camera Enhancer` to create your camera module.
+1. Create an instance of **DynamsoftCameraEnhancer** for getting video input.
 
-Objective-C:
+    Objective-C:
 
-Initialize and configure the Camera Enhancer:
+    ```objc
+    /*Initialize DynamsoftCameraEnhancer and DCECameraView*/
+    @property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
+    @property(nonatomic, strong) DCECameraView *dceView;
 
-```objectivec
-@interface ViewController ()
-@property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
-@property(nonatomic, strong) DCECameraView *dceView;
+    /*
+    ...
+    */
 
-@end
+    - (void)viewDidLoad {
+        [super viewDidLoad];
+        [self configurationDCE];
+    }
+    ```
 
-@implementation ViewController
-   
-- (void)viewDidLoad {
-    [super viewDidLoad];
+    Swift:
 
-    //This is a sample that illustrates how to quickly set up a video barcode scanner with Dynamsoft Barcode Reader.
-    [self configurationDBR];
-    
-    //Create a camera module for video barcode scanning. In this section Dynamsoft Camera Enhancer (DCE) will handle the camera settings.
-    [self configurationDCE];
-}
+    ```swift
+    /*Initialize DynamsoftCameraEnhancer and DCECameraView*/ 
+    var dce:DynamsoftCameraEnhancer! = nil
+    var dceView:DCECameraView! = nil
 
-override func viewWillAppear(_ animated: Bool) {
-    [super viewWillAppear:animated]
-}
+    /*
+    ...
+    */
 
-/*Configure the Camera Enhancer.*/
-- (void)configurationDCE{
-  _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
-  [self.view.addSubView:_dceView];
-  // Display overlays on the decoded barcodes
-  [_dceView setOverlayVisible:true];
-  /*The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days. After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios to request for 30 days extension.*/
-  [DynamsoftCameraEnhancer initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
-  _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
-  [_dce open];
-  [_dce addListener:self];
-  [_dce setFrameRate:30];
-}
-```
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configurationDCE()
+    }
+    ```
 
-Swift:
+2. Add configurations for **DynamsoftCameraEnhancer**.
 
-Initialize and configure the Camera Enhancer:
+    Objective-C:
 
-```swift
-var dce:DynamsoftCameraEnhancer! = nil
-var dceView:DCECameraView! = nil
+    ```objectivec
+    /*Configure the Camera Enhancer.*/
+    - (void)configurationDCE{
+        _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
+        [self.view.addSubView:_dceView];
 
-override func viewDidLoad() {
-    super.viewDidLoad()
-    configurationDCE()
-}
+        /*Display overlays on the decoded barcodes*/
+        [_dceView setOverlayVisible:true];
 
-override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-}
+        /*The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days. After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios to request for 30 days extension.*/
+        [DynamsoftCameraEnhancer initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+        _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
+        [_dce open];
+        [_dce addListener:self];
+        [_dce setFrameRate:30];
+    }
+    ```
 
-/*Configure the Camera Enhancer.*/
-func configurationDCE() {
-  dceView = DCECameraView.init(frame: self.view.bounds)
-  self.view.addSubview(dceView)
-  // Display overlays on the decoded barcodes.
-  dceView.setOverlayVisible(true)
-  // The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days. After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios to request for 30 days extension.
-  DynamsoftCameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
-  dce = DynamsoftCameraEnhancer.init(view: dceView)
-  dce.open()
-  dce.setFrameRate(30)
-  dce.addListener(self)
-}
-```
+    Swift:
+
+    ```swift
+    /*Configure the Camera Enhancer.*/
+    func configurationDCE() {
+        dceView = DCECameraView.init(frame: self.view.bounds)
+        self.view.addSubview(dceView)
+
+        /*Display overlays on the decoded barcodes*/
+        dceView.setOverlayVisible(true)
+
+        /*The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a public trial license good for 7 days. After that, please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios to request for 30 days extension.*/
+        DynamsoftCameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
+        dce = DynamsoftCameraEnhancer.init(view: dceView)
+        dce.open()
+        dce.setFrameRate(30)
+        dce.addListener(self)
+    }
+    ```
 
 ### Configure the Barcode Reader
 
-1. Create an instance of the Barcode reader:
+1. Create an instance of the Barcode reader.
 
     Objective-C:
 
     ```objectivec
     @property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
+
     /*
     ...
     */
@@ -177,15 +178,17 @@ func configurationDCE() {
 
     ```swift
     var barcodeReader:DynamsoftBarcodeReader! = nil
+
     /*
     ...
     */
+
     override func viewDidLoad() {
         configurationDBR()
     }
     ```
 
-2. Add configurations to the barcode reader and initialize the license:
+2. Add configurations to the barcode reader and initialize the license.
 
     Objective-C:
 
@@ -279,7 +282,7 @@ func configurationDCE() {
     }
     ```
 
-4. Create settings of video barcode reading and bind to Barcode Reader object
+4. Create settings of video barcode reading and bind to Barcode Reader object.
 
     Objective-C:
 
@@ -343,94 +346,32 @@ private func showResult(_ title: String, _ msg: String, _ acTitle: String, compl
 ### Run the Project
 
 If you have followed the above guide step by step, your project will be able to build a video barcode scanner. If the project is not working well, please visit the github to get the similar complete source code:
->- [Objective-C source code](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorldObjc)
->- [Swift source code](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorldSwift)
+>- [Objective-C source code](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC)
+>- [Swift source code](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/HelloWorldSwift)
 
-## Barcode Reader Methods and Settings
+## Further Barcode Reading Settings
 
-### Decoding Methods
+Regular barcode reading settings and modes parameter settings are available via [`PublicRuntimeSettings`](api-reference/auxiliary-iPublicRuntimeSettings.md) and JSON templates. The following typical settings you might find helpful:
 
-The SDK provides multiple decoding methods that support reading barcodes from different sources, including static images,
-video stream, files in memory, base64 string, bitmap, etc. Here is a list of all decoding methods:
+- [Specify Barcode Formats]({{ site.oc }}samples/general.html#specify-barcode-format-and-barcode-count)
+- [Specify the Barcode Count]({{ site.oc }}samples/general.html#specify-barcode-format-and-barcode-count)
+- [Specify the Scan Region]({{ site.oc }}samples/general.html#specify-the-scan-region)
+- [Speed first barcode reading settings]({{ site.oc }}samples/speed.html)
+- [Read-rate first barcode reading settings]({{ site.oc }}samples/read-rate.html)
+- [Accuracy first barcode reading settings]({{ site.oc }}samples/accuracy.html)
 
-- [decodeBuffer](api-reference/primary-decode.md#decodebuffer): Reads barcodes from raw buffer.
-- [decodeFileWithName](api-reference/primary-decode.md#decodefilewithname): Reads barcodes from a specified file (BMP, JPEG, PNG, GIF, TIFF or PDF).
-- [decodeImage](api-reference/primary-decode.md#decodeimage): Decode barcodes from an image file in memory.
-- [decodeBase64](api-reference/primary-decode.md#decodebase64): Reads barcodes from a base64 encoded string of a file.
-
-You can find more samples in more programming languages at [Code Gallery](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx){:target="_blank"}.
-
-Calling the [decoding methods](#decoding-methods) directly will use the default scanning modes and it will satisfy most of the needs. The SDK also allows you to adjust the scanning settings to optimize the scanning performance for different usage scenarios.
-
-### [`PublicRuntimeSettings`](api-reference/auxiliary-iPublicRuntimeSettings.md)
-
-Here are some typical scanning settings you might find helpful:
-
-- [Specify Barcode Type to Read](#specify-barcode-type-to-read)
-- [Specify Maximum Barcode Count](#specify-maximum-barcode-count)
-- [Specify a Scan Region](#specify-a-scan-region)
-
-For more scanning settings guide, please read the [How To Guide]({{site.introduction}}how-to-guide/){:target="_blank"} section.
-
-#### Specify barcode type to read
-
-A simple barcode format setting will result in a higher processing speed. By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. Please use the [`BarcodeFormatIds`]({{ site.enumerations }}format-enums.html#barcodeformat){:target="_blank"} and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2){:target="_blank"} to specify your barcode format(s) so that you can find the balance between speed and readability.
-
-#### Specify maximum barcode count
-
-By default, the SDK will try to find at least one barcode. You can use `expectedBarcodesCount` to specify the maximum number of barcodes. If you set the maximum number of barcodes n, the SDK will try to find at least n barcodes. The scanning process will not stop until n barcodes are found or timeout.
-
-#### Specify a scan region
-
-By default, the barcode reader will scan the whole image for barcodes. This can lead to poor performance, especially when dealing with high-resolution images. You can speed up the recognition process by restricting the scanning region.
-
-The following code is a template on how to use `PublicRuntimeSettings`.
-
-Objective-C:
-
-```objc
-iPublicRuntimeSettings* settings = [barcodeReader getRuntimeSettings:nil];
-// Set the barcode format
-settings.barcodeFormatIds = EnumBarcodeFormatONED;
-settings.expectedBarcodesCount = 1;
-// Set the scan region
-//The following code shrinks the decoding region by 25% on all sides
-settings.region.regionTop = 25;
-settings.region.regionBottom = 75;
-settings.region.regionLeft = 25;
-settings.region.regionRight = 75;
-//The region is determined by percentage
-settings.region.regionMeasuredByPercentage = 1;
-[barcodeReader updateRuntimeSettings:settings error:&error];
-```
-
-Swift:
-
-```Swift
-let settings = try reader.getRuntimeSettings()
-// Set the barcode format
-settings.barcodeFormatIds = Int(EnumBarcodeFormat.ONED.rawValue)
-settings.expectedBarcodesCount = 1
-// Set the scan region
-//The following code shrinks the decoding region by 25% on all sides
-settings.region.regionTop = 25
-settings.region.regionBottom = 75
-settings.region.regionLeft = 25
-settings.region.regionRight = 75
-//The region is determined by percentage
-settings.region.regionMeasuredByPercentage = 1
-reader.update(settings, error: nil)
-```
 ## Known Issues
 
-#### "dyld: Library not loaded" error on app initialization
+### "dyld: Library not loaded" error on app initialization
+
 You might run into this error in the app initialization phase - and in order to resolve this, a slight change needs to be done to the build settings of the project. Please make sure that you take the following steps to avoid this error:
 
 - When adding the Barcode Reader framework in step 2 of the above instructions, make sure to tick off the `Copy items if needed` and `Create groups` options.
 - In the `Build Settings` of the project, find the `Validate Workspace` setting and make sure it is set to `Yes`.
 - In `General`, under `Frameworks, Libraries, and Embedded Content`, make sure that the `DynamsoftBarcodeReader.framework` is set to `Embed & Sign`.
 
-#### "Unsupported Architectures" error when building and releasing the application for the App Store
+### "Unsupported Architectures" error when building and releasing the application for the App Store
+
 The error seems to stem from the inclusion of the `x86_64` architecture in `DynamsoftBarcodeReader.framework`. This error can potentially happen with dynamic libraries (like DBR iOS) that have pieces for all architectures, including devices and simulators.
 
 This specific error references the `x86_64` architecture which is for the iPhone simulator. When releasing to the App Store, the simulator architectures (`x86_64`) need to be removed from the dynamic library before the project is built for the App Store.
