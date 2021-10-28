@@ -10,7 +10,7 @@ breadcrumbText: Android
 
 # Documentation - Android
 
-The Android documentation mainly consists of two parts. One is the [User Guide](#getting-started) that provides a brief guide for how to integrate the Dynamsoft Barcode Reader to your application or run the samples. The other is the [API Reference](#api-reference) that offers the manual of interfaces used for reading barcodes.
+Welcome to the Dynamsoft Barcode Reader SDK documentation for Android. 
 
 ## Getting Started
 
@@ -36,4 +36,4 @@ The Android documentation mainly consists of two parts. One is the [User Guide](
 
 ## Online Store
 
-- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#mobile" target="_blank">For Mobile App</a>
+- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#mobile" target="_blank">Online store</a>

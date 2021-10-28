@@ -1,20 +1,19 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - Helloworld Sample
-description: This is the Helloworld Sample page of Dynamsoft Barcode Reader for Android SDK.
-keywords: android, samples, Helloworld
+title: Dynamsoft Barcode Reader for iOS - HelloWorld Sample
+description: This is the HelloWorld Sample page of Dynamsoft Barcode Reader for iOS SDK.
+keywords: iOS, samples, HelloWorld
 needAutoGenerateSidebar: false
-breadcrumbText: Helloworld
+breadcrumbText: HelloWorld
 ---
 
-# Android Helloworld Sample
+# HelloWorld Sample
 
-The Android Helloworld sample illustrates how to create the simplest video streaming barcode reading app with Dynamsoft Barcode Reader (DBR) Android SDK. This Helloworld sample is also available for the popular mobile frameworks.
+The iOS Helloworld sample illustrates how to create the simplest video streaming barcode reading app with Dynamsoft Barcode Reader (DBR) iOS SDK.
 
 View the samples
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android" target="_blank">Java (Android) HelloWorld</a>
-- Xamarins HelloWorld (Coming soon)
-- Cordova HelloWorld (Coming soon)
-- React-native HelloWorld (Coming soon)
-- Flutter HelloWorld (Coming soon)
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC/" target="_blank">Objective-C HelloWorld</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/HelloWorldSwift/" target="_blank">Swift HelloWorld</a>
+
+For more details about how to get started with Dynamsoft Barcode Reader, please view the [user guide]({{ site.oc }}user-guide.html).
