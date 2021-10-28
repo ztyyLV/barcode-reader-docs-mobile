@@ -21,7 +21,7 @@ noTitleIndex: true
 
 ## Installation
 
-If you have downloaded the SDK from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> and unzipped `dbr-ios-{version-number}.zip`, you can find two `frameworks` in the root folder. You can simply include `DynamsoftBarcodeReader.framework` to your project to start creating a barcode scanning app. The other framework, `DynamsoftCameraEnhancer.framework`, is an extension package which integrates video frame preprocessing algorithms and camera control APIs.
+If you have downloaded the SDK from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> and unzipped **dbr-ios-{version-number}.zip**, you can find two **frameworks** in the root folder. You can simply include `DynamsoftBarcodeReader.framework` to your project to start creating a barcode scanning app. The other framework, `DynamsoftCameraEnhancer.framework`, is an extension package that integrates video frame preprocessing algorithms and camera control APIs.
 
 Starting from v8.8 of DBR, the SDK also offers `xcframeworks` for iOS development. `xcframeworks` are slowly replacing `frameworks` as the standard for iOS development, so we are happy to now offer `DynamsoftBarcodeReader.xcframework` and `DynamsoftCameraEnhancer.xcframework` included as part of the SDK. To learn more about `xcframeworks` and what they offer over the regular `framework`, please check out this [article](https://medium.com/trueengineering/xcode-and-xcframeworks-new-format-of-packing-frameworks-ca15db2381d3) by TrueEngineering.
 
@@ -35,7 +35,7 @@ Dynamsoft Barcode Reader is a dynamic library while the Dynamsoft Camera Enhance
 
 ## Build Your First Application
 
-In this section, you will be guided on creating a `HelloWorld` app that can read barcodes from camera video input.
+In this section, let’s see how to create a **HelloWorld** app for reading barcodes from camera video input.
 
 > Note:
 >- You can download the complete Objective-C source code [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorldObjc)
@@ -45,13 +45,13 @@ In this section, you will be guided on creating a `HelloWorld` app that can read
 
 1. Open Xcode and select create a new project.
 
-2. Select `iOS -> App` for your application.
+2. Select **iOS > App** for your application.
 
 3. Input your product name (DBRHelloworld), interface (StoryBoard) and language (Objective-C/Swift). We currently do not support SwiftUI, so we apologize if this causes any inconvenience.
 
-4. Click on the Next button and select the location to save the project.
+4. Click on the **Next** button and select the location to save the project.
 
-5. Click on the Create button to finish.
+5. Click on the **Create** button to finish.
 
 ### Include the Frameworks
 
@@ -94,19 +94,10 @@ In the process of video barcode scanning, the camera will provide the video inpu
 @end
 
 @implementation ViewController
-   
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    //This is a sample that illustrates how to quickly set up a video barcode scanner with Dynamsoft Barcode Reader.
-    [self configurationDBR];
-    
-    //Create a camera module for video barcode scanning. In this section Dynamsoft Camera Enhancer (DCE) will handle the camera settings.
     [self configurationDCE];
-}
-
-override func viewWillAppear(_ animated: Bool) {
-    [super viewWillAppear:animated]
 }
 
 /*Configure the Camera Enhancer.*/
@@ -126,7 +117,7 @@ override func viewWillAppear(_ animated: Bool) {
 *Swift*
 
 ```swift
-class ViewController: UIViewController, DCEFrameListener {
+class ViewController: UIViewController {
     var dce:DynamsoftCameraEnhancer! = nil
     var dceView:DCECameraView! = nil
 
@@ -434,80 +425,35 @@ You can find more samples in more programming languages at [Code Gallery](https:
 
 Calling the [decoding methods](#decoding-methods) directly will use the default scanning modes and it will satisfy most of the needs. The SDK also allows you to adjust the scanning settings to optimize the scanning performance for different usage scenarios.
 
-### [`PublicRuntimeSettings`](api-reference/auxiliary-iPublicRuntimeSettings.md)
+## Further Barcode Reading Settings
 
-Here are some typical scanning settings you might find helpful:
+Regular barcode reading settings and modes parameter settings are available via [`PublicRuntimeSettings`](api-reference/auxiliary-iPublicRuntimeSettings.md) and JSON templates. The following typical settings you might find helpful:
 
-- [Specify Barcode Type to Read](#specify-barcode-type-to-read)
-- [Specify Maximum Barcode Count](#specify-maximum-barcode-count)
-- [Specify a Scan Region](#specify-a-scan-region)
+- [Specify the barcode formats and the expected barcode count]({{ site.oc }}samples/general.html#specify-barcode-format-and-barcode-count)
+- [Specify the Scan Region]({{ site.oc }}samples/general.html#specify-the-scan-region)
+- [Speed first barcode reading settings]({{ site.oc }}samples/speed.html)
+- [Read-rate first barcode reading settings]({{ site.oc }}samples/read-rate.html)
+- [Accuracy first barcode reading settings]({{ site.oc }}samples/accuracy.html)
 
-For more scanning settings guide, please read the [How To Guide]({{site.introduction}}how-to-guide/){:target="_blank"} section.
+For more scanning settings guide, please check the [How To Guide]({{site.introduction}}how-to-guide/){:target="_blank"} section.
 
-#### Specify barcode type to read
-
-A simple barcode format setting will result in a higher processing speed. By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. Please use the [`BarcodeFormatIds`]({{ site.enumerations }}format-enums.html#barcodeformat){:target="_blank"} and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2){:target="_blank"} to specify your barcode format(s) so that you can find the balance between speed and readability.
-
-#### Specify maximum barcode count
-
-By default, the SDK will try to find at least one barcode. You can use `expectedBarcodesCount` to specify the maximum number of barcodes. If you set the maximum number of barcodes n, the SDK will try to find at least n barcodes. The scanning process will not stop until n barcodes are found or timeout.
-
-#### Specify a scan region
-
-By default, the barcode reader will scan the whole image for barcodes. This can lead to poor performance, especially when dealing with high-resolution images. You can speed up the recognition process by restricting the scanning region.
-
-The following code is a template on how to use `PublicRuntimeSettings`.
-
-Objective-C:
-
-```objc
-iPublicRuntimeSettings* settings = [barcodeReader getRuntimeSettings:nil];
-// Set the barcode format
-settings.barcodeFormatIds = EnumBarcodeFormatONED;
-settings.expectedBarcodesCount = 1;
-// Set the scan region
-//The following code shrinks the decoding region by 25% on all sides
-settings.region.regionTop = 25;
-settings.region.regionBottom = 75;
-settings.region.regionLeft = 25;
-settings.region.regionRight = 75;
-//The region is determined by percentage
-settings.region.regionMeasuredByPercentage = 1;
-[barcodeReader updateRuntimeSettings:settings error:&error];
-```
-
-Swift:
-
-```Swift
-let settings = try reader.getRuntimeSettings()
-// Set the barcode format
-settings.barcodeFormatIds = Int(EnumBarcodeFormat.ONED.rawValue)
-settings.expectedBarcodesCount = 1
-// Set the scan region
-//The following code shrinks the decoding region by 25% on all sides
-settings.region.regionTop = 25
-settings.region.regionBottom = 75
-settings.region.regionLeft = 25
-settings.region.regionRight = 75
-//The region is determined by percentage
-settings.region.regionMeasuredByPercentage = 1
-reader.update(settings, error: nil)
-```
 ## Known Issues
 
-#### "dyld: Library not loaded" error on app initialization
+### "dyld: Library not loaded" error on app initialization
+
 You might run into this error in the app initialization phase - and in order to resolve this, a slight change needs to be done to the build settings of the project. Please make sure that you take the following steps to avoid this error:
 
-- When adding the Barcode Reader framework in step 2 of the above instructions, make sure to tick off the `Copy items if needed` and `Create groups` options.
-- In the `Build Settings` of the project, find the `Validate Workspace` setting and make sure it is set to `Yes`.
-- In `General`, under `Frameworks, Libraries, and Embedded Content`, make sure that the `DynamsoftBarcodeReader.framework` is set to `Embed & Sign`.
+- When adding the Barcode Reader framework in step 2 of the above instructions, make sure to tick off the **Copy items if needed** and **Create groups** options.
+- In the **Build Settings** of the project, find the **Validate Workspace** setting and make sure it is set to **Yes**.
+- In **General > Frameworks > Libraries and Embedded Content**, make sure that the **DynamsoftBarcodeReader.framework** is set to **Embed & Sign**.
 
-#### "Unsupported Architectures" error when building and releasing the application for the App Store
-The error seems to stem from the inclusion of the `x86_64` architecture in `DynamsoftBarcodeReader.framework`. This error can potentially happen with dynamic libraries (like DBR iOS) that have pieces for all architectures, including devices and simulators.
+### "Unsupported Architectures" error when building and releasing the application for the App Store
 
-This specific error references the `x86_64` architecture which is for the iPhone simulator. When releasing to the App Store, the simulator architectures (`x86_64`) need to be removed from the dynamic library before the project is built for the App Store.
+The error seems to stem from the inclusion of the **x86_64** architecture in **DynamsoftBarcodeReader.framework**. This error can potentially happen with dynamic libraries (like DBR iOS) that have pieces for all architectures, including devices and simulators.
 
-In order to solve the issue, add a `Run Script` phase after the `Embed Frameworks` step of the `Build Phases`, set it to use `/bin/sh`, and use the following script:
+This specific error references the **x86_64** architecture which is for the iPhone simulator. When releasing to the App Store, the simulator architectures (**x86_64**) need to be removed from the dynamic library before the project is built for the App Store.
+
+In order to solve the issue, add a **Run Script** phase after the **Embed Frameworks** step of the **Build Phases**, set it to use **/bin/sh**, and use the following script:
 
 ```ruby
 APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
@@ -540,4 +486,4 @@ do
 done
 ```
 
-The script looks through your built application's `Frameworks` folder and make sure only the architectures you're building for are the only ones included in each framework. This way, you don't have to worry about dealing with those arcitectures during the build process.
+The script looks through your built application's **Frameworks** folder and make sure only the architectures you're building for are the only ones included in each framework. This way, you don't have to worry about dealing with those arcitectures during the build process.
