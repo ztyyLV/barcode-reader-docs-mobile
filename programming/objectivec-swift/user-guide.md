@@ -405,25 +405,10 @@ private func showResult(_ title: String, _ msg: String, _ acTitle: String, compl
 
 ### Run the Project
 
-If you have followed the above guide step by step, your project will be able to build a video barcode scanner. If the project is not working well, please visit the Github to get the similar complete source code:
->- [Objective-C source code](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorldObjc)
->- [Swift source code](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorldSwift)
+You can download the complete source code here:
 
-## Barcode Reader Methods and Settings
-
-### Decoding Methods
-
-The SDK provides multiple decoding methods that support reading barcodes from different sources, including static images,
-video stream, files in memory, base64 string, bitmap, etc. Here is a list of all decoding methods:
-
-- [decodeBuffer](api-reference/primary-decode.md#decodebuffer): Reads barcodes from raw buffer.
-- [decodeFileWithName](api-reference/primary-decode.md#decodefilewithname): Reads barcodes from a specified file (BMP, JPEG, PNG, GIF, TIFF or PDF).
-- [decodeImage](api-reference/primary-decode.md#decodeimage): Decode barcodes from an image file in memory.
-- [decodeBase64](api-reference/primary-decode.md#decodebase64): Reads barcodes from a base64 encoded string of a file.
-
-You can find more samples in more programming languages at [Code Gallery](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx){:target="_blank"}.
-
-Calling the [decoding methods](#decoding-methods) directly will use the default scanning modes and it will satisfy most of the needs. The SDK also allows you to adjust the scanning settings to optimize the scanning performance for different usage scenarios.
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC" target="_blank">Objective-C source code</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/HelloWorldSwift" target="_blank">Swift source code</a>
 
 ## Further Barcode Reading Settings
 

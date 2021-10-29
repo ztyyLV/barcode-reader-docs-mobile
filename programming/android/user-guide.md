@@ -283,7 +283,7 @@ You can download the complete source code [here](https://github.com/Dynamsoft/ba
 
 ### Decoding Methods
 
-Regular barcode reading settings and modes parameter settings are available via [`PublicRuntimeSettings`](api-reference/auxiliary-iPublicRuntimeSettings.md) and JSON templates. The following typical settings you might find helpful:
+Regular barcode reading settings and modes parameter settings are available via [`PublicRuntimeSettings`](api-reference/auxiliary-PublicRuntimeSettings.md) and JSON templates. The following typical settings you might find helpful:
 
 - [Specify barcode formats and the expected barcode count]({{ site.android }}samples/general.html#specify-barcode-format-and-barcode-count)
 - [Specify the scan region]({{ site.android }}samples/general.html#specify-the-scan-region)
