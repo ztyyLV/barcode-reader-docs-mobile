@@ -83,7 +83,7 @@ You can add your downloaded frameworks into your project through the following s
 
 1. Create an instance of **DynamsoftCameraEnhancer** for getting video input.
 
-    Objective-C：
+    Objective-C:
 
     ```objc
     /*Initialize DynamsoftCameraEnhancer and DCECameraView*/
@@ -100,7 +100,7 @@ You can add your downloaded frameworks into your project through the following s
     }
     ```
 
-    Swift：
+    Swift:
 
     ```swift
     /*Initialize DynamsoftCameraEnhancer and DCECameraView*/ 
@@ -119,7 +119,7 @@ You can add your downloaded frameworks into your project through the following s
 
 2. Add configurations for DynamsoftCameraEnhancer.
 
-    Objective-C：
+    Objective-C:
 
     ```objc
     /*Configure the Camera Enhancer.*/
@@ -136,7 +136,7 @@ You can add your downloaded frameworks into your project through the following s
     }
     ```
 
-    Swift：
+    Swift:
 
     ```swift
      /*Configure the Camera Enhancer.*/
