@@ -61,9 +61,9 @@ You can add your downloaded frameworks into your project through the following s
 
 1. Drag and drop the `DynamsoftBarcodeReader` and `DynamsoftCameraEnhancer` frameworks/xcframeworks into your Xcode project. Make sure to check Copy items if needed and Create groups to copy the framework into your project’s folder.
 
-2. Click on the project. `Go to the General --> Frameworks, Libraries, and Embedded Content`. Set the `Embed` field to `Embed & Sign` for `DynamsoftBarcodeReader` and `Do Not Embed` for `DynamsoftCameraEnhancer`.
+2. Click on the project then go to  **General --> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for `DynamsoftBarcodeReader` and **Do Not Embed** for `DynamsoftCameraEnhancer`.
 
-3. Add the required `.tbd/.dylib` file to your project. Go to the `Build Phases` tab of your Xcode project, under `Link Binary with Libraries` section, click `+` button. Search for the file `libc++.tbd`, select it and click Add button. Then the libc++.tbd file will be copied to your project.
+3. Add the required **.tbd/.dylib** file to your project. Go to the **Build Phases** tab of your Xcode project, under **Link Binary with Libraries** section, click `+` button. Search for the file `libc++.tbd`, select it and click Add button. Then the `libc++.tbd` file will be copied to your project.
 
 4. Import the headers in the `ViewController` file.
 
