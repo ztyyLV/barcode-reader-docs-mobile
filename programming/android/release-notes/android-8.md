@@ -37,6 +37,10 @@ noTitleIndex: true
 
 - Removed IOException from the exceptions of method [`decodeBufferedImage`]({{site.android_api}}primary-decode.html#decodebufferedimage).
 
+#### Fixed
+
+- Fixed a bug that might cause the application to crash when method [`stopcameraenhancer`]({{site.android_api}}primary-camera.html#stopcameraenhancer) is triggered twice.
+
 ## 8.6 (07/15/2021)
 
 ### Highlights
