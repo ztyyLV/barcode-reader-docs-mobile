@@ -445,7 +445,7 @@ You might run into this error in the app initialization phase - and in order to 
 
 ### "Unsupported Architectures" error when building and releasing the application for the App Store
 
-The error seems to stem from the inclusion of the **x86_64** architecture in **DynamsoftBarcodeReader.framework**. This error can potentially happen with dynamic libraries (like DBR iOS) that have pieces for all architectures, including devices and simulators.
+The error seems to stem from the inclusion of the **x86_64** architecture in **DynamsoftBarcodeReader.framework**. This error can potentially happen with dynamic libraries (like DBR iOS) that have pieces for all architectures, including devices and simulators. This error can be easily resolved by opting to use the **.xcframework** instead of the **.framework**. However, if you would like to keep using the **.framework**, please keep reading.
 
 This specific error references the **x86_64** architecture which is for the iPhone simulator. When releasing to the App Store, the simulator architectures (**x86_64**) need to be removed from the dynamic library before the project is built for the App Store.
 
@@ -483,3 +483,7 @@ done
 ```
 
 The script looks through your built application's **Frameworks** folder and make sure only the architectures you're building for are the only ones included in each framework. This way, you don't have to worry about dealing with those arcitectures during the build process.
+
+### RegionDefinition is not coming out as expected on mobile
+
+RegionDefinition works a little differently on mobile, and it's best to refer to the [Specify the Scan Region](samples/general.md#specify-the-scan-region) section of the General Settings page.
