@@ -39,7 +39,7 @@ noTitleIndex: true
 
 #### Fixed
 
-- Fixed a bug that might cause the application to crash when method [`stopcameraenhancer`]({{site.android_api}}primary-camera.html#stopcameraenhancer) is triggered twice.
+- Fixed a bug that might cause the application to crash when method [`StartCameraEnhancer`]({{site.android_api}}primary-camera.html#startcameraenhancer) or [`StopCameraEnhancer`]({{site.android_api}}primary-camera.html#stopcameraenhancer) is triggered more than once.
 
 ## 8.6 (07/15/2021)
 
