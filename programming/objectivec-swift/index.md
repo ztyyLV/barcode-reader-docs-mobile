@@ -23,7 +23,7 @@ Welcome to the Dynamsoft Barcode Reader SDK documentation for iOS.
 - <a href="https://www.dynamsoft.com/barcode-reader/resources/code-gallery/?tag=swift" target="_blank">Code Gallery - Swift</a>
 - <a href="https://www.dynamsoft.com/barcode-reader/resources/code-gallery/?SampleID=218" target="_blank">Code Gallery - Xamarin</a>
 - <a href="https://www.dynamsoft.com/barcode-reader/resources/code-gallery/?SampleID=221" target="_blank">Code Gallery - Cordova</a>
-a
+
 ## API Reference
 
 - [Primary APIs](api-reference/primary-index.md)
