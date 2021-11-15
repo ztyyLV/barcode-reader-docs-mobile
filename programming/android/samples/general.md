@@ -48,14 +48,33 @@ reader.updateRuntimeSettings(runtimeSettings);
 
 The scan region information is stored in [`RegionDefinition`]({{ site.android_api }}auxiliary-RegionDefinition.html) class. To set the scan region, you can make the region settings in class [`RegionDefinition`]({{ site.android_api }}auxiliary-RegionDefinition.html) and upload the settings through the class [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html).
 
-Please note, the orientation of the mobile frame is always Rotated 90 degrees counterclockwise from the orientation of your device. The following image illustrates the mobile frames' orientation.
+Please note, when using your phone in **portrait mode** the orientation of the mobile frame is rotated 90 degrees counterclockwise from the orientation of your device. The following image illustrates the mobile frames' orientation based on the camera view, either portrait or landscape.
 
 <div align="center">
-    <p><img src="assets/orientation-example.png" width="70%" alt="region"></p>
+    <p><img src="assets/regionViews_Android.png" width="70%" alt="region"></p>
+    <p>How to Configure the Scan Region</p>
+</div>
+
+The **regionTop**, **regionBottom**, **regionLeft** and **regionRight** parameters in the class [`RegionDefinition`]({{ site.android_api }}auxiliary-RegionDefinition.html) stand for the region of the **frame** not the camera view. Since the parameters are based on the frame view instead of the camera view, let's see how the parameters would look like in the camera view once we rotate the frame view 90 degrees clockwise. This is what we get based on the last example:
+
+<div align="center">
+    <p><img src="assets/frame-orientation-android.png" width="70%" alt="region"></p>
     <p>Region Orientation</p>
 </div>
 
-The **regionTop**, **regionBottom**, **regionLeft** and **regionRight** parameters in the class [`RegionDefinition`]({{ site.android_api }}auxiliary-RegionDefinition.html) stand for the region of frame but not the device. Therefore, please make sure that you are setting the correct parameters for the border of your scan region. For example, if you are going to create a scan region that margins 30% from the top and bottom of the frame. Actually, you have to set the **regionLeft** 30 to make the bottom of the scan region margin 30% from the top of the mobile screen.
+Therefore, please make sure that you are setting the correct parameters for the border of your scan region. Let's say that you are looking to create a scan region on mobile with the following values
+```
+regionTop = 30%
+regionBottom = 70%
+regionLeft = 15%
+regionRight = 85%
+```
+Now let's do the same transformation of the frame view to the camera view as we did in the example above, considering again that the region parameters based on the frame view have to be rotated 90 degrees clockwise to get the camera view. The visual is then followed by the corresponding code snippet
+
+<div align="center">
+    <p><img src="assets/regionDef-mobileAndroid.png" width="70%" alt="region"></p>
+    <p>Region Orientation</p>
+</div>
 
 **Code Snippet**
 
@@ -78,7 +97,7 @@ reader.updateRuntimeSettings(runtimeSettings);
 ```
 
 <div align="center">
-    <p><img src="assets/dbr-region.png" width="70%" alt="region"></p>
+    <p><img src="assets/regionViews_Android.png" width="70%" alt="region"></p>
     <p>How to Configure the Scan Region</p>
 </div>
 
