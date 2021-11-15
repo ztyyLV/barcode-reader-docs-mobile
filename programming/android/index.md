@@ -10,7 +10,7 @@ breadcrumbText: Android
 
 # Documentation - Android
 
-Welcome to the Dynamsoft Barcode Reader SDK documentation for Android. 
+Welcome to the Dynamsoft Barcode Reader Android SDK documentation.
 
 ## Getting Started
 
@@ -31,7 +31,6 @@ Welcome to the Dynamsoft Barcode Reader SDK documentation for Android.
 
 - [Primary APIs](api-reference/primary-index.md)
 - [Auxiliary APIs](api-reference/auxiliary-index.md)
-- [Interface](api-reference/interface.md)
 
 ## Release Notes
 

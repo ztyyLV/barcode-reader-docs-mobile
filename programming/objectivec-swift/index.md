@@ -10,7 +10,7 @@ breadcrumbText: Objective-C & Swift
 
 # Documentation - iOS 
 
-Welcome to the Dynamsoft Barcode Reader SDK documentation for iOS.
+Welcome to the Dynamsoft Barcode Reader iOS SDK documentation.
 
 ## Getting Started
 
