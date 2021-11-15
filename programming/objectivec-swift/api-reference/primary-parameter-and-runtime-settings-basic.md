@@ -64,7 +64,7 @@ let settings = barcodeReader.getRuntimeSettings(error: nil)
 mArray!.setArray(settings.binarizationModes as! [Any])
 mArray![0] = EnumBinarizationMode.LocalBlock
 settings.binarizationModes = mArray!
-barcodeReader.updateRuntimeSettings(settings: settings, error: nil)
+barcodeReader.update(settings: settings, error: nil)
 barcodeReader.setModeArgument(modeName: "BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1", error: &error)
 ```
 
@@ -133,7 +133,7 @@ let settings = barcodeReader.getRuntimeSettings(error: nil)
 mArray!.setArray(settings.binarizationModes as! [Any])
 mArray![0] = EnumBinarizationMode.LocalBlock
 settings.binarizationModes = mArray!
-barcodeReader.updateRuntimeSettings(settings: settings, error: nil)
+barcodeReader.update(settings: settings, error: nil)
 barcodeReader.setModeArgument(modeName: "BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1", error: nil)
 let argumentValue = barcodeReader.getModeArgument(modeName: "BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", error: &error)
 ```
