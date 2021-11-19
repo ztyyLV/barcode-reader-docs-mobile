@@ -13,13 +13,17 @@ pageStartVer: 8.6
 
 | Method | Description |
 |--------|-------------|
-| [`setCameraEnhancer`](#setcameraenhancer) |  |
-| [`startScanning`](#startscanning) |  |
-| [`stopScanning`](#stopscanning) |  |
+| [`setCameraEnhancer`](#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
+| [`startScanning`](#startscanning) | Start the barcode reading thread. |
+| [`stopScanning`](#stopscanning) | Stop the barcode reading thread. |
 | [`setTextResultCallback`](#settextresultcallback) |  |
 | [`setIntermediateResultCallback`](#setintermediateresultcallback) |  |
 
 ## setCameraEnhancer
+
+```java
+void startScanning()
+```
 
 ## startScanning
 
