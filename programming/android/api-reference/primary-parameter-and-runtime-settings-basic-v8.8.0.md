@@ -168,22 +168,6 @@ reader.updateRuntimeSettings(settings);
 reader.destroy();
 ```
 
-```java
-void updateRuntimeSettings(EnumPresetTemplate presetTemplate)
-```
-
-**Parameters**
-
-`presetTemplate`: One of the preset templates.
-
-**Code Snippet**
-
-```java
-BarcodeReader reader = new BarcodeReader();
-reader.updateRuntimeSettings(EnumPresetTemplate.VIDEO_SINGLE_BARCODE);
-reader.destroy();
-```
-
 ## resetRuntimeSettings
 
 Reset all parameters to default values.

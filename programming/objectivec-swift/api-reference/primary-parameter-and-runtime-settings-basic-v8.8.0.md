@@ -220,28 +220,6 @@ let settings = barcodeReader.getRuntimeSettings(error: nil)
 barcodeReader.updateRuntimeSettings(settings: settings, error: &error)
 ```
 
-```objc
-- (void)updateRuntimeSettings:(EnumPresetTemplate _Nonnull)presetTemplate;
-```
-
-**Parameters**
-
-`presetTemplate`: One of the preset template.
-
-**Code Snippet**
-
-Objective-C:
-
-```objc
-[barcodeReader updateRuntimeSettings:EnumPresetTemplate.EnumPresetTemplateVideoSingleBarcode];
-```
-
-Swift:
-
-```Swift
-barcodeReader.updateRuntimeSettings(EnumPresetTemplate.EnumPresetTemplateVideoSingleBarcode)
-```
-
 ## resetRuntimeSettings
 
 Reset all parameters to default values.
