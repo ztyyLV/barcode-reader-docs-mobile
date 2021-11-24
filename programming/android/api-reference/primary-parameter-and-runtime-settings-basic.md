@@ -171,6 +171,8 @@ reader.destroy();
 
 ## updateRuntimeSettings (from preset template)
 
+Update the runtime settings from one of the preset templates.
+
 ```java
 void updateRuntimeSettings(EnumPresetTemplate presetTemplate)
 ```
