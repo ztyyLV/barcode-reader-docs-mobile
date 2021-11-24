@@ -145,6 +145,8 @@ reader.destroy();
 
 ## updateRuntimeSettings
 
+### With a PublicRuntimeSettings Struct
+
 Update runtime settings with a given [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct.
 
 ```java
@@ -169,7 +171,7 @@ reader.updateRuntimeSettings(settings);
 reader.destroy();
 ```
 
-## updateRuntimeSettings (from preset template)
+### With a Preset Template
 
 Update the runtime settings from one of the preset templates.
 
