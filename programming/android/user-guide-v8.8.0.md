@@ -203,14 +203,18 @@ There are two ways to include the SDK into your project - local binary dependenc
 4. Create settings of video barcode reading and bind to Barcode Reader object
 
    ```java
-   // Bind the Camera Enhancer instance to the Barcode Reader instance.
-   // The mCameraEnhancer is the instance of the Dynamsoft Camera Enhancer.
+   // Create settings of video barcode reading.
+   DCESettingParameters dceSettingParameters = new DCESettingParameters();
+
+   // This cameraInstance is the instance of the Dynamsoft Camera Enhancer.
    // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
-   reader.SetCameraEnhancer(mCameraEnhancer);
+   dceSettingParameters.cameraInstance = mCameraEnhancer;
+
    // Make this setting to get the result. The result will be an object that contains text result and other barcode information.
-   reader.setTextResultCallback(mTextResultCallback, Object Userdata);
-   // Start the barcode scanning thread.
-   reader.startScanning();
+   dceSettingParameters.textResultCallback = mTextResultCallback;
+
+   // Bind the Camera Enhancer instance to the Barcode Reader instance.
+   reader.SetCameraEnhancerParam(dceSettingParameters);
    ```
 
 5. Override the `MainActivity.onResume` and `MainActivity.onPause` functions to start/stop video barcode scanning. After scanning starts, the Barcode Reader will automatically invoke the `decodeBuffer` API to process the video frames from the Camera Enhancer, then send the recognized barcode results to the text result callback.
@@ -219,15 +223,14 @@ There are two ways to include the SDK into your project - local binary dependenc
    @Override
    public void onResume() {
    // Start video barcode reading
-      reader.startScanning();
-      mCameraEnhancer.open();
+      reader.StartCameraEnhancer();
       super.onResume();
    }
 
    @Override
    public void onPause() {
       // Stop video barcode reading
-      reader.stopScanning();
+      reader.StopCameraEnhancer();
       super.onPause();
    }
    ```

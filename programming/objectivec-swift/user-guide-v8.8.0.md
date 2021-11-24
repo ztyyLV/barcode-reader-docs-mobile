@@ -352,13 +352,17 @@ You can add your downloaded frameworks into your project through the following s
 
     ```objectivec
     - (void)configurationDCE{
-        // Bind the Camera Enhancer instance to the Barcode Reader instance.
-        // The _dce is the instance of the Dynamsoft Camera Enhancer.
+        ...
+
+        // Create settings for video decoding.
+        iDCESettingParameters* para = [[iDCESettingParameters alloc] init];
+        // This cameraInstance is the instance of the Dynamsoft Camera Enhancer.
         // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
-        [_barcodeReader setCameraEnhancer:_dce];
+        para.cameraInstance = _dce;
         // Make this setting to get the result. The result will be an object that contains text result and other barcode information.
-        [_barcodeReader setDBRTextResultDelegate:self userData:nil];
-        [_barcodeReader startScanning error:&error];
+        para.textResultDelegate = self;
+        // Bind the Camera Enhancer instance to the Barcode Reader instance.
+        [_barcodeReader setCameraEnhancerPara:para];
     }
     ```
 
@@ -367,12 +371,14 @@ You can add your downloaded frameworks into your project through the following s
     ```swift
     /*Deploy the camera with Dynamsoft Camera Enhancer.*/
     func configurationDCE() {
-        /*Bind the Camera Enhancer instance to the Barcode Reader instance.
-        The _dce is the instance of the Dynamsoft Camera Enhancer.
-        The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.*/
-        barcodeReader.setCameraEnhancer(dce)
-        barcodeReader.setTextResultCallback(textResultDelegate:self, userData:nil)
-        barcodeReader.startScanning()
+        
+        ...
+        
+        // Creating the DCE parameters and configuring them
+        let para = iDCESettingParameters.init()
+        para.cameraInstance = dce
+        para.textResultDelegate = self
+        barcodeReader.setCameraEnhancerPara(para)
     }
     ```
 
