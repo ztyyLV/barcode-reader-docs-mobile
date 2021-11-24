@@ -95,34 +95,13 @@ pageStartVer: 8.6
 
 ### Video
 
-#### Decode
-
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`startFrameDecoding`](primary-video.md#startframedecoding) | Decode barcodes from inner frame queue. |
-   | [`startFrameDecodingEx`](primary-video.md#startframedecodingex) | Decode barcodes from inner frame queue. |
-   | [`appendFrame`](primary-video.md#appendframe) | Append a frame image buffer to the inner frame queue. |
-   | [`stopFrameDecoding`](primary-video.md#stopframedecoding) | Stop thread used for frame decoding. |
-
-#### Parameter
-
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`initFrameDecodingParameters`](primary-video.md#initframedecodingparameters) | Initialize frame decoding parameter. |
-
-#### Callback
-
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`setErrorCallback`](primary-video.md#seterrorcallback) | Set callback interface to process errors generated during frame decoding. |
-   | [`setTextResultCallback`](primary-video.md#settextresultcallback) | Set callback interface to process text results generated during frame decoding. |
-   | [`setIntermediateResultCallback`](primary-video.md#setintermediateresultcallback) | Set callback interface to process intermediate results generated during frame decoding. |
-
-#### Status retrieval
-
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`getLengthOfFrameQueue`](primary-video.md#getlengthofframequeue) | Get length of current inner frame queue. |
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`setCameraEnhancer`](primary-video.md#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
+  | [`startScanning`](primary-video.md#startscanning) | Start the barcode reading thread. |
+  | [`stopScanning`](primary-video.md#stopscanning) | Stop the barcode reading thread. |
+  | [`setTextResultCallback`](primary-video.md#settextresultcallback) | Set callback interface to process text results generated during frame decoding. |
+  | [`setIntermediateResultCallback`](primary-video.md#setintermediateresultcallback) | Set callback interface to process intermediate results generated during frame decoding. |
 
 ## [Error Code]({{ site.enumerations }}error-code.html)
 

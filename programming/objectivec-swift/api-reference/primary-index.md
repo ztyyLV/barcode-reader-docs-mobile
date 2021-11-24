@@ -80,23 +80,10 @@ noTitleIndex: true
 
 ## Video
 
-### Decode
-
   | Method               | Description |
   |----------------------|-------------|
-  | [`startFrameDecoding`](primary-video.md#startframedecoding) | Decode barcodes from inner frame queue. |
-  | [`startFrameDecodingEx`](primary-video.md#startframedecodingex) | Decode barcodes from inner frame queue. |
-  | [`appendFrame`](primary-video.md#appendframe) | Append a frame image buffer to the inner frame queue. |
-  | [`stopFrameDecoding`](primary-video.md#stopframedecoding) | Stop thread used for frame decoding. |
-
-### Parameter
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`getFrameDecodingParameters`](primary-video.md#getframedecodingparameters) | Initialize frame decoding parameter. |
-
-### Status retrieval
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`getLengthOfFrameQueue`](primary-video.md#getlengthofframequeue) | Get length of current inner frame queue. |
+  | [`setCameraEnhancer`](#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
+  | [`startScanning`](#startscanning) | Start the barcode reading thread. |
+  | [`stopScanning`](#stopscanning) | Stop the barcode reading thread. |
+  | [`setDBRTextResultDelegate`](#setdbrtextresultdelegate) | Set callback function to process text results generated during frame decoding. |
+  | [`setDBRIntermediateResultDelegate`](#setdbrintermediateresultdelegate) | Set callback function to process intermediate results generated during frame decoding. |
