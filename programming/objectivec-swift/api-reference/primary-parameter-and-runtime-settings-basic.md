@@ -15,6 +15,7 @@ noTitleIndex: true
   | [`getModeArgument`](#getmodeargument) | Gets the optional argument for a specified mode in Modes parameters. |
   | [`getRuntimeSettings`](#getruntimesettings) | Get current runtime settings. |
   | [`updateRuntimeSettings`](#updateruntimesettings) | Update runtime settings with a given struct. |
+  | [`updateRuntimeSettings (from preset template)`](#updateruntimesettings-from-preset-template)) | Update runtime settings with a preset template. |
   | [`resetRuntimeSettings`](#resetruntimesettings) | Resets all parameters to default values. |
 
 ---
@@ -220,8 +221,10 @@ let settings = barcodeReader.getRuntimeSettings(error: nil)
 barcodeReader.updateRuntimeSettings(settings: settings, error: &error)
 ```
 
+## updateRuntimeSettings (from preset template)
+
 ```objc
-- (void)updateRuntimeSettings:(EnumPresetTemplate _Nonnull)presetTemplate;
+- (void)updateRuntimeSettings:(EnumPresetTemplate)presetTemplate;
 ```
 
 **Parameters**
