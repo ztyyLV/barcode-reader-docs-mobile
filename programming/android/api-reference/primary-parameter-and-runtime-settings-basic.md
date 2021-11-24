@@ -16,6 +16,7 @@ noTitleIndex: true
   | [`getModeArgument`](#getmodeargument) | Get argument value for the specified mode parameter. |
   | [`getRuntimeSettings`](#getruntimesettings) | Get current runtime settings. |
   | [`updateRuntimeSettings`](#updateruntimesettings) | Modify and update the current runtime settings. |
+  | [`updateRuntimeSettings (from preset template)`](#updateruntimesettings-from-preset-template) | Update runtime settings from one of the preset templates. |
   | [`resetRuntimeSettings`](#resetruntimesettings) | Reset runtime settings to default. |
 
   ---
@@ -167,6 +168,8 @@ settings.deblurLevel = 9;
 reader.updateRuntimeSettings(settings);
 reader.destroy();
 ```
+
+## updateRuntimeSettings (from preset template)
 
 ```java
 void updateRuntimeSettings(EnumPresetTemplate presetTemplate)

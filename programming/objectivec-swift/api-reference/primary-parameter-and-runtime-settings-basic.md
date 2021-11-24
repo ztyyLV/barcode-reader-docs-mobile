@@ -15,7 +15,7 @@ noTitleIndex: true
   | [`getModeArgument`](#getmodeargument) | Gets the optional argument for a specified mode in Modes parameters. |
   | [`getRuntimeSettings`](#getruntimesettings) | Get current runtime settings. |
   | [`updateRuntimeSettings`](#updateruntimesettings) | Update runtime settings with a given struct. |
-  | [`updateRuntimeSettings (from preset template)`](#updateruntimesettings-from-preset-template)) | Update runtime settings with a preset template. |
+  | [`updateRuntimeSettings (from preset template)`](#updateruntimesettings-from-preset-template)) | Update runtime settings from one of the preset templates. |
   | [`resetRuntimeSettings`](#resetruntimesettings) | Resets all parameters to default values. |
 
 ---
@@ -229,7 +229,7 @@ barcodeReader.updateRuntimeSettings(settings: settings, error: &error)
 
 **Parameters**
 
-`presetTemplate`: One of the preset template.
+`presetTemplate`: One of the preset templates.
 
 **Code Snippet**
 
