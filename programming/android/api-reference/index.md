@@ -21,7 +21,17 @@ pageStartVer: 8.6
   | [`BarcodeReader`](primary-initialize-and-destroy.md#barcodereader) | Initialization of `BarcodeReader` object.|
   | [`destroy`](primary-initialize-and-destroy.md#destroy) | Destroys an instance of `BarcodeReader` object.|
 
-### Decode
+### Video Decoding Methods
+
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`setCameraEnhancer`](primary-video.md#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
+  | [`startScanning`](primary-video.md#startscanning) | Start the barcode reading thread. |
+  | [`stopScanning`](primary-video.md#stopscanning) | Stop the barcode reading thread. |
+  | [`setTextResultCallback`](primary-video.md#settextresultcallback) | Set callback interface to process text results generated during frame decoding. |
+  | [`setIntermediateResultCallback`](primary-video.md#setintermediateresultcallback) | Set callback interface to process intermediate results generated during frame decoding. |
+
+### Image Decoding Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -32,16 +42,6 @@ pageStartVer: 8.6
   | [`decodeBufferedImage`](primary-decode.md#decodebufferedimage) | Decodes barcode from a buffered image (bitmap). |
   | [`initIntermediateResult`](primary-decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
-
-### Camera Enhancer
-  
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`StartCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Start using Dynamsoft Camera Enhancer |
-   | [`StopCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Stop using Dynamsoft Camera Enhancer |
-   | [`PauseCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
-   | [`ResumeCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Resume the process of Dynamsoft Camera Enhancer |
-   | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
 
 ### License
   
@@ -93,15 +93,15 @@ pageStartVer: 8.6
   |----------------------|-------------|
   | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
 
-### Video
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`setCameraEnhancer`](primary-video.md#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
-  | [`startScanning`](primary-video.md#startscanning) | Start the barcode reading thread. |
-  | [`stopScanning`](primary-video.md#stopscanning) | Stop the barcode reading thread. |
-  | [`setTextResultCallback`](primary-video.md#settextresultcallback) | Set callback interface to process text results generated during frame decoding. |
-  | [`setIntermediateResultCallback`](primary-video.md#setintermediateresultcallback) | Set callback interface to process intermediate results generated during frame decoding. |
+### Camera Enhancer
+  
+   | Method               | Description |
+   |----------------------|-------------|
+   | [`StartCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Deprecated, use [`startScanning`](primary-video.md#startscanning) instead. |
+   | [`StopCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Deprecated, use [`stopScanning`](primary-video.md#stopscanning) instead. |
+   | [`PauseCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Deprecated, use [`startScanning`](primary-video.md#startscanning) instead. |
+   | [`ResumeCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Deprecated, use [`stopScanning`](primary-video.md#stopscanning) instead. |
+   | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Deprecated, use [`setCameraEnhancer`](primary-video.md#setcameraenhancer) instead. |
 
 ## [Error Code]({{ site.enumerations }}error-code.html)
 

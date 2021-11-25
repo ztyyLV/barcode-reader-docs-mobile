@@ -20,7 +20,17 @@ breadcrumbText: iOS API Reference
   | [`init`](primary-initialize.md#init) | Create an instance of Dynamsoft Barcode Reader. |
   | [`dispose`](primary-initialize.md#dispose) | Destroy the instance of Dynamsoft Barcode Reader. |
 
-### Decode
+### Video decoding Methods
+
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`setCameraEnhancer`](primary-video.md#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
+  | [`startScanning`](primary-video.md#startscanning) | Start the barcode reading thread. |
+  | [`stopScanning`](primary-video.md#stopscanning) | Stop the barcode reading thread. |
+  | [`setDBRTextResultDelegate`](primary-video.md#setdbrtextresultdelegate) | Set callback function to process text results generated during frame decoding. |
+  | [`setDBRIntermediateResultDelegate`](primary-video.md#setdbrintermediateresultdelegate) | Set callback function to process intermediate results generated during frame decoding. |
+
+### Image decoding Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -30,12 +40,6 @@ breadcrumbText: iOS API Reference
   | [`decodeBase64`](primary-decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
   | [`createIntermediateResult`](primary-decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
-
-### Camera Enhancer
-  
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
 
 ### License
 
@@ -79,15 +83,11 @@ breadcrumbText: iOS API Reference
   |----------------------|-------------|
   | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
 
-### Video
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`setCameraEnhancer`](#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
-  | [`startScanning`](#startscanning) | Start the barcode reading thread. |
-  | [`stopScanning`](#stopscanning) | Stop the barcode reading thread. |
-  | [`setDBRTextResultDelegate`](#setdbrtextresultdelegate) | Set callback function to process text results generated during frame decoding. |
-  | [`setDBRIntermediateResultDelegate`](#setdbrintermediateresultdelegate) | Set callback function to process intermediate results generated during frame decoding. |
+### Camera Enhancer
+  
+   | Method               | Description |
+   |----------------------|-------------|
+   | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Deprecated, use [`setCameraEnhancer`](primary-video.md#setcameraenhancer) instead. |
 
 ## [Error Code]({{ site.enumerations }}error-code.html)
 
