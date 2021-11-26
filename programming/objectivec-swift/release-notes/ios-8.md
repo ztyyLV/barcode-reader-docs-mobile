@@ -16,6 +16,7 @@ noTitleIndex: true
 
 {%- include release-notes/product-highlight-8.9.0.md -%}
 
+
 ### Changelog
 
 #### New
