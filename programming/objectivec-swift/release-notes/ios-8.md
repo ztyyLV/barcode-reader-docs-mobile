@@ -10,6 +10,26 @@ noTitleIndex: true
 
 # Release Notes for iOS SDK - 8.x
 
+## 8.9.0 (12/xx/2021)
+
+### Highlights
+
+{%- include release-notes/product-highlight-8.9.0.md -%}
+
+### Changelog
+
+#### New
+
+- Added methods `SetCameraEnhancer` to replace `SetCameraEnhancerPara` and `iDCESettingParameters`. This method will simplify the bind of the Camera Enhancer.
+- Added methods `startScanning` and `stopScanning` to control the start and stop of the video streaming barcode decoding thread. These methods only effect when used together with Dynamsoft Camera Enhancer.
+
+#### Deprecated
+
+- The following methods/class are deprecated. They are currently available but will be removed in further updates.
+
+- `SetCameraEnhancerPara`
+- `iDCESettingParameters`
+
 ## 8.8.0 (10/19/2021)
 
 ### Highlights
