@@ -15,8 +15,8 @@ noTitleIndex: true
   | [`setModeArgument`](#setmodeargument) | Set argument value for the specified mode parameter. |
   | [`getModeArgument`](#getmodeargument) | Get argument value for the specified mode parameter. |
   | [`getRuntimeSettings`](#getruntimesettings) | Get current runtime settings. |
-  | [`updateRuntimeSettings`](#updateruntimesettings) | Modify and update the current runtime settings. |
-  | [`updateRuntimeSettings (from preset template)`](#updateruntimesettings-from-preset-template) | Update runtime settings from one of the preset templates. |
+  | [`updateRuntimeSettings (with struct)`](#updateruntimesettings) | Modify and update the current runtime settings. |
+  | [`updateRuntimeSettings (with preset template)`](#with-a-preset-template) | Update runtime settings from one of the preset templates. |
   | [`resetRuntimeSettings`](#resetruntimesettings) | Reset runtime settings to default. |
 
   ---
