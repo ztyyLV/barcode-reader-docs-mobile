@@ -18,7 +18,7 @@ pageStartVer: 8.6
   | [`initLicenseFromLicenseContent`](#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
   | [`outputLicenseToString`](#outputlicensetostring) | Output the license content to a string from the license server. |
   | [`initLicenseFromDLS`](#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
-  | [`initLicenseFromLTS`](primary-license.md#initlicensefromlts) | `Deprecated`, please use [initLicenseFromDLS](primary-license.md#initlicensefromdls) instead. |
+  | [`initLicenseFromLTS`](primary-license.md#initlicensefromlts) | `Deprecated`, please use [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) instead. |
 
   ---
 
@@ -163,4 +163,4 @@ reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
 
 ## initLicenseFromLTS
 
-`Deprecated`, please use [initLicenseFromDLS](#initlicensefromdls) instead.
+`Deprecated`, please use [`initLicenseFromDLS`](#initlicensefromdls) instead.
