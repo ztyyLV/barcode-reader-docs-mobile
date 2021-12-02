@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - Performance Settings Sample
-description: This is the Performance Settings Sample page of Dynamsoft Barcode Reader for Android SDK.
-keywords: android, sample, Performance
+title: Dynamsoft Barcode Reader for iOS - Performance Settings Sample
+description: This is the Performance Settings Sample page of Dynamsoft Barcode Reader for iOS SDK.
+keywords: iOS, sample, Performance
 needAutoGenerateSidebar: true
 breadcrumbText: Performance Settings
 ---
@@ -11,7 +11,8 @@ breadcrumbText: Performance Settings
 
 View the sample
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Performance/SpeedFirstSettings" target="_blank">Java (Android) Speed-first Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/Performance/PerformanceSettings" target="_blank">Objective-C Performance Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/Performance/PerformanceSettings" target="_blank">Swift Performance Settings Sample</a>
 
 ## Templates
 
@@ -50,7 +51,7 @@ The [`DeblurModes`]({{site.parameters_reference}}deblur-modes.html) parameter en
 
 **Set Scan Region**
 
-Configuring the scan region via **CameraEnhancer** method <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#setscanregion" target="_blank">`setScanRegion`</a> can further improve the barcode decoding speed. The video frames will be cropped based on the **scanRegion** setting before they are processed by the barcode reader. The **scanRegion** setting benefits the processing speed but might reduce the read rate at the same time.
+Configuring the scan region via **CameraEnhancer** method <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/ios/primary-api/camera-enhancer.html?ver=latest#setscanregion" target="_blank">`setScanRegion`</a> can further improve the barcode decoding speed. The video frames will be cropped based on the **scanRegion** setting before they are processed by the barcode reader. The **scanRegion** setting benefits the processing speed but might reduce the read rate at the same time.
 
 <div align="center">
     <p><img src="assets/region-definition.png" width="70%" alt="region-def"></p>
@@ -59,12 +60,12 @@ Configuring the scan region via **CameraEnhancer** method <a href="https://www.d
 
 **Multi-Frame Verification**
 
-When a barcode result has been decoded more than once within a short period of time, we can confirm it is a correct result and output it. However, if a barcode result has never been decoded a second time within a period of time, we consider it a misread result and discard it. You can enable the multi-frame verification to further improve the result accuracy via the method [`enableResultVerification`]({{site.android_api}}primary-result.html#enableresultverification).
+When a barcode result has been decoded more than once within a short period of time, we can confirm it is a correct result and output it. However, if a barcode result has never been decoded a second time within a period of time, we consider it a misread result and discard it. You can enable the multi-frame verification to further improve the result accuracy via the method [`enableResultVerification`]({{site.oc_api}}primary-result.html#enableresultverification).
 
 **Frame Filter**
 
-Frame filter is one of the camera enhancer features. You can enable it via **CameraEnhancer** method <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#enablefeatures" target="_blank">`enableFeatures`</a>. The frame filter helps in filtering blurry video frames to improve the barcode decoding accuracy. It also improves the speed performance of low-end devices.
+Frame filter is one of the camera enhancer features. You can enable it via **CameraEnhancer** method <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/ios/primary-api/camera-enhancer.html?ver=latest#enablefeatures" target="_blank">`enableFeatures`</a>. The frame filter helps in filtering blurry video frames to improve the barcode decoding accuracy. It also improves the speed performance of low-end devices.
 
 **Fast Mode**
 
-Fast mode is one of the camera enhancer features. You can enable it via **CameraEnhancer** method <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#enablefeatures" target="_blank">`enableFeatures`</a>. Similar to the **scanRegion** setting, the fast mode will crop the video frames into different sizes to improve the processing speed. You can configure the detailed cropping size via **CameraEnhancer** method <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#updateadvancedsettingsfromfile" target="_blank">`updateAdvanceSettings`</a>. Please note, the method <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#setscanregion" target="_blank">`setScanRegion`</a> will negate the fast mode. Please select one of them when you want to implement the frame cropping.
+Fast mode is one of the camera enhancer features. You can enable it via **CameraEnhancer** method <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/ios/primary-api/camera-enhancer.html?ver=latest#enablefeatures" target="_blank">`enableFeatures`</a>. Similar to the **scanRegion** setting, the fast mode will crop the video frames into different sizes to improve the processing speed. You can configure the detailed cropping size via **CameraEnhancer** method <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/ios/primary-api/camera-enhancer.html?ver=latest#updateadvancedsettingsfromfile" target="_blank">`updateAdvanceSettings`</a>. Please note, the method <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/ios/primary-api/camera-enhancer.html?ver=latest#setscanregion" target="_blank">`setScanRegion`</a> will negate the fast mode. Please select one of them when you want to implement the frame cropping.
