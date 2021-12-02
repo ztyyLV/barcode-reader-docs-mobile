@@ -32,7 +32,7 @@ For video barcode decoding scenarios, specifying a **scanRegion** can reduce the
 
 Besides using the [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html) class, you can also upload the general barcode settings from stringified JSON data or a JSON file.
 
-#### JSON String
+#### From JSON String
 
 Use method [`initRuntimeSettingsWithString`]({{ site.oc_api }}primary-parameter-and-runtime-settings-advanced.html#initruntimesettingswithstring) to upload the settings via a JSON string.
 
@@ -52,7 +52,7 @@ let json = "{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"Barcod
 barcodeReader.initRuntimeSettings(with: json, conflictMode: .overwrite, error: &error)
 ```
 
-#### JSON File
+#### From JSON File
 
 Use method [`initRuntimeSettingsWithFile`]({{ site.oc_api }}primary-parameter-and-runtime-settings-advanced.html#initruntimesettingswithfile) to upload the settings via a JSON file.
 
