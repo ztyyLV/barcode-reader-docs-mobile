@@ -15,7 +15,9 @@ breadcrumbText: Samples
 | ----------- | ----------- |
 | [HelloWorld](helloworld.md) | The simplest video streaming barcode scanner. |
 | [GeneralSettings](general.md) | Guide on barcode formats, expected barcode count and scan region settings. |
-| [PerformanceSettings](performance.md) | Parameter configuration guide on improving the speed, read-rate and accuracy of barcode reading. |
+| [SpeedFirstSettings](speed.md) | Parameter configuration guide on improving the speed of barcode reading. |
+| [ReadRateFirstSettings](read-rate.md) | Parameter configuration guide on improving the read rate of barcode reading. |
+| [AccuracyFirstSettings](accuracy.md) | Parameter configuration guide on improving the accuracy of barcode reading. |
 | [ReadADriversLicense](drivers-license.md) | Illustrates how to read and extract the information of a driver's license. |
 
 ## Demo

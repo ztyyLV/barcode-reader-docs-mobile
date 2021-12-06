@@ -15,7 +15,9 @@ breadcrumbText: Samples
 | ----------- | ----------- |
 | [HelloWorld](helloworld.md) | The simplest video streaming barcode scanner. |
 | [GeneralSettings](general.md) | Guide on barcode formats, expected barcode count and scan region settings. |
-| [PerformanceSettings](performance.md) | Parameter configuration guide on improving the speed, read-rate and accuracy of barcode reading. |
+| [SpeedFirstSettings](speed.md) | Parameter configuration guide on improving the speed of barcode reading. |
+| [ReadRateFirstSettings](read-rate.md) | Parameter configuration guide on improving the read rate of barcode reading. |
+| [AccuracyFirstSettings](accuracy.md) | Parameter configuration guide on improving the accuracy of barcode reading. |
 | [ReadADriversLicense](drivers-license.md) | Illustrates how to read and extract the information of a driver's license. |
 
 ## Demo
@@ -32,7 +34,7 @@ In the samples, there is a public trial license that is available for 7 days and
 
 ### Performance
 
-In the samples, we demonstrate the the performance settings from 3 different aspects: **Speed**, **Read Rate** and **Accuracy**. The parameter configurations are generally speed-friendly, read-rate-friendly and accuracy-friendly settings but might not be the best settings for your usage scenario. The performance sample can help you get a basic understanding of the Dynamsoft Barcode Reader parameters. Please feel free to <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> for further support on optimizing the parameters.
+In the samples, we demonstrate the the performance settings from 3 different aspects: **Speed**, **Read Rate** and **Accuracy**. The parameter configurations are generally speed-friendly, read-rate-friendly and accuracy-friendly settings but might not be the best settings for your usage scenario. The samples can help you get a basic understanding of the Dynamsoft Barcode Reader parameters. Please feel free to <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> for further support on optimizing the parameters.
 
 ### Video Barcode Decoding
 
