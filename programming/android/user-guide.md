@@ -208,7 +208,11 @@ There are two ways to include the SDK into your project - local binary dependenc
    // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
    reader.SetCameraEnhancer(mCameraEnhancer);
    // Make this setting to get the result. The result will be an object that contains text result and other barcode information.
-   reader.setTextResultCallback(mTextResultCallback, Object Userdata);
+   try {
+      reader.setTextResultCallback(mTextResultCallback, null);
+   } catch (BarcodeReaderException e) {
+      e.printStackTrace();
+   }
    // Start the barcode scanning thread.
    reader.startScanning();
    ```
@@ -220,7 +224,11 @@ There are two ways to include the SDK into your project - local binary dependenc
    public void onResume() {
    // Start video barcode reading
       reader.startScanning();
-      mCameraEnhancer.open();
+      try {
+         mCameraEnhancer.open();
+      } catch (CameraEnhancerException e) {
+         e.printStackTrace();
+      }
       super.onResume();
    }
 
@@ -228,6 +236,11 @@ There are two ways to include the SDK into your project - local binary dependenc
    public void onPause() {
       // Stop video barcode reading
       reader.stopScanning();
+      try {
+         mCameraEnhancer.close();
+      } catch (CameraEnhancerException e) {
+         e.printStackTrace();
+      }
       super.onPause();
    }
    ```
