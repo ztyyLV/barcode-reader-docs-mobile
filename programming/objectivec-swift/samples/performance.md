@@ -11,8 +11,8 @@ breadcrumbText: Performance Settings
 
 View the sample
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/Performance/PerformanceSettings" target="_blank">Objective-C Performance Settings Sample</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/Performance/PerformanceSettings" target="_blank">Swift Performance Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/Performance/PerformanceSettingsObjc" target="_blank">Objective-C Performance Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/Performance/PerformanceSettingsSwift" target="_blank">Swift Performance Settings Sample</a>
 
 ## Templates
 
