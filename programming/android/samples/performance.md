@@ -11,7 +11,7 @@ breadcrumbText: Performance Settings
 
 View the sample
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Performance/SpeedFirstSettings" target="_blank">Java (Android) Speed-first Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/PerformanceSettings" target="_blank">Java (Android) Performance Settings Sample</a>
 
 ## Templates
 

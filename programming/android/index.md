@@ -18,7 +18,7 @@ Welcome to the Dynamsoft Barcode Reader Android SDK documentation.
 
 ## Samples and Demos
 
-- Samples
+- [Samples](samples/index.md)
   - [HelloWorld](samples/helloworld.md)
   - [GeneralSettings](samples/general.md)
   - [PerformanceSettings](samples/performance.md)

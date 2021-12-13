@@ -18,7 +18,7 @@ Welcome to the Dynamsoft Barcode Reader iOS SDK documentation.
 
 ## Samples and Demos
 
-- Samples
+- [Samples](samples/index.md)
   - [HelloWorld](samples/helloworld.md)
   - [GeneralSettings](samples/general.md)
   - [PerformanceSettings](samples/performance.md)
