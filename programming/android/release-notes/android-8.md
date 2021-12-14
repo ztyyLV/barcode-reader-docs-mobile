@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Release Notes for Android SDK - 8.x
 
-## 8.9.0 (12/xx/2021)
+## 8.9.0 (12/15/2021)
 
 ### Highlights
 

@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Release Notes for iOS SDK - 8.x
 
-## 8.9.0 (12/xx/2021)
+## 8.9.0 (12/15/2021)
 
 ### Highlights
 
@@ -23,6 +23,10 @@ noTitleIndex: true
 
 - Added methods `SetCameraEnhancer` to replace `SetCameraEnhancerPara` and `iDCESettingParameters`. This method will simplify the bind of the Camera Enhancer.
 - Added methods `startScanning` and `stopScanning` to control the start and stop of the video streaming barcode decoding thread. These methods only effect when used together with Dynamsoft Camera Enhancer.
+
+#### Fixed
+
+- Fixed a bug that might cause memory leaks.
 
 #### Deprecated
 
