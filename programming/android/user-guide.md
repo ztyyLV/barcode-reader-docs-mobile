@@ -109,32 +109,14 @@ There are two ways to include the SDK into your project - local binary dependenc
 
 ### Initialize Camera Module
 
-1. Initialize the license.
-
-   ```java
-   CameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELicenseVerificationListener() {
-      @Override
-      public void DCELicenseVerificationCallback(boolean isSuccess, Exception error) {
-         if(!isSuccess){
-               error.printStackTrace();
-         }
-      }
-   });
-   ```  
-
-   > Note:
-   > - Network connection is required for the license to work.
-   > - "DLS2***" is a default 7-day trial license used in the sample.
-   > - If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
-
-2. Create an instance of Camera Enhancer.
+1. Create an instance of Camera Enhancer.
 
    ```java
    CameraEnhancer mCameraEnhancer;
    mCameraEnhancer = new CameraEnhancer(MainActivity.this);
    ```
 
-3. In the Project window, open **app > res > layout > `activity_main.xml`** and create a DCE camera view section under the root node.
+2. In the Project window, open **app > res > layout > `activity_main.xml`** and create a DCE camera view section under the root node.
 
     ```xml
    <com.dynamsoft.dce.DCECameraView
@@ -145,7 +127,7 @@ There are two ways to include the SDK into your project - local binary dependenc
       tools:layout_editor_absoluteY="0dp" />
     ```
 
-4. Initialize the camera view and bind to the Camera Enhancer object.
+3. Initialize the camera view and bind to the Camera Enhancer object.
 
     ```java
     DCECameraView mCameraView;
@@ -161,6 +143,7 @@ There are two ways to include the SDK into your project - local binary dependenc
    ```java
    BarcodeReader reader;
    reader = new BarcodeReader();
+   
    ```
 
 2. Initialize the license.
