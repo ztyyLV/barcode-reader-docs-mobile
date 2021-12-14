@@ -259,8 +259,6 @@ You can add your downloaded frameworks into your project through the following s
     }
     - (void)textResultCallback:(NSInteger)frameId results:(NSArray<iTextResult *> *)results userData:(NSObject *)userData{
         if (results.count > 0) {
-            [_dce pause];
-            __weak ViewController *weakSelf = self;
             NSString *title = @"Results";
             NSString *msgText = @"";
             NSString *msg = @"Please visit: https://www.dynamsoft.com/customer/license/trialLicense?";
@@ -280,7 +278,6 @@ You can add your downloaded frameworks into your project through the following s
                         msg:msgText
                     acTitle:@"OK"
                 completion:^{
-                    [weakSelf.dce resume];
                 }];
         }else{
             return;
@@ -320,7 +317,6 @@ You can add your downloaded frameworks into your project through the following s
 
         func textResultCallback(_ frameId: Int, results: [iTextResult]?, userData: NSObject?) {
             if results!.count > 0 {
-                dce.pause()
                 var msgText:String = ""
                 var title:String = "Results"
                 let msg = "Please visit: https://www.dynamsoft.com/customer/license/trialLicense?"
@@ -336,8 +332,7 @@ You can add your downloaded frameworks into your project through the following s
                         msgText = msgText + String(format:"\nFormat: %@\nText: %@\n", item.barcodeFormatString!,item.barcodeText ?? "noResuslt")
                     }
                 }
-                showResult(title, msgText, "OK") {[weak self] in
-                    self?.dce.resume()
+                showResult(title, msgText, "OK") {
                 }
             }else{
                 return
