@@ -21,8 +21,8 @@ noTitleIndex: true
 
 #### New
 
-- Added methods [`setCameraEnhancer`]({{ site.oc_api }}primary-video.html#setcameraenhancer) to replace `SetCameraEnhancerPara` and `iDCESettingParameters`. This method will simplify the bind of the Camera Enhancer.
-- Added methods [`startScanning`]({{ site.oc_api }}primary-video.html#stopscanning) and [`stopScanning`]({{ site.oc_api }}primary-video.html#stopscanning) to control the start and stop of the video streaming barcode decoding thread. These methods only have effects when used together with Dynamsoft Camera Enhancer.
+- Added methods [`setCameraEnhancer`]({{ site.oc_api }}primary-video.html#setcameraenhancer) to replace `SetCameraEnhancerPara` and `iDCESettingParameters`. This method will simplify the binding of the Camera Enhancer to the Barcode Reader.
+- Added methods [`startScanning`]({{ site.oc_api }}primary-video.html#stopscanning) and [`stopScanning`]({{ site.oc_api }}primary-video.html#stopscanning) to control the start and stop of the video streaming barcode decoding thread. These methods are only active when using the Dynamsoft Camera Enhancer along with the Barcode Reader.
 
 #### Fixed
 
