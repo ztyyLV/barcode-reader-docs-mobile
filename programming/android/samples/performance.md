@@ -32,7 +32,7 @@ Parameter [`ExpectedBarcodesCount`]({{site.parameters_reference}}expected-barcod
 
 **Barcode Formats**
 
-Parameter [`BarcodeFormatIds`]({{site.parameters_reference}}barcode-format-ids.html) and [`BarcodeFormatIds_2`](({{site.parameters_reference}}barcode-format-ids-2.html)) are int values that controls the recognizable barcode formats. The fewer formats you set, the higher speed your app will be.
+Parameter [`BarcodeFormatIds`]({{site.parameters_reference}}barcode-format-ids.html) and [`BarcodeFormatIds_2`]({{site.parameters_reference}}barcode-format-ids-2.html) are int values that controls the recognizable barcode formats. The fewer formats you set, the higher speed your app will be.
 
 **Scale Down Threshold**
 

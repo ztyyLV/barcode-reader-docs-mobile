@@ -94,8 +94,8 @@ pageStartVer: 8.6
   
    | Method               | Description |
    |----------------------|-------------|
-   | [`StartCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Deprecated, use [`startScanning`](primary-video.md#startscanning) instead. |
-   | [`StopCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Deprecated, use [`stopScanning`](primary-video.md#stopscanning) instead. |
-   | [`PauseCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Deprecated, use [`startScanning`](primary-video.md#startscanning) instead. |
-   | [`ResumeCameraEnhancer`](primary-camera.md#start-stop-pause-resume-camera-enhancer) | Deprecated, use [`stopScanning`](primary-video.md#stopscanning) instead. |
+   | [`StartCameraEnhancer`](primary-camera.md#startcameraenhancer) | Deprecated, use [`startScanning`](primary-video.md#startscanning) instead. |
+   | [`StopCameraEnhancer`](primary-camera.md#stopcameraenhancer) | Deprecated, use [`stopScanning`](primary-video.md#stopscanning) instead. |
+   | [`PauseCameraEnhancer`](primary-camera.md#pausecameraenhancer) | Deprecated, use [`stopScanning`](primary-video.md#stopscanning) instead. |
+   | [`ResumeCameraEnhancer`](primary-camera.md#resumecameraenhancer) | Deprecated, use [`startScanning`](primary-video.md#startscanning) instead. |
    | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Deprecated, use [`setCameraEnhancer`](primary-video.md#setcameraenhancer) instead. |
