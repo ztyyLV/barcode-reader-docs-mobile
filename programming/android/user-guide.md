@@ -189,7 +189,7 @@ There are two ways to include the SDK into your project - local binary dependenc
    // Bind the Camera Enhancer instance to the Barcode Reader instance.
    // The mCameraEnhancer is the instance of the Dynamsoft Camera Enhancer.
    // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
-   reader.SetCameraEnhancer(mCameraEnhancer);
+   reader.setCameraEnhancer(mCameraEnhancer);
    // Make this setting to get the result. The result will be an object that contains text result and other barcode information.
    try {
       reader.setTextResultCallback(mTextResultCallback, null);
