@@ -18,22 +18,79 @@ You can initialize the parameter settings for your Android barcode reader with a
 
 ### Initialize with Preset Template
 
+The preset templates are listed as follow:
+
 | Template Name | Description |
 | ------------- | ----------- |
-|  |  |
+| `DEFAULT` | Reset to defaut barcode decoding parameters. |
+| `VIDEO_SINGLE_BARCODE` | Switch to single barcode decoding template. The parameter settings will be optimized to reach a higher speed on processing single barcode. |
+| `VIDEO_SPEED_FIRST` | Switch to speed first template for video streaming barcode decoding. The barcode processing speed will be improved for the majority of video barcode decoding scenarios. |
+| `IMAGE_SPEED_FIRST` | Switch to speed first template for image barcode decoding. The barcode processing speed will be improved for the majority of video barcode decoding scenarios. |
+| `VIDEO_READ_RATE_FIRST` | Switch to read rate first template for video streaming barcode decoding. The barcode reader will be able to successfully decode on the majority of barcodes when decoding from the video streaming. |
+| `IMAGE_READ_RATE_FIRST` | Switch to read rate first template for image barcode decoding. The barcode reader will be able to successfully decode as many barcodes as possible from a single image. |
+
+The preset templates can be update via method [`updateRuntimeSettings`](api-reference/primary-parameter-and-runtime-settings-basic.md#with-a-preset-template). When a new template is selected, all the previous barcode parameter settings are reset to the newly select template values.
+
+**Remarks**
+
+The templates are designed to improve the performance for general usage scenarios. To reach the best performance for your usage scenarios, additional settings are required. You can read the Optimize Settings section on this page to make the settings or contact us for a customized template.
 
 ### Initialize with Customized Template
 
-Contact us when:
+Feel free to contact us when:
 
 - Performance not satisfying.
 - The templates are puzzling
 - Specific requirements on performance
 
+If you have confirmed the following informations, we will be able to provide an even more powerful template.
+
+- The targeting barcode formats.
+- Image or video.
+- The device infomation (hardware model, software version).
+- The barcode scanning distance.
+- Sample image for the usage scenarios.
+
 ## Optimize Settings
 
-Optimize the settings step-by-step, the settings will be added to the current settings. The other settings will remains the same.
+Modes parameters and other settings like barcode formats are available in the `PublicRuntimeSettings` class. You can use the following steps to change the settings. When you update the settings, only the newly configured settings will be changed and the other settings will remains the same.
 
-- getRuntimeSettings
-- Optimize the required parameters
-- updateRuntimeSettings
+**Step 1. getRuntimeSettings**
+
+Use the following code to get the current settings.
+
+```java
+PublicRuntimeSettings runtimeSettings = barcodeReader.getRuntimeSettings();
+```
+
+The `runtimeSettings` you got from `getRuntimeSettings` is an object of `PublicRuntimeSettings`. In the object, there are the settings you previously updated via templates. You can view and directly change the parameter values in the `PublicRuntimeSettings` object.
+
+**Step 2. Optimize the required settings**
+
+Since you have got the `runtimeSettings`, you can add the following code to change the settings in the object. Here, `BarcodeFormats` and `LocalizationModes` will be illustrated as an example for optimizing the settings.
+
+```java
+PublicRuntimeSettings runtimeSettings = barcodeReader.getRuntimeSettings();
+
+// You can specify the barcode formats via runtime settings.
+runtimeSettings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE;
+
+// LocalizationModes is modes parameter that controls how the barcodes will be located.
+// Localization mode "scan directly" and "connected blocks" are enabled here.
+// You can enable at most 8 modes for each modes parameter.
+runtimeSettings.localizationModes = new int[]{EnumLocalizationMode.LM_SCAN_DIRECTLY,EnumLocalizationMode.LM_CONNECTED_BLOCKS};
+```
+
+**Step 3. updateRuntimeSettings**
+
+When you have alreay completed the settings, you can update the settings via method `updateRuntimeSettings`. All the settings you have configured will be updated to the barcode reader and the other settings will remains the same.
+
+```java
+PublicRuntimeSettings runtimeSettings = barcodeReader.getRuntimeSettings();
+runtimeSettings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE;
+runtimeSettings.localizationModes = new int[]{EnumLocalizationMode.LM_SCAN_DIRECTLY,EnumLocalizationMode.LM_CONNECTED_BLOCKS};
+// Update all above settings.
+reader.updateRuntimeSettings(runtimeSettings);
+```
+
+Please notes, the upload of the settings will fail if there is an invalid value in the newly added settings, which means none of the settings will be updated.
