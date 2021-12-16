@@ -24,6 +24,8 @@ noTitleIndex: true
 
 - [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md)
 - [`iFurtherModes`](auxiliary-iFurtherModes.md)
+- [`iFrameDecodingParameters`](auxiliary-iFrameDecodingParameters.md)
+- [`iDCESettingParameters`](auxiliary-iDCESettingParameters.md)
 
 ## [Barcode Result Classes](auxiliary-textresult-index.md)
 

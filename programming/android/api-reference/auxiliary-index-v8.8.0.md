@@ -25,6 +25,8 @@ pageStartVer: 8.6
 
 - [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md)
 - [`FurtherModes`](auxiliary-FurtherModes.md)
+- [`FrameDecodingParameters`](auxiliary-FrameDecodingParameters.md)
+- [`DCESettingParameters`](auxiliary-DCESettingParameters.md)
 
 ## [Barcode Result Classes](auxiliary-textresult-index.md)
 

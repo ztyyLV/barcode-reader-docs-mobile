@@ -83,3 +83,73 @@ class com.dynamsoft.dbr.FurtherModes;
 ```java
 FurtherModes furtherModes = runtimeSettings.furtherModes;
 ```
+
+## [RegionDefinition](auxiliary-RegionDefinition.md)
+
+The class stores the defined region information.
+
+```java
+class com.dynamsoft.dbr.RegionDefinition;
+```
+
+| Attribute | Type | Descriptions |
+|---------- | ---- | ------------ |
+| [`regionTop`](auxiliary-RegionDefinition.md#regiontop) | *int* | The top-most coordinate or percentage of the region. |
+| [`regionLeft`](auxiliary-RegionDefinition.md#regionleft) | *int* | The Left-most coordinate or percentage of the region. |
+| [`regionRight`](auxiliary-RegionDefinition.md#regionright) | *int* | The Right-most coordinate or percentage of the region. |
+| [`regionBottom`](auxiliary-RegionDefinition.md#regionbottom) | *int* | The Bottom-most coordinate or percentage of the region. |
+| [`regionMeasuredByPercentage`](auxiliary-RegionDefinition.md#regionmeasuredbypercentage) | *int* | Sets whether or not to use percentage to measure the region size. |
+
+**Code Snippet**
+
+```java
+RegionDefinition regionDefinition = runtimeSettings.region;
+```
+
+## [FrameDecodingParameters](auxiliary-FrameDecodingParameters.md)
+
+The parameters that helps you on frame decoding.
+
+```java
+class com.dynamsoft.dbr.FrameDecodingParameters;
+```
+
+| Attribute | Type | Descriptions |
+|---------- | ---- | ------------ |
+| [`maxQueueLength`](auxiliary-FrameDecodingParameters.md#maxqueuelength) | *int* | The maximum number of frames waiting for decoding. |
+| [`maxResultQueueLength`](auxiliary-FrameDecodingParameters.md#maxresultqueuelength) | *int* | The maximum number of frames waiting results (text result/localization result) will be kept for further reference. |
+| [`width`](auxiliary-FrameDecodingParameters.md#width) | *int* | The width of the frame image in pixels.  |
+| [`height`](auxiliary-FrameDecodingParameters.md#height) | *int* | The height of the frame image in pixels. |
+| [`stride`](auxiliary-FrameDecodingParameters.md#stride) | *int* | The stride (or scan width) of the frame image. |
+| [`imagePixelFormat`](auxiliary-FrameDecodingParameters.md#imagepixelformat) | *int* | The image pixel format used in the image byte array. |
+| [`region`](auxiliary-FrameDecodingParameters.md#region) | [`RegionDefinition`](auxiliary-RegionDefinition.md) | The region definition of the frame to calculate the internal indicator. |
+| [`threshold`](auxiliary-FrameDecodingParameters.md#threshold) | *float* | The threshold used for filtering frames. |
+| [`fps`](auxiliary-FrameDecodingParameters.md#fps) | *int* | The frequency of calling [`appendFrame`]({{site.android_methods}}primary-video.html#appendframe) per second. |
+| [`autoFilter`](auxiliary-FrameDecodingParameters.md#autofilter) | *int* | Sets whether to filter frames automatically. |
+| [`clarityCalculationMethod`](auxiliary-FrameDecodingParameters.md#claritycalculationmethod) | *int* | Sets the method used for calculating the clarity of the frames. |
+| [`clarityFilterMode`](auxiliary-FrameDecodingParameters.md#clarityfiltermode) | *int* | Sets the mode used for filtering frames by calculated clarity. |
+
+## [DCESettingParameters](auxiliary-DCESettingParameters.md)
+
+The parameters that helps you on configuring Dynamsoft Camera Enhancer in the Barcode Reader.
+
+```java
+class com.dynamsoft.dbr.DCESettingParameters;
+```
+
+| Attribute | type | Description |
+|-----------|------|-------------|
+| [`cameraInstance`](auxiliary-DCESettingParameters.md#camerainstance) | *Object* | The Camera Enhancer instance |
+|  [`textResultCallback`](auxiliary-DCESettingParameters.md#textresultcallback) | [`TextResultCallback`]({{site.android_api}}interface.html#textresultcallback) | Set text result callback. |
+| [`textResultCallback_UserData`](auxiliary-DCESettingParameters.md#textresultcallback_userdata) | *Object*  | Transfer user data. |
+| [`intermediateResultCallback`](auxiliary-DCESettingParameters.md#intermediateresultcallback) | [`IntermediateResultCallback`]({{site.android_api}}interface.html#intermediateresultcallback) | Set intermediate result callback. |
+| [`IntermediateResultCallback_UserData`](auxiliary-DCESettingParameters.md#intermediateresultcallback_userdata) | *Object* | Transfer user data. |
+
+**Code Snippet**
+
+```java
+DCESettingParameters dceSettingParameters = new DCESettingParameters();
+dceSettingParameters.cameraInstance = mCameraEnhancer;
+dceSettingParameters.textResultCallback = mTextResultCallback;
+reader.SetCameraEnhancerParam(dceSettingParameters);
+```
