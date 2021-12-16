@@ -12,14 +12,109 @@ noTitleIndex: true
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`setModeArgument`](#setmodeargument) | Set argument value for the specified mode parameter. |
-  | [`getModeArgument`](#getmodeargument) | Get argument value for the specified mode parameter. |
   | [`getRuntimeSettings`](#getruntimesettings) | Get current runtime settings. |
   | [`updateRuntimeSettings (with struct)`](#updateruntimesettings) | Modify and update the current runtime settings. |
   | [`updateRuntimeSettings (with preset template)`](#with-a-preset-template) | Update runtime settings from one of the preset templates. |
-  | [`resetRuntimeSettings`](#resetruntimesettings) | Reset runtime settings to default. |
+  | [`resetRuntimeSettings`](#resetruntimesettings) | Reset runtime settings to default. |  
+  | [`setModeArgument`](#setmodeargument) | Set argument value for the specified mode parameter. |
+  | [`getModeArgument`](#getmodeargument) | Get argument value for the specified mode parameter. |
 
   ---
+
+## getRuntimeSettings
+
+Get current settings and save them into a [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct.
+
+```java
+PublicRuntimeSettings getRuntimeSettings() throws BarcodeReaderException
+```
+
+**Return Value**
+
+The struct of template settings.
+
+**Exceptions**
+
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+
+**Code Snippet**
+
+```java
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+reader.destroy();
+```
+
+## updateRuntimeSettings
+
+### With a PublicRuntimeSettings Struct
+
+Update runtime settings with a given [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct.
+
+```java
+void updateRuntimeSettings(PublicRuntimeSettings settings) throws BarcodeReaderException
+```
+
+**Parameters**
+
+`settings`: The struct of template settings.
+
+**Exceptions**
+
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+
+**Code Snippet**
+
+```java
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+settings.deblurLevel = 9;
+reader.updateRuntimeSettings(settings);
+reader.destroy();
+```
+
+### With a Preset Template
+
+Update the runtime settings from one of the preset templates.
+
+```java
+void updateRuntimeSettings(EnumPresetTemplate presetTemplate)
+```
+
+**Parameters**
+
+`presetTemplate`: One of the preset templates.
+
+**Code Snippet**
+
+```java
+BarcodeReader reader = new BarcodeReader();
+reader.updateRuntimeSettings(EnumPresetTemplate.VIDEO_SINGLE_BARCODE);
+reader.destroy();
+```
+
+## resetRuntimeSettings
+
+Reset all parameters to default values.
+
+```java
+void resetRuntimeSettings() throws BarcodeReaderException
+```
+
+**Exceptions**
+
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+
+**Code Snippet**
+
+```java
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+settings.deblurLevel = 9;
+reader.updateRuntimeSettings(settings);
+reader.resetRuntimeSettings();
+reader.destroy();
+```
 
 ## setModeArgument
 
@@ -118,98 +213,3 @@ Check the available modes and arguments below:
 - [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes)
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
 - [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)
-
-## getRuntimeSettings
-
-Get current settings and save them into a [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct.
-
-```java
-PublicRuntimeSettings getRuntimeSettings() throws BarcodeReaderException
-```
-
-**Return Value**
-
-The struct of template settings.
-
-**Exceptions**
-
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
-
-**Code Snippet**
-
-```java
-BarcodeReader reader = new BarcodeReader();
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-reader.destroy();
-```
-
-## updateRuntimeSettings
-
-### With a PublicRuntimeSettings Struct
-
-Update runtime settings with a given [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct.
-
-```java
-void updateRuntimeSettings(PublicRuntimeSettings settings) throws BarcodeReaderException
-```
-
-**Parameters**
-
-`settings`: The struct of template settings.
-
-**Exceptions**
-
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
-
-**Code Snippet**
-
-```java
-BarcodeReader reader = new BarcodeReader();
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.deblurLevel = 9;
-reader.updateRuntimeSettings(settings);
-reader.destroy();
-```
-
-### With a Preset Template
-
-Update the runtime settings from one of the preset templates.
-
-```java
-void updateRuntimeSettings(EnumPresetTemplate presetTemplate)
-```
-
-**Parameters**
-
-`presetTemplate`: One of the preset templates.
-
-**Code Snippet**
-
-```java
-BarcodeReader reader = new BarcodeReader();
-reader.updateRuntimeSettings(EnumPresetTemplate.VIDEO_SINGLE_BARCODE);
-reader.destroy();
-```
-
-## resetRuntimeSettings
-
-Reset all parameters to default values.
-
-```java
-void resetRuntimeSettings() throws BarcodeReaderException
-```
-
-**Exceptions**
-
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
-
-**Code Snippet**
-
-```java
-BarcodeReader reader = new BarcodeReader();
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.deblurLevel = 9;
-reader.updateRuntimeSettings(settings);
-reader.resetRuntimeSettings();
-reader.destroy();
-```

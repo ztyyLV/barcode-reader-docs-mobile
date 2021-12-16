@@ -11,14 +11,133 @@ noTitleIndex: true
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`setModeArgument`](#setmodeargument) | Sets the optional argument for a specified mode in Modes parameters. |
-  | [`getModeArgument`](#getmodeargument) | Gets the optional argument for a specified mode in Modes parameters. |
   | [`getRuntimeSettings`](#getruntimesettings) | Get current runtime settings. |
   | [`updateRuntimeSettings (with Struct)`](#updateruntimesettings) | Update runtime settings with a given struct. |
   | [`updateRuntimeSettings (with preset template)`](#with-a-preset-template)) | Update runtime settings from one of the preset templates. |
-  | [`resetRuntimeSettings`](#resetruntimesettings) | Resets all parameters to default values. |
+  | [`resetRuntimeSettings`](#resetruntimesettings) | Resets all parameters to default values. |  
+  | [`setModeArgument`](#setmodeargument) | Sets the optional argument for a specified mode in Modes parameters. |
+  | [`getModeArgument`](#getmodeargument) | Gets the optional argument for a specified mode in Modes parameters. |
 
 ---
+
+## getRuntimeSettings
+
+Get current settings and save them into a [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md) struct.
+
+```objc
+- (iPublicRuntimeSettings* _Nullable)getRuntimeSettings:(NSError* _Nullable * _Nullable)error;
+```
+
+**Parameters**
+
+`[in, out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+
+**Return Value**
+
+A DBRPublicRuntimeSettings storing current runtime settings.
+
+**Code Snippet**
+
+Objective-C:
+
+```objc
+NSError __autoreleasing * _Nullable error;
+[barcodeReader getRuntimeSettings:&error];
+```
+
+Swift:
+
+```Swift
+let error: NSError? = NSError()
+let licenseString = barcodeReader.getRuntimeSettings(error: &error)
+```
+
+## updateRuntimeSettings
+
+### With a PublicRuntimeSettings Struct
+
+Update runtime settings with a given [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md) struct.
+
+```objc
+- (void)updateRuntimeSettings:(iPublicRuntimeSettings* _Nonnull)settings
+                        error:(NSError* _Nullable * _Nullable)error;
+```
+
+**Parameters**
+
+`[in] settings` The struct of template settings.  
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+
+**Code Snippet**
+
+Objective-C:
+
+```objc
+NSError __autoreleasing * _Nullable error;
+iPublicRuntimeSettings *settings;
+
+[barcodeReader updateRuntimeSettings:settings error:&error];
+```
+
+Swift:
+
+```Swift
+let error: NSError? = NSError()
+let settings = barcodeReader.getRuntimeSettings(error: nil)
+barcodeReader.updateRuntimeSettings(settings: settings, error: &error)
+```
+
+### With a Preset Template
+
+```objc
+- (void)updateRuntimeSettings:(EnumPresetTemplate)presetTemplate;
+```
+
+**Parameters**
+
+`presetTemplate`: One of the preset templates.
+
+**Code Snippet**
+
+Objective-C:
+
+```objc
+[barcodeReader updateRuntimeSettings:EnumPresetTemplate.EnumPresetTemplateVideoSingleBarcode];
+```
+
+Swift:
+
+```Swift
+barcodeReader.updateRuntimeSettings(EnumPresetTemplate.EnumPresetTemplateVideoSingleBarcode)
+```
+
+## resetRuntimeSettings
+
+Reset all parameters to default values.
+
+```objc
+- (void)resetRuntimeSettings:(NSError* _Nullable * _Nullable)error;
+```
+
+**Parameters**
+
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+
+**Code Snippet**
+
+Objective-C:
+
+```objc
+NSError __autoreleasing * _Nullable error;
+[barcodeReader resetRuntimeSettings:&error];
+```
+
+Swift:
+
+```Swift
+let error: NSError? = NSError()
+barcodeReader.resetRuntimeSettings(error: &error)
+```
 
 ## setModeArgument
 
@@ -155,122 +274,3 @@ Check follow link for available modes and arguments:
 - [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes)
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
 - [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)
-
-## getRuntimeSettings
-
-Get current settings and save them into a [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md) struct.
-
-```objc
-- (iPublicRuntimeSettings* _Nullable)getRuntimeSettings:(NSError* _Nullable * _Nullable)error;
-```
-
-**Parameters**
-
-`[in, out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
-
-**Return Value**
-
-A DBRPublicRuntimeSettings storing current runtime settings.
-
-**Code Snippet**
-
-Objective-C:
-
-```objc
-NSError __autoreleasing * _Nullable error;
-[barcodeReader getRuntimeSettings:&error];
-```
-
-Swift:
-
-```Swift
-let error: NSError? = NSError()
-let licenseString = barcodeReader.getRuntimeSettings(error: &error)
-```
-
-## updateRuntimeSettings
-
-### With a PublicRuntimeSettings Struct
-
-Update runtime settings with a given [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md) struct.
-
-```objc
-- (void)updateRuntimeSettings:(iPublicRuntimeSettings* _Nonnull)settings
-                        error:(NSError* _Nullable * _Nullable)error;
-```
-
-**Parameters**
-
-`[in] settings` The struct of template settings.  
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
-
-**Code Snippet**
-
-Objective-C:
-
-```objc
-NSError __autoreleasing * _Nullable error;
-iPublicRuntimeSettings *settings;
-
-[barcodeReader updateRuntimeSettings:settings error:&error];
-```
-
-Swift:
-
-```Swift
-let error: NSError? = NSError()
-let settings = barcodeReader.getRuntimeSettings(error: nil)
-barcodeReader.updateRuntimeSettings(settings: settings, error: &error)
-```
-
-### With a Preset Template
-
-```objc
-- (void)updateRuntimeSettings:(EnumPresetTemplate)presetTemplate;
-```
-
-**Parameters**
-
-`presetTemplate`: One of the preset templates.
-
-**Code Snippet**
-
-Objective-C:
-
-```objc
-[barcodeReader updateRuntimeSettings:EnumPresetTemplate.EnumPresetTemplateVideoSingleBarcode];
-```
-
-Swift:
-
-```Swift
-barcodeReader.updateRuntimeSettings(EnumPresetTemplate.EnumPresetTemplateVideoSingleBarcode)
-```
-
-## resetRuntimeSettings
-
-Reset all parameters to default values.
-
-```objc
-- (void)resetRuntimeSettings:(NSError* _Nullable * _Nullable)error;
-```
-
-**Parameters**
-
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
-
-**Code Snippet**
-
-Objective-C:
-
-```objc
-NSError __autoreleasing * _Nullable error;
-[barcodeReader resetRuntimeSettings:&error];
-```
-
-Swift:
-
-```Swift
-let error: NSError? = NSError()
-barcodeReader.resetRuntimeSettings(error: &error)
-```
