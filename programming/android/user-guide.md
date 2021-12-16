@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - User Guide v8.8
+title: Dynamsoft Barcode Reader for Android - User Guide
 description: This is the user guide of Dynamsoft Barcode Reader for Android SDK.
-keywords: user guide v8.8, android
+keywords: user guide, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
@@ -109,32 +109,14 @@ There are two ways to include the SDK into your project - local binary dependenc
 
 ### Initialize Camera Module
 
-1. Initialize the license.
-
-   ```java
-   CameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DCELicenseVerificationListener() {
-      @Override
-      public void DCELicenseVerificationCallback(boolean isSuccess, Exception error) {
-         if(!isSuccess){
-               error.printStackTrace();
-         }
-      }
-   });
-   ```  
-
-   > Note:
-   > - Network connection is required for the license to work.
-   > - "DLS2***" is a default 7-day trial license used in the sample.
-   > - If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
-
-2. Create an instance of Camera Enhancer.
+1. Create an instance of Camera Enhancer.
 
    ```java
    CameraEnhancer mCameraEnhancer;
    mCameraEnhancer = new CameraEnhancer(MainActivity.this);
    ```
 
-3. In the Project window, open **app > res > layout > `activity_main.xml`** and create a DCE camera view section under the root node.
+2. In the Project window, open **app > res > layout > `activity_main.xml`** and create a DCE camera view section under the root node.
 
     ```xml
    <com.dynamsoft.dce.DCECameraView
@@ -145,7 +127,7 @@ There are two ways to include the SDK into your project - local binary dependenc
       tools:layout_editor_absoluteY="0dp" />
     ```
 
-4. Initialize the camera view and bind to the Camera Enhancer object.
+3. Initialize the camera view and bind to the Camera Enhancer object.
 
     ```java
     DCECameraView mCameraView;
@@ -161,6 +143,7 @@ There are two ways to include the SDK into your project - local binary dependenc
    ```java
    BarcodeReader reader;
    reader = new BarcodeReader();
+   
    ```
 
 2. Initialize the license.
@@ -203,18 +186,18 @@ There are two ways to include the SDK into your project - local binary dependenc
 4. Create settings of video barcode reading and bind to Barcode Reader object
 
    ```java
-   // Create settings of video barcode reading.
-   DCESettingParameters dceSettingParameters = new DCESettingParameters();
-
-   // This cameraInstance is the instance of the Dynamsoft Camera Enhancer.
-   // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
-   dceSettingParameters.cameraInstance = mCameraEnhancer;
-
-   // Make this setting to get the result. The result will be an object that contains text result and other barcode information.
-   dceSettingParameters.textResultCallback = mTextResultCallback;
-
    // Bind the Camera Enhancer instance to the Barcode Reader instance.
-   reader.SetCameraEnhancerParam(dceSettingParameters);
+   // The mCameraEnhancer is the instance of the Dynamsoft Camera Enhancer.
+   // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
+   reader.setCameraEnhancer(mCameraEnhancer);
+   // Make this setting to get the result. The result will be an object that contains text result and other barcode information.
+   try {
+      reader.setTextResultCallback(mTextResultCallback, null);
+   } catch (BarcodeReaderException e) {
+      e.printStackTrace();
+   }
+   // Start the barcode scanning thread.
+   reader.startScanning();
    ```
 
 5. Override the `MainActivity.onResume` and `MainActivity.onPause` functions to start/stop video barcode scanning. After scanning starts, the Barcode Reader will automatically invoke the `decodeBuffer` API to process the video frames from the Camera Enhancer, then send the recognized barcode results to the text result callback.
@@ -223,14 +206,24 @@ There are two ways to include the SDK into your project - local binary dependenc
    @Override
    public void onResume() {
    // Start video barcode reading
-      reader.StartCameraEnhancer();
+      reader.startScanning();
+      try {
+         mCameraEnhancer.open();
+      } catch (CameraEnhancerException e) {
+         e.printStackTrace();
+      }
       super.onResume();
    }
 
    @Override
    public void onPause() {
       // Stop video barcode reading
-      reader.StopCameraEnhancer();
+      reader.stopScanning();
+      try {
+         mCameraEnhancer.close();
+      } catch (CameraEnhancerException e) {
+         e.printStackTrace();
+      }
       super.onPause();
    }
    ```

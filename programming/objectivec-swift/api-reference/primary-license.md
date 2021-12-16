@@ -16,7 +16,7 @@ noTitleIndex: true
   | [`initWithLicenseFromServer`](#initwithlicensefromserver) | Initialize license and connect to the specified server for online verification. |
   | [`outputLicenseToString`](#outputlicensetostring) | Outputs the license content as an encrypted string from the license server to be used for offline license verification. |
   | [`initLicenseFromDLS`](#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
-  | [`initLicenseFromLTS`](#initlicensefromlts) | `Deprecated`, please use [initLicenseFromDLS](#initlicensefromdls) instead. |
+  | [`initLicenseFromLTS`](#initlicensefromlts) | `Deprecated`, please use [`initLicenseFromDLS`](#initlicensefromdls) instead. |
 
   ---
 
@@ -191,4 +191,4 @@ func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 
 ## initLicenseFromLTS
 
-`Deprecated`. Please use [initLicenseFromDLS](#initlicensefromdls) instead.
+`Deprecated`. Please use [`initLicenseFromDLS`](#initlicensefromdls) instead.

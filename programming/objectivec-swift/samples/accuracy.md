@@ -13,8 +13,8 @@ The Accuracy-First setting sample illustrates how to use DBR APIs to improve the
 
 View the sample
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/Performance/AccuracyFirstSettingsObjC/" target="_blank">Speed-first Settings Sample (Objective-C)</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/Performance/AccuracyFirstSettingsSwift/" target="_blank">Speed-first Settings Sample (Swift)</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v8.8.0/ios/Objective-C/Performance/AccuracyFirstSettingsObjC/" target="_blank">Speed-first Settings Sample (Objective-C)</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v8.8.0/ios/Swift/Performance/AccuracyFirstSettingsSwift/" target="_blank">Speed-first Settings Sample (Swift)</a>
 
 ## Regular Accuracy Settings
 

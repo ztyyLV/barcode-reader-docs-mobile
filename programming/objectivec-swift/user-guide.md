@@ -259,8 +259,6 @@ You can add your downloaded frameworks into your project through the following s
     }
     - (void)textResultCallback:(NSInteger)frameId results:(NSArray<iTextResult *> *)results userData:(NSObject *)userData{
         if (results.count > 0) {
-            [_dce pause];
-            __weak ViewController *weakSelf = self;
             NSString *title = @"Results";
             NSString *msgText = @"";
             NSString *msg = @"Please visit: https://www.dynamsoft.com/customer/license/trialLicense?";
@@ -280,7 +278,6 @@ You can add your downloaded frameworks into your project through the following s
                         msg:msgText
                     acTitle:@"OK"
                 completion:^{
-                    [weakSelf.dce resume];
                 }];
         }else{
             return;
@@ -320,7 +317,6 @@ You can add your downloaded frameworks into your project through the following s
 
         func textResultCallback(_ frameId: Int, results: [iTextResult]?, userData: NSObject?) {
             if results!.count > 0 {
-                dce.pause()
                 var msgText:String = ""
                 var title:String = "Results"
                 let msg = "Please visit: https://www.dynamsoft.com/customer/license/trialLicense?"
@@ -336,8 +332,7 @@ You can add your downloaded frameworks into your project through the following s
                         msgText = msgText + String(format:"\nFormat: %@\nText: %@\n", item.barcodeFormatString!,item.barcodeText ?? "noResuslt")
                     }
                 }
-                showResult(title, msgText, "OK") {[weak self] in
-                    self?.dce.resume()
+                showResult(title, msgText, "OK") {
                 }
             }else{
                 return
@@ -352,17 +347,13 @@ You can add your downloaded frameworks into your project through the following s
 
     ```objectivec
     - (void)configurationDCE{
-        ...
-
-        // Create settings for video decoding.
-        iDCESettingParameters* para = [[iDCESettingParameters alloc] init];
-        // This cameraInstance is the instance of the Dynamsoft Camera Enhancer.
-        // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
-        para.cameraInstance = _dce;
-        // Make this setting to get the result. The result will be an object that contains text result and other barcode information.
-        para.textResultDelegate = self;
         // Bind the Camera Enhancer instance to the Barcode Reader instance.
-        [_barcodeReader setCameraEnhancerPara:para];
+        // The _dce is the instance of the Dynamsoft Camera Enhancer.
+        // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
+        [_barcodeReader setCameraEnhancer:_dce];
+        // Make this setting to get the result. The result will be an object that contains text result and other barcode information.
+        [_barcodeReader setDBRTextResultDelegate:self userData:nil];
+        [_barcodeReader startScanning error:&error];
     }
     ```
 
@@ -371,14 +362,12 @@ You can add your downloaded frameworks into your project through the following s
     ```swift
     /*Deploy the camera with Dynamsoft Camera Enhancer.*/
     func configurationDCE() {
-        
-        ...
-        
-        // Creating the DCE parameters and configuring them
-        let para = iDCESettingParameters.init()
-        para.cameraInstance = dce
-        para.textResultDelegate = self
-        barcodeReader.setCameraEnhancerPara(para)
+        /*Bind the Camera Enhancer instance to the Barcode Reader instance.
+        The _dce is the instance of the Dynamsoft Camera Enhancer.
+        The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.*/
+        barcodeReader.setCameraEnhancer(dce)
+        barcodeReader.setTextResultCallback(textResultDelegate:self, userData:nil)
+        barcodeReader.startScanning()
     }
     ```
 

@@ -18,12 +18,10 @@ Welcome to the Dynamsoft Barcode Reader iOS SDK documentation.
 
 ## Samples and Demos
 
-- Samples
+- [Samples](samples/index.md)
   - [HelloWorld](samples/helloworld.md)
   - [GeneralSettings](samples/general.md)
-  - [SpeedFirstSettings](samples/speed.md)
-  - [ReadRateFirstSettings](samples/read-rate.md)
-  - [AccuracyFirstSettings](samples/accuracy.md)
+  - [PerformanceSettings](samples/performance.md)
   - [ReadADriversLicense](samples/drivers-license.md)
 - <a href="https://apps.apple.com/us/app/barcode-scanner-x/id1120581630" target="_blank">Barcode Scanner X Demo App</a>
 

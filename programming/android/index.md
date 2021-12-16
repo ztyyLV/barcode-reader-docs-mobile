@@ -18,12 +18,10 @@ Welcome to the Dynamsoft Barcode Reader Android SDK documentation.
 
 ## Samples and Demos
 
-- Samples
+- [Samples](samples/index.md)
   - [HelloWorld](samples/helloworld.md)
   - [GeneralSettings](samples/general.md)
-  - [SpeedFirstSettings](samples/speed.md)
-  - [ReadRateFirstSettings](samples/read-rate.md)
-  - [AccuracyFirstSettings](samples/accuracy.md)
+  - [PerformanceSettings](samples/performance.md)
   - [ReadADriversLicense](samples/drivers-license.md)
 - <a href="https://download2.dynamsoft.com/dbr/android/DynamsoftBarcodeReaderDemoAndroid-8.4.1.apk" target="_blank">Barcode Scanner X Demo App (.apk)</a>
 

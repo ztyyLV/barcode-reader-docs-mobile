@@ -10,6 +10,45 @@ noTitleIndex: true
 
 # Release Notes for iOS SDK - 8.x
 
+## 8.9.0 (12/16/2021)
+
+### Highlights
+
+{%- include release-notes/product-highlight-8.9.0.md -%}
+
+### Changelog
+
+#### New
+
+- Added methods [`setCameraEnhancer`]({{ site.oc_api }}primary-video.html#setcameraenhancer) to replace `SetCameraEnhancerPara` and `iDCESettingParameters`. This method will simplify the binding of the Camera Enhancer to the Barcode Reader.
+- Added methods [`startScanning`]({{ site.oc_api }}primary-video.html#stopscanning) and [`stopScanning`]({{ site.oc_api }}primary-video.html#stopscanning) to control the start and stop of the video streaming barcode decoding thread. These methods are only active when using the Dynamsoft Camera Enhancer along with the Barcode Reader.
+- Overwrited method [`updateRuntimeSettings`]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.md#updateruntimesettings). Users can specify a member of [`EnumPresetTemplate`]({{ site.enumerations }}other-enums.html#enumpresettemplate) in the method to select a preset parameter setting template for barcode decoding.
+
+#### Improved
+
+- Simplified the usage of the different Modes in the `PublicRuntimeSettings` such as `LocalizationModes`, `DeblurModes`, and more. Users no longer must configure the entire Modes array to include the skipped entries as well. For example:
+  - In previous versions, when you set the `DeblurModes`:
+
+  ```objc
+  settings.deblurModes = @[@(EnumDeblurModeBasedOnLocBin), @(EnumDeblurModeSharpening),@(0),@(0),@(0),@(0), @(0), @(0)];
+  ```
+
+  - In v8.9 version:
+
+  ```objc
+  settings.deblurModes = @[@(EnumDeblurModeBasedOnLocBin), @(EnumDeblurModeSharpening)];
+  ```
+
+#### Fixed
+
+- Fixed a bug that might cause memory leaks.
+
+#### Deprecated
+
+- The following methods/class are deprecated. They are currently available but will be removed in further updates.
+    - `SetCameraEnhancerPara`
+    - `iDCESettingParameters`
+
 ## 8.8.0 (10/19/2021)
 
 ### Highlights
