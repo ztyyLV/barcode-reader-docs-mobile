@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - Settings Guide
-description: This is the settings guide of Dynamsoft Barcode Reader for Android SDK.
+title: Dynamsoft Barcode Reader for Android - Advanced Usage
+description: This is the Advanced Usage of Dynamsoft Barcode Reader for Android SDK.
 keywords: Guide, Android, Settings
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Basic Practice
+# Advanced Usage
 
 `PublicRuntimeSettings` is the struct that inclueds the majority of available barcode decoding settings. There is a series of methods for you to get, optimize or even reset the settings. On this page, you will be guide on how to initialize, optimize or reset the barcode decoding settings.
 

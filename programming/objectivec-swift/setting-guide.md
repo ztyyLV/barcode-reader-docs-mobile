@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for iOS - Basic Practice
-description: This is the Basic Practice page of Dynamsoft Barcode Reader for iOS SDK.
+title: Dynamsoft Barcode Reader for iOS - Advanced Usage
+description: This is the Advanced Usage page of Dynamsoft Barcode Reader for iOS SDK.
 keywords: Guide, iOS, Settings
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Basic Practice
+# Advanced Usage
 
 `iPublicRuntimeSettings` is the struct that includes the majority of available barcode decoding settings. There is a series of methods for you to get, optimize or even reset the settings. On this page, you will be guided on how to initialize, optimize or reset the barcode decoding settings.
 
