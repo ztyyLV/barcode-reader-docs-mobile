@@ -143,7 +143,6 @@ There are two ways to include the SDK into your project - local binary dependenc
    ```java
    BarcodeReader reader;
    reader = new BarcodeReader();
-   
    ```
 
 2. Initialize the license.
@@ -273,3 +272,15 @@ There are two ways to include the SDK into your project - local binary dependenc
 You can download the complete source code here:
 
 - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld" target="_blank">Android source code</a>
+
+## Next Steps
+
+From this page, you have learned how to create a simple video barcode decoding app. In the next steps, the following pages will help you on adding configurations to enhance your barcode reader.
+
+- [Update Settings](setting-guide.md)
+- Optimize performance
+  - How to Boost Speed
+  - How to Boost Read-Rate
+  - How to Boost Accuracy
+- Additional Readings
+  - <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "blank">Barcode Formats illustration</a>

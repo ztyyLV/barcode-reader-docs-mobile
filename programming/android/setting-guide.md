@@ -8,7 +8,11 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Advanced Usage
+# Update Settings
+
+The follow article will help you understand the content of this page.
+
+- [Getting Started](user-guide.md)
 
 `PublicRuntimeSettings` is the struct that inclueds the majority of available barcode decoding settings. There is a series of methods for you to get, optimize or even reset the settings. On this page, you will be guide on how to initialize, optimize or reset the barcode decoding settings.
 
