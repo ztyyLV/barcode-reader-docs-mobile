@@ -30,9 +30,6 @@ Starting from v8.8 of DBR, the SDK also offers **xcframeworks** for iOS developm
 | `DynamsoftBarcodeReader.framework` <br /> `DynamsoftBarcodeReader.xcframework`| The Barcode Reader package, including all barcode decoding related algorithms and APIs. |
 | `DynamsoftCameraEnhancer.framework` <br /> `DynamsoftCameraEnhancer.xcframework`| The Camera Enhancer package, including camera control APIs and frame preprocessing algorithm. |
 
-**Important Note:**
-Dynamsoft Barcode Reader is a dynamic library while the Dynamsoft Camera Enhancer is a static library. This is important to remember when it comes time to embed the framework into your application.
-
 ## Build Your First Application
 
 In this section, let’s see how to create a **HelloWorld** app for reading barcodes from camera video input.
@@ -59,11 +56,9 @@ You can add your downloaded frameworks into your project through the following s
 
 1. Drag and drop the **DynamsoftBarcodeReader** and **DynamsoftCameraEnhancer** frameworks into your Xcode project. Make sure to check Copy items if needed and Create groups to copy the framework into your project's folder.
 
-2. Click on the project then go to  **General --> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for `DynamsoftBarcodeReader` and **Do Not Embed** for `DynamsoftCameraEnhancer`.
+2. Click on the project then go to  **General --> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for `DynamsoftBarcodeReader` and `DynamsoftCameraEnhancer`.
 
-3. Add the required **.tbd/.dylib** file to your project. Go to the **Build Phases** tab of your Xcode project, under **Link Binary with Libraries** section, click `+` button. Search for the file `libc++.tbd`, select it and click Add button. Then the `libc++.tbd` file will be copied to your project.
-
-4. Import the headers in the `ViewController` file.
+3. Import the headers in the `ViewController` file.
 
    Objective-C:
 
@@ -131,8 +126,6 @@ You can add your downloaded frameworks into your project through the following s
         [_dceView setOverlayVisible:true];
         _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
         [_dce open];
-        [_dce addListener:self];
-        [_dce setFrameRate:30];
     }
     ```
 
@@ -148,8 +141,6 @@ You can add your downloaded frameworks into your project through the following s
         dceView.setOverlayVisible(true)
         dce = DynamsoftCameraEnhancer.init(view: dceView)
         dce.open()
-        dce.setFrameRate(30)
-        dce.addListener(self)
     }
     ```
 
@@ -198,7 +189,6 @@ You can add your downloaded frameworks into your project through the following s
         // Please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=installer&package=ios to get extension and more information about license.
         dls.organizationID = @"200001";
         _barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
-        NSError *error = [[NSError alloc] init];
     }
     ```
 
@@ -212,7 +202,6 @@ You can add your downloaded frameworks into your project through the following s
         // Please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=installer&package=ios to get extension and more information about license.
         dls.organizationID = "200001"
         barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-        var error : NSError? = NSError()
     }
     ```
 
@@ -233,28 +222,16 @@ You can add your downloaded frameworks into your project through the following s
         NSString* msg = @"";
         if(error != nil)
         {
-            __weak ViewController *weakSelf = self;
-            if (error.code == -1009) {
-                msg = @"Unable to connect to the public Internet to acquire a license. Please connect your device to the Internet or contact support@dynamsoft.com to acquire an offline license.";
-                [self showResult:@"No Internet"
-                            msg:msg
-                        acTitle:@"Try Again"
-                    completion:^{
-                    [weakSelf configurationDBR];
-                    [weakSelf configurationDCE];
-                    }];
-            }else{
-                msg = error.userInfo[NSUnderlyingErrorKey];
-                if(msg == nil)
-                {
-                    msg = [error localizedDescription];
-                }
-                [self showResult:@"Server license verify failed"
-                            msg:msg
-                        acTitle:@"OK"
-                    completion:^{
-                    }];
+            msg = error.userInfo[NSUnderlyingErrorKey];
+            if(msg == nil)
+            {
+                msg = [error localizedDescription];
             }
+            [self showResult:@"Server license verify failed"
+                        msg:msg
+                    acTitle:@"OK"
+                completion:^{
+                }];
         }
     }
     - (void)textResultCallback:(NSInteger)frameId results:(NSArray<iTextResult *> *)results userData:(NSObject *)userData{
@@ -278,6 +255,7 @@ You can add your downloaded frameworks into your project through the following s
                         msg:msgText
                     acTitle:@"OK"
                 completion:^{
+            
                 }];
         }else{
             return;
@@ -293,55 +271,41 @@ You can add your downloaded frameworks into your project through the following s
         ...
 
         func dlsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
-            var msg:String? = nil
-            if(error != nil)
+        var msg:String? = nil
+        if(error != nil)
+        {
+            let err = error as NSError?
+            msg = err!.userInfo[NSUnderlyingErrorKey] as? String
+            if(msg == nil)
             {
-                let err = error as NSError?
-                if err?.code == -1009 {
-                    msg = "Unable to connect to the public Internet to acquire a license. Please connect your device to the Internet or contact support@dynamsoft.com to acquire an offline license."
-                    showResult("No Internet", msg!, "Try Again") { [weak self] in
-                        self?.configurationDBR()
-                        self?.configurationDCE()
-                    }
-                }else{
-                    msg = err!.userInfo[NSUnderlyingErrorKey] as? String
-                    if(msg == nil)
-                    {
-                        msg = err?.localizedDescription
-                    }
-                    showResult("Server license verify failed", msg!, "OK") {
-                    }
-                }
+                msg = err?.localizedDescription
+            }
+            showResult("Server license verify failed", msg!, "OK") {
             }
         }
-
-        func textResultCallback(_ frameId: Int, results: [iTextResult]?, userData: NSObject?) {
-            if results!.count > 0 {
-                var msgText:String = ""
-                var title:String = "Results"
-                let msg = "Please visit: https://www.dynamsoft.com/customer/license/trialLicense?"
-                for item in results! {
-                    if results!.first!.exception != nil && results!.first!.exception!.contains(msg) {
-                        msgText = "\(msg)product=dbr&utm_source=installer&package=ios to request for 30 days extension."
-                        title = "Exception"
-                        break
-                    }
-                    if item.barcodeFormat_2.rawValue != 0 {
-                        msgText = msgText + String(format:"\nFormat: %@\nText: %@\n", item.barcodeFormatString_2!, item.barcodeText ?? "noResuslt")
-                    }else{
-                        msgText = msgText + String(format:"\nFormat: %@\nText: %@\n", item.barcodeFormatString!,item.barcodeText ?? "noResuslt")
-                    }
+    }
+    
+    /* Obtain the recognized barcode results from the textResultCallback and display the results*/
+    func textResultCallback(_ frameId: Int, results: [iTextResult]?, userData: NSObject?) {
+        if results!.count > 0 {
+            var msgText:String = ""
+            var title:String = "Results"
+            for item in results! {
+                if item.barcodeFormat_2.rawValue != 0 {
+                    msgText = msgText + String(format:"\nFormat: %@\nText: %@\n", item.barcodeFormatString_2!, item.barcodeText ?? "noResuslt")
+                }else{
+                    msgText = msgText + String(format:"\nFormat: %@\nText: %@\n", item.barcodeFormatString!,item.barcodeText ?? "noResuslt")
                 }
-                showResult(title, msgText, "OK") {
-                }
-            }else{
-                return
             }
+            showResult(title, msgText, "OK") {
+            }
+        }else{
+            return
         }
     }
     ```
 
-4. Before we're done, we'll need to connect the Camera Enhancer instance with the Barcode Reader. Please add the following to the `configurationDCE` method
+4. Before we have done, we are going to bind the Camera Enhancer instance with the Barcode Reader. Please add the following to the `configurationDCE` method
 
     Objective-C:
 
@@ -351,9 +315,9 @@ You can add your downloaded frameworks into your project through the following s
         // The _dce is the instance of the Dynamsoft Camera Enhancer.
         // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
         [_barcodeReader setCameraEnhancer:_dce];
-        // Make this setting to get the result. The result will be an object that contains text result and other barcode information.
+        // Make this setting to get the result. The result will be an object that contains text results and other barcode information.
         [_barcodeReader setDBRTextResultDelegate:self userData:nil];
-        [_barcodeReader startScanning error:&error];
+        [_barcodeReader startScanning];
     }
     ```
 
@@ -366,12 +330,13 @@ You can add your downloaded frameworks into your project through the following s
         The _dce is the instance of the Dynamsoft Camera Enhancer.
         The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.*/
         barcodeReader.setCameraEnhancer(dce)
-        barcodeReader.setTextResultCallback(textResultDelegate:self, userData:nil)
+        /*Make this setting to get the result. The result will be an object that contains text result and other barcode information.*/
+        barcodeReader.setDBRTextResultDelegate(self, userData: nil)
         barcodeReader.startScanning()
     }
     ```
 
-5. Lastly, we'll add the `showText` method to display the barcode results on the UI
+5. Lastly, add the `showText` method to display the barcode results on the UI
 
     Objective-C:
 

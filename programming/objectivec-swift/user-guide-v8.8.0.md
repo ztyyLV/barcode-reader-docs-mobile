@@ -26,7 +26,7 @@ If you have downloaded the SDK from the <a href="https://www.dynamsoft.com/barco
 Starting from v8.8 of DBR, the SDK also offers **xcframeworks** for iOS development. **xcframeworks** are slowly replacing **frameworks** as the standard for iOS development, so we are happy to now offer `DynamsoftBarcodeReader.xcframework` and `DynamsoftCameraEnhancer.xcframework` included as part of the SDK. To learn more about **xcframeworks** and what they offer over the regular **framework**, please check out this [article](https://medium.com/trueengineering/xcode-and-xcframeworks-new-format-of-packing-frameworks-ca15db2381d3) by TrueEngineering.
 
 | Framework | Description |
-|---------|-------------|
+| --------- | ----------- |
 | `DynamsoftBarcodeReader.framework` <br /> `DynamsoftBarcodeReader.xcframework`| The Barcode Reader package, including all barcode decoding related algorithms and APIs. |
 | `DynamsoftCameraEnhancer.framework` <br /> `DynamsoftCameraEnhancer.xcframework`| The Camera Enhancer package, including camera control APIs and frame preprocessing algorithm. |
 
@@ -131,8 +131,6 @@ You can add your downloaded frameworks into your project through the following s
         [_dceView setOverlayVisible:true];
         _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
         [_dce open];
-        [_dce addListener:self];
-        [_dce setFrameRate:30];
     }
     ```
 
@@ -148,8 +146,6 @@ You can add your downloaded frameworks into your project through the following s
         dceView.setOverlayVisible(true)
         dce = DynamsoftCameraEnhancer.init(view: dceView)
         dce.open()
-        dce.setFrameRate(30)
-        dce.addListener(self)
     }
     ```
 
@@ -198,7 +194,6 @@ You can add your downloaded frameworks into your project through the following s
         // Please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=installer&package=ios to get extension and more information about license.
         dls.organizationID = @"200001";
         _barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
-        NSError *error = [[NSError alloc] init];
     }
     ```
 
@@ -212,7 +207,6 @@ You can add your downloaded frameworks into your project through the following s
         // Please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=installer&package=ios to get extension and more information about license.
         dls.organizationID = "200001"
         barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-        var error : NSError? = NSError()
     }
     ```
 
@@ -346,7 +340,7 @@ You can add your downloaded frameworks into your project through the following s
     }
     ```
 
-4. Before we're done, we'll need to connect the Camera Enhancer instance with the Barcode Reader. Please add the following to the `configurationDCE` method
+4. Before we have done, we will bind the Camera Enhancer instance with the Barcode Reader. Please add the following to the `configurationDCE` method
 
     Objective-C:
 
@@ -359,7 +353,7 @@ You can add your downloaded frameworks into your project through the following s
         // This cameraInstance is the instance of the Dynamsoft Camera Enhancer.
         // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
         para.cameraInstance = _dce;
-        // Make this setting to get the result. The result will be an object that contains text result and other barcode information.
+        // Make this setting to get the result. The result will be an object that contains text results and other barcode information.
         para.textResultDelegate = self;
         // Bind the Camera Enhancer instance to the Barcode Reader instance.
         [_barcodeReader setCameraEnhancerPara:para];
@@ -382,7 +376,7 @@ You can add your downloaded frameworks into your project through the following s
     }
     ```
 
-5. Lastly, we'll add the `showText` method to display the barcode results on the UI
+5. Lastly, add the `showText` method to display the barcode results on the UI
 
     Objective-C:
 
