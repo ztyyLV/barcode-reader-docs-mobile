@@ -33,11 +33,11 @@ The preset templates can be update via method [`updateRuntimeSettings`](api-refe
 
 ### Initialize with Customized Template
 
-Feel free to contact us when:
+Dynamsoft Technical Support can help you on providing a customized barcode decoding template. Feel free to <a href="https://www.dynamsoft.com/Company/Contact.aspx" target="_blank">contact us</a> when:
 
-- Performance is not satisfying.
+- The performance is not satisfying.
 - The templates are puzzling
-- Specific requirements on performance
+- You have specific requirements on the performance
 
 If you have confirmed the following information, we will be able to provide an even more powerful template.
 
