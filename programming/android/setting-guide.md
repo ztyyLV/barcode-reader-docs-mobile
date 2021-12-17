@@ -39,13 +39,12 @@ Dynamsoft Technical Support can help you on providing a customized barcode decod
 - The templates are puzzling
 - You have specific requirements on the performance
 
-If you have confirmed the following information, we will be able to provide an even more powerful template.
+The following information will help us provide you with a better service:
 
 - The targeting barcode formats.
-- Image or video.
 - The device information (hardware model, software version).
 - The barcode scanning distance.
-- Sample image for the usage scenarios.
+- Sample image or video for the usage scenarios.
 
 ## Optimize Settings
 
