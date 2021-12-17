@@ -14,7 +14,7 @@ noTitleIndex: true
 
 ## Initialize Settings
 
-You can initialize the parameter settings for your Android barcode reader with a template or simply start with the default settings. When template is added to the project, you can still add additional settings to the project to further optimize the performance of the barcode reader to cover your requirements.
+You can initialize the parameter settings for your Android barcode reader with a template or simply start with the default settings. When the template is added to the project, you can still add additional settings to the project to further optimize the performance of the barcode reader to cover your requirements.
 
 ### Initialize with Preset Template
 
@@ -22,7 +22,7 @@ The preset templates are listed as follow:
 
 | Template Name | Description |
 | ------------- | ----------- |
-| `DEFAULT` | Reset to defaut barcode decoding parameters. |
+| `DEFAULT` | Reset to default barcode decoding parameters. |
 | `VIDEO_SINGLE_BARCODE` | Switch to single barcode decoding template. The parameter settings will be optimized to reach a higher speed on processing single barcode. |
 | `VIDEO_SPEED_FIRST` | Switch to speed first template for video streaming barcode decoding. The barcode processing speed will be improved for the majority of video barcode decoding scenarios. |
 | `IMAGE_SPEED_FIRST` | Switch to speed first template for image barcode decoding. The barcode processing speed will be improved for the majority of video barcode decoding scenarios. |
@@ -31,29 +31,25 @@ The preset templates are listed as follow:
 
 The preset templates can be update via method [`updateRuntimeSettings`](api-reference/primary-parameter-and-runtime-settings-basic.md#with-a-preset-template). When a new template is selected, all the previous barcode parameter settings are reset to the newly select template values.
 
-**Remarks**
-
-The templates are designed to improve the performance for general usage scenarios. To reach the best performance for your usage scenarios, additional settings are required. You can read the Optimize Settings section on this page to make the settings or contact us for a customized template.
-
 ### Initialize with Customized Template
 
 Feel free to contact us when:
 
-- Performance not satisfying.
+- Performance is not satisfying.
 - The templates are puzzling
 - Specific requirements on performance
 
-If you have confirmed the following informations, we will be able to provide an even more powerful template.
+If you have confirmed the following information, we will be able to provide an even more powerful template.
 
 - The targeting barcode formats.
 - Image or video.
-- The device infomation (hardware model, software version).
+- The device information (hardware model, software version).
 - The barcode scanning distance.
 - Sample image for the usage scenarios.
 
 ## Optimize Settings
 
-Modes parameters and other settings like barcode formats are available in the `PublicRuntimeSettings` class. You can use the following steps to change the settings. When you update the settings, only the newly configured settings will be changed and the other settings will remains the same.
+The templates are designed to simplify the parameter settings. It might not cover the requirements. Modes parameters and other settings like barcode formats are available in the `PublicRuntimeSettings` class. You can use the following steps to change the settings. When you update the settings, only the newly configured settings will be changed and the other settings will remain the same.
 
 **Step 1. getRuntimeSettings**
 
@@ -75,7 +71,7 @@ PublicRuntimeSettings runtimeSettings = barcodeReader.getRuntimeSettings();
 // You can specify the barcode formats via runtime settings.
 runtimeSettings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE;
 
-// LocalizationModes is modes parameter that controls how the barcodes will be located.
+// LocalizationModes is the modes parameter that controls how the barcodes will be located.
 // Localization mode "scan directly" and "connected blocks" are enabled here.
 // You can enable at most 8 modes for each modes parameter.
 runtimeSettings.localizationModes = new int[]{EnumLocalizationMode.LM_SCAN_DIRECTLY,EnumLocalizationMode.LM_CONNECTED_BLOCKS};
