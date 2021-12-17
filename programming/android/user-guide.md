@@ -264,24 +264,12 @@ There are two ways to include the SDK into your project - local binary dependenc
    }
    ```
 
-You can download the complete source code [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld).
-
 ### Build and Run the Project
 
 1. Select the device that you want to run your app on from the target device drop-down menu in the toolbar.
 
 2. Click the **Run app** button, then Android Studio installs your app on your connected device and starts it.
 
-## Further Barcode Reading Settings
+You can download the complete source code here:
 
-### Decoding Methods
-
-Regular barcode reading settings and modes parameter settings are available via [`PublicRuntimeSettings`](api-reference/auxiliary-PublicRuntimeSettings.md) and JSON templates. The following typical settings you might find helpful:
-
-- [Specify barcode formats and the expected barcode count]({{ site.android }}samples/general.html#specify-barcode-format-and-barcode-count)
-- [Specify the scan region]({{ site.android }}samples/general.html#specify-the-scan-region)
-- [Speed first barcode reading settings]({{ site.android }}samples/speed.html)
-- [Read-rate first barcode reading settings]({{ site.android }}samples/read-rate.html)
-- [Accuracy first barcode reading settings]({{ site.android }}samples/accuracy.html)
-
-For more scanning settings guide, please check the [How To Guide]({{site.introduction}}how-to-guide/){:target="_blank"} section.
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld" target="_blank">Android source code</a>

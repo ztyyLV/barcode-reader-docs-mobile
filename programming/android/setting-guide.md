@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - Settings Guide
-description: This is the settings guide of Dynamsoft Barcode Reader for Android SDK.
+title: Dynamsoft Barcode Reader for Android - Advanced Usage
+description: This is the Advanced Usage of Dynamsoft Barcode Reader for Android SDK.
 keywords: Guide, Android, Settings
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Basic Practice
+# Advanced Usage
 
 `PublicRuntimeSettings` is the struct that inclueds the majority of available barcode decoding settings. There is a series of methods for you to get, optimize or even reset the settings. On this page, you will be guide on how to initialize, optimize or reset the barcode decoding settings.
 
@@ -33,19 +33,26 @@ The preset templates can be update via method [`updateRuntimeSettings`](api-refe
 
 ### Initialize with Customized Template
 
-Feel free to contact us when:
+Dynamsoft Technical Support can help you on providing a customized barcode decoding template. Feel free to <a href="https://www.dynamsoft.com/Company/Contact.aspx" target="_blank">contact us</a> when:
 
-- Performance is not satisfying.
+- The performance is not satisfying.
 - The templates are puzzling
-- Specific requirements on performance
+- You have specific requirements on the performance
 
-If you have confirmed the following information, we will be able to provide an even more powerful template.
+The template will be a JSON data that can be uploaded via method `initRuntimeSettingsWithFile` and `initRuntimeSettingsWithString`. Similar with the preset templates, you can add additional settings to optimize the performance. The following information will help us provide you with a better template.
 
 - The targeting barcode formats.
-- Image or video.
 - The device information (hardware model, software version).
 - The barcode scanning distance.
-- Sample image for the usage scenarios.
+- Sample image or video for the usage scenarios.
+
+```java
+BarcodeReader reader = new BarcodeReader();
+// Input a stringified JSON data in the method to initialize the template.
+// You can set whether to inherit or overwrite the previous settings.
+reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", EnumConflictMode.CM_OVERWRITE);
+reader.destroy();
+```
 
 ## Optimize Settings
 
