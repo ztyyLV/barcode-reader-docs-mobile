@@ -46,6 +46,14 @@ The template will be a JSON data that can be uploaded via method `initRuntimeSet
 - The barcode scanning distance.
 - Sample image or video for the usage scenarios.
 
+```java
+BarcodeReader reader = new BarcodeReader();
+// Input a stringified JSON data in the method to initialize the template.
+// You can set whether to inherit or overwrite the previous settings.
+reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", EnumConflictMode.CM_OVERWRITE);
+reader.destroy();
+```
+
 ## Optimize Settings
 
 The templates are designed to simplify the parameter settings. It might not cover the requirements. Modes parameters and other settings like barcode formats are available in the `PublicRuntimeSettings` class. You can use the following steps to change the settings. When you update the settings, only the newly configured settings will be changed and the other settings will remain the same.
