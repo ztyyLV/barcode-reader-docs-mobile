@@ -377,13 +377,9 @@ You can download the complete source code here:
 
 ## Further Barcode Reading Settings
 
-Regular barcode reading settings and modes parameter settings are available via [`PublicRuntimeSettings`](api-reference/auxiliary-iPublicRuntimeSettings.md) and JSON templates. The following typical settings you might find helpful:
+You can initialize the barcode decoding settings via a template or use the [`PublicRuntimeSettings`](api-reference/auxiliary-iPublicRuntimeSettings.md). The following page will introduce how to use the templates and PublucRuntimeSettings to make the barcode decoding settings.
 
-- [Specify the barcode formats and the expected barcode count]({{ site.oc }}samples/general.html#specify-barcode-format-and-barcode-count)
-- [Specify the Scan Region]({{ site.oc }}samples/general.html#specify-the-scan-region)
-- [Speed first barcode reading settings]({{ site.oc }}samples/speed.html)
-- [Read-rate first barcode reading settings]({{ site.oc }}samples/read-rate.html)
-- [Accuracy first barcode reading settings]({{ site.oc }}samples/accuracy.html)
+- [Basic Practice](setting-guide.md)
 
 For more scanning settings guide, please check the [How To Guide]({{site.introduction}}how-to-guide/){:target="_blank"} section.
 
