@@ -375,14 +375,6 @@ You can download the complete source code here:
 - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC" target="_blank">Objective-C source code</a>
 - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/HelloWorldSwift" target="_blank">Swift source code</a>
 
-## Further Barcode Reading Settings
-
-You can initialize the barcode decoding settings via a template or use the [`PublicRuntimeSettings`](api-reference/auxiliary-iPublicRuntimeSettings.md). The following page will introduce how to use the templates and PublucRuntimeSettings to make the barcode decoding settings.
-
-- [Basic Practice](setting-guide.md)
-
-For more scanning settings guide, please check the [How To Guide]({{site.introduction}}how-to-guide/){:target="_blank"} section.
-
 ## Known Issues
 
 ### "dyld: Library not loaded" error on app initialization
@@ -433,7 +425,3 @@ done
 ```
 
 The script looks through your built application's **Frameworks** folder and make sure only the architectures you're building for are the only ones included in each framework. This way, you don't have to worry about dealing with those arcitectures during the build process.
-
-### RegionDefinition is not coming out as expected on mobile
-
-RegionDefinition works a little differently on mobile, and it's best to refer to the [Specify the Scan Region](samples/general.md#specify-the-scan-region) section of the General Settings page.
