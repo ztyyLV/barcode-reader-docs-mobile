@@ -9,7 +9,7 @@ noTitleIndex: true
 ---
 
 
-# User Guide for Android Edition
+# Getting Started with Android
 
 ## Requirements
 
