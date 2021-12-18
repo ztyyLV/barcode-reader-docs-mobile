@@ -8,7 +8,7 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Advanced Usage
+# Configure Runtime Settings
 
 `iPublicRuntimeSettings` is the struct that includes the majority of available barcode decoding settings. There is a series of methods for you to get, optimize or even reset the settings. On this page, you will be guided on how to initialize, optimize or reset the barcode decoding settings.
 
@@ -46,6 +46,11 @@ The template will be a JSON data that can be uploaded via method `initRuntimeSet
 - The barcode scanning distance.
 - Sample image or video for the usage scenarios.
 
+```objc
+NSError __autoreleasing * _Nullable error;
+[barcodeReader initRuntimeSettingsWithString:@"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}" conflictMode:EnumConflictModeOverwrite error:&error];
+```
+
 ## Optimize Settings
 
 The templates are designed to simplify the parameter settings. It might not cover the requirements. Modes parameters and other settings like barcode formats are available in the `iPublicRuntimeSettings` class. You can use the following steps to change the settings. When you update the settings, only the newly configured settings will be changed and the other settings will remain the same.
@@ -64,7 +69,7 @@ The `runtimeSettings` you got from `getRuntimeSettings` is an object of `iPublic
 
 Since you have got the `runtimeSettings`, you can add the following code to change the settings in the object. Here, `barcodeFormats` and `LocalizationModes` will be illustrated as an example for optimizing the settings.
 
-```java
+```objc
 iPublicRuntimeSettings *runtimeSettings = [_barcodeReader getRuntimeSettings:&settingsError];
 
 // You can specify the barcode formats via runtime settings.
@@ -88,4 +93,4 @@ runtimeSettings.LocalizationModes = @[@(EnumLocalizationModeScanDirectly), @(Enu
 [_barcodeReader updateRuntimeSettings:runtimeSettings error:&settingsError];
 ```
 
-Please note, the upload of the settings will fail if there is an invalid value in the newly added settings, which means none of the settings will be updated.
+Please note, when there exists an invalid value in the `runtimeSetting` object you want to update, none of the settings are updated.

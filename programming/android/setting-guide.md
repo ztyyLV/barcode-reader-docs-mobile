@@ -42,7 +42,7 @@ Dynamsoft Technical Support can help you on providing a customized barcode decod
 - The templates are puzzling
 - You have specific requirements on the performance
 
-The template will be a JSON data that can be uploaded via method `initRuntimeSettingsWithFile` and `initRuntimeSettingsWithString`. Similar to the preset templates, you can add additional settings to optimize the performance. The following information will help us provide you with a better template.
+The template will be a JSON file/string that can be uploaded via method `initRuntimeSettingsWithFile` and `initRuntimeSettingsWithString`. Similar to the preset templates, you can add additional settings to optimize the performance. The following information will help us provide you with a better template.
 
 - The targeting barcode formats.
 - The device information (hardware model, software version).
@@ -100,10 +100,3 @@ reader.updateRuntimeSettings(runtimeSettings);
 ```
 
 Please note, when there exists an invalid value in the `runtimeSetting` object you want to update, none of the settings are updated.
-
-## Next Steps
-
-- Optimize the performance
-  - How to boost speed
-  - How to boost read-rate
-  - How to boost accuracy

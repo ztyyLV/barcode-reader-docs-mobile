@@ -284,9 +284,5 @@ You can download the complete source code here:
 From this page, you have learned how to create a simple video barcode decoding app. In the next steps, the following pages will help you on adding configurations to enhance your barcode reader.
 
 - [Configure Runtime Settings](setting-guide.md)
-- Optimize performance
-  - How to Boost Speed
-  - How to Boost Read-Rate
-  - How to Boost Accuracy
 - Additional Readings
   - <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "blank">Barcode Formats</a>
