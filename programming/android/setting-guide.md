@@ -8,11 +8,10 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Update Settings
+# Configure Runtime Settings
 
-The follow article will help you understand the content of this page.
-
-- [Getting Started](user-guide.md)
+>Note:
+>- It is recommended to complete the [`Getting Started`](user-guide.md) page before you start configuring the runtime settings.
 
 `PublicRuntimeSettings` is the struct that includes the majority of available barcode decoding settings. There is a series of methods for you to get, optimize or even reset the settings. On this page, you will be guided on how to initialize, optimize or reset the barcode decoding settings.
 
@@ -100,4 +99,11 @@ runtimeSettings.localizationModes = new int[]{EnumLocalizationMode.LM_SCAN_DIREC
 reader.updateRuntimeSettings(runtimeSettings);
 ```
 
-Please notes, the upload of the settings will fail if there is an invalid value in the newly added settings, which means none of the settings will be updated.
+Please note, when there exists an invalid value in the `runtimeSetting` object you want to update, none of the settings are updated.
+
+## Next Steps
+
+- Optimize the performance
+  - How to boost speed
+  - How to boost read-rate
+  - How to boost accuracy
