@@ -8,9 +8,12 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Advanced Usage
+# Configure Runtime Settings
 
-`PublicRuntimeSettings` is the struct that inclueds the majority of available barcode decoding settings. There is a series of methods for you to get, optimize or even reset the settings. On this page, you will be guide on how to initialize, optimize or reset the barcode decoding settings.
+>Note:
+>- It is recommended to complete the [`Getting Started`](user-guide.md) page before you start configuring the runtime settings.
+
+`PublicRuntimeSettings` is the struct that includes the majority of available barcode decoding settings. There is a series of methods for you to get, optimize or even reset the settings. On this page, you will be guided on how to initialize, optimize or reset the barcode decoding settings.
 
 ## Initialize Settings
 
@@ -39,7 +42,7 @@ Dynamsoft Technical Support can help you on providing a customized barcode decod
 - The templates are puzzling
 - You have specific requirements on the performance
 
-The template will be a JSON data that can be uploaded via method `initRuntimeSettingsWithFile` and `initRuntimeSettingsWithString`. Similar with the preset templates, you can add additional settings to optimize the performance. The following information will help us provide you with a better template.
+The template will be a JSON file/string that can be uploaded via method `initRuntimeSettingsWithFile` and `initRuntimeSettingsWithString`. Similar to the preset templates, you can add additional settings to optimize the performance. The following information will help us provide you with a better template.
 
 - The targeting barcode formats.
 - The device information (hardware model, software version).
@@ -86,7 +89,7 @@ runtimeSettings.localizationModes = new int[]{EnumLocalizationMode.LM_SCAN_DIREC
 
 **Step 3. updateRuntimeSettings**
 
-When you have alreay completed the settings, you can update the settings via method `updateRuntimeSettings`. All the settings you have configured will be updated to the barcode reader and the other settings will remains the same.
+When you have already completed the settings, you can update the settings via the method `updateRuntimeSettings`. All the settings you have configured will be updated to the barcode reader and the other settings will remain the same.
 
 ```java
 PublicRuntimeSettings runtimeSettings = barcodeReader.getRuntimeSettings();
@@ -96,4 +99,4 @@ runtimeSettings.localizationModes = new int[]{EnumLocalizationMode.LM_SCAN_DIREC
 reader.updateRuntimeSettings(runtimeSettings);
 ```
 
-Please notes, the upload of the settings will fail if there is an invalid value in the newly added settings, which means none of the settings will be updated.
+Please note, when there exists an invalid value in the `runtimeSetting` object you want to update, none of the settings are updated.

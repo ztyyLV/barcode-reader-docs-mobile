@@ -11,7 +11,7 @@ pageStartVer: 8.0
 
 # How to Upgrade
 
-## From x8.0 to 8.x
+## From Version 8.0 to 8.x
 
 ### Update the SDK
 
@@ -59,11 +59,11 @@ import com.dynamsoft.dbr.TextResult;
 import com.dynamsoft.dbr.TextResultCallback;
 ```
 
-## From v7.x to 8.x
+## From Version 7.x to 8.x
 
 You need to replace the old `DynamsoftBarcodeReaderAndroid.aar` file with the one in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
 
-Your previous SDK license for version 7.x is not compatible with the version 8.x. Please [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to upgrade your license.
+Your previous SDK license for version 7.x is not compatible with version 8.x. Please [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to upgrade your license.
 
 In v8.0, we introduced a new license tracking mechanism, <a href="https://www.dynamsoft.com/license-tracking/docs/about/index.html" target="_blank">License 2.0</a>.
 
@@ -73,8 +73,8 @@ After you upgraded your license to version 8.x:
 
 - If you were using `initLicense`, please replace the old license with the newly generated one.
 
-- If you were using `initLicenseFromServer` to connect to Dynamsoft server for license verification, then no need to change the license key. But please make sure the device has Internet connection.
+- If you were using `initLicenseFromServer` to connect to the Dynamsoft server for license verification, then no need to change the license key. But please make sure the device has an Internet connection.
 
-## From v6.x to 8.x
+## From Version 6.x to 8.x
 
 We made some structural updates in the new version. To upgrade from 6.x to 8.x, we recommend you to review our sample code and re-write the barcode scanning module.

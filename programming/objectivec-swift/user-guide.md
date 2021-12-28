@@ -9,7 +9,7 @@ noTitleIndex: true
 ---
 
 
-# User Guide for Objective-C & Swift
+# Getting Started with iOS
 
 ## Requirements
 
@@ -374,6 +374,14 @@ You can download the complete source code here:
 
 - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC" target="_blank">Objective-C source code</a>
 - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/HelloWorldSwift" target="_blank">Swift source code</a>
+
+## Next Steps
+
+From this page, you have learned how to create a simple video barcode decoding app. In the next steps, the following pages will help you on adding configurations to enhance your barcode reader.
+
+- [Configure Runtime Settings](setting-guide.md)
+- Additional Readings
+  - <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "blank">Barcode Formats</a>
 
 ## Known Issues
 

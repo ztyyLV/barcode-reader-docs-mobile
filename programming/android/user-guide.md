@@ -9,7 +9,7 @@ noTitleIndex: true
 ---
 
 
-# User Guide for Android Edition
+# Getting Started with Android
 
 ## Requirements
 
@@ -72,7 +72,11 @@ There are two ways to include the SDK into your project - local binary dependenc
    import com.dynamsoft.dce.*;
    ```
 
-#### Remote Binary Dependency
+<div class="fold-panel-prefix"></div>
+
+#### Remote Binary Dependency <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
 
 1. Open the file `HelloWorld\app\build.gradle` and add the remote repository:
 
@@ -106,6 +110,8 @@ There are two ways to include the SDK into your project - local binary dependenc
    import com.dynamsoft.dbr.*;
    import com.dynamsoft.dce.*;
    ```
+
+<div class="fold-panel-end"></div>
 
 ### Initialize Camera Module
 
@@ -143,7 +149,6 @@ There are two ways to include the SDK into your project - local binary dependenc
    ```java
    BarcodeReader reader;
    reader = new BarcodeReader();
-   
    ```
 
 2. Initialize the license.
@@ -273,3 +278,11 @@ There are two ways to include the SDK into your project - local binary dependenc
 You can download the complete source code here:
 
 - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld" target="_blank">Android source code</a>
+
+## Next Steps
+
+From this page, you have learned how to create a simple video barcode decoding app. In the next steps, the following pages will help you on adding configurations to enhance your barcode reader.
+
+- [Configure Runtime Settings](setting-guide.md)
+- Additional Readings
+  - <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "blank">Barcode Formats</a>
