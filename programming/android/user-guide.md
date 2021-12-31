@@ -285,4 +285,4 @@ From this page, you have learned how to create a simple video barcode decoding a
 
 - [Configure Runtime Settings](setting-guide.md)
 - Additional Readings
-  - <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "blank">Barcode Formats</a>
+  - <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "_blank">Barcode Formats</a>
