@@ -34,6 +34,6 @@ try {
     //Here we use decodeFile as example.
     reader.decodeFile("Your file path","Template name");
 } catch (BarcodeReaderException e) {
-    e.getErrorCode();
+    Log.i("Decode", "onCreate: The error code for decode file is: "+e.getErrorCode());
 }
 ```
