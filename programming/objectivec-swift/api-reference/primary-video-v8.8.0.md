@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# Video Methods
+# Video Decoding Methods
 
 | Method               | Description |
 |----------------------|-------------|

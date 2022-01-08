@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# Video Methods
+# Video Decoding Methods
 
 | Method               | Description |
 |----------------------|-------------|
@@ -24,7 +24,7 @@ noTitleIndex: true
 Bind a `Dynamsoft Camera Enhancer` instance to the Barcode Reader. `Dynamsoft Camera Enhancer` is designed for video streaming processing scenarios. It can help the Barcode Reader to acquire video frames continuously for video streaming barcode decoding.
 
 ```objc
--(void)setCameraEnhancer:(id _Nullable)dce;
+- (void)setCameraEnhancer:(DynamsoftCameraEnhancer* _Nonnull)cameraInstance;
 ```
 
 **Parameters**
