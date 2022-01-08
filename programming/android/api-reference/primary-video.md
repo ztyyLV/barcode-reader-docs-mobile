@@ -9,7 +9,7 @@ pageStartVer: 8.6
 ---
 
 
-# Camera Methods
+# Video Decoding Methods
 
 | Method | Description |
 |--------|-------------|
