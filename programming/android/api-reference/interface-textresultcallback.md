@@ -22,10 +22,10 @@ interface com.dynamsoft.dbr.TextResultCallback
 
 ## textResultCallback
 
-The abstract class for users to get text result from the callback.
+The abstract class for users to get text results from the callback.
 
 ```java
-void textResultCallback(int var1, TextResult[] var2, Object var3);
+void textResultCallback(int frameId, TextResult[] results, Object userData);
 ```
 
 **Parameters**
