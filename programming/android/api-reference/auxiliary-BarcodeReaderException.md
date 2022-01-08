@@ -31,8 +31,9 @@ This method returns the DBR error code. Please view more about the error code in
 
 ```java
 try {
-    //Do something here
+    //Here we use decodeFile as example.
+    reader.decodeFile("Your file path","Template name");
 } catch (BarcodeReaderException e) {
-    e.printStackTrace();
+    e.getErrorCode();
 }
 ```
