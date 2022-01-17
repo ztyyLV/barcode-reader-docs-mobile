@@ -52,7 +52,7 @@ You can add Dynamsoft Barcode Reader like below:
    Please replace `{version-number}` with the correct version number, e.g.
 
    ```groovy
-   implementation 'com.dynamsoft:dynamsoftbarcodereader:8.1.2@aar'
+   implementation 'com.dynamsoft:dynamsoftbarcodereader:{version-number}@aar'
    ```
 
 ## Getting Started: HelloWorld
