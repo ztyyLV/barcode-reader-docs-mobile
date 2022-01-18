@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - User Guide v8.4
+title: Dynamsoft Barcode Reader for Android - User Guide
 description: This is the user guide of Dynamsoft Barcode Reader for Android SDK.
-keywords: user guide v8.4, android
+keywords: user guide, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
@@ -84,8 +84,8 @@ You can add Dynamsoft Barcode Reader by the following steps:
    Please replace `{version-number}` with the correct version number, e.g.
 
    ```groovy
-   implementation 'com.dynamsoft:dynamsoftbarcodereader:8.4.1@aar'
-   implementation 'com.dynamsoft:dynamsoftcameraenhancer:1.0.1@aar'
+   implementation 'com.dynamsoft:dynamsoftbarcodereader:8.6.0@aar'
+   implementation 'com.dynamsoft:dynamsoftcameraenhancer:1.0.3@aar'
    ```
 
 ## Build Your First Application
