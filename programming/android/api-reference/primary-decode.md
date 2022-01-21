@@ -33,11 +33,24 @@ TextResult[] decodeFile(String fileFullPath, String templateName) throws Barcode
 **Parameters**
 
 `fileFullPath`: A string defining the file path. It supports BMP, TIFF, JPG, PNG and PDF files.  
-`templateName`: The template name.
+`templateName`: The template name. When you upload settings from JSON String or file, you can add a template name for each group of settings. The template settings will be recorded even if they are overwritten. When using Dynamsoft decode methods, you can specify a template name to apply a previously set template. Otherwise, the currently activated template will take over the barcode decoding.
+
+```json
+// Template name example.
+// The "IP1" is the template name of this template. 
+{
+    "Version": "3.0",
+    "ImageParameter": {                   
+        "Name": "IP1",
+        "Description": "This is an imageParameter", 
+        "BarcodeFormatIds": ["BF_ALL"]
+     }
+}
+```
 
 **Return Value**
 
-All barcode text results decoded successfully.
+All successfully decoded barcode results.
 
 **Exceptions**
 
@@ -48,7 +61,8 @@ All barcode text results decoded successfully.
 ```java
 BarcodeReader reader = new BarcodeReader();
 /*Init DBR license before decoding*/
-TextResult[] result = reader.decodeFile("your file path", "");
+/*Read external storage permission is required when decoding from a file*/
+TextResult[] result = reader.decodeFile(Environment.getExternalStorageDirectory().toString()+"your file path", "IP1");
 reader.destroy();
 ```
 
