@@ -83,7 +83,7 @@ TextResult[] decodeFileInMemory(byte[] fileBytes, String templateName) throws Ba
 
 **Return Value**
 
-All barcode text results decoded successfully.
+All successfully decoded barcode results.
 
 **Exceptions**
 
@@ -112,7 +112,7 @@ TextResult [] decodeFileInMemory(InputStream fileStream, String templateName) th
 
 **Return Value**
 
-All barcode text results decoded successfully.
+All successfully decoded barcode results.
 
 **Exceptions**
 
@@ -147,25 +147,71 @@ TextResult[] decodeBuffer(byte[] buffer, int width, int height, int stride, int 
 
 **Return Value**
 
-All barcode text results decoded successfully.  
+All successfully decoded barcode results.
 
 **Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
+There are several approaches for you to get a buffered image.
+
+### Get Buffered Images from DCEFrame
+
+You can import CameraEnhancer to acquire buffered video frames.
+
 **Code Snippet**
 
 ```java
+/*You can get frames from frame output call back if you import dynamsoft camera enhancer package.*/
+/*You can get all the required parameters of decodeBuffer from DCEFrame.*/
+import com.dynamsoft.dce.CameraEnhancer;
+
 BarcodeReader reader = new BarcodeReader();
-/*Init DBR license before decoding*/
-byte[] bufferBytes;
-int iWidth = 0;
-int iHeight = 0;
-int iStride = 0;
-int format;
-GetBufferFromFile("your file path", bufferBytes, iWidth, iHeight, iStride, format);
-TextResult[] result = reader.decodeBuffer(bufferBytes, iWidth,  iHeight, iStride, format, "");
-reader.destroy();
+mCameraEnhancer.addListener(new DCEFrameListener() {
+  @Override
+  public void frameOutputCallback(DCEFrame dceFrame, long l) {
+    try {
+      TextResult[] results = reader.decodeBuffer(dceFrame.getImageData(),dceFrame.getWidth(),dceFrame.getHeight(),dceFrame.getStrides()[0],dceFrame.getPixelFormat(),"Put a template name here if you want to specify a previously set runtime setting template.");
+    } catch (BarcodeReaderException e) {
+      e.printStackTrace();
+    }
+  }
+});
+```
+
+### Get Buffered Images from ImageReader
+
+When you are using Android Camera2, you can get video frames from ImageReader.
+
+**Code Snippet**
+
+```java
+previewReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListener() {
+  @Override
+  public void onImageAvailable(ImageReader reader) {
+    Image mImage = reader.acquireLatestImage();
+    ByteBuffer bufferY = mImage.getPlanes()[0].getBuffer();
+    int strideY = mImage.getPlanes()[0].getRowStride() / mImage.getPlanes()[0].getPixelStride();
+    ByteBuffer bufferU = mImage.getPlanes()[1].getBuffer();
+    int strideU = mImage.getPlanes()[1].getRowStride() / mImage.getPlanes()[1].getPixelStride();
+    ByteBuffer bufferV = mImage.getPlanes()[2].getBuffer();
+    int strideV = mImage.getPlanes()[2].getRowStride() / mImage.getPlanes()[2].getPixelStride();
+    int padingY = mImage.getPlanes()[0].getRowStride() - mImage.getWidth();
+    int padingU = mImage.getPlanes()[1].getRowStride() - mImage.getWidth();
+    byte[] newData = new byte[bufferY.limit()];
+    newData = new byte[bufferY.limit() + bufferU.limit() + 1 + padingY + padingU];
+    bufferV.get(newData, bufferY.limit() + padingY, 1);
+    bufferU.get(newData, bufferY.limit() + padingY + 1, bufferU.limit());
+    bufferY.get(newData, 0, bufferY.limit());
+    int[] strides = new int[]{strideY, strideU, strideV};
+
+    try {
+      TextResult[] results = reader.decodeBuffer(newData, strideY, mImage.getHeight(), strides, 3, "Put a template name here if you want to specify a previously set runtime setting template.");
+    } catch (BarcodeReaderException e) {
+      e.printStackTrace();
+    }
+  }
+},handler);
 ```
 
 ## decodeBase64String
@@ -183,7 +229,7 @@ TextResult[] decodeBase64String(String base64, String templateName) throws Barco
 
 **Return Value**
 
-All barcode text results decoded successfully.
+All successfully decoded barcode results.
 
 **Exceptions**
 
@@ -213,7 +259,7 @@ TextResult[] decodeBufferedImage(Bitmap image, String templateName) throws Barco
 
 **Return Value**
 
-All barcode text results decoded successfully.  
+All successfully decoded barcode results.
 
 **Exceptions**
 
