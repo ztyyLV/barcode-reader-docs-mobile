@@ -63,7 +63,7 @@ All successfully decoded barcode results.
 
 There are several approaches for you to get a buffered image.
 
-### Get Buffered Images from DCEFrame
+### Get ImageData from DCEFrame
 
 You can import CameraEnhancer to acquire buffered video frames from `frameOutputCallback` or `videoBuffer` of DCE.
 
@@ -87,7 +87,7 @@ mCameraEnhancer.addListener(new DCEFrameListener() {
 });
 ```
 
-### Get Buffered Images from ImageReader
+### Get ImageData from Android Camera2
 
 When you are using Android Camera2, you can get video frames from ImageReader.
 

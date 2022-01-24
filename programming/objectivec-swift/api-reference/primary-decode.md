@@ -57,7 +57,7 @@ Decode barcodes from the memory buffer containing image pixels in a defined form
 
 All successfully decoded barcode text results.
 
-### Decode from a DCEFrame
+### Get ImageData from DCEFrame
 
 If you have imported **DynamsoftCameraEnhancer.framework**, you can get video frames from the `frameOutputCallback`. DCEFrame object contains all required parameters of decodeBuffer method.
 
@@ -81,7 +81,7 @@ func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval){
 }
 ```
 
-### Decode from captureOutput
+### Get ImageData from CaptureOutput
 
 If you are acquiring video frames from `captureOutput` callback, you can use the following code to extract the required parameters from `sampleBuffer`.
 
