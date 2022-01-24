@@ -206,7 +206,7 @@ previewReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListen
     int[] strides = new int[]{strideY, strideU, strideV};
 
     try {
-      TextResult[] results = reader.decodeBuffer(newData, strideY, mImage.getHeight(), strides, 3, "Put a template name here if you want to specify a previously set runtime setting template.");
+      TextResult[] results = reader.decodeBuffer(newData, strideY, mImage.getHeight(), strideY, 3, "Put a template name here if you want to specify a previously set runtime setting template.");
     } catch (BarcodeReaderException e) {
       e.printStackTrace();
     }
