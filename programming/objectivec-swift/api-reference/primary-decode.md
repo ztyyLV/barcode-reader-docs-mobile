@@ -13,9 +13,9 @@ noTitleIndex: true
   | Method               | Description |
   |----------------------|-------------|
   | [`decodeFileWithName`](#decodefilewithname) | Decode barcodes from a specified image file. |
-  | [`decodeImage`](#decodeImage) | Decode barcodes from an image file in memory. |
-  | [`decodeBuffer`](#decodeBuffer) | Decode barcodes from raw buffer. |
-  | [`decodeBase64`](#decodeBase64) | Decode barcodes from a base64 encoded string. |
+  | [`decodeImage`](#decodeimage) | Decode barcodes from an image file in memory. |
+  | [`decodeBuffer`](#decodebuffer) | Decode barcodes from raw buffer. |
+  | [`decodeBase64`](#decodebase64) | Decode barcodes from a base64 encoded string. |
   | [`createIntermediateResult`](decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
   
@@ -37,7 +37,7 @@ Decode barcodes from a specified image file.
 
 **Return Value**
 
-All barcode text results decoded successfully.
+All successfully decoded barcode text results.
 
 **Code Snippet**
 
@@ -70,7 +70,7 @@ Decode barcodes from an image file in memory.
 
 **Return Value**
 
-All barcode text results decoded successfully.
+All successfully decoded barcode text results.
 
 **Code Snippet**
 
@@ -196,7 +196,7 @@ DBR_API int DBR_DecodeBase64String (void* barcodeReader, const char* pBase64Stri
 
 **Return Value**
 
-All barcode text results decoded successfully.
+All successfully decoded barcode text results.
 
 **Code Snippet**
 
@@ -265,7 +265,7 @@ Decodes barcode from intermediate results.
 
 **Return Value**
 
-All barcode text results decoded successfully.
+All successfully decoded barcode text results.
 
 **Code Snippet**
 
