@@ -157,7 +157,7 @@ There are several approaches for you to get a buffered image.
 
 ### Get Buffered Images from DCEFrame
 
-You can import CameraEnhancer to acquire buffered video frames.
+You can import CameraEnhancer to acquire buffered video frames from `frameOutputCallback` or `videoBuffer` of DCE.
 
 **Code Snippet**
 

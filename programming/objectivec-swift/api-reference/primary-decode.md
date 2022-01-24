@@ -92,7 +92,7 @@ let result = barcodeReader.decodeImage(image:image withTemplate:"" error:&error)
 
 ## decodeBuffer
 
-Decode barcodes from the memory buffer containing image pixels in defined format.
+Decode barcodes from the memory buffer containing image pixels in a defined format.
 
 ```objc
 - (NSArray<iTextResult*>* _Nullable)decodeBuffer:(NSData* _Nonnull)buffer withWidth:(NSInteger)width height:(NSInteger)height stride:(NSInteger)stride format:(EnumImagePixelFormat)format templateName:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
@@ -110,32 +110,74 @@ Decode barcodes from the memory buffer containing image pixels in defined format
 
 **Return Value**
 
-All barcode text results decoded successfully.
+All successfully decoded barcode text results.
+
+### Decode from a DCEFrame
+
+If you have imported **DynamsoftCameraEnhancer.framework**, you can get video frames from the `frameOutputCallback`. DCEFrame object contains all required parameters of decodeBuffer method.
 
 **Code Snippet**
 
 Objective-C:
 
 ```objc
-NSData *bufferBytes;
-NSInteger iWidth = 0;
-NSInteger iHeight = 0;
-NSInteger iStride = 0;
-NSInteger format;
-NSError __autoreleasing * _Nullable error;
-NSArray<iTextResult*>* result = [barcodeReader decodeBuffer:bufferBytes withWidth:iWidth height:iHeight stride:iStride format:format templateName:@"" error:&error];
+[_dce addListener:self];
+//Get frames in callback methods.
+- (void)frameOutPutCallback:(DCEFrame *)frame timeStamp:(NSTimeInterval)timeStamp{
+    NSArray<iTextResult*>* results = [barcodeReader decodeBuffer:frame.imageData withWidth:frame.width height:frame.height stride:frame.stride format:frame.pixelFormat templateName:@"" error:nil];
+}
 ```
 
 Swift:
 
-```Swift
-let error: NSError? = NSError()
-let bufferBytes:Data?
-let width = 0
-let height = 0
-let stride = 0
-let format:Int
-let result = barcodeReader.decodeBuffer(buffer: bufferBytes!, width: width, height: height, stride: stride, format: format, templateName: "", error: &error)
+```swift
+func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval){
+  let result = try! barcodeReader.decodeBuffer(frame.imageData, withWidth: frame.width, height: frame.height, stride: frame.stride, format: EnumImagePixelFormat(rawValue: frame.pixelFormat) ?? EnumImagePixelFormat.ARGB_8888, templateName: "")
+}
+```
+
+### Decode from captureOutput
+
+If you are acquiring video frames from `captureOutput` callback, you can use the following code to extract the required parameters from `sampleBuffer`.
+
+**Code Snippet**
+
+Objective-C:
+
+```objc
+- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection;
+{
+  // Extract image data from sampleBuffer.
+  CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
+  CVPixelBufferLockBaseAddress(imageBuffer, kCVPixelBufferLock_ReadOnly);
+  int bufferSize = (int)CVPixelBufferGetDataSize(imageBuffer);
+  int imgWidth = (int)CVPixelBufferGetWidth(imageBuffer);
+  int imgHeight = (int)CVPixelBufferGetHeight(imageBuffer);
+  size_t bpr = CVPixelBufferGetBytesPerRow(imageBuffer);
+  void *baseAddress = CVPixelBufferGetBaseAddress(imageBuffer);
+  CVPixelBufferUnlockBaseAddress(imageBuffer, kCVPixelBufferLock_ReadOnly);
+  NSData * buffer = [NSData dataWithBytes:baseAddress length:bufferSize];
+  startRecognitionDate = [NSDate date];
+  NSArray* results = [m_barcodeReader decodeBuffer:buffer withWidth:imgWidth height:imgHeight stride:bpr format: EnumImagePixelFormatARGB_8888 templateName:@"" error:nil];
+}
+```
+
+Swift:
+
+```swift
+func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection){
+  let imageBuffer:CVImageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
+  CVPixelBufferLockBaseAddress(imageBuffer, .readOnly)
+  let baseAddress = CVPixelBufferGetBaseAddress(imageBuffer)
+  let bufferSize = CVPixelBufferGetDataSize(imageBuffer)
+  let width = CVPixelBufferGetWidth(imageBuffer)
+  let height = CVPixelBufferGetHeight(imageBuffer)
+  let bpr = CVPixelBufferGetBytesPerRow(imageBuffer)
+  CVPixelBufferUnlockBaseAddress(imageBuffer, .readOnly)
+  startRecognitionDate = NSDate()
+  let buffer = Data(bytes: baseAddress!, count: bufferSize)
+  guard let results = try? barcodeReader.decodeBuffer(buffer, withWidth: width, height: height, stride: bpr, format: .ARGB_8888, templateName: "")
+}
 ```
 
 ## decodeBase64
@@ -143,7 +185,7 @@ let result = barcodeReader.decodeBuffer(buffer: bufferBytes!, width: width, heig
 Decode barcodes from an image file encoded as a base64 string.
 
 ```objc
-DBR_API int DBR_DecodeBase64String (void* barcodeReader, const char* pBase64String, const char* pTemplateName)	
+DBR_API int DBR_DecodeBase64String (void* barcodeReader, const char* pBase64String, const char* pTemplateName)
 ```
 
 **Parameters**
