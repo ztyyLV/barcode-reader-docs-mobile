@@ -5,6 +5,7 @@ description: This page shows BarcodeReader Decode methods of Dynamsoft Barcode R
 keywords: decodeFile, decodeFileInMemory, decodeBuffer, decodeBase64String, decodeBufferedImage, decode methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: false
 ---
 
 
