@@ -13,83 +13,14 @@ needGenerateH3Content: false
 
   | Method               | Description |
   |----------------------|-------------|
+  | [`decodeBuffer`](#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeFileWithName`](#decodefilewithname) | Decode barcodes from a specified image file. |
   | [`decodeImage`](#decodeimage) | Decode barcodes from an image file in memory. |
-  | [`decodeBuffer`](#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64`](#decodebase64) | Decode barcodes from a base64 encoded string. |
   | [`createIntermediateResult`](decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
   
 ---
-
-## decodeFileWithName
-
-Decode barcodes from a specified image file.
-
-```objc
-- (NSArray<iTextResult*>* _Nullable)decodeFileWithName:(NSString* _Nonnull)name templateName:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
-```
-
-**Parameters**
-
-`[in] name` The local path of the file. It supports BMP, TIFF, JPG, PNG and PDF files.  
-`[in] templateName` The template name.  
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
-
-**Return Value**
-
-All successfully decoded barcode text results.
-
-**Code Snippet**
-
-Objective-C:
-
-```objc
-NSArray<iTextResult*>* result = [barcodeReader decodeFileWithName:@"your file path" templateName:@"" error:&error];
-```
-
-Swift:
-
-```Swift
-let error: NSError? = NSError()
-let result = barcodeReader.decodeFileWithName(name:"your file path",templateName:"",error:&error)
-```
-
-## decodeImage
-
-Decode barcodes from an image file in memory.
-
-```objc
-- (NSArray<iTextResult*>* _Nullable)decodeImage:(UIImage* _Nonnull)image withTemplate:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
-```  
-
-**Parameters**
-
-`[in] image` The image file in memory.  
-`[in] templateName` The template name.  
-`[in, out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
-
-**Return Value**
-
-All successfully decoded barcode text results.
-
-**Code Snippet**
-
-Objective-C:
-
-```objc
-UIImage *image = [[UIImage alloc] init];
-NSError __autoreleasing * _Nullable error;
-NSArray<iTextResult*>* result = [barcodeReader decodeImage:image withTemplate:@"" error:&error];
-```
-
-Swift:
-
-```Swift
-let image: UIImage? = UIImage()
-let error: NSError? = NSError()
-let result = barcodeReader.decodeImage(image:image withTemplate:"" error:&error)
-```
 
 ## decodeBuffer
 
@@ -106,8 +37,21 @@ Decode barcodes from the memory buffer containing image pixels in a defined form
 `[in] height` The height of the image in pixels.  
 `[in] stride` The stride (or scan width) of the image.  
 `[in] format` The image pixel format used in the image byte array.  
-`[in] templateName` The template name.  
+`[in] templateName` The template name. When you upload settings from JSON String or file, you can add a template name for each group of settings. The template settings will be recorded even if they are overwritten. When using Dynamsoft decode methods, you can specify a template name to apply a previously set template. Otherwise, the currently activated template will take over the barcode decoding.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+
+```json
+// Template name example.
+// The "IP1" is the template name of this template. 
+{
+  "Version": "3.0",
+  "ImageParameter": {                   
+    "Name": "IP1",
+    "Description": "This is an imageParameter", 
+    "BarcodeFormatIds": ["BF_ALL"]
+  }
+}
+```
 
 **Return Value**
 
@@ -179,6 +123,75 @@ func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBu
   let buffer = Data(bytes: baseAddress!, count: bufferSize)
   guard let results = try? barcodeReader.decodeBuffer(buffer, withWidth: width, height: height, stride: bpr, format: .ARGB_8888, templateName: "")
 }
+```
+
+## decodeFileWithName
+
+Decode barcodes from a specified image file.
+
+```objc
+- (NSArray<iTextResult*>* _Nullable)decodeFileWithName:(NSString* _Nonnull)name templateName:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
+```
+
+**Parameters**
+
+`[in] name` The local path of the file. It supports BMP, TIFF, JPG, PNG and PDF files.  
+`[in] templateName` The template name.  
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+
+**Return Value**
+
+All successfully decoded barcode text results.
+
+**Code Snippet**
+
+Objective-C:
+
+```objc
+NSArray<iTextResult*>* result = [barcodeReader decodeFileWithName:@"your file path" templateName:@"" error:&error];
+```
+
+Swift:
+
+```Swift
+let error: NSError? = NSError()
+let result = barcodeReader.decodeFileWithName(name:"your file path",templateName:"",error:&error)
+```
+
+## decodeImage
+
+Decode barcodes from an image file in memory.
+
+```objc
+- (NSArray<iTextResult*>* _Nullable)decodeImage:(UIImage* _Nonnull)image withTemplate:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
+```  
+
+**Parameters**
+
+`[in] image` The image file in memory.  
+`[in] templateName` The template name.  
+`[in, out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+
+**Return Value**
+
+All successfully decoded barcode text results.
+
+**Code Snippet**
+
+Objective-C:
+
+```objc
+UIImage *image = [[UIImage alloc] init];
+NSError __autoreleasing * _Nullable error;
+NSArray<iTextResult*>* result = [barcodeReader decodeImage:image withTemplate:@"" error:&error];
+```
+
+Swift:
+
+```Swift
+let image: UIImage? = UIImage()
+let error: NSError? = NSError()
+let result = barcodeReader.decodeImage(image:image withTemplate:"" error:&error)
 ```
 
 ## decodeBase64

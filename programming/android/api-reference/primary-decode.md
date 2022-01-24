@@ -13,15 +13,113 @@ needGenerateH3Content: false
 
   | Method               | Description |
   |----------------------|-------------|
+  | [`decodeBuffer`](#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeFile`](#decodefile) | Decode barcodes from a specified image file. |
   | [`decodeFileInMemory`](#decodefileinmemory) | Decode barcodes from an image file in memory. |
-  | [`decodeBuffer`](#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64String`](#decodebase64string) | Decode barcodes from a base64 encoded string. |
-  | [`decodeBufferedImage`](#decodeBufferedImage) | Decodes barcode from a buffered imag (bitmap). |
+  | [`decodeBufferedImage`](#decodebufferedimage) | Decodes barcode from a buffered imag (bitmap). |
   | [`initIntermediateResult`](#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
   
   ---
+
+## decodeBuffer
+
+Decode barcodes from the memory buffer containing image pixels in defined format.
+
+```java
+TextResult[] decodeBuffer(byte[] buffer, int width, int height, int stride, int enumImagePixelFormat, String templateName) throws BarcodeReaderException
+```
+
+**Parameters**
+
+`buffer`: The array of bytes which contain the image data.  
+`Width`: The width of the image in pixels.  
+`Height`: The height of the image in pixels.  
+`Stride`: The stride (or scan width) of the image.  
+`format`: The image pixel format used in the image byte array.  
+`templateName`: The template name. When you upload settings from JSON String or file, you can add a template name for each group of settings. The template settings will be recorded even if they are overwritten. When using Dynamsoft decode methods, you can specify a template name to apply a previously set template. Otherwise, the currently activated template will take over the barcode decoding.
+
+```json
+// Template name example.
+// The "IP1" is the template name of this template. 
+{
+  "Version": "3.0",
+  "ImageParameter": {                   
+    "Name": "IP1",
+    "Description": "This is an imageParameter", 
+    "BarcodeFormatIds": ["BF_ALL"]
+  }
+}
+```
+
+**Return Value**
+
+All successfully decoded barcode results.
+
+**Exceptions**
+
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+
+There are several approaches for you to get a buffered image.
+
+### Get Buffered Images from DCEFrame
+
+You can import CameraEnhancer to acquire buffered video frames from `frameOutputCallback` or `videoBuffer` of DCE.
+
+**Code Snippet**
+
+```java
+/*You can get frames from frame output call back if you import dynamsoft camera enhancer package.*/
+/*You can get all the required parameters of decodeBuffer from DCEFrame.*/
+import com.dynamsoft.dce.CameraEnhancer;
+
+BarcodeReader reader = new BarcodeReader();
+mCameraEnhancer.addListener(new DCEFrameListener() {
+  @Override
+  public void frameOutputCallback(DCEFrame dceFrame, long l) {
+    try {
+      TextResult[] results = reader.decodeBuffer(dceFrame.getImageData(),dceFrame.getWidth(),dceFrame.getHeight(),dceFrame.getStrides()[0],dceFrame.getPixelFormat(),"Put a template name here if you want to specify a previously set runtime setting template.");
+    } catch (BarcodeReaderException e) {
+      e.printStackTrace();
+    }
+  }
+});
+```
+
+### Get Buffered Images from ImageReader
+
+When you are using Android Camera2, you can get video frames from ImageReader.
+
+**Code Snippet**
+
+```java
+previewReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListener() {
+  @Override
+  public void onImageAvailable(ImageReader reader) {
+    Image mImage = reader.acquireLatestImage();
+    ByteBuffer bufferY = mImage.getPlanes()[0].getBuffer();
+    int strideY = mImage.getPlanes()[0].getRowStride() / mImage.getPlanes()[0].getPixelStride();
+    ByteBuffer bufferU = mImage.getPlanes()[1].getBuffer();
+    int strideU = mImage.getPlanes()[1].getRowStride() / mImage.getPlanes()[1].getPixelStride();
+    ByteBuffer bufferV = mImage.getPlanes()[2].getBuffer();
+    int strideV = mImage.getPlanes()[2].getRowStride() / mImage.getPlanes()[2].getPixelStride();
+    int padingY = mImage.getPlanes()[0].getRowStride() - mImage.getWidth();
+    int padingU = mImage.getPlanes()[1].getRowStride() - mImage.getWidth();
+    byte[] newData = new byte[bufferY.limit()];
+    newData = new byte[bufferY.limit() + bufferU.limit() + 1 + padingY + padingU];
+    bufferV.get(newData, bufferY.limit() + padingY, 1);
+    bufferU.get(newData, bufferY.limit() + padingY + 1, bufferU.limit());
+    bufferY.get(newData, 0, bufferY.limit());
+    int[] strides = new int[]{strideY, strideU, strideV};
+    try {
+      TextResult[] results = reader.decodeBuffer(newData, strideY, mImage.getHeight(), strideY, 3, "Put a template name here if you want to specify a previously set runtime setting template.");
+    } catch (BarcodeReaderException e) {
+      e.printStackTrace();
+    }
+  }
+},handler);
+```
 
 ## decodeFile
 
@@ -35,19 +133,6 @@ TextResult[] decodeFile(String fileFullPath, String templateName) throws Barcode
 
 `fileFullPath`: A string defining the file path. It supports BMP, TIFF, JPG, PNG and PDF files.  
 `templateName`: The template name. When you upload settings from JSON String or file, you can add a template name for each group of settings. The template settings will be recorded even if they are overwritten. When using Dynamsoft decode methods, you can specify a template name to apply a previously set template. Otherwise, the currently activated template will take over the barcode decoding.
-
-```json
-// Template name example.
-// The "IP1" is the template name of this template. 
-{
-    "Version": "3.0",
-    "ImageParameter": {                   
-        "Name": "IP1",
-        "Description": "This is an imageParameter", 
-        "BarcodeFormatIds": ["BF_ALL"]
-     }
-}
-```
 
 **Return Value**
 
@@ -127,91 +212,6 @@ BarcodeReader reader = new BarcodeReader();
 get bufferBytes from other component*/
 TextResult[] result = reader.decodeFileInMemory(fis, "");
 reader.destroy();
-```
-
-## decodeBuffer
-
-Decode barcodes from the memory buffer containing image pixels in defined format.
-
-```java
-TextResult[] decodeBuffer(byte[] buffer, int width, int height, int stride, int enumImagePixelFormat, String templateName) throws BarcodeReaderException
-```
-
-**Parameters**
-
-`buffer`: The array of bytes which contain the image data.  
-`Width`: The width of the image in pixels.  
-`Height`: The height of the image in pixels.  
-`Stride`: The stride (or scan width) of the image.  
-`format`: The image pixel format used in the image byte array.  
-`templateName`: The template name.
-
-**Return Value**
-
-All successfully decoded barcode results.
-
-**Exceptions**
-
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
-
-There are several approaches for you to get a buffered image.
-
-### Get Buffered Images from DCEFrame
-
-You can import CameraEnhancer to acquire buffered video frames from `frameOutputCallback` or `videoBuffer` of DCE.
-
-**Code Snippet**
-
-```java
-/*You can get frames from frame output call back if you import dynamsoft camera enhancer package.*/
-/*You can get all the required parameters of decodeBuffer from DCEFrame.*/
-import com.dynamsoft.dce.CameraEnhancer;
-
-BarcodeReader reader = new BarcodeReader();
-mCameraEnhancer.addListener(new DCEFrameListener() {
-  @Override
-  public void frameOutputCallback(DCEFrame dceFrame, long l) {
-    try {
-      TextResult[] results = reader.decodeBuffer(dceFrame.getImageData(),dceFrame.getWidth(),dceFrame.getHeight(),dceFrame.getStrides()[0],dceFrame.getPixelFormat(),"Put a template name here if you want to specify a previously set runtime setting template.");
-    } catch (BarcodeReaderException e) {
-      e.printStackTrace();
-    }
-  }
-});
-```
-
-### Get Buffered Images from ImageReader
-
-When you are using Android Camera2, you can get video frames from ImageReader.
-
-**Code Snippet**
-
-```java
-previewReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListener() {
-  @Override
-  public void onImageAvailable(ImageReader reader) {
-    Image mImage = reader.acquireLatestImage();
-    ByteBuffer bufferY = mImage.getPlanes()[0].getBuffer();
-    int strideY = mImage.getPlanes()[0].getRowStride() / mImage.getPlanes()[0].getPixelStride();
-    ByteBuffer bufferU = mImage.getPlanes()[1].getBuffer();
-    int strideU = mImage.getPlanes()[1].getRowStride() / mImage.getPlanes()[1].getPixelStride();
-    ByteBuffer bufferV = mImage.getPlanes()[2].getBuffer();
-    int strideV = mImage.getPlanes()[2].getRowStride() / mImage.getPlanes()[2].getPixelStride();
-    int padingY = mImage.getPlanes()[0].getRowStride() - mImage.getWidth();
-    int padingU = mImage.getPlanes()[1].getRowStride() - mImage.getWidth();
-    byte[] newData = new byte[bufferY.limit()];
-    newData = new byte[bufferY.limit() + bufferU.limit() + 1 + padingY + padingU];
-    bufferV.get(newData, bufferY.limit() + padingY, 1);
-    bufferU.get(newData, bufferY.limit() + padingY + 1, bufferU.limit());
-    bufferY.get(newData, 0, bufferY.limit());
-    int[] strides = new int[]{strideY, strideU, strideV};
-    try {
-      TextResult[] results = reader.decodeBuffer(newData, strideY, mImage.getHeight(), strideY, 3, "Put a template name here if you want to specify a previously set runtime setting template.");
-    } catch (BarcodeReaderException e) {
-      e.printStackTrace();
-    }
-  }
-},handler);
 ```
 
 ## decodeBase64String
