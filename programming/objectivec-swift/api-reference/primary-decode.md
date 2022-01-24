@@ -155,7 +155,7 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError()
-let result = barcodeReader.decodeFileWithName(name:"your file path",templateName:"",error:&error)
+let result = try? barcodeReader.decodeFileWithName("your file path",templateName:"")
 ```
 
 ## decodeImage
@@ -191,7 +191,7 @@ Swift:
 ```Swift
 let image: UIImage? = UIImage()
 let error: NSError? = NSError()
-let result = barcodeReader.decodeImage(image:image withTemplate:"" error:&error)
+let result = try? barcodeReader.decodeImage(image withTemplate:"")
 ```
 
 ## decodeBase64
@@ -225,7 +225,7 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError() 
-let result = barcodeReader.decodeBase64(base64: file in base64 string, withTemplate: "", error: &error)
+let result = try? barcodeReader.decodeBase64("file in base64 string", withTemplate: "")
 ```
 
 ## createIntermediateResult
@@ -260,7 +260,7 @@ Swift:
 ```Swift
 var error:NSError? = NSError()
 var irResult:iIntermediateResult!
-irResult = try! barcodeReader?.createIntermediateResult(EnumIntermediateResultType(rawValue: EnumIntermediateResultType.originalImage.rawValue)!)
+irResult = try? barcodeReader.createIntermediateResult(EnumIntermediateResultType(rawValue: EnumIntermediateResultType.originalImage.rawValue)!)
 ```
 
 ## decodeIntermediateResults
@@ -299,13 +299,12 @@ NSArray<iTextResult*>* result = [barcodeReader decodeIntermediateResults:array w
 Swift:
 
 ```Swift
-var result:[iTextResult]?
-var error:NSError? = NSError()
-var settings:iPublicRuntimeSettings! = try! barcodeReader?.getRuntimeSettings()
+let result:[iTextResult]?
+let settings = try? barcodeReader.getRuntimeSettings()
 settings.intermediateResultTypes = EnumIntermediateResultType.originalImage.rawValue | EnumIntermediateResultType.typedBarcodeZone.rawValue
 settings.intermediateResultSavingMode = .memory
-barcodeReader?.update(settings, error: &error)
-result = try! barcodeReader?.decodeFile(withName: "your file path", templateName: "")
-var array:[iIntermediateResult]? = try! barcodeReader?.getIntermediateResult()
-result = try! barcodeReader?.decode(array, withTemplate: "")
+barcodeReader.update(settings, nil)
+result = try? barcodeReader.decodeFile("your file path", templateName: "")
+let intermediateResult = try? barcodeReader.getIntermediateResult()
+result = try? barcodeReader.decode(array, withTemplate: "")
 ```
