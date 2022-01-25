@@ -49,11 +49,11 @@ let settings = try? barcodeReader.getRuntimeSettings()
 // Set the expected barcode format you want to read.
 // The barcode format our library will search for is composed of BarcodeFormat group 1 and BarcodeFormat group 2.
 // So you need to specify the barcode format in group 1 and group 2 individually.
-settings!.barcodeFormatIds = EnumBarcodeFormat.ONED.rawValue | EnumBarcodeFormat.PDF417.rawValue | EnumBarcodeFormat.QRCODE.rawValue | EnumBarcodeFormat.DATAMATRIX.rawValue | EnumBarcodeFormat.AZTEC.rawValue
+settings.barcodeFormatIds = EnumBarcodeFormat.ONED.rawValue | EnumBarcodeFormat.PDF417.rawValue | EnumBarcodeFormat.QRCODE.rawValue | EnumBarcodeFormat.DATAMATRIX.rawValue | EnumBarcodeFormat.AZTEC.rawValue
 // Set the expected barcode count you want to read.
-settings!.expectedBarcodesCount = 5
+settings.expectedBarcodesCount = 5
 // Apply the new settings to the instance
-barcodeReader.update(settings!, error: &error)
+barcodeReader.update(settings, error: &error)
 ```
 
 **Related APIs**
@@ -124,13 +124,13 @@ let settings = try? barcodeReader.getRuntimeSettings()
 // Set the ROI(region of insterest) to speed up the barcode reading process.
 // Note: DBR supports setting coordinates by pixels or percentages. The origin of the coordinate system is the upper left corner point.
 // The int value 15 means the top of the scan region margins 15% from the top of screen.
-settings!.region.regionTop      = 15 
-settings!.region.regionBottom   = 85
-settings!.region.regionLeft     = 30
-settings!.region.regionRight    = 70
-settings!.region.regionMeasuredByPercentage = 1
+settings.region.regionTop      = 15 
+settings.region.regionBottom   = 85
+settings.region.regionLeft     = 30
+settings.region.regionRight    = 70
+settings.region.regionMeasuredByPercentage = 1
 // Apply the new settings to the instance
-barcodeReader.update(settings!, error: &error)
+barcodeReader.update(settings, error: &error)
 ```
 
 **Related APIs**
@@ -159,7 +159,7 @@ Swift:
 
 ```swift
 let json = "{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}"
-barcodeReader.initRuntimeSettings(with: json, conflictMode: .overwrite, error: &error)
+barcodeReader.initRuntimeSettings(json, conflictMode: .overwrite, error: &error)
 ```
 
 ### Update the Runtime Settings via JSON File
@@ -181,5 +181,5 @@ Swift:
 ```swift
 var error: NSError? = NSError()
 // The method will overwrite the settings if the settings already exist.
-barcodeReader.initRuntimeSettingsWithFile(fileName:"your template file path", conflictMode:EnumConflictMode.overwrite, error:&error)
+barcodeReader.initRuntimeSettingsWithFile("your template file path", conflictMode:EnumConflictMode.overwrite, error:&error)
 ```
