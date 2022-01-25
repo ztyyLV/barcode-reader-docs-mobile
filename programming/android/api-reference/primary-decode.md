@@ -36,9 +36,9 @@ TextResult[] decodeBuffer(byte[] buffer, int width, int height, int stride, int 
 `buffer`: The array of bytes which contain the image data.  
 `Width`: The width of the image in pixels.  
 `Height`: The height of the image in pixels.  
-`Stride`: The stride (or scan width) of the image.  
+`Stride`: The stride is measured by the `byte` length of each line in the `buffer`.  
 `format`: The image pixel format used in the image byte array.  
-`templateName`: The template name. When you upload settings from JSON String or file, you can add a template name for each group of settings. The template settings will be recorded even if they are overwritten. When using Dynamsoft decode methods, you can specify a template name to apply a previously set template. Otherwise, the currently activated template will take over the barcode decoding.
+`templateName`: For general usage, please set an empty string for the `templateName`. For further usage, please read the article of [parameter configuration]({{site.parameters}}scenario-settings/how-to-set-parameters.html).  
 
 ```json
 // Template name example.

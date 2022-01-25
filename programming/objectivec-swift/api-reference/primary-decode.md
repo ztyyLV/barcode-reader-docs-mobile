@@ -35,9 +35,9 @@ Decode barcodes from the memory buffer containing image pixels in a defined form
 `[in] buffer` The array of bytes which contain the image data.  
 `[in] width` The width of the image in pixels.  
 `[in] height` The height of the image in pixels.  
-`[in] stride` The stride (or scan width) of the image.  
+`[in] stride` The stride is measured by the `byte` length of each line in the `buffer`.  
 `[in] format` The image pixel format used in the image byte array.  
-`[in] templateName` The template name. When you upload settings from JSON String or file, you can add a template name for each group of settings. The template settings will be recorded even if they are overwritten. When using Dynamsoft decode methods, you can specify a template name to apply a previously set template. Otherwise, the currently activated template will take over the barcode decoding.  
+`[in] templateName` For general usage, please set an empty string for the `templateName`. For further usage, please read the article of [parameter configuration]({{site.parameters}}scenario-settings/how-to-set-parameters.html).  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 ```json
