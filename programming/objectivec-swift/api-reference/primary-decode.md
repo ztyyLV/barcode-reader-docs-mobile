@@ -155,7 +155,7 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError()
-let result = try? barcodeReader.decodeFileWithName("your file path",templateName:"")
+let result = try? barcodeReader.decodeFile(withName: "your file path",templateName:"")
 ```
 
 ## decodeImage
@@ -304,7 +304,7 @@ let settings = try? barcodeReader.getRuntimeSettings()
 settings.intermediateResultTypes = EnumIntermediateResultType.originalImage.rawValue | EnumIntermediateResultType.typedBarcodeZone.rawValue
 settings.intermediateResultSavingMode = .memory
 barcodeReader.update(settings, nil)
-result = try? barcodeReader.decodeFile("your file path", templateName: "")
+result = try? barcodeReader.decodeFile(withName: "your file path", templateName: "")
 let intermediateResult = try? barcodeReader.getIntermediateResult()
 result = try? barcodeReader.decode(array, withTemplate: "")
 ```
