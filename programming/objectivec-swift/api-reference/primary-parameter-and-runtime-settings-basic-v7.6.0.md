@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 ---
 
 # Objective-C API Reference - Parameter and Runtime Settings Basic Methods
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`setModeArgument`](#setmodeargument) | Sets the optional argument for a specified mode in Modes parameters. |
@@ -72,18 +72,19 @@ settings.binarizationModes = mArray;
 [barcodeReader updateRuntimeSettings:settings error:&error];
 [barcodeReader setModeArgument:@"BinarizationModes" index:0 argumentName:@"EnableFillBinaryVacancy" argumentValue:"1" error:&error];
 ```
+
 Swift:
 
 ```Swift
 let error: NSError? = NSError()
 let mArray: NSMutableArray? = NSMutableArray()
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
-let settings = barcodeReader.getRuntimeSettings(error: nil)
+let settings = try? barcodeReader.getRuntimeSettings()
 mArray!.setArray(settings.binarizationModes as! [Any])
 mArray![0] = EnumBinarizationMode.LocalBlock
 settings.binarizationModes = mArray!
 barcodeReader.updateRuntimeSettings(settings: settings, error: nil)
-barcodeReader.setModeArgument(modeName: "BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1", error: &error)
+barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1", error: &error)
 ```
 
 ## getModeArgument
@@ -152,13 +153,13 @@ Swift:
 let error: NSError? = NSError()
 let mArray: NSMutableArray? = NSMutableArray()
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
-let settings = barcodeReader.getRuntimeSettings(error: nil)
+let settings = try? barcodeReader.getRuntimeSettings()
 mArray!.setArray(settings.binarizationModes as! [Any])
 mArray![0] = EnumBinarizationMode.LocalBlock
 settings.binarizationModes = mArray!
-barcodeReader.updateRuntimeSettings(settings: settings, error: nil)
-barcodeReader.setModeArgument(modeName: "BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1", error: nil)
-let argumentValue = barcodeReader.getModeArgument(modeName: "BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", error: &error)
+barcodeReader.updateRuntimeSettings(settings, error: nil)
+barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1", error: nil)
+let argumentValue = barcodeReader.getModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", error: &error)
 ```
 
 ## getRuntimeSettings
@@ -193,7 +194,7 @@ Swift:
 ```Swift
 let error: NSError? = NSError()
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
-let licenseString = barcodeReader.getRuntimeSettings(error: &error)
+let licenseString = try? barcodeReader.getRuntimeSettings()
 ```
 
 ## updateRuntimeSettings
@@ -226,10 +227,10 @@ iPublicRuntimeSettings *settings;
 Swift:
 
 ```Swift
-let error: NSError? = NSError()
+var error: NSError? = NSError()
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
-let settings = barcodeReader.getRuntimeSettings(error: nil)
-barcodeReader.updateRuntimeSettings(settings: settings, error: &error)
+let settings = try? barcodeReader.getRuntimeSettings()
+barcodeReader.updateRuntimeSettings(settings, &error)
 ```
 
 ## resetRuntimeSettings
@@ -252,14 +253,13 @@ Objective-C:
 DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
 NSError __autoreleasing * _Nullable error;
-
 [barcodeReader resetRuntimeSettings:&error];
 ```
 
 Swift:
 
 ```Swift
-let error: NSError? = NSError()
+var error: NSError? = NSError()
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
-barcodeReader.resetRuntimeSettings(error: &error)
+barcodeReader.resetRuntimeSettings(&error)
 ```

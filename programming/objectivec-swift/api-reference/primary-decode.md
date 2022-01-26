@@ -5,6 +5,7 @@ description: This page shows Decode methods of Dynamsoft Barcode Reader for iOS 
 keywords: decodeFileWithName, decodeImage, decodeBuffer, decodeBase64, decode methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+needGenerateH3Content: false
 ---
 
 
@@ -12,14 +13,117 @@ noTitleIndex: true
 
   | Method               | Description |
   |----------------------|-------------|
+  | [`decodeBuffer`](#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeFileWithName`](#decodefilewithname) | Decode barcodes from a specified image file. |
-  | [`decodeImage`](#decodeImage) | Decode barcodes from an image file in memory. |
-  | [`decodeBuffer`](#decodeBuffer) | Decode barcodes from raw buffer. |
-  | [`decodeBase64`](#decodeBase64) | Decode barcodes from a base64 encoded string. |
+  | [`decodeImage`](#decodeimage) | Decode barcodes from an image file in memory. |
+  | [`decodeBase64`](#decodebase64) | Decode barcodes from a base64 encoded string. |
   | [`createIntermediateResult`](decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
   
 ---
+
+## decodeBuffer
+
+Decode barcodes from the memory buffer containing image pixels in a defined format.
+
+```objc
+- (NSArray<iTextResult*>* _Nullable)decodeBuffer:(NSData* _Nonnull)buffer withWidth:(NSInteger)width height:(NSInteger)height stride:(NSInteger)stride format:(EnumImagePixelFormat)format templateName:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
+```
+
+**Parameters**
+
+`[in] buffer` The array of bytes which contain the image data.  
+`[in] width` The width of the image in pixels.  
+`[in] height` The height of the image in pixels.  
+`[in] stride` The stride is measured by the `byte` length of each line in the `buffer`.  
+`[in] format` The image pixel format used in the image byte array.  
+`[in] templateName` For general usage, please set an empty string for the `templateName`. For further usage, please read the article of [parameter configuration]({{site.parameters}}scenario-settings/how-to-set-parameters.html).  
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+
+```json
+// Template name example.
+// The "IP1" is the template name of this template. 
+{
+  "Version": "3.0",
+  "ImageParameter": {                   
+    "Name": "IP1",
+    "Description": "This is an imageParameter", 
+    "BarcodeFormatIds": ["BF_ALL"]
+  }
+}
+```
+
+**Return Value**
+
+All successfully decoded barcode text results.
+
+### Get ImageData from DCEFrame
+
+If you have imported **DynamsoftCameraEnhancer.framework**, you can get video frames from the `frameOutputCallback`. DCEFrame object contains all required parameters of decodeBuffer method.
+
+**Code Snippet**
+
+Objective-C:
+
+```objc
+[_dce addListener:self];
+//Get frames in callback methods.
+- (void)frameOutPutCallback:(DCEFrame *)frame timeStamp:(NSTimeInterval)timeStamp{
+    NSArray<iTextResult*>* results = [barcodeReader decodeBuffer:frame.imageData withWidth:frame.width height:frame.height stride:frame.stride format:frame.pixelFormat templateName:@"" error:nil];
+}
+```
+
+Swift:
+
+```swift
+func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval){
+  let result = try! barcodeReader.decodeBuffer(frame.imageData, withWidth: frame.width, height: frame.height, stride: frame.stride, format: EnumImagePixelFormat(rawValue: frame.pixelFormat) ?? EnumImagePixelFormat.ARGB_8888, templateName: "")
+}
+```
+
+### Get ImageData from CaptureOutput
+
+If you are acquiring video frames from `captureOutput` callback, you can use the following code to extract the required parameters from `sampleBuffer`.
+
+**Code Snippet**
+
+Objective-C:
+
+```objc
+- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection;
+{
+  // Extract image data from sampleBuffer.
+  CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
+  CVPixelBufferLockBaseAddress(imageBuffer, kCVPixelBufferLock_ReadOnly);
+  int bufferSize = (int)CVPixelBufferGetDataSize(imageBuffer);
+  int imgWidth = (int)CVPixelBufferGetWidth(imageBuffer);
+  int imgHeight = (int)CVPixelBufferGetHeight(imageBuffer);
+  size_t bpr = CVPixelBufferGetBytesPerRow(imageBuffer);
+  void *baseAddress = CVPixelBufferGetBaseAddress(imageBuffer);
+  CVPixelBufferUnlockBaseAddress(imageBuffer, kCVPixelBufferLock_ReadOnly);
+  NSData * buffer = [NSData dataWithBytes:baseAddress length:bufferSize];
+  startRecognitionDate = [NSDate date];
+  NSArray* results = [m_barcodeReader decodeBuffer:buffer withWidth:imgWidth height:imgHeight stride:bpr format: EnumImagePixelFormatARGB_8888 templateName:@"" error:nil];
+}
+```
+
+Swift:
+
+```swift
+func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection){
+  let imageBuffer:CVImageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
+  CVPixelBufferLockBaseAddress(imageBuffer, .readOnly)
+  let baseAddress = CVPixelBufferGetBaseAddress(imageBuffer)
+  let bufferSize = CVPixelBufferGetDataSize(imageBuffer)
+  let width = CVPixelBufferGetWidth(imageBuffer)
+  let height = CVPixelBufferGetHeight(imageBuffer)
+  let bpr = CVPixelBufferGetBytesPerRow(imageBuffer)
+  CVPixelBufferUnlockBaseAddress(imageBuffer, .readOnly)
+  startRecognitionDate = NSDate()
+  let buffer = Data(bytes: baseAddress!, count: bufferSize)
+  guard let results = try? barcodeReader.decodeBuffer(buffer, withWidth: width, height: height, stride: bpr, format: .ARGB_8888, templateName: "")
+}
+```
 
 ## decodeFileWithName
 
@@ -37,7 +141,7 @@ Decode barcodes from a specified image file.
 
 **Return Value**
 
-All barcode text results decoded successfully.
+All successfully decoded barcode text results.
 
 **Code Snippet**
 
@@ -51,7 +155,7 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError()
-let result = barcodeReader.decodeFileWithName(name:"your file path",templateName:"",error:&error)
+let result = try? barcodeReader.decodeFile(withName: "your file path",templateName:"")
 ```
 
 ## decodeImage
@@ -70,7 +174,7 @@ Decode barcodes from an image file in memory.
 
 **Return Value**
 
-All barcode text results decoded successfully.
+All successfully decoded barcode text results.
 
 **Code Snippet**
 
@@ -87,55 +191,7 @@ Swift:
 ```Swift
 let image: UIImage? = UIImage()
 let error: NSError? = NSError()
-let result = barcodeReader.decodeImage(image:image withTemplate:"" error:&error)
-```
-
-## decodeBuffer
-
-Decode barcodes from the memory buffer containing image pixels in defined format.
-
-```objc
-- (NSArray<iTextResult*>* _Nullable)decodeBuffer:(NSData* _Nonnull)buffer withWidth:(NSInteger)width height:(NSInteger)height stride:(NSInteger)stride format:(EnumImagePixelFormat)format templateName:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
-```
-
-**Parameters**
-
-`[in] buffer` The array of bytes which contain the image data.  
-`[in] width` The width of the image in pixels.  
-`[in] height` The height of the image in pixels.  
-`[in] stride` The stride (or scan width) of the image.  
-`[in] format` The image pixel format used in the image byte array.  
-`[in] templateName` The template name.  
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
-
-**Return Value**
-
-All barcode text results decoded successfully.
-
-**Code Snippet**
-
-Objective-C:
-
-```objc
-NSData *bufferBytes;
-NSInteger iWidth = 0;
-NSInteger iHeight = 0;
-NSInteger iStride = 0;
-NSInteger format;
-NSError __autoreleasing * _Nullable error;
-NSArray<iTextResult*>* result = [barcodeReader decodeBuffer:bufferBytes withWidth:iWidth height:iHeight stride:iStride format:format templateName:@"" error:&error];
-```
-
-Swift:
-
-```Swift
-let error: NSError? = NSError()
-let bufferBytes:Data?
-let width = 0
-let height = 0
-let stride = 0
-let format:Int
-let result = barcodeReader.decodeBuffer(buffer: bufferBytes!, width: width, height: height, stride: stride, format: format, templateName: "", error: &error)
+let result = try? barcodeReader.decodeImage(image withTemplate:"")
 ```
 
 ## decodeBase64
@@ -143,7 +199,7 @@ let result = barcodeReader.decodeBuffer(buffer: bufferBytes!, width: width, heig
 Decode barcodes from an image file encoded as a base64 string.
 
 ```objc
-DBR_API int DBR_DecodeBase64String (void* barcodeReader, const char* pBase64String, const char* pTemplateName)	
+DBR_API int DBR_DecodeBase64String (void* barcodeReader, const char* pBase64String, const char* pTemplateName)
 ```
 
 **Parameters**
@@ -154,7 +210,7 @@ DBR_API int DBR_DecodeBase64String (void* barcodeReader, const char* pBase64Stri
 
 **Return Value**
 
-All barcode text results decoded successfully.
+All successfully decoded barcode text results.
 
 **Code Snippet**
 
@@ -169,7 +225,7 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError() 
-let result = barcodeReader.decodeBase64(base64: file in base64 string, withTemplate: "", error: &error)
+let result = try? barcodeReader.decodeBase64("file in base64 string", withTemplate: "")
 ```
 
 ## createIntermediateResult
@@ -204,7 +260,7 @@ Swift:
 ```Swift
 var error:NSError? = NSError()
 var irResult:iIntermediateResult!
-irResult = try! barcodeReader?.createIntermediateResult(EnumIntermediateResultType(rawValue: EnumIntermediateResultType.originalImage.rawValue)!)
+irResult = try? barcodeReader.createIntermediateResult(EnumIntermediateResultType(rawValue: EnumIntermediateResultType.originalImage.rawValue)!)
 ```
 
 ## decodeIntermediateResults
@@ -223,7 +279,7 @@ Decodes barcode from intermediate results.
 
 **Return Value**
 
-All barcode text results decoded successfully.
+All successfully decoded barcode text results.
 
 **Code Snippet**
 
@@ -243,13 +299,12 @@ NSArray<iTextResult*>* result = [barcodeReader decodeIntermediateResults:array w
 Swift:
 
 ```Swift
-var result:[iTextResult]?
-var error:NSError? = NSError()
-var settings:iPublicRuntimeSettings! = try! barcodeReader?.getRuntimeSettings()
+let result:[iTextResult]?
+let settings = try? barcodeReader.getRuntimeSettings()
 settings.intermediateResultTypes = EnumIntermediateResultType.originalImage.rawValue | EnumIntermediateResultType.typedBarcodeZone.rawValue
 settings.intermediateResultSavingMode = .memory
-barcodeReader?.update(settings, error: &error)
-result = try! barcodeReader?.decodeFile(withName: "your file path", templateName: "")
-var array:[iIntermediateResult]? = try! barcodeReader?.getIntermediateResult()
-result = try! barcodeReader?.decode(array, withTemplate: "")
+barcodeReader.update(settings, nil)
+result = try? barcodeReader.decodeFile(withName: "your file path", templateName: "")
+let intermediateResult = try? barcodeReader.getIntermediateResult()
+result = try? barcodeReader.decode(array, withTemplate: "")
 ```
