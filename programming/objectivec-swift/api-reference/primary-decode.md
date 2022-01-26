@@ -300,7 +300,7 @@ Swift:
 
 ```Swift
 let result:[iTextResult]?
-let settings = try? barcodeReader.getRuntimeSettings()
+let settings = try! barcodeReader.getRuntimeSettings()
 settings.intermediateResultTypes = EnumIntermediateResultType.originalImage.rawValue | EnumIntermediateResultType.typedBarcodeZone.rawValue
 settings.intermediateResultSavingMode = .memory
 barcodeReader.update(settings, nil)
