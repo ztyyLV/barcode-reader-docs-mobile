@@ -79,7 +79,7 @@ Swift:
 let error: NSError? = NSError()
 let mArray: NSMutableArray? = NSMutableArray()
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
-let settings = try? barcodeReader.getRuntimeSettings()
+let settings = try! barcodeReader.getRuntimeSettings()
 mArray!.setArray(settings.binarizationModes as! [Any])
 mArray![0] = EnumBinarizationMode.LocalBlock
 settings.binarizationModes = mArray!
@@ -153,11 +153,11 @@ Swift:
 let error: NSError? = NSError()
 let mArray: NSMutableArray? = NSMutableArray()
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
-let settings = try? barcodeReader.getRuntimeSettings()
+let settings = try! barcodeReader.getRuntimeSettings()
 mArray!.setArray(settings.binarizationModes as! [Any])
 mArray![0] = EnumBinarizationMode.LocalBlock
 settings.binarizationModes = mArray!
-barcodeReader.updateRuntimeSettings(settings, error: nil)
+barcodeReader.update(settings, error: nil)
 barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1", error: nil)
 let argumentValue = barcodeReader.getModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", error: &error)
 ```
@@ -194,7 +194,7 @@ Swift:
 ```Swift
 let error: NSError? = NSError()
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
-let licenseString = try? barcodeReader.getRuntimeSettings()
+let licenseString = try! barcodeReader.getRuntimeSettings()
 ```
 
 ## updateRuntimeSettings
@@ -229,8 +229,8 @@ Swift:
 ```Swift
 var error: NSError? = NSError()
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
-let settings = try? barcodeReader.getRuntimeSettings()
-barcodeReader.updateRuntimeSettings(settings, &error)
+let settings = try! barcodeReader.getRuntimeSettings()
+barcodeReader.update(settings, &error)
 ```
 
 ## resetRuntimeSettings
