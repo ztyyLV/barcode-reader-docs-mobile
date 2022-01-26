@@ -79,7 +79,7 @@ mCameraEnhancer.addListener(new DCEFrameListener() {
   @Override
   public void frameOutputCallback(DCEFrame dceFrame, long l) {
     try {
-      TextResult[] results = reader.decodeBuffer(dceFrame.getImageData(),dceFrame.getWidth(),dceFrame.getHeight(),dceFrame.getStrides()[0],dceFrame.getPixelFormat(),"Put a template name here if you want to specify a previously set runtime setting template.");
+      TextResult[] results = reader.decodeBuffer(dceFrame.getImageData(),dceFrame.getWidth(),dceFrame.getHeight(),dceFrame.getStrides()[0],dceFrame.getPixelFormat(),"");
     } catch (BarcodeReaderException e) {
       e.printStackTrace();
     }
@@ -113,7 +113,7 @@ previewReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListen
     bufferY.get(newData, 0, bufferY.limit());
     int[] strides = new int[]{strideY, strideU, strideV};
     try {
-      TextResult[] results = reader.decodeBuffer(newData, strideY, mImage.getHeight(), strideY, 3, "Put a template name here if you want to specify a previously set runtime setting template.");
+      TextResult[] results = reader.decodeBuffer(newData, strideY, mImage.getHeight(), strideY, 3, "");
     } catch (BarcodeReaderException e) {
       e.printStackTrace();
     }
