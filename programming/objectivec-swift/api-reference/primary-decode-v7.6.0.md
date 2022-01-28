@@ -146,7 +146,7 @@ let width = 0
 let height = 0
 let stride = 0
 let format:Int
-let result = try? barcodeReader.decodeBuffer(bufferBytes, width: width, height: height, stride: stride, format: format, templateName: "")
+let result = try! barcodeReader.decodeBuffer(bufferBytes, width: width, height: height, stride: stride, format: format, templateName: "")
 ```
 
 ## decodeBase64

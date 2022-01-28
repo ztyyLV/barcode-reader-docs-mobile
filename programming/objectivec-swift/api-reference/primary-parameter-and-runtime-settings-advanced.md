@@ -181,7 +181,7 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError()
-let allTplNames = try? barcodeReader.allParameterTemplateNames()
+let allTplNames = try! barcodeReader.allParameterTemplateNames()
 ```
 
 ## outputSettingsToFile
@@ -247,5 +247,5 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError()
-let settingsName = try? barcodeReader.outputSettings(to:"currentRuntimeSettings")
+let settingsName = try! barcodeReader.outputSettings(to:"currentRuntimeSettings")
 ```
