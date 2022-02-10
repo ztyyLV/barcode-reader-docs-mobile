@@ -38,21 +38,16 @@ barcodeReader.update(settings, error: &error)
 
 ## Set Barcode Count
 
-What?
+The `expectedBarcodeCount` is the parameter that controls how many barcodes you would like the barcode reader to recognize from a single image. There are some suggestions on how to set the `expectedBarcodeCount`:
 
-The `expectedBarcodeCount` is the parameter that controls how many barcodes you would like the barcode reader to recognize from a single image.
-
-Why?
-
-- When the barcode reader is confirmed to server for single barcode usage scenario, the recommended `expectedBarcodeCount` is 1. This will sharply improve the processing speed.
-- When there is **n** barcodes in a single image (**n** is a fixed number) and you'd like the barcode reader to decode all of them, the recommended `expectedBarcodeCount` is **n**.
-
-How?
+- When the barcode reader is confirmed to focus on decoding single barcode, the recommended `expectedBarcodeCount` is 1. This will sharply improve the processing speed.
+- When there are **n** barcodes in a single image (**n** is a fixed number) and you'd like the barcode reader to decode all of them, the recommended `expectedBarcodeCount` is **n**.
+- Set the `expectedBarcodeCount` to 0 when the barcode count is uncertain. When the `expectedBarcodeCount` is set to 0, the barcode reader will try to decode at least one barcode from the image.
 
 ```swift
 let error: NSError? = NSError()
 
-// Similar with the barcode format setting, you can update barcode count setting via PublicRuntimeSettings.
+// Similar to the barcode format setting, you can update the barcode count setting via PublicRuntimeSettings.
 let settings = try! barcodeReader.getRuntimeSettings()
 
 // Set the expected barcode count.
@@ -65,8 +60,23 @@ settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_
 barcodeReader.update(settings, error: &error)
 ```
 
-## Other Barcode Settings
+## Set Scan Region
 
+It is not always nessary to scan the whole image to get the barcode result. You can set a scan region for you barcode reader when scanning a small sized barcode on an image.
 
+```swift
+import DynamsoftCameraEnhancer
 
-Generally, the performance of Dynamsoft Barcode Reader is enough for the majority of scenarios even if you don't add any additional settings.
+dceView = DCECameraView.init(frame: CGRect(x: 0, y: barHeight!, width: mainWidth, height: mainHeight - SafeAreaBottomHeight - barHeight!))
+self.view.addSubview(dceView)
+dce = DynamsoftCameraEnhancer.init(view: dceView)
+let scanRegion = iRegionDefinition()
+scanRegion.regionTop = 25
+scanRegion.regionBottom = 75
+scanRegion.regionLeft = 25
+scanRegion.regionRight = 75
+scanRegion.regionMeasuredByPercentage = 1
+dce.setScanRegion(scanRegion, error: &error)
+```
+
+The above settings are enough for the majority of usage scenarios. However, if the performance is still not satisfying, the following articles will help you on improveing the performance.
