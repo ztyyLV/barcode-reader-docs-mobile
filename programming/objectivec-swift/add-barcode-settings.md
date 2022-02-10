@@ -62,7 +62,7 @@ barcodeReader.update(settings, error: &error)
 
 ## Set Scan Region
 
-It is not always nessary to scan the whole image to get the barcode result. You can set a scan region for you barcode reader when scanning a small sized barcode on an image.
+It is not always necessary to scan the whole image to get the barcode result. You can set a scan region for your barcode reader when scanning a small-sized barcode on an image.
 
 ```swift
 import DynamsoftCameraEnhancer
@@ -79,4 +79,4 @@ scanRegion.regionMeasuredByPercentage = 1
 dce.setScanRegion(scanRegion, error: &error)
 ```
 
-The above settings are enough for the majority of usage scenarios. However, if the performance is still not satisfying, the following articles will help you on improveing the performance.
+The above settings are enough for the majority of usage scenarios. However, if the performance is still not satisfying, the following articles will help you on improving the performance.
