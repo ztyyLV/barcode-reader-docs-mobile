@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for iOS - Advanced Usage
-description: This is the Advanced Usage page of Dynamsoft Barcode Reader for iOS SDK.
-keywords: Guide, iOS, Settings
+title: Dynamsoft Barcode Reader for Android - Optimize Performance
+description: This is the Optimize Performance page of Dynamsoft Barcode Reader for Android SDK.
+keywords: Guide, Android, Optimize Performance
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
@@ -20,6 +20,10 @@ If you have completed the page of basic settings, you might have a basic underst
 
 `DeblurLevel` is the parameter that controls how much effort the barcode reader spends on decoding the localized barcodes. Setting the DeblurLevel higher will improve the barcode decoding read rate but decline the processing speed at the same time. `DeblurLevel` is set to 9 (the highest level) by default. Therefore, if you find the processing speed is not satisfying, you can reduce the `DeblurLevel` to balance the speed and read rate performance.
 
+```java
+
+```
+
 **Recommendations**
 
 | Image Source | Priority | DeblurLevel |
@@ -35,7 +39,7 @@ If you have completed the page of basic settings, you might have a basic underst
 | ---------- | ----------- | ------------- |
 | int | [0,0x7fffffff] | 10000 |
 
-`Timeout`, which is measured by milliseconds, determines the maximum time the barcode reader will spend on each single image. Set a lower `Timeout` value might help you on improving the processing speed of video barcode decoding. Some low end device may not be able to complete the barcode processing if the `Timeout` is too short. Be sure to do enough test to reserve enough time for low end devices when configuring the `Timeout` setting.
+`Timeout`, which is measured by milliseconds, determines the maximum time the barcode reader will spend on each single image. Setting a lower `Timeout` value might help you on improving the processing speed of video barcode decoding. Some low-end devices may not be able to complete the barcode processing if the `Timeout` is too short. Be sure to do enough tests to reserve enough time for low-end devices when configuring the `Timeout` setting.
 
 ## Confidence
 
@@ -55,4 +59,8 @@ Use multiple barcode results from different video frames to verify the correctne
 | ---------- | ----------- | ------------- |
 | int | [512,0x7fffffff] | 2300 |
 
-Images with larger size then the threshold will be scaled down. The default value of `ScaleDownThreshold` is 2300 (pixel). You can set a smaller value for the `ScaleDownThreshold` when you want to speed up the barcode decoding.
+Images with larger sizes than the threshold will be scaled down. The default value of `ScaleDownThreshold` is 2300 (pixel). You can set a smaller value for the `ScaleDownThreshold` when you want to speed up the barcode decoding.
+
+## Other Settings
+
+Through the above parameters, you can quickly adjust the performance of the barcode reader according to your usage scenario.
