@@ -54,6 +54,8 @@ reader.updateRuntimeSettings(settings);
 It is not always necessary to scan the whole image to get the barcode result. You can set a scan region for your barcode reader when scanning a small-sized barcode on an image.
 
 ```java
+import com.dynamsoft.dce.CameraEnhancer;
+
 RegionDefinition scanRegion = new RegionDefinition();
 scanRegion.regionTop = 30;
 scanRegion.regionBottom = 70;

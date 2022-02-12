@@ -12,7 +12,39 @@ noTitleIndex: true
 
 If you have completed the page of basic settings, you might have a basic understanding on how to use PublicRuntimeSettings to configure the barcode settings
 
-## DeblurLevel
+## Optimize the Speed
+
+### ScaleDownThreshold
+
+| Value Type | Value Range | Default Value |
+| ---------- | ----------- | ------------- |
+| int | [512,0x7fffffff] | 2300 |
+
+Images with larger sizes than the threshold will be scaled down. The default value of `ScaleDownThreshold` is 2300 (pixel). You can set a smaller value for the `ScaleDownThreshold` when you want to speed up the barcode decoding.
+
+```java
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+settings.scaleDownThreshold = 1200;
+reader.updateRuntimeSettings(settings);
+```
+
+### Timeout
+
+| Value Type | Value Range | Default Value |
+| ---------- | ----------- | ------------- |
+| int | [0,0x7fffffff] | 10000 |
+
+`Timeout`, which is measured by milliseconds, determines the maximum time the barcode reader will spend on each single image. Setting a lower `Timeout` value might help you on improving the processing speed of video barcode decoding. Some low-end devices may not be able to complete the barcode processing if the `Timeout` is too short. Be sure to do enough tests to reserve enough time for low-end devices when configuring the `Timeout` setting.
+
+```java
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+settings.timeout = 9;
+reader.updateRuntimeSettings(settings);
+```
+
+## Increase the Read Rate
+
+### DeblurLevel
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
@@ -35,21 +67,9 @@ reader.updateRuntimeSettings(settings);
 | Video streaming | Speed | 0-3 |
 | Video streaming | Read Rate | 4-9 |
 
-## Timeout
+## Enhance the Accuracy
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| int | [0,0x7fffffff] | 10000 |
-
-`Timeout`, which is measured by milliseconds, determines the maximum time the barcode reader will spend on each single image. Setting a lower `Timeout` value might help you on improving the processing speed of video barcode decoding. Some low-end devices may not be able to complete the barcode processing if the `Timeout` is too short. Be sure to do enough tests to reserve enough time for low-end devices when configuring the `Timeout` setting.
-
-```java
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.timeout = 9;
-reader.updateRuntimeSettings(settings);
-```
-
-## Confidence
+### Confidence
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
@@ -63,23 +83,9 @@ settings.minResultConfidence = 40;
 reader.updateRuntimeSettings(settings);
 ```
 
-## Result Verification
+### Result Verification
 
 Use multiple barcode results from different video frames to verify the correctness of the results. You can enable the result verification to further improve the result accuracy.
-
-## ScaleDownThreshold
-
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| int | [512,0x7fffffff] | 2300 |
-
-Images with larger sizes than the threshold will be scaled down. The default value of `ScaleDownThreshold` is 2300 (pixel). You can set a smaller value for the `ScaleDownThreshold` when you want to speed up the barcode decoding.
-
-```java
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.scaleDownThreshold = 1200;
-reader.updateRuntimeSettings(settings);
-```
 
 ## Other Settings
 
