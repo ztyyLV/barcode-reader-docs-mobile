@@ -10,9 +10,46 @@ noTitleIndex: true
 
 # Quick Setup -- Performance Settings
 
-If you have completed the page of basic settings, you might have a basic understanding on how to use PublicRuntimeSettings to configure the barcode settings
+If you have followed the previous steps, you got a basic video streaming barcode reading app. However, you might be still puzzled by the following issues:
 
-## Optimize the Speed
+- There are some barcodes I can't recognize.
+- The processing speed is too slow.
+- There are misreading results.
+
+Some simple solutions are given on this page. They may help you quickly solve the above issues.
+
+## How to Decode the Unreadable Barcodes
+
+There are multiple reasons that may cause a barcode is not recognized. Generally, the reason can be summarized as follow:
+
+- The barcode is localized but the barcode reader can't get the barcode result from the localized area.
+- The barcode reader failed to localize the barcode.
+
+**Increase the DeblurLevel**
+
+`DeblurLevel` is the parameter that controls how much effort the barcode reader spends on decoding the localized barcodes. Setting the DeblurLevel higher will improve the barcode decoding read rate but decline the processing speed at the same time. `DeblurLevel` is set to 9 (the highest level) by default. Therefore, if you find the processing speed is not satisfying, you can reduce the `DeblurLevel` to balance the speed and read rate performance.
+
+| Value Type | Value Range | Default Value |
+| ---------- | ----------- | ------------- |
+| int | [0,9] | 9 |
+
+```java
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+settings.deblurLevel = 9;
+
+reader.updateRuntimeSettings(settings);
+```
+
+**Enlarge the resolution**
+
+When decoding from the video streaming, it is recommended to set the resolution to 1080P.
+
+```java
+// You can use the following method to change the resolution.
+cameraEnhancer.setResolution(EnumResolution.RESOLUTION_1080P);
+```
+
+## How to improve the Speed
 
 ### ScaleDownThreshold
 
@@ -42,32 +79,7 @@ settings.timeout = 9;
 reader.updateRuntimeSettings(settings);
 ```
 
-## Increase the Read Rate
-
-### DeblurLevel
-
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| int | [0,9] | 9 |
-
-`DeblurLevel` is the parameter that controls how much effort the barcode reader spends on decoding the localized barcodes. Setting the DeblurLevel higher will improve the barcode decoding read rate but decline the processing speed at the same time. `DeblurLevel` is set to 9 (the highest level) by default. Therefore, if you find the processing speed is not satisfying, you can reduce the `DeblurLevel` to balance the speed and read rate performance.
-
-```java
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.deblurLevel = 9;
-reader.updateRuntimeSettings(settings);
-```
-
-**Recommendations**
-
-| Image Source | Priority | DeblurLevel |
-| ------------ | -------- | ----------- |
-| Static Image | Speed | 0-6 |
-| Static Image | Read Rate | 7-9 |
-| Video streaming | Speed | 0-3 |
-| Video streaming | Read Rate | 4-9 |
-
-## Enhance the Accuracy
+## Filter out the Misreading Results
 
 ### Confidence
 
