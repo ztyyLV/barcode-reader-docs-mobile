@@ -62,7 +62,7 @@ settings.localizationModes = new int[]{EnumLocalizationMode.LM_SCAN_DIRECTLY,Enu
 reader.updateRuntimeSettings(settings);
 ```
 
-## How to improve the Speed
+## How to Improve the Speed
 
 **Set ScaleDownThreshold**
 
@@ -92,7 +92,7 @@ settings.timeout = 9;
 reader.updateRuntimeSettings(settings);
 ```
 
-## Filter out the Misreading Results
+## How to Filter out the Misreading Results
 
 **Increase Confidence Level**
 
