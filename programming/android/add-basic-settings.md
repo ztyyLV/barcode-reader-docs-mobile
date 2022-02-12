@@ -70,3 +70,10 @@ try {
 ```
 
 The above settings are enough for the majority of usage scenarios. However, if the performance is still not satisfying, the following articles will help you on improving the performance.
+
+- [Optimize performance](quick-performance-settings.md)
+
+If you are facing license issues, the following pages might help you.
+
+- [Licence Activation]()
+- [FAQs - License]()
