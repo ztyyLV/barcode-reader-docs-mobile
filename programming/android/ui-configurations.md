@@ -53,6 +53,8 @@ dceCameraView.setOverlayColour(0xff00ff00, 0x00000000);
 
 ## How to Add clickable Torchlight Button
 
-A clickable torch button that can control the status of torchlight is build-in the cameraView.
+In the cameraView, there is a build-in clickable torch button that can control the status of torchlight. You can add styles like location, size and image icon for the button.
 
-Once the button is displayed on the UI, you don't need to add code for controlling the torch.
+```java
+
+```
