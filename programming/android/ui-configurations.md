@@ -44,7 +44,7 @@ The highlight overlays will be created and displayed on the UI automatically whe
 cameraView.setOverlayVisible(true);
 ```
 
-The stroke and fillin colour of the overlays are also available for setting.
+The stroke and fill colour of the overlays are also available for setting.
 
 ```java
 // The first value is stroke colour and the second one is fill in colour.
@@ -53,8 +53,23 @@ dceCameraView.setOverlayColour(0xff00ff00, 0x00000000);
 
 ## How to Add clickable Torchlight Button
 
-In the cameraView, there is a build-in clickable torch button that can control the status of torchlight. You can add styles like location, size and image icon for the button.
+In the `cameraView`, there is a build-in clickable torch button that can control the status of the torchlight. You can add styles like location, size and image icon for the button.
+
+To display the torch button on the UI:
 
 ```java
+// If you don't add any styles for the button, the torch will be displayed on the top left corner of the screen.
+cameraView.setTorchButtonVisible(true);
+```
 
+To add styles for the button:
+
+```java
+cameraView.setTorchButton(new Point(100,100),50,50,getDrawable(R.drawable.torch_on),getDrawable(R.drawable.torch_off));
+```
+
+If you set the position or images to null, they will be set to the default value.
+
+```java
+cameraView.setTorchButton(null,50,50,null,null);
 ```
