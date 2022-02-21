@@ -13,6 +13,7 @@ noTitleIndex: true
 On this page, you will read:
 
 - How to highlight the decoded barcodes
+- How to display barcode result on the UI ()
 - How to add clickable torchlight button
 
 ## Preperations
