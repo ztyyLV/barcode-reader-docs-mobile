@@ -8,7 +8,7 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Quick Setup -- Performance Settings
+# Quickly Adjust on the Performance
 
 If you have followed the previous steps, you got a basic video streaming barcode reading app. However, you might be still puzzled by the following issues:
 
