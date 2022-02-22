@@ -183,15 +183,15 @@ You can add your downloaded frameworks into your project through the following s
     }
     ```
 
-2. Much like the Camera Enhancer component, let's now configure the Barcode Reader for use. This includes setting up the `DLS` (Dynamsoft License Server) parameters for device verification. Please note that the license is assigned via the `organizationID` parameter. The value currently assigned in the samples is used as a 7-day free public trial for any new user.
+2. Much like the Camera Enhancer component, let's now configure the Barcode Reader for use. This includes setting up the `DLS` (Dynamsoft License Server) parameters for device verification. Please note that the license is assigned via the `organizationID` parameter. The value currently assigned in the samples is used as a time-limited public trial for any new user.
 
     Objective-C:
 
     ```objectivec
     - (void)configurationDBR{
         iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
-        // 7 days free trial will be available for new users.
-        // Please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=installer&package=ios to get extension and more information about license.
+        // A network connection is required to active the public trial license.
+        // The public trial license is time-limited. Please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=installer&package=ios to get extension and more information about license.
         dls.organizationID = @"200001";
         _barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
     }
@@ -203,8 +203,8 @@ You can add your downloaded frameworks into your project through the following s
     func configurationDBR() {
         // Configure the Dynamsoft License Server parameters for verification purposes
         let dls = iDMDLSConnectionParameters()
-        // 7 days free trial will be available for new users.
-        // Please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=installer&package=ios to get extension and more information about license.
+        // A network connection is required to active the public trial license.
+        // The public trial license is time-limited. Please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=installer&package=ios to get extension and more information about license.
         dls.organizationID = "200001"
         barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
     }

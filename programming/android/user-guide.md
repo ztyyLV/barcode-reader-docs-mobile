@@ -168,7 +168,7 @@ There are two ways to include the SDK into your project - local binary dependenc
 
    >Note:
    >- Network connection is required for the license to work.
-   >- The organization id 200001 here will grant you a public trial license good for 7 days.
+   >- The organization id 200001 here will grant you a time-limited public trial license.
    >- If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
 
 3. Create text callback to obtain the recognized barcode results.

@@ -8,7 +8,7 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Quick Setup -- Basic Settings
+# Add Basic Settings
 
 If you have followed the guide in [Getting started](#user-guide.md), you have created a simple video streaming barcode reader. On this page, you can learn about how to add basic settings for your barcode reader.
 
@@ -36,10 +36,10 @@ The `expectedBarcodeCount` is the parameter that controls how many barcodes you 
 
 There are some suggestions on how to set the `expectedBarcodeCount`:
 
-- When the barcode reader is confirmed to focus on decoding single barcode, the recommended `expectedBarcodeCount` is 1. This will sharply improve the processing speed.
-- When there are **n** barcodes in a single image (**n** is a fixed number) and you'd like the barcode reader to decode all of them, the recommended `expectedBarcodeCount` is **n**.
-- When the count of targeting barcodes is unknown and you want to output as many barcode results as possible, you can set the `expectedBarcodeCount` to the maximum possible count.
-- When the count of targeting barcodes is unknown and you want to output at least one barcode result as soon as possible, you can set the `expectedBarcodeCount` to 0. The barcode reader will try to decode at least one barcode from the image.
+- When the barcode reader is confirmed to focus on decoding **single** barcode, the recommended `expectedBarcodeCount` is **1**. This will sharply improve the processing speed.
+- When there are **n** barcodes in a single image (**n** is a fixed number) and you'd like the barcode reader to decode **all of them**, the recommended `expectedBarcodeCount` is **n**.
+- When the count of targeting barcodes is unknown and you want to output **as many** barcode results as possible, you can set the `expectedBarcodeCount` to the **maximum possible count**.
+- When the count of targeting barcodes is unknown and you want to output **at least one** barcode result as soon as possible, you can set the `expectedBarcodeCount` to **0**. The barcode reader will try to decode at least one barcode from the image.
 
 ```java
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
@@ -49,9 +49,9 @@ settings.expectedBarcodesCount = 0;
 reader.updateRuntimeSettings(settings);
 ```
 
-## Set Scan Region
+## Define a Scan Region
 
-It is not always necessary to scan the whole image to get the barcode result. You can set a scan region for your barcode reader when scanning a small-sized barcode on an image.
+It is not always necessary to scan the whole image to get the barcode result. You can define a scan region for your barcode reader when scanning a small-sized barcode on an image.
 
 ```java
 import com.dynamsoft.dce.CameraEnhancer;
@@ -75,5 +75,4 @@ The above settings are enough for the majority of usage scenarios. However, if t
 
 If you are facing license issues, the following pages might help you.
 
-- [Licence Activation]()
-- [FAQs - License]()
+- [Licence Activation]({{ site.license_activation }})

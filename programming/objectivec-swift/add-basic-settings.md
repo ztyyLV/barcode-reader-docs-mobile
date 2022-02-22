@@ -14,9 +14,7 @@ If you have followed the guide in [Getting started](#user-guide.md), you have cr
 
 ## Specify Barcode Formats
 
-Before you start on this section, you can have a read of the <a href="https://www.dynamsoft.com/barcode-types/barcode-types/" target="_blank">introduction of barcode formats</a> to have a basic understanding on the barcodes. As one of the most basic barcode settings, specifying the barcode format will help you improve the speed and accuracy of your barcode reader.
-
-Please do confirm all the targeting barcode formats in your requirements before you configure the barcode format settings. Generally, the barcode format settings are updated via `PublicRuntimeSettings` class by specifying enumeration member of `BarcodeFormat` or `BarcodeFormat_2`.
+Specifying the barcode format is always the first step of barcode reader configuration. Be sure to confirm that the targeting barcode formats are all included when configuring the barcode reader settings. Excluding the uninterest barcodes will also improve the processing efficiency. If you are not expert on recognizing barcode formats, the <a href="https://www.dynamsoft.com/barcode-types/barcode-types/" target="_blank">introduction of barcode formats</a> may help you understand the barcode formats. Generally, the barcode format settings are updated via `PublicRuntimeSettings` class by specifying enumeration member of `BarcodeFormat` or `BarcodeFormat_2`.
 
 ```swift
 let error: NSError? = NSError()
@@ -38,11 +36,14 @@ barcodeReader.update(settings, error: &error)
 
 ## Set Barcode Count
 
-The `expectedBarcodeCount` is the parameter that controls how many barcodes you would like the barcode reader to recognize from a single image. There are some suggestions on how to set the `expectedBarcodeCount`:
+The `expectedBarcodeCount` is the parameter that controls how many barcodes you would like the barcode reader to recognize from a single image. The process will be stopped as soon as the count of successfully decoded barcodes reaches the expected number.
 
-- When the barcode reader is confirmed to focus on decoding single barcode, the recommended `expectedBarcodeCount` is 1. This will sharply improve the processing speed.
-- When there are **n** barcodes in a single image (**n** is a fixed number) and you'd like the barcode reader to decode all of them, the recommended `expectedBarcodeCount` is **n**.
-- Set the `expectedBarcodeCount` to 0 when the barcode count is uncertain. When the `expectedBarcodeCount` is set to 0, the barcode reader will try to decode at least one barcode from the image.
+There are some suggestions on how to set the `expectedBarcodeCount`:
+
+- When the barcode reader is confirmed to focus on decoding **single** barcode, the recommended `expectedBarcodeCount` is **1**. This will sharply improve the processing speed.
+- When there are **n** barcodes in a single image (**n** is a fixed number) and you'd like the barcode reader to decode **all of them**, the recommended `expectedBarcodeCount` is **n**.
+- When the count of targeting barcodes is unknown and you want to output **as many** barcode results as possible, you can set the `expectedBarcodeCount` to the **maximum possible count**.
+- When the count of targeting barcodes is unknown and you want to output **at least one** barcode result as soon as possible, you can set the `expectedBarcodeCount` to **0**. The barcode reader will try to decode at least one barcode from the image.
 
 ```swift
 let error: NSError? = NSError()
@@ -60,9 +61,9 @@ settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_
 barcodeReader.update(settings, error: &error)
 ```
 
-## Set Scan Region
+## Define a Scan Region
 
-It is not always necessary to scan the whole image to get the barcode result. You can set a scan region for your barcode reader when scanning a small-sized barcode on an image.
+It is not always necessary to scan the whole image to get the barcode result. You can define a scan region for your barcode reader when scanning a small-sized barcode on an image.
 
 ```swift
 import DynamsoftCameraEnhancer
@@ -80,3 +81,10 @@ dce.setScanRegion(scanRegion, error: &error)
 ```
 
 The above settings are enough for the majority of usage scenarios. However, if the performance is still not satisfying, the following articles will help you on improving the performance.
+
+- [Optimize performance](quick-performance-settings.md)
+
+If you are facing license issues, the following pages might help you.
+
+- [Licence Activation]()
+- [FAQs - License]()
