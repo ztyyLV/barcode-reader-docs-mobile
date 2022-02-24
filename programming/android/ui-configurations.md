@@ -48,7 +48,7 @@ The stroke and fill colour of the overlays are also available for setting.
 
 ```java
 // The first value is stroke colour and the second one is fill in colour.
-dceCameraView.setOverlayColour(0xff00ff00, 0x00000000);
+cameraView.setOverlayColour(0xff00ff00, 0x00000000);
 ```
 
 ## How to Add clickable Torchlight Button
