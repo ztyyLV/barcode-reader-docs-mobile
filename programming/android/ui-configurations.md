@@ -10,14 +10,14 @@ noTitleIndex: true
 
 # UI Configurations
 
-On this page, you will read:
+In this article, you will learn:
 
 - How to highlight the decoded barcodes
 - How to add clickable torchlight button
 
 ## Preparations
 
-UI configuring API are all included in DCECameraView class. All the UI configurations are implemented via the DCECameraView instance. You can use the following step to get prepared for UI configurations. These steps are all done if you have completed the steps in the [Getting started](user-guide.md) page.
+UI configuring APIs are all included in DCECameraView class. All the UI configurations are implemented via the DCECameraView instance. You can use the following steps to get prepared for UI configurations. These steps are also mentioned in the [Getting started](user-guide.md).
 
 ```java
 import com.dynamsoft.dce.DCECameraView;
@@ -38,7 +38,7 @@ DCECameraView cameraView = findViewById(R.id.cameraView);
 
 ## How to Highlight Decoded Barcodes
 
-The highlight overlays will be created and displayed on the UI automatically when you add the following code. You don't need to write any code for the location of overlays.
+By adding the following codes, the decoded barcodes will be automatically highlighted with a real-time overlay.
 
 ```java
 cameraView.setOverlayVisible(true);
@@ -53,7 +53,7 @@ cameraView.setOverlayColour(0xff00ff00, 0x00000000);
 
 ## How to Add clickable Torchlight Button
 
-In the `cameraView`, there is a build-in clickable torch button that can control the status of the torchlight. You can add styles like location, size and image icon for the button.
+In the `cameraView`, there is a build-in clickable torch button that can control the status of the torchlight. By invoking APIs, you can control the parameters such as position, size and icon of the button.
 
 To display the torch button on the UI:
 
