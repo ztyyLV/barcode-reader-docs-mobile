@@ -139,8 +139,8 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError()
-let barcodeReader = DynamsoftBarcodeReader(licenseFromServer: "", licenseKey: "C087****", verificationDelegate: self)
-let licenseString = barcodeReader.outputLicense(error: &error)
+let barcodeReader = DynamsoftBarcodeReader.init(licenseFromServer: "", licenseKey: "C087****", verificationDelegate: self)
+let licenseString = try! barcodeReader.outputLicenseToString()
 ```
 
 ## initLicenseFromDLS
@@ -182,7 +182,7 @@ Swift:
 let dls = iDMDLSConnectionParameters()
 dls.organizationID = "200001"
 dls.sessionPassword = "******"
-let barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
+let barcodeReader = DynamsoftBarcodeReader.init(licenseFromDLS: dls, verificationDelegate: self)
 func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 {
     print("isSucc : \(isSuccess) error : \(String(describing: error))")

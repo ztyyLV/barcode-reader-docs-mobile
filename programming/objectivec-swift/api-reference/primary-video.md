@@ -118,7 +118,7 @@ Objective-C:
 Swift:
 
 ```Swift
-barcodeReader.setDBRTextResultDelegate(textResultDelegate:self, userData:nil)
+barcodeReader.setDBRTextResultDelegate(self, userData:nil)
 ```
 
 ## setDBRIntermediateResultDelegate
@@ -146,5 +146,5 @@ DynamsoftBarcodeReader *barcodeReader;
 Swift:
 
 ```Swift
-barcodeReader.setDBRIntermediateResultDelegate(intermediateResultDelegate:self, userData:nil)
+barcodeReader.setDBRIntermediateResultDelegate(self, userData:nil)
 ```

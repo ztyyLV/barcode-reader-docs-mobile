@@ -49,7 +49,7 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError()
-let licenseString = barcodeReader.getRuntimeSettings(error: &error)
+let settings = try! barcodeReader.getRuntimeSettings()
 ```
 
 ## updateRuntimeSettings
@@ -83,8 +83,8 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError()
-let settings = barcodeReader.getRuntimeSettings(error: nil)
-barcodeReader.updateRuntimeSettings(settings: settings, error: &error)
+let settings = try! barcodeReader.getRuntimeSettings()
+barcodeReader.update(settings, error: &error)
 ```
 
 ### With a Preset Template
@@ -136,7 +136,7 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError()
-barcodeReader.resetRuntimeSettings(error: &error)
+barcodeReader.resetRuntimeSettings(&error)
 ```
 
 ## setModeArgument
@@ -180,12 +180,12 @@ Swift:
 ```Swift
 let error: NSError? = NSError()
 let mArray: NSMutableArray? = NSMutableArray()
-let settings = barcodeReader.getRuntimeSettings(error: nil)
+let settings = try! barcodeReader.getRuntimeSettings()
 mArray!.setArray(settings.binarizationModes as! [Any])
 mArray![0] = EnumBinarizationMode.LocalBlock
 settings.binarizationModes = mArray!
-barcodeReader.update(settings: settings, error: nil)
-barcodeReader.setModeArgument(modeName: "BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1", error: &error)
+barcodeReader.update(settings, error: nil)
+barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1", error: &error)
 ```
 
 **Remarks**
@@ -249,13 +249,13 @@ Swift:
 ```Swift
 let error: NSError? = NSError()
 let mArray: NSMutableArray? = NSMutableArray()
-let settings = barcodeReader.getRuntimeSettings(error: nil)
+let settings = try! barcodeReader.getRuntimeSettings()
 mArray!.setArray(settings.binarizationModes as! [Any])
 mArray![0] = EnumBinarizationMode.LocalBlock
-settings.binarizationModes = mArray!
-barcodeReader.update(settings: settings, error: nil)
-barcodeReader.setModeArgument(modeName: "BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1", error: nil)
-let argumentValue = barcodeReader.getModeArgument(modeName: "BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", error: &error)
+settings.binarizationModes = mArray! as! [Any]
+barcodeReader.update(settings, error: nil)
+barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1", error: nil)
+let argumentValue = barcodeReader.getModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", error: &error)
 ```
 
 **Remarks**

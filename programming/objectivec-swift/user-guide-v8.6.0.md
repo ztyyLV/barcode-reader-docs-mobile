@@ -409,7 +409,7 @@ settings.region.regionMeasuredByPercentage = 1;
 Swift:
 
 ```Swift
-let settings = try reader.getRuntimeSettings()
+let settings = try! reader.getRuntimeSettings()
 // Set the barcode format
 settings.barcodeFormatIds = Int(EnumBarcodeFormat.ONED.rawValue)
 settings.expectedBarcodesCount = 1

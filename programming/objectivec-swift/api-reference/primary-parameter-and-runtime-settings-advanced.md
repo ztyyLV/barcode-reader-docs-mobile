@@ -174,14 +174,14 @@ Objective-C:
 ```objc
 NSError __autoreleasing * _Nullable error;
 
-[barcodeReader allParameterTemplateNames:&error];
+NSArray* allTplNames = [barcodeReader allParameterTemplateNames:&error];
 ```
 
 Swift:
 
 ```Swift
 let error: NSError? = NSError()
-barcodeReader.allParameterTemplateNames(error:&error)
+let allTplNames = try! barcodeReader.allParameterTemplateNames()
 ```
 
 ## outputSettingsToFile
@@ -213,7 +213,7 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError()
-let settingsName = barcodeReader.outputSettingsToFile(filePath:"your saving file path", settingsName:"currentRuntimeSettings", error:&error)
+let settingsName = barcodeReader.outputSettings(toFile: "your saving file path", settingsName:"currentRuntimeSettings", error:&error)
 ```
 
 ## outputSettingsToString
@@ -247,5 +247,5 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError()
-let settingsName = barcodeReader.outputSettingsToString(settingsName:"currentRuntimeSettings", error:&error)
+let settingsName = try! barcodeReader.outputSettings(to:"currentRuntimeSettings")
 ```

@@ -32,7 +32,7 @@ This method returns the DBR error code. Please view more about the error code in
 ```java
 try {
     //Here we use decodeFile as example.
-    reader.decodeFile("Your file path","Template name");
+    reader.decodeFile("Your file path","");
 } catch (BarcodeReaderException e) {
     Log.i("Decode", "onCreate: The error code for decode file is: "+e.getErrorCode());
 }
