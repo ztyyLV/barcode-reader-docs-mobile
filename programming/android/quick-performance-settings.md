@@ -18,14 +18,14 @@ By following the previous guide, I believe you have managed to create your own b
 
 In this article, we will share some solutions to help you solve the above issues.
 
-## How to Decode the Unreadable Barcodes
+## How to Decode the Unrecognized Barcodes
 
 There are several reasons that may cause a barcode unrecognized. 
 
 Generally speaking
+
 - The barcode reader failed to locate the barcode.
 - The barcode is located but the result cannot be decoded.
-
 
 **Adjust the DeblurLevel**
 
@@ -41,7 +41,7 @@ settings.deblurLevel = 9;
 reader.updateRuntimeSettings(settings);
 ```
 
-**Adjust the resolution**
+**Enlarge the resolution**
 
 When decoding from the video streaming, it is recommended to set the resolution to 1080P.
 
@@ -52,7 +52,7 @@ cameraEnhancer.setResolution(EnumResolution.RESOLUTION_1080P);
 
 **Add Localization Modes**
 
-The `LocalizationModes` determines how the library locate the barcode. Set multiple `LocalizationModes` can help library to find at least one barcode for further processing. When you find there are barcodes that can't be recognized, you may try adding extra parameters to the `LocalizationModes`.
+The `LocalizationModes` determines how the library locates the barcode. Set multiple `LocalizationModes` can help the library to find at least one barcode for further processing. When you find there are barcodes that can't be recognized, you may try adding extra parameters to the `LocalizationModes`.
 
 ```java
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
@@ -98,7 +98,7 @@ reader.updateRuntimeSettings(settings);
 
 **Increase Confidence Level**
 
-`MinResultConfidence` is the parameter that controls the result confidence to filter the results that below the set confidence. The default value of `MinResultConfidence` is 30. You can set `MinResultConfidence` higher to get even more accurate results.
+`MinResultConfidence` is the parameter that controls the result confidence to filter the results below the set confidence. The default value of `MinResultConfidence` is 30. You can set `MinResultConfidence` higher to get even more accurate results.
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |

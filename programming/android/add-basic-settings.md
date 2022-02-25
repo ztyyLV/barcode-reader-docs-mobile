@@ -14,7 +14,7 @@ If you have followed the [Getting started](#user-guide.md), you may have managed
 
 ## Specify Barcode Formats
 
-Specifying the barcode format is always the first step of barcode reader configuration. Be sure to confirm that the target barcode formats are included. Meanwhil, excluding the undesired barcodes will improve the processing efficiency. If you are not familiar with barcode format, the <a href="https://www.dynamsoft.com/barcode-types/barcode-types/" target="_blank">introduction of barcode formats</a> may help you understand it. Generally, the barcode format settings are updated via `PublicRuntimeSettings` class by specifying enumeration member of `BarcodeFormat` or `BarcodeFormat_2`.
+Specifying the barcode format is always the first step of barcode reader configuration. Be sure to confirm that the target barcode formats are included. Meanwhile, excluding the undesired barcodes will improve the processing efficiency. If you are not familiar with barcode format, the <a href="https://www.dynamsoft.com/barcode-types/barcode-types/" target="_blank">introduction of barcode formats</a> may help you understand it. Generally, the barcode format settings are updated via `PublicRuntimeSettings` class by specifying enumeration member of `BarcodeFormat` or `BarcodeFormat_2`.
 
 ```java
 // Create an instance of PublicRuntimeSettings.
@@ -71,7 +71,7 @@ try {
 
 The above settings can meet the majority of usage scenarios. However, if the performance is still not satisfying, the following articles will help you on improving the performance.
 
-- [Optimize performance](quick-performance-settings.md)
+- [Quick optimize performance](quick-performance-settings.md)
 
 If you are facing license issues, the following pages might help you.
 
