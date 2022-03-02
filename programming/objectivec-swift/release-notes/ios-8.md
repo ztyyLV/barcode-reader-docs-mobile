@@ -10,6 +10,13 @@ noTitleIndex: true
 
 # Release Notes for iOS SDK - 8.x
 
+## 8.9.3 (03/02/2022)
+
+### Fixed
+
+- Removed the mandatory dependency of `DynamsoftCameraEnhancer`.
+- Fixed a bug that might offset the position of highlight overlays on the decoded barcodes when used together with `DynamsoftCameraEnhancer`.
+
 ## 8.9.1 (12/28/2021)
 
 - Fixed a bug that might affect the processing speed.

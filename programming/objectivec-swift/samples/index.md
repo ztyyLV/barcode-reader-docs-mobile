@@ -28,7 +28,7 @@ Before you start viewing the samples, the following concepts may help you unders
 
 ### License
 
-In the samples, there is a public trial license that is available for 7 days and an internet connection is required for this license to work. If your license is expired, you can request a new 30-day trial license in the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=documents" target="_blank">customer portal</a>.
+A network connection is required to verify the public trial license in the samples. If your license is expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=documents" target="_blank">customer portal</a> to request for a private trial license.
 
 ### Performance
 
