@@ -10,10 +10,10 @@ noTitleIndex: true
 
 # Release Notes for Android SDK - 8.x
 
-## 8.9.3 (03/01/2022)
+## 8.9.3 (03/02/2022)
 
 - Fixed a bug that might cause memory leak when using method setTextResultCallback and setIntermediateResultCallback.
-- Fixed a bug that might cause a crash on Android emulator when using together with `DynamsoftCameraEnhancer`.
+- Fixed a bug that might cause a crash on Android emulator when using it together with `DynamsoftCameraEnhancer`.
 
 ## 8.9.1 (12/28/2021)
 
