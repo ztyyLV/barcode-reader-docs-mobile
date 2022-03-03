@@ -191,7 +191,7 @@ Swift:
 ```Swift
 let image: UIImage? = UIImage()
 let error: NSError? = NSError()
-let result = try! barcodeReader.decodeImage(image withTemplate:"")
+let result = try! barcodeReader.decode(image, withTemplate:"")
 ```
 
 ## decodeBase64
