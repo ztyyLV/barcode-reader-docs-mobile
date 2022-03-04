@@ -32,7 +32,7 @@ Starting from v8.8 of DBR, the SDK also offers **xcframeworks** for iOS developm
 
 ## Build Your First Application
 
-In this section, let’s see how to create a **HelloWorld** app for reading barcodes from camera video input.
+In this section, let's see how to create a **HelloWorld** app for reading barcodes from camera video input.
 
 > Note:
 >- You can download the complete Objective-C source code [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC)
