@@ -186,7 +186,7 @@ You can add your downloaded frameworks into your project through the following s
     - (void)configurationDBR{
         // A network connection is required to active the public trial license.
         // The public trial license is time-limited. Please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=installer&package=ios to get an extension.
-        [DynamsoftBarcodeReader initLicense:@"Put your license here" verificationDelegate: self];
+        [DynamsoftBarcodeReader initLicense:@"Put your license here" VerificationDelegate: self];
     }
     ```
 
@@ -196,18 +196,18 @@ You can add your downloaded frameworks into your project through the following s
     func configurationDBR() {
         // A network connection is required to active the public trial license.
         // The public trial license is time-limited. Please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=installer&package=ios to get an extension.
-        DynamsoftBarcodeReader.initLicense("Put your license here", verificationDelegate: self)
+        DynamsoftBarcodeReader.initLicense("Put your license here", VerificationDelegate: self)
     }
     ```
 
-3. Once you create the Barcode Reader object, a `textResultCallback` is then implemented where the barcode results will be stored. If the `verificationDelegate` is set to `self`, the callback must be implemented in the `ViewController` class or the build will result in an error. On that same note, a callback for the `DLS` verification process is also implemented (`dlsLicenseVerificationCallback`).
+3. Once you create the Barcode Reader object, a `textResultCallback` is then implemented where the barcode results will be stored. If the `VerificationDelegate` is set to `self`, the callback must be implemented in the `ViewController` class or the build will result in an error. On that same note, a callback for the `DLS` verification process is also implemented (`dlsLicenseVerificationCallback`).
 
-    Also note that the `DBRTextResultDelegate` and `DMDLSLicenseVerificationDelegate` interfaces must be added at the head.
+    Also note that the `DBRTextResultListener` and `DBRLicenseVerificationListener` interfaces must be added at the head.
 
     Objective-C:
 
     ```objectivec
-    @interface ViewController ()<DBRLicenseVerificationListener, DBRTextResultDelegate>
+    @interface ViewController ()<DBRLicenseVerificationListener, DBRTextResultListener>
 
     @implementation ViewController
 
@@ -259,7 +259,7 @@ You can add your downloaded frameworks into your project through the following s
     Swift:
 
     ```swift
-    class ViewController: UIViewController, DBRTextResultDelegate, DMDLSLicenseVerificationDelegate {
+    class ViewController: UIViewController, DBRTextResultListener, DBRLicenseVerificationListener{
         
         ...
 
@@ -309,7 +309,7 @@ You can add your downloaded frameworks into your project through the following s
         // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
         [_barcodeReader setCameraEnhancer:_dce];
         // Make this setting to get the result. The result will be an object that contains text results and other barcode information.
-        [_barcodeReader setDBRTextResultDelegate:self userData:nil];
+        [_barcodeReader setDBRTextResultListener:self userData:nil];
         [_barcodeReader startScanning];
     }
     ```
@@ -324,7 +324,7 @@ You can add your downloaded frameworks into your project through the following s
         The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.*/
         barcodeReader.setCameraEnhancer(dce)
         /*Make this setting to get the result. The result will be an object that contains text result and other barcode information.*/
-        barcodeReader.setDBRTextResultDelegate(self, userData: nil)
+        barcodeReader.setDBRTextResultListener(self, userData: nil)
         barcodeReader.startScanning()
     }
     ```

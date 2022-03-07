@@ -46,10 +46,11 @@ breadcrumbText: iOS API Reference
   | Method               | Description |
   |----------------------|-------------|
   | [`license`](primary-license.md#license) | Stores the license used in DynamsoftBarcodeReader. |
-  | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
+  | [`initWithLicense`](primary-license.md#initwithlicense) | Read product key and activate the SDK. |
+  | [`initWithLicenseFromServer`](primary-license.md#initwithlicensefromserver) | Initialize license and connect to the specified server for online verification. |
   | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) | Deprecated, use [`initLicense`](primary-license.md#initwithlicense) instead. |
-  | [`initWithLicenseFromServer`](primary-license.md#initwithlicensefromserver) | Deprecated, use [`initLicense`](primary-license.md#initwithlicense) instead. |
+  | [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`initLicenseFromLTS`](primary-license.md#initlicensefromlts) | `Deprecated`, please use [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) instead. |
 
 ### Parameter and Runtime Settings
 
@@ -96,6 +97,7 @@ breadcrumbText: iOS API Reference
 - [`iContour`](auxiliary-iContour.md)
 - [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md)
 - [`iDBRPoint`](auxiliary-iDBRPoint.md)
+- [`iDMDLSConnectionParameters`](auxiliary-iDMDLSConnectionParameters.md)
 - [`iExtendedResult`](auxiliary-iExtendedResult.md)
 - [`iFurtherModes`](auxiliary-iFurtherModes.md)
 - [`iImageData`](auxiliary-iImageData.md)
@@ -111,7 +113,6 @@ breadcrumbText: iOS API Reference
 - [`iRegionOfInterest`](auxiliary-iRegionOfInterest.md)
 - [`iSamplingImageData`](auxiliary-iSamplingImageData.md)
 - [`iTextResult`](auxiliary-iTextResult.md)
-- [`iDMDLSConnectionParameters (Deprecated)`](auxiliary-iDMDLSConnectionParameters.md)
 
 ## Protocol
 
@@ -119,9 +120,9 @@ breadcrumbText: iOS API Reference
   | -------- | ----------- |
   | [`DBRTextResultDelegate`]({{ site.oc_api }}protocol-dbrtextresultdelegate.html) | Protocol for a delegate to handle callback when text result returned. |
   | [`DBRIntermediateResultDelegate`]({{ site.oc_api }}protocol-dbrintermediateresultdelegate.html) | Protocol for a delegate to handle callback when intermediate result returned. |
-  | [`DBRLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |
-  | [`DBRServerLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dbrserverlicenseverificationdelegate.html) | Deprecated. |
-  | [`DBRErrorDelegate`]({{ site.oc_api }}protocol-dbrerrordelegate.html) | Deprecated. |
+  | [`DBRErrorDelegate`]({{ site.oc_api }}protocol-dbrerrordelegate.html) | Protocol for a delegate to handle callback when an error returned. |
+  | [`DBRServerLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dbrserverlicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |
+  | [`DMDLSLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |
 
 ## Enumerations
 
@@ -138,6 +139,9 @@ breadcrumbText: iOS API Reference
 - [`EnumConflictMode`]({{ site.enumerations }}parameter-mode-enums.html#conflictmode)
 - [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)
 - [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)
+- [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
+- [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
+- [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
 - [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)
 - [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
 - [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)
@@ -156,7 +160,3 @@ breadcrumbText: iOS API Reference
 - [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)
 - [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)
 - [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
-- [`EnumProduct (Deprecated)`]({{ site.enumerations }}other-enums.html#product)
-- [`EnumDMChargeWay (Deprecated)`]({{ site.enumerations }}other-enums.html#dm_chargeway)
-- [`EnumDMLicenseModule (Deprecated)`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
-- [`EnumDMUUIDGenerationMethod (Deprecated)`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)

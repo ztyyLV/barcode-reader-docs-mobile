@@ -43,10 +43,11 @@ noTitleIndex: true
   | Method               | Description |
   |----------------------|-------------|
   | [`license`](primary-license.md#license) | Stores the license used in DynamsoftBarcodeReader. |
-  | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
+  | [`initWithLicense`](primary-license.md#initwithlicense) | Read product key and activate the SDK. |
+  | [`initWithLicenseFromServer`](primary-license.md#initwithlicensefromserver) | Initialize license and connect to the specified server for online verification. |
   | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) | Deprecated, use [`initLicense`](primary-license.md#initwithlicense) instead. |
-  | [`initWithLicenseFromServer`](primary-license.md#initwithlicensefromserver) | Deprecated, use [`initLicense`](primary-license.md#initwithlicense) instead. |
+  | [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`initLicenseFromLTS`](primary-license.md#initlicensefromlts) | `Deprecated`, please use [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) instead. |
 
 ## Parameter and Runtime Settings
 

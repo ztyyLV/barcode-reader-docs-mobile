@@ -12,11 +12,10 @@ noTitleIndex: true
   | Method               | Description |
   |----------------------|-------------|
   | [`license`](#license) | Stores the license used in DynamsoftBarcodeReader. |
-  | [`initWithLicense`](#initwithlicense) | Initializes DynamsoftBarcodeReader with a license. |
-  | [`initWithLicenseFromServer`](#initwithlicensefromserver) | Initialize license and connect to the specified server for online verification. |
+  | [`initWithLicense`](#initlicense) | Initializes DynamsoftBarcodeReader with a license. |
   | [`outputLicenseToString`](#outputlicensetostring) | Outputs the license content as an encrypted string from the license server to be used for offline license verification. |
   | [`initLicenseFromDLS`](#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
-  | [`initLicenseFromLTS`](#initlicensefromlts) | `Deprecated`, please use [`initLicenseFromDLS`](#initlicensefromdls) instead. |
+  | [`initWithLicenseFromServer`](#initwithlicensefromserver) | Initialize license and connect to the specified server for online verification. |
 
   ---
 
@@ -28,7 +27,7 @@ A property that stores the license.
 @property (nonatomic, nonnull) NSString* license;
 ```
 
-## initWithLicense
+## initLicense
 
 Initializes DynamsoftBarcodeReader with a license.
 
@@ -49,17 +48,58 @@ The instance of DynamsoftBarcodeReader.
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
+[DynamsoftBarcodeReader initLicense:@"Put your license here" verificationDelegate: self];
+- (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
+}
 ```
 
 Swift:
 
 ```Swift
-let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
+DynamsoftBarcodeReader.initLicense("Put your license here", verificationDelegate: self)
+func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+}
+```
+
+## outputLicenseToString
+
+Output the license content as an encrypted string from the license server to be used for offline license verification.
+
+```objc
+- (NSString *_Nullable)outputLicenseToString:(NSError* _Nullable * _Nullable)error;
+```
+
+**Parameters**
+
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+
+**Return Value**
+
+The output string which stores the contents of license.
+
+**Code Snippet**
+
+Objective-C:
+
+```objc
+DynamsoftBarcodeReader *barcodeReader;
+barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicenseFromServer:@"" licenseKey:@"C087****" verificationDelegate:self];
+NSError __autoreleasing * _Nullable error;
+[barcodeReader outputLicenseToString:&error];
+```
+
+Swift:
+
+```Swift
+let error: NSError? = NSError()
+let barcodeReader = DynamsoftBarcodeReader.init(licenseFromServer: "", licenseKey: "C087****", verificationDelegate: self)
+let licenseString = try! barcodeReader.outputLicenseToString()
 ```
 
 ## initWithLicenseFromServer
+
+> Note:
+> This Method is deprecated and will be removed in the future.
 
 Initializes the license and connects to the specified server for online verification.
 
@@ -108,42 +148,10 @@ func licenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 }
 ```
 
-## outputLicenseToString
-
-Output the license content as an encrypted string from the license server to be used for offline license verification.
-
-```objc
-- (NSString *_Nullable)outputLicenseToString:(NSError* _Nullable * _Nullable)error;
-```
-
-**Parameters**
-
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
-
-**Return Value**
-
-The output string which stores the contents of license.
-
-**Code Snippet**
-
-Objective-C:
-
-```objc
-DynamsoftBarcodeReader *barcodeReader;
-barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicenseFromServer:@"" licenseKey:@"C087****" verificationDelegate:self];
-NSError __autoreleasing * _Nullable error;
-[barcodeReader outputLicenseToString:&error];
-```
-
-Swift:
-
-```Swift
-let error: NSError? = NSError()
-let barcodeReader = DynamsoftBarcodeReader.init(licenseFromServer: "", licenseKey: "C087****", verificationDelegate: self)
-let licenseString = try! barcodeReader.outputLicenseToString()
-```
-
 ## initLicenseFromDLS
+
+> Note:
+> This Method is deprecated and will be removed in the future.
 
 Initializes the barcode reader license and connects to the specified server for online verification.
 
@@ -188,7 +196,3 @@ func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
     print("isSucc : \(isSuccess) error : \(String(describing: error))")
 }
 ```
-
-## initLicenseFromLTS
-
-`Deprecated`. Please use [`initLicenseFromDLS`](#initlicensefromdls) instead.
