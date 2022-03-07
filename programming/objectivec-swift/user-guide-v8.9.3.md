@@ -184,9 +184,11 @@ You can add your downloaded frameworks into your project through the following s
 
     ```objectivec
     - (void)configurationDBR{
+        iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
         // A network connection is required to active the public trial license.
-        // The public trial license is time-limited. Please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=installer&package=ios to get an extension.
-        [DynamsoftBarcodeReader initLicense:@"Put your license here" verificationDelegate: self];
+        // The public trial license is time-limited. Please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=installer&package=ios to get extension and more information about license.
+        dls.organizationID = @"200001";
+        _barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
     }
     ```
 
@@ -194,9 +196,12 @@ You can add your downloaded frameworks into your project through the following s
 
     ```swift
     func configurationDBR() {
+        // Configure the Dynamsoft License Server parameters for verification purposes
+        let dls = iDMDLSConnectionParameters()
         // A network connection is required to active the public trial license.
-        // The public trial license is time-limited. Please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=installer&package=ios to get an extension.
-        DynamsoftBarcodeReader.initLicense("Put your license here", verificationDelegate: self)
+        // The public trial license is time-limited. Please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=installer&package=ios to get extension and more information about license.
+        dls.organizationID = "200001"
+        barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
     }
     ```
 
@@ -207,11 +212,13 @@ You can add your downloaded frameworks into your project through the following s
     Objective-C:
 
     ```objectivec
-    @interface ViewController ()<DBRLicenseVerificationListener, DBRTextResultDelegate>
+    @interface ViewController ()<DMDLSLicenseVerificationDelegate, DBRTextResultDelegate>
 
     @implementation ViewController
 
-    - (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
+    ...
+
+    - (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
         NSString* msg = @"";
         if(error != nil)
         {
@@ -263,7 +270,7 @@ You can add your downloaded frameworks into your project through the following s
         
         ...
 
-        func DBRLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+        func dlsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
         var msg:String? = nil
         if(error != nil)
         {

@@ -14,11 +14,10 @@ pageStartVer: 8.6
   | Method               | Description |
   |----------------------|-------------|
   | [`initLicense`](#initlicense) | Read product key and activate the SDK. |
-  | [`initLicenseFromServer`](#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
-  | [`initLicenseFromLicenseContent`](#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
   | [`outputLicenseToString`](#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLicenseFromDLS`](#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
-  | [`initLicenseFromLTS`](primary-license.md#initlicensefromlts) | `Deprecated`, please use [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) instead. |
+  | [`initLicenseFromDLS (Deprecated)`](#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`initLicenseFromServer (Deprecated)`](#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
+  | [`initLicenseFromLicenseContent (Deprecated)`](#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
 
   ---
 
@@ -41,61 +40,14 @@ void initLicense(String license) throws BarcodeReaderException
 **Code Snippet**
 
 ```java
-BarcodeReader reader = new BarcodeReader();
-reader.initLicense("t0260NwAAAHV***************");
-reader.destroy();
-```
-
-## initLicenseFromServer
-
-Initialize the license and connect to the specified server for online verification.
-
-```java
-void initLicenseFromServer(String licenseServer, String licenseKey, DBRServerLicenseVerificationListener dbrServerLicenseVerificationListener)
-```
-
-**Parameters**
-
-`licenseServer`: The URL of the license server.  
-`licenseKey`: The license key.  
-`dbrServerLicenseVerificationListener`: The delegate to handle callback when license server returns.
-
-**Code Snippet**
-
-```java
-BarcodeReader reader = new BarcodeReader();
-reader.initLicenseFromServer("", "C087****",  new DBRServerLicenseVerificationListener() {
-    @Override
-    public void licenseVerificationCallback(boolean isSuccess, Exception error) {
-    }
+BarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DBRLicenseVerificationListener() {
+   @Override
+   public void DBRLicenseVerificationCallback(boolean isSuccess, Exception error) {
+      if(!isSuccess){
+         error.printStackTrace();
+      }
+   }
 });
-reader.destroy();
-```
-
-## initLicenseFromLicenseContent
-
-Initialize barcode reader license from the license content on the client machine for offline verification.
-
-```java
-void initLicenseFromLicenseContent(String licenseKey, String licenseContent) throws BarcodeReaderException
-```
-
-**Parameters**
-
-`licenseKey`: The license key.  
-`licenseContent`: An encrypted string representing the license content (quota, expiration date, barcode type, etc.) obtained from the method [`OutputLicenseToString`](#outputlicensetostring).
-
-**Exceptions**
-
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
-
-**Code Snippet**
-
-```java
-BarcodeReader reader = new BarcodeReader();
-//get String licenseContent from reader.outputLicenseToString();
-reader.initLicenseFromLicenseContent("C087****",licenseContent);
-reader.destroy();
 ```
 
 ## outputLicenseToString
@@ -133,6 +85,9 @@ reader.destroy();
 
 ## initLicenseFromDLS
 
+> Note:
+> This Method is deprecated and will be removed in the future.
+
 Initializes the barcode reader license and connects to the specified server for online verification.
 
 ```java
@@ -142,7 +97,7 @@ void initLicenseFromDLS(DMDLSConnectionParameters dlsInfo, DBRDLSLicenseVerifica
 **Parameters**
 
 `dlsInfo`: The struct DMDLSConnectionParameters with customized settings.  
-`listener`: The delegate to handle callback when license server returns.
+`listener`: The delegate to handle callback when the license server returns.
 
 **Code Snippet**
 
@@ -161,6 +116,60 @@ reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
 });
 ```
 
-## initLicenseFromLTS
+## initLicenseFromServer
 
-`Deprecated`, please use [`initLicenseFromDLS`](#initlicensefromdls) instead.
+> Note:
+> This Method is deprecated and will be removed in the future.
+
+Initialize the license and connect to the specified server for online verification.
+
+```java
+void initLicenseFromServer(String licenseServer, String licenseKey, DBRServerLicenseVerificationListener dbrServerLicenseVerificationListener)
+```
+
+**Parameters**
+
+`licenseServer`: The URL of the license server.  
+`licenseKey`: The license key.  
+`dbrServerLicenseVerificationListener`: The delegate to handle callback when license server returns.
+
+**Code Snippet**
+
+```java
+BarcodeReader reader = new BarcodeReader();
+reader.initLicenseFromServer("", "C087****",  new DBRServerLicenseVerificationListener() {
+    @Override
+    public void licenseVerificationCallback(boolean isSuccess, Exception error) {
+    }
+});
+reader.destroy();
+```
+
+## initLicenseFromLicenseContent
+
+> Note:
+> This Method is deprecated and will be removed in the future.
+
+Initialize barcode reader license from the license content on the client machine for offline verification.
+
+```java
+void initLicenseFromLicenseContent(String licenseKey, String licenseContent) throws BarcodeReaderException
+```
+
+**Parameters**
+
+`licenseKey`: The license key.  
+`licenseContent`: An encrypted string representing the license content (quota, expiration date, barcode type, etc.) obtained from the method [`OutputLicenseToString`](#outputlicensetostring).
+
+**Exceptions**
+
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+
+**Code Snippet**
+
+```java
+BarcodeReader reader = new BarcodeReader();
+//get String licenseContent from reader.outputLicenseToString();
+reader.initLicenseFromLicenseContent("C087****",licenseContent);
+reader.destroy();
+```

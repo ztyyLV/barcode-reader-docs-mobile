@@ -7,7 +7,6 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: Android API Reference
 noTitleIndex: true
-pageStartVer: 8.6
 ---
 
 # API Reference - Android
@@ -48,11 +47,10 @@ pageStartVer: 8.6
   | Method               | Description |
   |----------------------|-------------|
   | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
-  | [`initLicenseFromServer`](primary-license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
-  | [`initLicenseFromLicenseContent`](primary-license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
   | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
-  | [`initLicenseFromLTS`](primary-license.md#initlicensefromlts) | `Deprecated`, please use [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) instead. |
+  | [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) | Deprecated, use [`initLicense`](primary-license.md#initlicense) instead. |
+  | [`initLicenseFromServer`](primary-license.md#initlicensefromserver) | Deprecated, use [`initLicense`](primary-license.md#initlicense) instead. |
+  | [`initLicenseFromLicenseContent`](primary-license.md#initlicensefromlicensecontent) | Deprecated, use [`initLicense`](primary-license.md#initlicense) instead. |
 
 ### Parameter and Runtime Settings
 
@@ -111,7 +109,6 @@ pageStartVer: 8.6
 - [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 - [`Contour`](auxiliary-Contour.md)
 - [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md)
-- [`DMLTSConnectionParameters`](auxiliary-DMLTSConnectionParameters.md)
 - [`ExtendedResult`](auxiliary-ExtendedResult.md)
 - [`FurtherModes`](auxiliary-FurtherModes.md)
 - [`ImageData`](auxiliary-ImageData.md)
@@ -127,6 +124,7 @@ pageStartVer: 8.6
 - [`RegionOfInterest`](auxiliary-RegionOfInterest.md)
 - [`SamplingImageData`](auxiliary-SamplingImageData.md)
 - [`TextResult`](auxiliary-TextResult.md)
+- [`DMDLSConnectionParameters (Deprecated)`](auxiliary-DMDLSConnectionParameters.md)
 
 ## Interfaces
 
@@ -135,8 +133,9 @@ pageStartVer: 8.6
   | [`TextResultCallback`](interface-textresultcallback.md) | The interface to handle callback when text results are returned. |
   | [`IntermediateResultCallback`](interface-intermediateresultcallback.md) | The interface to handle callback when intermediate results are returned. |
   | [`ErrorCallback`](interface-errorcallback.md) | The interface to handle callback when an error is returned. |
-  | [`DBRServerLicenseVerificationListener`](interface-dbrserverlicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
-  | [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
+  | [`DBRServerLicenseVerificationListener`](interface-dbrserverlicenseverificationlistener.md) | Deprecated. |
+  | [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
+  | [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | Deprecated, use [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) instead. |
 
 ## Enumerations
 
@@ -153,9 +152,6 @@ pageStartVer: 8.6
 - [`EnumConflictMode`]({{ site.enumerations }}parameter-mode-enums.html#conflictmode)
 - [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)
 - [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)
-- [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
-- [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
-- [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
 - [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)
 - [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
 - [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)
@@ -175,3 +171,7 @@ pageStartVer: 8.6
 - [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)
 - [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
 - [`EnumPresetTemplate`]({{ site.enumerations }}other-enums.html#enumpresettemplate)
+- [`EnumProduct (Deprecated)`]({{ site.enumerations }}other-enums.html#product)
+- [`EnumDMChargeWay (Deprecated)`]({{ site.enumerations }}other-enums.html#dm_chargeway)
+- [`EnumDMLicenseModule (Deprecated)`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
+- [`EnumDMUUIDGenerationMethod (Deprecated)`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
