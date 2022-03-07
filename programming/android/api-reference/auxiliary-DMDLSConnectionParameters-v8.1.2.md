@@ -14,6 +14,9 @@ pageStartVer: 8.0
 
 Defines a struct to configure the parameters to connect to License Tracking Server.  
 
+> Note:
+> This class is removed in version 9.0.
+
 ```java
 class com.dynamsoft.dbr.DMLTSConnectionParameters
 ```
