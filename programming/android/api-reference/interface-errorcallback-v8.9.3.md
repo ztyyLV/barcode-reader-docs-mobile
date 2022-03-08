@@ -10,6 +10,9 @@ noTitleIndex: true
 
 # ErrorCallback
 
+> Note:
+> This interface is removed in 9.0 version. Please use the [video methods](primary-video.md) for video barcode scanning.
+
 `ErrorCallback` is the interface to handle callback when an error is returned.
 
 ```java

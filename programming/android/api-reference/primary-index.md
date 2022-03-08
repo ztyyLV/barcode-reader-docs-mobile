@@ -45,11 +45,15 @@ pageStartVer: 8.6
   | Method               | Description |
   |----------------------|-------------|
   | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
-  | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Deprecated, o
-  utput the license content to a string from the license server. |
-  | [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) | Deprecated, use [`initLicense`](primary-license.md#initlicense) instead. |
-  | [`initLicenseFromServer`](primary-license.md#initlicensefromserver) | Deprecated, use [`initLicense`](primary-license.md#initlicense) instead. |
-  | [`initLicenseFromLicenseContent`](primary-license.md#initlicensefromlicensecontent) | Deprecated, use [`initLicense`](primary-license.md#initlicense) instead. |
+
+> Note:
+> The following license activation methods are deprecated:
+>
+> - `outputLicenseToString`
+> - `initLicenseFromDLS`
+> - `initLicenseFromServer`
+> - `initLicenseFromLicenseContent`
+> Please use [`initLicense`](primary-license.md#initlicense) instead.
 
 ## Parameter and Runtime Settings
 
