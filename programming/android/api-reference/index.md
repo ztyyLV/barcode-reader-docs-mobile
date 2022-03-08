@@ -61,6 +61,7 @@ noTitleIndex: true
 > - `initLicenseFromDLS`
 > - `initLicenseFromServer`
 > - `initLicenseFromLicenseContent`
+>
 > Please use [`initLicense`](primary-license.md#initlicense) instead.
 
 &nbsp;
@@ -135,7 +136,7 @@ noTitleIndex: true
 - [`TextResult`](auxiliary-TextResult.md)
 
 > Note:
-> `DMDLSConnectionParameters` is deprecated due to the update of the license. Please use the method `initLicense` to activate the license instead.
+> `DMDLSConnectionParameters` is deprecated due to the update of the license. Please use the method [`initLicense`](primary-license.md#initlicense) to activate the license instead.
 
 &nbsp;
 
@@ -148,6 +149,7 @@ noTitleIndex: true
   | [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
 
 > Note:
+>
 > - `DBRServerLicenseVerificationListener` is deprecated. It was used by `initLicenseFromServer` which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
 > - [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) is Deprecated. Please use [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) instead.
 

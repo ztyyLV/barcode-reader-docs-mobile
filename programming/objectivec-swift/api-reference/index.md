@@ -20,6 +20,8 @@ breadcrumbText: iOS API Reference
   | [`init`](primary-initialize.md#init) | Create an instance of Dynamsoft Barcode Reader. |
   | [`dispose`](primary-initialize.md#dispose) | Destroy the instance of Dynamsoft Barcode Reader. |
 
+&nbsp;
+
 ### Video decoding Methods
 
   | Method               | Description |
@@ -29,6 +31,8 @@ breadcrumbText: iOS API Reference
   | [`stopScanning`](primary-video.md#stopscanning) | Stop the barcode reading thread. |
   | [`setDBRTextResultDelegate`](primary-video.md#setdbrtextresultdelegate) | Set callback function to process text results generated during frame decoding. |
   | [`setDBRIntermediateResultDelegate`](primary-video.md#setdbrintermediateresultdelegate) | Set callback function to process intermediate results generated during frame decoding. |
+
+&nbsp;
 
 ### Image decoding Methods
 
@@ -41,15 +45,25 @@ breadcrumbText: iOS API Reference
   | [`createIntermediateResult`](primary-decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
+&nbsp;
+
 ### License
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`license`](primary-license.md#license) | Stores the license used in DynamsoftBarcodeReader. |
   | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
-  | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) | Deprecated, use [`initLicense`](primary-license.md#initwithlicense) instead. |
-  | [`initWithLicenseFromServer`](primary-license.md#initwithlicensefromserver) | Deprecated, use [`initLicense`](primary-license.md#initwithlicense) instead. |
+
+> Note:
+> The following license activation methods are deprecated:
+>
+> - `license`
+> - `outputLicenseToString`
+> - `initLicenseFromDLS`
+> - `initWithLicenseFromServer`
+>
+> Please use [`initLicense`](primary-license.md#initlicense) instead.
+
+&nbsp;
 
 ### Parameter and Runtime Settings
 
@@ -64,8 +78,10 @@ breadcrumbText: iOS API Reference
   | [`updateRuntimeSettings (with preset template)`](primary-parameter-and-runtime-settings-basic.md#with-a-preset-template) | Update runtime settings from one of the preset templates. |
   | [`resetRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
 
+&nbsp;
+
 #### Advanced
-  
+
   | Method               | Description |
   |----------------------|-------------|
   | [`initRuntimeSettingsWithFile`](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) | Initialize runtime settings with the settings in a given JSON file. |
@@ -76,13 +92,15 @@ breadcrumbText: iOS API Reference
   | [`outputSettingsToFile`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
   | [`outputSettingsToString`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
 
+&nbsp;
+
 ### Result
 
   | Method               | Description |
   |----------------------|-------------|
   | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
 
-## [Error Code]({{ site.enumerations }}error-code.html)
+&nbsp;
 
 ## Auxiliary Classes
 
@@ -105,7 +123,11 @@ breadcrumbText: iOS API Reference
 - [`iRegionOfInterest`](auxiliary-iRegionOfInterest.md)
 - [`iSamplingImageData`](auxiliary-iSamplingImageData.md)
 - [`iTextResult`](auxiliary-iTextResult.md)
-- [`iDMDLSConnectionParameters`](auxiliary-iDMDLSConnectionParameters.md)
+
+> Note:
+> `iDMDLSConnectionParameters` is deprecated due to the update of the license. Please use the method [`initLicense`](primary-license.md#initlicense) to activate the license instead.
+
+&nbsp;
 
 ## Protocol
 
@@ -114,8 +136,13 @@ breadcrumbText: iOS API Reference
   | [`DBRTextResultDelegate`]({{ site.oc_api }}protocol-dbrtextresultdelegate.html) | Protocol for a delegate to handle callback when text result returned. |
   | [`DBRIntermediateResultDelegate`]({{ site.oc_api }}protocol-dbrintermediateresultdelegate.html) | Protocol for a delegate to handle callback when intermediate result returned. |
   | [`DBRLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |
-  | [`DMDLSLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) | Deprecated, use [`DBRLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) instead. |
-  | [`DBRServerLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dbrserverlicenseverificationdelegate.html) | Deprecated. |
+
+> Note:
+>
+> - `DBRServerLicenseVerificationDelegate` is deprecated. It was used by `initWithLicenseFromServer` which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
+> - `DMDLSLicenseVerificationDelegate` is deprecated. Please use ({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) instead.
+
+&nbsp;
 
 ## Enumerations
 
@@ -150,7 +177,17 @@ breadcrumbText: iOS API Reference
 - [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)
 - [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)
 - [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
-- [`EnumProduct`]({{ site.enumerations }}other-enums.html#product)
-- [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
-- [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
-- [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
+
+> Note:
+> The following Enumerations are deprecated and will be removed in the future.
+>
+> - `EnumProduct`
+> - `EnumDMChargeWay`
+> - `EnumDMLicenseModule`
+> - `EnumDMUUIDGenerationMethod`
+
+&nbsp;
+
+## Others
+
+View the [Error Code]({{ site.enumerations }}error-code.html)

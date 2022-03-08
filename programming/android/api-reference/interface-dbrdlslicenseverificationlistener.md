@@ -21,7 +21,7 @@ interface com.dynamsoft.dbr.DBRDLSLicenseVerificationListener
 | ------ | ----------- |
 | `DBRLicenseVerificationCallback` | The callback of license server. |
 
-## DLSLicenseVerificationCallback
+## DBRLicenseVerificationCallback
 
 ```java
 void DBRLicenseVerificationCallback(boolean var1, Exception var2);
@@ -35,7 +35,7 @@ void DBRLicenseVerificationCallback(boolean var1, Exception var2);
 **Code Snippet**
 
 ```java
-DBRLicenseVerificationListener dbrDLSListener = new DBRLicenseVerificationListener() {
+DBRLicenseVerificationListener dbrLicenseListener = new DBRLicenseVerificationListener() {
     @Override
     public void DBRLicenseVerificationCallback(boolean b, Exception e) {
         // Add your code
