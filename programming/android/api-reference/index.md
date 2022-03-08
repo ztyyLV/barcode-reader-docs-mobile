@@ -96,8 +96,6 @@ noTitleIndex: true
   |----------------------|-------------|
   | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
 
-## [Error Code]({{ site.enumerations }}error-code.html)
-
 ## Auxiliary Classes
 
 - [`AztecDetails`](auxiliary-AztecDetails.md)
@@ -178,3 +176,7 @@ noTitleIndex: true
 - `EnumDMChargeWay`
 - `EnumDMLicenseModule`
 - `EnumDMUUIDGenerationMethod`
+
+## Others
+
+View the [Error Codes]({{ site.enumerations }}error-code.html)
