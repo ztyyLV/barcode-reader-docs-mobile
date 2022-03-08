@@ -44,9 +44,9 @@ noTitleIndex: true
   |----------------------|-------------|
   | [`license`](primary-license.md#license) | Stores the license used in DynamsoftBarcodeReader. |
   | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
-  | [~~`outputLicenseToString`~~](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [~~`initLicenseFromDLS`~~](primary-license.md#initlicensefromdls) | Deprecated, use [`initLicense`](primary-license.md#initwithlicense) instead. |
-  | [~~`initWithLicenseFromServer`~~](primary-license.md#initwithlicensefromserver) | Deprecated, use [`initLicense`](primary-license.md#initwithlicense) instead. |
+  | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |
+  | [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) | Deprecated, use [`initLicense`](primary-license.md#initwithlicense) instead. |
+  | [`initWithLicenseFromServer`](primary-license.md#initwithlicensefromserver) | Deprecated, use [`initLicense`](primary-license.md#initwithlicense) instead. |
 
 ## Parameter and Runtime Settings
 
@@ -85,4 +85,4 @@ noTitleIndex: true
   
    | Method               | Description |
    |----------------------|-------------|
-   | [~~`SetCameraEnhancerParam`~~](primary-camera.md#setcameraenhancerparam) | Deprecated, use [`setCameraEnhancer`](primary-video.md#setcameraenhancer) instead. |
+   | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Deprecated, use [`setCameraEnhancer`](primary-video.md#setcameraenhancer) instead. |

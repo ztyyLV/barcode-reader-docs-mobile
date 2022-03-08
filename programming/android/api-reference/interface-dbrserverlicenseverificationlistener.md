@@ -8,7 +8,7 @@ needGenerateH3Content: false
 noTitleIndex: true
 ---
 
-# ~~DBRServerLicenseVerificationListener~~
+# DBRServerLicenseVerificationListener
 
 > Note:
 > This interface is deprecated and will be removed in the future.
