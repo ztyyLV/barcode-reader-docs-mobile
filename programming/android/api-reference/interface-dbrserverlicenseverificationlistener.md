@@ -8,7 +8,10 @@ needGenerateH3Content: false
 noTitleIndex: true
 ---
 
-# DBRServerLicenseVerificationListener
+# ~~DBRServerLicenseVerificationListener~~
+
+> Note:
+> This interface is deprecated and will be removed in the future.
 
 `DBRServerLicenseVerificationListener` is the interface to handle callback when license verification messages are returned.
 

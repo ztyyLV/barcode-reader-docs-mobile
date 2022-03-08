@@ -50,7 +50,10 @@ BarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DBRLic
 });
 ```
 
-## outputLicenseToString
+## ~~outputLicenseToString~~
+
+> Note:
+> This Method is deprecated and will be removed in the future.
 
 Output the license content as an encrypted string from the license server to be used for offline license verification.
 
@@ -83,7 +86,7 @@ reader.destroy();
 
 [`InitLicenseFromServer`](#initlicensefromserver) has to be successfully called before calling this method.
 
-## initLicenseFromDLS
+## ~~initLicenseFromDLS~~
 
 > Note:
 > This Method is deprecated and will be removed in the future.
@@ -116,7 +119,7 @@ reader.initLicenseFromDLS(info, new DBRDLSLicenseVerificationListener() {
 });
 ```
 
-## initLicenseFromServer
+## ~~initLicenseFromServer~~
 
 > Note:
 > This Method is deprecated and will be removed in the future.
@@ -145,7 +148,7 @@ reader.initLicenseFromServer("", "C087****",  new DBRServerLicenseVerificationLi
 reader.destroy();
 ```
 
-## initLicenseFromLicenseContent
+## ~~initLicenseFromLicenseContent~~
 
 > Note:
 > This Method is deprecated and will be removed in the future.

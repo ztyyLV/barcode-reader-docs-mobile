@@ -47,10 +47,10 @@ noTitleIndex: true
   | Method               | Description |
   |----------------------|-------------|
   | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
-  | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) | Deprecated, use [`initLicense`](primary-license.md#initlicense) instead. |
-  | [`initLicenseFromServer`](primary-license.md#initlicensefromserver) | Deprecated, use [`initLicense`](primary-license.md#initlicense) instead. |
-  | [`initLicenseFromLicenseContent`](primary-license.md#initlicensefromlicensecontent) | Deprecated, use [`initLicense`](primary-license.md#initlicense) instead. |
+  | [~~`outputLicenseToString`~~](primary-license.md#outputlicensetostring) | Deprecated, Output the license content to a string from the license server. |
+  | [~~`initLicenseFromDLS`~~](primary-license.md#initlicensefromdls) | Deprecated, use [`initLicense`](primary-license.md#initlicense) instead. |
+  | [~~`initLicenseFromServer`~~](primary-license.md#initlicensefromserver) | Deprecated, use [`initLicense`](primary-license.md#initlicense) instead. |
+  | [~~`initLicenseFromLicenseContent`~~](primary-license.md#initlicensefromlicensecontent) | Deprecated, use [`initLicense`](primary-license.md#initlicense) instead. |
 
 ### Parameter and Runtime Settings
 
@@ -91,16 +91,6 @@ noTitleIndex: true
   |----------------------|-------------|
   | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
 
-### Camera Enhancer
-  
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`StartCameraEnhancer`](primary-camera.md#startcameraenhancer) | Deprecated, use [`startScanning`](primary-video.md#startscanning) instead. |
-   | [`StopCameraEnhancer`](primary-camera.md#stopcameraenhancer) | Deprecated, use [`stopScanning`](primary-video.md#stopscanning) instead. |
-   | [`PauseCameraEnhancer`](primary-camera.md#pausecameraenhancer) | Deprecated, use [`stopScanning`](primary-video.md#stopscanning) instead. |
-   | [`ResumeCameraEnhancer`](primary-camera.md#resumecameraenhancer) | Deprecated, use [`startScanning`](primary-video.md#startscanning) instead. |
-   | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Deprecated, use [`setCameraEnhancer`](primary-video.md#setcameraenhancer) instead. |
-
 ## [Error Code]({{ site.enumerations }}error-code.html)
 
 ## Auxiliary Classes
@@ -124,7 +114,7 @@ noTitleIndex: true
 - [`RegionOfInterest`](auxiliary-RegionOfInterest.md)
 - [`SamplingImageData`](auxiliary-SamplingImageData.md)
 - [`TextResult`](auxiliary-TextResult.md)
-- [`DMDLSConnectionParameters (Deprecated)`](auxiliary-DMDLSConnectionParameters.md)
+- [~~`DMDLSConnectionParameters`~~](auxiliary-DMDLSConnectionParameters.md)
 
 ## Interfaces
 
@@ -133,9 +123,9 @@ noTitleIndex: true
   | [`TextResultCallback`](interface-textresultcallback.md) | The interface to handle callback when text results are returned. |
   | [`IntermediateResultCallback`](interface-intermediateresultcallback.md) | The interface to handle callback when intermediate results are returned. |
   | [`ErrorCallback`](interface-errorcallback.md) | The interface to handle callback when an error is returned. |
-  | [`DBRServerLicenseVerificationListener`](interface-dbrserverlicenseverificationlistener.md) | Deprecated. |
   | [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
-  | [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | Deprecated, use [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) instead. |
+  | [~~`DBRServerLicenseVerificationListener`~~](interface-dbrserverlicenseverificationlistener.md) | Deprecated. |
+  | [~~`DBRDLSLicenseVerificationListener`~~](interface-dbrdlslicenseverificationlistener.md) | Deprecated, use [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) instead. |
 
 ## Enumerations
 
@@ -171,7 +161,7 @@ noTitleIndex: true
 - [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)
 - [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
 - [`EnumPresetTemplate`]({{ site.enumerations }}other-enums.html#enumpresettemplate)
-- [`EnumProduct (Deprecated)`]({{ site.enumerations }}other-enums.html#product)
-- [`EnumDMChargeWay (Deprecated)`]({{ site.enumerations }}other-enums.html#dm_chargeway)
-- [`EnumDMLicenseModule (Deprecated)`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
-- [`EnumDMUUIDGenerationMethod (Deprecated)`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
+- [~~`EnumProduct`~~]({{ site.enumerations }}other-enums.html#product)
+- [~~`EnumDMChargeWay`~~]({{ site.enumerations }}other-enums.html#dm_chargeway)
+- [~~`EnumDMLicenseModule`~~]({{ site.enumerations }}other-enums.html#dm_licensemodule)
+- [~~`EnumDMUUIDGenerationMethod`~~]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)

@@ -1,17 +1,17 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - Interface DBRDLSLicenseVerificationListener
-description: This is the interface DBRDLSLicenseVerificationListener page of Dynamsoft Barcode Reader for Android SDK.
-keywords: DBRDLSLicenseVerificationListener, interface, android
+title: Dynamsoft Barcode Reader Android API Reference - Interface DBRLicenseVerificationListener
+description: This is the interface DBRLicenseVerificationListener page of Dynamsoft Barcode Reader for Android SDK.
+keywords: DBRLicenseVerificationListener, interface, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 pageStartVer: 8.0
 ---
 
-# DBRDLSLicenseVerificationListener
+# DBRLicenseVerificationListener
 
-`DBRDLSLicenseVerificationListener` is the interface to handle callback when license verification messages are returned.
+`DBRLicenseVerificationListener` is the interface to handle callback when license verification messages are returned.
 
 ```java
 interface com.dynamsoft.dbr.DBRDLSLicenseVerificationListener
@@ -19,12 +19,12 @@ interface com.dynamsoft.dbr.DBRDLSLicenseVerificationListener
 
 | Method | Description |
 | ------ | ----------- |
-| `DLSLicenseVerificationCallback` | The callback of license server. |
+| `DBRLicenseVerificationCallback` | The callback of license server. |
 
 ## DLSLicenseVerificationCallback
 
 ```java
-void DLSLicenseVerificationCallback(boolean var1, Exception var2);
+void DBRLicenseVerificationCallback(boolean var1, Exception var2);
 ```
 
 **Parameters**
@@ -35,9 +35,9 @@ void DLSLicenseVerificationCallback(boolean var1, Exception var2);
 **Code Snippet**
 
 ```java
-DBRDLSLicenseVerificationListener dbrDLSListener = new DBRDLSLicenseVerificationListener() {
+DBRLicenseVerificationListener dbrDLSListener = new DBRLicenseVerificationListener() {
     @Override
-    public void DLSLicenseVerificationCallback(boolean b, Exception e) {
+    public void DBRLicenseVerificationCallback(boolean b, Exception e) {
         // Add your code
     }
 };

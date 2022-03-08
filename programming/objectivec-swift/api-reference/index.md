@@ -47,9 +47,9 @@ breadcrumbText: iOS API Reference
   |----------------------|-------------|
   | [`license`](primary-license.md#license) | Stores the license used in DynamsoftBarcodeReader. |
   | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
-  | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) | Deprecated, use [`initLicense`](primary-license.md#initwithlicense) instead. |
-  | [`initWithLicenseFromServer`](primary-license.md#initwithlicensefromserver) | Deprecated, use [`initLicense`](primary-license.md#initwithlicense) instead. |
+  | [~~`outputLicenseToString`~~](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |
+  | [~~`initLicenseFromDLS`~~](primary-license.md#initlicensefromdls) | Deprecated, use [`initLicense`](primary-license.md#initwithlicense) instead. |
+  | [~~`initWithLicenseFromServer`~~](primary-license.md#initwithlicensefromserver) | Deprecated, use [`initLicense`](primary-license.md#initwithlicense) instead. |
 
 ### Parameter and Runtime Settings
 
@@ -82,12 +82,6 @@ breadcrumbText: iOS API Reference
   |----------------------|-------------|
   | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
 
-### Camera Enhancer
-  
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Deprecated, use [`setCameraEnhancer`](primary-video.md#setcameraenhancer) instead. |
-
 ## [Error Code]({{ site.enumerations }}error-code.html)
 
 ## Auxiliary Classes
@@ -111,7 +105,7 @@ breadcrumbText: iOS API Reference
 - [`iRegionOfInterest`](auxiliary-iRegionOfInterest.md)
 - [`iSamplingImageData`](auxiliary-iSamplingImageData.md)
 - [`iTextResult`](auxiliary-iTextResult.md)
-- [`iDMDLSConnectionParameters (Deprecated)`](auxiliary-iDMDLSConnectionParameters.md)
+- [~~`iDMDLSConnectionParameters`~~](auxiliary-iDMDLSConnectionParameters.md)
 
 ## Protocol
 
@@ -120,8 +114,8 @@ breadcrumbText: iOS API Reference
   | [`DBRTextResultDelegate`]({{ site.oc_api }}protocol-dbrtextresultdelegate.html) | Protocol for a delegate to handle callback when text result returned. |
   | [`DBRIntermediateResultDelegate`]({{ site.oc_api }}protocol-dbrintermediateresultdelegate.html) | Protocol for a delegate to handle callback when intermediate result returned. |
   | [`DBRLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |
-  | [`DBRServerLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dbrserverlicenseverificationdelegate.html) | Deprecated. |
-  | [`DBRErrorDelegate`]({{ site.oc_api }}protocol-dbrerrordelegate.html) | Deprecated. |
+  | [~~`DMDLSLicenseVerificationDelegate`~~]({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) | Deprecated, use [`DBRLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) instead. |
+  | [~~`DBRServerLicenseVerificationDelegate`~~]({{ site.oc_api }}protocol-dbrserverlicenseverificationdelegate.html) | Deprecated. |
 
 ## Enumerations
 
@@ -156,7 +150,7 @@ breadcrumbText: iOS API Reference
 - [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)
 - [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)
 - [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
-- [`EnumProduct (Deprecated)`]({{ site.enumerations }}other-enums.html#product)
-- [`EnumDMChargeWay (Deprecated)`]({{ site.enumerations }}other-enums.html#dm_chargeway)
-- [`EnumDMLicenseModule (Deprecated)`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
-- [`EnumDMUUIDGenerationMethod (Deprecated)`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
+- [~~`EnumProduct`~~]({{ site.enumerations }}other-enums.html#product)
+- [~~`EnumDMChargeWay`~~]({{ site.enumerations }}other-enums.html#dm_chargeway)
+- [~~`EnumDMLicenseModule`~~]({{ site.enumerations }}other-enums.html#dm_licensemodule)
+- [~~`EnumDMUUIDGenerationMethod`~~]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
