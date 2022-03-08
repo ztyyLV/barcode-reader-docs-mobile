@@ -20,6 +20,8 @@ noTitleIndex: true
   | [`BarcodeReader`](primary-initialize-and-destroy.md#barcodereader) | Initialization of `BarcodeReader` object.|
   | [`destroy`](primary-initialize-and-destroy.md#destroy) | Destroys an instance of `BarcodeReader` object.|
 
+&nbsp;
+
 ### Video Decoding Methods
 
   | Method               | Description |
@@ -29,6 +31,8 @@ noTitleIndex: true
   | [`stopScanning`](primary-video.md#stopscanning) | Stop the barcode reading thread. |
   | [`setTextResultCallback`](primary-video.md#settextresultcallback) | Set callback interface to process text results generated during frame decoding. |
   | [`setIntermediateResultCallback`](primary-video.md#setintermediateresultcallback) | Set callback interface to process intermediate results generated during frame decoding. |
+
+&nbsp;
 
 ### Image Decoding Methods
 
@@ -41,6 +45,8 @@ noTitleIndex: true
   | [`decodeBufferedImage`](primary-decode.md#decodebufferedimage) | Decodes barcode from a buffered image (bitmap). |
   | [`initIntermediateResult`](primary-decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
+
+&nbsp;
 
 ### License
   
@@ -57,6 +63,8 @@ noTitleIndex: true
 > - `initLicenseFromLicenseContent`
 > Please use [`initLicense`](primary-license.md#initlicense) instead.
 
+&nbsp;
+
 ### Parameter and Runtime Settings
 
 #### Basic
@@ -70,6 +78,8 @@ noTitleIndex: true
   | [`updateRuntimeSettings (with preset template)`](primary-parameter-and-runtime-settings-basic.md#with-a-preset-template) | Update runtime settings from one of the preset templates. |
   | [`resetRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
 
+&nbsp;
+
 #### Advanced
   
   | Method               | Description |
@@ -82,6 +92,8 @@ noTitleIndex: true
   | [`outputSettingsToFile`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
   | [`outputSettingsToString`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
 
+&nbsp;
+
 ### Result
 
   | Method               | Description |
@@ -90,11 +102,15 @@ noTitleIndex: true
   | [`enableResultVerification`](primary-result.md#enableresultverification) | Verify the results before output. |
   | [`enableDuplicateFiter`](primary-result.md#enableduplicatefiter) | Output the duplicated result only once for every 3 seconds. |
 
+&nbsp;
+
 ### Status Retrieval
 
   | Method               | Description |
   |----------------------|-------------|
   | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
+
+&nbsp;
 
 ## Auxiliary Classes
 
@@ -121,6 +137,8 @@ noTitleIndex: true
 > Note:
 > `DMDLSConnectionParameters` is deprecated due to the update of the license. Please use the method `initLicense` to activate the license instead.
 
+&nbsp;
+
 ## Interfaces
 
   | Interfaces | Description |
@@ -132,7 +150,8 @@ noTitleIndex: true
 > Note:
 > - `DBRServerLicenseVerificationListener` is deprecated. It was used by `initLicenseFromServer` which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
 > - [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) is Deprecated. Please use [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) instead.
-> - `ErrorCallback` is deprecated.
+
+&nbsp;
 
 ## Enumerations
 
@@ -171,11 +190,13 @@ noTitleIndex: true
 
 > Note:
 > The following Enumerations are deprecated and will be removed in the future.
+>
+> - `EnumProduct`
+> - `EnumDMChargeWay`
+> - `EnumDMLicenseModule`
+> - `EnumDMUUIDGenerationMethod`
 
-- `EnumProduct`
-- `EnumDMChargeWay`
-- `EnumDMLicenseModule`
-- `EnumDMUUIDGenerationMethod`
+&nbsp;
 
 ## Others
 
