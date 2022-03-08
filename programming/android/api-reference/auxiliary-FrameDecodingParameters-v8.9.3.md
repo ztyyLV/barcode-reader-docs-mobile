@@ -11,8 +11,7 @@ noTitleIndex: true
 # FrameDecodingParameters
 
 > Note:
-> This class is removed in 9.0 version.
-> To use video streaming barcode decoding, please use new [video methods](primary-video.md).
+> This class is removed in 9.0 version. Please use the [video methods](primary-video.md) for video barcode scanning.
 
 Defines a struct to configure the frame decoding Parameters.  
 

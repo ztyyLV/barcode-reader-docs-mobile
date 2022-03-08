@@ -45,7 +45,3 @@ pageStartVer: 8.6
 ## [Exception](auxiliary-BarcodeReaderException.md)
 
 - [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
-
-## [License Class](auxiliary-DMDLSConnectionParameters.md)
-
-- [`DMDLSConnectionParameters (Deprecated)`](auxiliary-DMDLSConnectionParameters.md)

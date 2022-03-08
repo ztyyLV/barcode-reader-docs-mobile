@@ -47,10 +47,15 @@ noTitleIndex: true
   | Method               | Description |
   |----------------------|-------------|
   | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
-  | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Deprecated, Output the license content to a string from the license server. |
-  | [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) | Deprecated, use [`initLicense`](primary-license.md#initlicense) instead. |
-  | [`initLicenseFromServer`](primary-license.md#initlicensefromserver) | Deprecated, use [`initLicense`](primary-license.md#initlicense) instead. |
-  | [`initLicenseFromLicenseContent`](primary-license.md#initlicensefromlicensecontent) | Deprecated, use [`initLicense`](primary-license.md#initlicense) instead. |
+
+> Note:
+> The following license activation methods are deprecated:
+>
+> - `outputLicenseToString`
+> - `initLicenseFromDLS`
+> - `initLicenseFromServer`
+> - `initLicenseFromLicenseContent`
+> Please use [`initLicense`](primary-license.md#initlicense) instead.
 
 ### Parameter and Runtime Settings
 
@@ -114,7 +119,9 @@ noTitleIndex: true
 - [`RegionOfInterest`](auxiliary-RegionOfInterest.md)
 - [`SamplingImageData`](auxiliary-SamplingImageData.md)
 - [`TextResult`](auxiliary-TextResult.md)
-- [`DMDLSConnectionParameters`](auxiliary-DMDLSConnectionParameters.md)
+
+> Note:
+> `DMDLSConnectionParameters` is deprecated due to the update of the license. Please use the method `initLicense` to activate the license instead.
 
 ## Interfaces
 
@@ -122,10 +129,12 @@ noTitleIndex: true
   |----------|-------------|
   | [`TextResultCallback`](interface-textresultcallback.md) | The interface to handle callback when text results are returned. |
   | [`IntermediateResultCallback`](interface-intermediateresultcallback.md) | The interface to handle callback when intermediate results are returned. |
-  | [`ErrorCallback`](interface-errorcallback.md) | The interface to handle callback when an error is returned. |
   | [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
-  | [`DBRServerLicenseVerificationListener`](interface-dbrserverlicenseverificationlistener.md) | Deprecated. |
-  | [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | Deprecated, use [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) instead. |
+
+> Note:
+> - `DBRServerLicenseVerificationListener` is deprecated. It was used by `initLicenseFromServer` which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
+> - [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) is Deprecated. Please use [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) instead.
+> - `ErrorCallback` is deprecated.
 
 ## Enumerations
 
@@ -161,7 +170,11 @@ noTitleIndex: true
 - [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)
 - [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
 - [`EnumPresetTemplate`]({{ site.enumerations }}other-enums.html#enumpresettemplate)
-- [`EnumProduct`]({{ site.enumerations }}other-enums.html#product)
-- [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
-- [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
-- [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
+
+> Note:
+> The following Enumerations are deprecated and will be removed in the future.
+
+- `EnumProduct`
+- `EnumDMChargeWay`
+- `EnumDMLicenseModule`
+- `EnumDMUUIDGenerationMethod`
