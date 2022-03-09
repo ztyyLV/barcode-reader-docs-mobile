@@ -29,8 +29,13 @@ breadcrumbText: iOS API Reference
   | [`setCameraEnhancer`](primary-video.md#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
   | [`startScanning`](primary-video.md#startscanning) | Start the barcode reading thread. |
   | [`stopScanning`](primary-video.md#stopscanning) | Stop the barcode reading thread. |
-  | [`setDBRTextResultDelegate`](primary-video.md#setdbrtextresultdelegate) | Set callback function to process text results generated during frame decoding. |
-  | [`setDBRIntermediateResultDelegate`](primary-video.md#setdbrintermediateresultdelegate) | Set callback function to process intermediate results generated during frame decoding. |
+  | [`setDBRTextResultListener`](primary-video.md#setdbrtextresultlistener) | Set callback function to process text results generated during frame decoding. |
+  | [`setDBRIntermediateResultListener`](primary-video.md#setdbrintermediateresultlistener) | Set callback function to process intermediate results generated during frame decoding. |
+
+> Note:
+>
+> - `setDBRTextResultDelegate` is deprecated, please use `setDBRTextResultListener` instead.
+> - `setDBRIntermediateResultDelegate` is deprecated, please use `setDBRIntermediateResultListener` instead.
 
 &nbsp;
 
@@ -125,6 +130,7 @@ breadcrumbText: iOS API Reference
 - [`iTextResult`](auxiliary-iTextResult.md)
 
 > Note:
+>
 > `iDMDLSConnectionParameters` is deprecated due to the update of the license. Please use the method [`initLicense`](primary-license.md#initlicense) to activate the license instead.
 
 &nbsp;
@@ -133,12 +139,14 @@ breadcrumbText: iOS API Reference
 
   | Protocol | Description |
   | -------- | ----------- |
-  | [`DBRTextResultDelegate`]({{ site.oc_api }}protocol-dbrtextresultdelegate.html) | Protocol for a delegate to handle callback when text result returned. |
-  | [`DBRIntermediateResultDelegate`]({{ site.oc_api }}protocol-dbrintermediateresultdelegate.html) | Protocol for a delegate to handle callback when intermediate result returned. |
+  | [`DBRTextResultListener`]({{ site.oc_api }}protocol-dbrtextresultlistener.html) | Protocol for a delegate to handle callback when text result returned. |
+  | [`DBRIntermediateResultListener`]({{ site.oc_api }}protocol-dbrintermediateresultlistener.html) | Protocol for a delegate to handle callback when intermediate result returned. |
   | [`DBRLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |
 
 > Note:
 >
+> - `DBRTextResultDelegate` is deprecated, please use `DBRTextResultListener` instead.
+> - `DBRIntermediateResultDelegate` is deprecated, please use `DBRIntermediateResultListener` instead.
 > - `DBRServerLicenseVerificationDelegate` is deprecated. It was used by `initWithLicenseFromServer` which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
 > - `DMDLSLicenseVerificationDelegate` is deprecated. Please use ({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) instead.
 

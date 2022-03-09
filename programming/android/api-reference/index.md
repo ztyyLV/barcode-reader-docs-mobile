@@ -141,6 +141,7 @@ noTitleIndex: true
 - [`TextResult`](auxiliary-TextResult.md)
 
 > Note:
+>
 > `DMDLSConnectionParameters` is deprecated due to the update of the license. Please use the method [`initLicense`](primary-license.md#initlicense) to activate the license instead.
 
 &nbsp;

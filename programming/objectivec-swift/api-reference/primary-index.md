@@ -24,8 +24,13 @@ noTitleIndex: true
   | [`setCameraEnhancer`](primary-video.md#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
   | [`startScanning`](primary-video.md#startscanning) | Start the barcode reading thread. |
   | [`stopScanning`](primary-video.md#stopscanning) | Stop the barcode reading thread. |
-  | [`setDBRTextResultDelegate`](primary-video.md#setdbrtextresultdelegate) | Set callback function to process text results generated during frame decoding. |
-  | [`setDBRIntermediateResultDelegate`](primary-video.md#setdbrintermediateresultdelegate) | Set callback function to process intermediate results generated during frame decoding. |
+  | [`setDBRTextResultListener`](primary-video.md#setdbrtextresultlistener) | Set callback function to process text results generated during frame decoding. |
+  | [`setDBRIntermediateResultListener`](primary-video.md#setdbrintermediateresultlistener) | Set callback function to process intermediate results generated during frame decoding. |
+
+> Note:
+>
+> - `setDBRTextResultDelegate` is deprecated, please use `setDBRTextResultListener` instead.
+> - `setDBRIntermediateResultDelegate` is deprecated, please use `setDBRIntermediateResultListener` instead.
 
 ## Image Decoding Methods
 
@@ -42,11 +47,17 @@ noTitleIndex: true
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`license`](primary-license.md#license) | Stores the license used in DynamsoftBarcodeReader. |
   | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
-  | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) | Deprecated, use [`initLicense`](primary-license.md#initwithlicense) instead. |
-  | [`initWithLicenseFromServer`](primary-license.md#initwithlicensefromserver) | Deprecated, use [`initLicense`](primary-license.md#initwithlicense) instead. |
+
+> Note:
+> The following license activation methods are deprecated:
+>
+> - `license`
+> - `outputLicenseToString`
+> - `initLicenseFromDLS`
+> - `initWithLicenseFromServer`
+>
+> Please use [`initLicense`](primary-license.md#initlicense) instead.
 
 ## Parameter and Runtime Settings
 
@@ -80,9 +91,3 @@ noTitleIndex: true
   | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
   | [`enableResultVerification`](primary-result.md#enableresultverification) | Verify the results before output. |
   | [`enableDuplicateFiter`](primary-result.md#enableduplicatefiter) | Output the duplicated result only once for every 3 seconds. |
-
-## Camera Enhancer
-  
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Deprecated, use [`setCameraEnhancer`](primary-video.md#setcameraenhancer) instead. |
