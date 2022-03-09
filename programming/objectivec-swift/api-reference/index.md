@@ -20,6 +20,8 @@ breadcrumbText: iOS API Reference
   | [`init`](primary-initialize.md#init) | Create an instance of Dynamsoft Barcode Reader. |
   | [`dispose`](primary-initialize.md#dispose) | Destroy the instance of Dynamsoft Barcode Reader. |
 
+&nbsp;
+
 ### Video decoding Methods
 
   | Method               | Description |
@@ -27,8 +29,15 @@ breadcrumbText: iOS API Reference
   | [`setCameraEnhancer`](primary-video.md#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
   | [`startScanning`](primary-video.md#startscanning) | Start the barcode reading thread. |
   | [`stopScanning`](primary-video.md#stopscanning) | Stop the barcode reading thread. |
-  | [`setDBRTextResultDelegate`](primary-video.md#setdbrtextresultdelegate) | Set callback function to process text results generated during frame decoding. |
-  | [`setDBRIntermediateResultDelegate`](primary-video.md#setdbrintermediateresultdelegate) | Set callback function to process intermediate results generated during frame decoding. |
+  | [`setDBRTextResultListener`](primary-video.md#setdbrtextresultlistener) | Set callback function to process text results generated during frame decoding. |
+  | [`setDBRIntermediateResultListener`](primary-video.md#setdbrintermediateresultlistener) | Set callback function to process intermediate results generated during frame decoding. |
+
+> Note:
+>
+> - `setDBRTextResultDelegate` is deprecated, please use `setDBRTextResultListener` instead.
+> - `setDBRIntermediateResultDelegate` is deprecated, please use `setDBRIntermediateResultListener` instead.
+
+&nbsp;
 
 ### Image decoding Methods
 
@@ -41,16 +50,25 @@ breadcrumbText: iOS API Reference
   | [`createIntermediateResult`](primary-decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
+&nbsp;
+
 ### License
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`license`](primary-license.md#license) | Stores the license used in DynamsoftBarcodeReader. |
-  | [`initWithLicense`](primary-license.md#initwithlicense) | Read product key and activate the SDK. |
-  | [`initWithLicenseFromServer`](primary-license.md#initwithlicensefromserver) | Initialize license and connect to the specified server for online verification. |
-  | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
-  | [`initLicenseFromLTS`](primary-license.md#initlicensefromlts) | `Deprecated`, please use [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) instead. |
+  | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
+
+> Note:
+> The following license activation methods are deprecated:
+>
+> - `license`
+> - `outputLicenseToString`
+> - `initLicenseFromDLS`
+> - `initWithLicenseFromServer`
+>
+> Please use [`initLicense`](primary-license.md#initlicense) instead.
+
+&nbsp;
 
 ### Parameter and Runtime Settings
 
@@ -65,8 +83,10 @@ breadcrumbText: iOS API Reference
   | [`updateRuntimeSettings (with preset template)`](primary-parameter-and-runtime-settings-basic.md#with-a-preset-template) | Update runtime settings from one of the preset templates. |
   | [`resetRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
 
+&nbsp;
+
 #### Advanced
-  
+
   | Method               | Description |
   |----------------------|-------------|
   | [`initRuntimeSettingsWithFile`](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) | Initialize runtime settings with the settings in a given JSON file. |
@@ -77,19 +97,15 @@ breadcrumbText: iOS API Reference
   | [`outputSettingsToFile`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
   | [`outputSettingsToString`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
 
+&nbsp;
+
 ### Result
 
   | Method               | Description |
   |----------------------|-------------|
   | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
 
-### Camera Enhancer
-  
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Deprecated, use [`setCameraEnhancer`](primary-video.md#setcameraenhancer) instead. |
-
-## [Error Code]({{ site.enumerations }}error-code.html)
+&nbsp;
 
 ## Auxiliary Classes
 
@@ -97,7 +113,6 @@ breadcrumbText: iOS API Reference
 - [`iContour`](auxiliary-iContour.md)
 - [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md)
 - [`iDBRPoint`](auxiliary-iDBRPoint.md)
-- [`iDMDLSConnectionParameters`](auxiliary-iDMDLSConnectionParameters.md)
 - [`iExtendedResult`](auxiliary-iExtendedResult.md)
 - [`iFurtherModes`](auxiliary-iFurtherModes.md)
 - [`iImageData`](auxiliary-iImageData.md)
@@ -114,15 +129,28 @@ breadcrumbText: iOS API Reference
 - [`iSamplingImageData`](auxiliary-iSamplingImageData.md)
 - [`iTextResult`](auxiliary-iTextResult.md)
 
+> Note:
+>
+> `iDMDLSConnectionParameters` is deprecated due to the update of the license. Please use the method [`initLicense`](primary-license.md#initlicense) to activate the license instead.
+
+&nbsp;
+
 ## Protocol
 
   | Protocol | Description |
   | -------- | ----------- |
-  | [`DBRTextResultDelegate`]({{ site.oc_api }}protocol-dbrtextresultdelegate.html) | Protocol for a delegate to handle callback when text result returned. |
-  | [`DBRIntermediateResultDelegate`]({{ site.oc_api }}protocol-dbrintermediateresultdelegate.html) | Protocol for a delegate to handle callback when intermediate result returned. |
-  | [`DBRErrorDelegate`]({{ site.oc_api }}protocol-dbrerrordelegate.html) | Protocol for a delegate to handle callback when an error returned. |
-  | [`DBRServerLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dbrserverlicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |
-  | [`DMDLSLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |
+  | [`DBRTextResultListener`]({{ site.oc_api }}protocol-dbrtextresultlistener.html) | Protocol for a delegate to handle callback when text result returned. |
+  | [`DBRIntermediateResultListener`]({{ site.oc_api }}protocol-dbrintermediateresultlistener.html) | Protocol for a delegate to handle callback when intermediate result returned. |
+  | [`DBRLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |
+
+> Note:
+>
+> - `DBRTextResultDelegate` is deprecated, please use `DBRTextResultListener` instead.
+> - `DBRIntermediateResultDelegate` is deprecated, please use `DBRIntermediateResultListener` instead.
+> - `DBRServerLicenseVerificationDelegate` is deprecated. It was used by `initWithLicenseFromServer` which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
+> - `DMDLSLicenseVerificationDelegate` is deprecated. Please use ({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) instead.
+
+&nbsp;
 
 ## Enumerations
 
@@ -139,9 +167,6 @@ breadcrumbText: iOS API Reference
 - [`EnumConflictMode`]({{ site.enumerations }}parameter-mode-enums.html#conflictmode)
 - [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)
 - [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)
-- [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
-- [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
-- [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
 - [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)
 - [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
 - [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)
@@ -160,3 +185,17 @@ breadcrumbText: iOS API Reference
 - [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)
 - [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)
 - [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
+
+> Note:
+> The following Enumerations are deprecated and will be removed in the future.
+>
+> - `EnumProduct`
+> - `EnumDMChargeWay`
+> - `EnumDMLicenseModule`
+> - `EnumDMUUIDGenerationMethod`
+
+&nbsp;
+
+## Others
+
+View the [Error Code]({{ site.enumerations }}error-code.html)

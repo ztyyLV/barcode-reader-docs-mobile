@@ -10,15 +10,16 @@ noTitleIndex: true
 
 # UI Configurations
 
-On this page, you will read:
+In this article, you will learn:
 
 - How to highlight the decoded barcodes
-- How to display barcode result on the UI ()
 - How to add clickable torchlight button
 
 ## Preparations
 
-UI configuring API are all included in DCECameraView class. All the UI configurations are implemented via the DCECameraView instance. You can use the following step to get prepared for UI configurations. These steps are all done if you have completed the steps in the [Getting started](user-guide.md) page.
+UI configuring APIs are all included in DCECameraView class. All the UI configurations are implemented via the DCECameraView instance. You can use the following steps to get prepared for UI configurations. These steps are also mentioned in the [Getting started](user-guide.md).
+<!--
+Objective-C:
 
 ```objc
 #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
@@ -29,62 +30,85 @@ dceCameraView = [DCECameraView cameraWithFrame:self.view.bounds];
 [self.view.addSubView:dceCameraView];
 ```
 
+Swift:
+-->
+
 ```swift
 import DynamsoftCameraEnhancer
 ```
 
 ```swift
-dceView = DCECameraView.init(frame: self.view.bounds)
-self.view.addSubview(dceView)
+dceCameraView = DCECameraView.init(frame: self.view.bounds)
+self.view.addSubview(dceCameraView)
 ```
 
 ## How to Highlight Decoded Barcodes
 
-The highlight overlays will be created and displayed on the UI automatically when you add the following code. You don't need to write any code for the location of overlays.
+By adding the following codes, the decoded barcodes will be automatically highlighted with a real-time overlay.
+<!--
+Objective-C:
 
 ```objc
-[_dceView setOverlayVisible:true];
+[dceCameraView setOverlayVisible:true];
 ```
 
+Swift:
+-->
+
 ```swift
-[_dceView setOverlayVisible:true];
+dceCameraView.setOverlayVisible = true
 ```
 
 The stroke and fill colour of the overlays are also available for setting.
+<!--
+Objective-C:
 
 ```objc
 UIColor* strokeColor = [UIColor colorWithRed:0.1 green:0.2 blue:0.3 alpha:0.5];
 UIColor* fillColor = [UIColor colorWithRed:0.1 green:0.2 blue:0.3 alpha:0.5];
-[_dceView setOverlayColour:strokeColor fill:fillColor];
+[dceCameraView setOverlayColour:strokeColor fill:fillColor];
 ```
+
+Swift:
+-->
 
 ```swift
 let strokeColour = UIColor(red: 0.1, green: 0.2, blue: 0.3, alpha: 0.5)
 let fillColour = UIColor(red: 0.1, green: 0.2, blue: 0.3, alpha: 0.5)
-_dceView.setOverlayColour(strokeColour, fill: fillcolour)
+dceCameraView.setOverlayColour(strokeColour, fill: fillcolour)
 ```
 
 ## How to Add clickable Torchlight Button
 
-In the `cameraView`, there is a build-in clickable torch button that can control the status of the torchlight. You can add styles like location, size and image icon for the button.
+In the `cameraView`, there is a build-in clickable torch button that can control the status of the torchlight. By invoking APIs, you can control the parameters such as position, size and icon of the button.
 
 To display the torch button on the UI:
+<!--
+Objective-C:
 
 ```objc
 // If you don't add any styles for the button, the torch will be displayed on the top left corner of the screen.
-dceCameraView.torchButtonVisible = true;
+[dceCameraView torchButtonVisible:true];
 ```
+
+Swift:
+-->
 
 ```swift
 // If you don't add any styles for the button, the torch will be displayed on the top left corner of the screen.
 dceCameraView.torchButtonVisible = true
 ```
 
-The torch image can be set via UIImage. If you set the images to null, they will be set to the default value.
+If you set the position or images to nil value, they will be set to the default value.
 
+Objective-C:
+<!--
 ```objc
 [dceCameraView setTorchButton:CGRectMake(100,100,50,50) torchOnImage:nil torchOffImage:nil];
 ```
+
+Swift:
+-->
 
 ```swift
 dceCameraView.setTorchButton(CGRect(x:100, y:100, width:50, height:50), torchOn:nil, torchOffImage:nil)

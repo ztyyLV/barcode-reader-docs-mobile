@@ -7,7 +7,6 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: Android API Reference
 noTitleIndex: true
-pageStartVer: 8.6
 ---
 
 # API Reference - Android
@@ -21,6 +20,8 @@ pageStartVer: 8.6
   | [`BarcodeReader`](primary-initialize-and-destroy.md#barcodereader) | Initialization of `BarcodeReader` object.|
   | [`destroy`](primary-initialize-and-destroy.md#destroy) | Destroys an instance of `BarcodeReader` object.|
 
+&nbsp;
+
 ### Video Decoding Methods
 
   | Method               | Description |
@@ -28,8 +29,15 @@ pageStartVer: 8.6
   | [`setCameraEnhancer`](primary-video.md#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
   | [`startScanning`](primary-video.md#startscanning) | Start the barcode reading thread. |
   | [`stopScanning`](primary-video.md#stopscanning) | Stop the barcode reading thread. |
-  | [`setTextResultCallback`](primary-video.md#settextresultcallback) | Set callback interface to process text results generated during frame decoding. |
-  | [`setIntermediateResultCallback`](primary-video.md#setintermediateresultcallback) | Set callback interface to process intermediate results generated during frame decoding. |
+  | [`setTextResultListener`](primary-video.md#settextresultlistener) | Set TextResult listener to get result from the callback method when barcode is decoded. |
+  | [`setIntermediateResultListener`](primary-video.md#setintermediateresultlistener) | Set intermediateResult listener to get intermediate result from the callback method. |
+
+> Note:
+>
+> - `setTextResultCallback` is deprecated, please use `setTextResultListener` instead.
+> - `setIntermediateResultCallback` is deprecated, please use `setIntermediateResultListener` instead.
+
+&nbsp;
 
 ### Image Decoding Methods
 
@@ -43,16 +51,25 @@ pageStartVer: 8.6
   | [`initIntermediateResult`](primary-decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
+&nbsp;
+
 ### License
   
   | Method               | Description |
   |----------------------|-------------|
   | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
-  | [`initLicenseFromServer`](primary-license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
-  | [`initLicenseFromLicenseContent`](primary-license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
-  | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
-  | [`initLicenseFromLTS`](primary-license.md#initlicensefromlts) | `Deprecated`, please use [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) instead. |
+
+> Note:
+> The following license activation methods are deprecated:
+>
+> - `outputLicenseToString`
+> - `initLicenseFromDLS`
+> - `initLicenseFromServer`
+> - `initLicenseFromLicenseContent`
+>
+> Please use [`initLicense`](primary-license.md#initlicense) instead.
+
+&nbsp;
 
 ### Parameter and Runtime Settings
 
@@ -67,6 +84,8 @@ pageStartVer: 8.6
   | [`updateRuntimeSettings (with preset template)`](primary-parameter-and-runtime-settings-basic.md#with-a-preset-template) | Update runtime settings from one of the preset templates. |
   | [`resetRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
 
+&nbsp;
+
 #### Advanced
   
   | Method               | Description |
@@ -79,6 +98,8 @@ pageStartVer: 8.6
   | [`outputSettingsToFile`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
   | [`outputSettingsToString`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
 
+&nbsp;
+
 ### Result
 
   | Method               | Description |
@@ -87,23 +108,15 @@ pageStartVer: 8.6
   | [`enableResultVerification`](primary-result.md#enableresultverification) | Verify the results before output. |
   | [`enableDuplicateFiter`](primary-result.md#enableduplicatefiter) | Output the duplicated result only once for every 3 seconds. |
 
+&nbsp;
+
 ### Status Retrieval
 
   | Method               | Description |
   |----------------------|-------------|
   | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
 
-### Camera Enhancer
-  
-   | Method               | Description |
-   |----------------------|-------------|
-   | [`StartCameraEnhancer`](primary-camera.md#startcameraenhancer) | Deprecated, use [`startScanning`](primary-video.md#startscanning) instead. |
-   | [`StopCameraEnhancer`](primary-camera.md#stopcameraenhancer) | Deprecated, use [`stopScanning`](primary-video.md#stopscanning) instead. |
-   | [`PauseCameraEnhancer`](primary-camera.md#pausecameraenhancer) | Deprecated, use [`stopScanning`](primary-video.md#stopscanning) instead. |
-   | [`ResumeCameraEnhancer`](primary-camera.md#resumecameraenhancer) | Deprecated, use [`startScanning`](primary-video.md#startscanning) instead. |
-   | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Deprecated, use [`setCameraEnhancer`](primary-video.md#setcameraenhancer) instead. |
-
-## [Error Code]({{ site.enumerations }}error-code.html)
+&nbsp;
 
 ## Auxiliary Classes
 
@@ -111,7 +124,6 @@ pageStartVer: 8.6
 - [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 - [`Contour`](auxiliary-Contour.md)
 - [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md)
-- [`DMLTSConnectionParameters`](auxiliary-DMLTSConnectionParameters.md)
 - [`ExtendedResult`](auxiliary-ExtendedResult.md)
 - [`FurtherModes`](auxiliary-FurtherModes.md)
 - [`ImageData`](auxiliary-ImageData.md)
@@ -128,15 +140,28 @@ pageStartVer: 8.6
 - [`SamplingImageData`](auxiliary-SamplingImageData.md)
 - [`TextResult`](auxiliary-TextResult.md)
 
+> Note:
+>
+> `DMDLSConnectionParameters` is deprecated due to the update of the license. Please use the method [`initLicense`](primary-license.md#initlicense) to activate the license instead.
+
+&nbsp;
+
 ## Interfaces
 
   | Interfaces | Description |
   |----------|-------------|
-  | [`TextResultCallback`](interface-textresultcallback.md) | The interface to handle callback when text results are returned. |
-  | [`IntermediateResultCallback`](interface-intermediateresultcallback.md) | The interface to handle callback when intermediate results are returned. |
-  | [`ErrorCallback`](interface-errorcallback.md) | The interface to handle callback when an error is returned. |
-  | [`DBRServerLicenseVerificationListener`](interface-dbrserverlicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
-  | [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
+  | [`TextResultListener`](interface-textresultlistener.md) | The interface to handle callback when text results are returned. |
+  | [`IntermediateResultListener`](interface-intermediateresultlistener.md) | The interface to handle callback when intermediate results are returned. |
+  | [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
+
+> Note:
+>
+> - `TextResultCallback` is deprecated, please use `TextResultListener` instead.
+> - `IntermediateResultCallback` is deprecated, please use `IntermediateResultListener` instead.
+> - `DBRServerLicenseVerificationListener` is deprecated. It was used by `initLicenseFromServer` which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
+> - [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) is Deprecated. Please use [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) instead.
+
+&nbsp;
 
 ## Enumerations
 
@@ -153,9 +178,6 @@ pageStartVer: 8.6
 - [`EnumConflictMode`]({{ site.enumerations }}parameter-mode-enums.html#conflictmode)
 - [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)
 - [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)
-- [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
-- [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
-- [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
 - [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)
 - [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
 - [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)
@@ -175,3 +197,17 @@ pageStartVer: 8.6
 - [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)
 - [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
 - [`EnumPresetTemplate`]({{ site.enumerations }}other-enums.html#enumpresettemplate)
+
+> Note:
+> The following Enumerations are deprecated and will be removed in the future.
+>
+> - `EnumProduct`
+> - `EnumDMChargeWay`
+> - `EnumDMLicenseModule`
+> - `EnumDMUUIDGenerationMethod`
+
+&nbsp;
+
+## Others
+
+View the [Error Codes]({{ site.enumerations }}error-code.html)

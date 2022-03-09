@@ -1,19 +1,19 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - Interface TextResultCallback
-description: This the interface TextResultCallback page of Dynamsoft Barcode Reader for Android SDK.
-keywords: TextResultCallback, interface, android
+title: Dynamsoft Barcode Reader Android API Reference - Interface TextResultListener
+description: This the interface TextResultListener page of Dynamsoft Barcode Reader for Android SDK.
+keywords: TextResultListener, interface, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 ---
 
-# TextResultCallback
+# TextResultListener
 
-`TextResultCallback` is The interface to handle callback when the text results are returned.
+`TextResultListener` is The interface to handle callbacks when the barcode results are returned.
 
 ```java
-interface com.dynamsoft.dbr.TextResultCallback
+interface com.dynamsoft.dbr.TextResultListener
 ```
 
 | Method | Description |
@@ -22,22 +22,22 @@ interface com.dynamsoft.dbr.TextResultCallback
 
 ## textResultCallback
 
-The abstract class for users to get text results from the callback.
+The abstract class for users to get barcode results from the callback.
 
 ```java
-void textResultCallback(int frameId, TextResult[] results, Object userData);
+void textResultCallback(int frameId, ImageData imageData, TextResult[] results);
 ```
 
 **Parameters**
 
 `frameId`: The ID of the frame.  
-`results`: Recognized barcode results of the frame.  
-`userData`: Arguments passed to your function.
+`imageData`: The image data of the frame.  
+`results`: Recognized barcode results of the frame.
 
 **Code Snippet**
 
 ```java
-TextResultCallback textResultCallback = new TextResultCallback() {
+TextResultListener textResultListener = new TextResultListener() {
     @Override
     public void textResultCallback(int frameID, TextResult[] textResults, Object userdate) {
         // Add your code

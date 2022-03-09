@@ -11,11 +11,46 @@ pageStartVer: 8.0
 
 # How to Upgrade
 
+## From Version 8.x to 9.x
+
+### Update the SDK to 9.x Version
+
+If you are referencing the library from local file:
+
+- Replace the old `DynamsoftBarcodeReaderAndroid.aar` and `DynamsoftCameraEnhancerAndroid.aar` file with the one in the latest version.
+
+If you are using Maven
+
+- Change the version number to v9.x in `app\build.gradle` file.
+
+### Update the License Activation Code
+
+For users who are using the original `initLicense` method, please add the code for license verification.
+
+```java
+BarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DBRLicenseVerificationListener() {
+    @Override
+    public void DBRLicenseVerificationCallback(boolean isSuccess, Exception error) {
+        if(!isSuccess){
+            error.printStackTrace();
+        }
+    }
+});
+```
+
+> Note:
+> The following license activation methods are deprecated:
+>
+> - `initLicenseFromDLS`
+> - `initLicenseFromServer`
+> - `initLicenseFromLicenseContent`
+> If you are using the above methods, you don't need to make any changes on the code for 9.x versions.
+
 ## From Version 8.0 to 8.x
 
 ### Update the SDK
 
-Replace the old `DynamsoftBarcodeReaderAndroid.aar` file with the one in the latest version. If you are using Maven, then change the version number in the `build.gradle` file.
+Replace the old `DynamsoftBarcodeReaderAndroid.aar` file with the one in the latest version. If you are using Maven, then change the version number in the `app\build.gradle` file.
 
 ### API Changes
 

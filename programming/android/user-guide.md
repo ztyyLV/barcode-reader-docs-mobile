@@ -27,7 +27,7 @@ After unzipping, the root directory of the DBR installation package is **Dynamso
 
 | File | Description |
 |---------|-------------|
-| `DynamsoftBarcodeReaderAndroid.aar` | The Barcode Reader library, including all barcode decoding releated algorithms and APIs. |
+| `DynamsoftBarcodeReaderAndroid.aar` | The Barcode Reader library, including all barcode decoding related algorithms and APIs. |
 | `DynamsoftCameraEnhancerAndroid.aar` | The Camera Enhancer library, including camera control APIs and frame preprocessing algorithm.  |
 
 ## Build Your First Application
@@ -154,22 +154,20 @@ There are two ways to include the SDK into your project - local binary dependenc
 2. Initialize the license.
 
    ```java
-   DMDLSConnectionParameters dbrParameters = new DMDLSConnectionParameters();
-   dbrParameters.organizationID = "200001";
-   reader.initLicenseFromDLS(dbrParameters, new DBRDLSLicenseVerificationListener() {
-         @Override
-         public void DLSLicenseVerificationCallback(boolean isSuccessful, Exception e) {
-            if (!isSuccessful) {
-               e.printStackTrace();
-            }
+   BarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DBRLicenseVerificationListener() {
+      @Override
+      public void DBRLicenseVerificationCallback(boolean isSuccess, Exception error) {
+         if(!isSuccess){
+             error.printStackTrace();
          }
+      }
    });
    ```
 
    >Note:
    >- Network connection is required for the license to work.
-   >- The organization id 200001 here will grant you a time-limited public trial license.
-   >- If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
+   >- The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a time-limited public trial license.
+   >- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a> to request for an extension.
 
 3. Create text callback to obtain the recognized barcode results.
 
@@ -235,7 +233,7 @@ There are two ways to include the SDK into your project - local binary dependenc
 
 ### Additional Steps
 
-1. In the Project window, open **app > res > layout > `activity_main.xml`**, create a text view section under the root node to display recognized barcode result.
+1. In the Project window, open **app > res > layout > `activity_main.xml`**, create a text view section under the root node to display the recognized barcode results.
 
    ```xml
     <TextView

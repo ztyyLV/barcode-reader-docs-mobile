@@ -11,10 +11,6 @@ pageStartVer: 8.6
 
 # Android Auxiliary Classes
 
-## [License Class](auxiliary-DMDLSConnectionParameters.md)
-
-- [`DMDLSConnectionParameters`](auxiliary-DMDLSConnectionParameters.md)
-
 ## [Common Classes](auxiliary-common-classes.md)
 
 - [`Point`](auxiliary-Point.md)

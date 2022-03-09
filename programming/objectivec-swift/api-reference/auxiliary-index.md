@@ -10,10 +10,6 @@ noTitleIndex: true
 
 # iOS Auxiliary Classes
 
-## [License Class](auxiliary-iDMDLSConnectionParameters.md)
-
-- [`iDMDLSConnectionParameters`](auxiliary-iDMDLSConnectionParameters.md)
-
 ## [Common Classes](auxiliary-common-classes.md)
 
 - [`iDBRPoint`](auxiliary-iDBRPoint.md)
