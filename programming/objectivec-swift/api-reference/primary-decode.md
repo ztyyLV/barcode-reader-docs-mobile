@@ -15,7 +15,7 @@ needGenerateH3Content: false
   |----------------------|-------------|
   | [`decodeBuffer`](#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeFileWithName`](#decodefilewithname) | Decode barcodes from a specified image file. |
-  | [`decodeImage`](#decodeimage) | Decode barcodes from an image file in memory. |
+  | [`decode`](#decode) | Decode barcodes from an image file in memory. |
   | [`decodeBase64`](#decodebase64) | Decode barcodes from a base64 encoded string. |
   | [`createIntermediateResult`](decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
@@ -158,12 +158,12 @@ let error: NSError? = NSError()
 let result = try! barcodeReader.decodeFile(withName: "your file path",templateName:"")
 ```
 
-## decodeImage
+## decode
 
 Decode barcodes from an image file in memory.
 
 ```objc
-- (NSArray<iTextResult*>* _Nullable)decodeImage:(UIImage* _Nonnull)image withTemplate:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
+- (NSArray<iTextResult*>* _Nullable)decode:(UIImage* _Nonnull)image withTemplate:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
 ```  
 
 **Parameters**
