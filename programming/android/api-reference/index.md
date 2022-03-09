@@ -111,7 +111,7 @@ pageStartVer: 8.6
 - [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 - [`Contour`](auxiliary-Contour.md)
 - [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md)
-- [`DMLTSConnectionParameters`](auxiliary-DMLTSConnectionParameters.md)
+- [`DMDLSConnectionParameters`](auxiliary-DMDLSConnectionParameters.md)
 - [`ExtendedResult`](auxiliary-ExtendedResult.md)
 - [`FurtherModes`](auxiliary-FurtherModes.md)
 - [`ImageData`](auxiliary-ImageData.md)
