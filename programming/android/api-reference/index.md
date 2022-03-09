@@ -29,8 +29,13 @@ noTitleIndex: true
   | [`setCameraEnhancer`](primary-video.md#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
   | [`startScanning`](primary-video.md#startscanning) | Start the barcode reading thread. |
   | [`stopScanning`](primary-video.md#stopscanning) | Stop the barcode reading thread. |
-  | [`setTextResultCallback`](primary-video.md#settextresultcallback) | Set callback interface to process text results generated during frame decoding. |
-  | [`setIntermediateResultCallback`](primary-video.md#setintermediateresultcallback) | Set callback interface to process intermediate results generated during frame decoding. |
+  | [`setTextResultListener`](primary-video.md#settextresultlistener) | Set TextResult listener to get result from the callback method when barcode is decoded. |
+  | [`setIntermediateResultListener`](primary-video.md#setintermediateresultlistener) | Set intermediateResult listener to get intermediate result from the callback method. |
+
+> Note:
+>
+> - `setTextResultCallback` is deprecated, please use `setTextResultListener` instead.
+> - `setIntermediateResultCallback` is deprecated, please use `setIntermediateResultListener` instead.
 
 &nbsp;
 
@@ -144,12 +149,14 @@ noTitleIndex: true
 
   | Interfaces | Description |
   |----------|-------------|
-  | [`TextResultCallback`](interface-textresultcallback.md) | The interface to handle callback when text results are returned. |
-  | [`IntermediateResultCallback`](interface-intermediateresultcallback.md) | The interface to handle callback when intermediate results are returned. |
+  | [`TextResultListener`](interface-textresultlistener.md) | The interface to handle callback when text results are returned. |
+  | [`IntermediateResultListener`](interface-intermediateresultlistener.md) | The interface to handle callback when intermediate results are returned. |
   | [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
 
 > Note:
 >
+> - `TextResultCallback` is deprecated, please use `TextResultListener` instead.
+> - `IntermediateResultCallback` is deprecated, please use `IntermediateResultListener` instead.
 > - `DBRServerLicenseVerificationListener` is deprecated. It was used by `initLicenseFromServer` which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
 > - [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) is Deprecated. Please use [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) instead.
 

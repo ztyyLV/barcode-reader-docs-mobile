@@ -13,7 +13,7 @@ noTitleIndex: true
 `IntermediateResultListener` is the interface to handle callback when intermediate results are returned.
 
 ```java
-interface com.dynamsoft.dbr.IntermediateResultCallback
+interface com.dynamsoft.dbr.IntermediateResultListener
 ```
 
 | Method | Description |

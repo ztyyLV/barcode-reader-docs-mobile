@@ -13,7 +13,7 @@ noTitleIndex: true
 `TextResultListener` is The interface to handle callbacks when the barcode results are returned.
 
 ```java
-interface com.dynamsoft.dbr.TextResultCallback
+interface com.dynamsoft.dbr.TextResultListener
 ```
 
 | Method | Description |
