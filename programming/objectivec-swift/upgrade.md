@@ -11,6 +11,75 @@ pageStartVer: 8.0
 
 # How to Upgrade
 
+## From Version 8.x to 9.x
+
+### Update the SDK to 9.x Version
+
+If you are referencing the library from local file:
+
+- Replace the old `DynamsoftBarcodeReaderAndroid.aar` and `DynamsoftCameraEnhancerAndroid.aar` file with the one in the latest version.
+
+If you are using Maven
+
+- Change the version number to v9.x in `app\build.gradle` file.
+
+### Update the License Activation Code
+
+If you were using the following license activation APIs:
+
+Objective-C:
+
+```objc
+barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"An offline license"];
+```
+
+```objc
+_barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:DLSConnectionPara verificationDelegate:self];
+- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error{
+
+}
+```
+
+Swift:
+
+```swift
+let barcodeReader = DynamsoftBarcodeReader.init(license: "An offline license")
+```
+
+```swift
+barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: DLSConnectionPara, verificationDelegate: self)
+func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?){
+
+}
+```
+
+Please replace your license activation code with the following code. You can get the `3.0 license` from [customer portal-->License detail](#update-the-license-activation-code).
+
+Objective-C:
+
+```objc
+[DynamsoftBarcodeReader initLicense:@"Put your license here" verificationDelegate: self];
+- (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
+
+}
+```
+
+Swift:
+
+```Swift
+DynamsoftBarcodeReader.initLicense("Put your license here", verificationDelegate: self)
+func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+
+}
+```
+
+> Note:
+> The following license activation methods are deprecated:
+>
+> - `initLicenseFromDLS`
+> - `initLicenseFromServer`
+> These methods will be removed in 10.0 release. You don't have to make the changes in 9.x upgrade.
+
 ## From Version 8.0 to 8.x
 
 You need to replace the old `DynamsoftBarcodeReader.framework` file with the one in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx). You could also download it via terminal `pod install ‘DynamsoftBarcodeReader’`. For v8.9 or higher v8.x versions, you have to include `DynamsoftCameraEnhancer.framework` as well.

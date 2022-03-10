@@ -25,10 +25,24 @@ If you are using Maven
 
 ### Update the License Activation Code
 
-For users who are using the original `initLicense` method, please add the code for license verification.
+If you were using:
 
 ```java
-BarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DBRLicenseVerificationListener() {
+reader.initLicense("t0260NwAAAHV***************");
+```
+
+or:
+
+```java
+reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener(){
+    //...
+}
+```
+
+Please replace your license activation code with the following code. You can get the `3.0 license` from [customer portal-->License detail](#update-the-license-activation-code).
+
+```java
+BarcodeReader.initLicense("3.0 license", new DBRLicenseVerificationListener() {
     @Override
     public void DBRLicenseVerificationCallback(boolean isSuccess, Exception error) {
         if(!isSuccess){
@@ -44,7 +58,33 @@ BarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DBRLic
 > - `initLicenseFromDLS`
 > - `initLicenseFromServer`
 > - `initLicenseFromLicenseContent`
-> If you are using the above methods, you don't need to make any changes on the code for 9.x versions.
+> These methods will be removed in 10.0 release. You don't have to make the changes in 9.x upgrade.
+
+### Update the Video Barcode Decoding Methods
+
+Some of the legacy video barcode decoding methods are deprecated. Make sure to change your code if you were using the following APIs:
+
+- Legacy Frame Decoding APIs:
+  - Class `FrameDecodingParameters`
+  - interface `ErrorCallback`
+  - `BarcodeReader.startFrameDecoding`
+  - `BarcodeReader.startFrameDecodingEx`
+  - `BarcodeReader.appendFrame`
+  - `BarcodeReader.setErrorCallback`
+  - `BarcodeReader.stopFrameDecoding`
+  - `BarcodeReader.initFrameDecodingParameters`
+  - `BarcodeReader.getLengthOfFrameQueue`
+- Legacy Camera Enhancer supporting APIs
+  - Class `DCESettingParameters`
+  - `BarcodeReader.SetCameraEnhancerParam`
+  - `BarcodeReader.StartCameraEnhancer`
+  - `BarcodeReader.StopCameraEnhancer`
+  - `BarcodeReader.PauseCameraEnhancer`
+  - `BarcodeReader.ResumeCameraEnhancer`
+
+> Note:
+>
+> If you are upgrading from v8.9.0 or higher versions, you might not need to make any changes on video barcode decoding APIs.
 
 ## From Version 8.0 to 8.x
 
