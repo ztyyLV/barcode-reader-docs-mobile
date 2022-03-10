@@ -20,9 +20,9 @@ noTitleIndex: true
 - Added `EnumBarcodeFormat2PHARMACODEONETRACK`, `EnumBarcodeFormat2PHARMACODETWOTRACK` and `EnumBarcodeFormat2PHARMACODE` under enumeration `BarcodeFormat2`. to specify newly supported barcode format, Pharmacodes. Added a new error code `DBRERR_PHARMACODE_LICENSE_INVALID` which will be returned when the license of Pharmacode is invalid.
 - Added `EnumDeformationResistingModeBroadWarp`, `EnumDeformationResistingModeLocalReference` and `EnumDeformationResistingModeDewrinkle` under enumeration `EnumDeformationResistingMode` to apply new deformation resisting modes.
 - Added static method `DynamsoftBarcodeReader.initLicense` to replace legacy license activation APIs.
-- Added protocol `DBRLicenseVerificationListener` to replace `DMDLSLicenseVerificationDelegate`
-- Added protocol `DBRTextResultListener` to replace `DBRTextResultDelegate`
-- Added protocol `DBRIntermediateResultListener` to replact `DBRIntermediateResultDelegate`
+- Added protocol `DBRLicenseVerificationListener` to get license verification callback when using `DynamsoftBarcodeReader.initLicense`.
+- Added protocol `DBRTextResultListener`.
+- Added protocol `DBRIntermediateResultListener`.
 - Added the following image decoding methods. The parameter `templateName` is not required in the new methods.
   - `DynamsoftBarcodeReader.decodeBuffer`
   - `DynamsoftBarcodeReader.decodeImage`
@@ -32,7 +32,6 @@ noTitleIndex: true
 
 #### Fixed
 
-- Fixed a bug that might change the hard binding UUID.
 - Fixed a bug that might cause a crash when using multiple threads for barcode decoding.
 
 #### Deprecated
@@ -40,6 +39,7 @@ noTitleIndex: true
 - The following license activation APIs are deprecated:
   - Interface `iDMDLSConnectionParameters`
   - Protocol `DBRServerLicenseVerificationDelegate`
+  - Protocol `DMDLSLicenseVerificationDelegate`
   - Enumeration `EnumDMChargeWay`
   - Enumeration `EnumDMLicenseModule`
   - Enumeration `EnumDMUUIDGenerationMethod`
@@ -54,6 +54,9 @@ noTitleIndex: true
   - `DynamsoftBarcodeReader.decodeFileWithName`
   - `DynamsoftBarcodeReader.decodeBase64`
   - `DynamsoftBarcodeReader.decodeBuffer`
+
+- `DBRTextResultDelegate` is deprecated.
+- `DBRIntermediateResultListener` is deprecated.
 
 #### Breaking Changes
 
