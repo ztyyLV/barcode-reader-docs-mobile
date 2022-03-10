@@ -12,6 +12,7 @@ noTitleIndex: true
   | Method               | Description |
   |----------------------|-------------|
   | [`license`](#license) | Stores the license used in DynamsoftBarcodeReader. |
+  
   ---
 
 ## initLicense
