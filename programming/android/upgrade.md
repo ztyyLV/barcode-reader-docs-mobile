@@ -60,7 +60,7 @@ BarcodeReader.initLicense("3.0 license", new DBRLicenseVerificationListener() {
 > - `initLicenseFromLicenseContent`
 > These methods will be removed in 10.0 release. You don't have to make the changes in 9.x upgrade.
 
-### Update the Video Barcode Decoding Methods
+### Update the Video Barcode Decoding Code
 
 Some of the legacy video barcode decoding methods are deprecated. Make sure to change your code if you were using the following APIs:
 

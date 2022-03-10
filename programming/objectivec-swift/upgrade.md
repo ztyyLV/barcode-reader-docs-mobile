@@ -80,6 +80,69 @@ func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
 > - `initLicenseFromServer`
 > These methods will be removed in 10.0 release. You don't have to make the changes in 9.x upgrade.
 
+### Update the Video Barcode Decoding Code
+
+Some of the legacy video barcode decoding methods are deprecated. Make sure to change your code if you were using the following APIs:
+
+- Legacy Frame Decoding APIs:
+  - `interface iFrameDecodingParameters`
+  - `protocol DBRErrorDelegate`
+  - `BarcodeReader.startFrameDecoding`
+  - `BarcodeReader.startFrameDecodingEx`
+  - `BarcodeReader.appendFrame`
+  - `BarcodeReader.setDBRErrorDelegate`
+  - `BarcodeReader.stopFrameDecoding`
+  - `BarcodeReader. getFrameDecodingParameters`
+  - `BarcodeReader.getLengthOfFrameQueue`
+
+- Legacy Camera Enhancer supporting APIs
+  - interfance `iDCESettingParameters`
+  - `BarcodeReader.setCameraEnhancerPara`
+
+> Note:
+>
+> If you are upgrading from v8.9.0 or higher versions, you might not need to make any changes on video barcode decoding APIs.
+
+### Update Swift Code
+
+We made quit a lot of changes on the Swift APIs in 9.0 version. Please check the API documents for the details if you are using the following APIs.
+
+- Modified Swift APIs
+  - The following method names are changed:
+    - `DynamsoftBarcodeReader.updateRuntimeSettings`(with parameter `iPublicRuntimeSettings`)
+    - `DynamsoftBarcodeReader.decodeIntermediateResult`
+    - `DynamsoftBarcodeReader.decodeImage`
+    - `DynamsoftBarcodeReader.decodeFileWithName`
+    - `DynamsoftBarcodeReader.initRuntimeSettingsWithFile`
+    - `DynamsoftBarcodeReader.initRuntimeSettingsWithString`
+    - `DynamsoftBarcodeReader.appendTplFileToRuntimeSettings`
+    - `DynamsoftBarcodeReader.appendTplStringToRuntimeSettings`
+    - `DynamsoftBarcodeReader.outputSettingsToString`
+    - `DynamsoftBarcodeReader.outputSettingsToFile`
+  - The following methods will signal errors by returning NSErrors
+    - `DynamsoftBarcodeReader.getIntermediateResult`
+    - `DynamsoftBarcodeReader.createIntermediateResult`
+    - `DynamsoftBarcodeReader.outputLicenseToString`
+    - `DynamsoftBarcodeReader.outputSettingsToString`
+    - `DynamsoftBarcodeReader.allParameterTemplateNames`
+    - `DynamsoftBarcodeReader.getModeArgument`
+    - `DynamsoftBarcodeReader.getRuntimeSettings`
+  - The following methods will signal errors by throw exceptions
+    - `DynamsoftBarcodeReader.decodeIntermediateResult`
+    - `DynamsoftBarcodeReader.decodeImage`
+    - `DynamsoftBarcodeReader.decodeFileWithName`
+    - `DynamsoftBarcodeReader.decodeBase64`
+    - `DynamsoftBarcodeReader.decodeBuffer`
+  - The following methods will return an BOOL value
+    - `DynamsoftBarcodeReader.updateRuntimeSettings`
+    - `DynamsoftBarcodeReader.setModeArgument`
+    - `DynamsoftBarcodeReader.resetRuntimeSettings`
+    - `DynamsoftBarcodeReader.initRuntimeSettingsWithFile`
+    - `DynamsoftBarcodeReader.initRuntimeSettingsWithString`
+    - `DynamsoftBarcodeReader.appendTplFileToRuntimeSettings`
+    - `DynamsoftBarcodeReader.appendTplStringToRuntimeSettings`
+    - `DynamsoftBarcodeReader.outputSettingsToFile`
+
 ## From Version 8.0 to 8.x
 
 You need to replace the old `DynamsoftBarcodeReader.framework` file with the one in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx). You could also download it via terminal `pod install ‘DynamsoftBarcodeReader’`. For v8.9 or higher v8.x versions, you have to include `DynamsoftCameraEnhancer.framework` as well.
