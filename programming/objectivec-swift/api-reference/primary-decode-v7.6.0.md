@@ -49,7 +49,7 @@ result = [barcodeReader decodeFileWithName:@"your file path" templateName:@"" er
 
 Swift:
 
-```Swift
+```swift
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
 let error: NSError? = NSError()
 let result = barcodeReader.decodeFileWithName(name:"your file path",templateName:"",error:&error)
@@ -90,7 +90,7 @@ result = [barcodeReader decodeImage:image withTemplate:@"" error:&error];
 
 Swift:
 
-```Swift
+```swift
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
 let image: UIImage? = UIImage()
 let error: NSError? = NSError()
@@ -138,7 +138,7 @@ result = [barcodeReader decodeBuffer:bufferBytes withWidth:iWidth height:iHeight
 
 Swift:
 
-```Swift
+```swift
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
 let error: NSError? = NSError()
 let bufferBytes:Data?
@@ -181,7 +181,7 @@ result = [barcodeReader decodeBase64:@"file in base64 string" withTemplate:@"" e
 
 Swift:
 
-```Swift
+```swift
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************") 
 let error: NSError? = NSError() 
 let result = barcodeReader.decodeBase64(base64: file in base64 string, withTemplate: "", error: &error)

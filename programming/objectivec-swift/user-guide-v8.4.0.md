@@ -48,7 +48,7 @@ To build a Hello World app that reads barcodes from an image, you can follow the
 
    Swift:
 
-   ```Swift
+   ```swift
    import DynamsoftBarcodeReader
    ```
 
@@ -109,7 +109,7 @@ To build a Hello World app that reads barcodes from an image, you can follow the
 
    Swift:
 
-   ```Swift
+   ```swift
    import UIKit
    import DynamsoftBarcodeReader
 
@@ -260,7 +260,7 @@ if (error)
 
 Swift:
 
-```Swift
+```swift
 // Initialize license prior to any decoding. replace "t0068MgAAAIeGN7***inVNj14D4=" with your own license.
 let reader = DynamsoftBarcodeReader.init(license: "t0068MgAAAIeGN7***inVNj14D4=")
 
@@ -299,7 +299,7 @@ settings.expectedBarcodesCount = 1;
 
 Swift:
 
-```Swift
+```swift
 // Initialize license prior to any decoding. replace "t0068MgAAAIeGN7***inVNj14D4=" with your own license.
 let reader = DynamsoftBarcodeReader.init(license: "t0068MgAAAIeGN7***inVNj14D4=")
 let settings = try! reader.getRuntimeSettings()
@@ -333,7 +333,7 @@ settings.region.regionMeasuredByPercentage = 1; //The region is determined by pe
 
 Swift:
 
-```Swift
+```swift
 // Initialize license prior to any decoding. replace "t0068MgAAAIeGN7***inVNj14D4=" with your own license.
 let reader = DynamsoftBarcodeReader.init(license: "t0068MgAAAIeGN7***inVNj14D4=")
 let settings = try! reader.getRuntimeSettings()
@@ -364,7 +364,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"Put your licen
 
 Swift:
 
-```Swift
+```swift
 // Initialize license prior to any decoding. replace "t0068MgAAAIeGN7***inVNj14D4=" with your own license.
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0068MgAAAIeGN7***inVNj14D4=")
 let error: NSError? = NSError()

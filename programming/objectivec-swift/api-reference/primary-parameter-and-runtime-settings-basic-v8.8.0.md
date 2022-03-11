@@ -57,7 +57,7 @@ settings.binarizationModes = mArray;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let mArray: NSMutableArray? = NSMutableArray()
 let settings = try! barcodeReader.getRuntimeSettings()
@@ -126,7 +126,7 @@ argumentValue = [barcodeReader getModeArgument:@"BinarizationModes" index:0 argu
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let mArray: NSMutableArray? = NSMutableArray()
 let settings = try! barcodeReader.getRuntimeSettings()
@@ -182,7 +182,7 @@ NSError __autoreleasing * _Nullable error;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let licenseString = try! barcodeReader.getRuntimeSettings(&error)
 ```
@@ -214,7 +214,7 @@ iPublicRuntimeSettings *settings;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let settings = try! barcodeReader.getRuntimeSettings(nil)
 barcodeReader.update(settings, error: &error)
@@ -243,7 +243,7 @@ NSError __autoreleasing * _Nullable error;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 barcodeReader.resetRuntimeSettings(&error)
 ```

@@ -44,7 +44,7 @@ Objective-C:
 
 Swift:
 
-```Swift
+```swift
 DynamsoftBarcodeReader.initLicense("Put your license here", verificationDelegate: self)
 
 func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {

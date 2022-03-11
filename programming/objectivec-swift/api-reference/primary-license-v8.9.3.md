@@ -55,7 +55,7 @@ Objective-C:
 
 Swift:
 
-```Swift
+```swift
 DynamsoftBarcodeReader.initLicense("Put your license here", verificationDelegate: self)
 func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
 }
@@ -90,7 +90,7 @@ NSError __autoreleasing * _Nullable error;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let barcodeReader = DynamsoftBarcodeReader.init(licenseFromServer: "", licenseKey: "C087****", verificationDelegate: self)
 let licenseString = try! barcodeReader.outputLicenseToString()
@@ -136,7 +136,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicenseFromServer:@"" li
 
 Swift:
 
-```Swift
+```swift
 let barcodeReader = DynamsoftBarcodeReader(licenseFromServer: "", licenseKey: "C087****", verificationDelegate: self)
 
 func licenseVerificationCallback(_ isSuccess: Bool, error: Error?)
@@ -186,7 +186,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificat
 
 Swift:
 
-```Swift
+```swift
 let dls = iDMDLSConnectionParameters()
 dls.organizationID = "200001"
 dls.sessionPassword = "******"

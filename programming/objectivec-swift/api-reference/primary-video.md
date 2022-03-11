@@ -44,7 +44,7 @@ Objective-C:
 
 Swift:
 
-```Swift
+```swift
 var dce:DynamsoftCameraEnhancer! = nil
 var barcodeReader:DynamsoftBarcodeReader! = nil
 barcodeReader.setCameraEnhancer(dce)
@@ -68,7 +68,7 @@ Objective-C:
 
 Swift:
 
-```Swift
+```swift
 barcodeReader.startScanning()
 ```
 
@@ -90,7 +90,7 @@ Objective-C:
 
 Swift:
 
-```Swift
+```swift
 barcodeReader.stopScanning()
 ```
 
@@ -117,7 +117,7 @@ Objective-C:
 
 Swift:
 
-```Swift
+```swift
 barcodeReader.setDBRTextResultDelegate(self, userData:nil)
 ```
 
@@ -145,6 +145,6 @@ DynamsoftBarcodeReader *barcodeReader;
 
 Swift:
 
-```Swift
+```swift
 barcodeReader.setDBRIntermediateResultDelegate(self, userData:nil)
 ```

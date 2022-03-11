@@ -144,7 +144,7 @@ NSArray<iTextResult*>* result = [barcodeReader decodeFileWithName:@"your file pa
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let result = try! barcodeReader.decodeFile(withName: "your file path")
 ```
@@ -179,7 +179,7 @@ NSArray<iTextResult*>* result = [barcodeReader decodeImage:image error:&error];
 
 Swift:
 
-```Swift
+```swift
 let image: UIImage? = UIImage()
 let error: NSError? = NSError()
 let result = try! barcodeReader.decode(image)
@@ -214,7 +214,7 @@ NSArray<iTextResult*>* result = [barcodeReader decodeBase64:@"file in base64 str
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError() 
 let result = try! barcodeReader.decodeBase64("file in base64 string")
 ```
@@ -249,7 +249,7 @@ irResult = [barcodeReader createIntermediateResult:EnumIntermediateResultTypeOri
 
 Swift:
 
-```Swift
+```swift
 var error:NSError? = NSError()
 var irResult:iIntermediateResult!
 irResult = try! barcodeReader.createIntermediateResult(EnumIntermediateResultType(rawValue: EnumIntermediateResultType.originalImage.rawValue)!)
@@ -290,7 +290,7 @@ NSArray<iTextResult*>* result = [barcodeReader decodeIntermediateResults:array e
 
 Swift:
 
-```Swift
+```swift
 let result:[iTextResult]?
 let settings = try! barcodeReader.getRuntimeSettings()
 settings.intermediateResultTypes = EnumIntermediateResultType.originalImage.rawValue | EnumIntermediateResultType.typedBarcodeZone.rawValue

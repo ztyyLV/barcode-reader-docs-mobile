@@ -47,7 +47,7 @@ NSError __autoreleasing * _Nullable error;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let settings = try! barcodeReader.getRuntimeSettings()
 ```
@@ -81,7 +81,7 @@ iPublicRuntimeSettings *settings;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let settings = try! barcodeReader.getRuntimeSettings()
 barcodeReader.update(settings, error: &error)
@@ -107,7 +107,7 @@ Objective-C:
 
 Swift:
 
-```Swift
+```swift
 barcodeReader.updateRuntimeSettings(EnumPresetTemplate.EnumPresetTemplateVideoSingleBarcode)
 ```
 
@@ -134,7 +134,7 @@ NSError __autoreleasing * _Nullable error;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 barcodeReader.resetRuntimeSettings(&error)
 ```
@@ -177,7 +177,7 @@ settings.binarizationModes = mArray;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let mArray: NSMutableArray? = NSMutableArray()
 let settings = try! barcodeReader.getRuntimeSettings()
@@ -246,7 +246,7 @@ argumentValue = [barcodeReader getModeArgument:@"BinarizationModes" index:0 argu
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let mArray: NSMutableArray? = NSMutableArray()
 let settings = try! barcodeReader.getRuntimeSettings()

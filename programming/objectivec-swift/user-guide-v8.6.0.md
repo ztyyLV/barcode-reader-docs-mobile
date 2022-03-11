@@ -51,7 +51,7 @@ You can add your downloaded frameworks into your project by the following steps:
 
    Swift:
 
-   ```Swift
+   ```swift
    import DynamsoftBarcodeReader
    import DynamsoftCameraEnhancer
    ```
@@ -408,7 +408,7 @@ settings.region.regionMeasuredByPercentage = 1;
 
 Swift:
 
-```Swift
+```swift
 let settings = try! reader.getRuntimeSettings()
 // Set the barcode format
 settings.barcodeFormatIds = Int(EnumBarcodeFormat.ONED.rawValue)

@@ -51,7 +51,7 @@ irResult = [m_barcodeReader getIntermediateResult:&error];
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let settings = try! barcodeReader.getRuntimeSettings()
 settings.intermediateResultTypes = EnumIntermediateResultType.ColourConvertedGrayScaleImage.rawValue | EnumIntermediateResultType.OriginalImage.rawValue | EnumIntermediateResultType.ColourClusteredImage.rawValue

@@ -74,7 +74,7 @@ You can add your downloaded frameworks into your project through the following s
 
    Swift:
 
-   ```Swift
+   ```swift
    import DynamsoftBarcodeReader
    import DynamsoftCameraEnhancer
    ```
