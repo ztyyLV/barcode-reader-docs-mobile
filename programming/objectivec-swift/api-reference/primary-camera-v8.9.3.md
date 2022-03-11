@@ -25,7 +25,7 @@ Set the callback parameters for Camera Enhancer
 
 Objective-C:
 
-```objectivec
+```objc
 iDCESettingParameters* para = [[iDCESettingsParameters alloc] init];
 para.cameraInstance = _dce;
 para.textResultDelegate = self;

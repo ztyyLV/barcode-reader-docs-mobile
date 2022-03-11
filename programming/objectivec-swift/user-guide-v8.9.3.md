@@ -150,7 +150,7 @@ You can add your downloaded frameworks into your project through the following s
 
     Objective-C:
 
-    ```objectivec
+    ```objc
     @property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
 
     /*
@@ -182,7 +182,7 @@ You can add your downloaded frameworks into your project through the following s
 
     Objective-C:
 
-    ```objectivec
+    ```objc
     - (void)configurationDBR{
         iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
         // A network connection is required to active the public trial license.
@@ -211,7 +211,7 @@ You can add your downloaded frameworks into your project through the following s
 
     Objective-C:
 
-    ```objectivec
+    ```objc
     @interface ViewController ()<DMDLSLicenseVerificationDelegate, DBRTextResultDelegate>
 
     @implementation ViewController
@@ -309,7 +309,7 @@ You can add your downloaded frameworks into your project through the following s
 
     Objective-C:
 
-    ```objectivec
+    ```objc
     - (void)configurationDCE{
         // Bind the Camera Enhancer instance to the Barcode Reader instance.
         // The _dce is the instance of the Dynamsoft Camera Enhancer.
@@ -340,7 +340,7 @@ You can add your downloaded frameworks into your project through the following s
 
     Objective-C:
 
-    ```objectivec
+    ```objc
     - (void)showResult:(NSString *)title msg:(NSString *)msg acTitle:(NSString *)acTitle completion:(void (^)(void))completion {
         dispatch_async(dispatch_get_main_queue(), ^{
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];
