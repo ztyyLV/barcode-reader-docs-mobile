@@ -211,14 +211,14 @@ Gets the optional argument for a specified mode in Modes parameters.
 
 ```objc
 -(NSString* _Nonnull)getModeArgument:(NSString* _Nonnull)modeName
-                            index:(NSInteger)index
-                            argumentName:(NSString* _Nonnull)argumentName
-                            error:(NSError* _Nullable * _Nullable)error;
+                               index:(NSInteger)index
+                        argumentName:(NSString* _Nonnull)argumentName
+                               error:(NSError* _Nullable * _Nullable)error;
 ```
 
 **Parameters**
 
-`[in] modesName` The mode parameter name to get argument.  
+`[in] modesName` The mode parameter name to get arguments.  
 `[in] index` The array index of mode parameter to indicate a specific mode.  
 `[in] argumentName` The name of the argument to get.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
