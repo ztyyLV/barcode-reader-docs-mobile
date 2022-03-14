@@ -167,10 +167,10 @@ You can add your downloaded frameworks into your project through the following s
     ```objc
     @implementation AppDelegate
     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-        /*Initialize license for Dynamsoft Camera Enhancer.*/
+        /*Initialize license for Dynamsoft Barcode Reader.*/
         /* The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here is a time-limited public trial license. Note that network connection is required for this license to work.*/
         /* You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios*/
-        [DynamsoftCameraEnhancer initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+        [DynamsoftBarcodeReader initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
         return YES;
     }
 
@@ -183,10 +183,10 @@ You can add your downloaded frameworks into your project through the following s
 
     ```swift
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        /*Initialize license for Dynamsoft Camera Enhancer.*/
+        /*Initialize license for Dynamsoft Barcode Reader.*/
         /* The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here is a time-limited public trial license. Note that network connection is required for this license to work.*/
         /* You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios*/
-        DynamsoftCameraEnhancer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
+        DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
         return true
     }
 
@@ -241,8 +241,6 @@ You can add your downloaded frameworks into your project through the following s
         // The _dce is the instance of the Dynamsoft Camera Enhancer.
         // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
         [_barcodeReader setCameraEnhancer:_dce];
-        // Make this setting to get the result. The result will be an object that contains text results and other barcode information.
-        [_barcodeReader setDBRTextResultListener:self];
         // Start Scanning controls the process of video barcode decoding
         [_barcodeReader startScanning];
     }
@@ -257,8 +255,6 @@ You can add your downloaded frameworks into your project through the following s
         The _dce is the instance of the Dynamsoft Camera Enhancer.
         The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.*/
         barcodeReader.setCameraEnhancer(dce)
-        /* Make this setting to get the result. The result will be an object that contains text result and other barcode information. */
-        barcodeReader.setDBRTextResultListener(self)
         /* Start Scanning controls the process of video barcode decoding. */
         barcodeReader.startScanning()
     }
@@ -336,7 +332,31 @@ You can add your downloaded frameworks into your project through the following s
     }
     ```
 
-5. Lastly, add the `showText` method to display the barcode results on the UI
+5. Bind the TextResultListener to the barcode reader.
+
+    Objective-C:
+
+    ```objc
+    - (void)configurationDCE{
+        [_barcodeReader setCameraEnhancer:_dce];
+        // Make this setting to get the result. The result will be an object that contains text results and other barcode information.
+        [_barcodeReader setDBRTextResultListener:self];
+        [_barcodeReader startScanning];
+    }
+    ```
+
+    Swift:
+
+    ```swift
+    func configurationDCE() {
+        barcodeReader.setCameraEnhancer(dce)
+        /* Make this setting to get the result. The result will be an object that contains text result and other barcode information. */
+        barcodeReader.setDBRTextResultListener(self)
+        barcodeReader.startScanning()
+    }
+    ```
+
+6. Lastly, add the `showText` method to display the barcode results on the UI
 
     Objective-C:
 
