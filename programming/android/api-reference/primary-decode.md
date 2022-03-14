@@ -193,7 +193,7 @@ The `TextResult` of all successfully decoded barcodes. `TextResult` includes the
 BarcodeReader reader = new BarcodeReader();
 /*Init DBR license before decoding
 get bufferBytes from other component*/
-TextResult[] result = reader.decodeFileInMemory(fis);
+TextResult[] result = reader.decodeFileInMemory(fileStream);
 reader.destroy();
 ```
 

@@ -37,16 +37,9 @@ BarcodeReader(String license) throws Exception
 **Code Snippet**
 
 ```java
-BarcodeReader reader = new BarcodeReader();
+BarcodeReader reader;
+reader = new BarcodeReader();
 ```
-
-```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
-```
-
-**Remarks**
-
-If you initialize DynamsoftBarcodeReader without a license, the decoding results may be unreliable.
 
 ## Destroy
 
@@ -59,6 +52,5 @@ void destroy()
 **Code Snippet**
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 reader.destroy();
 ```
