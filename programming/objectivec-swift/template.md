@@ -95,7 +95,7 @@ Objective-C:
 
 Swift:
 
-```Swift
+```swift
 import UIKit
 import DynamsoftBarcodeReader
 import DynamsoftCameraEnhancer

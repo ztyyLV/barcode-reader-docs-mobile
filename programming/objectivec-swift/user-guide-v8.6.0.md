@@ -51,7 +51,7 @@ You can add your downloaded frameworks into your project by the following steps:
 
    Swift:
 
-   ```Swift
+   ```swift
    import DynamsoftBarcodeReader
    import DynamsoftCameraEnhancer
    ```
@@ -68,7 +68,7 @@ Objective-C:
 
 Initialize the Camera Enhancer:
 
-```objectivec
+```objc
 @interface ViewController ()
 @property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
 @property(nonatomic, strong) DCECaptureView *dceView;
@@ -89,7 +89,7 @@ override func viewWillAppear(_ animated: Bool) {
 
 Use the following codes to deploy the camera module.
 
-```objectivec
+```objc
 /*Deploy the camera with Dynamsoft Camera Enhancer.*/
 - (void)configurationDCE{
     _dceView = [DCECaptureView captureWithFrame:self.view.bounds];
@@ -147,7 +147,7 @@ Objective-C:
 
 Add code to initialize the Barcode reader:
 
-```objectivec
+```objc
 @interface ViewController ()
 @property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
 /*@property(nonatomic, strong) DynamsoftCameraEnhancer *dce;*/
@@ -171,7 +171,7 @@ override func viewWillAppear(_ animated: Bool) {
 
 Add configurations to the barcode reader:
 
-```objectivec
+```objc
 /*Initialize Dynamsoft Barcode Reader from Dynamsoft License Server.*/
 - (void)initDBR{
     iDMDLSConnectionParameters* dbrPara = [[iDMDLSConnectionParameters alloc] init];
@@ -223,7 +223,7 @@ Objective-C:
 
 In `configurationDCE` add the following code to set camera enhancer parameter:
 
-```objectivec
+```objc
 /*Deploy the camera with Dynamsoft Camera Enhancer.*/
 - (void)configurationDCE{
     /*
@@ -286,7 +286,7 @@ The following functions will help you get the text results and display them on t
 
 Objective-C:
 
-```objectivec
+```objc
 /*Get and display the text result.*/
 - (void)textResultCallback:(NSInteger)frameId results:(NSArray<iTextResult *> *)results userData:(NSObject *)userData{
     if (results.count > 0) {
@@ -408,7 +408,7 @@ settings.region.regionMeasuredByPercentage = 1;
 
 Swift:
 
-```Swift
+```swift
 let settings = try! reader.getRuntimeSettings()
 // Set the barcode format
 settings.barcodeFormatIds = Int(EnumBarcodeFormat.ONED.rawValue)

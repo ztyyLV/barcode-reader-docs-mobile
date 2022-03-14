@@ -14,8 +14,8 @@ noTitleIndex: true
 | [`setCameraEnhancer`](#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
 | [`startScanning`](#startscanning) | Start the barcode reading thread. |
 | [`stopScanning`](#stopscanning) | Stop the barcode reading thread. |
-| [`setDBRTextResultListener`](#setdbrtextresultlistener) | Set callback function to process text results generated during frame decoding. |
-| [`setDBRIntermediateResultListener`](#setdbrintermediateresultlistener) | Set callback function to process intermediate results generated during frame decoding. |
+| [`setDBRTextResultDelegate`](#setdbrtextresultdelegate) | Set callback function to process text results generated during frame decoding. |
+| [`setDBRIntermediateResultDelegate`](#setdbrintermediateresultdelegate) | Set callback function to process intermediate results generated during frame decoding. |
 
 ---
 
@@ -94,43 +94,45 @@ Swift:
 barcodeReader.stopScanning()
 ```
 
-## setDBRTextResultListener
+## setDBRTextResultDelegate
 
 Set callback function to process text results generated during frame decoding.
 
 ```objc
--(void)setDBRTextResultListener:(id _Nullable)textResultListener;
+-(void)setDBRTextResultDelegate:(id _Nullable)textResultDelegate userData:(NSObject* _Nullable)userData;
 ```
 
 **Parameters**
 
-`[in] textResultListener`: Callback function.
+`[in] textResultDelegate`: Callback function.  
+`[in] userData`: Customized arguments passed to your function.
 
 **Code Snippet**
 
 Objective-C:
 
 ```objc
-[barcodeReader setDBRTextResultListener:self];
+[barcodeReader setDBRTextResultDelegate:self userData:nil];
 ```
 
 Swift:
 
 ```swift
-barcodeReader.setDBRTextResultListener(self)
+barcodeReader.setDBRTextResultDelegate(self, userData:nil)
 ```
 
-## setDBRIntermediateResultListener
+## setDBRIntermediateResultDelegate
 
 Set callback function to process intermediate results generated during frame decoding.
 
 ```objc
--(void)setDBRIntermediateResultListener:(id _Nullable)intermediateResultListener;
+-(void)setDBRIntermediateResultDelegate:(id _Nullable)intermediateResultDelegate userData:(NSObject* _Nullable)userData;
 ```
 
 **Parameters**
 
-`[in] intermediateResultListener`: Callback function.
+`[in] intermediateResultDelegate`: Callback function.  
+`[in] userData`: Customized arguments passed to your function.
 
 **Code Snippet**
 
@@ -138,11 +140,11 @@ Objective-C:
 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
-[barcodeReader setDBRIntermediateResultListener:self];
+[barcodeReader setDBRIntermediateResultDelegate:self userData:nil];
 ```
 
 Swift:
 
 ```swift
-barcodeReader.setDBRIntermediateResultListener(self)
+barcodeReader.setDBRIntermediateResultDelegate(self, userData:nil)
 ```

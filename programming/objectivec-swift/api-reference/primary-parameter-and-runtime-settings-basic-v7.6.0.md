@@ -75,7 +75,7 @@ settings.binarizationModes = mArray;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let mArray: NSMutableArray? = NSMutableArray()
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
@@ -149,7 +149,7 @@ argumentValue = [barcodeReader getModeArgument:@"BinarizationModes" index:0 argu
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let mArray: NSMutableArray? = NSMutableArray()
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
@@ -191,7 +191,7 @@ NSError __autoreleasing * _Nullable error;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
 let licenseString = try! barcodeReader.getRuntimeSettings()
@@ -226,7 +226,7 @@ iPublicRuntimeSettings *settings;
 
 Swift:
 
-```Swift
+```swift
 var error: NSError? = NSError()
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
 let settings = try! barcodeReader.getRuntimeSettings()
@@ -258,7 +258,7 @@ NSError __autoreleasing * _Nullable error;
 
 Swift:
 
-```Swift
+```swift
 var error: NSError? = NSError()
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
 barcodeReader.resetRuntimeSettings(&error)

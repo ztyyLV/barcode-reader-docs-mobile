@@ -45,7 +45,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV**
 
 Swift:
 
-```Swift
+```swift
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
 ```
 
@@ -86,7 +86,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicenseFromServer:@"" li
 
 Swift:
 
-```Swift
+```swift
 let barcodeReader = DynamsoftBarcodeReader(licenseFromServer: "", licenseKey: "C087****", verificationDelegate: self)
 
 func licenseVerificationCallback(_ isSuccess: Bool, error: Error?)
@@ -127,7 +127,7 @@ NSError __autoreleasing * _Nullable error;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let barcodeReader = DynamsoftBarcodeReader(licenseFromServer: "", licenseKey: "C087****", verificationDelegate: self)
 let licenseString = try! barcodeReader.outputLicenseToString()
@@ -168,7 +168,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificat
 
 Swift:
 
-```Swift
+```swift
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"

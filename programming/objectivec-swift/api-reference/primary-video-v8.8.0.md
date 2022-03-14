@@ -60,7 +60,7 @@ NSError __autoreleasing * _Nullable error;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 barcodeReader.startFrameDecoding(maxQueueLength:2, maxResultQueueLength:10, width:1024, height:720, stride:720, format:EnumImagePixelFormat.Binary, templateName:"", error:&error)
 ```
@@ -99,7 +99,7 @@ parameters.imagePixelFormat = EnumImagePixelFormatBinary;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let parameters = barcodeReader.getFrameDecodingParameters
 parameters?.maxQueueLength = 2
@@ -139,7 +139,7 @@ NSInteger frameId = [barcodeReader appendFrame:bufferBytes];
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 barcodeReader.startFrameDecoding(maxQueueLength:2, maxResultQueueLength:10, width:1024, height:720, stride:720, format:EnumImagePixelFormat.Binary, templateName:"", error:&error)
 let frameId = barcodeReader.appendFrame(bufferBytes:bufferBytes)
@@ -169,7 +169,7 @@ NSError __autoreleasing * _Nullable error;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 barcodeReader.startFrameDecoding(maxQueueLength:2, maxResultQueueLength:10, width:1024, height:720, stride:720, format:EnumImagePixelFormat.Binary, templateName:"", error:nil)
 barcodeReader.stopFrameDecoding(error:&error)
@@ -201,7 +201,7 @@ iFrameDecodingParameters *parameters = [barcodeReader getFrameDecodingParameters
 
 Swift:
 
-```Swift
+```swift
 let parameters = barcodeReader.getFrameDecodingParameters(error: nil)
 ```
 
@@ -228,7 +228,7 @@ Objective-C:
 
 Swift:
 
-```Swift
+```swift
 barcodeReader.setDBRErrorDelegate(errorDelegate:self, userData:nil)
 ```
 
@@ -255,7 +255,7 @@ Objective-C:
 
 Swift:
 
-```Swift
+```swift
 barcodeReader.setDBRTextResultDelegate(textResultDelegate:self, userData:nil)
 ```
 
@@ -283,7 +283,7 @@ DynamsoftBarcodeReader *barcodeReader;
 
 Swift:
 
-```Swift
+```swift
 barcodeReader.setDBRIntermediateResultDelegate(intermediateResultDelegate:self, userData:nil)
 ```
 
@@ -309,6 +309,6 @@ NSInteger length = [barcodeReader getLengthOfFrameQueue];
 
 Swift:
 
-```Swift
+```swift
 let length = barcodeReader.getLengthOfFrameQueue()
 ```

@@ -13,7 +13,7 @@ pageStartVer: 8.0
 
 ## From Version 8.0 to 8.x
 
-You need to replace the old `DynamsoftBarcodeReader.framework` file with the one in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx). You could also download it via terminal `pod install ‘DynamsoftBarcodeReader’`. For v8.9 or higher v8.x versions, you have to include `DynamsoftCameraEnhancer.framework` as well.
+You need to replace the old `DynamsoftBarcodeReader.framework` file with the one in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx). You could also download it via terminal `pod install 'DynamsoftBarcodeReader'`. For v8.9 or higher v8.x versions, you have to include `DynamsoftCameraEnhancer.framework` as well.
 
 ## From Version 7.x to 8.x
 

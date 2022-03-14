@@ -28,20 +28,34 @@ needGenerateH3Content: false
 Decode barcodes from the memory buffer containing image pixels in defined format.
 
 ```java
-TextResult[] decodeBuffer(byte[] buffer, int width, int height, int stride, int enumImagePixelFormat) throws BarcodeReaderException
+TextResult[] decodeBuffer(byte[] buffer, int width, int height, int stride, int enumImagePixelFormat, String templateName) throws BarcodeReaderException
 ```
 
 **Parameters**
 
-`buffer`: The array of bytes that contain the image data.  
+`buffer`: The array of bytes which contain the image data.  
 `Width`: The width of the image in pixels.  
 `Height`: The height of the image in pixels.  
 `Stride`: The stride is measured by the `byte` length of each line in the `buffer`.  
 `format`: The image pixel format used in the image byte array.  
+`templateName`: For general usage, please set an empty string for the `templateName`. For further usage, please read the article of [parameter configuration]({{site.parameters}}scenario-settings/how-to-set-parameters.html).  
+
+```json
+// Template name example.
+// The "IP1" is the template name of this template. 
+{
+  "Version": "3.0",
+  "ImageParameter": {                   
+    "Name": "IP1",
+    "Description": "This is an imageParameter", 
+    "BarcodeFormatIds": ["BF_ALL"]
+  }
+}
+```
 
 **Return Value**
 
-The `TextResult` of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+All successfully decoded barcode results.
 
 **Exceptions**
 
@@ -65,7 +79,7 @@ mCameraEnhancer.addListener(new DCEFrameListener() {
   @Override
   public void frameOutputCallback(DCEFrame dceFrame, long l) {
     try {
-      TextResult[] results = reader.decodeBuffer(dceFrame.getImageData(),dceFrame.getWidth(),dceFrame.getHeight(),dceFrame.getStrides()[0],dceFrame.getPixelFormat());
+      TextResult[] results = reader.decodeBuffer(dceFrame.getImageData(),dceFrame.getWidth(),dceFrame.getHeight(),dceFrame.getStrides()[0],dceFrame.getPixelFormat(),"");
     } catch (BarcodeReaderException e) {
       e.printStackTrace();
     }
@@ -99,7 +113,7 @@ previewReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListen
     bufferY.get(newData, 0, bufferY.limit());
     int[] strides = new int[]{strideY, strideU, strideV};
     try {
-      TextResult[] results = reader.decodeBuffer(newData, strideY, mImage.getHeight(), strideY, 3);
+      TextResult[] results = reader.decodeBuffer(newData, strideY, mImage.getHeight(), strideY, 3, "");
     } catch (BarcodeReaderException e) {
       e.printStackTrace();
     }
@@ -112,16 +126,17 @@ previewReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListen
 Decode barcodes from a specified image file.
 
 ```java
-TextResult[] decodeFile(String fileFullPath) throws BarcodeReaderException
+TextResult[] decodeFile(String fileFullPath, String templateName) throws BarcodeReaderException
 ```
 
 **Parameters**
 
 `fileFullPath`: A string defining the file path. It supports BMP, TIFF, JPG, PNG and PDF files.  
+`templateName`: The template name. When you upload settings from JSON String or file, you can add a template name for each group of settings. The template settings will be recorded even if they are overwritten. When using Dynamsoft decode methods, you can specify a template name to apply a previously set template. Otherwise, the currently activated template will take over the barcode decoding.
 
 **Return Value**
 
-The `TextResult` of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+All successfully decoded barcode results.
 
 **Exceptions**
 
@@ -133,7 +148,7 @@ The `TextResult` of all successfully decoded barcodes. `TextResult` includes the
 BarcodeReader reader = new BarcodeReader();
 /*Init DBR license before decoding*/
 /*Read external storage permission is required when decoding from a file*/
-TextResult[] result = reader.decodeFile(Environment.getExternalStorageDirectory().toString()+"your file path");
+TextResult[] result = reader.decodeFile(Environment.getExternalStorageDirectory().toString()+"your file path", "IP1");
 reader.destroy();
 ```
 
@@ -144,16 +159,17 @@ Decode barcodes from an image file in memory.
 ### fileBytes
 
 ```java
-TextResult[] decodeFileInMemory(byte[] fileBytes) throws BarcodeReaderException
+TextResult[] decodeFileInMemory(byte[] fileBytes, String templateName) throws BarcodeReaderException
 ```
 
 **Parameters**
 
 `fileBytes`: The image file bytes in memory.  
+`templateName`: The template name.
 
 **Return Value**
 
-The `TextResult` of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+All successfully decoded barcode results.
 
 **Exceptions**
 
@@ -165,23 +181,24 @@ The `TextResult` of all successfully decoded barcodes. `TextResult` includes the
 BarcodeReader reader = new BarcodeReader();
 /*Init DBR license before decoding
 get bufferBytes from other component*/
-TextResult[] result = reader.decodeFileInMemory(bufferBytes);
+TextResult[] result = reader.decodeFileInMemory(bufferBytes, "");
 reader.destroy();
 ```
 
 ### fileStream
 
 ```java
-TextResult [] decodeFileInMemory(InputStream fileStream) throws BarcodeReaderException, IOException
+TextResult [] decodeFileInMemory(InputStream fileStream, String templateName) throws BarcodeReaderException, IOException
 ```
 
 **Parameters**
 
 `fileStream`: The image file bytes in memory.  
+`templateName`: The template name.
 
 **Return Value**
 
-The `TextResult` of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+All successfully decoded barcode results.
 
 **Exceptions**
 
@@ -193,7 +210,7 @@ The `TextResult` of all successfully decoded barcodes. `TextResult` includes the
 BarcodeReader reader = new BarcodeReader();
 /*Init DBR license before decoding
 get bufferBytes from other component*/
-TextResult[] result = reader.decodeFileInMemory(fileStream);
+TextResult[] result = reader.decodeFileInMemory(fis, "");
 reader.destroy();
 ```
 
@@ -202,16 +219,17 @@ reader.destroy();
 Decode barcode from an image file encoded as a base64 string.
 
 ```java
-TextResult[] decodeBase64String(String base64) throws BarcodeReaderException
+TextResult[] decodeBase64String(String base64, String templateName) throws BarcodeReaderException
 ```
 
 **Parameters**
 
 `base64`: A base64 encoded string that represents an image.  
+`templateName`: The template name.
 
 **Return Value**
 
-The `TextResult` of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+All successfully decoded barcode results.
 
 **Exceptions**
 
@@ -222,7 +240,7 @@ The `TextResult` of all successfully decoded barcodes. `TextResult` includes the
 ```java
 BarcodeReader reader = new BarcodeReader();
 /*Init DBR license before decoding*/
-TextResult[] result = reader.decodeBase64String("file in base64 string");
+TextResult[] result = reader.decodeBase64String("file in base64 string", "");
 reader.destroy();
 ```
 
@@ -231,16 +249,17 @@ reader.destroy();
 Decodes barcode from a buffered image (bitmap).
 
 ```java
-TextResult[] decodeBufferedImage(Bitmap image) throws BarcodeReaderException
+TextResult[] decodeBufferedImage(Bitmap image, String templateName) throws BarcodeReaderException
 ```
 
 **Parameters**
 
-`image`: The image to be decoded.
+`image`: The image to be decoded.  
+`templateName`: The template name.
 
 **Return Value**
 
-The `TextResult` of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+All successfully decoded barcode results.
 
 **Exceptions**
 
@@ -252,7 +271,7 @@ The `TextResult` of all successfully decoded barcodes. `TextResult` includes the
 BarcodeReader reader = new BarcodeReader();
 /*Init DBR license before decoding*/
 /*get BufferedImage input from other component*/
-TextResult[] result = reader.decodeBufferedImage(input);
+TextResult[] result = reader.decodeBufferedImage(input, "");
 reader.destroy();
 ```
 
@@ -289,16 +308,17 @@ IntermediateResult imResult = reader.initIntermediateResult(EnumIntermediateResu
 Decodes barcode from intermediate results.
 
 ```java
-TextResult[] decodeIntermediateResults(IntermediateResult[] results) throws BarcodeReaderException
+TextResult[] decodeIntermediateResults(IntermediateResult[] results, String templateName) throws BarcodeReaderException
 ```
 
 **Parameters**
 
 `results`: An array of intermediate result.  
+`templateName`: The template name.
 
 **Return Value**
 
-The `TextResult` of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+All barcode text results decoded successfully.
 
 **Exceptions**
 
@@ -312,7 +332,7 @@ BarcodeReader reader = new BarcodeReader();
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
 reader.updateRuntimeSettings(settings);
-reader.decodeFile("your file path");
+reader.decodeFile("your file path", "");
 IntermediateResult[] irtResult = reader.getIntermediateResults();
-TextResult[] result = reader.decodeIntermediateResults(irtResult);
+TextResult[] result = reader.decodeIntermediateResults(irtResult, "");
 ```

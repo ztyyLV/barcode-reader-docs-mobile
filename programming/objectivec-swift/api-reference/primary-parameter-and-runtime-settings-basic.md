@@ -47,7 +47,7 @@ NSError __autoreleasing * _Nullable error;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let settings = try! barcodeReader.getRuntimeSettings()
 ```
@@ -81,7 +81,7 @@ iPublicRuntimeSettings *settings;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let settings = try! barcodeReader.getRuntimeSettings()
 barcodeReader.update(settings, error: &error)
@@ -107,7 +107,7 @@ Objective-C:
 
 Swift:
 
-```Swift
+```swift
 barcodeReader.updateRuntimeSettings(EnumPresetTemplate.EnumPresetTemplateVideoSingleBarcode)
 ```
 
@@ -134,7 +134,7 @@ NSError __autoreleasing * _Nullable error;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 barcodeReader.resetRuntimeSettings(&error)
 ```
@@ -177,7 +177,7 @@ settings.binarizationModes = mArray;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let mArray: NSMutableArray? = NSMutableArray()
 let settings = try! barcodeReader.getRuntimeSettings()
@@ -211,14 +211,14 @@ Gets the optional argument for a specified mode in Modes parameters.
 
 ```objc
 -(NSString* _Nonnull)getModeArgument:(NSString* _Nonnull)modeName
-                            index:(NSInteger)index
-                            argumentName:(NSString* _Nonnull)argumentName
-                            error:(NSError* _Nullable * _Nullable)error;
+                               index:(NSInteger)index
+                        argumentName:(NSString* _Nonnull)argumentName
+                               error:(NSError* _Nullable * _Nullable)error;
 ```
 
 **Parameters**
 
-`[in] modesName` The mode parameter name to get argument.  
+`[in] modesName` The mode parameter name to get arguments.  
 `[in] index` The array index of mode parameter to indicate a specific mode.  
 `[in] argumentName` The name of the argument to get.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
@@ -246,7 +246,7 @@ argumentValue = [barcodeReader getModeArgument:@"BinarizationModes" index:0 argu
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let mArray: NSMutableArray? = NSMutableArray()
 let settings = try! barcodeReader.getRuntimeSettings()

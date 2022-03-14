@@ -16,8 +16,8 @@ pageStartVer: 8.6
 | [`setCameraEnhancer`](#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
 | [`startScanning`](#startscanning) | Start the barcode reading thread. |
 | [`stopScanning`](#stopscanning) | Stop the barcode reading thread. |
-| [`setTextResultListener`](#settextresultlistener) | Set callback interface to process text results generated during frame decoding. |
-| [`setIntermediateResultListener`](#setintermediateresultlistener) | Set callback interface to process intermediate results generated during frame decoding. |
+| [`setTextResultCallback`](#settextresultcallback) | Set callback interface to process text results generated during frame decoding. |
+| [`setIntermediateResultCallback`](#setintermediateresultcallback) | Set callback interface to process intermediate results generated during frame decoding. |
 
 ---
 
@@ -72,17 +72,18 @@ BarcodeReader reader = new BarcodeReader();
 reader.stopScanning();
 ```
 
-## setTextResultListener
+## setTextResultCallback
 
 Set a callback interface to process text results generated during frame decoding.
 
 ```java
-void setTextResultListener(TextResultCallback textResultCallback) throws BarcodeReaderException
+void setTextResultCallback(TextResultCallback textResultCallback, Object userData) throws BarcodeReaderException
 ```
 
 **Parameters**
 
-`textResultCallback`: Callback interface.
+`textResultCallback`: Callback interface.  
+`userData`: Customized arguments passed to your function.
 
 **Exceptions**
 
@@ -92,25 +93,26 @@ void setTextResultListener(TextResultCallback textResultCallback) throws Barcode
 
 ```java
 BarcodeReader reader = new BarcodeReader();
-reader.setTextResultListener(new TextResultListener() {
+reader.setTextResultCallback(new TextResultCallback() {
     @Override
-    public void textResultCallback(int frameId, int imageData, TextResult[] results) {
+    public void textResultCallback(int frameId, TextResult[] results, Object userData) {
         //TODO add your code for using text results
     }
 }, null);
 ```
 
-## setIntermediateResultListener
+## setIntermediateResultCallback
 
 Set a callback interface to process intermediate results generated during frame decoding.
 
 ```java
-void setIntermediateResultListener(IntermediateResultCallback intermediateResultCallback} throws BarcodeReaderException
+void setIntermediateResultCallback(IntermediateResultCallback intermediateResultCallback, Object userData} throws BarcodeReaderException
 ```
 
 **Parameters**
 
-`intermediateResultCallback`: Callback interface.
+`intermediateResultCallback`: Callback interface.  
+`userData`: Customized arguments passed to your function.
 
 **Exceptions**
 
@@ -125,7 +127,7 @@ settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE
 reader.updateRuntimeSettings(settings);
 reader.setIntermediateResultCallback(new IntermediateResultCallback() {
     @Override
-    public void intermediateResultCallback(int frameId, int imageData, IntermediateResult[] results) {
+    public void intermediateResultCallback(int frameId, IntermediateResult[] results, Object userData) {
         //TODO add your code for using intermediate results
     }
 }, null);

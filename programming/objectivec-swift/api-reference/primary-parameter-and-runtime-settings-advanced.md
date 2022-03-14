@@ -48,7 +48,7 @@ NSError __autoreleasing * _Nullable error;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 barcodeReader.initRuntimeSettingsWithFile(fileName:"your template file path", conflictMode:EnumConflictMode.overwrite, error:&error)
 ```
@@ -80,7 +80,7 @@ NSError __autoreleasing * _Nullable error;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 barcodeReader.initRuntimeSettingsWithString(content:"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", conflictMode:EnumConflictMode.overwrite, error:&error)
 ```
@@ -112,7 +112,7 @@ NSError __autoreleasing * _Nullable error;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 barcodeReader.appendTplFileToRuntimeSettings(fileName:"your template file path", conflictMode:EnumConflictMode.ignore, error:&error)
 ```
@@ -145,7 +145,7 @@ NSError __autoreleasing * _Nullable error;
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 barcodeReader.initRuntimeSettingsWithString(content:"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", conflictMode:EnumConflictMode.Overwrite, error:&error)
 barcodeReader.appendTplStringToRuntimeSettings(content:"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_OneD\"], \"ExpectedBarcodesCount\":20}}", conflictMode:EnumConflictMode.ignore, error:&error)
@@ -179,7 +179,7 @@ NSArray* allTplNames = [barcodeReader allParameterTemplateNames:&error];
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let allTplNames = try! barcodeReader.allParameterTemplateNames()
 ```
@@ -211,7 +211,7 @@ settingsName = [barcodeReader outputSettingsToFile:@"your saving file path" sett
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let settingsName = barcodeReader.outputSettings(toFile: "your saving file path", settingsName:"currentRuntimeSettings", error:&error)
 ```
@@ -245,7 +245,7 @@ settingsName = [barcodeReader outputSettingsToString:@"currentRuntimeSettings" e
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let settingsName = try! barcodeReader.outputSettings(to:"currentRuntimeSettings")
 ```

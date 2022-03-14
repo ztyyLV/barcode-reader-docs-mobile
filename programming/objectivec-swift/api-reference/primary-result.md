@@ -51,7 +51,7 @@ irResult = [m_barcodeReader getIntermediateResult:&error];
 
 Swift:
 
-```Swift
+```swift
 let error: NSError? = NSError()
 let settings = try! barcodeReader.getRuntimeSettings()
 settings.intermediateResultTypes = EnumIntermediateResultType.ColourConvertedGrayScaleImage.rawValue | EnumIntermediateResultType.OriginalImage.rawValue | EnumIntermediateResultType.ColourClusteredImage.rawValue
@@ -64,7 +64,7 @@ let irResult = barcodeReader.getIntermediateResult(&error)
 
 The text results will be verified before output if the result verification is enabled.
 
-```objectivec
+```objc
 @property (nonatomic, assign) BOOL enableResultVerification;
 ```
 
@@ -76,7 +76,7 @@ The text results will be verified before output if the result verification is en
 
 Objective-C:
 
-```objectivec
+```objc
 [barcodeReader enableResultVerification:true];
 // To check the status of this mode
 [barcodeReader getEnableResultVerification]
@@ -94,7 +94,7 @@ let x = barcodeReader.enableResultVerification
 
 The duplicated text result will be filtered. The barcode reader will not output the result for the same barcode a second time in 3 seconds.
 
-```objectivec
+```objc
 @property (nonatomic, assign) BOOL enableDuplicateFilter;
 ```
 
@@ -106,7 +106,7 @@ The duplicated text result will be filtered. The barcode reader will not output 
 
 Objective-C:
 
-```objectivec
+```objc
 [barcodeReader enableDuplicateFilter:true];
 // To check the status of this mode
 [barcodeReader getEnableDuplicateFilter]

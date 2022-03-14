@@ -12,6 +12,7 @@ noTitleIndex: true
   | Method               | Description |
   |----------------------|-------------|
   | [`license`](#license) | Stores the license used in DynamsoftBarcodeReader. |
+  
   ---
 
 ## initLicense
@@ -43,7 +44,7 @@ Objective-C:
 
 Swift:
 
-```Swift
+```swift
 DynamsoftBarcodeReader.initLicense("Put your license here", verificationDelegate: self)
 
 func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {

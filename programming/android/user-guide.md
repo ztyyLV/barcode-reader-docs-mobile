@@ -144,14 +144,7 @@ There are two ways to include the SDK into your project - local binary dependenc
 
 ### Initialize Barcode Reader
 
-1. Create an instance of Dynamsoft Barcode Reader.
-
-   ```java
-   BarcodeReader reader;
-   reader = new BarcodeReader();
-   ```
-
-2. Initialize the license.
+1. Initialize the license.
 
    ```java
    BarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DBRLicenseVerificationListener() {
@@ -164,6 +157,13 @@ There are two ways to include the SDK into your project - local binary dependenc
    });
    ```
 
+2. Create an instance of Dynamsoft Barcode Reader.
+
+   ```java
+   BarcodeReader reader;
+   reader = new BarcodeReader();
+   ```
+
    >Note:
    >- Network connection is required for the license to work.
    >- The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a time-limited public trial license.
@@ -172,7 +172,7 @@ There are two ways to include the SDK into your project - local binary dependenc
 3. Create text callback to obtain the recognized barcode results.
 
    ```java
-   TextResultCallback mTextResultCallback = new TextResultCallback() {
+   TextResultListener mTextResultListener = new TextResultListener() {
    // Obtain the recognized barcode results and display.
    @Override
       public void textResultCallback(int i, TextResult[] textResults, Object userData) {
@@ -195,7 +195,7 @@ There are two ways to include the SDK into your project - local binary dependenc
    reader.setCameraEnhancer(mCameraEnhancer);
    // Make this setting to get the result. The result will be an object that contains text result and other barcode information.
    try {
-      reader.setTextResultCallback(mTextResultCallback, null);
+      reader.setTextResultListener(mTextResultListener, null);
    } catch (BarcodeReaderException e) {
       e.printStackTrace();
    }
