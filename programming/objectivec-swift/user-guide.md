@@ -281,7 +281,7 @@ You can add your downloaded frameworks into your project through the following s
     Objective-C:
 
     ```objc
-    - (void)textResultListener:(NSInteger)frameId results:(NSArray<iTextResult *> *)results userData:(NSObject *)userData{
+    - (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
         if (results.count > 0) {
             NSString *title = @"Results";
             NSString *msgText = @"";
@@ -313,7 +313,7 @@ You can add your downloaded frameworks into your project through the following s
     Swift:
 
     ```swift
-    func textResultListener(_ frameId: Int, results: [iTextResult]?, userData: NSObject?) {
+    func textResultCallback(_ frameId: Int, ImageData: iImageData, results: [iTextResult]?) {
         if results!.count > 0 {
             var msgText:String = ""
             var title:String = "Results"
