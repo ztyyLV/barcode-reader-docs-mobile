@@ -167,7 +167,7 @@ There are two ways to include the SDK into your project - local binary dependenc
    >Note:
    >- Network connection is required for the license to work.
    >- The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a time-limited public trial license.
-   >- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a> to request for an extension.
+   >- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a> to request an extension.
 
 3. Create text callback to obtain the recognized barcode results.
 
@@ -186,14 +186,14 @@ There are two ways to include the SDK into your project - local binary dependenc
    };
    ```
 
-4. Create settings of video barcode reading and bind to Barcode Reader object
+4. Set the text recognition callback and bind the camera to Barcode Reader object
 
    ```java
    // Bind the Camera Enhancer instance to the Barcode Reader instance.
    // The mCameraEnhancer is the instance of the Dynamsoft Camera Enhancer.
    // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
    reader.setCameraEnhancer(mCameraEnhancer);
-   // Make this setting to get the result. The result will be an object that contains text result and other barcode information.
+   // The result will be an object that contains text result and other barcode information.
    try {
       reader.setTextResultListener(mTextResultListener, null);
    } catch (BarcodeReaderException e) {

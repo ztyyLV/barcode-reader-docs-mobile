@@ -149,18 +149,18 @@ let error: NSError? = NSError()
 let result = try! barcodeReader.decodeFile(withName: "your file path")
 ```
 
-## decode
+## decodeImage
 
-Decode barcodes from an image file in memory.
+Decode barcodes from an image file in memory. Please note that this method is called `decode` in the Swift syntax.
 
 ```objc
-- (NSArray<iTextResult*>* _Nullable)decodeImage:(UIImage* _Nonnull)image 
-                                          error:(NSError* _Nullable * _Nullable)error;
+- (NSArray<iTextResult*>* _Nullable)decodeImage:(UIImage * _Nonnull) withTemplate:(NSString * _Nonnull) error:(NSError * _Nullable __autoreleasing * _Nullable)
 ```  
 
 **Parameters**
 
 `[in] image` The image file in memory.  
+`[in] withTemplate` The template (JSON file) that is configures the barcode reader for the decoding process.
 `[in, out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
@@ -174,7 +174,7 @@ Objective-C:
 ```objc
 UIImage *image = [[UIImage alloc] init];
 NSError __autoreleasing * _Nullable error;
-NSArray<iTextResult*>* result = [barcodeReader decodeImage:image error:&error];
+NSArray<iTextResult*>* result = [_barcodeReader decodeImage:image withTemplate:@"" error:&error];
 ```
 
 Swift:
@@ -182,7 +182,7 @@ Swift:
 ```swift
 let image: UIImage? = UIImage()
 let error: NSError? = NSError()
-let result = try! barcodeReader.decode(image)
+let result = try! barcodeReader.decode(image!, withTemplate:"")
 ```
 
 ## decodeBase64
