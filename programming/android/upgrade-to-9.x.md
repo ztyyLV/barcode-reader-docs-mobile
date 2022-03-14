@@ -78,15 +78,14 @@ BarcodeReader.initLicense("Put your 3.0 license", new DBRLicenseVerificationList
 });
 ```
 
-> Note 1: The following license activation method are removed:
+> Note: 
+> 1.The following license activation method are removed, you should make the changes in 9.x upgrade:
 > - `initLicenseFromLTS`
-> You should make the changes in 9.x upgrade.
-
-> Note 2: The following license activation methods are deprecated:
+>
+> 2.The following license activation methods are deprecated, they will be removed in version 10.0. We recommend that you upgrade to the new license API, but this is optional during the upgrade to 9.x.:
 > - `initLicenseFromDLS`
 > - `initLicenseFromServer`
 > - `initLicenseFromLicenseContent`
-> These methods will be removed in version 10.0. We recommend that you upgrade to the new license API, but this is optional during the upgrade to 9.x.
 
 
 ### Update the Video Barcode Decoding Code

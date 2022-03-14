@@ -22,15 +22,13 @@ pageStartVer: 9.0
 
 - Remote Dependency(Cocopods)
   - If you are referencing only `DynamsoftBarcodeReader` SDK, update the version of `DynamsoftBarcodeReader` to the latest version in the `Podfile`.
-    >Note:
+    >Note: Please replace {version-number} with the correct version number.
     >- pod `DynamsoftBarcodeReader', '{version-number}'
-    >Please replace {version-number} with the correct version number.
 
   - If you are referencing both `DynamsoftBarcodeReader` and `DynamsoftCameraEnhancer` SDK, update the version of `DynamsoftBarcodeReader` and `DynamsoftCameraEnhancer` to the latest version in the `Podfile`.
-    >Note:
+    >Note: Please replace {version-number} with the correct version number.
     >- pod `DynamsoftCameraEnhancer', '{version-number}'
     >- pod `DynamsoftBarcodeReader', '{version-number}'
-    >Please replace {version-number} with the correct version number.
 
 ### Update the License Activation Code
 
@@ -86,14 +84,13 @@ func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
 }
 ```
 
-> Note: The following license activation method are removed:
+> Note: 
+> 1.The following license activation method are removed, you should make the changes in 9.x upgrade:
 > - `initLicenseFromLTS`
-> You should make the changes in 9.x upgrade.
-
-> Note: The following license activation methods are deprecated:
+>
+> 2.The following license activation methods are deprecated, they will be removed in version 10.0. We recommend that you upgrade to the new license API, but this is optional during the upgrade to 9.x:
 > - `initLicenseFromDLS`
 > - `initLicenseFromServer`
-> These methods will be removed in version 10.0. We recommend that you upgrade to the new license API, but this is optional during the upgrade to 9.x.
 
 ### Update the Video Barcode Decoding Code
 
