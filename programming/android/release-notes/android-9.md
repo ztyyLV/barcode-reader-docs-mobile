@@ -16,14 +16,17 @@ noTitleIndex: true
 
 #### New
 
-- Added `BF_CODE_11` under enumeration `BarcodeFormat` to specify newly supported barcode format, Code 11. The enumeration value of `BF_ONED` and `BF_ALL` are updated as well.
-- Added `BF2_PHARMACODE_ONE_TRACK`, `BF2_PHARMACODE_TWO_TRACK` and `BF2_PHARMACODE` under enumeration BarcodeFormat2. to specify newly supported barcode format, Pharmacodes. Added a new error code `DBRERR_PHARMACODE_LICENSE_INVALID` which will be returned when the license of Pharmacode is invalid.
-- Added `DRM_BROAD_WARP`, `DRM_LOCAL_REFERENCE` and `DRM_DEWRINKLE` under enumeration `EnumDeformationResistingMode` to apply new deformation resisting modes.
-- Added static method `BarcodeReader.initLicense` to replace legacy license activation APIs. The new method will support both online and offline license.
-- Added interface `DBRLicenseVerificationListener` to get license verification callback when using `BarcodeReader.initLicense`.
-- Added interface `TextResultListener`.
-- Added interface `IntermediateResultListener`.
-- Added the following image decoding methods. The parameter `templateName` is not required in the new methods.
+- Added `BF_CODE_11` under enumeration [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) to specify newly supported barcode format, Code 11. The enumeration value of `BF_ONED` and `BF_ALL` are updated as well.
+- Added `BF2_PHARMACODE_ONE_TRACK`, `BF2_PHARMACODE_TWO_TRACK` and `BF2_PHARMACODE` under enumeration [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2). to specify newly supported barcode format, Pharmacodes.
+- Added a new error code [`DBRERR_PHARMACODE_LICENSE_INVALID`]({{ site.enumerations }}error-code.html#error-code--10062) which will be returned when the license of Pharmacode is invalid.
+- Added `DRM_BROAD_WARP`, `DRM_LOCAL_REFERENCE` and `DRM_DEWRINKLE` under enumeration [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) to apply new deformation resisting modes.
+- Added a parameter [`FormatSpecification.VerifyCheckDigit`]({{ site.parameters_reference }}verify-check-digit.html).
+- Added an Argument [`ConfidenceThreshold`]({{ site.parameters_reference }}localization-modes.html#confidencethreshold) to the `LocalizationModes` mode arguments.
+- Added static method [`BarcodeReader.initLicense`]({{ site.android_api }}primary-license.html#initlicense) to replace legacy license activation APIs. The new method will support both online and offline license.
+- Added interface [`DBRLicenseVerificationListener`]({{ site.android_api }}interface-dbrdlslicenseverificationdelegate.html) to get license verification callback when using `BarcodeReader.initLicense`.
+- Added interface [`TextResultListener`]({{ site.android_api }}interface-textresultdelegate.html).
+- Added interface [`IntermediateResultListener`]({{ site.android_api }}interface-intermediateresultdelegate.html).
+- Added the following image [decoding methods]({{ site.android_api }}primary-decode.html). The parameter `templateName` is not required in the new methods.
   - `BarcodeReader.decodeBuffer`
   - `BarcodeReader.decodeFile`
   - `BarcodeReader.decodeFileInMemory`
