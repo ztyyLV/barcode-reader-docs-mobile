@@ -1,17 +1,22 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - Interface DBRLicenseVerificationListener
-description: This is the interface DBRLicenseVerificationListener page of Dynamsoft Barcode Reader for Android SDK.
-keywords: DBRLicenseVerificationListener, interface, android
+title: Dynamsoft Barcode Reader Android API Reference - Interface DBRDLSLicenseVerificationListener
+description: This is the interface DBRDLSLicenseVerificationListener page of Dynamsoft Barcode Reader for Android SDK.
+keywords: DBRDLSLicenseVerificationListener, interface, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 pageStartVer: 8.0
 ---
 
-# DBRLicenseVerificationListener
+# DBRDLSLicenseVerificationListener
 
-`DBRLicenseVerificationListener` is the interface to handle callback when license verification messages are returned.
+`DBRDLSLicenseVerificationListener` is the interface to handle license verification callback when using `initLicenseFromDLS`.
+
+> Note:  
+>  
+> Interface `DBRDLSLicenseVerificationListener` is deprecated in 9.0 version.  
+> Please use [`DBRLicenseVerificationListener`](interface-dbrlicenseverificationlistener.md) and [`initLicense`](primary-license.md#initlicense) to initialize and verify the license in 9.x versions.
 
 ```java
 interface com.dynamsoft.dbr.DBRDLSLicenseVerificationListener
@@ -19,12 +24,12 @@ interface com.dynamsoft.dbr.DBRDLSLicenseVerificationListener
 
 | Method | Description |
 | ------ | ----------- |
-| `DBRLicenseVerificationCallback` | The callback of license server. |
+| `DLSLicenseVerificationCallback` | The callback of license server. |
 
-## DBRLicenseVerificationCallback
+## DLSLicenseVerificationCallback
 
 ```java
-void DBRLicenseVerificationCallback(boolean var1, Exception var2);
+void DLSLicenseVerificationCallback(boolean var1, Exception var2);
 ```
 
 **Parameters**
@@ -35,9 +40,9 @@ void DBRLicenseVerificationCallback(boolean var1, Exception var2);
 **Code Snippet**
 
 ```java
-DBRLicenseVerificationListener dbrLicenseListener = new DBRLicenseVerificationListener() {
+DBRDLSLicenseVerificationListener dbrDLSListener = new DBRDLSLicenseVerificationListener() {
     @Override
-    public void DBRLicenseVerificationCallback(boolean b, Exception e) {
+    public void DLSLicenseVerificationCallback(boolean b, Exception e) {
         // Add your code
     }
 };

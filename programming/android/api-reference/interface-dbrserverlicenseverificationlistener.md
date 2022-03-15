@@ -10,10 +10,12 @@ noTitleIndex: true
 
 # DBRServerLicenseVerificationListener
 
-> Note:  
-> This interface is deprecated and will be removed in 10.0 version release.
+`DBRServerLicenseVerificationListener` is the interface to handle license verification callback when using `initLicenseFromServer`.
 
-`DBRServerLicenseVerificationListener` is the interface to handle callback when license verification messages are returned.
+> Note:  
+>  
+> `initLicenseFromServer` and `DBRServerLicenseVerificationListener` are deprecated and will be removed in 10.0 version release.  
+> Please use [`DBRLicenseVerificationListener`](interface-dbrlicenseverificationlistener.md) and [`initLicense`](primary-license.md#initlicense) to initialize and verify the license in 9.x versions.
 
 ```java
 interface com.dynamsoft.dbr.DBRServerLicenseVerificationListener
