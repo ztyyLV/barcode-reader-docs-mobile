@@ -130,7 +130,7 @@ Swift:
 ```swift
 let error: NSError? = NSError()
 let barcodeReader = DynamsoftBarcodeReader(licenseFromServer: "", licenseKey: "C087****", verificationDelegate: self)
-let licenseString = try! barcodeReader.outputLicenseToString()
+let licenseString = try? barcodeReader.outputLicenseToString()
 ```
 
 ## initLicenseFromLTS

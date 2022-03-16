@@ -36,7 +36,7 @@ Generally speaking
 | int | [0,9] | 9 |
 
 ```swift
-let settings = try! barcodeReader.getRuntimeSettings()
+let settings = try? barcodeReader.getRuntimeSettings()
 settings.deblurLevel = 0
 barcodeReader.update(settings, error: &error)
 ```
@@ -54,7 +54,7 @@ dce.setResolution(Resolution.EnumRESOLUTION_1080P)
 The `LocalizationModes` determines how the library locates the barcode. Set multiple `LocalizationModes` can help the library to find at least one barcode for further processing. When you find there are barcodes that can't be recognized, you may try adding extra parameters to the `LocalizationModes`.
 
 ```swift
-let settings = try! barcodeReader.getRuntimeSettings()
+let settings = try? barcodeReader.getRuntimeSettings()
 settings.localizationModes = [EnumLocalizationMode.scanDirectly, EnumLocalizationMode.connectedBlocks]
 barcodeReader.update(settings, error: &error)
 ```
@@ -70,7 +70,7 @@ Images with higher pixel density than the threshold will be scaled down. The def
 | int | [512,0x7fffffff] | 2300 |
 
 ```swift
-let settings = try! barcodeReader.getRuntimeSettings()
+let settings = try? barcodeReader.getRuntimeSettings()
 settings.scaleDownThreshold = 1200
 barcodeReader.update(settings, error: &error)
 ```
@@ -84,7 +84,7 @@ barcodeReader.update(settings, error: &error)
 | int | [0,0x7fffffff] | 10000 |
 
 ```swift
-let settings = try! barcodeReader.getRuntimeSettings()
+let settings = try? barcodeReader.getRuntimeSettings()
 settings.timeout = 500
 barcodeReader.update(settings, error: &error)
 ```
@@ -100,7 +100,7 @@ barcodeReader.update(settings, error: &error)
 | int | [0,100] | 30 |
 
 ```swift
-let settings = try! barcodeReader.getRuntimeSettings()
+let settings = try? barcodeReader.getRuntimeSettings()
 settings.minResultConfidence = 50
 barcodeReader.update(settings, error: &error)
 ```

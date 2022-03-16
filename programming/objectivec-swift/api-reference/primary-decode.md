@@ -182,7 +182,7 @@ Swift:
 ```swift
 let image: UIImage? = UIImage()
 let error: NSError? = NSError()
-let result = try! barcodeReader.decode(image)
+let result = try? barcodeReader.decode(image)
 ```
 
 ## decodeBase64
@@ -216,7 +216,7 @@ Swift:
 
 ```swift
 let error: NSError? = NSError() 
-let result = try! barcodeReader.decodeBase64("file in base64 string")
+let result = try? barcodeReader.decodeBase64("file in base64 string")
 ```
 
 ## createIntermediateResult
@@ -252,7 +252,7 @@ Swift:
 ```swift
 var error:NSError? = NSError()
 var irResult:iIntermediateResult!
-irResult = try! barcodeReader.createIntermediateResult(EnumIntermediateResultType(rawValue: EnumIntermediateResultType.originalImage.rawValue)!)
+irResult = try? barcodeReader.createIntermediateResult(EnumIntermediateResultType(rawValue: EnumIntermediateResultType.originalImage.rawValue)!)
 ```
 
 ## decodeIntermediateResults
@@ -292,11 +292,11 @@ Swift:
 
 ```swift
 let result:[iTextResult]?
-let settings = try! barcodeReader.getRuntimeSettings()
+let settings = try? barcodeReader.getRuntimeSettings()
 settings.intermediateResultTypes = EnumIntermediateResultType.originalImage.rawValue | EnumIntermediateResultType.typedBarcodeZone.rawValue
 settings.intermediateResultSavingMode = .memory
 barcodeReader.update(settings, nil)
-result = try! barcodeReader.decodeFile(withName: "your file path")
-let intermediateResult = try! barcodeReader.getIntermediateResult()
-result = try! barcodeReader.decode(array)
+result = try? barcodeReader.decodeFile(withName: "your file path")
+let intermediateResult = try? barcodeReader.getIntermediateResult()
+result = try? barcodeReader.decode(array)
 ```

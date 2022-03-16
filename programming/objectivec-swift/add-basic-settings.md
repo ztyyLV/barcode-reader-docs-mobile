@@ -21,7 +21,7 @@ let error: NSError? = NSError()
 
 // First step, get the instance of setting
 // You can either get the instance from current settings or create a new instance.
-let settings = try! barcodeReader.getRuntimeSettings()
+let settings = try? barcodeReader.getRuntimeSettings()
 
 // Second step, update the settings of barcodeFormatIds.
 // There are two groups of barcode formats, BarcodeFormat and BarcodeFormat_2
@@ -49,7 +49,7 @@ There are some suggestions on how to set the `expectedBarcodeCount`:
 let error: NSError? = NSError()
 
 // Similar to the barcode format setting, you can update the barcode count setting via PublicRuntimeSettings.
-let settings = try! barcodeReader.getRuntimeSettings()
+let settings = try? barcodeReader.getRuntimeSettings()
 
 // Set the expected barcode count.
 settings.expectedBarcodesCount = 1
