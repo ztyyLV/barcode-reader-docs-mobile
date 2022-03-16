@@ -66,7 +66,7 @@ breadcrumbText: iOS API Reference
 > - `initLicenseFromDLS`
 > - `initWithLicenseFromServer`
 >
-> Please use [`initLicense`](primary-license.md#initlicense) instead.
+> Please use [`initLicense`](primary-license.md#initlicense) to activate the license.
 
 &nbsp;
 
@@ -145,10 +145,10 @@ breadcrumbText: iOS API Reference
 
 > Note:
 >
-> - `DBRTextResultDelegate` is deprecated, please use `DBRTextResultListener` instead.
-> - `DBRIntermediateResultDelegate` is deprecated, please use `DBRIntermediateResultListener` instead.
-> - `DBRServerLicenseVerificationDelegate` is deprecated. It was used by `initWithLicenseFromServer` which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
-> - `DMDLSLicenseVerificationDelegate` is deprecated. Please use ({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) instead.
+> - `DBRTextResultDelegate` is deprecated, please use [`DBRTextResultListener`]({{ site.oc_api }}protocol-dbrtextresultlistener.html) instead.
+> - `DBRIntermediateResultDelegate` is deprecated, please use [`DBRIntermediateResultListener`]({{ site.oc_api }}protocol-dbrintermediateresultlistener.html) instead.
+> - [`DBRServerLicenseVerificationDelegate`](protocol-dbrserverlicenseverificationdelegate.md) is deprecated. It handles callback when using `initWithLicenseFromServer`, which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
+> - [`DMDLSLicenseVerificationDelegate`](protocol-dmdlslicenseverificationdelegate.md) is deprecated. It handles callback when using `initLicenseFromDLS`, which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
 
 &nbsp;
 
@@ -189,10 +189,10 @@ breadcrumbText: iOS API Reference
 > Note:
 > The following Enumerations are deprecated and will be removed in the future.
 >
-> - `EnumProduct`
-> - `EnumDMChargeWay`
-> - `EnumDMLicenseModule`
-> - `EnumDMUUIDGenerationMethod`
+> - [`EnumProduct`]({{ site.enumerations }}other-enums.html#product)
+> - [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
+> - [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
+> - [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
 
 &nbsp;
 
