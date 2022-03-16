@@ -20,9 +20,9 @@ class com.dynamsoft.dbr.DCESettingParameters;
 | Attribute | type | Descriptions |
 |-----------|------|-------------|
 | [`_cameraInstance`](#camerainstance) | *Object* | The Camera Enhancer instance |
-| [`_textResultCallback`](#textresultcallback) | [`TextResultCallback`]({{site.android_api}}interface.html#textresultcallback) | Set text result callback. |
+| [`_textResultCallback`](#textresultcallback) | [`TextResultCallback`]({{site.android_api}}interface-textresultcallback.html) | Set text result callback. |
 | [`_textResultCallback_UserData`](#textresultcallback_userdata) | *Object*  | Transfer user data. |
-| [`_intermediateResultCallback`](#intermediateresultcallback) | [`IntermediateResultCallback`]({{site.android_api}}interface.html#intermediateresultcallback) | Set intermediate result callback. |
+| [`_intermediateResultCallback`](#intermediateresultcallback) | [`IntermediateResultCallback`]({{site.android_api}}interface-intermediateresultcallback.html) | Set intermediate result callback. |
 | [`_intermediateResultCallback_UserData`](#intermediateresultcallback_userdata) | *Object* | Transfer user data. |
 
 ## _cameraInstance
