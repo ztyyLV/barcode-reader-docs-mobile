@@ -76,9 +76,60 @@ You can add your downloaded frameworks into your project through the following s
    import DynamsoftCameraEnhancer
    ```
 
-### Let's Configure the Camera First
+### Initialize the License
 
-1. Create an instance of **DynamsoftCameraEnhancer** for getting video input.
+Dynamsoft barcode reader needs a valid license to work. It is recommended to put the license activation code under the **AppDelegate** file.
+
+1. Add DBRLicenseVerificationListener to the **AppDelegate**:
+
+    ```objc
+    @interface AppDelegate ()<DBRLicenseVerificationListener>
+    ```
+
+    Swift:
+
+    ```swift
+    class AppDelegate: DBRLicenseVerificationListener{}
+    ```
+
+2. Add the following code to initialize the license in method `application:didFinishLaunchingWithOptions:`:
+
+    Objective-C:
+
+    ```objc
+    @implementation AppDelegate
+    - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+        /*Initialize license for Dynamsoft Barcode Reader.*/
+        /* The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here is a time-limited public trial license. Note that network connection is required for this license to work.*/
+        /* You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios*/
+        [DynamsoftBarcodeReader initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+        return YES;
+    }
+
+    -(void)DBRLicenseVerificationListener:(bool)isSuccess error:(NSError *)error{
+
+    }
+    ```
+
+    Swift:
+
+    ```swift
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        /*Initialize license for Dynamsoft Barcode Reader.*/
+        /* The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here is a time-limited public trial license. Note that network connection is required for this license to work.*/
+        /* You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios*/
+        DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
+        return true
+    }
+
+    func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+
+    }
+    ```
+
+### Configure the Camera to Get Video Streaming
+
+1. Go back to the `ViewController` file. Create an instance of **DynamsoftCameraEnhancer** for getting video input.
 
     Objective-C:
 
@@ -146,58 +197,9 @@ You can add your downloaded frameworks into your project through the following s
     }
     ```
 
-### Now to Add the Barcode Reader
+### Configure the Barcode Reader and Start Decoding
 
-1. Dynamsoft barcode reader needs a valid license to work. It is recommended to put the license activation code under the **AppDelegate** file.
-
-    Add DBRLicenseVerificationListener to the **AppDelegate**:
-
-    ```objc
-    @interface AppDelegate ()<DBRLicenseVerificationListener>
-    ```
-
-    Swift:
-
-    ```swift
-    class AppDelegate: DBRLicenseVerificationListener{}
-    ```
-
-    Add the following code to initialize the license in method `application:didFinishLaunchingWithOptions:`:
-
-    Objective-C:
-
-    ```objc
-    @implementation AppDelegate
-    - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-        /*Initialize license for Dynamsoft Barcode Reader.*/
-        /* The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here is a time-limited public trial license. Note that network connection is required for this license to work.*/
-        /* You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios*/
-        [DynamsoftBarcodeReader initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
-        return YES;
-    }
-
-    -(void)DBRLicenseVerificationListener:(bool)isSuccess error:(NSError *)error{
-
-    }
-    ```
-
-    Swift:
-
-    ```swift
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        /*Initialize license for Dynamsoft Barcode Reader.*/
-        /* The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here is a time-limited public trial license. Note that network connection is required for this license to work.*/
-        /* You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios*/
-        DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
-        return true
-    }
-
-    func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
-
-    }
-    ```
-
-2. Since we have initialized the license, we can move on to create an instance of the Barcode Reader. Go back to the `ViewController` file, declare and create the instance of barcodeReader:
+1. Still in the `ViewController` file, declare and create the instance of `barcodeReader`:
 
     Objective-C:
 
@@ -401,7 +403,9 @@ You can download the complete source code here:
 
 From this page, you have learned how to create a simple video barcode decoding app. In the next steps, the following pages will help you on adding configurations to enhance your barcode reader.
 
-- [Configure Runtime Settings](setting-guide.md)
+- [Add Basic Settings](add-basic-settings.md)
+- [Add UI Settings](ui-configurations.md)
+- [Optimize Performance](quick-performance-settings.md)
 - Additional Readings
   - <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "_blank">Barcode Formats</a>
 

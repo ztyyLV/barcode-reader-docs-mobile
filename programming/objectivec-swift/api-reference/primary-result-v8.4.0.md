@@ -51,7 +51,7 @@ Swift:
 
 ```swift
 let error: NSError? = NSError()
-let settings = try! barcodeReader.getRuntimeSettings()
+let settings = try? barcodeReader.getRuntimeSettings()
 settings.intermediateResultTypes = EnumIntermediateResultType.ColourConvertedGrayScaleImage.rawValue | EnumIntermediateResultType.OriginalImage.rawValue | EnumIntermediateResultType.ColourClusteredImage.rawValue
 barcodeReader.update(settings, error:nil)
 let result = barcodeReader.decodeFileWithName("your file path", templateName:"", error:nil)

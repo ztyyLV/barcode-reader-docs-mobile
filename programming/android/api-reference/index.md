@@ -34,8 +34,8 @@ noTitleIndex: true
 
 > Note:
 >
-> - `setTextResultCallback` is deprecated, please use `setTextResultListener` instead.
-> - `setIntermediateResultCallback` is deprecated, please use `setIntermediateResultListener` instead.
+> - `setTextResultCallback` is deprecated, please use [`setTextResultListener`](primary-video.md#settextresultlistener) instead.
+> - `setIntermediateResultCallback` is deprecated, please use [`setIntermediateResultListener`](primary-video.md#setintermediateresultlistener) instead.
 
 &nbsp;
 
@@ -67,7 +67,7 @@ noTitleIndex: true
 > - `initLicenseFromServer`
 > - `initLicenseFromLicenseContent`
 >
-> Please use [`initLicense`](primary-license.md#initlicense) instead.
+> Please use [`initLicense`](primary-license.md#initlicense) to activate the license.
 
 &nbsp;
 
@@ -152,14 +152,14 @@ noTitleIndex: true
   |----------|-------------|
   | [`TextResultListener`](interface-textresultlistener.md) | The interface to handle callback when text results are returned. |
   | [`IntermediateResultListener`](interface-intermediateresultlistener.md) | The interface to handle callback when intermediate results are returned. |
-  | [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
+  | [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback for method [`initLicense`](primary-license.md#initlicense). |
 
 > Note:
 >
-> - `TextResultCallback` is deprecated, please use `TextResultListener` instead.
-> - `IntermediateResultCallback` is deprecated, please use `IntermediateResultListener` instead.
-> - `DBRServerLicenseVerificationListener` is deprecated. It was used by `initLicenseFromServer` which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
-> - [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) is Deprecated. Please use [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) instead.
+> - `TextResultCallback` is deprecated, please use [`TextResultListener`](interface-textresultlistener.md) instead.
+> - `IntermediateResultCallback` is deprecated, please use [`IntermediateResultListener`](interface-intermediateresultlistener.md) instead.
+> - [`DBRServerLicenseVerificationListener`](interface-dbrserverlicenseverificationlistener.md) is deprecated. It handles callback when using method `initLicenseFromServer`, which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
+> - [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) is deprecated. It handles callback when using method `initLicenseFromDLS`, which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
 
 &nbsp;
 
@@ -201,10 +201,10 @@ noTitleIndex: true
 > Note:
 > The following Enumerations are deprecated and will be removed in the future.
 >
-> - `EnumProduct`
-> - `EnumDMChargeWay`
-> - `EnumDMLicenseModule`
-> - `EnumDMUUIDGenerationMethod`
+> - [`EnumProduct`]({{ site.enumerations }}other-enums.html#product)
+> - [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
+> - [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
+> - [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
 
 &nbsp;
 

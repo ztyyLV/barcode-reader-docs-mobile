@@ -113,6 +113,23 @@ There are two ways to include the SDK into your project - local binary dependenc
 
 <div class="fold-panel-end"></div>
 
+### Initialize License
+
+   ```java
+   BarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DBRLicenseVerificationListener() {
+      @Override
+      public void DBRLicenseVerificationCallback(boolean isSuccess, Exception error) {
+         if(!isSuccess){
+             error.printStackTrace();
+         }
+      }
+   });
+   ```
+   >Note:
+   >- Network connection is required for the license to work.
+   >- The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a time-limited public trial license.
+   >- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a> to request for an extension.
+
 ### Initialize Camera Module
 
 1. Create an instance of Camera Enhancer.
@@ -144,32 +161,14 @@ There are two ways to include the SDK into your project - local binary dependenc
 
 ### Initialize Barcode Reader
 
-1. Initialize the license.
-
-   ```java
-   BarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DBRLicenseVerificationListener() {
-      @Override
-      public void DBRLicenseVerificationCallback(boolean isSuccess, Exception error) {
-         if(!isSuccess){
-             error.printStackTrace();
-         }
-      }
-   });
-   ```
-
-2. Create an instance of Dynamsoft Barcode Reader.
+1. Create an instance of Dynamsoft Barcode Reader.
 
    ```java
    BarcodeReader reader;
    reader = new BarcodeReader();
    ```
 
-   >Note:
-   >- Network connection is required for the license to work.
-   >- The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a time-limited public trial license.
-   >- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a> to request an extension.
-
-3. Create text callback to obtain the recognized barcode results.
+2. Create a barcode result listener and register with the barcode reader instance to get recognized barcode results.
 
    ```java
    TextResultListener mTextResultListener = new TextResultListener() {
@@ -184,26 +183,26 @@ There are two ways to include the SDK into your project - local binary dependenc
             });
       }
    };
+
+   try {
+      reader.setTextResultListener(mTextResultListener, null);
+   } catch (BarcodeReaderException e) {
+      e.printStackTrace();
+   }
    ```
 
-4. Set the text recognition callback and bind the camera to Barcode Reader object
+3. Bind the camera enhancer instance as image source to the barcode reader instance and start scanning.
 
    ```java
    // Bind the Camera Enhancer instance to the Barcode Reader instance.
    // The mCameraEnhancer is the instance of the Dynamsoft Camera Enhancer.
    // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
    reader.setCameraEnhancer(mCameraEnhancer);
-   // The result will be an object that contains text result and other barcode information.
-   try {
-      reader.setTextResultListener(mTextResultListener, null);
-   } catch (BarcodeReaderException e) {
-      e.printStackTrace();
-   }
    // Start the barcode scanning thread.
    reader.startScanning();
    ```
 
-5. Override the `MainActivity.onResume` and `MainActivity.onPause` functions to start/stop video barcode scanning. After scanning starts, the Barcode Reader will automatically invoke the `decodeBuffer` API to process the video frames from the Camera Enhancer, then send the recognized barcode results to the text result callback.
+4. Override the `MainActivity.onResume` and `MainActivity.onPause` functions to start/stop video barcode scanning. After scanning starts, the Barcode Reader will automatically invoke the `decodeBuffer` API to process the video frames from the Camera Enhancer, then send the recognized barcode results to the text result callback.
 
    ```java
    @Override
@@ -281,6 +280,8 @@ You can download the complete source code here:
 
 From this page, you have learned how to create a simple video barcode decoding app. In the next steps, the following pages will help you on adding configurations to enhance your barcode reader.
 
-- [Configure Runtime Settings](setting-guide.md)
+- [Add Basic Settings](add-basic-settings.md)
+- [Add UI Settings](ui-configurations.md)
+- [Optimize Performance](quick-performance-settings.md)
 - Additional Readings
   - <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "_blank">Barcode Formats</a>

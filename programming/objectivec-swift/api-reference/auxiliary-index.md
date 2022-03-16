@@ -40,3 +40,7 @@ noTitleIndex: true
 - [`iImageData`](auxiliary-iImageData.md)
 - [`iLineSegment`](auxiliary-iLineSegment.md)
 - [`iRegionOfInterest`](auxiliary-iRegionOfInterest.md)
+
+## Deprecated
+
+- [iDMDLSConnectionParameters](auxiliary-iDMDLSConnectionParameters.md)

@@ -49,7 +49,7 @@ Swift:
 
 ```swift
 let error: NSError? = NSError()
-let settings = try! barcodeReader.getRuntimeSettings()
+let settings = try? barcodeReader.getRuntimeSettings()
 ```
 
 ## updateRuntimeSettings
@@ -83,7 +83,7 @@ Swift:
 
 ```swift
 let error: NSError? = NSError()
-let settings = try! barcodeReader.getRuntimeSettings()
+let settings = try? barcodeReader.getRuntimeSettings()
 barcodeReader.update(settings, error: &error)
 ```
 
@@ -180,7 +180,7 @@ Swift:
 ```swift
 let error: NSError? = NSError()
 let mArray: NSMutableArray? = NSMutableArray()
-let settings = try! barcodeReader.getRuntimeSettings()
+let settings = try? barcodeReader.getRuntimeSettings()
 mArray!.setArray(settings.binarizationModes as! [Any])
 mArray![0] = EnumBinarizationMode.LocalBlock
 settings.binarizationModes = mArray!
@@ -249,7 +249,7 @@ Swift:
 ```swift
 let error: NSError? = NSError()
 let mArray: NSMutableArray? = NSMutableArray()
-let settings = try! barcodeReader.getRuntimeSettings()
+let settings = try? barcodeReader.getRuntimeSettings()
 mArray!.setArray(settings.binarizationModes as! [Any])
 mArray![0] = EnumBinarizationMode.LocalBlock
 settings.binarizationModes = mArray! as! [Any]

@@ -140,9 +140,9 @@ class com.dynamsoft.dbr.DCESettingParameters;
 | Attribute | type | Description |
 |-----------|------|-------------|
 | [`cameraInstance`](auxiliary-DCESettingParameters.md#camerainstance) | *Object* | The Camera Enhancer instance |
-|  [`textResultCallback`](auxiliary-DCESettingParameters.md#textresultcallback) | [`TextResultCallback`]({{site.android_api}}interface.html#textresultcallback) | Set text result callback. |
+|  [`textResultCallback`](auxiliary-DCESettingParameters.md#textresultcallback) | [`TextResultCallback`]({{site.android_api}}interface-textresultcallback-v8.9.3.html) | Set text result callback. |
 | [`textResultCallback_UserData`](auxiliary-DCESettingParameters.md#textresultcallback_userdata) | *Object*  | Transfer user data. |
-| [`intermediateResultCallback`](auxiliary-DCESettingParameters.md#intermediateresultcallback) | [`IntermediateResultCallback`]({{site.android_api}}interface.html#intermediateresultcallback) | Set intermediate result callback. |
+| [`intermediateResultCallback`](auxiliary-DCESettingParameters.md#intermediateresultcallback) | [`IntermediateResultCallback`]({{site.android_api}}interface-intermediateresultcallback-v8.9.3.html) | Set intermediate result callback. |
 | [`IntermediateResultCallback_UserData`](auxiliary-DCESettingParameters.md#intermediateresultcallback_userdata) | *Object* | Transfer user data. |
 
 **Code Snippet**

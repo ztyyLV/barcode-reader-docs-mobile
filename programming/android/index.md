@@ -23,7 +23,7 @@ Welcome to the Dynamsoft Barcode Reader Android SDK documentation.
   - [GeneralSettings](samples/general.md)
   - [PerformanceSettings](samples/performance.md)
   - [ReadADriversLicense](samples/drivers-license.md)
-- <a href="https://download2.dynamsoft.com/dbr/android/DynamsoftBarcodeReaderDemoAndroid-8.9.1.apk" target="_blank">Barcode Scanner X Demo App (.apk)</a>
+- <a href="https://download2.dynamsoft.com/dbr/android/DynamsoftBarcodeReaderDemoAndroid-8.9.1.1.apk" target="_blank">Barcode Scanner X Demo App (.apk)</a>
 
 ## API Reference
 
