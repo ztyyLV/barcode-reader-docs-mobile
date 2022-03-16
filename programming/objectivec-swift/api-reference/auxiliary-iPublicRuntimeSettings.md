@@ -147,6 +147,11 @@ A combined value of [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.ht
 
 If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process. The barcode format our library will search for is composed of [BarcodeFormat group 1]({{ site.enumerations }}format-enums.html#barcodeformat) and [BarcodeFormat group 2]({{ site.enumerations }}format-enums.html#barcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
 
+When setting the parameter in *Swift*, please work with the rawValue of the enumeration as such
+```swift
+settings.barcodeFormatIds = EnumBarcodeFormat.ONED.rawValue;
+```
+
 **See Also**
 
 [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
@@ -170,6 +175,11 @@ A combined value of [`EnumBarcodeFormat2`]({{ site.enumerations }}format-enums.h
 **Remarks**
 
 If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process. The barcode format our library will search for is composed of [BarcodeFormat group 1]({{ site.enumerations }}format-enums.html#barcodeformat) and [BarcodeFormat group 2]({{ site.enumerations }}format-enums.html#barcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
+
+When setting the parameter in *Swift*, please work with the rawValue of the enumeration as such
+```swift
+settings.barcodeFormatIds_2 = EnumBarcodeFormat2.POSTALCODE.rawValue;
+```
 
 **See Also**
 
