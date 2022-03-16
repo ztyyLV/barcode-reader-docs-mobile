@@ -37,7 +37,7 @@ Decode barcodes from the memory buffer containing image pixels in a defined form
 
 **Parameters**
 
-`[in] buffer` The array of bytes which contain the image data.  
+`[in] buffer` The array of bytes that contain the image data.  
 `[in] width` The width of the image in pixels.  
 `[in] height` The height of the image in pixels.  
 `[in] stride` The stride is measured by the `byte` length of each line in the `buffer`.  
@@ -68,7 +68,7 @@ Swift:
 
 ```swift
 func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval){
-  let result = try! barcodeReader.decodeBuffer(frame.imageData, withWidth: frame.width, height: frame.height, stride: frame.stride, format: EnumImagePixelFormat(rawValue: frame.pixelFormat) ?? EnumImagePixelFormat.ARGB_8888)
+  let result = try? barcodeReader.decodeBuffer(frame.imageData, withWidth: frame.width, height: frame.height, stride: frame.stride, format: EnumImagePixelFormat(rawValue: frame.pixelFormat) ?? EnumImagePixelFormat.ARGB_8888)
 }
 ```
 
@@ -112,7 +112,7 @@ func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBu
   CVPixelBufferUnlockBaseAddress(imageBuffer, .readOnly)
   startRecognitionDate = NSDate()
   let buffer = Data(bytes: baseAddress!, count: bufferSize)
-  guard let results = try! barcodeReader.decodeBuffer(buffer, withWidth: width, height: height, stride: bpr, format: .ARGB_8888)
+  guard let results = try? barcodeReader.decodeBuffer(buffer, withWidth: width, height: height, stride: bpr, format: .ARGB_8888)
 }
 ```
 
@@ -146,7 +146,7 @@ Swift:
 
 ```swift
 let error: NSError? = NSError()
-let result = try! barcodeReader.decodeFile(withName: "your file path")
+let result = try? barcodeReader.decodeFile(withName: "your file path")
 ```
 
 ## decodeImage
