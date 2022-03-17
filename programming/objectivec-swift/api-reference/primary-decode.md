@@ -32,7 +32,8 @@ Decode barcodes from the memory buffer containing image pixels in a defined form
                                           height:(NSInteger)height
                                           stride:(NSInteger)stride
                                           format:(EnumImagePixelFormat)format
-                                           error:(NSError* _Nullable * _Nullable)error;
+                                           error:(NSError* _Nullable * _Nullable)error
+                                           NS_SWIFT_NAME(decodeBuffer(_:width:height:stride:format:));
 ```
 
 **Parameters**
@@ -122,7 +123,8 @@ Decode barcodes from a specified image file.
 
 ```objc
 - (NSArray<iTextResult*>* _Nullable)decodeFileWithName:(NSString* _Nonnull)name
-                                                 error:(NSError* _Nullable * _Nullable)error;
+                                                 error:(NSError* _Nullable * _Nullable)error
+                                                 NS_SWIFT_NAME(decodeFileWithName(_:));
 ```
 
 **Parameters**
@@ -154,7 +156,8 @@ Decode barcodes from an image file in memory.
 
 ```objc
 - (NSArray<iTextResult*>* _Nullable)decodeImage:(UIImage* _Nonnull)image 
-                                          error:(NSError* _Nullable * _Nullable)error;
+                                          error:(NSError* _Nullable * _Nullable)error
+                                          NS_SWIFT_NAME(decodeImage(_:));
 ```  
 
 **Parameters**
@@ -257,7 +260,8 @@ Decodes barcode from intermediate results.
 
 ```objc
 - (NSArray<iTextResult*>* _Nullable)decodeIntermediateResults:(NSArray<iIntermediateResult*>* _Nullable)array
-                                                        error:(NSError* _Nullable * _Nullable)error;
+                                                        error:(NSError* _Nullable * _Nullable)error
+                                                        NS_SWIFT_NAME(decodeIntermediateResults(_:));
 ```
 
 **Parameters**

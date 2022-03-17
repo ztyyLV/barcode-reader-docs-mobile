@@ -59,7 +59,8 @@ Update runtime settings with a given [`iPublicRuntimeSettings`](auxiliary-iPubli
 
 ```objc
 - (void)updateRuntimeSettings:(iPublicRuntimeSettings* _Nonnull)settings
-                        error:(NSError* _Nullable * _Nullable)error;
+                        error:(NSError* _Nullable * _Nullable)error
+                        NS_SWIFT_NAME(updateRuntimeSettings(_:));
 ```
 
 **Parameters**

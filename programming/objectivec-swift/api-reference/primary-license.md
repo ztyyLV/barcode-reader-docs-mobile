@@ -20,7 +20,8 @@ noTitleIndex: true
 Initializes `DynamsoftBarcodeReader` with a license.
 
 ```objc
-- (instancetype _Nonnull)initLicense:(NSString* _Nonnull)license;
++ (void)initLicense:(nonnull NSString *)license verificationDelegate:(nonnull id<DBRLicenseVerificationListener>)listener 
+NS_SWIFT_NAME(initLicense(_:verificationDelegate:));
 ```
 
 **Parameters**

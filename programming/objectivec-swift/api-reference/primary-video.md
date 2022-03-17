@@ -135,7 +135,7 @@ Start the video streaming barcode decoding thread. Please be sure that you have 
 
 **Code Snippet**
 
-You can view detailed code snippet in [setCameraEnhancer](#setcameraenhancer)
+You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer)
 
 Objective-C:
 
@@ -185,7 +185,7 @@ Set callback function to process text results generated during frame decoding.
 
 **Code Snippet**
 
-You can view detailed code snippet in [setCameraEnhancer](#setcameraenhancer)
+You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer)
 
 Objective-C:
 
@@ -234,7 +234,7 @@ Set callback function to process intermediate results generated during frame dec
 
 **Code Snippet**
 
-The usage of `intermediateResultListener` is similar to the `textResultListener`. You can view detailed code snippet in [setCameraEnhancer](#setcameraenhancer) and replace the `textResultListener` code with the `intermediateResultListener` code.
+The usage of `intermediateResultListener` is similar to the `textResultListener`. You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer) and replace the `textResultListener` code with the `intermediateResultListener` code.
 
 Objective-C:
 

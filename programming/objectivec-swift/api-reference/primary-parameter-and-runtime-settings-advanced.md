@@ -28,7 +28,8 @@ Initialize runtime settings with the parameters obtained from a JSON file.
 ```objc
 - (void)initRuntimeSettingsWithFile:(NSString* _Nonnull)fileName
                        conflictMode:(EnumConflictMode)conflictMode
-                              error:(NSError* _Nullable * _Nullable)error;
+                              error:(NSError* _Nullable * _Nullable)error
+                              NS_SWIFT_NAME(initRuntimeSettingsWithFile(_:conflictMode:));
 ```
 
 **Parameters**
@@ -58,7 +59,8 @@ Initialize runtime settings with the parameters obtained from a JSON string.
 ```objc
 - (void)initRuntimeSettingsWithString:(NSString* _Nonnull)content
                          conflictMode:(EnumConflictMode)conflictMode
-                                error:(NSError* _Nullable * _Nullable)error;
+                                error:(NSError* _Nullable * _Nullable)error
+                                NS_SWIFT_NAME(initRuntimeSettingsWithString(_:conflictMode:));
 ```
 
 **Parameters**
@@ -88,7 +90,8 @@ Append a new template file to the current runtime settings.
 ```objc
 - (void)appendTplFileToRuntimeSettings:(NSString * _Nonnull)fileName
                           conflictMode:(EnumConflictMode)conflictMode
-                                 error:(NSError * _Nullable *_Nullable)error;
+                                 error:(NSError * _Nullable *_Nullable)error
+                                 NS_SWIFT_NAME(appendTplFileToRuntimeSettings(_:conflictMode:));
 ```
 
 **Parameters**
@@ -118,7 +121,8 @@ Append a new template string to the current runtime settings.
 ```objc
 - (void)appendTplStringToRuntimeSettings:(NSString * _Nonnull)content
                             conflictMode:(EnumConflictMode)conflictMode
-                                   error:(NSError *_Nullable *_Nullable)error;
+                                   error:(NSError *_Nullable *_Nullable)error   
+                                   NS_SWIFT_NAME(appendTplStringToRuntimeSettings(_:conflictMode:));
 ```
 
 **Parameters**
@@ -180,7 +184,8 @@ Outputs runtime settings and save them into a settings file (JSON file).
 ```objc
 - (void)outputSettingsToFile:(NSString *_Nullable)filePath 
                 settingsName:(NSString*_Nonnull)settingsName 
-                       error:(NSError*_Nullable *_Nullable)error;
+                       error:(NSError*_Nullable *_Nullable)error   
+                       NS_SWIFT_NAME(outputSettingsToFile(_:settingsName:));
 ```
 
 **Parameters**
@@ -209,7 +214,8 @@ Output runtime settings to a string.
 
 ```objc
 - (NSString *_Nullable)outputSettingsToString:(NSString*_Nonnull)settingsName 
-                                        error:(NSError* _Nullable * _Nullable)error;
+                                        error:(NSError* _Nullable * _Nullable)error  
+                                        NS_SWIFT_NAME(outputSettingsToString(_:));
 ```
 
 **Parameters**

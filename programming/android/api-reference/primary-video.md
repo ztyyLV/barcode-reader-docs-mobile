@@ -173,7 +173,7 @@ void setIntermediateResultListener(IntermediateResultCallback intermediateResult
 
 **Code Snippet**
 
-The usage of `intermediateResultListener` is similar to the `textResultListener`. You can view detailed code snippet in [setCameraEnhancer](#setcameraenhancer) and replace the `textResultListener` code with the `intermediateResultListener` code.
+The usage of `intermediateResultListener` is similar to the `textResultListener`. You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer) and replace the `textResultListener` code with the `intermediateResultListener` code.
 
 ```java
 BarcodeReader reader = new BarcodeReader();
