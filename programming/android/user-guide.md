@@ -179,7 +179,7 @@ There are two ways to include the SDK into your project - local binary dependenc
    TextResultListener mTextResultListener = new TextResultListener() {
    // Obtain the recognized barcode results and display.
    @Override
-      public void textResultCallback(int i, TextResult[] textResults, Object userData) {
+      public void textResultCallback(int id, ImageData imageData, TextResult[] textResults) {
             (MainActivity.this).runOnUiThread(new Runnable() {
                @Override
                public void run() {
