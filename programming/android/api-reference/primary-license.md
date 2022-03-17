@@ -22,7 +22,7 @@ pageStartVer: 8.6
 Read the product key and activate the SDK.
 
 ```java
-void initLicense(String license) throws BarcodeReaderException
+static void initLicense(String license, DBRLicenseVerificationListener listener)
 ```
 
 **Parameters**

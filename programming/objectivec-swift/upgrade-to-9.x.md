@@ -84,11 +84,13 @@ func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
 }
 ```
 
-> Note: 
+> Note:  
+>  
 > 1.The following license activation method are removed, you should make the changes in 9.x upgrade:
 > - `initLicenseFromLTS`
 >
 > 2.The following license activation methods are deprecated, they will be removed in version 10.0. We recommend that you upgrade to the new license API, but this is optional during the upgrade to 9.x:
+>  
 > - `initLicenseFromDLS`
 > - `initLicenseFromServer`
 
@@ -111,7 +113,7 @@ Some of the legacy video barcode decoding methods are removed, we recommend you 
   - interfance `iDCESettingParameters`
   - `DynamsoftBarcodeReader.setCameraEnhancerPara`
 
-> Note:
+> Note:  
 >
 > If you are upgrading from v8.9.0 or higher versions, you might not need to make any changes on video barcode decoding APIs.
 

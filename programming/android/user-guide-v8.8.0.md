@@ -34,7 +34,8 @@ After unzipping, the root directory of the DBR installation package is **Dynamso
 
 In this section, let's see how to create a HelloWorld app for reading barcodes from camera video input.
 
->Note:
+>Note:  
+>  
 >- Android Studio 4.2 is used here in this guide.
 >- You can get the source code of the HelloWord app [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld).
 
@@ -96,7 +97,9 @@ There are two ways to include the SDK into your project - local binary dependenc
    }
    ```
 
-   > Note: Please replace {version-number} with the correct version number.
+   > Note:  
+   >  
+   > - Please replace {version-number} with the correct version number.
 
 3. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
 
@@ -122,7 +125,8 @@ There are two ways to include the SDK into your project - local binary dependenc
    });
    ```  
 
-   > Note:
+   > Note:  
+   >  
    > - Network connection is required for the license to work.
    > - "DLS2***" is a default 7-day trial license used in the sample.
    > - If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
@@ -178,7 +182,8 @@ There are two ways to include the SDK into your project - local binary dependenc
    });
    ```
 
-   >Note:
+   >Note:  
+   >  
    >- Network connection is required for the license to work.
    >- The organization id 200001 here will grant you a time-limited public trial license.
    >- If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.

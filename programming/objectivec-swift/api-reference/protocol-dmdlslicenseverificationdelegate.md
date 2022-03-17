@@ -15,8 +15,8 @@ pageStartVer: 8.4
 
 > Note:  
 >  
-> `initLicenseFromDLS` and `DMDLSLicenseVerificationDelegate` are deprecated and will be removed in 10.0 version release.  
-> Please use [`initLicense`](primary-license.md#initlicense) and [`DBRLicenseVerificationListener`](protocol-dbrlicenseverificationlistener.md) to initialize and verify the license for 9.x versions.
+> - `initLicenseFromDLS` and `DMDLSLicenseVerificationDelegate` are deprecated and will be removed in 10.0 version release.  
+> - Please use [`initLicense`](primary-license.md#initlicense) and [`DBRLicenseVerificationListener`](protocol-dbrlicenseverificationlistener.md) to initialize and verify the license for 9.x versions.
 
 ```objc
 @protocol DMDLSLicenseVerificationDelegate <NSObject>

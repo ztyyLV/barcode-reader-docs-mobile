@@ -14,7 +14,7 @@ Represents the method to handle the error code returned by the library when usin
 
 > Note:  
 >
-> DBRErrorDelegate is deprecated in 9.0 version.
+> - DBRErrorDelegate is deprecated in 9.0 version.
 
 ```objc
 @protocol DBRErrorDelegate <NSObject>

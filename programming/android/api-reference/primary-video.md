@@ -11,6 +11,13 @@ pageStartVer: 8.6
 
 # Video Decoding Methods
 
+> Note:
+>  
+> - You have to include `CameraEnhancer` when using **Video Decoding Methods**.  
+> - `CameraEnhancer` provide APIs that help you quickly deploy a camera module and capture video streaming for barcode decoding.  
+> - Through **Video Decoding Methods** you can control whether to start video streaming barcode decoding and get the barcode results.  
+> - Be sure that your `BarcodeReader` version is **8.9.0+** and `CameraEnhancer` is **2.1.0+** when using the methods on this page.
+
 | Method | Description |
 |--------|-------------|
 | [`setCameraEnhancer`](#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
@@ -35,11 +42,63 @@ void setCameraEnhancer(CameraEnhancer mCameraEnhancer)
 
 **Code Snippet**
 
+This code snippet displays a complete code on how to add CameraEnhancer to your project and start to use Video Decoding Methods to decode and get barcode results from the video streaming.
+
 ```java
-BarcodeReader reader = new BarcodeReader();
-CameraEnhancer mCameraEnhancer = new CameraEnhancer(MainActivity.this);
-mCameraEnhancer.setCameraView(cameraView);
-reader.setCameraEnhancer(mCameraEnhancer);
+BarcodeReader reader;
+CameraEnhancer mCameraEnhancer;
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+
+    // Be sure that you have added a cameraView in the layout file.
+    DCECameraView cameraView = findViewById(R.id.cameraView);
+    try {
+        // Create an instance of Dynamsoft Barcode Reader.
+        reader = new BarcodeReader();
+    } catch (BarcodeReaderException e) {
+        e.printStackTrace();
+    }
+    mCameraEnhancer = new CameraEnhancer(MainActivity.this);
+    mCameraEnhancer.setCameraView(cameraView);
+
+    // Bind the Camera Enhancer instance to the Barcode Reader instance.
+    reader.setCameraEnhancer(mCameraEnhancer);
+
+    // Result callback configurations
+    TextResultListener mTextResultListener = new TextResultListener() {
+        // Obtain the recognized barcode results and display.
+        @Override
+        public void textResultCallback(int id, ImageData imageData, TextResult[] textResults) {
+            // Add your code to execute when barcode results are returned.
+        }
+    };
+    reader.setTextResultListener(mTextResultListener);
+}
+@Override
+public void onResume() {
+    // Open the camera and start video barcode reading
+    try {
+        mCameraEnhancer.open();
+    } catch (CameraEnhancerException e) {
+        e.printStackTrace();
+    }
+    reader.startScanning();
+    super.onResume();
+}
+
+@Override
+public void onPause() {
+    // Stop video barcode reading
+    try {
+        mCameraEnhancer.close();
+    } catch (CameraEnhancerException e) {
+        e.printStackTrace();
+    }
+    reader.stopScanning();
+    super.onPause();
+}
 ```
 
 ## startScanning
@@ -52,6 +111,8 @@ void startScanning()
 
 **Code Snippet**
 
+You can view the complete code snippet in [`setCameraEnhancer`](#setcameraenhancer).
+
 ```java
 BarcodeReader reader = new BarcodeReader();
 reader.startScanning();
@@ -59,7 +120,7 @@ reader.startScanning();
 
 ## stopScanning
 
-Stop the video streaming barcode decoding thread.
+You can view the complete code snippet in [`setCameraEnhancer`](#setcameraenhancer).
 
 ```java
 void stopScanning()
@@ -77,27 +138,25 @@ reader.stopScanning();
 Set a callback interface to process text results generated during frame decoding.
 
 ```java
-void setTextResultListener(TextResultCallback textResultCallback) throws BarcodeReaderException
+void setTextResultListener(TextResultCallback textResultCallback)
 ```
 
 **Parameters**
 
 `textResultCallback`: Callback interface.
 
-**Exceptions**
-
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
-
 **Code Snippet**
+
+You can view the complete code snippet in [`setCameraEnhancer`](#setcameraenhancer).
 
 ```java
 BarcodeReader reader = new BarcodeReader();
 reader.setTextResultListener(new TextResultListener() {
     @Override
-    public void textResultCallback(int frameId, int imageData, TextResult[] results) {
+    public void textResultCallback(int frameId, ImageData imageData, TextResult[] results) {
         //TODO add your code for using text results
     }
-}, null);
+});
 ```
 
 ## setIntermediateResultListener
@@ -105,28 +164,27 @@ reader.setTextResultListener(new TextResultListener() {
 Set a callback interface to process intermediate results generated during frame decoding.
 
 ```java
-void setIntermediateResultListener(IntermediateResultCallback intermediateResultCallback} throws BarcodeReaderException
+void setIntermediateResultListener(IntermediateResultCallback intermediateResultCallback}
 ```
 
 **Parameters**
 
 `intermediateResultCallback`: Callback interface.
 
-**Exceptions**
-
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
-
 **Code Snippet**
+
+The usage of `intermediateResultListener` is similar to the `textResultListener`. You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer) and replace the `textResultListener` code with the `intermediateResultListener` code.
 
 ```java
 BarcodeReader reader = new BarcodeReader();
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
+// You can set intermediateResult type when using intermediateResultListener
 settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CLUSTERED_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE;
 reader.updateRuntimeSettings(settings);
-reader.setIntermediateResultCallback(new IntermediateResultCallback() {
+reader.setIntermediateResultListener(new IntermediateResultCallback() {
     @Override
     public void intermediateResultCallback(int frameId, int imageData, IntermediateResult[] results) {
         //TODO add your code for using intermediate results
     }
-}, null);
+});
 ```

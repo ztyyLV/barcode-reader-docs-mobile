@@ -11,10 +11,10 @@ noTitleIndex: true
 
 > Note:
 >  
-> You have to include `DynamsoftCameraEnhancer` when using **Video Decoding Methods**.  
-> `DynamsoftCameraEnhancer` provide APIs that help you quickly deploy a camera module and capture video streaming for barcode decoding.
-> Through **Video Decoding Methods** you can control whether to start video streaming barcode decoding and get the barcode results.
-> Be sure that your `DynamsoftBarcodeReader` version is **8.9.0+** and `DynamsoftCameraEnhancer` is **2.1.0+** when using the methods on this page.
+> - You have to include `DynamsoftCameraEnhancer` when using **Video Decoding Methods**.  
+> - `DynamsoftCameraEnhancer` provide APIs that help you quickly deploy a camera module and capture video streaming for barcode decoding.  
+> - Through **Video Decoding Methods** you can control whether to start video streaming barcode decoding and get the barcode results.  
+> - Be sure that your `DynamsoftBarcodeReader` version is **8.9.0+** and `DynamsoftCameraEnhancer` is **2.1.0+** when using the methods on this page.
 
 | Method               | Description |
 |----------------------|-------------|
@@ -40,7 +40,7 @@ Bind a `DynamsoftCameraEnhancer` instance to the Barcode Reader.
 
 **Code Snippet**
 
-This code snippet displays a complete code on how to add DynamsoftCameraEnhancer to you project and start to use Video Decoding Methods to decode and get barcode results from the video streaming.
+This code snippet displays a complete code on how to add DynamsoftCameraEnhancer to your project and start to use Video Decoding Methods to decode and get barcode results from the video streaming.
 
 Objective-C:
 
@@ -135,7 +135,7 @@ Start the video streaming barcode decoding thread. Please be sure that you have 
 
 **Code Snippet**
 
-You can view detailed code snippet in [setCameraEnhancer](#setcameraenhancer)
+You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer)
 
 Objective-C:
 
@@ -185,7 +185,7 @@ Set callback function to process text results generated during frame decoding.
 
 **Code Snippet**
 
-You can view detailed code snippet in [setCameraEnhancer](#setcameraenhancer)
+You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer)
 
 Objective-C:
 
@@ -234,7 +234,7 @@ Set callback function to process intermediate results generated during frame dec
 
 **Code Snippet**
 
-The usage of `intermediateResultListener` is similar to the `textResultListener`. You can view detailed code snippet in [setCameraEnhancer](#setcameraenhancer) and replace the `textResultListener` code with the `intermediateResultListener` code.
+The usage of `intermediateResultListener` is similar to the `textResultListener`. You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer) and replace the `textResultListener` code with the `intermediateResultListener` code.
 
 Objective-C:
 
