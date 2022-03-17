@@ -181,7 +181,7 @@ PublicRuntimeSettings settings = reader.getRuntimeSettings();
 // You can set intermediateResult type when using intermediateResultListener
 settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CLUSTERED_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE;
 reader.updateRuntimeSettings(settings);
-reader.setIntermediateResultCallback(new IntermediateResultCallback() {
+reader.setIntermediateResultListener(new IntermediateResultCallback() {
     @Override
     public void intermediateResultCallback(int frameId, int imageData, IntermediateResult[] results) {
         //TODO add your code for using intermediate results
