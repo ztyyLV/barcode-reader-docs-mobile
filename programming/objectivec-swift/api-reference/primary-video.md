@@ -11,10 +11,10 @@ noTitleIndex: true
 
 > Note:
 >  
-> You have to include `DynamsoftCameraEnhancer` when using **Video Decoding Methods**.  
-> `DynamsoftCameraEnhancer` provide APIs that help you quickly deploy a camera module and capture video streaming for barcode decoding.
-> Through **Video Decoding Methods** you can control whether to start video streaming barcode decoding and get the barcode results.
-> Be sure that your `DynamsoftBarcodeReader` version is **8.9.0+** and `DynamsoftCameraEnhancer` is **2.1.0+** when using the methods on this page.
+> - You have to include `DynamsoftCameraEnhancer` when using **Video Decoding Methods**.  
+> - `DynamsoftCameraEnhancer` provide APIs that help you quickly deploy a camera module and capture video streaming for barcode decoding.  
+> - Through **Video Decoding Methods** you can control whether to start video streaming barcode decoding and get the barcode results.  
+> - Be sure that your `DynamsoftBarcodeReader` version is **8.9.0+** and `DynamsoftCameraEnhancer` is **2.1.0+** when using the methods on this page.
 
 | Method               | Description |
 |----------------------|-------------|
