@@ -45,7 +45,8 @@ In this section, let's see how to create a HelloWorld app for reading barcodes f
 2. Choose the correct template for your project. In this sample, we use **Empty Activity**.
 
 3. When prompted, choose your app name 'HelloWorld' and set the **Save** location, **Language**, and **Minimum SDK** (we use 21 here).
-    > Note: With **minSdkVersion** set to 21, your app is compatible with more than 94.1% of devices on the Google Play Store (last update: March 2021).
+    > Note:  
+    > - With **minSdkVersion** set to 21, your app is compatible with more than 94.1% of devices on the Google Play Store (last update: March 2021).
 
 ### Include the Library
 
@@ -100,7 +101,9 @@ There are two ways to include the SDK into your project - local binary dependenc
    }
    ```
 
-   > Note: Please replace {version-number} with the correct version number.
+   > Note:  
+   >  
+   > - Please replace {version-number} with the correct version number.
 
 3. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
 
@@ -125,7 +128,9 @@ There are two ways to include the SDK into your project - local binary dependenc
       }
    });
    ```
-   >Note:
+
+   >Note:  
+   >  
    >- Network connection is required for the license to work.
    >- The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a time-limited public trial license.
    >- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a> to request for an extension.

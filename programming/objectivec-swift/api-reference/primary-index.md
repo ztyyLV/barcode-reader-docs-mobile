@@ -27,7 +27,7 @@ noTitleIndex: true
   | [`setDBRTextResultListener`](primary-video.md#setdbrtextresultlistener) | Set callback function to process text results generated during frame decoding. |
   | [`setDBRIntermediateResultListener`](primary-video.md#setdbrintermediateresultlistener) | Set callback function to process intermediate results generated during frame decoding. |
 
-> Note:
+> Note:  
 >
 > - `setDBRTextResultDelegate` is deprecated, please use `setDBRTextResultListener` instead.
 > - `setDBRIntermediateResultDelegate` is deprecated, please use `setDBRIntermediateResultListener` instead.
@@ -49,7 +49,8 @@ noTitleIndex: true
   |----------------------|-------------|
   | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
 
-> Note:
+> Note:  
+>  
 > The following license activation methods are deprecated:
 >
 > - `license`

@@ -32,7 +32,7 @@ noTitleIndex: true
   | [`setTextResultListener`](primary-video.md#settextresultlistener) | Set TextResult listener to get result from the callback method when barcode is decoded. |
   | [`setIntermediateResultListener`](primary-video.md#setintermediateresultlistener) | Set intermediateResult listener to get intermediate result from the callback method. |
 
-> Note:
+> Note:  
 >
 > - `setTextResultCallback` is deprecated, please use [`setTextResultListener`](primary-video.md#settextresultlistener) instead.
 > - `setIntermediateResultCallback` is deprecated, please use [`setIntermediateResultListener`](primary-video.md#setintermediateresultlistener) instead.
@@ -59,7 +59,8 @@ noTitleIndex: true
   |----------------------|-------------|
   | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
 
-> Note:
+> Note:  
+>  
 > The following license activation methods are deprecated:
 >
 > - `outputLicenseToString`
@@ -140,9 +141,9 @@ noTitleIndex: true
 - [`SamplingImageData`](auxiliary-SamplingImageData.md)
 - [`TextResult`](auxiliary-TextResult.md)
 
-> Note:
+> Note:  
 >
-> `DMDLSConnectionParameters` is deprecated due to the update of the license. Please use the method [`initLicense`](primary-license.md#initlicense) to activate the license instead.
+> - `DMDLSConnectionParameters` is deprecated due to the update of the license. Please use the method [`initLicense`](primary-license.md#initlicense) to activate the license instead.
 
 &nbsp;
 
@@ -198,7 +199,8 @@ noTitleIndex: true
 - [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
 - [`EnumPresetTemplate`]({{ site.enumerations }}other-enums.html#enumpresettemplate)
 
-> Note:
+> Note:  
+>  
 > The following Enumerations are deprecated and will be removed in the future.
 >
 > - [`EnumProduct`]({{ site.enumerations }}other-enums.html#product)

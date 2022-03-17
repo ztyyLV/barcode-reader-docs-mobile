@@ -98,9 +98,6 @@ let licenseString = try? barcodeReader.outputLicenseToString()
 
 ## initWithLicenseFromServer
 
-> Note:
-> This Method is deprecated and will be removed in the future.
-
 Initializes the license and connects to the specified server for online verification.
 
 ```objc
@@ -149,9 +146,6 @@ func licenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 ```
 
 ## initLicenseFromDLS
-
-> Note:
-> This Method is deprecated and will be removed in the future.
 
 Initializes the barcode reader license and connects to the specified server for online verification.
 

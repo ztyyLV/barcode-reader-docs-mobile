@@ -34,7 +34,8 @@ After unzipping, the root directory of the DBR installation package is **Dynamso
 
 In this section, let's see how to create a HelloWorld app for reading barcodes from camera video input.
 
->Note:
+>Note:  
+>  
 >- Android Studio 4.2 is used here in this guide.
 >- You can get the source code of the Helloword app [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld).
 
@@ -100,7 +101,9 @@ There are two ways to include the SDK into your project - local binary dependenc
    }
    ```
 
-   > Note: Please replace {version-number} with the correct version number.
+   > Note:  
+   >  
+   > - Please replace {version-number} with the correct version number.
 
 3. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
 

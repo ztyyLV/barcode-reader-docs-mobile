@@ -11,7 +11,8 @@ pageStartVer: 8.2.1
 # Class iDCESettingParameters
 
 > Note:  
-> This class is removed in 9.0 version. Please use the [video methods](primary-video.md) for video barcode scanning if you are using the latest version.
+>  
+> - This class is removed in 9.0 version. Please use the [video methods](primary-video.md) for video barcode scanning if you are using the latest version.
 
 Stores the iDCESettingParameters information.
 

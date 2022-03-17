@@ -60,7 +60,7 @@ Objective-C:
 [_dce addListener:self];
 //Get frames in callback methods.
 - (void)frameOutPutCallback:(DCEFrame *)frame timeStamp:(NSTimeInterval)timeStamp{
-    NSArray<iTextResult*>* results = [barcodeReader decodeBuffer:frame.imageData withWidth:frame.width height:frame.height stride:frame.stride format:frame.pixelFormat error:nil];
+    NSArray<iTextResult*>* barcodeResults = [barcodeReader decodeBuffer:frame.imageData withWidth:frame.width height:frame.height stride:frame.stride format:frame.pixelFormat error:nil];
 }
 ```
 
@@ -68,7 +68,7 @@ Swift:
 
 ```swift
 func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval){
-  let result = try? barcodeReader.decodeBuffer(frame.imageData, withWidth: frame.width, height: frame.height, stride: frame.stride, format: EnumImagePixelFormat(rawValue: frame.pixelFormat) ?? EnumImagePixelFormat.ARGB_8888)
+  let barcodeResults = try? barcodeReader.decodeBuffer(frame.imageData, withWidth: frame.width, height: frame.height, stride: frame.stride, format: EnumImagePixelFormat(rawValue: frame.pixelFormat) ?? EnumImagePixelFormat.ARGB_8888)
 }
 ```
 
@@ -94,7 +94,7 @@ Objective-C:
   CVPixelBufferUnlockBaseAddress(imageBuffer, kCVPixelBufferLock_ReadOnly);
   NSData * buffer = [NSData dataWithBytes:baseAddress length:bufferSize];
   startRecognitionDate = [NSDate date];
-  NSArray* results = [m_barcodeReader decodeBuffer:buffer withWidth:imgWidth height:imgHeight stride:bpr format: EnumImagePixelFormatARGB_8888 error:nil];
+  NSArray* barcodeResults = [m_barcodeReader decodeBuffer:buffer withWidth:imgWidth height:imgHeight stride:bpr format: EnumImagePixelFormatARGB_8888 error:nil];
 }
 ```
 
@@ -112,7 +112,7 @@ func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBu
   CVPixelBufferUnlockBaseAddress(imageBuffer, .readOnly)
   startRecognitionDate = NSDate()
   let buffer = Data(bytes: baseAddress!, count: bufferSize)
-  guard let results = try? barcodeReader.decodeBuffer(buffer, withWidth: width, height: height, stride: bpr, format: .ARGB_8888)
+  guard let barcodeResults = try? barcodeReader.decodeBuffer(buffer, withWidth: width, height: height, stride: bpr, format: .ARGB_8888)
 }
 ```
 
@@ -139,14 +139,13 @@ The `iTextResult` of all successfully decoded barcode.
 Objective-C:
 
 ```objc
-NSArray<iTextResult*>* result = [barcodeReader decodeFileWithName:@"your file path" error:&error];
+NSArray<iTextResult*>* barcodeResults = [barcodeReader decodeFileWithName:@"your file path" error:&error];
 ```
 
 Swift:
 
 ```swift
-let error: NSError? = NSError()
-let result = try? barcodeReader.decodeFile(withName: "your file path")
+let barcodeResults = try? barcodeReader.decodeFilewithName("your file path")
 ```
 
 ## decodeImage
@@ -174,15 +173,14 @@ Objective-C:
 ```objc
 UIImage *image = [[UIImage alloc] init];
 NSError __autoreleasing * _Nullable error;
-NSArray<iTextResult*>* result = [barcodeReader decodeImage:image error:&error];
+NSArray<iTextResult*>* barcodeResults = [barcodeReader decodeImage:image error:&error];
 ```
 
 Swift:
 
 ```swift
-let image: UIImage? = UIImage()
-let error: NSError? = NSError()
-let result = try? barcodeReader.decode(image)
+let frameImage = dce.getFrameFromBuffer(true).toUIImage()
+let barcodeResults = try? barcodeReader.decodeImage(frameImage)
 ```
 
 ## decodeBase64
@@ -209,14 +207,13 @@ Objective-C:
 
 ```objc
 NSError __autoreleasing * _Nullable error;
-NSArray<iTextResult*>* result = [barcodeReader decodeBase64:@"file in base64 string" error:&error];
+NSArray<iTextResult*>* barcodeResults = [barcodeReader decodeBase64:@"file in base64 string" error:&error];
 ```
 
 Swift:
 
 ```swift
-let error: NSError? = NSError() 
-let result = try? barcodeReader.decodeBase64("file in base64 string")
+let barcodeResults = try? barcodeReader.decodeBase64("file in base64 string")
 ```
 
 ## createIntermediateResult
@@ -250,7 +247,6 @@ irResult = [barcodeReader createIntermediateResult:EnumIntermediateResultTypeOri
 Swift:
 
 ```swift
-var error:NSError? = NSError()
 var irResult:iIntermediateResult!
 irResult = try? barcodeReader.createIntermediateResult(EnumIntermediateResultType(rawValue: EnumIntermediateResultType.originalImage.rawValue)!)
 ```
@@ -295,8 +291,8 @@ let result:[iTextResult]?
 let settings = try? barcodeReader.getRuntimeSettings()
 settings.intermediateResultTypes = EnumIntermediateResultType.originalImage.rawValue | EnumIntermediateResultType.typedBarcodeZone.rawValue
 settings.intermediateResultSavingMode = .memory
-barcodeReader.update(settings, nil)
-result = try? barcodeReader.decodeFile(withName: "your file path")
+try? barcodeReader.updateRuntimeSettings(settings)
+result = try? barcodeReader.decodeFilewithName("your file path")
 let intermediateResult = try? barcodeReader.getIntermediateResult()
-result = try? barcodeReader.decode(array)
+result = try? barcodeReader.decodeIntermediateResults(intermediateResult)
 ```

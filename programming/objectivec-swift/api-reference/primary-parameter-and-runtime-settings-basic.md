@@ -48,7 +48,6 @@ NSError __autoreleasing * _Nullable error;
 Swift:
 
 ```swift
-let error: NSError? = NSError()
 let settings = try? barcodeReader.getRuntimeSettings()
 ```
 
@@ -73,18 +72,17 @@ Update runtime settings with a given [`iPublicRuntimeSettings`](auxiliary-iPubli
 Objective-C:
 
 ```objc
-NSError __autoreleasing * _Nullable error;
-iPublicRuntimeSettings *settings;
-
-[barcodeReader updateRuntimeSettings:settings error:&error];
+iPublicRuntimeSettings *settings = [barcodeReader getRuntimeSettings:nil];
+// After you have made some changes on the runtime settings.
+[barcodeReader updateRuntimeSettings:settings error:nil];
 ```
 
 Swift:
 
 ```swift
-let error: NSError? = NSError()
 let settings = try? barcodeReader.getRuntimeSettings()
-barcodeReader.update(settings, error: &error)
+// After you have made some changes on the runtime settings.
+barcodeReader.updateRuntimeSettings(settings)
 ```
 
 ### With a Preset Template
@@ -128,15 +126,13 @@ Reset all parameters to default values.
 Objective-C:
 
 ```objc
-NSError __autoreleasing * _Nullable error;
-[barcodeReader resetRuntimeSettings:&error];
+[barcodeReader resetRuntimeSettings:nil];
 ```
 
 Swift:
 
 ```swift
-let error: NSError? = NSError()
-barcodeReader.resetRuntimeSettings(&error)
+try? barcodeReader.resetRuntimeSettings()
 ```
 
 ## setModeArgument
@@ -164,28 +160,19 @@ Sets the optional argument for a specified mode in Modes parameters.
 Objective-C:
 
 ```objc
-DynamsoftBarcodeReader *barcodeReader;
-iPublicRuntimeSettings *settings;
-NSError __autoreleasing * _Nullable error;
-NSMutableArray *mArray = [NSMutableArray arrayWithArray:settings.binarizationModes];
-mArray[0] = [NSNumber numberWithInteger:EnumBinarizationModeLocalBlock];
-settings.binarizationModes = mArray;
-
-[barcodeReader updateRuntimeSettings:settings error:&error];
-[barcodeReader setModeArgument:@"BinarizationModes" index:0 argumentName:@"EnableFillBinaryVacancy" argumentValue:"1" error:&error];
+iPublicRuntimeSettings *settings = [barcodeReader getRuntimeSettings:nil];
+settings.binarizationModes = @[@(EnumBinarizationModeLocalBlock)];
+[barcodeReader updateRuntimeSettings:settings error:nil];
+[barcodeReader setModeArgument:@"BinarizationModes" index:0 argumentName:@"EnableFillBinaryVacancy" argumentValue:"1" error:nil];
 ```
 
 Swift:
 
 ```swift
-let error: NSError? = NSError()
-let mArray: NSMutableArray? = NSMutableArray()
 let settings = try? barcodeReader.getRuntimeSettings()
-mArray!.setArray(settings.binarizationModes as! [Any])
-mArray![0] = EnumBinarizationMode.LocalBlock
-settings.binarizationModes = mArray!
-barcodeReader.update(settings, error: nil)
-barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1", error: &error)
+settings!.binarizationModes = [EnumBinarizationMode.localBlock]
+try? barcodeReader.updateRuntimeSettings(settings!)
+try? barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1")
 ```
 
 **Remarks**
@@ -232,29 +219,20 @@ the optional argument for a specified mode
 Objective-C:
 
 ```objc
-iPublicRuntimeSettings *settings;
-NSError __autoreleasing * _Nullable error;
-NSString *argumentValue;
-NSMutableArray *mArray = [NSMutableArray arrayWithArray:settings.binarizationModes];
-mArray[0] = [NSNumber numberWithInteger:EnumBinarizationModeLocalBlock];
-settings.binarizationModes = mArray;
-
-[barcodeReader updateRuntimeSettings:settings error:&error];
-[barcodeReader setModeArgument:@"BinarizationModes" index:0 argumentName:@"EnableFillBinaryVacancy" argumentValue:"1" error:&error];
+iPublicRuntimeSettings *settings = [barcodeReader getRuntimeSettings:nil];
+settings.binarizationModes = @[@(EnumBinarizationModeLocalBlock)];
+[barcodeReader updateRuntimeSettings:settings error:nil];
+[barcodeReader setModeArgument:@"BinarizationModes" index:0 argumentName:@"EnableFillBinaryVacancy" argumentValue:"1" error:nil];
 argumentValue = [barcodeReader getModeArgument:@"BinarizationModes" index:0 argumentName:@"EnableFillBinaryVacancy" error:&error];
 ```
 
 Swift:
 
 ```swift
-let error: NSError? = NSError()
-let mArray: NSMutableArray? = NSMutableArray()
 let settings = try? barcodeReader.getRuntimeSettings()
-mArray!.setArray(settings.binarizationModes as! [Any])
-mArray![0] = EnumBinarizationMode.LocalBlock
-settings.binarizationModes = mArray! as! [Any]
-barcodeReader.update(settings, error: nil)
-barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1", error: nil)
+settings?.binarizationModes![0] = EnumBinarizationMode.localBlock
+try? barcodeReader.updateRuntimeSettings(settings!)
+try? barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1")
 let argumentValue = barcodeReader.getModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", error: &error)
 ```
 

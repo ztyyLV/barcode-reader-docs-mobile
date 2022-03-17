@@ -11,13 +11,13 @@ noTitleIndex: true
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`license`](#license) | Stores the license used in DynamsoftBarcodeReader. |
+  | [`initLicense`](#initlicense) | Initialize license for `DynamsoftBarcodeReader`. |
   
   ---
 
 ## initLicense
 
-Initializes DynamsoftBarcodeReader with a license.
+Initializes `DynamsoftBarcodeReader` with a license.
 
 ```objc
 - (instancetype _Nonnull)initLicense:(NSString* _Nonnull)license;
@@ -29,7 +29,7 @@ Initializes DynamsoftBarcodeReader with a license.
 
 **Return Value**
 
-The instance of DynamsoftBarcodeReader.
+The instance of `DynamsoftBarcodeReader`.
 
 **Code Snippet**
 

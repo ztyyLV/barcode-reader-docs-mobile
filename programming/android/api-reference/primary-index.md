@@ -51,7 +51,8 @@ pageStartVer: 8.6
   |----------------------|-------------|
   | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
 
-> Note:
+> Note:  
+>  
 > The following license activation methods are deprecated:
 >
 > - `outputLicenseToString`

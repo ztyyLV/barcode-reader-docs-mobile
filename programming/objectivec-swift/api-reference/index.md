@@ -58,7 +58,8 @@ breadcrumbText: iOS API Reference
   |----------------------|-------------|
   | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
 
-> Note:
+> Note:  
+>  
 > The following license activation methods are deprecated:
 >
 > - `license`
@@ -129,9 +130,9 @@ breadcrumbText: iOS API Reference
 - [`iSamplingImageData`](auxiliary-iSamplingImageData.md)
 - [`iTextResult`](auxiliary-iTextResult.md)
 
-> Note:
+> Note:  
 >
-> `iDMDLSConnectionParameters` is deprecated due to the update of the license. Please use the method [`initLicense`](primary-license.md#initlicense) to activate the license instead.
+> - `iDMDLSConnectionParameters` is deprecated due to the update of the license. Please use the method [`initLicense`](primary-license.md#initlicense) to activate the license instead.
 
 &nbsp;
 
@@ -143,8 +144,8 @@ breadcrumbText: iOS API Reference
   | [`DBRIntermediateResultListener`]({{ site.oc_api }}protocol-dbrintermediateresultlistener.html) | Protocol for a delegate to handle callback when intermediate result returned. |
   | [`DBRLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |
 
-> Note:
->
+> Note:  
+>  
 > - `DBRTextResultDelegate` is deprecated, please use [`DBRTextResultListener`]({{ site.oc_api }}protocol-dbrtextresultlistener.html) instead.
 > - `DBRIntermediateResultDelegate` is deprecated, please use [`DBRIntermediateResultListener`]({{ site.oc_api }}protocol-dbrintermediateresultlistener.html) instead.
 > - [`DBRServerLicenseVerificationDelegate`](protocol-dbrserverlicenseverificationdelegate.md) is deprecated. It handles callback when using `initWithLicenseFromServer`, which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
@@ -186,9 +187,10 @@ breadcrumbText: iOS API Reference
 - [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)
 - [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
 
-> Note:
-> The following Enumerations are deprecated and will be removed in the future.
->
+> Note:  
+>  
+> The following Enumerations are deprecated and will be removed in the future.  
+>  
 > - [`EnumProduct`]({{ site.enumerations }}other-enums.html#product)
 > - [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
 > - [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
