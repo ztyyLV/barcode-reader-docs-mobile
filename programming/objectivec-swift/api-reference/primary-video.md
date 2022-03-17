@@ -40,7 +40,7 @@ Bind a `DynamsoftCameraEnhancer` instance to the Barcode Reader.
 
 **Code Snippet**
 
-This code snippet displays a complete code on how to add DynamsoftCameraEnhancer to you project and start to use Video Decoding Methods to decode and get barcode results from the video streaming.
+This code snippet displays a complete code on how to add DynamsoftCameraEnhancer to your project and start to use Video Decoding Methods to decode and get barcode results from the video streaming.
 
 Objective-C:
 
