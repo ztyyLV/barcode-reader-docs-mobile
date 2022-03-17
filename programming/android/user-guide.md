@@ -188,12 +188,7 @@ There are two ways to include the SDK into your project - local binary dependenc
             });
       }
    };
-
-   try {
-      reader.setTextResultListener(mTextResultListener);
-   } catch (BarcodeReaderException e) {
-      e.printStackTrace();
-   }
+   reader.setTextResultListener(mTextResultListener);
    ```
 
 3. Bind the camera enhancer instance as image source to the barcode reader instance and start scanning.
