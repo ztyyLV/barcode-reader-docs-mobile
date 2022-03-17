@@ -39,25 +39,23 @@ Objective-C:
 
 ```objc
 iPublicRuntimeSettings *settings;
-NSError __autoreleasing * _Nullable error;
 NSArray<iTextResult *> *result;
 NSArray<iIntermediateResult *> *irResult;
-[m_barcodeReader getRuntimeSettings:&error];
+[_barcodeReader getRuntimeSettings:nil];
 settings.intermediateResultTypes = EnumIntermediateResultTypeColourConvertedGrayScaleImage|EnumIntermediateResultTypeOriginalImage|EnumIntermediateResultTypeColourClusteredImage;
-[m_barcodeReader updateRuntimeSettings:settings error:&error];
-result = [m_barcodeReader decodeFileWithName:@"your file path" templateName:@"" error:&error];
-irResult = [m_barcodeReader getIntermediateResult:&error];
+[_barcodeReader updateRuntimeSettings:settings error:nil];
+result = [_barcodeReader decodeFileWithName:@"your file path" error:nil];
+irResult = [_barcodeReader getIntermediateResult:&error];
 ```
 
 Swift:
 
 ```swift
-let error: NSError? = NSError()
 let settings = try? barcodeReader.getRuntimeSettings()
 settings.intermediateResultTypes = EnumIntermediateResultType.ColourConvertedGrayScaleImage.rawValue | EnumIntermediateResultType.OriginalImage.rawValue | EnumIntermediateResultType.ColourClusteredImage.rawValue
-barcodeReader.update(settings, error: &error)
-let result = barcodeReader.decodeFileWithName("your file path", templateName:"", error: &error)
-let irResult = barcodeReader.getIntermediateResult(&error)
+barcodeReader.updateRuntimeSettings(settings)
+let result = try? barcodeReader.decodeFileWithName("your file path", templateName:"")
+let irResult = try? barcodeReader.getIntermediateResult()
 ```
 
 ## enableResultVerification
