@@ -190,7 +190,7 @@ There are two ways to include the SDK into your project - local binary dependenc
    };
 
    try {
-      reader.setTextResultListener(mTextResultListener, null);
+      reader.setTextResultListener(mTextResultListener);
    } catch (BarcodeReaderException e) {
       e.printStackTrace();
    }

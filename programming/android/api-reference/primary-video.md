@@ -153,10 +153,10 @@ You can view the complete code snippet in [`setCameraEnhancer`](#setcameraenhanc
 BarcodeReader reader = new BarcodeReader();
 reader.setTextResultListener(new TextResultListener() {
     @Override
-    public void textResultCallback(int frameId, int imageData, TextResult[] results) {
+    public void textResultCallback(int frameId, ImageData imageData, TextResult[] results) {
         //TODO add your code for using text results
     }
-}, null);
+});
 ```
 
 ## setIntermediateResultListener
