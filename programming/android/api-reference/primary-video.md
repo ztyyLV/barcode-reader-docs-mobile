@@ -164,16 +164,12 @@ reader.setTextResultListener(new TextResultListener() {
 Set a callback interface to process intermediate results generated during frame decoding.
 
 ```java
-void setIntermediateResultListener(IntermediateResultCallback intermediateResultCallback} throws BarcodeReaderException
+void setIntermediateResultListener(IntermediateResultCallback intermediateResultCallback}
 ```
 
 **Parameters**
 
 `intermediateResultCallback`: Callback interface.
-
-**Exceptions**
-
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 

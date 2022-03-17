@@ -39,7 +39,7 @@ void textResultCallback(int frameId, ImageData imageData, TextResult[] results);
 ```java
 TextResultListener textResultListener = new TextResultListener() {
     @Override
-    public void textResultCallback(int frameID, TextResult[] textResults, Object userdate) {
+    public void textResultCallback(int id, ImageData imageData, TextResult[] textResults) {
         // Add your code
     }
 };

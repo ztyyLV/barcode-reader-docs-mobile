@@ -151,8 +151,8 @@ noTitleIndex: true
 
   | Interfaces | Description |
   |----------|-------------|
-  | [`TextResultListener`](interface-textresultlistener.md) | The interface to handle callback when text results are returned. |
-  | [`IntermediateResultListener`](interface-intermediateresultlistener.md) | The interface to handle callback when intermediate results are returned. |
+  | [`TextResultListener`](interface-textresultcallback.md) | The interface to handle callback when text results are returned. |
+  | [`IntermediateResultListener`](interface-intermediateresultcallback.md) | The interface to handle callback when intermediate results are returned. |
   | [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback for method [`initLicense`](primary-license.md#initlicense). |
 
 > Note:
