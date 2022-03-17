@@ -155,7 +155,8 @@ let barcodeResults = try? barcodeReader.decodeFilewithName("your file path")
 Decode barcodes from an image file in memory. Please note that this method is called `decode` in the Swift syntax.
 
 ```objc
-- (NSArray<iTextResult*>* _Nullable)decodeImage:(UIImage* _Nonnull)image 
+- (NSArray<iTextResult*>* _Nullable)decodeImage:(UIImage* _Nonnull)image
+                                          withTemplate:(NSString * _Nonnull)template
                                           error:(NSError* _Nullable * _Nullable)error
                                           NS_SWIFT_NAME(decodeImage(_:));
 ```  
@@ -177,7 +178,7 @@ Objective-C:
 ```objc
 UIImage *image = [[UIImage alloc] init];
 NSError __autoreleasing * _Nullable error;
-NSArray<iTextResult*>* barcodeResults = [barcodeReader decodeImage:image error:&error];
+NSArray<iTextResult*>* barcodeResults = [_barcodeReader decodeImage:image withTemplate:@"" error:&error];
 ```
 
 Swift:
