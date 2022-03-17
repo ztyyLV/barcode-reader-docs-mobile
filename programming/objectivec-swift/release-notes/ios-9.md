@@ -78,8 +78,13 @@ noTitleIndex: true
     - `DynamsoftBarcodeReader.appendTplFileToRuntimeSettings`
     - `DynamsoftBarcodeReader.appendTplStringToRuntimeSettings`
     - `DynamsoftBarcodeReader.outputSettingsToString`
-    - `DynamsoftBarcodeReader.outputSettingsToFile`
-  - The following methods will signal errors by returning NSErrors
+    - `DynamsoftBarcodeReader.outputSettingsToFile`  
+  - The following methods will signal errors by throw exceptions
+    - `DynamsoftBarcodeReader.decodeIntermediateResult`
+    - `DynamsoftBarcodeReader.decodeImage`
+    - `DynamsoftBarcodeReader.decodeFileWithName`
+    - `DynamsoftBarcodeReader.decodeBase64`
+    - `DynamsoftBarcodeReader.decodeBuffer`
     - `DynamsoftBarcodeReader.getIntermediateResult`
     - `DynamsoftBarcodeReader.createIntermediateResult`
     - `DynamsoftBarcodeReader.outputLicenseToString`
@@ -87,12 +92,6 @@ noTitleIndex: true
     - `DynamsoftBarcodeReader.allParameterTemplateNames`
     - `DynamsoftBarcodeReader.getModeArgument`
     - `DynamsoftBarcodeReader.getRuntimeSettings`
-  - The following methods will signal errors by throw exceptions
-    - `DynamsoftBarcodeReader.decodeIntermediateResult`
-    - `DynamsoftBarcodeReader.decodeImage`
-    - `DynamsoftBarcodeReader.decodeFileWithName`
-    - `DynamsoftBarcodeReader.decodeBase64`
-    - `DynamsoftBarcodeReader.decodeBuffer`
   - The following methods will return an BOOL value
     - `DynamsoftBarcodeReader.updateRuntimeSettings`
     - `DynamsoftBarcodeReader.setModeArgument`
@@ -106,6 +105,8 @@ noTitleIndex: true
 - Removed the following legacy video barcode decoding APIs
   - Interface `iDCESettingParameters`
   - Interface `iFrameDecodingParameters`
+  - Enumeration `EnumClarityCalculationMethod`
+  - Enumeration `EnumClarityFilterMode`
   - Protocol `DBRErrorDelegate`
   - Method `DynamsoftBarcodeReader.setCameraEnhancerParam`
   - Method `DynamsoftBarcodeReader.startFrameDecoding`

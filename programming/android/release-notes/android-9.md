@@ -69,6 +69,8 @@ noTitleIndex: true
 - Removed legacy video barcode decoding APIs
   - Class `DCESettingParameters`
   - Class `FrameDecodingParameters`
+  - Enumeration `EnumClarityCalculationMethod`
+  - Enumeration `EnumClarityFilterMode`
   - Interface `ErrorCallback`
   - Method `BarcodeReader.SetCameraEnhancerParam`
   - Method `BarcodeReader.StartCameraEnhancer`
