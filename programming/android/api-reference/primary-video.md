@@ -186,5 +186,5 @@ reader.setIntermediateResultCallback(new IntermediateResultCallback() {
     public void intermediateResultCallback(int frameId, int imageData, IntermediateResult[] results) {
         //TODO add your code for using intermediate results
     }
-}, null);
+});
 ```
