@@ -22,10 +22,10 @@ noTitleIndex: true
 - Added `DRM_BROAD_WARP`, `DRM_LOCAL_REFERENCE` and `DRM_DEWRINKLE` under enumeration [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) to apply new deformation resisting modes.
 - Added a parameter [`FormatSpecification.VerifyCheckDigit`]({{ site.parameters_reference }}verify-check-digit.html).
 - Added an Argument [`ConfidenceThreshold`]({{ site.parameters_reference }}localization-modes.html#confidencethreshold) to the `LocalizationModes` mode arguments.
-- Added static method [`BarcodeReader.initLicense`]({{ site.android_api }}primary-license.html#initlicense) to replace legacy license activation APIs. The new method will support both online and offline license.
-- Added interface [`DBRLicenseVerificationListener`]({{ site.android_api }}interface-dbrdlslicenseverificationdelegate.html) to get license verification callback when using `BarcodeReader.initLicense`.
-- Added interface [`TextResultListener`]({{ site.android_api }}interface-textresultdelegate.html).
-- Added interface [`IntermediateResultListener`]({{ site.android_api }}interface-intermediateresultdelegate.html).
+- Added static method [`BarcodeReader.initLicense`]({{ site.android_api }}primary-license.html#initlicense) to replace legacy license activation APIs. The new method will support both online and offline licenses.
+- Added interface [`DBRLicenseVerificationListener`]({{ site.android_api }}interface-dbrlicenseverificationlistener.html) to get license verification callback when using `BarcodeReader.initLicense`.
+- Added interface [`TextResultListener`]({{ site.android_api }}interface-textresultcallback.html).
+- Added interface [`IntermediateResultListener`]({{ site.android_api }}interface-intermediateresultcallback.html).
 - Added the following image [decoding methods]({{ site.android_api }}primary-decode.html). The parameter `templateName` is not required in the new methods.
   - `BarcodeReader.decodeBuffer`
   - `BarcodeReader.decodeFile`
