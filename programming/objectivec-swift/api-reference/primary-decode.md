@@ -47,7 +47,7 @@ Decode barcodes from the memory buffer containing image pixels in a defined form
 
 **Return Value**
 
-The `iTextResult` of all successfully decoded barcode.
+The `iTextResult` of all successfully decoded barcodes.
 
 ### Get ImageData from DCEFrame
 
@@ -134,7 +134,7 @@ Decode barcodes from a specified image file.
 
 **Return Value**
 
-The `iTextResult` of all successfully decoded barcode.
+The `iTextResult` of all successfully decoded barcodes.
 
 **Code Snippet**
 
@@ -152,11 +152,10 @@ let barcodeResults = try? barcodeReader.decodeFilewithName("your file path")
 
 ## decodeImage
 
-Decode barcodes from an image file in memory. Please note that this method is called `decode` in the Swift syntax.
+Decode barcodes from an image file in memory.
 
 ```objc
 - (NSArray<iTextResult*>* _Nullable)decodeImage:(UIImage* _Nonnull)image
-                                          withTemplate:(NSString * _Nonnull)template
                                           error:(NSError* _Nullable * _Nullable)error
                                           NS_SWIFT_NAME(decodeImage(_:));
 ```  
@@ -164,12 +163,11 @@ Decode barcodes from an image file in memory. Please note that this method is ca
 **Parameters**
 
 `[in] image` The image file in memory.  
-`[in] withTemplate` The template (JSON file) that is configures the barcode reader for the decoding process.
 `[in, out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
 
-The `iTextResult` of all successfully decoded barcode.
+The `iTextResult` of all successfully decoded barcodes.
 
 **Code Snippet**
 
@@ -178,7 +176,7 @@ Objective-C:
 ```objc
 UIImage *image = [[UIImage alloc] init];
 NSError __autoreleasing * _Nullable error;
-NSArray<iTextResult*>* barcodeResults = [_barcodeReader decodeImage:image withTemplate:@"" error:&error];
+NSArray<iTextResult*>* barcodeResults = [_barcodeReader decodeImage:image error:&error];
 ```
 
 Swift:
@@ -204,7 +202,7 @@ Decode barcodes from an image file encoded as a base64 string.
 
 **Return Value**
 
-The `iTextResult` of all successfully decoded barcode.
+The `iTextResult` of all successfully decoded barcodes.
 
 **Code Snippet**
 
@@ -273,7 +271,7 @@ Decodes barcode from intermediate results.
 
 **Return Value**
 
-The `iTextResult` of all successfully decoded barcode.
+The `iTextResult` of all successfully decoded barcodes.
 
 **Code Snippet**
 
