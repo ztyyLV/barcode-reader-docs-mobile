@@ -164,7 +164,7 @@ reader.setTextResultListener(new TextResultListener() {
 Set a callback interface to process intermediate results generated during frame decoding.
 
 ```java
-void setIntermediateResultListener(IntermediateResultCallback intermediateResultCallback}
+void setIntermediateResultListener(IntermediateResultListener intermediateResultListener)
 ```
 
 **Parameters**
@@ -181,10 +181,10 @@ PublicRuntimeSettings settings = reader.getRuntimeSettings();
 // You can set intermediateResult type when using intermediateResultListener
 settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CLUSTERED_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE;
 reader.updateRuntimeSettings(settings);
-reader.setIntermediateResultListener(new IntermediateResultCallback() {
+reader.setIntermediateResultListener(new IntermediateResultListener() {
     @Override
-    public void intermediateResultCallback(int frameId, int imageData, IntermediateResult[] results) {
-        //TODO add your code for using intermediate results
+    public void intermediateResultCallback(int i, ImageData imageData, IntermediateResult[] intermediateResults) {
+        //TODO add your code for using intermediate results           
     }
 });
 ```
