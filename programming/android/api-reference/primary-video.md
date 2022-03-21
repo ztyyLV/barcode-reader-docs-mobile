@@ -138,7 +138,7 @@ reader.stopScanning();
 Set a callback interface to process text results generated during frame decoding.
 
 ```java
-void setTextResultListener(TextResultCallback textResultCallback)
+void setTextResultListener(TextResultListener textResultListener)
 ```
 
 **Parameters**
