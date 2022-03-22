@@ -42,14 +42,14 @@ Objective-C:
 
 ```objc
 NSString* json = @"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}";
-[_barcodeReader initRuntimeSettingsWithString:json conflictMode:EnumConflictModeOverwrite error:&error];
+[_barcodeReader initRuntimeSettingsWithString:json conflictMode:EnumConflictModeOverwrite error:nil];
 ```
 
 Swift:
 
 ```swift
 let json = "{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}"
-barcodeReader.initRuntimeSettings(with: json, conflictMode: .overwrite, error: &error)
+try? barcodeReader.initRuntimeSettingsWithString(json, conflictMode: .overwrite)
 ```
 
 #### From JSON File
@@ -61,17 +61,15 @@ Use method [`initRuntimeSettingsWithFile`]({{ site.oc_api }}primary-parameter-an
 Objective-C:
 
 ```objc
-NSError *error = [[NSError alloc] init];
 // The method will overwrite the settings if the settings already exist.
-[barcodeReader initRuntimeSettingsWithFile:@"your template file path" conflictMode:EnumConflictModeOverwrite error:&error];
+[barcodeReader initRuntimeSettingsWithFile:@"your template file path" conflictMode:EnumConflictModeOverwrite error:nil];
 ```
 
 Swift:
 
 ```swift
-var error: NSError? = NSError()
 // The method will overwrite the settings if the settings already exist.
-barcodeReader.initRuntimeSettingsWithFile(fileName:"your template file path", conflictMode:EnumConflictMode.overwrite, error:&error)
+try? barcodeReader.initRuntimeSettingsWithFile("your template file path", conflictMode:EnumConflictMode.overwrite)
 ```
 
 **Related APIs**

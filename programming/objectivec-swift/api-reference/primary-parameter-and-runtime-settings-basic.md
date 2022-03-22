@@ -83,7 +83,7 @@ Swift:
 ```swift
 let settings = try? barcodeReader.getRuntimeSettings()
 // After you have made some changes on the runtime settings.
-barcodeReader.updateRuntimeSettings(settings)
+try? barcodeReader.updateRuntimeSettings(settings!)
 ```
 
 ### With a Preset Template
