@@ -17,8 +17,6 @@ If you have followed the [Getting started](#user-guide.md), you may have managed
 Specifying the barcode format is always the first step of barcode reader configuration. Be sure to confirm that the target barcode formats are included. Meanwhile, excluding the undesired barcodes will improve the processing efficiency. If you are not familiar with barcode format, the <a href="https://www.dynamsoft.com/barcode-types/barcode-types/" target="_blank">introduction of barcode formats</a> may help you understand it. Generally, the barcode format settings are updated via `PublicRuntimeSettings` class by specifying enumeration member of `BarcodeFormat` or `BarcodeFormat_2`.
 
 ```swift
-let error: NSError? = NSError()
-
 // First step, get the instance of setting
 // You can either get the instance from current settings or create a new instance.
 let settings = try? barcodeReader.getRuntimeSettings()
@@ -28,10 +26,10 @@ let settings = try? barcodeReader.getRuntimeSettings()
 // The Majority of common barcodes like oneD barcode and QR code are stored in the first group of barcode format.
 // Some of the enumeration members are combined value of a group of barcodes like BF_ONED and BF_GS1_DATABAR
 // Use "|" to enable multiple barcode formats at one time.
-settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE
+settings.barcodeFormatIds = EnumBarcodeFormat.ONED | EnumBarcodeFormat.QRCODE
 
 // Update the settings.
-barcodeReader.update(settings, error: &error)
+try? barcodeReader.updateRuntimeSettings(settings!)
 ```
 
 ## Set Barcode Count
@@ -46,8 +44,6 @@ There are some suggestions on how to set the `expectedBarcodeCount`:
 - When the number of barcodes is unknown and you want to output **at least one** barcode result as soon as possible, you can set the `expectedBarcodeCount` to **0**. The barcode reader will try to decode at least one barcode from the image.
 
 ```swift
-let error: NSError? = NSError()
-
 // Similar to the barcode format setting, you can update the barcode count setting via PublicRuntimeSettings.
 let settings = try? barcodeReader.getRuntimeSettings()
 
@@ -55,10 +51,10 @@ let settings = try? barcodeReader.getRuntimeSettings()
 settings.expectedBarcodesCount = 1
 
 // You can update the barcode format settings together with the barcode count settings.
-settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE
+settings.barcodeFormatIds = EnumBarcodeFormat.ONED | EnumBarcodeFormat.QRCODE
 
 // Update the settings.
-barcodeReader.update(settings, error: &error)
+try? barcodeReader.updateRuntimeSettings(settings!)
 ```
 
 ## Define a Scan Region
@@ -77,7 +73,7 @@ scanRegion.regionBottom = 75
 scanRegion.regionLeft = 25
 scanRegion.regionRight = 75
 scanRegion.regionMeasuredByPercentage = 1
-dce.setScanRegion(scanRegion, error: &error)
+dce.setScanRegion(scanRegion, error:nil)
 ```
 
 The above settings can meet the majority of usage scenarios. However, if the performance is still not satisfying, the following articles will help you on improving the performance.
