@@ -8,8 +8,11 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-
 # FrameDecodingParameters
+
+> Note:  
+>
+> - This class is removed in 9.0 version. Please use the [video methods](primary-video.md) for video barcode scanning if you are using the latest version.
 
 Defines a struct to configure the frame decoding Parameters.  
 

@@ -27,7 +27,7 @@ After unzipping, the root directory of the DBR installation package is **Dynamso
 
 | File | Description |
 |---------|-------------|
-| `DynamsoftBarcodeReaderAndroid.aar` | The Barcode Reader library, including all barcode decoding releated algorithms and APIs. |
+| `DynamsoftBarcodeReaderAndroid.aar` | The Barcode Reader library, including all barcode decoding related algorithms and APIs. |
 | `DynamsoftCameraEnhancerAndroid.aar` | The Camera Enhancer library, including camera control APIs and frame preprocessing algorithm.  |
 
 ## Build Your First Application
@@ -45,7 +45,8 @@ In this section, let's see how to create a HelloWorld app for reading barcodes f
 2. Choose the correct template for your project. In this sample, we use **Empty Activity**.
 
 3. When prompted, choose your app name 'HelloWorld' and set the **Save** location, **Language**, and **Minimum SDK** (we use 21 here).
-    > Note: With **minSdkVersion** set to 21, your app is compatible with more than 94.1% of devices on the Google Play Store (last update: March 2021).
+    > Note:  
+    > - With **minSdkVersion** set to 21, your app is compatible with more than 94.1% of devices on the Google Play Store (last update: March 2021).
 
 ### Include the Library
 
@@ -100,7 +101,9 @@ There are two ways to include the SDK into your project - local binary dependenc
    }
    ```
 
-   > Note: Please replace {version-number} with the correct version number.
+   > Note:  
+   >  
+   > - Please replace {version-number} with the correct version number.
 
 3. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
 
@@ -112,6 +115,25 @@ There are two ways to include the SDK into your project - local binary dependenc
    ```
 
 <div class="fold-panel-end"></div>
+
+### Initialize License
+
+   ```java
+   BarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DBRLicenseVerificationListener() {
+      @Override
+      public void DBRLicenseVerificationCallback(boolean isSuccess, Exception error) {
+         if(!isSuccess){
+             error.printStackTrace();
+         }
+      }
+   });
+   ```
+
+   >Note:  
+   >  
+   >- Network connection is required for the license to work.
+   >- The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here will grant you a time-limited public trial license.
+   >- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a> to request for an extension.
 
 ### Initialize Camera Module
 
@@ -151,33 +173,13 @@ There are two ways to include the SDK into your project - local binary dependenc
    reader = new BarcodeReader();
    ```
 
-2. Initialize the license.
+2. Create a barcode result listener and register with the barcode reader instance to get recognized barcode results.
 
    ```java
-   DMDLSConnectionParameters dbrParameters = new DMDLSConnectionParameters();
-   dbrParameters.organizationID = "200001";
-   reader.initLicenseFromDLS(dbrParameters, new DBRDLSLicenseVerificationListener() {
-         @Override
-         public void DLSLicenseVerificationCallback(boolean isSuccessful, Exception e) {
-            if (!isSuccessful) {
-               e.printStackTrace();
-            }
-         }
-   });
-   ```
-
-   >Note:
-   >- Network connection is required for the license to work.
-   >- The organization id 200001 here will grant you a time-limited public trial license.
-   >- If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
-
-3. Create text callback to obtain the recognized barcode results.
-
-   ```java
-   TextResultCallback mTextResultCallback = new TextResultCallback() {
+   TextResultListener mTextResultListener = new TextResultListener() {
    // Obtain the recognized barcode results and display.
    @Override
-      public void textResultCallback(int i, TextResult[] textResults, Object userData) {
+      public void textResultCallback(int id, ImageData imageData, TextResult[] textResults) {
             (MainActivity.this).runOnUiThread(new Runnable() {
                @Override
                public void run() {
@@ -186,26 +188,22 @@ There are two ways to include the SDK into your project - local binary dependenc
             });
       }
    };
+   reader.setTextResultListener(mTextResultListener);
    ```
 
-4. Create settings of video barcode reading and bind to Barcode Reader object
+3. Bind the camera enhancer instance as image source to the barcode reader instance and start scanning.
 
    ```java
    // Bind the Camera Enhancer instance to the Barcode Reader instance.
    // The mCameraEnhancer is the instance of the Dynamsoft Camera Enhancer.
    // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
    reader.setCameraEnhancer(mCameraEnhancer);
-   // Make this setting to get the result. The result will be an object that contains text result and other barcode information.
-   try {
-      reader.setTextResultCallback(mTextResultCallback, null);
-   } catch (BarcodeReaderException e) {
-      e.printStackTrace();
-   }
+
    // Start the barcode scanning thread.
    reader.startScanning();
    ```
 
-5. Override the `MainActivity.onResume` and `MainActivity.onPause` functions to start/stop video barcode scanning. After scanning starts, the Barcode Reader will automatically invoke the `decodeBuffer` API to process the video frames from the Camera Enhancer, then send the recognized barcode results to the text result callback.
+4. Override the `MainActivity.onResume` and `MainActivity.onPause` functions to start/stop video barcode scanning. After scanning starts, the Barcode Reader will automatically invoke the `decodeBuffer` API to process the video frames from the Camera Enhancer, then send the recognized barcode results to the text result callback.
 
    ```java
    @Override
@@ -235,7 +233,7 @@ There are two ways to include the SDK into your project - local binary dependenc
 
 ### Additional Steps
 
-1. In the Project window, open **app > res > layout > `activity_main.xml`**, create a text view section under the root node to display recognized barcode result.
+1. In the Project window, open **app > res > layout > `activity_main.xml`**, create a text view section under the root node to display the recognized barcode results.
 
    ```xml
     <TextView

@@ -32,9 +32,10 @@ Starting from v8.8 of DBR, the SDK also offers **xcframeworks** for iOS developm
 
 ## Build Your First Application
 
-In this section, let’s see how to create a **HelloWorld** app for reading barcodes from camera video input.
+In this section, let's see how to create a **HelloWorld** app for reading barcodes from camera video input.
 
-> Note:
+> Note:  
+>  
 >- You can download the complete Objective-C source code [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC)
 >- You can download the complete Swift source code [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/HelloWorldSwift)
 
@@ -74,9 +75,60 @@ You can add your downloaded frameworks into your project through the following s
    import DynamsoftCameraEnhancer
    ```
 
-### Let's Configure the Camera First
+### Initialize the License
 
-1. Create an instance of **DynamsoftCameraEnhancer** for getting video input.
+Dynamsoft barcode reader needs a valid license to work. It is recommended to put the license activation code under the **AppDelegate** file.
+
+1. Add DBRLicenseVerificationListener to the **AppDelegate**:
+
+    ```objc
+    @interface AppDelegate ()<DBRLicenseVerificationListener>
+    ```
+
+    Swift:
+
+    ```swift
+    class AppDelegate: DBRLicenseVerificationListener{}
+    ```
+
+2. Add the following code to initialize the license in method `application:didFinishLaunchingWithOptions:`:
+
+    Objective-C:
+
+    ```objc
+    @implementation AppDelegate
+    - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+        /*Initialize license for Dynamsoft Barcode Reader.*/
+        /* The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here is a time-limited public trial license. Note that network connection is required for this license to work.*/
+        /* You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios*/
+        [DynamsoftBarcodeReader initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+        return YES;
+    }
+
+    -(void)DBRLicenseVerificationListener:(bool)isSuccess error:(NSError *)error{
+
+    }
+    ```
+
+    Swift:
+
+    ```swift
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        /*Initialize license for Dynamsoft Barcode Reader.*/
+        /* The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here is a time-limited public trial license. Note that network connection is required for this license to work.*/
+        /* You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios*/
+        DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
+        return true
+    }
+
+    func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+
+    }
+    ```
+
+### Configure the Camera to Get Video Streaming
+
+1. Go back to the `ViewController` file. Create an instance of **DynamsoftCameraEnhancer** for getting video input.
 
     Objective-C:
 
@@ -144,22 +196,24 @@ You can add your downloaded frameworks into your project through the following s
     }
     ```
 
-### Now to Add the Barcode Reader
+### Configure the Barcode Reader and Start Decoding
 
-1. First off, we need to create an instance of the Barcode Reader, so let's define a corresponding variable for the object in our `ViewController`
+1. Still in the `ViewController` file, declare and create the instance of `barcodeReader`:
 
     Objective-C:
 
-    ```objectivec
+    ```objc
     @property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
-
-    /*
-    ...
-    */
 
     - (void)viewDidLoad {
         [super viewDidLoad];
         [self configurationDBR];
+    }
+
+    - (void)configurationDBR {
+        /* Create the instance */
+        _barcodeReader = [[DynamsoftBarcodeReader alloc] init];
+        /* You can add your barcode reader configurations here. */
     }
     ```
 
@@ -168,73 +222,69 @@ You can add your downloaded frameworks into your project through the following s
     ```swift
     var barcodeReader:DynamsoftBarcodeReader! = nil
 
-    /*
-    ...
-    */
-
     override func viewDidLoad() {
         super.viewDidLoad()
         configurationDBR()
     }
+
+    func configurationDBR(){
+        /* Create the instance */
+        barcodeReader = DynamsoftBarcodeReader.init()
+        /* You can add your barcode reader configurations here. */
+    }
     ```
 
-2. Much like the Camera Enhancer component, let's now configure the Barcode Reader for use. This includes setting up the `DLS` (Dynamsoft License Server) parameters for device verification. Please note that the license is assigned via the `organizationID` parameter. The value currently assigned in the samples is used as a time-limited public trial for any new user.
+3. After both of the barcode reader instance and the camera enhancer instance are created, let's bind the camera enhancer instance to the barcode reader so that the barcode reader can get video streaming for barcode decoding. Add the following to the `configurationDCE` method:
 
     Objective-C:
 
-    ```objectivec
-    - (void)configurationDBR{
-        iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
-        // A network connection is required to active the public trial license.
-        // The public trial license is time-limited. Please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=installer&package=ios to get extension and more information about license.
-        dls.organizationID = @"200001";
-        _barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
+    ```objc
+    - (void)configurationDCE{
+        // Bind the Camera Enhancer instance to the Barcode Reader instance.
+        // The _dce is the instance of the Dynamsoft Camera Enhancer.
+        // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
+        [_barcodeReader setCameraEnhancer:_dce];
+        // Start Scanning controls the process of video barcode decoding
+        [_barcodeReader startScanning];
     }
     ```
 
     Swift:
 
     ```swift
-    func configurationDBR() {
-        // Configure the Dynamsoft License Server parameters for verification purposes
-        let dls = iDMDLSConnectionParameters()
-        // A network connection is required to active the public trial license.
-        // The public trial license is time-limited. Please visit: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=installer&package=ios to get extension and more information about license.
-        dls.organizationID = "200001"
-        barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
+    /*Deploy the camera with Dynamsoft Camera Enhancer.*/
+    func configurationDCE() {
+        /*Bind the Camera Enhancer instance to the Barcode Reader instance.
+        The _dce is the instance of the Dynamsoft Camera Enhancer.
+        The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.*/
+        barcodeReader.setCameraEnhancer(dce)
+        /* Start Scanning controls the process of video barcode decoding. */
+        barcodeReader.startScanning()
     }
     ```
 
-3. Once you create the Barcode Reader object, a `textResultCallback` is then implemented where the barcode results will be stored. If the `verificationDelegate` is set to `self`, the callback must be implemented in the `ViewController` class or the build will result in an error. On that same note, a callback for the `DLS` verification process is also implemented (`dlsLicenseVerificationCallback`).
+4. Once you have start the video barcode decoding thread, `TextResultCallback` is then implemented when barcode result is detected.
 
-    Also note that the `DBRTextResultDelegate` and `DMDLSLicenseVerificationDelegate` interfaces must be added at the head.
+    To acquire the barcode `TextResult` with `TextResultCallback`, please firstly add the `DBRTextResultListener` to the `ViewController`.
 
     Objective-C:
 
-    ```objectivec
-    @interface ViewController ()<DMDLSLicenseVerificationDelegate, DBRTextResultDelegate>
+    ```objc
+    @interface ViewController ()<DBRTextResultListener>
+    ```
 
-    @implementation ViewController
+    Swift:
 
-    ...
+    ```swift
+    class ViewController: DBRTextResultListener{}
+    ```
 
-    - (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
-        NSString* msg = @"";
-        if(error != nil)
-        {
-            msg = error.userInfo[NSUnderlyingErrorKey];
-            if(msg == nil)
-            {
-                msg = [error localizedDescription];
-            }
-            [self showResult:@"Server license verify failed"
-                        msg:msg
-                    acTitle:@"OK"
-                completion:^{
-                }];
-        }
-    }
-    - (void)textResultCallback:(NSInteger)frameId results:(NSArray<iTextResult *> *)results userData:(NSObject *)userData{
+    Then implement the listener in the `ViewController`.
+
+    Objective-C:
+
+    ```objc
+    - (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
         if (results.count > 0) {
             NSString *title = @"Results";
             NSString *msgText = @"";
@@ -266,27 +316,7 @@ You can add your downloaded frameworks into your project through the following s
     Swift:
 
     ```swift
-    class ViewController: UIViewController, DBRTextResultDelegate, DMDLSLicenseVerificationDelegate {
-        
-        ...
-
-        func dlsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
-        var msg:String? = nil
-        if(error != nil)
-        {
-            let err = error as NSError?
-            msg = err!.userInfo[NSUnderlyingErrorKey] as? String
-            if(msg == nil)
-            {
-                msg = err?.localizedDescription
-            }
-            showResult("Server license verify failed", msg!, "OK") {
-            }
-        }
-    }
-    
-    /* Obtain the recognized barcode results from the textResultCallback and display the results*/
-    func textResultCallback(_ frameId: Int, results: [iTextResult]?, userData: NSObject?) {
+    func textResultCallback(_ frameId: Int, ImageData: iImageData, results: [iTextResult]?) {
         if results!.count > 0 {
             var msgText:String = ""
             var title:String = "Results"
@@ -305,18 +335,15 @@ You can add your downloaded frameworks into your project through the following s
     }
     ```
 
-4. Before we have done, we are going to bind the Camera Enhancer instance with the Barcode Reader. Please add the following to the `configurationDCE` method
+5. Bind the TextResultListener to the barcode reader.
 
     Objective-C:
 
-    ```objectivec
+    ```objc
     - (void)configurationDCE{
-        // Bind the Camera Enhancer instance to the Barcode Reader instance.
-        // The _dce is the instance of the Dynamsoft Camera Enhancer.
-        // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
         [_barcodeReader setCameraEnhancer:_dce];
         // Make this setting to get the result. The result will be an object that contains text results and other barcode information.
-        [_barcodeReader setDBRTextResultDelegate:self userData:nil];
+        [_barcodeReader setDBRTextResultListener:self];
         [_barcodeReader startScanning];
     }
     ```
@@ -324,23 +351,19 @@ You can add your downloaded frameworks into your project through the following s
     Swift:
 
     ```swift
-    /*Deploy the camera with Dynamsoft Camera Enhancer.*/
     func configurationDCE() {
-        /*Bind the Camera Enhancer instance to the Barcode Reader instance.
-        The _dce is the instance of the Dynamsoft Camera Enhancer.
-        The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.*/
         barcodeReader.setCameraEnhancer(dce)
-        /*Make this setting to get the result. The result will be an object that contains text result and other barcode information.*/
-        barcodeReader.setDBRTextResultDelegate(self, userData: nil)
+        /* Make this setting to get the result. The result will be an object that contains text result and other barcode information. */
+        barcodeReader.setDBRTextResultListener(self)
         barcodeReader.startScanning()
     }
     ```
 
-5. Lastly, add the `showText` method to display the barcode results on the UI
+6. Lastly, add the `showText` method to display the barcode results on the UI
 
     Objective-C:
 
-    ```objectivec
+    ```objc
     - (void)showResult:(NSString *)title msg:(NSString *)msg acTitle:(NSString *)acTitle completion:(void (^)(void))completion {
         dispatch_async(dispatch_get_main_queue(), ^{
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];

@@ -39,7 +39,7 @@ BarcodeReader = [[DynamsoftBarcodeReader alloc] init];
 
 Swift:
 
-```Swift
+```swift
 let barcodeReader = DynamsoftBarcodeReader.init()
 ```
 

@@ -1,19 +1,19 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - Interface IntermediateResultCallback
-description: This the interface IntermediateResultCallback page of Dynamsoft Barcode Reader for Android SDK.
-keywords: IntermediateResultCallback, interface, android
+title: Dynamsoft Barcode Reader Android API Reference - Interface IntermediateResultListener
+description: This the interface IntermediateResultListener page of Dynamsoft Barcode Reader for Android SDK.
+keywords: IntermediateResultListener, interface, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 ---
 
-# IntermediateResultCallback
+# IntermediateResultListener
 
-`IntermediateResultCallback` is the interface to handle callback when intermediate results are returned.
+`IntermediateResultListener` is the interface to handle callback when intermediate results are returned.
 
 ```java
-interface com.dynamsoft.dbr.IntermediateResultCallback
+interface com.dynamsoft.dbr.IntermediateResultListener
 ```
 
 | Method | Description |
@@ -22,24 +22,24 @@ interface com.dynamsoft.dbr.IntermediateResultCallback
 
 ## intermediateResultCallback
 
-The abstract class for users to get text result from the callback.
+The abstract class for users to get intermediate results from the callback.
 
 ```java
-void intermediateResultCallback(int var1, TextResult[] var2, Object var3);
+void intermediateResultCallback(int frameID, ImageData imageData, IntermediateResult[] intermediateResult;
 ```
 
 **Parameters**
 
 `frameId`: The ID of the frame.  
-`results`: The intermediate result of the frame.  
-`userData`: Arguments passed to your function.
+`imageData`: The image data of the frame.  
+`results`: The intermediate result of the frame.
 
 **Code Snippet**
 
 ```java
-IntermediateResultCallback intermediateResultCallback = new IntermediateResultCallback() {
+IntermediateResultListener intermediateResultListener = new IntermediateResultListener() {
     @Override
-    public void intermediateResultCallback(int frameID, IntermediateResult[] intermediateResult, Object userDate) {
+    public void intermediateResultCallback(int frameID, ImageData imageData, IntermediateResult[] intermediateResult) {
         // Add your code
     }
 };

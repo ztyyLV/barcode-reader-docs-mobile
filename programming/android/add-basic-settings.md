@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Add Basic Settings
 
-If you have followed the [Getting started](#user-guide.md), you may have managed to create a video streaming barcode reader project. In this article, you can learn about how to add basic runtime settings to your barcode reader project.
+If you have followed the [Getting started](user-guide.md), you may have managed to create a video streaming barcode reader project. In this article, you can learn about how to add basic runtime settings to your barcode reader project.
 
 ## Specify Barcode Formats
 

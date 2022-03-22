@@ -10,6 +10,10 @@ pageStartVer: 8.2.1
 
 # Class iDCESettingParameters
 
+> Note:  
+>  
+> - This class is removed in 9.0 version. Please use the [video methods](primary-video.md) for video barcode scanning if you are using the latest version.
+
 Stores the iDCESettingParameters information.
 
 ```objc
@@ -28,7 +32,7 @@ Stores the iDCESettingParameters information.
 
 The instance of Camera Enhancer. This instance will enable DBR to fetch frames from the Camera Enhancer frame queue and also take control of the status of the camera.
 
-```objectivec
+```objc
 DynamsoftCameraEnhancer* cameraInstance
 ```
 
@@ -36,7 +40,7 @@ DynamsoftCameraEnhancer* cameraInstance
 
 Set text result delegate.
 
-```objectivec
+```objc
 DBRTextResultDelegate* textResultDelegate
 ```
 
@@ -51,7 +55,7 @@ The `textResultDelegate` includes the following Parameters:
 
 Set the `UserData` of the `textResultDelegate`.
 
-```objectivec
+```objc
 NSObject* textResultData
 ```
 
@@ -59,7 +63,7 @@ NSObject* textResultData
 
 Set intermediate result delegate.
 
-```objectivec
+```objc
 DBRIntermediateResultDelegate* intermediateResultDelegate
 ```
 
@@ -73,6 +77,6 @@ The `intermediateResultDelegate` includes the following Parameters:
 
 Set the `UserData` of the `intermediateResultDelegate`.
 
-```objectivec
+```objc
 NSObject* intermediateResultData
 ```

@@ -27,8 +27,9 @@ Initialize runtime settings with the parameters obtained from a JSON file.
 
 ```objc
 - (void)initRuntimeSettingsWithFile:(NSString* _Nonnull)fileName
-                        conflictMode:(EnumConflictMode)conflictMode
-                        error:(NSError* _Nullable * _Nullable)error;
+                       conflictMode:(EnumConflictMode)conflictMode
+                              error:(NSError* _Nullable * _Nullable)error
+                              NS_SWIFT_NAME(initRuntimeSettingsWithFile(_:conflictMode:));
 ```
 
 **Parameters**
@@ -42,15 +43,13 @@ Initialize runtime settings with the parameters obtained from a JSON file.
 Objective-C:
 
 ```objc
-NSError __autoreleasing * _Nullable error;
-[barcodeReader initRuntimeSettingsWithFile:@"your template file path" conflictMode:EnumConflictModeOverwrite error:&error];
+[barcodeReader initRuntimeSettingsWithFile:@"your template file path" conflictMode:EnumConflictModeOverwrite error:nil];
 ```
 
 Swift:
 
-```Swift
-let error: NSError? = NSError()
-barcodeReader.initRuntimeSettingsWithFile(fileName:"your template file path", conflictMode:EnumConflictMode.overwrite, error:&error)
+```swift
+try? barcodeReader.initRuntimeSettingsWithFile("your template file path", conflictMode:EnumConflictMode.overwrite)
 ```
 
 ## initRuntimeSettingsWithString
@@ -59,8 +58,9 @@ Initialize runtime settings with the parameters obtained from a JSON string.
 
 ```objc
 - (void)initRuntimeSettingsWithString:(NSString* _Nonnull)content
-                        conflictMode:(EnumConflictMode)conflictMode
-                        error:(NSError* _Nullable * _Nullable)error;
+                         conflictMode:(EnumConflictMode)conflictMode
+                                error:(NSError* _Nullable * _Nullable)error
+                                NS_SWIFT_NAME(initRuntimeSettingsWithString(_:conflictMode:));
 ```
 
 **Parameters**
@@ -74,15 +74,13 @@ Initialize runtime settings with the parameters obtained from a JSON string.
 Objective-C:
 
 ```objc
-NSError __autoreleasing * _Nullable error;
-[barcodeReader initRuntimeSettingsWithString:@"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}" conflictMode:EnumConflictModeOverwrite error:&error];
+[barcodeReader initRuntimeSettingsWithString:@"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}" conflictMode:EnumConflictModeOverwrite error:nil];
 ```
 
 Swift:
 
-```Swift
-let error: NSError? = NSError()
-barcodeReader.initRuntimeSettingsWithString(content:"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", conflictMode:EnumConflictMode.overwrite, error:&error)
+```swift
+try? barcodeReader.initRuntimeSettingsWithString(content:"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", conflictMode:EnumConflictMode.overwrite)
 ```
 
 ## appendTplFileToRuntimeSettings
@@ -91,8 +89,9 @@ Append a new template file to the current runtime settings.
 
 ```objc
 - (void)appendTplFileToRuntimeSettings:(NSString * _Nonnull)fileName
-                        conflictMode:(EnumConflictMode)conflictMode
-                                error:(NSError * _Nullable *_Nullable)error;
+                          conflictMode:(EnumConflictMode)conflictMode
+                                 error:(NSError * _Nullable *_Nullable)error
+                                 NS_SWIFT_NAME(appendTplFileToRuntimeSettings(_:conflictMode:));
 ```
 
 **Parameters**
@@ -106,15 +105,13 @@ Append a new template file to the current runtime settings.
 Objective-C:
 
 ```objc
-NSError __autoreleasing * _Nullable error;
-[barcodeReader appendTplFileToRuntimeSettings:@"your template file path" conflictMode:EnumConflictModeIgnore error:&error];
+[barcodeReader appendTplFileToRuntimeSettings:@"your template file path" conflictMode:EnumConflictModeIgnore error:nil];
 ```
 
 Swift:
 
-```Swift
-let error: NSError? = NSError()
-barcodeReader.appendTplFileToRuntimeSettings(fileName:"your template file path", conflictMode:EnumConflictMode.ignore, error:&error)
+```swift
+try? barcodeReader.appendTplFileToRuntimeSettings(fileName:"your template file path", conflictMode:EnumConflictMode.ignore, error:&error)
 ```
 
 ## appendTplStringToRuntimeSettings
@@ -124,7 +121,8 @@ Append a new template string to the current runtime settings.
 ```objc
 - (void)appendTplStringToRuntimeSettings:(NSString * _Nonnull)content
                             conflictMode:(EnumConflictMode)conflictMode
-                                    error:(NSError *_Nullable *_Nullable)error;
+                                   error:(NSError *_Nullable *_Nullable)error   
+                                   NS_SWIFT_NAME(appendTplStringToRuntimeSettings(_:conflictMode:));
 ```
 
 **Parameters**
@@ -138,17 +136,15 @@ Append a new template string to the current runtime settings.
 Objective-C:
 
 ```objc
-NSError __autoreleasing * _Nullable error;
-[barcodeReader initRuntimeSettingsWithString:@"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}" conflictMode:EnumConflictModeOverwrite error:&error];
-[barcodeReader appendTplStringToRuntimeSettings:@"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_OneD\"], \"ExpectedBarcodesCount\":20}}" conflictMode:EnumConflictModeIgnore error:&error];
+[barcodeReader initRuntimeSettingsWithString:@"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}" conflictMode:EnumConflictModeOverwrite error:nil];
+[barcodeReader appendTplStringToRuntimeSettings:@"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_OneD\"], \"ExpectedBarcodesCount\":20}}" conflictMode:EnumConflictModeIgnore error:nil];
 ```
 
 Swift:
 
-```Swift
-let error: NSError? = NSError()
-barcodeReader.initRuntimeSettingsWithString(content:"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", conflictMode:EnumConflictMode.Overwrite, error:&error)
-barcodeReader.appendTplStringToRuntimeSettings(content:"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_OneD\"], \"ExpectedBarcodesCount\":20}}", conflictMode:EnumConflictMode.ignore, error:&error)
+```swift
+try? barcodeReader.initRuntimeSettingsWithString(content:"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", conflictMode:EnumConflictMode.Overwrite)
+try? barcodeReader.appendTplStringToRuntimeSettings(content:"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_OneD\"], \"ExpectedBarcodesCount\":20}}", conflictMode:EnumConflictMode.ignore)
 ```
 
 ## allParameterTemplateNames
@@ -172,16 +168,13 @@ The template name array.
 Objective-C:
 
 ```objc
-NSError __autoreleasing * _Nullable error;
-
-NSArray* allTplNames = [barcodeReader allParameterTemplateNames:&error];
+NSArray* allTplNames = [barcodeReader allParameterTemplateNames:nil];
 ```
 
 Swift:
 
-```Swift
-let error: NSError? = NSError()
-let allTplNames = try! barcodeReader.allParameterTemplateNames()
+```swift
+let allTplNames = try? barcodeReader.allParameterTemplateNames()
 ```
 
 ## outputSettingsToFile
@@ -191,7 +184,8 @@ Outputs runtime settings and save them into a settings file (JSON file).
 ```objc
 - (void)outputSettingsToFile:(NSString *_Nullable)filePath 
                 settingsName:(NSString*_Nonnull)settingsName 
-                        error:(NSError*_Nullable *_Nullable)error;
+                       error:(NSError*_Nullable *_Nullable)error   
+                       NS_SWIFT_NAME(outputSettingsToFile(_:settingsName:));
 ```
 
 **Parameters**
@@ -205,15 +199,13 @@ Outputs runtime settings and save them into a settings file (JSON file).
 Objective-C:
 
 ```objc
-NSError __autoreleasing * _Nullable error;
-settingsName = [barcodeReader outputSettingsToFile:@"your saving file path" settingsName:@"currentRuntimeSettings" error:&error];
+settingsName = [barcodeReader outputSettingsToFile:@"your saving file path" settingsName:@"currentRuntimeSettings" error:nil];
 ```
 
 Swift:
 
-```Swift
-let error: NSError? = NSError()
-let settingsName = barcodeReader.outputSettings(toFile: "your saving file path", settingsName:"currentRuntimeSettings", error:&error)
+```swift
+let settingsName = try? barcodeReader.outputSettingsToFile("your saving file path", settingsName:"currentRuntimeSettings")
 ```
 
 ## outputSettingsToString
@@ -222,7 +214,8 @@ Output runtime settings to a string.
 
 ```objc
 - (NSString *_Nullable)outputSettingsToString:(NSString*_Nonnull)settingsName 
-                                        error:(NSError* _Nullable * _Nullable)error;
+                                        error:(NSError* _Nullable * _Nullable)error  
+                                        NS_SWIFT_NAME(outputSettingsToString(_:));
 ```
 
 **Parameters**
@@ -239,13 +232,11 @@ The output string which stores the content of current settings.
 Objective-C:
 
 ```objc
-NSError __autoreleasing * _Nullable error;
-settingsName = [barcodeReader outputSettingsToString:@"currentRuntimeSettings" error:&error];
+settingsName = [barcodeReader outputSettingsToString:@"currentRuntimeSettings" error:nil];
 ```
 
 Swift:
 
-```Swift
-let error: NSError? = NSError()
-let settingsName = try! barcodeReader.outputSettings(to:"currentRuntimeSettings")
+```swift
+let settingsName = try? barcodeReader.outputSettingsToString("currentRuntimeSettings")
 ```

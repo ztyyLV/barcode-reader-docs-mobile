@@ -37,7 +37,8 @@ Dynamsoft Barcode Reader is a dynamic library while the Dynamsoft Camera Enhance
 
 In this section, let’s see how to create a **HelloWorld** app for reading barcodes from camera video input.
 
-> Note:
+> Note:  
+>  
 >- You can download the complete Objective-C source code [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC)
 >- You can download the complete Swift source code [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/HelloWorldSwift)
 
@@ -74,7 +75,7 @@ You can add your downloaded frameworks into your project through the following s
 
    Swift:
 
-   ```Swift
+   ```swift
    import DynamsoftBarcodeReader
    import DynamsoftCameraEnhancer
    ```
@@ -155,7 +156,7 @@ You can add your downloaded frameworks into your project through the following s
 
     Objective-C:
 
-    ```objectivec
+    ```objc
     @property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
 
     /*
@@ -187,7 +188,7 @@ You can add your downloaded frameworks into your project through the following s
 
     Objective-C:
 
-    ```objectivec
+    ```objc
     - (void)configurationDBR{
         iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
         // A network connection is required to active the public trial license.
@@ -216,7 +217,7 @@ You can add your downloaded frameworks into your project through the following s
 
     Objective-C:
 
-    ```objectivec
+    ```objc
     @interface ViewController ()<DMDLSLicenseVerificationDelegate, DBRTextResultDelegate>
 
     @implementation ViewController
@@ -344,7 +345,7 @@ You can add your downloaded frameworks into your project through the following s
 
     Objective-C:
 
-    ```objectivec
+    ```objc
     - (void)configurationDCE{
         ...
 
@@ -380,7 +381,7 @@ You can add your downloaded frameworks into your project through the following s
 
     Objective-C:
 
-    ```objectivec
+    ```objc
     - (void)showResult:(NSString *)title msg:(NSString *)msg acTitle:(NSString *)acTitle completion:(void (^)(void))completion {
         dispatch_async(dispatch_get_main_queue(), ^{
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];

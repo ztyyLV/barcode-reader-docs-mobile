@@ -11,7 +11,11 @@ pageStartVer: 8.6
 
 # DCESettingParameters
 
-Stores the DCESettingParameters information.
+> Note:  
+>
+> - This class is removed in 9.0 version. Please use the [video methods](primary-video.md) for video barcode scanning if you are using the latest version.
+
+Stores the DCESettingParameters information. The parameters controls the video streaming barcode decoding.
 
 ```java
 class com.dynamsoft.dbr.DCESettingParameters;
@@ -20,9 +24,9 @@ class com.dynamsoft.dbr.DCESettingParameters;
 | Attribute | type | Descriptions |
 |-----------|------|-------------|
 | [`cameraInstance`](#camerainstance) | *Object* | The Camera Enhancer instance |
-| [`textResultCallback`](#textresultcallback) | [`TextResultCallback`]({{site.android_api}}interface.html#textresultcallback) | Set text result callback. |
+| [`textResultCallback`](#textresultcallback) | [`TextResultCallback`]({{site.android_api}}interface-textresultcallback-v8.9.3.html) | Set text result callback. |
 | [`textResultCallback_UserData`](#textresultcallback_userdata) | *Object*  | Transfer user data. |
-| [`intermediateResultCallback`](#intermediateresultcallback) | [`IntermediateResultCallback`]({{site.android_api}}interface.html#intermediateresultcallback) | Set intermediate result callback. |
+| [`intermediateResultCallback`](#intermediateresultcallback) | [`IntermediateResultCallback`]({{site.android_api}}interface-intermediateresultcallback-v8.9.3.html) | Set intermediate result callback. |
 | [`IntermediateResultCallback_UserData`](#intermediateresultcallback_userdata) | *Object* | Transfer user data. |
 
 ## cameraInstance

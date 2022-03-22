@@ -10,7 +10,11 @@ noTitleIndex: true
 
 # ErrorCallback
 
-`ErrorCallback` is the interface to handle callback when an error is returned.
+`ErrorCallback` is the interface to handle callback when an error is returned when using video frame decoding.
+
+> Note:  
+>  
+> - This class is removed in 9.0 version. Please use the [video methods](primary-video.md) for video barcode scanning if you are using the latest version.
 
 ```java
 interface com.dynamsoft.dbr.ErrorCallback

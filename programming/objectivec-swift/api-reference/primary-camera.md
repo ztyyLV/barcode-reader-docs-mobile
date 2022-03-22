@@ -8,7 +8,11 @@ noTitleIndex: true
 pageStartVer: 8.2.1
 ---
 
-# Camera Methods
+# Camera Enhancer Methods
+
+> Note:  
+>  
+> - Camera Enhancer methods are removed in 9.0 version. Please use the [video methods](primary-video.md) for video barcode scanning if you are using the latest version.
 
 | Method | Description |
 |--------|-------------|
@@ -22,7 +26,7 @@ Set the callback parameters for Camera Enhancer
 
 Objective-C:
 
-```objectivec
+```objc
 iDCESettingParameters* para = [[iDCESettingsParameters alloc] init];
 para.cameraInstance = _dce;
 para.textResultDelegate = self;

@@ -48,7 +48,7 @@ To build a Hello World app that reads barcodes from an image, you can follow the
 
    Swift:
 
-   ```Swift
+   ```swift
    import DynamsoftBarcodeReader
    ```
 
@@ -109,7 +109,7 @@ To build a Hello World app that reads barcodes from an image, you can follow the
 
    Swift:
 
-   ```Swift
+   ```swift
    import UIKit
    import DynamsoftBarcodeReader
 
@@ -260,16 +260,16 @@ if (error)
 
 Swift:
 
-```Swift
+```swift
 // Initialize license prior to any decoding. replace "t0068MgAAAIeGN7***inVNj14D4=" with your own license.
 let reader = DynamsoftBarcodeReader.init(license: "t0068MgAAAIeGN7***inVNj14D4=")
 
-let settings = try! reader.getRuntimeSettings()
+let settings = try? reader.getRuntimeSettings()
 settings.barcodeFormatIds = Int(EnumBarcodeFormat.ONED.rawValue) // Set the barcode format
 reader.update(settings, error: nil)
 
 guard let uiImage = UIImage.init(named: "AllSupportedBarcodeTypes.tif") else { return }
-let results = try! reader.decode(uiImage, withTemplate: "")
+let results = try? reader.decode(uiImage, withTemplate: "")
 let count = results.count
 if (count > 0) {
     for i in 0..<count {
@@ -299,10 +299,10 @@ settings.expectedBarcodesCount = 1;
 
 Swift:
 
-```Swift
+```swift
 // Initialize license prior to any decoding. replace "t0068MgAAAIeGN7***inVNj14D4=" with your own license.
 let reader = DynamsoftBarcodeReader.init(license: "t0068MgAAAIeGN7***inVNj14D4=")
-let settings = try! reader.getRuntimeSettings()
+let settings = try? reader.getRuntimeSettings()
 settings.expectedBarcodesCount = 1 // Set the expected number of barcodes to be read
 reader.update(settings, error: nil)
 ```
@@ -333,10 +333,10 @@ settings.region.regionMeasuredByPercentage = 1; //The region is determined by pe
 
 Swift:
 
-```Swift
+```swift
 // Initialize license prior to any decoding. replace "t0068MgAAAIeGN7***inVNj14D4=" with your own license.
 let reader = DynamsoftBarcodeReader.init(license: "t0068MgAAAIeGN7***inVNj14D4=")
-let settings = try! reader.getRuntimeSettings()
+let settings = try? reader.getRuntimeSettings()
 // Set the scan region
 settings.region.regionTop = 0
 settings.region.regionLeft = 0
@@ -364,7 +364,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"Put your licen
 
 Swift:
 
-```Swift
+```swift
 // Initialize license prior to any decoding. replace "t0068MgAAAIeGN7***inVNj14D4=" with your own license.
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0068MgAAAIeGN7***inVNj14D4=")
 let error: NSError? = NSError()

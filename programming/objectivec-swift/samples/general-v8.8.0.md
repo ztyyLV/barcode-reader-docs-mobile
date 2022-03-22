@@ -45,7 +45,7 @@ Swift:
 ```swift
 // General settings (including barcode format, barcode count and scan region) for the instance.
 // Obtain current runtime settings of instance.
-let settings = try! barcodeReader.getRuntimeSettings()
+let settings = try? barcodeReader.getRuntimeSettings()
 // Set the expected barcode format you want to read.
 // The barcode format our library will search for is composed of BarcodeFormat group 1 and BarcodeFormat group 2.
 // So you need to specify the barcode format in group 1 and group 2 individually.
@@ -120,7 +120,7 @@ Swift:
 ```swift
 // General settings (including barcode format, barcode count and scan region) for the instance.
 // Obtain current runtime settings of instance.
-let settings = try! barcodeReader.getRuntimeSettings()
+let settings = try? barcodeReader.getRuntimeSettings()
 // Set the ROI(region of insterest) to speed up the barcode reading process.
 // Note: DBR supports setting coordinates by pixels or percentages. The origin of the coordinate system is the upper left corner point.
 // The int value 15 means the top of the scan region margins 15% from the top of screen.

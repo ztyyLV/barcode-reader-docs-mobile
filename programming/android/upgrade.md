@@ -15,7 +15,7 @@ pageStartVer: 8.0
 
 ### Update the SDK
 
-Replace the old `DynamsoftBarcodeReaderAndroid.aar` file with the one in the latest version. If you are using Maven, then change the version number in the `build.gradle` file.
+Replace the old `DynamsoftBarcodeReaderAndroid.aar` file with the one in the latest version. If you are using Maven, then change the version number in the `app\build.gradle` file.
 
 ### API Changes
 

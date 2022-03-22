@@ -11,7 +11,12 @@ pageStartVer: 8.4
 
 # DMDLSLicenseVerificationDelegate
 
-The callback of the license server.
+`DMDLSLicenseVerificationDelegate` is the protocol to handle license verification callback when using `initLicenseFromDLS`.
+
+> Note:  
+>  
+> - `initLicenseFromDLS` and `DMDLSLicenseVerificationDelegate` are deprecated and will be removed in 10.0 version release.  
+> - Please use [`initLicense`](primary-license.md#initlicense) and [`DBRLicenseVerificationListener`](protocol-dbrlicenseverificationlistener.md) to initialize and verify the license for 9.x versions.
 
 ```objc
 @protocol DMDLSLicenseVerificationDelegate <NSObject>
@@ -34,7 +39,3 @@ The method for users to add code for license verification.
 
 `[in, out] isSuccess`: Whether the license verification was successful.  
 `[in, out] error`: The error message from the license server.
-
-**Remarks**
-
-`DMLTSLicenseVerificationDelegate` is deprecated, please use `DMDLSLicenseVerificationDelegate`.

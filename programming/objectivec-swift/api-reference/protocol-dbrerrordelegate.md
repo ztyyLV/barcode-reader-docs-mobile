@@ -10,7 +10,11 @@ noTitleIndex: true
 
 # DBRErrorDelegate
 
-Represents the method to handle the error code returned by the library.
+Represents the method to handle the error code returned by the library when using frame decoding.
+
+> Note:  
+>
+> - DBRErrorDelegate is deprecated in 9.0 version.
 
 ```objc
 @protocol DBRErrorDelegate <NSObject>
