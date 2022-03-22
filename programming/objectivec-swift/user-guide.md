@@ -59,9 +59,7 @@ You can add your downloaded frameworks into your project through the following s
 
 2. Click on the project settings then go to  **General --> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for `DynamsoftBarcodeReader` and `DynamsoftCameraEnhancer`.
 
-3. Open the project settings again then go to **Build Phases -> Link Binary with Libraries** and add the `libc++.1.tbd` library.
-
-4. Import the headers in the `ViewController` file.
+3. Import the headers in the `ViewController` file.
 
    Objective-C:
 
