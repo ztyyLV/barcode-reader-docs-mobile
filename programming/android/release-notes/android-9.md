@@ -12,16 +12,20 @@ noTitleIndex: true
 
 ## 9.0.0 (03/17/2022)
 
+### Highlights
+
+{%- include release-notes/product-highlight-9.0.0.md -%}
+
 ### Changelog
 
 #### New
 
 - Added `BF_CODE_11` under enumeration [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) to specify newly supported barcode format, Code 11. The enumeration value of `BF_ONED` and `BF_ALL` are updated as well.
-- Added `BF2_PHARMACODE_ONE_TRACK`, `BF2_PHARMACODE_TWO_TRACK` and `BF2_PHARMACODE` under enumeration [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2). to specify newly supported barcode format, Pharmacodes.
+- Added `BF2_PHARMACODE_ONE_TRACK`, `BF2_PHARMACODE_TWO_TRACK` and `BF2_PHARMACODE` under enumeration [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2). to specify newly supported barcode format, Pharmacode.
 - Added a new error code [`DBRERR_PHARMACODE_LICENSE_INVALID`]({{ site.enumerations }}error-code.html#error-code--10062) which will be returned when the license of Pharmacode is invalid.
 - Added `DRM_BROAD_WARP`, `DRM_LOCAL_REFERENCE` and `DRM_DEWRINKLE` under enumeration [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) to apply new deformation resisting modes.
 - Added a parameter [`FormatSpecification.VerifyCheckDigit`]({{ site.parameters_reference }}verify-check-digit.html).
-- Added an Argument [`ConfidenceThreshold`]({{ site.parameters_reference }}localization-modes.html#confidencethreshold) to the `LocalizationModes` mode arguments.
+- Added new argument [`ConfidenceThreshold`]({{ site.parameters_reference }}localization-modes.html#confidencethreshold) to the `LocalizationModes` mode arguments.
 - Added static method [`BarcodeReader.initLicense`]({{ site.android_api }}primary-license.html#initlicense) to replace legacy license activation APIs. The new method will support both online and offline licenses.
 - Added interface [`DBRLicenseVerificationListener`]({{ site.android_api }}interface-dbrlicenseverificationlistener.html) to get license verification callback when using `BarcodeReader.initLicense`.
 - Added interface [`TextResultListener`]({{ site.android_api }}interface-textresultcallback.html).
@@ -66,6 +70,9 @@ noTitleIndex: true
 
 #### Breaking Changes
 
+- Configurations of the preset templates are changed.
+  - Changed the configurations of `EnumPresetTemplate.DEFAULT` to `EnumPresetTemplate.VIEDE_SINGLE_BARCODE`.
+  - Added template `EnumPresetTemplate.IMAGE_DEFAULT` to store the legacy configurations of `EnumPresetTemplate.DEFAULT`.
 - Removed legacy video barcode decoding APIs
   - Class `DCESettingParameters`
   - Class `FrameDecodingParameters`
