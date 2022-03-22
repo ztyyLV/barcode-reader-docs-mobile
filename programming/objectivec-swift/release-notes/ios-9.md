@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Release Notes for iOS SDK - 9.x
 
-## 9.0.0 (03/17/2022)
+## 9.0.0 (03/22/2022)
 
 ### Highlights
 
@@ -21,11 +21,11 @@ noTitleIndex: true
 #### New
 
 - Added `EnumBarcodeFormatCODE11` under enumeration [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) to specify newly supported barcode format, Code 11. The enumeration value of `EnumBarcodeFormatONED` and `EnumBarcodeFormatALL` are updated as well.
-- Added `EnumBarcodeFormat2PHARMACODEONETRACK`, `EnumBarcodeFormat2PHARMACODETWOTRACK` and `EnumBarcodeFormat2PHARMACODE` under enumeration [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) to specify newly supported barcode format, Pharmacodes.
+- Added `EnumBarcodeFormat2PHARMACODEONETRACK`, `EnumBarcodeFormat2PHARMACODETWOTRACK` and `EnumBarcodeFormat2PHARMACODE` under enumeration [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) to specify newly supported barcode format, Pharmacode.
 - Added a new error code [`DBRERR_PHARMACODE_LICENSE_INVALID`]({{ site.enumerations }}error-code.html#error-code--10062) which will be returned when the license of Pharmacode is invalid.
 - Added `EnumDeformationResistingModeBroadWarp`, `EnumDeformationResistingModeLocalReference` and `EnumDeformationResistingModeDewrinkle` under enumeration [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) to apply new deformation resisting modes.
 - Added a parameter [`FormatSpecification.VerifyCheckDigit`]({{ site.parameters_reference }}verify-check-digit.html).
-- Added an Argument [`ConfidenceThreshold`]({{ site.parameters_reference }}localization-modes.html#confidencethreshold) to the `LocalizationModes` mode arguments.
+- Added new argument [`ConfidenceThreshold`]({{ site.parameters_reference }}localization-modes.html#confidencethreshold) to the `LocalizationModes` mode arguments.
 - Added static method [`DynamsoftBarcodeReader.initLicense`]({{ site.oc_api }}primary-license.html#initlicense) to replace legacy license activation APIs.
 - Added protocol [`DBRLicenseVerificationListener`]({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) to get license verification callback when using `DynamsoftBarcodeReader.initLicense`.
 - Added protocol [`DBRTextResultListener`]({{ site.oc_api }}protocol-dbrtextresultdelegate.html).
@@ -67,6 +67,9 @@ noTitleIndex: true
 
 #### Breaking Changes
 
+- Configurations of the preset templates are changed.
+  - Changed the configurations of `EnumPresetTemplate.default` to `EnumPresetTemplate.videoSingleBarcode`.
+  - Added template `EnumPresetTemplate.imageDefault` to store the legacy configurations of `EnumPresetTemplate.default`.
 - Updated Swift APIs
   - The following method names are changed:
     - `DynamsoftBarcodeReader.updateRuntimeSettings`(with parameter `iPublicRuntimeSettings`)
@@ -78,7 +81,8 @@ noTitleIndex: true
     - `DynamsoftBarcodeReader.appendTplFileToRuntimeSettings`
     - `DynamsoftBarcodeReader.appendTplStringToRuntimeSettings`
     - `DynamsoftBarcodeReader.outputSettingsToString`
-    - `DynamsoftBarcodeReader.outputSettingsToFile`  
+    - `DynamsoftBarcodeReader.outputSettingsToFile`
+    - Enumeration members of `EnumTerminatePhase`
   - The following methods will signal errors by throw exceptions
     - `DynamsoftBarcodeReader.decodeIntermediateResult`
     - `DynamsoftBarcodeReader.decodeImage`

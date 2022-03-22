@@ -38,7 +38,7 @@ Generally speaking
 ```swift
 let settings = try? barcodeReader.getRuntimeSettings()
 settings.deblurLevel = 0
-barcodeReader.update(settings, error: &error)
+try? barcodeReader.updateRuntimeSettings(settings!)
 ```
 
 **Enlarge the Resolution**
@@ -56,7 +56,7 @@ The `LocalizationModes` determines how the library locates the barcode. Set mult
 ```swift
 let settings = try? barcodeReader.getRuntimeSettings()
 settings.localizationModes = [EnumLocalizationMode.scanDirectly, EnumLocalizationMode.connectedBlocks]
-barcodeReader.update(settings, error: &error)
+try? barcodeReader.updateRuntimeSettings(settings!)
 ```
 
 ## How to Improve the Speed
@@ -72,7 +72,7 @@ Images with higher pixel density than the threshold will be scaled down. The def
 ```swift
 let settings = try? barcodeReader.getRuntimeSettings()
 settings.scaleDownThreshold = 1200
-barcodeReader.update(settings, error: &error)
+try? barcodeReader.updateRuntimeSettings(settings!)
 ```
 
 **Reduce Timeout for Video Streaming Barcode Decoding**
@@ -86,7 +86,7 @@ barcodeReader.update(settings, error: &error)
 ```swift
 let settings = try? barcodeReader.getRuntimeSettings()
 settings.timeout = 500
-barcodeReader.update(settings, error: &error)
+try? barcodeReader.updateRuntimeSettings(settings!)
 ```
 
 ## How to Filter out the Misreading Results
@@ -102,7 +102,7 @@ barcodeReader.update(settings, error: &error)
 ```swift
 let settings = try? barcodeReader.getRuntimeSettings()
 settings.minResultConfidence = 50
-barcodeReader.update(settings, error: &error)
+try? barcodeReader.updateRuntimeSettings(settings!)
 ```
 
 **Enable Result Verification**

@@ -14,7 +14,10 @@ Welcome to the Dynamsoft Barcode Reader Android SDK documentation.
 
 ## Getting Started
 
-- [User Guide for Android](user-guide.md)
+- [Getting Started for Android](user-guide.md)
+- [Add Basic Settings](add-basic-settings.md)
+- [UI Configurations](ui-configurations.md)
+- [Optimize the Performance](quick-performance-settings.md)
 
 ## Samples and Demos
 
@@ -32,8 +35,14 @@ Welcome to the Dynamsoft Barcode Reader Android SDK documentation.
 
 ## Release Notes
 
+- [Version 9.x](release-notes/android-9.md)
 - [Version 8.x](release-notes/android-8.md)
 - [Version 7.6 and below](release-notes/android-7.md)
+
+## Upgrade Instructions
+
+- [Upgrade to 9.x](upgrade-to-9.x.md)
+- [Upgrade to 8.x](upgrade.md)
 
 ## Online Store
 

@@ -94,6 +94,34 @@ func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
 > - `initLicenseFromDLS`
 > - `initLicenseFromServer`
 
+### Update the default runtime settings
+
+In 9.0, the default preset template `EnumPresetTemplate.default` will be changed to `EnumPresetTemplate.videoSingleBarcode` internally to better suit mobile scenarios. We also added template `EnumPresetTemplate.imageDefault` to store the legacy configurations of `EnumPresetTemplate.default`.
+
+If the default template is not specified in the previous code (the default template is still used internally) or the default template is used explicitly, and you want to keep the original running logic, you need to call the following function after creating the barcode reader instance:
+
+```objc
+DynamsoftBarcodeReader* barcodereader = [[DynamsoftBarcodeReader alloc] init];
+
+// add the following code to change to the legacy default settings
+[barcodereader updateRuntimeSettings:EnumPresetTemplateImageDefault];
+
+// change the settings based on the legacy default template...
+
+```
+
+or 
+
+```swift
+let barcodereader = DynamsoftBarcodeReader()
+
+// add the following code to change to the legacy default settings
+barcodereader.updateRuntimeSettings(EnumPresetTemplate.imageDefault)
+
+// change the settings based on the legacy default template...
+
+```
+
 ### Update the Video Barcode Decoding Code
 
 Some of the legacy video barcode decoding methods are removed, we recommend you to review our sample code and re-write the barcode scanning module. Make sure to change your code if you were using the following APIs:
