@@ -24,12 +24,6 @@ Initialization of `BarcodeReader` object without a license.
 BarcodeReader() throws BarcodeReaderException
 ```
 
-Initialization of `BarcodeReader` with a license.
-
-```java
-BarcodeReader(String license) throws Exception
-```
-
 **Exceptions**
 
 [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
@@ -40,6 +34,10 @@ BarcodeReader(String license) throws Exception
 BarcodeReader reader;
 reader = new BarcodeReader();
 ```
+
+**Remarks**
+
+`BarcodeReader(String license)` is deprecated and will be removed in the future. Please use `BarcodeReader()` instead.
 
 ## Destroy
 
