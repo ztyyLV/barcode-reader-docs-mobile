@@ -147,7 +147,7 @@ NSArray<iTextResult*>* barcodeResults = [barcodeReader decodeFileWithName:@"your
 Swift:
 
 ```swift
-let barcodeResults = try? barcodeReader.decodeFilewithName("your file path")
+let barcodeResults = try? barcodeReader.decodeFileWithName("your file path")
 ```
 
 ## decodeImage
