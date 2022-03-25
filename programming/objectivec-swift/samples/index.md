@@ -17,10 +17,11 @@ breadcrumbText: Samples
 | [GeneralSettings](general.md) | Guide on barcode formats, expected barcode count and scan region settings. |
 | [PerformanceSettings](performance.md) | Parameter configuration guide on improving the speed, read-rate and accuracy of barcode reading. |
 | [ReadADriversLicense](drivers-license.md) | Illustrates how to read and extract the information of a driver's license. |
+| [Using DBR without DCE](no-camera-enhancer.md) | A simple guide on how to use the Barcode reader without the Camera Enhancer. |
 
 ## Demo
 
-- <a href="https://apps.apple.com/us/app/barcode-scanner-x/id1120581630" target="_blank">Download Barcode Scanner X.</a>
+**<a href="https://apps.apple.com/us/app/barcode-scanner-x/id1120581630" target="_blank">Download Barcode Scanner X.</a>**
 
 ## About Dynamsoft Barcode Reader iOS Samples
 
