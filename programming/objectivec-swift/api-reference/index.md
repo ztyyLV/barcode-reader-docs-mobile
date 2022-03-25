@@ -45,7 +45,7 @@ breadcrumbText: iOS API Reference
   |----------------------|-------------|
   | [`decodeBuffer`](primary-decode.md#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeFileWithName`](primary-decode.md#decodefilewithname) | Decode barcodes from a specified image file. |
-  | [`decode`](primary-decode.md#decode) | Decode barcodes from an image file in memory. |
+  | [`decodeImage`](primary-decode.md#decodeimage) | Decode barcodes from an image file in memory. |
   | [`decodeBase64`](primary-decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
   | [`createIntermediateResult`](primary-decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
