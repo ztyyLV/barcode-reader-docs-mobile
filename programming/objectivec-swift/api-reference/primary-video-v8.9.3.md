@@ -41,7 +41,6 @@ Bind a `Dynamsoft Camera Enhancer` instance to the Barcode Reader. `Dynamsoft Ca
 ```objc
 @property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
 @property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
-
 [_barcodeReader setCameraEnhancer:_dce];
 ```
 2. 

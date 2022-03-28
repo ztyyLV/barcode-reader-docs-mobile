@@ -61,52 +61,45 @@ You can add your downloaded frameworks into your project through the following s
 
 3. Import the headers in the `ViewController` file.
 
-   Objective-C:
-
-   ```objc
-   #import <DynamsoftBarcodeReader/DynamsoftBarcodeReader.h>
-   #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
-   ```
-
-   Swift:
-
-   ```swift
-   import DynamsoftBarcodeReader
-   import DynamsoftCameraEnhancer
-   ```
+    <div class="sample-code-prefix"></div>
+    >- Objective-C
+    >- Swift
+    >
+    >1. 
+    ```objc
+    ```objc
+    #import <DynamsoftBarcodeReader/DynamsoftBarcodeReader.h>
+    #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
+    ```
+    2. 
+    ```swift
+    import DynamsoftBarcodeReader
+    import DynamsoftCameraEnhancer
+    ```
 
 ### Let's Configure the Camera First
 
 1. Create an instance of **DynamsoftCameraEnhancer** for getting video input.
 
-    Objective-C:
-
+    <div class="sample-code-prefix"></div>
+    >- Objective-C
+    >- Swift
+    >
+    >1. 
     ```objc
     /*Initialize DynamsoftCameraEnhancer and DCECameraView*/
     @property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
     @property(nonatomic, strong) DCECameraView *dceView;
-
-    /*
-    ...
-    */
-
     - (void)viewDidLoad {
         [super viewDidLoad];
         [self configurationDCE];
     }
     ```
-
-    Swift:
-
+    2. 
     ```swift
-    /*Initialize DynamsoftCameraEnhancer and DCECameraView*/ 
+    /*Initialize DynamsoftCameraEnhancer and DCECameraView*/
     var dce:DynamsoftCameraEnhancer! = nil
     var dceView:DCECameraView! = nil
-
-    /*
-    ...
-    */
-
     override func viewDidLoad() {
         super.viewDidLoad()
         configurationDCE()
@@ -115,29 +108,28 @@ You can add your downloaded frameworks into your project through the following s
 
 2. Add configurations for DynamsoftCameraEnhancer.
 
-    Objective-C:
-
+    <div class="sample-code-prefix"></div>
+    >- Objective-C
+    >- Swift
+    >
+    >1. 
     ```objc
     /*Configure the Camera Enhancer.*/
     - (void)configurationDCE{
         _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
         [self.view.addSubView:_dceView];
-
         /*Display overlays on the decoded barcodes*/
         [_dceView setOverlayVisible:true];
         _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
         [_dce open];
     }
     ```
-
-    Swift:
-
+    2. 
     ```swift
      /*Configure the Camera Enhancer.*/
     func configurationDCE() {
         dceView = DCECameraView.init(frame: self.view.bounds)
         self.view.addSubview(dceView)
-
         /*Display overlays on the decoded barcodes*/
         dceView.setOverlayVisible(true)
         dce = DynamsoftCameraEnhancer.init(view: dceView)
@@ -149,30 +141,21 @@ You can add your downloaded frameworks into your project through the following s
 
 1. First off, we need to create an instance of the Barcode Reader, so let's define a corresponding variable for the object in our `ViewController`
 
-    Objective-C:
-
+    <div class="sample-code-prefix"></div>
+    >- Objective-C
+    >- Swift
+    >
+    >1. 
     ```objc
     @property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
-
-    /*
-    ...
-    */
-
     - (void)viewDidLoad {
         [super viewDidLoad];
         [self configurationDBR];
     }
     ```
-
-    Swift:
-
+    2. 
     ```swift
     var barcodeReader:DynamsoftBarcodeReader! = nil
-
-    /*
-    ...
-    */
-
     override func viewDidLoad() {
         super.viewDidLoad()
         configurationDBR()
@@ -181,8 +164,11 @@ You can add your downloaded frameworks into your project through the following s
 
 2. Much like the Camera Enhancer component, let's now configure the Barcode Reader for use. This includes setting up the `DLS` (Dynamsoft License Server) parameters for device verification. Please note that the license is assigned via the `organizationID` parameter. The value currently assigned in the samples is used as a time-limited public trial for any new user.
 
-    Objective-C:
-
+    <div class="sample-code-prefix"></div>
+    >- Objective-C
+    >- Swift
+    >
+    >1. 
     ```objc
     - (void)configurationDBR{
         iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
@@ -192,9 +178,7 @@ You can add your downloaded frameworks into your project through the following s
         _barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:lts verificationDelegate:self];
     }
     ```
-
-    Swift:
-
+    2. 
     ```swift
     func configurationDBR() {
         // Configure the Dynamsoft License Server parameters for verification purposes
@@ -210,15 +194,14 @@ You can add your downloaded frameworks into your project through the following s
 
     Also note that the `DBRTextResultDelegate` and `DMDLSLicenseVerificationDelegate` interfaces must be added at the head.
 
-    Objective-C:
-
+    <div class="sample-code-prefix"></div>
+    >- Objective-C
+    >- Swift
+    >
+    >1. 
     ```objc
     @interface ViewController ()<DMDLSLicenseVerificationDelegate, DBRTextResultDelegate>
-
     @implementation ViewController
-
-    ...
-
     - (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
         NSString* msg = @"";
         if(error != nil)
@@ -256,21 +239,15 @@ You can add your downloaded frameworks into your project through the following s
                         msg:msgText
                     acTitle:@"OK"
                 completion:^{
-            
-                }];
+            }];
         }else{
             return;
         }
-    }   
+    }
     ```
-
-    Swift:
-
+    2. 
     ```swift
     class ViewController: UIViewController, DBRTextResultDelegate, DMDLSLicenseVerificationDelegate {
-        
-        ...
-
         func dlsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
         var msg:String? = nil
         if(error != nil)
@@ -285,7 +262,6 @@ You can add your downloaded frameworks into your project through the following s
             }
         }
     }
-    
     /* Obtain the recognized barcode results from the textResultCallback and display the results*/
     func textResultCallback(_ frameId: Int, results: [iTextResult]?, userData: NSObject?) {
         if results!.count > 0 {
@@ -308,8 +284,11 @@ You can add your downloaded frameworks into your project through the following s
 
 4. Before we have done, we are going to bind the Camera Enhancer instance with the Barcode Reader. Please add the following to the `configurationDCE` method
 
-    Objective-C:
-
+    <div class="sample-code-prefix"></div>
+    >- Objective-C
+    >- Swift
+    >
+    >1. 
     ```objc
     - (void)configurationDCE{
         // Bind the Camera Enhancer instance to the Barcode Reader instance.
@@ -321,9 +300,7 @@ You can add your downloaded frameworks into your project through the following s
         [_barcodeReader startScanning];
     }
     ```
-
-    Swift:
-
+    2. 
     ```swift
     /*Deploy the camera with Dynamsoft Camera Enhancer.*/
     func configurationDCE() {
@@ -339,8 +316,11 @@ You can add your downloaded frameworks into your project through the following s
 
 5. Lastly, add the `showText` method to display the barcode results on the UI
 
-    Objective-C:
-
+    <div class="sample-code-prefix"></div>
+    >- Objective-C
+    >- Swift
+    >
+    >1. 
     ```objc
     - (void)showResult:(NSString *)title msg:(NSString *)msg acTitle:(NSString *)acTitle completion:(void (^)(void))completion {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -353,9 +333,7 @@ You can add your downloaded frameworks into your project through the following s
         });
     }
     ```
-
-    Swift:
-
+    2. 
     ```swift
     private func showResult(_ title: String, _ msg: String, _ acTitle: String, completion: @escaping () -> Void) {
         DispatchQueue.main.async {

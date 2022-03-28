@@ -76,7 +76,6 @@ The instance of DynamsoftBarcodeReader.
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicenseFromServer:@"" licenseKey:@"C087****" verificationDelegate:self];
-
 - (void)licenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
 {
     NSNumber* boolNumber = [NSNumber numberWithBool:isSuccess];
@@ -88,7 +87,6 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicenseFromServer:@"" li
 2. 
 ```swift
 let barcodeReader = DynamsoftBarcodeReader.init(licenseSeServer: "", licenseKey: "t0260NwAAAHV***************", connectionDelegate: self)
-
 func licenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 {
     let boolNumber = NSNumber(value: isSuccess)

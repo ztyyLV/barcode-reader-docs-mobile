@@ -40,14 +40,15 @@ To build a Hello World app that reads barcodes from an image, you can follow the
 
 4. Import the framework's header.
 
-   Objective-C:
-
+   <div class="sample-code-prefix"></div>
+   >- Objective-C
+   >- Swift
+   >
+   >1. 
    ```objc
    #import <DynamsoftBarcodeSDK/DynamsoftBarcodeSDK.h>
    ```
-
-   Swift:
-
+   2. 
    ```swift
    import DynamsoftBarcodeReader
    ```
@@ -58,61 +59,57 @@ To build a Hello World app that reads barcodes from an image, you can follow the
 
    The following code demonstrates initializing DynamsoftBarcodeReader and starting the barcode recognition process.
 
-   Objective-C:
-
+   <div class="sample-code-prefix"></div>
+   >- Objective-C
+   >- Swift
+   >
+   >1. 
    ```objc
-    #import "ViewController.h"
-    #import <DynamsoftBarcodeReader/DynamsoftBarcodeReader.h>
-
-    @interface ViewController ()
-    @end
-    @implementation ViewController
-
-    - (void)viewDidLoad {
-        [super viewDidLoad];
-        // Do any additional setup after loading the view, typically from a nib.
-        // Create and initialize a DynamsoftBarcodeReader.
-        DynamsoftBarcodeReader *dbr;
-        // Please replace "t0068MgAAAIe***inVNj14D4=" with your own license.
-        // Note: If you do not have a valid license for the SDK, some characters of the barcode 
-        // results will be replaced with "***".
-        dbr = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0068MgAAAIe***inVNj14D4="];
-        UIImage *image =[UIImage imageNamed:@"Put your license file here"];
-        NSError* error = nil;
-        NSArray* readResult = [dbr decodeImage:image withTemplate:@"" error:&error];
-        if (error.code != 0){
-                NSLog(@"%@", error);
+   #import "ViewController.h"
+   #import <DynamsoftBarcodeReader/DynamsoftBarcodeReader.h>
+   @interface ViewController ()
+   @end
+   @implementation ViewController
+   - (void)viewDidLoad {
+      [super viewDidLoad];
+      // Do any additional setup after loading the view, typically from a nib.
+      // Create and initialize a DynamsoftBarcodeReader.
+      DynamsoftBarcodeReader *dbr;
+      // Please replace "t0068MgAAAIe***inVNj14D4=" with your own license.
+      // Note: If you do not have a valid license for the SDK, some characters of the barcode 
+      // results will be replaced with "***".
+      dbr = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0068MgAAAIe***inVNj14D4="];
+      UIImage *image =[UIImage imageNamed:@"Put your license file here"];
+      NSError* error = nil;
+      NSArray* readResult = [dbr decodeImage:image withTemplate:@"" error:&error];
+      if (error.code != 0){
+         NSLog(@"%@", error);
+      }
+      else
+      {
+         if (readResult.count > 0)
+         {
+            for(int i = 0; i< readResult.count;i++){
+               iTextResult* result = readResult[i];
+               NSLog(@"Barcode %d: %@", i, result.barcodeText);
+            }
          }
          else
          {
-            if (readResult.count > 0)
-            {
-               for(int i = 0; i< readResult.count;i++){
-                  iTextResult* result = readResult[i];
-                  NSLog(@"Barcode %d: %@", i, result.barcodeText);
-               }
-            }
-            else
-            {
-               NSLog(@"%@: no barcode found.",image);
-            }
+            NSLog(@"%@: no barcode found.",image);
          }
       }
-
+   }
    - (void)didReceiveMemoryWarning {
       // Dispose of any resources that can be recreated.
       [super didReceiveMemoryWarning];
    }
-
    @end
    ```
-
-   Swift:
-
+   2. 
    ```swift
    import UIKit
    import DynamsoftBarcodeReader
-
    class ViewController: UIViewController {
       override func viewDidLoad() {
          super.viewDidLoad()
@@ -121,7 +118,7 @@ To build a Hello World app that reads barcodes from an image, you can follow the
                Create and initialize a DynamsoftBarcodeReader.
                Please replace "t0068MgAAAIe***inVNj14D4=" with your own license.
                Note: If you do not have a valid license for the SDK, some characters of the barcode
-               results will be replaced with "***". 
+               results will be replaced with "***".
             */
             let reader = DynamsoftBarcodeReader.init(license: "t0068MgAAAIe***inVNj14D4=")
             guard let uiImage = UIImage.init(named: "Put your license file here") else { return }
@@ -131,17 +128,18 @@ To build a Hello World app that reads barcodes from an image, you can follow the
                for i in 0..<count {
                   print("Barcode",String(i),": ",results[i].barcodeText);
                }
-            } 
+            }
             else {
                print("no barcode found")
             }
-         } 
+         }
          catch {
             print(error)
          }
       }
    }
    ```
+
 ### Known Issues
 
 #### "dyld: Library not loaded" error on app initialization

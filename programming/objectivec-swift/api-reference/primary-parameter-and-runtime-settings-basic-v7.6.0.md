@@ -71,7 +71,6 @@ NSError __autoreleasing * _Nullable error;
 NSMutableArray *mArray = [NSMutableArray arrayWithArray:settings.binarizationModes];
 mArray[0] = [NSNumber numberWithInteger:EnumBinarizationModeLocalBlock];
 settings.binarizationModes = mArray;
-
 [barcodeReader updateRuntimeSettings:settings error:&error];
 [barcodeReader setModeArgument:@"BinarizationModes" index:0 argumentName:@"EnableFillBinaryVacancy" argumentValue:"1" error:&error];
 ```
@@ -145,7 +144,6 @@ NSString *argumentValue;
 NSMutableArray *mArray = [NSMutableArray arrayWithArray:settings.binarizationModes];
 mArray[0] = [NSNumber numberWithInteger:EnumBinarizationModeLocalBlock];
 settings.binarizationModes = mArray;
-
 [barcodeReader updateRuntimeSettings:settings error:&error];
 [barcodeReader setModeArgument:@"BinarizationModes" index:0 argumentName:@"EnableFillBinaryVacancy" argumentValue:"1" error:&error];
 argumentValue = [barcodeReader getModeArgument:@"BinarizationModes" index:0 argumentName:@"EnableFillBinaryVacancy" error:&error];
@@ -226,7 +224,6 @@ DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
 NSError __autoreleasing * _Nullable error;
 iPublicRuntimeSettings *settings;
-
 [barcodeReader updateRuntimeSettings:settings error:&error];
 ```
 2. 

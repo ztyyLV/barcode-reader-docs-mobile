@@ -110,7 +110,7 @@ iPublicRuntimeSettings *settings = [_barcodeReader getRuntimeSettings:&error];
 // Set the ROI(region of insterest) to speed up the barcode reading process.
 // Note: DBR supports setting coordinates by pixels or percentages. The origin of the coordinate system is the upper left corner point.
 // The int value 15 means the top of the scan region margins 15% from the top of screen.
-settings.region.regionTop      = 15; 
+settings.region.regionTop      = 15;
 settings.region.regionBottom   = 85;
 settings.region.regionLeft     = 30;
 settings.region.regionRight    = 70;
@@ -126,7 +126,7 @@ let settings = try? barcodeReader.getRuntimeSettings()
 // Set the ROI(region of insterest) to speed up the barcode reading process.
 // Note: DBR supports setting coordinates by pixels or percentages. The origin of the coordinate system is the upper left corner point.
 // The int value 15 means the top of the scan region margins 15% from the top of screen.
-settings.region.regionTop      = 15 
+settings.region.regionTop      = 15
 settings.region.regionBottom   = 85
 settings.region.regionLeft     = 30
 settings.region.regionRight    = 70
