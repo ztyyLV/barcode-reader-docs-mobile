@@ -168,7 +168,6 @@ override func viewDidLoad() {
 - (void)configurationDCE{
     _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
     [self.view.addSubView:_dceView];
-
     /*Display overlays on the decoded barcodes*/
     [_dceView setOverlayVisible:true];
     _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
@@ -181,7 +180,6 @@ override func viewDidLoad() {
 func configurationDCE() {
     dceView = DCECameraView.init(frame: self.view.bounds)
     self.view.addSubview(dceView)
-
     /*Display overlays on the decoded barcodes*/
     dceView.setOverlayVisible(true)
     dce = DynamsoftCameraEnhancer.init(view: dceView)
@@ -200,27 +198,23 @@ func configurationDCE() {
 >1. 
 ```objc
 @property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
-
-    - (void)viewDidLoad {
-        [super viewDidLoad];
-        [self configurationDBR];
-    }
-
-    - (void)configurationDBR {
-        /* Create the instance */
-        _barcodeReader = [[DynamsoftBarcodeReader alloc] init];
-        /* You can add your barcode reader configurations here. */
-    }
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self configurationDBR];
+}
+- (void)configurationDBR {
+    /* Create the instance */
+    _barcodeReader = [[DynamsoftBarcodeReader alloc] init];
+    /* You can add your barcode reader configurations here. */
+}
 ```
 2. 
 ```swift
 var barcodeReader:DynamsoftBarcodeReader! = nil
-
 override func viewDidLoad() {
     super.viewDidLoad()
     configurationDBR()
 }
-
 func configurationDBR(){
     /* Create the instance */
     barcodeReader = DynamsoftBarcodeReader.init()
@@ -236,14 +230,14 @@ func configurationDBR(){
 >
 >1. 
 ```objc
-    - (void)configurationDCE{
-        // Bind the Camera Enhancer instance to the Barcode Reader instance.
-        // The _dce is the instance of the Dynamsoft Camera Enhancer.
-        // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
-        [_barcodeReader setCameraEnhancer:_dce];
-        // Start Scanning controls the process of video barcode decoding
-        [_barcodeReader startScanning];
-    }
+- (void)configurationDCE{
+    // Bind the Camera Enhancer instance to the Barcode Reader instance.
+    // The _dce is the instance of the Dynamsoft Camera Enhancer.
+    // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
+    [_barcodeReader setCameraEnhancer:_dce];
+    // Start Scanning controls the process of video barcode decoding
+    [_barcodeReader startScanning];
+}
 ```
 2. 
 ```swift
@@ -260,7 +254,7 @@ func configurationDCE() {
 
 3. Once you have start the video barcode decoding thread, `TextResultCallback` is then implemented when barcode result is detected.
 
-    To acquire the barcode `TextResult` with `TextResultCallback`, please firstly add the `DBRTextResultListener` to the `ViewController`.
+To acquire the barcode `TextResult` with `TextResultCallback`, please firstly add the `DBRTextResultListener` to the `ViewController`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -304,7 +298,6 @@ Then implement the listener in the `ViewController`:
                     msg:msgText
                 acTitle:@"OK"
             completion:^{
-        
             }];
     }else{
         return;
