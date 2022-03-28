@@ -41,14 +41,12 @@ The instance of `DynamsoftBarcodeReader`.
 >1. 
 ```objc
 [DynamsoftBarcodeReader initLicense:@"Put your license here" verificationDelegate: self];
-
 - (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
 }
 ```
 2. 
 ```swift
 DynamsoftBarcodeReader.initLicense("Put your license here", verificationDelegate: self)
-
 func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
 }
 ```
