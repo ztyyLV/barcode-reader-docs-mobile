@@ -60,6 +60,7 @@ You can add your downloaded frameworks into your project through the following s
 2. Click on the project settings then go to  **General --> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for `DynamsoftBarcodeReader` and `DynamsoftCameraEnhancer`.
 
 3. Import the headers in the `ViewController` file.
+
 <div class="sample-code-prefix"></div>
 >- Objective-C
 >- Swift
@@ -81,6 +82,7 @@ import DynamsoftCameraEnhancer
 Dynamsoft barcode reader needs a valid license to work. It is recommended to put the license activation code under the **AppDelegate** file.
 
 1. Add DBRLicenseVerificationListener to the **AppDelegate**:
+
 <div class="sample-code-prefix"></div>
 >- Objective-C
 >- Swift
@@ -133,6 +135,7 @@ func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
 ### Configure the Camera to Get Video Streaming
 
 1. Go back to the `ViewController` file. Create an instance of **DynamsoftCameraEnhancer** for getting video input.
+
 <div class="sample-code-prefix"></div>
 >- Objective-C
 >- Swift
@@ -147,10 +150,10 @@ func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
 ...
 */
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self configurationDCE];
-}
+    - (void)viewDidLoad {
+        [super viewDidLoad];
+        [self configurationDCE];
+    }
 ```
 2.
 ```swift
@@ -169,6 +172,7 @@ override func viewDidLoad() {
 ```
 
 2. Add configurations for DynamsoftCameraEnhancer.
+
 <div class="sample-code-prefix"></div>
 >- Objective-C
 >- Swift
@@ -203,6 +207,7 @@ func configurationDCE() {
 ### Configure the Barcode Reader and Start Decoding
 
 1. Still in the `ViewController` file, declare and create the instance of `barcodeReader`:
+
 <div class="sample-code-prefix"></div>
 >- Objective-C
 >- Swift
@@ -239,6 +244,7 @@ func configurationDBR(){
 ```
 
 2. After both of the barcode reader instance and the camera enhancer instance are created, let's bind the camera enhancer instance to the barcode reader so that the barcode reader can get video streaming for barcode decoding. Add the following to the `configurationDCE` method:
+
 <div class="sample-code-prefix"></div>
 >- Objective-C
 >- Swift
@@ -342,6 +348,7 @@ func textResultCallback(_ frameId: Int, ImageData: iImageData, results: [iTextRe
 ```
 
 4. Bind the TextResultListener to the barcode reader.
+
 <div class="sample-code-prefix"></div>
 >- Objective-C
 >- Swift
@@ -366,6 +373,7 @@ func configurationDCE() {
 ```
 
 5. Lastly, add the `showText` method to display the barcode results on the UI
+
 <div class="sample-code-prefix"></div>
 >- Objective-C
 >- Swift
