@@ -131,254 +131,254 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
 
 1. Go back to the `ViewController` file. Create an instance of **DynamsoftCameraEnhancer** for getting video input.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-/*Initialize DynamsoftCameraEnhancer and DCECameraView*/
-@property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
-@property(nonatomic, strong) DCECameraView *dceView;
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self configurationDCE];
-}
-```
-2. 
-```swift
-/*Initialize DynamsoftCameraEnhancer and DCECameraView*/
-var dce:DynamsoftCameraEnhancer! = nil
-var dceView:DCECameraView! = nil
-override func viewDidLoad() {
-    super.viewDidLoad()
-    configurationDCE()
-}
-```
+    <div class="sample-code-prefix"></div>
+    >- Objective-C
+    >- Swift
+    >
+    >1. 
+    ```objc
+    /*Initialize DynamsoftCameraEnhancer and DCECameraView*/
+    @property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
+    @property(nonatomic, strong) DCECameraView *dceView;
+    - (void)viewDidLoad {
+        [super viewDidLoad];
+        [self configurationDCE];
+    }
+    ```
+    2. 
+    ```swift
+    /*Initialize DynamsoftCameraEnhancer and DCECameraView*/
+    var dce:DynamsoftCameraEnhancer! = nil
+    var dceView:DCECameraView! = nil
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configurationDCE()
+    }
+    ```
 
 2. Add configurations for DynamsoftCameraEnhancer.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-/*Configure the Camera Enhancer.*/
-- (void)configurationDCE{
-    _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
-    [self.view.addSubView:_dceView];
-    /*Display overlays on the decoded barcodes*/
-    [_dceView setOverlayVisible:true];
-    _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
-    [_dce open];
-}
-```
-2. 
-```swift
-/*Configure the Camera Enhancer.*/
-func configurationDCE() {
-    dceView = DCECameraView.init(frame: self.view.bounds)
-    self.view.addSubview(dceView)
-    /*Display overlays on the decoded barcodes*/
-    dceView.setOverlayVisible(true)
-    dce = DynamsoftCameraEnhancer.init(view: dceView)
-    dce.open()
-}
-```
+    <div class="sample-code-prefix"></div>
+    >- Objective-C
+    >- Swift
+    >
+    >1. 
+    ```objc
+    /*Configure the Camera Enhancer.*/
+    - (void)configurationDCE{
+        _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
+        [self.view.addSubView:_dceView];
+        /*Display overlays on the decoded barcodes*/
+        [_dceView setOverlayVisible:true];
+        _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
+        [_dce open];
+    }
+    ```
+    2. 
+    ```swift
+    /*Configure the Camera Enhancer.*/
+    func configurationDCE() {
+        dceView = DCECameraView.init(frame: self.view.bounds)
+        self.view.addSubview(dceView)
+        /*Display overlays on the decoded barcodes*/
+        dceView.setOverlayVisible(true)
+        dce = DynamsoftCameraEnhancer.init(view: dceView)
+        dce.open()
+    }
+    ```
 
 ### Configure the Barcode Reader and Start Decoding
 
 1. Still in the `ViewController` file, declare and create the instance of `barcodeReader`:
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self configurationDBR];
-}
-- (void)configurationDBR {
-    /* Create the instance */
-    _barcodeReader = [[DynamsoftBarcodeReader alloc] init];
-    /* You can add your barcode reader configurations here. */
-}
-```
-2. 
-```swift
-var barcodeReader:DynamsoftBarcodeReader! = nil
-override func viewDidLoad() {
-    super.viewDidLoad()
-    configurationDBR()
-}
-func configurationDBR(){
-    /* Create the instance */
-    barcodeReader = DynamsoftBarcodeReader.init()
-    /* You can add your barcode reader configurations here. */
-}
-```
+    <div class="sample-code-prefix"></div>
+    >- Objective-C
+    >- Swift
+    >
+    >1. 
+    ```objc
+    @property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
+    - (void)viewDidLoad {
+        [super viewDidLoad];
+        [self configurationDBR];
+    }
+    - (void)configurationDBR {
+        /* Create the instance */
+        _barcodeReader = [[DynamsoftBarcodeReader alloc] init];
+        /* You can add your barcode reader configurations here. */
+    }
+    ```
+    2. 
+    ```swift
+    var barcodeReader:DynamsoftBarcodeReader! = nil
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configurationDBR()
+    }
+    func configurationDBR(){
+        /* Create the instance */
+        barcodeReader = DynamsoftBarcodeReader.init()
+        /* You can add your barcode reader configurations here. */
+    }
+    ```
 
 2. After both of the barcode reader instance and the camera enhancer instance are created, let's bind the camera enhancer instance to the barcode reader so that the barcode reader can get video streaming for barcode decoding. Add the following to the `configurationDCE` method:
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (void)configurationDCE{
-    // Bind the Camera Enhancer instance to the Barcode Reader instance.
-    // The _dce is the instance of the Dynamsoft Camera Enhancer.
-    // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
-    [_barcodeReader setCameraEnhancer:_dce];
-    // Start Scanning controls the process of video barcode decoding
-    [_barcodeReader startScanning];
-}
-```
-2. 
-```swift
-/*Deploy the camera with Dynamsoft Camera Enhancer.*/
-func configurationDCE() {
-    /*Bind the Camera Enhancer instance to the Barcode Reader instance.
-    The _dce is the instance of the Dynamsoft Camera Enhancer.
-    The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.*/
-    barcodeReader.setCameraEnhancer(dce)
-    /* Start Scanning controls the process of video barcode decoding. */
-    barcodeReader.startScanning()
-}
-```
+    <div class="sample-code-prefix"></div>
+    >- Objective-C
+    >- Swift
+    >
+    >1. 
+    ```objc
+    - (void)configurationDCE{
+        // Bind the Camera Enhancer instance to the Barcode Reader instance.
+        // The _dce is the instance of the Dynamsoft Camera Enhancer.
+        // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
+        [_barcodeReader setCameraEnhancer:_dce];
+        // Start Scanning controls the process of video barcode decoding
+        [_barcodeReader startScanning];
+    }
+    ```
+    2. 
+    ```swift
+    /*Deploy the camera with Dynamsoft Camera Enhancer.*/
+    func configurationDCE() {
+        /*Bind the Camera Enhancer instance to the Barcode Reader instance.
+        The _dce is the instance of the Dynamsoft Camera Enhancer.
+        The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.*/
+        barcodeReader.setCameraEnhancer(dce)
+        /* Start Scanning controls the process of video barcode decoding. */
+        barcodeReader.startScanning()
+    }
+    ```
 
 3. Once you have start the video barcode decoding thread, `TextResultCallback` is then implemented when barcode result is detected.
 
-To acquire the barcode `TextResult` with `TextResultCallback`, please firstly add the `DBRTextResultListener` to the `ViewController`.
+    To acquire the barcode `TextResult` with `TextResultCallback`, please firstly add the `DBRTextResultListener` to the `ViewController`.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@interface ViewController ()<DBRTextResultListener>
-```
-2. 
-```swift
-class ViewController: DBRTextResultListener{}
-```
+    <div class="sample-code-prefix"></div>
+    >- Objective-C
+    >- Swift
+    >
+    >1. 
+    ```objc
+    @interface ViewController ()<DBRTextResultListener>
+    ```
+    2. 
+    ```swift
+    class ViewController: DBRTextResultListener{}
+    ```
 
-Then implement the listener in the `ViewController`:
+    Then implement the listener in the `ViewController`:
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
-    if (results.count > 0) {
-        NSString *title = @"Results";
-        NSString *msgText = @"";
-        NSString *msg = @"Please visit: https://www.dynamsoft.com/customer/license/trialLicense?";
-        for (NSInteger i = 0; i< [results count]; i++) {
-            if (results[i].exception != nil && [results[i].exception containsString:msg]) {
-                msgText = [msg stringByAppendingString:@"product=dbr&utm_source=installer&package=ios to request for 30 days extension."];
-                title = @"Exception";
-                break;
+    <div class="sample-code-prefix"></div>
+    >- Objective-C
+    >- Swift
+    >
+    >1. 
+    ```objc
+    - (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
+        if (results.count > 0) {
+            NSString *title = @"Results";
+            NSString *msgText = @"";
+            NSString *msg = @"Please visit: https://www.dynamsoft.com/customer/license/trialLicense?";
+            for (NSInteger i = 0; i< [results count]; i++) {
+                if (results[i].exception != nil && [results[i].exception containsString:msg]) {
+                    msgText = [msg stringByAppendingString:@"product=dbr&utm_source=installer&package=ios to request for 30 days extension."];
+                    title = @"Exception";
+                    break;
+                }
+                if (results[i].barcodeFormat_2 != 0) {
+                    msgText = [msgText stringByAppendingString:[NSString stringWithFormat:@"\nFormat: %@\nText: %@\n", results[i].barcodeFormatString_2, results[i].barcodeText]];
+                }else{
+                    msgText = [msgText stringByAppendingString:[NSString stringWithFormat:@"\nFormat: %@\nText: %@\n", results[i].barcodeFormatString, results[i].barcodeText]];
+                }
             }
-            if (results[i].barcodeFormat_2 != 0) {
-                msgText = [msgText stringByAppendingString:[NSString stringWithFormat:@"\nFormat: %@\nText: %@\n", results[i].barcodeFormatString_2, results[i].barcodeText]];
-            }else{
-                msgText = [msgText stringByAppendingString:[NSString stringWithFormat:@"\nFormat: %@\nText: %@\n", results[i].barcodeFormatString, results[i].barcodeText]];
-            }
+            [self showResult:title
+                        msg:msgText
+                    acTitle:@"OK"
+                completion:^{
+                }];
+        }else{
+            return;
         }
-        [self showResult:title
-                    msg:msgText
-                acTitle:@"OK"
-            completion:^{
-            }];
-    }else{
-        return;
     }
-}
-```
-2. 
-```swift
-func textResultCallback(_ frameId: Int, ImageData: iImageData, results: [iTextResult]?) {
-    if results!.count > 0 {
-        var msgText:String = ""
-        var title:String = "Results"
-        for item in results! {
-            if item.barcodeFormat_2.rawValue != 0 {
-                msgText = msgText + String(format:"\nFormat: %@\nText: %@\n", item.barcodeFormatString_2!, item.barcodeText ?? "noResuslt")
-            }else{
-                msgText = msgText + String(format:"\nFormat: %@\nText: %@\n", item.barcodeFormatString!,item.barcodeText ?? "noResuslt")
+    ```
+    2. 
+    ```swift
+    func textResultCallback(_ frameId: Int, ImageData: iImageData, results: [iTextResult]?) {
+        if results!.count > 0 {
+            var msgText:String = ""
+            var title:String = "Results"
+            for item in results! {
+                if item.barcodeFormat_2.rawValue != 0 {
+                    msgText = msgText + String(format:"\nFormat: %@\nText: %@\n", item.barcodeFormatString_2!, item.barcodeText ?? "noResuslt")
+                }else{
+                    msgText = msgText + String(format:"\nFormat: %@\nText: %@\n", item.barcodeFormatString!,item.barcodeText ?? "noResuslt")
+                }
             }
+            showResult(title, msgText, "OK") {
+            }
+        }else{
+            return
         }
-        showResult(title, msgText, "OK") {
-        }
-    }else{
-        return
     }
-}
-```
+    ```
 
 4. Bind the TextResultListener to the barcode reader.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (void)configurationDCE{
-    [_barcodeReader setCameraEnhancer:_dce];
-    // Make this setting to get the result. The result will be an object that contains text results and other barcode information.
-    [_barcodeReader setDBRTextResultListener:self];
-    [_barcodeReader startScanning];
-}
-```
-2. 
-```swift
-func configurationDCE() {
-    barcodeReader.setCameraEnhancer(dce)
-    /* Make this setting to get the result. The result will be an object that contains text result and other barcode information. */
-    barcodeReader.setDBRTextResultListener(self)
-    barcodeReader.startScanning()
-}
-```
+    <div class="sample-code-prefix"></div>
+    >- Objective-C
+    >- Swift
+    >
+    >1. 
+    ```objc
+    - (void)configurationDCE{
+        [_barcodeReader setCameraEnhancer:_dce];
+        // Make this setting to get the result. The result will be an object that contains text results and other barcode information.
+        [_barcodeReader setDBRTextResultListener:self];
+        [_barcodeReader startScanning];
+    }
+    ```
+    2. 
+    ```swift
+    func configurationDCE() {
+        barcodeReader.setCameraEnhancer(dce)
+        /* Make this setting to get the result. The result will be an object that contains text result and other barcode information. */
+        barcodeReader.setDBRTextResultListener(self)
+        barcodeReader.startScanning()
+    }
+    ```
 
 5. Lastly, add the `showText` method to display the barcode results on the UI
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (void)showResult:(NSString *)title msg:(NSString *)msg acTitle:(NSString *)acTitle completion:(void (^)(void))completion {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:acTitle style:UIAlertActionStyleDefault
-                                                handler:^(UIAlertAction * action) {
-                                                    completion();
-                                                }]];
-        [self presentViewController:alert animated:YES completion:nil];
-    });
-}
-```
-2. 
-```swift
-private func showResult(_ title: String, _ msg: String, _ acTitle: String, completion: @escaping () -> Void) {
-    DispatchQueue.main.async {
-        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: acTitle, style: .default, handler: { _ in completion() }))
-        self.present(alert, animated: true, completion: nil)
+    <div class="sample-code-prefix"></div>
+    >- Objective-C
+    >- Swift
+    >
+    >1. 
+    ```objc
+    - (void)showResult:(NSString *)title msg:(NSString *)msg acTitle:(NSString *)acTitle completion:(void (^)(void))completion {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:acTitle style:UIAlertActionStyleDefault
+                                                    handler:^(UIAlertAction * action) {
+                                                        completion();
+                                                    }]];
+            [self presentViewController:alert animated:YES completion:nil];
+        });
     }
-}
-```
+    ```
+    2. 
+    ```swift
+    private func showResult(_ title: String, _ msg: String, _ acTitle: String, completion: @escaping () -> Void) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: acTitle, style: .default, handler: { _ in completion() }))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    ```
 
 ### Run the Project
 
