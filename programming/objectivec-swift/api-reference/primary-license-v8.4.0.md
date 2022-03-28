@@ -36,15 +36,16 @@ The instance of DynamsoftBarcodeReader.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
 ```
-
-Swift:
-
+2. 
 ```swift
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
 ```
@@ -69,8 +70,11 @@ The instance of DynamsoftBarcodeReader.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicenseFromServer:@"" licenseKey:@"C087****" verificationDelegate:self];
@@ -83,9 +87,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicenseFromServer:@"" li
     });
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 let barcodeReader = DynamsoftBarcodeReader(licenseFromServer: "", licenseKey: "C087****", verificationDelegate: self)
 
@@ -116,17 +118,18 @@ The output string which stores the contents of license.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicenseFromServer:@"" licenseKey:@"C087****" verificationDelegate:self];
 NSError __autoreleasing * _Nullable error;
 [barcodeReader outputLicenseToString:&error];
 ```
-
-Swift:
-
+2. 
 ```swift
 let error: NSError? = NSError()
 let barcodeReader = DynamsoftBarcodeReader(licenseFromServer: "", licenseKey: "C087****", verificationDelegate: self)
@@ -152,8 +155,11 @@ The instance of DynamsoftBarcodeReader.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
@@ -165,9 +171,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificat
         //TODO add your code for license verification
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"

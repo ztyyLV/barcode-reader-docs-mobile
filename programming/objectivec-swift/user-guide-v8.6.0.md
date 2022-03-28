@@ -284,8 +284,11 @@ func configurationDCE() {
 
 The following functions will help you get the text results and display them on the screen.
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 /*Get and display the text result.*/
 - (void)textResultCallback:(NSInteger)frameId results:(NSArray<iTextResult *> *)results userData:(NSObject *)userData{
@@ -313,9 +316,7 @@ Objective-C:
     });
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 /*Get and display the text result.*/
 func textResultCallback(_ frameId: Int, results: [iTextResult]?, userData: NSObject?) {
@@ -388,8 +389,11 @@ By default, the barcode reader will scan the whole image for barcodes. This can 
 
 The following code is a template on how to use `PublicRuntimeSettings`.
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 iPublicRuntimeSettings* settings = [barcodeReader getRuntimeSettings:nil];
 // Set the barcode format
@@ -405,9 +409,7 @@ settings.region.regionRight = 75;
 settings.region.regionMeasuredByPercentage = 1;
 [barcodeReader updateRuntimeSettings:settings error:&error];
 ```
-
-Swift:
-
+2. 
 ```swift
 let settings = try? reader.getRuntimeSettings()
 // Set the barcode format

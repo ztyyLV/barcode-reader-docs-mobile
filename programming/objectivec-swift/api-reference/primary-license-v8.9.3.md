@@ -45,16 +45,17 @@ The instance of DynamsoftBarcodeReader.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [DynamsoftBarcodeReader initLicense:@"Put your license here" verificationDelegate: self];
 - (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 DynamsoftBarcodeReader.initLicense("Put your license here", verificationDelegate: self)
 func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
@@ -79,17 +80,18 @@ The output string which stores the contents of license.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicenseFromServer:@"" licenseKey:@"C087****" verificationDelegate:self];
 NSError __autoreleasing * _Nullable error;
 [barcodeReader outputLicenseToString:&error];
 ```
-
-Swift:
-
+2. 
 ```swift
 let error: NSError? = NSError()
 let barcodeReader = DynamsoftBarcodeReader.init(licenseFromServer: "", licenseKey: "C087****", verificationDelegate: self)
@@ -116,8 +118,11 @@ The instance of DynamsoftBarcodeReader.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicenseFromServer:@"" licenseKey:@"C087****" verificationDelegate:self];
@@ -130,9 +135,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicenseFromServer:@"" li
     });
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 let barcodeReader = DynamsoftBarcodeReader(licenseFromServer: "", licenseKey: "C087****", verificationDelegate: self)
 
@@ -164,8 +167,11 @@ The instance of DynamsoftBarcodeReader.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
@@ -177,9 +183,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificat
         //TODO add your code for license verification
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 let dls = iDMDLSConnectionParameters()
 dls.organizationID = "200001"

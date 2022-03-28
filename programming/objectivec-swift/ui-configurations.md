@@ -19,8 +19,11 @@ In this article, you will learn:
 
 UI configuring APIs are all included in DCECameraView class. All the UI configurations are implemented via the DCECameraView instance. You can use the following steps to get prepared for UI configurations. These steps are also mentioned in the [Getting started](user-guide.md).
 <!--
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
 ```
@@ -46,8 +49,11 @@ self.view.addSubview(dceCameraView)
 
 By adding the following codes, the decoded barcodes will be automatically highlighted with a real-time overlay.
 <!--
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [dceCameraView setOverlayVisible:true];
 ```
@@ -61,8 +67,11 @@ dceCameraView.setOverlayVisible = true
 
 The stroke and fill colour of the overlays are also available for setting.
 <!--
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 UIColor* strokeColor = [UIColor colorWithRed:0.1 green:0.2 blue:0.3 alpha:0.5];
 UIColor* fillColor = [UIColor colorWithRed:0.1 green:0.2 blue:0.3 alpha:0.5];
@@ -84,8 +93,11 @@ In the `cameraView`, there is a build-in clickable torch button that can control
 
 To display the torch button on the UI:
 <!--
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 // If you don't add any styles for the button, the torch will be displayed on the top left corner of the screen.
 [dceCameraView torchButtonVisible:true];
@@ -101,8 +113,10 @@ dceCameraView.torchButtonVisible = true
 
 If you set the position or images to nil value, they will be set to the default value.
 
-Objective-C:
 <!--
+
+Objective-C:
+
 ```objc
 [dceCameraView setTorchButton:CGRectMake(100,100,50,50) torchOnImage:nil torchOffImage:nil];
 ```

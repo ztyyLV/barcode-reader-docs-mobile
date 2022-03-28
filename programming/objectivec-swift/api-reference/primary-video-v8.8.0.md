@@ -51,15 +51,16 @@ Starts a new thread to decode barcodes from the inner frame queue.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSError __autoreleasing * _Nullable error;
 [barcodeReader startFrameDecoding:2 maxResultQueueLength:10 width:1024 height:720 stride:720 format:EnumImagePixelFormatBinary templateName:@"" error:&error];
 ```
-
-Swift:
-
+2. 
 ```swift
 let error: NSError? = NSError()
 barcodeReader.startFrameDecoding(maxQueueLength:2, maxResultQueueLength:10, width:1024, height:720, stride:720, format:EnumImagePixelFormat.Binary, templateName:"", error:&error)
@@ -83,8 +84,11 @@ Start a new thread to decode barcodes from the inner frame queue with specific f
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSError __autoreleasing * _Nullable error;
 iFrameDecodingParameters *parameters = [barcodeReader getFrameDecodingParameters:nil];
@@ -96,9 +100,7 @@ parameters.stride = 720;
 parameters.imagePixelFormat = EnumImagePixelFormatBinary;
 [barcodeReader startFrameDecodingEx:parameters templateName:@"" error:&error];
 ```
-
-Swift:
-
+2. 
 ```swift
 let error: NSError? = NSError()
 let parameters = barcodeReader.getFrameDecodingParameters
@@ -129,16 +131,17 @@ Returns the ID of the appended frame.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSError __autoreleasing * _Nullable error;
 [barcodeReader startFrameDecoding:2 maxResultQueueLength:10 width:1024 height:720 stride:720 format:EnumImagePixelFormatBinary templateName:@"" error:&error];
 NSInteger frameId = [barcodeReader appendFrame:bufferBytes];
 ```
-
-Swift:
-
+2. 
 ```swift
 let error: NSError? = NSError()
 barcodeReader.startFrameDecoding(maxQueueLength:2, maxResultQueueLength:10, width:1024, height:720, stride:720, format:EnumImagePixelFormat.Binary, templateName:"", error:&error)
@@ -159,16 +162,17 @@ Stops the frame decoding thread created by [`startFrameDecoding`](#startframedec
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSError __autoreleasing * _Nullable error;
 [barcodeReader startFrameDecoding:2 maxResultQueueLength:10 width:1024 height:720 stride:720 format:EnumImagePixelFormatBinary templateName:@"" error:&error];
 [barcodeReader stopFrameDecoding:&error];
 ```
-
-Swift:
-
+2. 
 ```swift
 let error: NSError? = NSError()
 barcodeReader.startFrameDecoding(maxQueueLength:2, maxResultQueueLength:10, width:1024, height:720, stride:720, format:EnumImagePixelFormat.Binary, templateName:"", error:nil)
@@ -193,14 +197,15 @@ Returns frame decoding parameters.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 iFrameDecodingParameters *parameters = [barcodeReader getFrameDecodingParameters:nil];
 ```
-
-Swift:
-
+2. 
 ```swift
 let parameters = barcodeReader.getFrameDecodingParameters(error: nil)
 ```
@@ -220,14 +225,15 @@ Sets callback function to process errors generated during frame decoding.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [barcodeReader setDBRErrorDelegate:self userData:nil];
 ```
-
-Swift:
-
+2. 
 ```swift
 barcodeReader.setDBRErrorDelegate(errorDelegate:self, userData:nil)
 ```
@@ -247,14 +253,15 @@ Set callback function to process text results generated during frame decoding.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [barcodeReader setDBRTextResultDelegate:self userData:nil];
 ```
-
-Swift:
-
+2. 
 ```swift
 barcodeReader.setDBRTextResultDelegate(textResultDelegate:self, userData:nil)
 ```
@@ -274,15 +281,16 @@ Set callback function to process intermediate results generated during frame dec
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 [barcodeReader setDBRIntermediateResultDelegate:self userData:nil];
 ```
-
-Swift:
-
+2. 
 ```swift
 barcodeReader.setDBRIntermediateResultDelegate(intermediateResultDelegate:self, userData:nil)
 ```
@@ -301,14 +309,15 @@ Returns the length of the inner frame queue.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSInteger length = [barcodeReader getLengthOfFrameQueue];
 ```
-
-Swift:
-
+2. 
 ```swift
 let length = barcodeReader.getLengthOfFrameQueue()
 ```
