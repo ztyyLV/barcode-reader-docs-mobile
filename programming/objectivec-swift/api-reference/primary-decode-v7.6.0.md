@@ -37,8 +37,11 @@ All successfully decoded barcode results.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
@@ -46,9 +49,7 @@ iTextResult *result;
 NSError __autoreleasing * _Nullable error;
 result = [barcodeReader decodeFileWithName:@"your file path" templateName:@"" error:&error];
 ```
-
-Swift:
-
+2. 
 ```swift
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
 let error: NSError? = NSError()
@@ -77,8 +78,11 @@ All successfully decoded barcode results.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
@@ -87,9 +91,7 @@ UIImage *image;
 NSError __autoreleasing * _Nullable error;
 result = [barcodeReader decodeImage:image withTemplate:@"" error:&error];
 ```
-
-Swift:
-
+2. 
 ```swift
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
 let image: UIImage? = UIImage()
@@ -121,8 +123,11 @@ All successfully decoded barcode results.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
@@ -135,9 +140,7 @@ NSInteger format;
 NSError __autoreleasing * _Nullable error;
 result = [barcodeReader decodeBuffer:bufferBytes withWidth:iWidth height:iHeight stride:iStride format:format templateName:@"" error:&error];
 ```
-
-Swift:
-
+2. 
 ```swift
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
 let error: NSError? = NSError()
@@ -169,8 +172,11 @@ All successfully decoded barcode results.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
@@ -178,9 +184,7 @@ iTextResult *result;
 NSError __autoreleasing * _Nullable error;
 result = [barcodeReader decodeBase64:@"file in base64 string" withTemplate:@"" error:&error];
 ```
-
-Swift:
-
+2. 
 ```swift
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************") 
 let error: NSError? = NSError() 

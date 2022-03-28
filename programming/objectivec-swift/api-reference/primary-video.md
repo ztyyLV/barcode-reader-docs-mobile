@@ -42,8 +42,11 @@ Bind a `DynamsoftCameraEnhancer` instance to the Barcode Reader.
 
 This code snippet displays a complete code on how to add DynamsoftCameraEnhancer to your project and start to use Video Decoding Methods to decode and get barcode results from the video streaming.
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 // Be sure that you have import the following headers when using video decoding methods
 #import <DynamsoftBarcodeReader/DynamsoftBarcodeReader.h>
@@ -79,9 +82,7 @@ Objective-C:
     // Add your code to do when barcode result is returned.
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 // Be sure that you have import the following headers when using video decoding methods
 import DynamsoftBarcodeReader
@@ -137,14 +138,15 @@ Start the video streaming barcode decoding thread. Please be sure that you have 
 
 You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer)
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_barcodeReader startScanning];
 ```
-
-Swift:
-
+2. 
 ```swift
 barcodeReader.startScanning()
 ```
@@ -159,14 +161,15 @@ Stop the video streaming barcode decoding thread.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_barcodeReader stopScanning];
 ```
-
-Swift:
-
+2. 
 ```swift
 barcodeReader.stopScanning()
 ```
@@ -187,8 +190,11 @@ Set callback function to process text results generated during frame decoding.
 
 You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer)
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 // You have to add DBRTextResultListener to your interface.
 @interface ViewController ()<DBRTextResultListener>
@@ -202,9 +208,7 @@ Objective-C:
     // Add your code to execute when barcode result is returned.
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 // You have to add setDBRTextResultListener to your class.
 class ViewController: UIViewController, DBRTextResultListener{
@@ -236,8 +240,11 @@ Set callback function to process intermediate results generated during frame dec
 
 The usage of `intermediateResultListener` is similar to the `textResultListener`. You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer) and replace the `textResultListener` code with the `intermediateResultListener` code.
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 // You have to add DBRIntermediateResultListener to your interface.
 @interface ViewController ()<DBRIntermediateResultListener>
@@ -250,9 +257,7 @@ Objective-C:
     // Add your code to execute when intermediate result is returned.
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 // You have to add DBRIntermediateResultListener to your class.
 class ViewController: UIViewController, DBRIntermediateResultListener{

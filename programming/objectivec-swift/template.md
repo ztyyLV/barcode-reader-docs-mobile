@@ -7,8 +7,11 @@ keywords: Template Code, iOS
 
 # iOS Template Code For User Guide
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 #import "ViewController.h"
 #import <DynamsoftBarcodeReader/DynamsoftBarcodeReader.h>

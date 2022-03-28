@@ -33,8 +33,11 @@ Returns intermediate result array.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 iPublicRuntimeSettings *settings;
 NSError __autoreleasing * _Nullable error;
@@ -46,9 +49,7 @@ settings.intermediateResultTypes = EnumIntermediateResultTypeColourConvertedGray
 result = [m_barcodeReader decodeFileWithName:@"your file path" templateName:@"" error:&error];
 irResult = [m_barcodeReader getIntermediateResult:&error];
 ```
-
-Swift:
-
+2. 
 ```swift
 let error: NSError? = NSError()
 let settings = try? barcodeReader.getRuntimeSettings()

@@ -33,17 +33,18 @@ Bind a `Dynamsoft Camera Enhancer` instance to the Barcode Reader. `Dynamsoft Ca
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
 @property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
 
 [_barcodeReader setCameraEnhancer:_dce];
 ```
-
-Swift:
-
+2. 
 ```swift
 var dce:DynamsoftCameraEnhancer! = nil
 var barcodeReader:DynamsoftBarcodeReader! = nil
@@ -60,14 +61,15 @@ Start the video streaming barcode decoding thread. Please be sure that you have 
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_barcodeReader startScanning];
 ```
-
-Swift:
-
+2. 
 ```swift
 barcodeReader.startScanning()
 ```
@@ -82,14 +84,15 @@ Stop the video streaming barcode decoding thread.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_barcodeReader stopScanning];
 ```
-
-Swift:
-
+2. 
 ```swift
 barcodeReader.stopScanning()
 ```
@@ -109,14 +112,15 @@ Set callback function to process text results generated during frame decoding.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [barcodeReader setDBRTextResultDelegate:self userData:nil];
 ```
-
-Swift:
-
+2. 
 ```swift
 barcodeReader.setDBRTextResultDelegate(self, userData:nil)
 ```
@@ -136,15 +140,16 @@ Set callback function to process intermediate results generated during frame dec
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 [barcodeReader setDBRIntermediateResultDelegate:self userData:nil];
 ```
-
-Swift:
-
+2. 
 ```swift
 barcodeReader.setDBRIntermediateResultDelegate(self, userData:nil)
 ```

@@ -30,15 +30,16 @@ The instance of DynamsoftBarcodeReader.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 BarcodeReader = [[DynamsoftBarcodeReader alloc] init];
 ```
-
-Swift:
-
+2. 
 ```swift
 let barcodeReader = DynamsoftBarcodeReader.init()
 ```
@@ -53,14 +54,15 @@ Destroy the instance of Dynamsoft Barcode Reader.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [barcodeReader dispose];
 ```
-
-Swift:
-
+2. 
 ```swift
 barcodeReader.dispose()
 ```

@@ -38,15 +38,16 @@ A DBRPublicRuntimeSettings storing current runtime settings.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSError __autoreleasing * _Nullable error;
 [barcodeReader getRuntimeSettings:&error];
 ```
-
-Swift:
-
+2. 
 ```swift
 let settings = try? barcodeReader.getRuntimeSettings()
 ```
@@ -70,16 +71,17 @@ Update runtime settings with a given [`iPublicRuntimeSettings`](auxiliary-iPubli
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 iPublicRuntimeSettings *settings = [barcodeReader getRuntimeSettings:nil];
 // After you have made some changes on the runtime settings.
 [barcodeReader updateRuntimeSettings:settings error:nil];
 ```
-
-Swift:
-
+2. 
 ```swift
 let settings = try? barcodeReader.getRuntimeSettings()
 // After you have made some changes on the runtime settings.
@@ -98,14 +100,15 @@ try? barcodeReader.updateRuntimeSettings(settings!)
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [barcodeReader updateRuntimeSettings:EnumPresetTemplate.EnumPresetTemplateVideoSingleBarcode];
 ```
-
-Swift:
-
+2. 
 ```swift
 barcodeReader.updateRuntimeSettings(EnumPresetTemplate.EnumPresetTemplateVideoSingleBarcode)
 ```
@@ -124,14 +127,15 @@ Reset all parameters to default values.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [barcodeReader resetRuntimeSettings:nil];
 ```
-
-Swift:
-
+2. 
 ```swift
 try? barcodeReader.resetRuntimeSettings()
 ```
@@ -158,17 +162,18 @@ Sets the optional argument for a specified mode in Modes parameters.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 iPublicRuntimeSettings *settings = [barcodeReader getRuntimeSettings:nil];
 settings.binarizationModes = @[@(EnumBinarizationModeLocalBlock)];
 [barcodeReader updateRuntimeSettings:settings error:nil];
 [barcodeReader setModeArgument:@"BinarizationModes" index:0 argumentName:@"EnableFillBinaryVacancy" argumentValue:"1" error:nil];
 ```
-
-Swift:
-
+2. 
 ```swift
 let settings = try? barcodeReader.getRuntimeSettings()
 settings!.binarizationModes = [EnumBinarizationMode.localBlock]
@@ -217,8 +222,11 @@ the optional argument for a specified mode
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 iPublicRuntimeSettings *settings = [barcodeReader getRuntimeSettings:nil];
 settings.binarizationModes = @[@(EnumBinarizationModeLocalBlock)];
@@ -226,9 +234,7 @@ settings.binarizationModes = @[@(EnumBinarizationModeLocalBlock)];
 [barcodeReader setModeArgument:@"BinarizationModes" index:0 argumentName:@"EnableFillBinaryVacancy" argumentValue:"1" error:nil];
 argumentValue = [barcodeReader getModeArgument:@"BinarizationModes" index:0 argumentName:@"EnableFillBinaryVacancy" error:&error];
 ```
-
-Swift:
-
+2. 
 ```swift
 let settings = try? barcodeReader.getRuntimeSettings()
 settings?.binarizationModes![0] = EnumBinarizationMode.localBlock

@@ -35,8 +35,11 @@ Returns intermediate result array.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 iPublicRuntimeSettings *settings;
 NSArray<iTextResult *> *result;
@@ -47,9 +50,7 @@ settings.intermediateResultTypes = EnumIntermediateResultTypeColourConvertedGray
 result = [_barcodeReader decodeFileWithName:@"your file path" error:nil];
 irResult = [_barcodeReader getIntermediateResult:&error];
 ```
-
-Swift:
-
+2. 
 ```swift
 let settings = try? barcodeReader.getRuntimeSettings()
 settings.intermediateResultTypes = EnumIntermediateResultType.ColourConvertedGrayScaleImage.rawValue | EnumIntermediateResultType.OriginalImage.rawValue | EnumIntermediateResultType.ColourClusteredImage.rawValue
@@ -72,16 +73,17 @@ The text results will be verified before output if the result verification is en
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [barcodeReader enableResultVerification:true];
 // To check the status of this mode
 [barcodeReader getEnableResultVerification]
 ```
-
-Swift:
-
+2. 
 ```swift
 barcodeReader.enableResultVerification = true
 // To check the status of this mode
@@ -102,16 +104,17 @@ The duplicated text result will be filtered. The barcode reader will not output 
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [barcodeReader enableDuplicateFilter:true];
 // To check the status of this mode
 [barcodeReader getEnableDuplicateFilter]
 ```
-
-Swift:
-
+2. 
 ```swift
 barcodeReader.enableDuplicateFilter = true
 // To check the status of this mode
