@@ -65,12 +65,12 @@ You can add your downloaded frameworks into your project through the following s
 >- Objective-C
 >- Swift
 >
->1.
+>1. 
 ```objc
 #import <DynamsoftBarcodeReader/DynamsoftBarcodeReader.h>
 #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
 ```
-2.
+2. 
 ```swift
 import DynamsoftBarcodeReader
 import DynamsoftCameraEnhancer
@@ -324,7 +324,7 @@ Then implement the listener in the `ViewController`:
     }else{
         return;
     }
-}   
+}
 ```
 2. 
 ```swift
