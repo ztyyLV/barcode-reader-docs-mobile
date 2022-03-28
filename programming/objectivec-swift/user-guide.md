@@ -80,7 +80,7 @@ import DynamsoftCameraEnhancer
 
 Dynamsoft barcode reader needs a valid license to work. It is recommended to put the license activation code under the **AppDelegate** file.
 
-1. Add DBRLicenseVerificationListener to the **AppDelegate**:
+#### 1. Add DBRLicenseVerificationListener to the **AppDelegate**:
 
     <div class="sample-code-prefix"></div>
     >- Objective-C
@@ -95,7 +95,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
     class AppDelegate: DBRLicenseVerificationListener{}
     ```
 
-2. Add the following code to initialize the license in method `application:didFinishLaunchingWithOptions:`:
+#### 2. Add the following code to initialize the license in method `application:didFinishLaunchingWithOptions:`:
 
     <div class="sample-code-prefix"></div>
     >- Objective-C
