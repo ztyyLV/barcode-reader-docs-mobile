@@ -87,11 +87,11 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
 >- Objective-C
 >- Swift
 >
->1.
+>1. 
 ```objc
 @interface AppDelegate ()<DBRLicenseVerificationListener>
 ```
-2.
+2. 
 ```swift
 class AppDelegate: DBRLicenseVerificationListener{}
 ```
@@ -102,7 +102,7 @@ class AppDelegate: DBRLicenseVerificationListener{}
 >- Objective-C
 >- Swift
 >
->1.
+>1. 
 ```objc
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -117,7 +117,7 @@ class AppDelegate: DBRLicenseVerificationListener{}
 
 }
 ```
-2.
+2. 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     /*Initialize license for Dynamsoft Barcode Reader.*/
@@ -140,7 +140,7 @@ func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
 >- Objective-C
 >- Swift
 >
->1.
+>1. 
 ```objc
 /*Initialize DynamsoftCameraEnhancer and DCECameraView*/
 @property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
@@ -155,7 +155,7 @@ func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
         [self configurationDCE];
     }
 ```
-2.
+2. 
 ```swift
 /*Initialize DynamsoftCameraEnhancer and DCECameraView*/ 
 var dce:DynamsoftCameraEnhancer! = nil
@@ -177,7 +177,7 @@ override func viewDidLoad() {
 >- Objective-C
 >- Swift
 >
->1.
+>1. 
 ```objc
 /*Configure the Camera Enhancer.*/
 - (void)configurationDCE{
@@ -190,7 +190,7 @@ override func viewDidLoad() {
     [_dce open];
 }
 ```
-2.
+2. 
 ```swift
 /*Configure the Camera Enhancer.*/
 func configurationDCE() {
@@ -212,7 +212,7 @@ func configurationDCE() {
 >- Objective-C
 >- Swift
 >
->1.
+>1. 
 ```objc
 @property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
 
@@ -227,7 +227,7 @@ func configurationDCE() {
         /* You can add your barcode reader configurations here. */
     }
 ```
-2.
+2. 
 ```swift
 var barcodeReader:DynamsoftBarcodeReader! = nil
 
@@ -249,7 +249,7 @@ func configurationDBR(){
 >- Objective-C
 >- Swift
 >
->1.
+>1. 
 ```objc
     - (void)configurationDCE{
         // Bind the Camera Enhancer instance to the Barcode Reader instance.
@@ -260,7 +260,7 @@ func configurationDBR(){
         [_barcodeReader startScanning];
     }
 ```
-2.
+2. 
 ```swift
 /*Deploy the camera with Dynamsoft Camera Enhancer.*/
 func configurationDCE() {
@@ -281,11 +281,11 @@ func configurationDCE() {
 >- Objective-C
 >- Swift
 >
->1.
+>1. 
 ```objc
 @interface ViewController ()<DBRTextResultListener>
 ```
-2.
+2. 
 ```swift
 class ViewController: DBRTextResultListener{}
 ```
@@ -296,7 +296,7 @@ Then implement the listener in the `ViewController`:
 >- Objective-C
 >- Swift
 >
->1.
+>1. 
 ```objc
 - (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
     if (results.count > 0) {
@@ -326,7 +326,7 @@ Then implement the listener in the `ViewController`:
     }
 }   
 ```
-2.
+2. 
 ```swift
 func textResultCallback(_ frameId: Int, ImageData: iImageData, results: [iTextResult]?) {
     if results!.count > 0 {
@@ -353,7 +353,7 @@ func textResultCallback(_ frameId: Int, ImageData: iImageData, results: [iTextRe
 >- Objective-C
 >- Swift
 >
->1.
+>1. 
 ```objc
     - (void)configurationDCE{
         [_barcodeReader setCameraEnhancer:_dce];
@@ -362,7 +362,7 @@ func textResultCallback(_ frameId: Int, ImageData: iImageData, results: [iTextRe
         [_barcodeReader startScanning];
     }
 ```
-2.
+2. 
 ```swift
 func configurationDCE() {
     barcodeReader.setCameraEnhancer(dce)
@@ -378,7 +378,7 @@ func configurationDCE() {
 >- Objective-C
 >- Swift
 >
->1.
+>1. 
 ```objc
 - (void)showResult:(NSString *)title msg:(NSString *)msg acTitle:(NSString *)acTitle completion:(void (^)(void))completion {
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -391,7 +391,7 @@ func configurationDCE() {
     });
 }
 ```
-2.
+2. 
 ```swift
 private func showResult(_ title: String, _ msg: String, _ acTitle: String, completion: @escaping () -> Void) {
     DispatchQueue.main.async {
