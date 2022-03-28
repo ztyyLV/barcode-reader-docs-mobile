@@ -76,61 +76,60 @@ import DynamsoftBarcodeReader
 import DynamsoftCameraEnhancer
 ```
 
-
 ### Initialize the License
 
 Dynamsoft barcode reader needs a valid license to work. It is recommended to put the license activation code under the **AppDelegate** file.
 
 1. Add DBRLicenseVerificationListener to the **AppDelegate**:
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@interface AppDelegate ()<DBRLicenseVerificationListener>
-```
-2. 
-```swift
-class AppDelegate: DBRLicenseVerificationListener{}
-```
+    <div class="sample-code-prefix"></div>
+    >- Objective-C
+    >- Swift
+    >
+    >1. 
+    ```objc
+    @interface AppDelegate ()<DBRLicenseVerificationListener>
+    ```
+    2. 
+    ```swift
+    class AppDelegate: DBRLicenseVerificationListener{}
+    ```
 
 2. Add the following code to initialize the license in method `application:didFinishLaunchingWithOptions:`:
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@implementation AppDelegate
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    /*Initialize license for Dynamsoft Barcode Reader.*/
-    /* The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here is a time-limited public trial license. Note that network connection is required for this license to work.*/
-    /* You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios*/
-    [DynamsoftBarcodeReader initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
-    return YES;
-}
+    <div class="sample-code-prefix"></div>
+    >- Objective-C
+    >- Swift
+    >
+    >1. 
+    ```objc
+    @implementation AppDelegate
+    - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+        // Initialize license for Dynamsoft Barcode Reader.
+        // The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here is a time-limited public trial license. Note that network connection is required for this license to work.
+        // You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios
+        [DynamsoftBarcodeReader initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+        return YES;
+    }
 
--(void)DBRLicenseVerificationListener:(bool)isSuccess error:(NSError *)error{
+    -(void)DBRLicenseVerificationListener:(bool)isSuccess error:(NSError *)error{
 
-}
-```
-2. 
-```swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    /*Initialize license for Dynamsoft Barcode Reader.*/
-    /* The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here is a time-limited public trial license. Note that network connection is required for this license to work.*/
-    /* You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios*/
-    DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
-    return true
-}
+    }
+    ```
+    2. 
+    ```swift
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        /*Initialize license for Dynamsoft Barcode Reader.*/
+        /* The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here is a time-limited public trial license. Note that network connection is required for this license to work.*/
+        /* You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios*/
+        DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
+        return true
+    }
 
-func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+    func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
 
-}
-```
+    }
+    ```
 
 ### Configure the Camera to Get Video Streaming
 
@@ -146,14 +145,10 @@ func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
 @property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
 @property(nonatomic, strong) DCECameraView *dceView;
 
-/*
-...
-*/
-
-    - (void)viewDidLoad {
-        [super viewDidLoad];
-        [self configurationDCE];
-    }
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self configurationDCE];
+}
 ```
 2. 
 ```swift
