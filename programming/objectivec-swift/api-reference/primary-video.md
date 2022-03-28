@@ -53,20 +53,15 @@ This code snippet displays a complete code on how to add DynamsoftCameraEnhancer
 #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
 // You have to add DBRTextResultListener to your interface.
 @interface ViewController ()<DBRTextResultListener>
-
 @property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
 @property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
 @property(nonatomic, strong) DCECameraView *dceView;
-
 @end
-
 @implementation ViewController
-
 - (void)viewDidLoad{
     [super viewDidLoad];
     [self configurationDBR];
 }
-
 - (void)configurationDBR{
     _barcodeReader =  [[DynamsoftBarcodeReader alloc] init];
     _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
@@ -77,7 +72,6 @@ This code snippet displays a complete code on how to add DynamsoftCameraEnhancer
     [_barcodeReader startScanning];
     [_barcodeReader setDBRTextResultListener:self];
 }
-
 - (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
     // Add your code to do when barcode result is returned.
 }
@@ -89,37 +83,30 @@ import DynamsoftBarcodeReader
 import DynamsoftCameraEnhancer
 // You have to add setDBRTextResultListener to your class.
 class ViewController: UIViewController, DBRTextResultListener{
-
     var SafeAreaBottomHeight:CGFloat = UIApplication.shared.statusBarFrame.size.height > 20 ? 34 : 0
     var mainHeight = UIScreen.main.bounds.height
     var mainWidth = UIScreen.main.bounds.width
     var dce:DynamsoftCameraEnhancer! = nil
     var dceView:DCECameraView! = nil
     var barcodeReader:DynamsoftBarcodeReader! = nil
-
     override func viewDidLoad() {
         super.viewDidLoad()
         configurationDBR()
     }
-
     func configurationDBR(){
         barcodeReader = DynamsoftBarcodeReader.init()
-
         var barHeight = self.navigationController?.navigationBar.frame.height
         if UIApplication.shared.statusBarFrame.size.height <= 20 {
             barHeight = 20
         }
         dceView = DCECameraView.init(frame: CGRect(x: 0, y: barHeight!, width: mainWidth, height: mainHeight - SafeAreaBottomHeight - barHeight!))
         self.view.addSubview(dceView)
-
         dce = DynamsoftCameraEnhancer.init(view: dceView)
         dce.open()
-
         barcodeReader.setCameraEnhancer(dce)
         barcodeReader.setDBRTextResultListener(self)
         barcodeReader.startScanning()
     }
-
     func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?){
         // Add your code
     }
@@ -198,12 +185,10 @@ You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer)
 ```objc
 // You have to add DBRTextResultListener to your interface.
 @interface ViewController ()<DBRTextResultListener>
-
 - (void)configurationDBR{
     _barcodeReader =  [[DynamsoftBarcodeReader alloc] init];
     [_barcodeReader setDBRTextResultListener:self];
 }
-
 - (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
     // Add your code to execute when barcode result is returned.
 }
@@ -212,12 +197,10 @@ You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer)
 ```swift
 // You have to add setDBRTextResultListener to your class.
 class ViewController: UIViewController, DBRTextResultListener{
-
     func configurationDBR(){
         barcodeReader = DynamsoftBarcodeReader.init()
         barcodeReader.setDBRTextResultListener(self)
     }
-
     func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?){
         // Add your code to execute when barcode result is returned.
     }
@@ -248,7 +231,6 @@ The usage of `intermediateResultListener` is similar to the `textResultListener`
 ```objc
 // You have to add DBRIntermediateResultListener to your interface.
 @interface ViewController ()<DBRIntermediateResultListener>
-
 - (void)configurationDBR{
     _barcodeReader =  [[DynamsoftBarcodeReader alloc] init];
     [_barcodeReader setDBRIntermediateResultListener:self];
