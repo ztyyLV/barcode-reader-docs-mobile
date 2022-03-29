@@ -157,8 +157,8 @@ noTitleIndex: true
 
 > Note:
 >
-> - `TextResultCallback` is deprecated, please use [`TextResultListener`](interface-textresultlistener.md) instead.
-> - `IntermediateResultCallback` is deprecated, please use [`IntermediateResultListener`](interface-intermediateresultlistener.md) instead.
+> - `TextResultCallback` is deprecated, please use [`TextResultListener`](interface-textresultcallback.md) instead.
+> - `IntermediateResultCallback` is deprecated, please use [`IntermediateResultListener`](interface-intermediateresultcallback.md) instead.
 > - [`DBRServerLicenseVerificationListener`](interface-dbrserverlicenseverificationlistener.md) is deprecated. It handles callback when using method `initLicenseFromServer`, which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
 > - [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) is deprecated. It handles callback when using method `initLicenseFromDLS`, which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
 

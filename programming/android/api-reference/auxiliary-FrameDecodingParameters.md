@@ -28,9 +28,9 @@ class com.dynamsoft.dbr.FrameDecodingParameters
 | [`height`](#height) | *int* | The height of the frame image in pixels. |
 | [`stride`](#stride) | *int* | The stride (or scan width) of the frame image. |
 | [`imagePixelFormat`](#imagepixelformat) | *int* | The image pixel format used in the image byte array. |
-| [`region`](#region) | [`RegionDefinition`](auxiliary-RegionDefinition.md) | The region definition of the frame to calculate the internal indicator. |
+| [`region`](#region) | `RegionDefinition` | The region definition of the frame to calculate the internal indicator. |
 | [`threshold`](#threshold) | *float* | The threshold used for filtering frames. |
-| [`fps`](#fps) | *int* | The frequency of calling [`appendFrame`]({{site.android_methods}}primary-video.html#appendframe) per second. |
+| [`fps`](#fps) | *int* | The frequency of calling `appendFrame` per second. |
 | [`autoFilter`](#autofilter) | *int* | Sets whether to filter frames automatically. |
 | [`clarityCalculationMethod`](#claritycalculationmethod) | *int* | Sets the method used for calculating the clarity of the frames. |
 | [`clarityFilterMode`](#clarityfiltermode) | *int* | Sets the mode used for filtering frames by calculated clarity. |
@@ -125,7 +125,7 @@ int imagePixelFormat
 
 **Value Range**
 
-A value of [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) Enumeration items.
+A value of `EnumImagePixelFormat` Enumeration items.
 
 **Default Value**
 
@@ -133,7 +133,7 @@ A value of [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imag
 
 **See Also**
 
-[`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)
+`EnumImagePixelFormat`
 
 ## region
 
@@ -149,7 +149,7 @@ RegionDefinition region
 
 **See Also**
 
-[`RegionDefinition`](RegionDefinition.md)
+`RegionDefinition`
 
 ## threshold
 
@@ -169,11 +169,11 @@ float threshold
 
 **Remarks**
 
-The SDK will calculate an inner indicator for each frame from [`appendFrame`](../BarcodeReader/video.md#appendframe), if the change rate of the indicators between the current frame and the history frames is larger than the given threshold, the current frame will not be added to the inner frame queue waiting for decoding.
+The SDK will calculate an inner indicator for each frame from `appendFrame`, if the change rate of the indicators between the current frame and the history frames is larger than the given threshold, the current frame will not be added to the inner frame queue waiting for decoding.
 
 ## fps
 
-The frequency of calling [`appendFrame`](../BarcodeReader/video.md#appendframe) per second.
+The frequency of calling `appendFrame` per second.
 
 ```java
 int fps
@@ -221,7 +221,7 @@ int clarityCalculationMethod
 
 **Value Range**
 
-Any one of the [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) Enumeration items.
+Any one of the `EnumClarityCalculationMethod` Enumeration items.
 
 **Default Value**
 
@@ -229,7 +229,7 @@ ECCM_CONTRAST
 
 **See Also**
 
-[`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod)
+`EnumClarityCalculationMethod`
 
 ## clarityFilterMode
 
@@ -241,7 +241,7 @@ int clarityFilterMode
 
 **Value Range**
 
-Any one of the [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) Enumeration items.
+Any one of the `EnumClarityFilterMode` Enumeration items.
 
 **Default Value**
 
@@ -249,4 +249,4 @@ CFM_GENERAL
 
 **See Also**
 
-[`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode)
+`EnumClarityFilterMode`

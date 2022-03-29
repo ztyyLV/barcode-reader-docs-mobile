@@ -198,7 +198,6 @@ There are two ways to include the SDK into your project - local binary dependenc
    // The mCameraEnhancer is the instance of the Dynamsoft Camera Enhancer.
    // The Barcode Reader will use this instance to take control of the camera and acquire frames from the camera to start the barcode decoding process.
    reader.setCameraEnhancer(mCameraEnhancer);
-
    // Start the barcode scanning thread.
    reader.startScanning();
    ```

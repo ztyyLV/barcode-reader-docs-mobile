@@ -24,8 +24,11 @@ The barcode formats settings and the barcode count settings are the most basic s
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 // General settings (including barcode format, barcode count and scan region) for the instance.
 // Obtain current runtime settings of instance.
@@ -39,9 +42,7 @@ settings.expectedBarcodesCount = 5;
 // Apply the new settings to the instance
 [_barcodeReader updateRuntimeSettings:settings error:&error];
 ```
-
-Swift:
-
+2. 
 ```swift
 // General settings (including barcode format, barcode count and scan region) for the instance.
 // Obtain current runtime settings of instance.
@@ -97,8 +98,11 @@ Considering that these region parameters (not the values) have to be rotated 90 
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 // General settings (including barcode format, barcode count and scan region) for the instance.
 // Obtain current runtime settings of instance.
@@ -106,7 +110,7 @@ iPublicRuntimeSettings *settings = [_barcodeReader getRuntimeSettings:&error];
 // Set the ROI(region of insterest) to speed up the barcode reading process.
 // Note: DBR supports setting coordinates by pixels or percentages. The origin of the coordinate system is the upper left corner point.
 // The int value 15 means the top of the scan region margins 15% from the top of screen.
-settings.region.regionTop      = 15; 
+settings.region.regionTop      = 15;
 settings.region.regionBottom   = 85;
 settings.region.regionLeft     = 30;
 settings.region.regionRight    = 70;
@@ -114,9 +118,7 @@ settings.region.regionMeasuredByPercentage = 1;
 // Apply the new settings to the instance
 [_barcodeReader updateRuntimeSettings:settings error:&error];
 ```
-
-Swift:
-
+2. 
 ```swift
 // General settings (including barcode format, barcode count and scan region) for the instance.
 // Obtain current runtime settings of instance.
@@ -124,7 +126,7 @@ let settings = try? barcodeReader.getRuntimeSettings()
 // Set the ROI(region of insterest) to speed up the barcode reading process.
 // Note: DBR supports setting coordinates by pixels or percentages. The origin of the coordinate system is the upper left corner point.
 // The int value 15 means the top of the scan region margins 15% from the top of screen.
-settings.region.regionTop      = 15 
+settings.region.regionTop      = 15
 settings.region.regionBottom   = 85
 settings.region.regionLeft     = 30
 settings.region.regionRight    = 70
@@ -148,15 +150,16 @@ Use method [`initRuntimeSettingsWithString`]({{ site.oc_api }}primary-parameter-
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSString* json = @"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}";
 [_barcodeReader initRuntimeSettingsWithString:json conflictMode:EnumConflictModeOverwrite error:&error];
 ```
-
-Swift:
-
+2. 
 ```swift
 let json = "{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}"
 barcodeReader.initRuntimeSettings(json, conflictMode: .overwrite, error: &error)
@@ -168,16 +171,17 @@ Use method [`initRuntimeSettingsWithFile`]({{ site.oc_api }}primary-parameter-an
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSError *error = [[NSError alloc] init];
 // The method will overwrite the settings if the settings already exist.
 [barcodeReader initRuntimeSettingsWithFile:@"your template file path" conflictMode:EnumConflictModeOverwrite error:&error];
 ```
-
-Swift:
-
+2. 
 ```swift
 var error: NSError? = NSError()
 // The method will overwrite the settings if the settings already exist.

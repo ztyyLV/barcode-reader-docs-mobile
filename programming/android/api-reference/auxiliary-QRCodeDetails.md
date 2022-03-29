@@ -11,7 +11,7 @@ noTitleIndex: true
 
 # QRCodeDetails
 
-`QRCodeDetails` is one of the [`detailedResult`](class-TextResult.md#detailedresult) in class `TextResult`. It stores the QRCode details.
+`QRCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the QRCode details.
 
 ```java
 class com.dynamsoft.dbr.QRCodeDetails;

@@ -20,7 +20,7 @@ breadcrumbText: Samples
 
 ## Demo
 
-- <a href="https://apps.apple.com/us/app/barcode-scanner-x/id1120581630" target="_blank">Download Barcode Scanner X.</a>
+**<a href="https://apps.apple.com/us/app/barcode-scanner-x/id1120581630" target="_blank">Download Barcode Scanner X.</a>**
 
 ## About Dynamsoft Barcode Reader iOS Samples
 

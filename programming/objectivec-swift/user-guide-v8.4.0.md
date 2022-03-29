@@ -40,14 +40,15 @@ To build a Hello World app that reads barcodes from an image, you can follow the
 
 4. Import the framework's header.
 
-   Objective-C:
-
+   <div class="sample-code-prefix"></div>
+   >- Objective-C
+   >- Swift
+   >
+   >1. 
    ```objc
    #import <DynamsoftBarcodeSDK/DynamsoftBarcodeSDK.h>
    ```
-
-   Swift:
-
+   2. 
    ```swift
    import DynamsoftBarcodeReader
    ```
@@ -58,61 +59,57 @@ To build a Hello World app that reads barcodes from an image, you can follow the
 
    The following code demonstrates initializing DynamsoftBarcodeReader and starting the barcode recognition process.
 
-   Objective-C:
-
+   <div class="sample-code-prefix"></div>
+   >- Objective-C
+   >- Swift
+   >
+   >1. 
    ```objc
-    #import "ViewController.h"
-    #import <DynamsoftBarcodeReader/DynamsoftBarcodeReader.h>
-
-    @interface ViewController ()
-    @end
-    @implementation ViewController
-
-    - (void)viewDidLoad {
-        [super viewDidLoad];
-        // Do any additional setup after loading the view, typically from a nib.
-        // Create and initialize a DynamsoftBarcodeReader.
-        DynamsoftBarcodeReader *dbr;
-        // Please replace "t0068MgAAAIe***inVNj14D4=" with your own license.
-        // Note: If you do not have a valid license for the SDK, some characters of the barcode 
-        // results will be replaced with "***".
-        dbr = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0068MgAAAIe***inVNj14D4="];
-        UIImage *image =[UIImage imageNamed:@"Put your license file here"];
-        NSError* error = nil;
-        NSArray* readResult = [dbr decodeImage:image withTemplate:@"" error:&error];
-        if (error.code != 0){
-                NSLog(@"%@", error);
+   #import "ViewController.h"
+   #import <DynamsoftBarcodeReader/DynamsoftBarcodeReader.h>
+   @interface ViewController ()
+   @end
+   @implementation ViewController
+   - (void)viewDidLoad {
+      [super viewDidLoad];
+      // Do any additional setup after loading the view, typically from a nib.
+      // Create and initialize a DynamsoftBarcodeReader.
+      DynamsoftBarcodeReader *dbr;
+      // Please replace "t0068MgAAAIe***inVNj14D4=" with your own license.
+      // Note: If you do not have a valid license for the SDK, some characters of the barcode 
+      // results will be replaced with "***".
+      dbr = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0068MgAAAIe***inVNj14D4="];
+      UIImage *image =[UIImage imageNamed:@"Put your license file here"];
+      NSError* error = nil;
+      NSArray* readResult = [dbr decodeImage:image withTemplate:@"" error:&error];
+      if (error.code != 0){
+         NSLog(@"%@", error);
+      }
+      else
+      {
+         if (readResult.count > 0)
+         {
+            for(int i = 0; i< readResult.count;i++){
+               iTextResult* result = readResult[i];
+               NSLog(@"Barcode %d: %@", i, result.barcodeText);
+            }
          }
          else
          {
-            if (readResult.count > 0)
-            {
-               for(int i = 0; i< readResult.count;i++){
-                  iTextResult* result = readResult[i];
-                  NSLog(@"Barcode %d: %@", i, result.barcodeText);
-               }
-            }
-            else
-            {
-               NSLog(@"%@: no barcode found.",image);
-            }
+            NSLog(@"%@: no barcode found.",image);
          }
       }
-
+   }
    - (void)didReceiveMemoryWarning {
       // Dispose of any resources that can be recreated.
       [super didReceiveMemoryWarning];
    }
-
    @end
    ```
-
-   Swift:
-
+   2. 
    ```swift
    import UIKit
    import DynamsoftBarcodeReader
-
    class ViewController: UIViewController {
       override func viewDidLoad() {
          super.viewDidLoad()
@@ -121,7 +118,7 @@ To build a Hello World app that reads barcodes from an image, you can follow the
                Create and initialize a DynamsoftBarcodeReader.
                Please replace "t0068MgAAAIe***inVNj14D4=" with your own license.
                Note: If you do not have a valid license for the SDK, some characters of the barcode
-               results will be replaced with "***". 
+               results will be replaced with "***".
             */
             let reader = DynamsoftBarcodeReader.init(license: "t0068MgAAAIe***inVNj14D4=")
             guard let uiImage = UIImage.init(named: "Put your license file here") else { return }
@@ -131,17 +128,18 @@ To build a Hello World app that reads barcodes from an image, you can follow the
                for i in 0..<count {
                   print("Barcode",String(i),": ",results[i].barcodeText);
                }
-            } 
+            }
             else {
                print("no barcode found")
             }
-         } 
+         }
          catch {
             print(error)
          }
       }
    }
    ```
+
 ### Known Issues
 
 #### "dyld: Library not loaded" error on app initialization
@@ -230,8 +228,11 @@ If your full license only covers some barcode formats, you can use `BarcodeForma
 
 For example, to enable only 1D barcode reading, you can use the following code:
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSError __autoreleasing * _Nullable error;
 DynamsoftBarcodeReader *dbr;
@@ -257,9 +258,7 @@ if (error)
    }
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 // Initialize license prior to any decoding. replace "t0068MgAAAIeGN7***inVNj14D4=" with your own license.
 let reader = DynamsoftBarcodeReader.init(license: "t0068MgAAAIeGN7***inVNj14D4=")
@@ -284,8 +283,11 @@ if (count > 0) {
 
 By default, the SDK will read as many barcodes as it can. To increase the recognition efficiency, you can use `expectedBarcodesCount` to specify the maximum number of barcodes to recognize according to your scenario.
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSError __autoreleasing * _Nullable error;
 DynamsoftBarcodeReader *barcodeReader;
@@ -296,9 +298,7 @@ iPublicRuntimeSettings* settings = [barcodeReader getRuntimeSettings:nil];
 settings.expectedBarcodesCount = 1;
 [barcodeReader updateRuntimeSettings:settings error:&error];
 ```
-
-Swift:
-
+2. 
 ```swift
 // Initialize license prior to any decoding. replace "t0068MgAAAIeGN7***inVNj14D4=" with your own license.
 let reader = DynamsoftBarcodeReader.init(license: "t0068MgAAAIeGN7***inVNj14D4=")
@@ -314,8 +314,11 @@ dealing with high-resolution images. You can speed up the recognition process by
 
 To specify a region, you will need to define an area. The following code shows how to create a template string and define the region.
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSError __autoreleasing * _Nullable error;
 DynamsoftBarcodeReader *barcodeReader;
@@ -330,9 +333,7 @@ settings.region.regionTop = 0;
 settings.region.regionMeasuredByPercentage = 1; //The region is determined by percentage
 [barcodeReader updateRuntimeSettings:settings error:&error];
 ```
-
-Swift:
-
+2. 
 ```swift
 // Initialize license prior to any decoding. replace "t0068MgAAAIeGN7***inVNj14D4=" with your own license.
 let reader = DynamsoftBarcodeReader.init(license: "t0068MgAAAIeGN7***inVNj14D4=")
@@ -350,8 +351,11 @@ reader.update(settings, error: nil)
 
 Besides the option of using the PublicRuntimeSettings struct, the SDK also provides [`initRuntimeSettingsWithString`](api-reference/methods/parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) and [`initRuntimeSettingsWithFile`](api-reference/methods/parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) APIs that enable you to use a template to control all the runtime settings. With a template, instead of writing many codes to modify the settings, you can manage all the runtime settings in a JSON file/string.
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSError __autoreleasing * _Nullable error;
 DynamsoftBarcodeReader *barcodeReader;
@@ -361,9 +365,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"Put your licen
 //Use a template to modify the runtime settings
 [barcodeReader initRuntimeSettingsWithString:@"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}" conflictMode:EnumConflictModeOverwrite error:&error];
 ```
-
-Swift:
-
+2. 
 ```swift
 // Initialize license prior to any decoding. replace "t0068MgAAAIeGN7***inVNj14D4=" with your own license.
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0068MgAAAIeGN7***inVNj14D4=")

@@ -140,8 +140,8 @@ breadcrumbText: iOS API Reference
 
   | Protocol | Description |
   | -------- | ----------- |
-  | [`DBRTextResultListener`]({{ site.oc_api }}protocol-dbrtextresultlistener.html) | Protocol for a delegate to handle callback when text result returned. |
-  | [`DBRIntermediateResultListener`]({{ site.oc_api }}protocol-dbrintermediateresultlistener.html) | Protocol for a delegate to handle callback when intermediate result returned. |
+  | [`DBRTextResultListener`]({{ site.oc_api }}protocol-dbrtextresultdelegate.html) | Protocol for a delegate to handle callback when text result returned. |
+  | [`DBRIntermediateResultListener`]({{ site.oc_api }}protocol-dbrintermediateresultdelegate.html) | Protocol for a delegate to handle callback when intermediate result returned. |
   | [`DBRLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |
 
 > Note:  

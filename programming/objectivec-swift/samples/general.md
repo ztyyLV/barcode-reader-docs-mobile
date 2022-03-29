@@ -9,7 +9,7 @@ breadcrumbText: GeneralSettings
 
 # GeneralSettings Sample
 
-This sample shows the general barcode decoding settings and how to configure the settings via [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-iPublicRuntimeSettings.html) struct or JSON when using Dynamsoft Barcode Reader Android SDK.
+This sample shows the general barcode decoding settings and how to configure the settings via [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html) struct or JSON when using Dynamsoft Barcode Reader Android SDK.
 
 **View the Sample(s)**
 
@@ -38,15 +38,16 @@ Use method [`initRuntimeSettingsWithString`]({{ site.oc_api }}primary-parameter-
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSString* json = @"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}";
 [_barcodeReader initRuntimeSettingsWithString:json conflictMode:EnumConflictModeOverwrite error:nil];
 ```
-
-Swift:
-
+2. 
 ```swift
 let json = "{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}"
 try? barcodeReader.initRuntimeSettingsWithString(json, conflictMode: .overwrite)
@@ -58,15 +59,16 @@ Use method [`initRuntimeSettingsWithFile`]({{ site.oc_api }}primary-parameter-an
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 // The method will overwrite the settings if the settings already exist.
 [barcodeReader initRuntimeSettingsWithFile:@"your template file path" conflictMode:EnumConflictModeOverwrite error:nil];
 ```
-
-Swift:
-
+2. 
 ```swift
 // The method will overwrite the settings if the settings already exist.
 try? barcodeReader.initRuntimeSettingsWithFile("your template file path", conflictMode:EnumConflictMode.overwrite)

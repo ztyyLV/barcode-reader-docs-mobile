@@ -42,28 +42,26 @@ Bind a `DynamsoftCameraEnhancer` instance to the Barcode Reader.
 
 This code snippet displays a complete code on how to add DynamsoftCameraEnhancer to your project and start to use Video Decoding Methods to decode and get barcode results from the video streaming.
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 // Be sure that you have import the following headers when using video decoding methods
 #import <DynamsoftBarcodeReader/DynamsoftBarcodeReader.h>
 #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
 // You have to add DBRTextResultListener to your interface.
 @interface ViewController ()<DBRTextResultListener>
-
 @property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
 @property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
 @property(nonatomic, strong) DCECameraView *dceView;
-
 @end
-
 @implementation ViewController
-
 - (void)viewDidLoad{
     [super viewDidLoad];
     [self configurationDBR];
 }
-
 - (void)configurationDBR{
     _barcodeReader =  [[DynamsoftBarcodeReader alloc] init];
     _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
@@ -74,51 +72,41 @@ Objective-C:
     [_barcodeReader startScanning];
     [_barcodeReader setDBRTextResultListener:self];
 }
-
 - (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
     // Add your code to do when barcode result is returned.
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 // Be sure that you have import the following headers when using video decoding methods
 import DynamsoftBarcodeReader
 import DynamsoftCameraEnhancer
 // You have to add setDBRTextResultListener to your class.
 class ViewController: UIViewController, DBRTextResultListener{
-
     var SafeAreaBottomHeight:CGFloat = UIApplication.shared.statusBarFrame.size.height > 20 ? 34 : 0
     var mainHeight = UIScreen.main.bounds.height
     var mainWidth = UIScreen.main.bounds.width
     var dce:DynamsoftCameraEnhancer! = nil
     var dceView:DCECameraView! = nil
     var barcodeReader:DynamsoftBarcodeReader! = nil
-
     override func viewDidLoad() {
         super.viewDidLoad()
         configurationDBR()
     }
-
     func configurationDBR(){
         barcodeReader = DynamsoftBarcodeReader.init()
-
         var barHeight = self.navigationController?.navigationBar.frame.height
         if UIApplication.shared.statusBarFrame.size.height <= 20 {
             barHeight = 20
         }
         dceView = DCECameraView.init(frame: CGRect(x: 0, y: barHeight!, width: mainWidth, height: mainHeight - SafeAreaBottomHeight - barHeight!))
         self.view.addSubview(dceView)
-
         dce = DynamsoftCameraEnhancer.init(view: dceView)
         dce.open()
-
         barcodeReader.setCameraEnhancer(dce)
         barcodeReader.setDBRTextResultListener(self)
         barcodeReader.startScanning()
     }
-
     func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?){
         // Add your code
     }
@@ -137,14 +125,15 @@ Start the video streaming barcode decoding thread. Please be sure that you have 
 
 You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer)
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_barcodeReader startScanning];
 ```
-
-Swift:
-
+2. 
 ```swift
 barcodeReader.startScanning()
 ```
@@ -159,14 +148,15 @@ Stop the video streaming barcode decoding thread.
 
 **Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [_barcodeReader stopScanning];
 ```
-
-Swift:
-
+2. 
 ```swift
 barcodeReader.stopScanning()
 ```
@@ -187,33 +177,30 @@ Set callback function to process text results generated during frame decoding.
 
 You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer)
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 // You have to add DBRTextResultListener to your interface.
 @interface ViewController ()<DBRTextResultListener>
-
 - (void)configurationDBR{
     _barcodeReader =  [[DynamsoftBarcodeReader alloc] init];
     [_barcodeReader setDBRTextResultListener:self];
 }
-
 - (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
     // Add your code to execute when barcode result is returned.
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 // You have to add setDBRTextResultListener to your class.
 class ViewController: UIViewController, DBRTextResultListener{
-
     func configurationDBR(){
         barcodeReader = DynamsoftBarcodeReader.init()
         barcodeReader.setDBRTextResultListener(self)
     }
-
     func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?){
         // Add your code to execute when barcode result is returned.
     }
@@ -236,12 +223,14 @@ Set callback function to process intermediate results generated during frame dec
 
 The usage of `intermediateResultListener` is similar to the `textResultListener`. You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer) and replace the `textResultListener` code with the `intermediateResultListener` code.
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 // You have to add DBRIntermediateResultListener to your interface.
 @interface ViewController ()<DBRIntermediateResultListener>
-
 - (void)configurationDBR{
     _barcodeReader =  [[DynamsoftBarcodeReader alloc] init];
     [_barcodeReader setDBRIntermediateResultListener:self];
@@ -250,9 +239,7 @@ Objective-C:
     // Add your code to execute when intermediate result is returned.
 }
 ```
-
-Swift:
-
+2. 
 ```swift
 // You have to add DBRIntermediateResultListener to your class.
 class ViewController: UIViewController, DBRIntermediateResultListener{

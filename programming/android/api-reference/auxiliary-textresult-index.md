@@ -27,7 +27,7 @@ class com.dynamsoft.dbr.TextResult;
 | [`barcodeText`](auxiliary-TextResult.md#barcodetext) | *String* | The barcode text, ends by '\0'. |
 | [`barcodeBytes`](auxiliary-TextResult.md#barcodebytes) | *byte\[\]* | The barcode content in a byte array. |
 | [`localizationResult`](auxiliary-TextResult.md#localizationresult) | [`LocalizationResult`](auxiliary-LocalizationResult.md)\* | The corresponding localization result. |
-| [`detailedResult`](auxiliary-TextResult.md#detailedresult) | *Object* | One of the following: [`QRCodeDetails`](auxiliary-qrcodedetails.md), [`PDF417Details`](auxiliary-pdf417details.md), [`DataMatrixDetails`](auxiliary-datamatrixdetails.md), [`AztecDetails`](auxiliary-aztecdetails.md), [`OneDCodeDetails`](auxiliary-onedcodedetails.md). |
+| [`detailedResult`](auxiliary-TextResult.md#detailedresult) | *Object* | One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.md), [`PDF417Details`](auxiliary-PDF417Details.md), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md), [`AztecDetails`](auxiliary-AztecDetails.md), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.md). |
 | [`results`](auxiliary-TextResult.md#results) | [`ExtendedResult`](auxiliary-ExtendedResult.md)\[\] | The extended result array. |
 | [`exception`](auxiliary-TextResult.md#exception) | *String* | The exception message. |
 | [`isMirrored`](auxiliary-TextResult.md#ismirrored) | *int* | This attribute stands for whether the barcode is mirrored. |
@@ -96,7 +96,7 @@ class com.dynamsoft.dbr.ExtendedResult;
 | [`accompanyingTextBytes`](auxiliary-ExtendedResult.md#accompanyingtextbytes) | *byte\[\]* | The accompanying text content in a byte array. |
 | [`deformation`](auxiliary-ExtendedResult.md#deformation) | *int* | The deformation value. |
 | [`detailedResult`](auxiliary-ExtendedResult.md#detailedresult) | *Object* | One of the following: [`QRCodeDetails`](auxiliary-qrcodedetails.md), [`PDF417Details`](auxiliary-pdf417details.md), [`DataMatrixDetails`](auxiliary-datamatrixdetails.md), [`AztecDetails`](auxiliary-aztecdetails.md), [`OneDCodeDetails`](auxiliary-onedcodedetails.md). |
-| [`samplingImage`](auxiliary-ExtendedResult.md#samplingimage) | [`SamplingImageData`](auxiliary-samplingimagedata.md) | The sampling image info. |
+| [`samplingImage`](auxiliary-ExtendedResult.md#samplingimage) | [`SamplingImageData`](auxiliary-SamplingImageData.md) | The sampling image info. |
 | [`clarity`](auxiliary-ExtendedResult.md#clarity) | *int* | The clarity of the barcode zone in percentage. |
 
 **Code Snippet**

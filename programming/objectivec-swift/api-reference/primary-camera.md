@@ -24,17 +24,18 @@ This page illustrates the controlling of `Dynamsoft Camera Enhancer`. To get a b
 
 Set the callback parameters for Camera Enhancer
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 iDCESettingParameters* para = [[iDCESettingsParameters alloc] init];
 para.cameraInstance = _dce;
 para.textResultDelegate = self;
 [_barcodeReader setCameraEnhancerPara:para];
 ```
-
-Swift:
-
+2. 
 ```swift
 let para = iDCESettingParameters.init()
 para.cameraInstance = dce
