@@ -17,7 +17,7 @@ needGenerateH3Content: false
   | [`decodeFileWithName`](#decodefilewithname) | Decode barcodes from a specified image file. |
   | [`decodeImage`](#decodeimage) | Decode barcodes from an image file in memory. |
   | [`decodeBase64`](#decodebase64) | Decode barcodes from a base64 encoded string. |
-  | [`createIntermediateResult`](decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
+  | [`createIntermediateResult`](#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
   
 ---

@@ -9,7 +9,7 @@ breadcrumbText: GeneralSettings
 
 # GeneralSettings Sample
 
-This sample shows the general barcode decoding settings and how to configure the settings via [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-iPublicRuntimeSettings.html) struct or JSON when using Dynamsoft Barcode Reader Android SDK.
+This sample shows the general barcode decoding settings and how to configure the settings via [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html) struct or JSON when using Dynamsoft Barcode Reader Android SDK.
 
 **View the Sample(s)**
 

@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Class iQRCodeDetails
 
-`iQRCodeDetails` is one of the [`detailedResult`](class-iTextResult.md#detailedresult) in class `iTextResult`. It stores the QRCode details.
+`iQRCodeDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the QRCode details.
 
 ```objc
 @interface iQRCodeDetails

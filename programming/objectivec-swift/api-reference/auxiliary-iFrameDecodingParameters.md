@@ -27,13 +27,13 @@ Defines a struct to configure the frame decoding Parameters.
 | [`width`](#width) | *NSInteger* | The width of the frame image in pixels.  |
 | [`height`](#height) | *NSInteger* | The height of the frame image in pixels. |
 | [`stride`](#stride) | *NSInteger* | The stride (or scan width) of the frame image. |
-| [`imagePixelFormat`](#imagepixelformat) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) | The image pixel format used in the image byte array. |
-| [`region`](#region) | [`iRegionDefinition`](auxiliary-iRegionDefinition.md) | The region definition of the frame to calculate the internal indicator. |
+| [`imagePixelFormat`](#imagepixelformat) | `EnumImagePixelFormat` | The image pixel format used in the image byte array. |
+| [`region`](#region) | `iRegionDefinition` | The region definition of the frame to calculate the internal indicator. |
 | [`threshold`](#threshold) | *float* | The threshold used for filtering frames. |
-| [`fps`](#fps) | *NSInteger* | The frequency of calling [`appendFrame`]({{site.android_methods}}primary-video.html#appendframe) per second. |
+| [`fps`](#fps) | *NSInteger* | The frequency of calling `appendFrame` per second. |
 | [`autoFilter`](#autofilter) | *NSInteger* | Sets whether to filter frames automatically. |
-| [`clarityCalculationMethod`](#claritycalculationmethod) | [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) | Sets the method used for calculating the clarity of the frames. |
-| [`clarityFilterMode`](#clarityfiltermode) | [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) | Sets the mode used for filtering frames by calculated clarity. |
+| [`clarityCalculationMethod`](#claritycalculationmethod) | `EnumClarityCalculationMethod` | Sets the method used for calculating the clarity of the frames. |
+| [`clarityFilterMode`](#clarityfiltermode) | `EnumClarityFilterMode` | Sets the mode used for filtering frames by calculated clarity. |
 
 ## maxQueueLength
 
@@ -125,7 +125,7 @@ EnumImagePixelFormat imagePixelFormat
 
 **Value Range**
 
-A value of [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) Enumeration items.
+A value of `EnumImagePixelFormat` Enumeration items.
 
 **Default Value**
 
@@ -133,11 +133,11 @@ A value of [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imag
 
 **See Also**
 
-[`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)
+`EnumImagePixelFormat`
 
 ## region
 
-The region definition of the frame to calculate the internal indicator. 
+The region definition of the frame to calculate the internal indicator.
 
 ```objc
 iRegionDefinition region
@@ -149,7 +149,7 @@ iRegionDefinition region
 
 **See Also**
 
-[`iRegionDefinition`](iRegionDefinition.md)
+`iRegionDefinition`
 
 ## threshold
 
@@ -169,11 +169,11 @@ float threshold
 
 **Remarks**
 
-The SDK will calculate an inner indicator for each frame from [`AppendFrame`](../methods/video.md#appendframe), if the change rate of the indicators between the current frame and the history frames is larger than the given threshold, the current frame will not be added to the inner frame queue waiting for decoding.
+The SDK will calculate an inner indicator for each frame from `AppendFrame`, if the change rate of the indicators between the current frame and the history frames is larger than the given threshold, the current frame will not be added to the inner frame queue waiting for decoding.
 
 ## fps
 
-The frequency of calling [`AppendFrame`](../methods/video.md#appendframe) per second.
+The frequency of calling `AppendFrame` per second.
 
 ```objc
 NSInteger fps
@@ -209,7 +209,7 @@ NSInteger autoFilter
 
 **Remarks**
 
-0: Diable filtering frames automatically. 1: Enable filtering frames automatically. 
+0: Diable filtering frames automatically. 1: Enable filtering frames automatically.
 
 ## clarityCalculationMethod
 
@@ -221,7 +221,7 @@ EnumClarityCalculationMethod clarityCalculationMethod
 
 **Value Range**
 
-Any one of the [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) Enumeration items.
+Any one of the `EnumClarityCalculationMethod` Enumeration items.
 
 **Default Value**
 
@@ -229,7 +229,7 @@ EnumClarityCalculationMethodContrast
 
 **See Also**
 
-[`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod)
+`EnumClarityCalculationMethod`
 
 ## clarityFilterMode
 
@@ -241,7 +241,7 @@ EnumClarityFilterMode clarityFilterMode
 
 **Value Range**
 
-Any one of the [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) Enumeration items.
+Any one of the `EnumClarityFilterMode` Enumeration items.
 
 **Default Value**
 
@@ -249,4 +249,4 @@ EnumClarityFilterModeGeneral
 
 **See Also**
 
-[`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode)
+`EnumClarityFilterMode`

@@ -17,11 +17,11 @@ Stores the region information.
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |
-| [`regionTop`](auxiliary-RegionDefinition.md#regiontop) | *NSInteger* | The top-most coordinate or percentage of the region. |
-| [`regionLeft`](auxiliary-RegionDefinition.md#regionleft) | *NSInteger* | The Left-most coordinate or percentage of the region. |
-| [`regionRight`](auxiliary-RegionDefinition.md#regionright) | *NSInteger* | The Right-most coordinate or percentage of the region. |
-| [`regionBottom`](auxiliary-RegionDefinition.md#regionbottom) | *NSInteger* | The Bottom-most coordinate or percentage of the region. |
-| [`regionMeasuredByPercentage`](auxiliary-RegionDefinition.md#regionmeasuredbypercentage) | *NSInteger* | Sets whether or not to use percentage to measure the region size. |
+| [`regionTop`](#regiontop) | *NSInteger* | The top-most coordinate or percentage of the region. |
+| [`regionLeft`](#regionleft) | *NSInteger* | The Left-most coordinate or percentage of the region. |
+| [`regionRight`](#regionright) | *NSInteger* | The Right-most coordinate or percentage of the region. |
+| [`regionBottom`](#regionbottom) | *NSInteger* | The Bottom-most coordinate or percentage of the region. |
+| [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | *NSInteger* | Sets whether or not to use percentage to measure the region size. |
 
 ## regionTop
 

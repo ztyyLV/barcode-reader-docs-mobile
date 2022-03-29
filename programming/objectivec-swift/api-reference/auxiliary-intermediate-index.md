@@ -25,34 +25,34 @@ noTitleIndex: true
 | [`dataType`](auxiliary-iIntermediateResult.md#datatype) | [`EnumIMResultDataType`]({{ site.enumerations }}result-enums.html#imresultdatatype) | The data type of the intermediate result. |
 | [`resultType`](auxiliary-iIntermediateResult.md#resulttype) | [`EnumIntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype) | Intermediate result type. |
 | [`barcodeComplementMode`](auxiliary-iIntermediateResult.md#barcodecomplementmode) | [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) | The [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) used when generating the current intermediate result. |
-| [`bcmIndex`](auxiliary-iIntermediateResult.md#bcmindex) | *NSInteger* | The array index of current used [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) in the [`barcodeComplementModes`](auxiliary-FurtherModes.md#barcodecomplementmodes) setting. |
+| [`bcmIndex`](auxiliary-iIntermediateResult.md#bcmindex) | *NSInteger* | The array index of current used [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) in the [`barcodeComplementModes`](auxiliary-iFurtherModes.md#barcodecomplementmodes) setting. |
 | [`deformationResistingMode`](auxiliary-iIntermediateResult.md#deformationresistingmode) | [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) | The [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) used when generating the current intermediate result. |
-| [`drmIndex`](auxiliary-iIntermediateResult.md#drmindex) | *NSInteger* | The array index of current used [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) in the [`deformationResistingModes`](auxiliary-FurtherModes.md#deformationresistingmodes) setting. |
+| [`drmIndex`](auxiliary-iIntermediateResult.md#drmindex) | *NSInteger* | The array index of current used [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) in the [`deformationResistingModes`](auxiliary-iFurtherModes.md#deformationresistingmodes) setting. |
 | [`dpmCodeReadingMode`](auxiliary-iIntermediateResult.md#dpmcodereadingmode) | [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) | The [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) used when generating the current intermediate result. |
-| [`dpmcrmIndex`](auxiliary-iIntermediateResult.md#dpmcrmindex) | *NSInteger* | The array index of current used [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) in the [`dpmCodeReadingModes`](auxiliary-FurtherModes.md#dpmcodereadingmodes) setting. |
+| [`dpmcrmIndex`](auxiliary-iIntermediateResult.md#dpmcrmindex) | *NSInteger* | The array index of current used [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) in the [`dpmCodeReadingModes`](auxiliary-iFurtherModes.md#dpmcodereadingmodes) setting. |
 | [`transformationMatrix`](auxiliary-iIntermediateResult.md#transformationMatrix) | *NSArray \** | The rotation matrix. |
 | [`textFilterMode`](auxiliary-iIntermediateResult.md#textfiltermode) | [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) | The [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) used when generating the current intermediate result. |
-| [`tfmIndex`](auxiliary-iIntermediateResult.md#tfmindex) | *NSInteger* | The array index of current used [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) in the [`textFilterModes`](auxiliary-FurtherModes.md#textfiltermodes) setting. |
+| [`tfmIndex`](auxiliary-iIntermediateResult.md#tfmindex) | *NSInteger* | The array index of current used [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) in the [`textFilterModes`](auxiliary-iFurtherModes.md#textfiltermodes) setting. |
 | [`localizationMode`](auxiliary-iIntermediateResult.md#localizationmode) | [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) | The [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) used when generating the current intermediate result. |
-| [`lmIndex`](auxiliary-iIntermediateResult.md#lmindex) | *NSInteger* | The array index of current used [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) in the [`localizationModes`](auxiliary-PublicRuntimeSettings.md#localizationmodes) setting. |
+| [`lmIndex`](auxiliary-iIntermediateResult.md#lmindex) | *NSInteger* | The array index of current used [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) in the [`localizationModes`](auxiliary-iPublicRuntimeSettings.md#localizationmodes) setting. |
 | [`binarizationMode`](auxiliary-iIntermediateResult.md#binarizationmode) | [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) | The [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) used when generating the current intermediate result. |
-| [`bmIndex`](auxiliary-iIntermediateResult.md#bmindex) | *NSInteger* | The array index of current used [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) in the [`binarizationModes`](auxiliary-PublicRuntimeSettings.md#binarizationmodes) setting. |
+| [`bmIndex`](auxiliary-iIntermediateResult.md#bmindex) | *NSInteger* | The array index of current used [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) in the [`binarizationModes`](auxiliary-iPublicRuntimeSettings.md#binarizationmodes) setting. |
 | [`imagePreprocessingMode`](auxiliary-iIntermediateResult.md#imagepreprocessingmode) | [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) | The [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) used when generating the current intermediate result. |
-| [`ipmIndex`](auxiliary-iIntermediateResult.md#ipmindex) | *NSInteger* | The array index of current used [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) in [`imagePreprocessingModes`](auxiliary-FurtherModes.md#imagepreprocessingmodes) setting. |
+| [`ipmIndex`](auxiliary-iIntermediateResult.md#ipmindex) | *NSInteger* | The array index of current used [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) in [`imagePreprocessingModes`](auxiliary-iFurtherModes.md#imagepreprocessingmodes) setting. |
 | [`roiId`](auxiliary-iIntermediateResult.md#roiid) | *NSInteger* | The ID of the ROI (Region Of Interest) generated by the SDK. -1 means the original image. |
 | [`regionPredetectionMode`](auxiliary-iIntermediateResult.md#regionpredetectionmode) | [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) | The [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) used when generating the current intermediate result. |
-| [`rpmIndex`](auxiliary-iIntermediateResult.md#rpmindex) | *NSInteger* | The array index of current used [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) in the [`regionPredetectionModes`](auxiliary-FurtherModes.md#regionpredetectionmodes) setting. |
+| [`rpmIndex`](auxiliary-iIntermediateResult.md#rpmindex) | *NSInteger* | The array index of current used [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) in the [`regionPredetectionModes`](auxiliary-iFurtherModes.md#regionpredetectionmodes) setting. |
 | [`grayscaleTransformationMode`](auxiliary-iIntermediateResult.md#grayscaletransformationmode) | [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) | The [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) used when generating the current intermediate result. |
-| [`gtmIndex`](auxiliary-iIntermediateResult.md#gtmindex) | *NSInteger* | The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) in the [`grayscaleTransformationModes`](auxiliary-FurtherModes.md#grayscaletransformationmodes) setting. |
+| [`gtmIndex`](auxiliary-iIntermediateResult.md#gtmindex) | *NSInteger* | The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) in the [`grayscaleTransformationModes`](auxiliary-iFurtherModes.md#grayscaletransformationmodes) setting. |
 | [`colourConversionMode`](auxiliary-iIntermediateResult.md#colourconversionmode) | [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) | The [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) used when generating the current intermediate result. |
-| [`cicmIndex`](auxiliary-iIntermediateResult.md#cicmindex) | *NSInteger* | The array index of current used [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) in the [`colourConversionModes`](auxiliary-FurtherModes.md#colourconversionmodes) setting. |
+| [`cicmIndex`](auxiliary-iIntermediateResult.md#cicmindex) | *NSInteger* | The array index of current used [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) in the [`colourConversionModes`](auxiliary-iFurtherModes.md#colourconversionmodes) setting. |
 | [`colourClusteringMode`](auxiliary-iIntermediateResult.md#colourclusteringmode) | [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) | The [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) used when generating the current intermediate result. |
-| [`ccmIndex`](auxiliary-iIntermediateResult.md#ccmindex) | *NSInteger* | The array index of current used [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) in the [`colourClusteringModes`](auxiliary-FurtherModes.md#colourclusteringmodes) setting. |
+| [`ccmIndex`](auxiliary-iIntermediateResult.md#ccmindex) | *NSInteger* | The array index of current used [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) in the [`colourClusteringModes`](auxiliary-iFurtherModes.md#colourclusteringmodes) setting. |
 | [`scaleDownRatio`](auxiliary-iIntermediateResult.md#scaledownratio) | *NSInteger* | The scale down ratio. |
 | [`frameId`](auxiliary-iIntermediateResult.md#frameid) | *NSInteger* | The ID of the operated frame. |
 | [`rpmColourArgumentIndex`](auxiliary-iIntermediateResult.md#rpmcolourargumentindex) | *NSInteger* | The index of the rpm colour argument. |
 
-## [iContour](auxiliary-icontour.md)
+## [iContour](auxiliary-iContour.md)
 
 `contour` is one of the [`results`](#intermediateresult) type in `IntermediateResult`.
 
@@ -62,10 +62,10 @@ noTitleIndex: true
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
-| [`pointsCount`](auxiliary-icontour.md#pointscount) |  *NSInteger* | The total points count of the contour. |
-| [`points`](auxiliary-icontour.md#points) | [NSArray*](auxiliary-iDBRPoint.md) \* | The points array of the points that surround the barcode area.. |
+| [`pointsCount`](auxiliary-iContour.md#pointscount) |  *NSInteger* | The total points count of the contour. |
+| [`points`](auxiliary-iContour.md#points) | [NSArray*](auxiliary-iDBRPoint.md) \* | The points array of the points that surround the barcode area.. |
 
-## [iImageData](auxiliary-iimagedata.md)
+## [iImageData](auxiliary-iImagedata.md)
 
 `ImageData` is one of the [`results`](#intermediateresult) type in `IntermediateResult`.
 
@@ -75,16 +75,16 @@ noTitleIndex: true
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
-| [`bytes`](auxiliary-iimagedata.md#bytes) | *unsigned char\** | The image data content in a byte array. |
-| [`bytesLength`](auxiliary-iimagedata.md#byteslength) | *NSInteger* | The length of the image data byte array. |
-| [`width`](auxiliary-iimagedata.md#width) | *NSInteger* | The width of the image in pixels. |
-| [`height`](auxiliary-iimagedata.md#height) | *NSInteger* | The height of the image in pixels. |
-| [`stride`](auxiliary-iimagedata.md#stride) | *NSInteger* | The stride (or scan width) of the image. |
-| [`format`](auxiliary-iimagedata.md#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) | The image pixel format used in the image byte array. |
+| [`bytes`](auxiliary-iImagedata.md#bytes) | *unsigned char\** | The image data content in a byte array. |
+| [`bytesLength`](auxiliary-iImagedata.md#byteslength) | *NSInteger* | The length of the image data byte array. |
+| [`width`](auxiliary-iImagedata.md#width) | *NSInteger* | The width of the image in pixels. |
+| [`height`](auxiliary-iImagedata.md#height) | *NSInteger* | The height of the image in pixels. |
+| [`stride`](auxiliary-iImagedata.md#stride) | *NSInteger* | The stride (or scan width) of the image. |
+| [`format`](auxiliary-iImagedata.md#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) | The image pixel format used in the image byte array. |
 
-## [iLineSegment](auxiliary-ilinesegment.md)
+## [iLineSegment](auxiliary-iLinesegment.md)
 
-`LineSegment` is one of the [`results`](auxiliary-intermediateresult.md#results) type in `IntermediateResult`.
+`LineSegment` is one of the [`results`](auxiliary-iIntermediateResult.md#results) type in `IntermediateResult`.
 
 ```objc
 @interface iLineSegment
@@ -92,13 +92,13 @@ noTitleIndex: true
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
-| [`startPoint`](auxiliary-ilinesegment.md#startpoint) | [`CGPoint`](auxiliary-iDBRPoint.md) | The start point of the line segment. |
-| [`endPoint`](auxiliary-ilinesegment.md#endpoint) | [`CGPoint`](auxiliary-iDBRPoint.md) | The end point of the line segment. |
-| [`linesConfidenceCoefficients`](auxiliary-ilinesegment.md#linesconfidencecoefficients) | *NSData \** | *byte\[\]* | The confidence coefficients for lines. |
+| [`startPoint`](auxiliary-iLinesegment.md#startpoint) | [`CGPoint`](auxiliary-iDBRPoint.md) | The start point of the line segment. |
+| [`endPoint`](auxiliary-iLinesegment.md#endpoint) | [`CGPoint`](auxiliary-iDBRPoint.md) | The end point of the line segment. |
+| [`linesConfidenceCoefficients`](auxiliary-iLinesegment.md#linesconfidencecoefficients) | *NSData \** | *byte\[\]* | The confidence coefficients for lines. |
 
-## [iRegionOfInterest](auxiliary-iregionofinterest.md)
+## [iRegionOfInterest](auxiliary-iRegionOfInterest.md)
 
-`RegionOfInterest` is one of the [`results`](auxiliary-intermediateresult.md#results) type in `IntermediateResult`.
+`RegionOfInterest` is one of the [`results`](auxiliary-iIntermediateResult.md#results) type in `IntermediateResult`.
 
 ```objc
 @interface iRegionOfInterest
@@ -106,16 +106,16 @@ noTitleIndex: true
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
-| [`roiId`](auxiliary-iregionofinterest.md#roiid) | *NSInteger* | The ID generated by the SDK. |
-| [`point`](auxiliary-iregionofinterest.md#point) | [`CGPoint`](auxiliaryiDBRPoint.md) | The left top point of the region. |
-| [`width`](auxiliary-iregionofinterest.md#width) | *NSInteger* | The width of the region. |
-| [`height`](auxiliary-iregionofinterest.md#height) | *NSInteger* | The height of the region. |
+| [`roiId`](auxiliary-iRegionOfInterest.md#roiid) | *NSInteger* | The ID generated by the SDK. |
+| [`point`](auxiliary-iRegionOfInterest.md#point) | [`CGPoint`](auxiliary-iDBRPoint.md) | The left top point of the region. |
+| [`width`](auxiliary-iRegionOfInterest.md#width) | *NSInteger* | The width of the region. |
+| [`height`](auxiliary-iRegionOfInterest.md#height) | *NSInteger* | The height of the region. |
 
 ## iLocalizationResult
 
 View more in [TextResult >> LocalizationResult](auxiliary-iLocalizationResult.md)
 
-`LocalizationResult` can be the extension of the class [`IntermediateResult`](auxiliary-intermediateresult.md). It stores the localization result information.
+`LocalizationResult` can be the extension of the class [`IntermediateResult`](auxiliary-iIntermediateResult.md). It stores the localization result information.
 
 ```objc
 @interface iLocalizationResult
