@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DBRTextResultListener
 
-Represents the method to handle the text result array returned by the library.
+The Protocol that handles callback when `TextResult` is returned by the library.
 
 ```objc
 @protocol DBRTextResultListener <NSObject>
@@ -18,11 +18,11 @@ Represents the method to handle the text result array returned by the library.
 
 | Method | Type | Description |
 | ------ | ---- | ----------- |
-| textResultCallback | *required* | The method for users to add code for using text results. |
+| textResultCallback | *required* | Represents the method to handle the text result array returned by the library. |
 
 ## textResultCallback
 
-The method for users to add code for using text results.
+Represents the method to handle the text result array returned by the library.
 
 ```objc
 @required

@@ -28,7 +28,7 @@ static void initLicense(String license, DBRLicenseVerificationListener listener)
 **Parameters**
 
 `license`: The product keys.
-`listener`: The listener that handles callback when the license server returns. See also [`DBRLicenseVerificationListener`](interface-dbrlicenseverificationlistener.md).
+`listener`: The listener that handles callback when the license verification message is returned by the license server. See also [`DBRLicenseVerificationListener`](interface-dbrlicenseverificationlistener.md).
 
 **Code Snippet**
 

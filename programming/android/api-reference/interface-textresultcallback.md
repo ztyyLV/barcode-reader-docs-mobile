@@ -22,7 +22,7 @@ interface com.dynamsoft.dbr.TextResultListener
 
 ## textResultCallback
 
-The abstract class for users to get barcode results from the callback.
+Represents the method to handle the text result array returned by the library.
 
 ```java
 void textResultCallback(int frameId, ImageData imageData, TextResult[] results);

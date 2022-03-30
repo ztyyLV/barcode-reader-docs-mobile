@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DBRIntermediateResultListener
 
-Represents the method to handle the intermediate result array returned by the library.
+The Protocol that handles callback when `IntermediateResult` is returned by the library.
 
 ```objc
 @protocol DBRTextResultListener <NSObject>
@@ -18,11 +18,11 @@ Represents the method to handle the intermediate result array returned by the li
 
 | Method | Type | Description |
 | ------ | ---- | ----------- |
-| `intermediateResultCallback` | *required* | The method for users to add code for using intermediate results. |
+| `intermediateResultCallback` | *required* | Represents the method to handle the intermediate result array returned by the library. |
 
 ## intermediateResultCallback
 
-The method for users to add code for using intermediate results.
+Represents the method to handle the intermediate result array returned by the library.
 
 ```objc
 @required
