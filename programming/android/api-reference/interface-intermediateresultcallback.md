@@ -22,7 +22,7 @@ interface com.dynamsoft.dbr.IntermediateResultListener
 
 ## intermediateResultCallback
 
-The abstract class for users to get intermediate results from the callback.
+Represents the method to handle the intermediate result array returned by the library.
 
 ```java
 void intermediateResultCallback(int frameID, ImageData imageData, IntermediateResult[] intermediateResult;

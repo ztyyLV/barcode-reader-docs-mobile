@@ -6,7 +6,7 @@ keywords: DBRLicenseVerificationListener, interface, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
-pageStartVer: 8.0
+pageStartVer: 9.0
 ---
 
 # DBRLicenseVerificationListener
@@ -24,7 +24,7 @@ interface com.dynamsoft.dbr.DBRDLSLicenseVerificationListener
 ## DBRLicenseVerificationCallback
 
 ```java
-void DBRLicenseVerificationCallback(boolean var1, Exception var2);
+void DBRLicenseVerificationCallback(boolean isSuccess, Exception error);
 ```
 
 **Parameters**
@@ -37,7 +37,7 @@ void DBRLicenseVerificationCallback(boolean var1, Exception var2);
 ```java
 DBRLicenseVerificationListener dbrLicenseListener = new DBRLicenseVerificationListener() {
     @Override
-    public void DBRLicenseVerificationCallback(boolean b, Exception e) {
+    public void DBRLicenseVerificationCallback(boolean isSuccess, Exception error) {
         // Add your code
     }
 };

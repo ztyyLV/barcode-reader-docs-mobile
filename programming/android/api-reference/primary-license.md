@@ -28,10 +28,7 @@ static void initLicense(String license, DBRLicenseVerificationListener listener)
 **Parameters**
 
 `license`: The product keys.
-
-**Exceptions**
-
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+`listener`: The listener that handles callback when the license verification message is returned by the license server. See also [`DBRLicenseVerificationListener`](interface-dbrlicenseverificationlistener.md).
 
 **Code Snippet**
 

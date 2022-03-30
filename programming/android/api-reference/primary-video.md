@@ -113,14 +113,9 @@ void startScanning()
 
 You can view the complete code snippet in [`setCameraEnhancer`](#setcameraenhancer).
 
-```java
-BarcodeReader reader = new BarcodeReader();
-reader.startScanning();
-```
-
 ## stopScanning
 
-You can view the complete code snippet in [`setCameraEnhancer`](#setcameraenhancer).
+Stop the video streaming barcode decoding thread.
 
 ```java
 void stopScanning()
@@ -128,10 +123,7 @@ void stopScanning()
 
 **Code Snippet**
 
-```java
-BarcodeReader reader = new BarcodeReader();
-reader.stopScanning();
-```
+You can view the complete code snippet in [`setCameraEnhancer`](#setcameraenhancer).
 
 ## setTextResultListener
 
@@ -148,16 +140,6 @@ void setTextResultListener(TextResultListener textResultListener)
 **Code Snippet**
 
 You can view the complete code snippet in [`setCameraEnhancer`](#setcameraenhancer).
-
-```java
-BarcodeReader reader = new BarcodeReader();
-reader.setTextResultListener(new TextResultListener() {
-    @Override
-    public void textResultCallback(int frameId, ImageData imageData, TextResult[] results) {
-        //TODO add your code for using text results
-    }
-});
-```
 
 ## setIntermediateResultListener
 

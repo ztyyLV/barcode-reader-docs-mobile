@@ -27,6 +27,7 @@ NS_SWIFT_NAME(initLicense(_:verificationDelegate:));
 **Parameters**
 
 `[in] license` The license key.
+`[in, out] verificationDelegate` The listener that handles callback when the license verification message is returned by the license server. See also [`DBRLicenseVerificationListener`](protocol-dbrlicenseverificationlistener.md).
 
 **Return Value**
 
