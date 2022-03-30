@@ -6,7 +6,7 @@ keywords: DBRLicenseVerificationListener, interface, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
-pageStartVer: 8.0
+pageStartVer: 9.0
 ---
 
 # DBRLicenseVerificationListener
