@@ -48,10 +48,10 @@ This code snippet displays a complete code on how to add DynamsoftCameraEnhancer
 >
 >1. 
 ```objc
-// Be sure that you have import the following headers when using video decoding methods
+/* Be sure that you have import the following headers when using video decoding methods */
 #import <DynamsoftBarcodeReader/DynamsoftBarcodeReader.h>
 #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
-// You have to add DBRTextResultListener to your interface.
+/* You have to add DBRTextResultListener to your interface. */
 @interface ViewController ()<DBRTextResultListener>
 @property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
 @property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
