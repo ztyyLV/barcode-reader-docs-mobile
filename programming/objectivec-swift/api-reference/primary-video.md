@@ -125,19 +125,6 @@ Start the video streaming barcode decoding thread. Please be sure that you have 
 
 You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer)
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-[_barcodeReader startScanning];
-```
-2. 
-```swift
-barcodeReader.startScanning()
-```
-
 ## stopScanning
 
 Stop the video streaming barcode decoding thread.
@@ -176,36 +163,6 @@ Set callback function to process text results generated during frame decoding.
 **Code Snippet**
 
 You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer)
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-// You have to add DBRTextResultListener to your interface.
-@interface ViewController ()<DBRTextResultListener>
-- (void)configurationDBR{
-    _barcodeReader =  [[DynamsoftBarcodeReader alloc] init];
-    [_barcodeReader setDBRTextResultListener:self];
-}
-- (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
-    // Add your code to execute when barcode result is returned.
-}
-```
-2. 
-```swift
-// You have to add setDBRTextResultListener to your class.
-class ViewController: UIViewController, DBRTextResultListener{
-    func configurationDBR(){
-        barcodeReader = DynamsoftBarcodeReader.init()
-        barcodeReader.setDBRTextResultListener(self)
-    }
-    func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?){
-        // Add your code to execute when barcode result is returned.
-    }
-}
-```
 
 ## setDBRIntermediateResultListener
 
