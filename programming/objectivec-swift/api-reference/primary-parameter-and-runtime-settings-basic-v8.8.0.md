@@ -72,18 +72,18 @@ barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "Enab
 
 Check follow link for available modes and arguments:
 
-- [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
-- [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes)
-- [`ColourClusteringModes`]({{ site.parameters_reference }}image-parameter/ColourClusteringModes.html#colourclusteringmodes)
-- [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#colourconversionmodes)
-- [`DeformationResistingModes`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#deformationresistingmodes)
-- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#imagepreprocessingmodes)
-- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#intermediateresultsavingmode)
-- [`LocalizationModes`]({{ site.parameters_reference }}image-parameter/LocalizationModes.html#localizationmodes)
-- [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes)
-- [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes)
-- [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
-- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)
+- [`BarcodeColourModes`]({{ site.parameters_reference }}barcode-colour-modes.html)
+- [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html)
+- [`ColourClusteringModes`]({{ site.parameters_reference }}colour-clustering-modes.html)
+- [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html)
+- [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html)
+- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html)
+- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}intermediate-result-saving-mode.html)
+- [`LocalizationModes`]({{ site.parameters_reference }}localization-modes.html)
+- [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html)
+- [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html)
+- [`TextFilterModes`]({{ site.parameters_reference }}text-filter-modes.html)
+- [`TextureDetectionModes`]({{ site.parameters_reference }}texture-detection-modes.html)
 
 ## getModeArgument
 
@@ -142,18 +142,18 @@ let argumentValue = barcodeReader.getModeArgument("BinarizationModes", index: 0,
 
 Check follow link for available modes and arguments:
 
-- [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
-- [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes)
-- [`ColourClusteringModes`]({{ site.parameters_reference }}image-parameter/ColourClusteringModes.html#colourclusteringmodes)
-- [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#colourconversionmodes)
-- [`DeformationResistingModes`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#deformationresistingmodes)
-- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#imagepreprocessingmodes)
-- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#intermediateresultsavingmode)
-- [`LocalizationModes`]({{ site.parameters_reference }}image-parameter/LocalizationModes.html#localizationmodes)
-- [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes)
-- [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes)
-- [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
-- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)
+- [`BarcodeColourModes`]({{ site.parameters_reference }}barcode-colour-modes.html)
+- [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html)
+- [`ColourClusteringModes`]({{ site.parameters_reference }}colour-clustering-modes.html)
+- [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html)
+- [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html)
+- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html)
+- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}intermediate-result-saving-mode.html)
+- [`LocalizationModes`]({{ site.parameters_reference }}localization-modes.html)
+- [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html)
+- [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html)
+- [`TextFilterModes`]({{ site.parameters_reference }}text-filter-modes.html)
+- [`TextureDetectionModes`]({{ site.parameters_reference }}texture-detection-modes.html)
 
 ## getRuntimeSettings
 

@@ -342,7 +342,7 @@ int resultCoordinateType
 
 **Value Range**
 
-Any one of the [`ResultCoordinateType`]({{ site.parameters_reference }}image-parameter/result-control.html#resultcoordinatetype) Enumeration items
+Any one of the [`ResultCoordinateType`]({{ site.parameters_reference }}result-coordinate-type.html) Enumeration items
 
 **Default Value**
 
