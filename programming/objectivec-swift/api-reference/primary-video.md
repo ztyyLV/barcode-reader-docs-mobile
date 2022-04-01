@@ -36,7 +36,7 @@ Bind a `DynamsoftCameraEnhancer` instance to the Barcode Reader.
 
 **Parameters**
 
-`dce`: An instance of `Dynamsoft Camera Enhancer`.
+`cameraInstance`: An instance of `Dynamsoft Camera Enhancer`.
 
 **Code Snippet**
 
