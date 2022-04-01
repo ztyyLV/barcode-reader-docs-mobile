@@ -36,11 +36,4 @@ void textResultCallback(int frameId, ImageData imageData, TextResult[] results);
 
 **Code Snippet**
 
-```java
-TextResultListener textResultListener = new TextResultListener() {
-    @Override
-    public void textResultCallback(int id, ImageData imageData, TextResult[] textResults) {
-        // Add your code
-    }
-};
-```
+You must use the video barcode decoding method to get the text result callback. You can view detailed code snippets about the usage of `textResultCallback` in the [Video Method](primary-video.md#setcameraenhancer) section.

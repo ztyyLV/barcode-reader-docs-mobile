@@ -34,3 +34,7 @@ Represents the method to handle the text result array returned by the library.
 `frameID`: The ID of the frame.  
 `imageData`: The image data of the frame.  
 `results`: Recognized barcode results of the frame.
+
+**Code Snippet**
+
+You must use the video barcode decoding method to get the text result callback. You can view detailed code snippets about the usage of `textResultCallback` in the [Video Method](primary-video.md#setcameraenhancer) section.
