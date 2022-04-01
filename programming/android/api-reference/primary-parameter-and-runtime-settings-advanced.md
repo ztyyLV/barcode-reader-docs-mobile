@@ -34,7 +34,7 @@ void initRuntimeSettingsWithFile(String filePath, int enumConflictMode) throws B
 **Parameters**
 
 `filePath`: The path of the settings file.  
-`enumConflictMode`: The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings and replace with the new template.
+`enumConflictMode`: The parameter setting mode, which decides whether to inherit parameters from the previous template setting or to overwrite previous settings and replace with the new template.
 
 **Exceptions**
 
