@@ -54,7 +54,7 @@ There are two ways to include the SDK into your project - local binary dependenc
 
 #### Local Binary Dependency
 
-1. Copy the file `[INSTALLATION FOLDER]\Lib\DynamsoftBarcodeReaderAndroid.aar` and `[INSTALLATION FOLDER]\Lib\DynamsoftCameraEnhancerAndroid.aar` to the target directory `HelloWorld\app\libs`
+1. Copy the file `[INSTALLATION FOLDER]\Libs\DynamsoftBarcodeReaderAndroid.aar` and `[INSTALLATION FOLDER]\Lib\DynamsoftCameraEnhancerAndroid.aar` to the target directory `HelloWorld\app\libs`
 
 2. Open the file `HelloWorld\app\build.gradle` and add reference in the dependencies:
 
@@ -64,7 +64,7 @@ There are two ways to include the SDK into your project - local binary dependenc
     }
     ```
 
-3. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
+3. Click **Sync Project with Gradle Files**. After the synchronization completes, the SDK is added to the project.
 
 4. Import the package in the file `MainActivity.java`
 
