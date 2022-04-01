@@ -66,6 +66,10 @@ There are two ways to include the SDK into your project - local binary dependenc
 
 3. Click **Sync Project with Gradle Files**. After the synchronization completes, the SDK is added to the project.
 
+   >Note:
+   >
+   > - If your Android SDK version is 28 or higher, you have to add `android.enableJetifer=true` in your `gradle.properties` file before you sync your project with Gradle files.
+
 4. Import the package in the file `MainActivity.java`
 
    ```java
@@ -106,6 +110,10 @@ There are two ways to include the SDK into your project - local binary dependenc
    > - Please replace {version-number} with the correct version number.
 
 3. Click **Sync Project with Gradle Files**. After the synchronization completes, the SDK is added to the project.
+
+   >Note:
+   >
+   > - If your Android SDK version is 28 or higher, you have to add `android.enableJetifer=true` in your `gradle.properties` file before you sync your project with Gradle files.
 
 4. Import the package in the file `MainActivity.java`
 
