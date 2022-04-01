@@ -18,6 +18,8 @@ noTitleIndex: true
   | [`allParameterTemplateNames`](#allparametertemplatenames) | Gets the parameter templates name array. |
   | [`outputSettingsToFile`](#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
   | [`outputSettingsToString`](#outputsettingstostring) | Output runtime settings to a string. |
+  | [`setModeArgument`](#setmodeargument) | Sets the optional argument for a specified mode in Modes parameters. |
+  | [`getModeArgument`](#getmodeargument) | Gets the optional argument for a specified mode in Modes parameters. |
 
 ---
 
@@ -247,3 +249,123 @@ settingsName = [barcodeReader outputSettingsToString:@"currentRuntimeSettings" e
 ```swift
 let settingsName = try? barcodeReader.outputSettingsToString("currentRuntimeSettings")
 ```
+
+## setModeArgument
+
+Sets the optional argument for a specified mode in Modes parameters.
+
+```objc
+-(void)setModeArgument:(NSString* _Nonnull)modeName
+                    index:(NSInteger)index 
+                    argumentName:(NSString* _Nonnull)argumentName
+                    argumentValue:(NSString* _Nonnull)argumentValue
+                    error:(NSError* _Nullable * _Nullable)error;
+```
+
+**Parameters**
+
+`[in] modesName` The mode parameter name to set argument.  
+`[in] index` The array index of mode parameter to indicate a specific mode.  
+`[in] argumentName` The name of the argument to set.  
+`[in] argumentValue` The value of the argument to set.  
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+iPublicRuntimeSettings *settings = [barcodeReader getRuntimeSettings:nil];
+settings.binarizationModes = @[@(EnumBinarizationModeLocalBlock)];
+[barcodeReader updateRuntimeSettings:settings error:nil];
+[barcodeReader setModeArgument:@"BinarizationModes" index:0 argumentName:@"EnableFillBinaryVacancy" argumentValue:"1" error:nil];
+```
+2. 
+```swift
+let settings = try? barcodeReader.getRuntimeSettings()
+settings!.binarizationModes = [EnumBinarizationMode.localBlock]
+try? barcodeReader.updateRuntimeSettings(settings!)
+try? barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1")
+```
+
+**Remarks**
+
+Check follow link for available modes and arguments:
+
+- [`BarcodeColourModes`]({{ site.parameters_reference }}barcode-colour-modes.html)
+- [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html)
+- [`ColourClusteringModes`]({{ site.parameters_reference }}colour-clustering-modes.html)
+- [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html)
+- [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html)
+- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html)
+- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}intermediate-result-saving-mode.html)
+- [`LocalizationModes`]({{ site.parameters_reference }}localization-modes.html)
+- [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html)
+- [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html)
+- [`TextFilterModes`]({{ site.parameters_reference }}text-filter-modes.html)
+- [`TextureDetectionModes`]({{ site.parameters_reference }}texture-detection-modes.html)
+
+## getModeArgument
+
+Gets the optional argument for a specified mode in Modes parameters.
+
+```objc
+-(NSString* _Nonnull)getModeArgument:(NSString* _Nonnull)modeName
+                               index:(NSInteger)index
+                        argumentName:(NSString* _Nonnull)argumentName
+                               error:(NSError* _Nullable * _Nullable)error;
+```
+
+**Parameters**
+
+`[in] modesName` The mode parameter name to get arguments.  
+`[in] index` The array index of mode parameter to indicate a specific mode.  
+`[in] argumentName` The name of the argument to get.  
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+
+**Return Value**
+
+the optional argument for a specified mode
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+iPublicRuntimeSettings *settings = [barcodeReader getRuntimeSettings:nil];
+settings.binarizationModes = @[@(EnumBinarizationModeLocalBlock)];
+[barcodeReader updateRuntimeSettings:settings error:nil];
+[barcodeReader setModeArgument:@"BinarizationModes" index:0 argumentName:@"EnableFillBinaryVacancy" argumentValue:"1" error:nil];
+argumentValue = [barcodeReader getModeArgument:@"BinarizationModes" index:0 argumentName:@"EnableFillBinaryVacancy" error:&error];
+```
+2. 
+```swift
+let settings = try? barcodeReader.getRuntimeSettings()
+settings?.binarizationModes![0] = EnumBinarizationMode.localBlock
+try? barcodeReader.updateRuntimeSettings(settings!)
+try? barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1")
+let argumentValue = barcodeReader.getModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", error: &error)
+```
+
+**Remarks**
+
+Check follow link for available modes and arguments:
+
+- [`BarcodeColourModes`]({{ site.parameters_reference }}barcode-colour-modes.html)
+- [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html)
+- [`ColourClusteringModes`]({{ site.parameters_reference }}colour-clustering-modes.html)
+- [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html)
+- [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html)
+- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html)
+- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}intermediate-result-saving-mode.html)
+- [`LocalizationModes`]({{ site.parameters_reference }}localization-modes.html)
+- [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html)
+- [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html)
+- [`TextFilterModes`]({{ site.parameters_reference }}text-filter-modes.html)
+- [`TextureDetectionModes`]({{ site.parameters_reference }}texture-detection-modes.html)
