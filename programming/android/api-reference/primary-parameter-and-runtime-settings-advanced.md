@@ -18,6 +18,8 @@ noTitleIndex: true
   | [`getAllParameterTemplateNames`](#getallparametertemplatenames) | Gets the parameter templates name array. |
   | [`outputSettingsToFile`](#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
   | [`outputSettingsToString`](#outputsettingstostring) | Output runtime settings to a string. |
+  | [`setModeArgument`](#setmodeargument) | Set argument value for the specified mode parameter. |
+  | [`getModeArgument`](#getmodeargument) | Get argument value for the specified mode parameter. |
 
   ---
 
@@ -32,7 +34,7 @@ void initRuntimeSettingsWithFile(String filePath, int enumConflictMode) throws B
 **Parameters**
 
 `filePath`: The path of the settings file.  
-`enumConflictMode`: The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings and replace with the new template.
+`enumConflictMode`: The parameter setting mode, which decides whether to inherit parameters from the previous template setting or to overwrite previous settings and replace with the new template.
 
 **Exceptions**
 
@@ -194,3 +196,101 @@ BarcodeReader reader = new BarcodeReader();
 String settingStr = reader.outputSettingsToString("currentRuntimeSettings");
 reader.destroy();
 ```
+
+## setModeArgument
+
+Sets the optional argument for a specified mode in Modes parameters.
+
+```java
+void setModeArgument(String modesName, int index, String argumentName, String argumentValue) throws BarcodeReaderException
+```
+
+**Parameters**
+
+`modesName`: The mode parameter name to set argument.  
+`index`: The array index of mode parameter to indicate a specific mode.  
+`argumentName`: The name of the argument to set.  
+`argumentValue`: The value of the argument to set.
+
+**Exceptions**
+
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+
+**Code Snippet**
+
+```java
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+settings.binarizationModes[0] = EnumBinarizationMode.BM_LOCAL_BLOCK;
+reader.updateRuntimeSettings(settings);
+reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
+reader.destroy();
+```
+
+**Remarks**
+
+Check the available modes and arguments below:
+
+- [`BarcodeColourModes`]({{ site.parameters_reference }}barcode-colour-modes.html)
+- [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html)
+- [`ColourClusteringModes`]({{ site.parameters_reference }}colour-clustering-modes.html)
+- [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html)
+- [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html)
+- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html)
+- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}intermediate-result-saving-mode.html)
+- [`LocalizationModes`]({{ site.parameters_reference }}localization-modes.html)
+- [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html)
+- [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html)
+- [`TextFilterModes`]({{ site.parameters_reference }}text-filter-modes.html)
+- [`TextureDetectionModes`]({{ site.parameters_reference }}texture-detection-modes.html)
+
+## getModeArgument
+
+Gets the optional argument for a specified mode in Modes parameters.
+
+```java
+String getModeArgument(String modesName, int index, String argumentName) throws BarcodeReaderException
+```
+
+**Parameters**
+
+`modesName`: The mode parameter name to get argument.  
+`index`: The array index of mode parameter to indicate a specific mode.  
+`argumentName`: The name of the argument to get.
+
+**Return Value**
+
+the optional argument for a specified mode in Modes parameters.
+
+**Exceptions**
+
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+
+**Code Snippet**
+
+```java
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+settings.binarizationModes[0] = EnumBinarizationMode.BM_LOCAL_BLOCK;
+reader.updateRuntimeSettings(settings);
+reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
+String argumentValue = reader.getModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy");
+reader.destroy();
+```
+
+**Remarks**
+
+Check the available modes and arguments below:
+
+- [`BarcodeColourModes`]({{ site.parameters_reference }}barcode-colour-modes.html)
+- [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html)
+- [`ColourClusteringModes`]({{ site.parameters_reference }}colour-clustering-modes.html)
+- [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html)
+- [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html)
+- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html)
+- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}intermediate-result-saving-mode.html)
+- [`LocalizationModes`]({{ site.parameters_reference }}localization-modes.html)
+- [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html)
+- [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html)
+- [`TextFilterModes`]({{ site.parameters_reference }}text-filter-modes.html)
+- [`TextureDetectionModes`]({{ site.parameters_reference }}texture-detection-modes.html)
