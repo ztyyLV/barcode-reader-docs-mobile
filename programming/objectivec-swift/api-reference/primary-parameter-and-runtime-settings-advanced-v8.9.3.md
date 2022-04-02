@@ -28,7 +28,7 @@ noTitleIndex: true
 Initialize runtime settings with the parameters obtained from a JSON file.
 
 ```objc
-- (BOOL)initRuntimeSettingsWithFile:(NSString* _Nonnull)fileName
+- (void)initRuntimeSettingsWithFile:(NSString* _Nonnull)fileName
                        conflictMode:(EnumConflictMode)conflictMode
                               error:(NSError* _Nullable * _Nullable)error
                               NS_SWIFT_NAME(initRuntimeSettingsWithFile(_:conflictMode:));
@@ -60,7 +60,7 @@ try? barcodeReader.initRuntimeSettingsWithFile("your template file path", confli
 Initialize runtime settings with the parameters obtained from a JSON string.
 
 ```objc
-- (BOOL)initRuntimeSettingsWithString:(NSString* _Nonnull)content
+- (void)initRuntimeSettingsWithString:(NSString* _Nonnull)content
                          conflictMode:(EnumConflictMode)conflictMode
                                 error:(NSError* _Nullable * _Nullable)error
                                 NS_SWIFT_NAME(initRuntimeSettingsWithString(_:conflictMode:));
@@ -92,7 +92,7 @@ try? barcodeReader.initRuntimeSettingsWithString(content:"{\"Version\":\"3.0\", 
 Append a new template file to the current runtime settings.
 
 ```objc
-- (BOOL)appendTplFileToRuntimeSettings:(NSString * _Nonnull)fileName
+- (void)appendTplFileToRuntimeSettings:(NSString * _Nonnull)fileName
                           conflictMode:(EnumConflictMode)conflictMode
                                  error:(NSError * _Nullable *_Nullable)error
                                  NS_SWIFT_NAME(appendTplFileToRuntimeSettings(_:conflictMode:));
@@ -124,7 +124,7 @@ try? barcodeReader.appendTplFileToRuntimeSettings(fileName:"your template file p
 Append a new template string to the current runtime settings.
 
 ```objc
-- (BOOL)appendTplStringToRuntimeSettings:(NSString * _Nonnull)content
+- (void)appendTplStringToRuntimeSettings:(NSString * _Nonnull)content
                             conflictMode:(EnumConflictMode)conflictMode
                                    error:(NSError *_Nullable *_Nullable)error   
                                    NS_SWIFT_NAME(appendTplStringToRuntimeSettings(_:conflictMode:));
@@ -189,7 +189,7 @@ let allTplNames = try? barcodeReader.allParameterTemplateNames()
 Outputs runtime settings and save them into a settings file (JSON file).  
 
 ```objc
-- (BOOL)outputSettingsToFile:(NSString *_Nullable)filePath 
+- (void)outputSettingsToFile:(NSString *_Nullable)filePath 
                 settingsName:(NSString*_Nonnull)settingsName 
                        error:(NSError*_Nullable *_Nullable)error   
                        NS_SWIFT_NAME(outputSettingsToFile(_:settingsName:));
@@ -255,7 +255,7 @@ let settingsName = try? barcodeReader.outputSettingsToString("currentRuntimeSett
 Sets the optional argument for a specified mode in Modes parameters.
 
 ```objc
-- (BOOL)setModeArgument:(NSString* _Nonnull)modeName
+-(void)setModeArgument:(NSString* _Nonnull)modeName
                     index:(NSInteger)index 
                     argumentName:(NSString* _Nonnull)argumentName
                     argumentValue:(NSString* _Nonnull)argumentValue
