@@ -66,6 +66,10 @@ There are two ways to include the SDK into your project - local binary dependenc
 
 3. Click **Sync Project with Gradle Files**. After the synchronization completes, the SDK is added to the project.
 
+   >Note:
+   >
+   > - If your Android SDK version is 28 or higher, you have to add `android.enableJetifer=true` in your `gradle.properties` file before you sync your project with Gradle files.
+
 4. Import the package in the file `MainActivity.java`
 
    ```java
@@ -105,7 +109,11 @@ There are two ways to include the SDK into your project - local binary dependenc
    >  
    > - Please replace {version-number} with the correct version number.
 
-3. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
+3. Click **Sync Project with Gradle Files**. After the synchronization completes, the SDK is added to the project.
+
+   >Note:
+   >
+   > - If your Android SDK version is 28 or higher, you have to add `android.enableJetifer=true` in your `gradle.properties` file before you sync your project with Gradle files.
 
 4. Import the package in the file `MainActivity.java`
 
@@ -158,9 +166,9 @@ There are two ways to include the SDK into your project - local binary dependenc
 3. Initialize the camera view and bind to the Camera Enhancer object.
 
     ```java
-    DCECameraView mCameraView;
+    DCECameraView cameraView;
 
-    mCameraView = findViewById(R.id.cameraView);
+    cameraView = findViewById(R.id.cameraView);
     mCameraEnhancer.setCameraView(cameraView);
     ```
 
@@ -191,7 +199,7 @@ There are two ways to include the SDK into your project - local binary dependenc
    reader.setTextResultListener(mTextResultListener);
    ```
 
-3. Bind the camera enhancer instance as image source to the barcode reader instance and start scanning.
+3. Bind the camera enhancer instance as an image source to the barcode reader instance and start scanning.
 
    ```java
    // Bind the Camera Enhancer instance to the Barcode Reader instance.
@@ -232,7 +240,7 @@ There are two ways to include the SDK into your project - local binary dependenc
 
 ### Additional Steps
 
-1. In the Project window, open **app > res > layout > `activity_main.xml`**, create a text view section under the root node to display the recognized barcode results.
+1. In the Project window, open **app > res > layout > `activity_main.xml`**, create a text view section under the root node to display the recognized barcode results. The following sample code is a TextView under RelativeLayout
 
    ```xml
     <TextView
