@@ -57,7 +57,7 @@ let settings = try? barcodeReader.getRuntimeSettings()
 Update runtime settings with a given [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md) struct.
 
 ```objc
-- (void)updateRuntimeSettings:(iPublicRuntimeSettings* _Nonnull)settings
+- (BOOL)updateRuntimeSettings:(iPublicRuntimeSettings* _Nonnull)settings
                         error:(NSError* _Nullable * _Nullable)error
                         NS_SWIFT_NAME(updateRuntimeSettings(_:));
 ```
@@ -116,7 +116,7 @@ barcodeReader.updateRuntimeSettings(EnumPresetTemplate.EnumPresetTemplateVideoSi
 Reset all parameters to default values.
 
 ```objc
-- (void)resetRuntimeSettings:(NSError* _Nullable * _Nullable)error;
+- (BOOL)resetRuntimeSettings:(NSError* _Nullable * _Nullable)error;
 ```
 
 **Parameters**

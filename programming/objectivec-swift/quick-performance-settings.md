@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - Optimize Performance
-description: This is the Optimize Performance page of Dynamsoft Barcode Reader for Android SDK.
-keywords: Guide, Android, Optimize Performance
+title: Dynamsoft Barcode Reader for iOS - Optimize Performance
+description: This is the Optimize Performance page of Dynamsoft Barcode Reader for iOS SDK.
+keywords: Guide, Optimize Performance
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

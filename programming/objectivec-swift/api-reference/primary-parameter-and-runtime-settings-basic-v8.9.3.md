@@ -12,7 +12,8 @@ noTitleIndex: true
   | Method               | Description |
   |----------------------|-------------|
   | [`getRuntimeSettings`](#getruntimesettings) | Get current runtime settings. |
-  | [`updateRuntimeSettings`](#updateruntimesettings) | Update runtime settings with a given struct. |
+  | [`updateRuntimeSettings (with Struct)`](#updateruntimesettings) | Update runtime settings with a given struct. |
+  | [`updateRuntimeSettings (with preset template)`](#with-a-preset-template)) | Update runtime settings from one of the preset templates. |
   | [`resetRuntimeSettings`](#resetruntimesettings) | Resets all parameters to default values. |
 
 ---
@@ -46,17 +47,19 @@ NSError __autoreleasing * _Nullable error;
 ```
 2. 
 ```swift
-let error: NSError? = NSError()
-let licenseString = try? barcodeReader.getRuntimeSettings(&error)
+let settings = try? barcodeReader.getRuntimeSettings()
 ```
 
 ## updateRuntimeSettings
+
+### With a PublicRuntimeSettings Struct
 
 Update runtime settings with a given [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md) struct.
 
 ```objc
 - (void)updateRuntimeSettings:(iPublicRuntimeSettings* _Nonnull)settings
-                        error:(NSError* _Nullable * _Nullable)error;
+                        error:(NSError* _Nullable * _Nullable)error
+                        NS_SWIFT_NAME(updateRuntimeSettings(_:));
 ```
 
 **Parameters**
@@ -72,15 +75,40 @@ Update runtime settings with a given [`iPublicRuntimeSettings`](auxiliary-iPubli
 >
 >1. 
 ```objc
-NSError __autoreleasing * _Nullable error;
-iPublicRuntimeSettings *settings;
-[barcodeReader updateRuntimeSettings:settings error:&error];
+iPublicRuntimeSettings *settings = [barcodeReader getRuntimeSettings:nil];
+// After you have made some changes on the runtime settings.
+[barcodeReader updateRuntimeSettings:settings error:nil];
 ```
 2. 
 ```swift
-let error: NSError? = NSError()
-let settings = try? barcodeReader.getRuntimeSettings(nil)
-barcodeReader.update(settings, error: &error)
+let settings = try? barcodeReader.getRuntimeSettings()
+// After you have made some changes on the runtime settings.
+try? barcodeReader.updateRuntimeSettings(settings!)
+```
+
+### With a Preset Template
+
+```objc
+- (void)updateRuntimeSettings:(EnumPresetTemplate)presetTemplate;
+```
+
+**Parameters**
+
+`presetTemplate`: One of the preset templates.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+[barcodeReader updateRuntimeSettings:EnumPresetTemplate.EnumPresetTemplateVideoSingleBarcode];
+```
+2. 
+```swift
+barcodeReader.updateRuntimeSettings(EnumPresetTemplate.EnumPresetTemplateVideoSingleBarcode)
 ```
 
 ## resetRuntimeSettings
@@ -103,11 +131,9 @@ Reset all parameters to default values.
 >
 >1. 
 ```objc
-NSError __autoreleasing * _Nullable error;
-[barcodeReader resetRuntimeSettings:&error];
+[barcodeReader resetRuntimeSettings:nil];
 ```
 2. 
 ```swift
-let error: NSError? = NSError()
-barcodeReader.resetRuntimeSettings(&error)
+try? barcodeReader.resetRuntimeSettings()
 ```
