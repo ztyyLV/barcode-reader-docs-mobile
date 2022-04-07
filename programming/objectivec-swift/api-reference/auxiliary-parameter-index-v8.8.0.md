@@ -103,7 +103,7 @@ The parameters that helps you on frame decoding.
 | [`imagePixelFormat`](auxiliary-iFrameDecodingParameters.md#imagepixelformat) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) | The image pixel format used in the image byte array. |
 | [`region`](auxiliary-iFrameDecodingParameters.md#region) | [`iRegionDefinition`](auxiliary-iRegionDefinition.md) | The region definition of the frame to calculate the internal indicator. |
 | [`threshold`](auxiliary-iFrameDecodingParameters.md#threshold) | *float* | The threshold used for filtering frames. |
-| [`fps`](auxiliary-iFrameDecodingParameters.md#fps) | *NSInteger* | The frequency of calling [`appendFrame`]({{site.android_methods}}primary-video.html#appendframe) per second. |
+| [`fps`](auxiliary-iFrameDecodingParameters.md#fps) | *NSInteger* | The frequency of calling [`appendFrame`](primary-video.md#appendFrame) per second. |
 | [`autoFilter`](auxiliary-iFrameDecodingParameters.md#autofilter) | *NSInteger* | Sets whether to filter frames automatically. |
 | [`clarityCalculationMethod`](auxiliary-iFrameDecodingParameters.md#claritycalculationmethod) | [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) | Sets the method used for calculating the clarity of the frames. |
 | [`clarityFilterMode`](auxiliary-iFrameDecodingParameters.md#clarityfiltermode) | [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) | Sets the mode used for filtering frames by calculated clarity. |

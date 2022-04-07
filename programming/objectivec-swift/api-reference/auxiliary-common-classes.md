@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - Common Classes
-description: This page shows the Common Classes of Dynamsoft Barcode Reader for Android SDK.
-keywords: Common Classes, API reference, android
+title: Dynamsoft Barcode Reader iOS API Reference - Common Classes
+description: This page shows the Common Classes of Dynamsoft Barcode Reader for iOS SDK.
+keywords: Common Classes, API reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
