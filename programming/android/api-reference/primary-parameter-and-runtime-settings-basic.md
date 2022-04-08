@@ -81,7 +81,7 @@ void updateRuntimeSettings(EnumPresetTemplate presetTemplate)
 
 **Parameters**
 
-`presetTemplate`: One of the preset templates.
+`presetTemplate`: One of the preset templates defined by [EnumPresetTemplate]({{ site.enumerations }}other-enums.html#presettemplate)
 
 **Code Snippet**
 
