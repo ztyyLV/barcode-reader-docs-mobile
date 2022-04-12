@@ -10,7 +10,7 @@ noTitleIndex: true
 pageStartVer: 8.6
 ---
 
-# API Reference - Android
+# Android API Reference
 
 ## BarcodeReader Class
 
