@@ -9,7 +9,7 @@ noTitleIndex: true
 breadcrumbText: iOS API Reference
 ---
 
-# API Reference - iOS
+# iOS API Reference
 
 ## DynamsoftBarcodeReader Class
 

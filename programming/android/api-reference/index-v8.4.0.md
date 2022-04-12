@@ -9,7 +9,7 @@ breadcrumbText: Android API Reference
 noTitleIndex: true
 ---
 
-# API Reference - Android
+# Android API Reference
 
 ## BarcodeReader Class
 
