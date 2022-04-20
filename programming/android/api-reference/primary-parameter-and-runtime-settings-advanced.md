@@ -45,7 +45,6 @@ void initRuntimeSettingsWithFile(String filePath, int enumConflictMode) throws B
 ```java
 BarcodeReader reader = new BarcodeReader();
 reader.initRuntimeSettingsWithFile("your template file path", EnumConflictMode.CM_OVERWRITE);
-reader.destroy();
 ```
 
 ## initRuntimeSettingsWithString
@@ -70,7 +69,6 @@ void initRuntimeSettingsWithString(String content, int enumConflictMode)throws B
 ```java
 BarcodeReader reader = new BarcodeReader();
 reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", EnumConflictMode.CM_OVERWRITE);
-reader.destroy();
 ```
 
 ## appendTplFileToRuntimeSettings
@@ -95,7 +93,6 @@ void appendTplFileToRuntimeSettings(String filePath, int enumConflictMode) throw
 ```java
 BarcodeReader reader = new BarcodeReader();
 reader.appendTplFileToRuntimeSettings("your template file path", EnumConflictMode.CM_IGNORE);
-reader.destroy();
 ```
 
 ## appendTplStringToRuntimeSettings
@@ -121,7 +118,6 @@ void appendTplStringToRuntimeSettings(String content, int enumConflictMode) thro
 BarcodeReader reader = new BarcodeReader();
 reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", EnumConflictMode.CM_OVERWRITE);
 reader.appendTplStringToRuntimeSettings("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_OneD\"], \"ExpectedBarcodesCount\":20}}", EnumConflictMode.CM_IGNORE);
-reader.destroy();
 ```
 
 ## getAllParameterTemplateNames
@@ -145,7 +141,6 @@ The template name array.
 ```java
 BarcodeReader reader = new BarcodeReader();
 String[] templateNames = reader.getAllParameterTemplateNames();
-reader.destroy();
 ```
 
 ## outputSettingsToFile
@@ -170,7 +165,6 @@ void outputSettingsToFile(String filePath, String settingsName) throws BarcodeRe
 ```java
 BarcodeReader reader = new BarcodeReader();
 reader.outputSettingsToFile("your saving file path", "currentRuntimeSettings");
-reader.destroy();
 ```
 
 ## outputSettingsToString
@@ -194,7 +188,6 @@ The output string which stores the contents of current settings.
 ```java
 BarcodeReader reader = new BarcodeReader();
 String settingStr = reader.outputSettingsToString("currentRuntimeSettings");
-reader.destroy();
 ```
 
 ## setModeArgument
@@ -224,7 +217,6 @@ PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.binarizationModes[0] = EnumBinarizationMode.BM_LOCAL_BLOCK;
 reader.updateRuntimeSettings(settings);
 reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
-reader.destroy();
 ```
 
 **Remarks**
@@ -275,7 +267,6 @@ settings.binarizationModes[0] = EnumBinarizationMode.BM_LOCAL_BLOCK;
 reader.updateRuntimeSettings(settings);
 reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
 String argumentValue = reader.getModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy");
-reader.destroy();
 ```
 
 **Remarks**

@@ -134,7 +134,6 @@ BarcodeReader reader = new BarcodeReader();
 /*Init DBR license before decoding*/
 /*Read external storage permission is required when decoding from a file*/
 TextResult[] result = reader.decodeFile(Environment.getExternalStorageDirectory().toString()+"your file path");
-reader.destroy();
 ```
 
 ## decodeFileInMemory
@@ -166,7 +165,6 @@ BarcodeReader reader = new BarcodeReader();
 /*Init DBR license before decoding
 get bufferBytes from other component*/
 TextResult[] result = reader.decodeFileInMemory(bufferBytes);
-reader.destroy();
 ```
 
 ### fileStream
@@ -194,7 +192,6 @@ BarcodeReader reader = new BarcodeReader();
 /*Init DBR license before decoding
 get bufferBytes from other component*/
 TextResult[] result = reader.decodeFileInMemory(fileStream);
-reader.destroy();
 ```
 
 ## decodeBase64String
@@ -223,7 +220,6 @@ The `TextResult` of all successfully decoded barcodes. `TextResult` includes the
 BarcodeReader reader = new BarcodeReader();
 /*Init DBR license before decoding*/
 TextResult[] result = reader.decodeBase64String("file in base64 string");
-reader.destroy();
 ```
 
 ## decodeBufferedImage
@@ -253,7 +249,6 @@ BarcodeReader reader = new BarcodeReader();
 /*Init DBR license before decoding*/
 /*get BufferedImage input from other component*/
 TextResult[] result = reader.decodeBufferedImage(input);
-reader.destroy();
 ```
 
 ## initIntermediateResult

@@ -39,7 +39,6 @@ void com.dynamsoft.barcode.BarcodeReader.initLicense(String license) throws Barc
 ```java
 BarcodeReader reader = new BarcodeReader();
 reader.initLicense("t0260NwAAAHV***************");
-reader.destroy();
 ```
 
 ## initLicenseFromServer
@@ -65,7 +64,6 @@ reader.initLicenseFromServer("", "C087****",  new DBRServerLicenseVerificationLi
     public void licenseVerificationCallback(boolean isSuccess, Exception error) {
     }
 });
-reader.destroy();
 ```
 
 ## initLicenseFromLicenseContent
@@ -90,7 +88,6 @@ void com.dynamsoft.barcode.BarcodeReader.initLicenseFromLicenseContent(String li
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 reader.initLicenseFromLicenseContent("t0260NwAAAHV***************", "C087****");
-reader.destroy();
 ```
 
 ## outputLicenseToString
@@ -119,5 +116,4 @@ The output string which stores the contents of license.
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 reader.initLicenseFromLicenseContent("t0260NwAAAHV***************", "C087****");
 String licenseInfo = reader.outputLicenseToString();
-reader.destroy();
 ```

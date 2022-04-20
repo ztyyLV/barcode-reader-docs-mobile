@@ -11,7 +11,7 @@ pageStartVer: 8.6
 
 # BarcodeReader Class
 
-## Initialize and Destroy
+## Initialize
 
   | Method               | Description |
   |----------------------|-------------|

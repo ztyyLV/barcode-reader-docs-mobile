@@ -13,7 +13,7 @@ noTitleIndex: true
 
 ## BarcodeReader Class
 
-### Initialize and Destroy
+### Initialize
 
   | Method               | Description |
   |----------------------|-------------|

@@ -49,7 +49,6 @@ All barcode text results decoded successfully.
 BarcodeReader reader = new BarcodeReader();
 /*Init DBR license before decoding*/
 TextResult[] result = reader.decodeFile("your file path", "");
-reader.destroy();
 ```
 
 ## decodeFileInMemory
@@ -82,7 +81,6 @@ BarcodeReader reader = new BarcodeReader();
 /*Init DBR license before decoding
 get bufferBytes from other component*/
 TextResult[] result = reader.decodeFileInMemory(bufferBytes, "");
-reader.destroy();
 ```
 
 ### fileStream
@@ -111,7 +109,6 @@ BarcodeReader reader = new BarcodeReader();
 /*Init DBR license before decoding
 get bufferBytes from other component*/
 TextResult[] result = reader.decodeFileInMemory(fis, "");
-reader.destroy();
 ```
 
 ## decodeBuffer
@@ -151,7 +148,6 @@ int iStride = 0;
 int format;
 GetBufferFromFile("your file path", bufferBytes, iWidth, iHeight, iStride, format);
 TextResult[] result = reader.decodeBuffer(bufferBytes, iWidth,  iHeight, iStride, format, "");
-reader.destroy();
 ```
 
 ## decodeBase64String
@@ -181,7 +177,6 @@ All barcode text results decoded successfully.
 BarcodeReader reader = new BarcodeReader();
 /*Init DBR license before decoding*/
 TextResult[] result = reader.decodeBase64String("file in base64 string", "");
-reader.destroy();
 ```
 
 ## decodeBufferedImage
@@ -212,7 +207,6 @@ BarcodeReader reader = new BarcodeReader();
 /*Init DBR license before decoding*/
 /*get BufferedImage input from other component*/
 TextResult[] result = reader.decodeBufferedImage(input, "");
-reader.destroy();
 ```
 
 ## initIntermediateResult

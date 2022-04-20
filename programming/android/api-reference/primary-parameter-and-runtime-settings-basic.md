@@ -40,7 +40,6 @@ The struct of template settings.
 ```java
 BarcodeReader reader = new BarcodeReader();
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
-reader.destroy();
 ```
 
 ## updateRuntimeSettings
@@ -68,7 +67,6 @@ BarcodeReader reader = new BarcodeReader();
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.deblurLevel = 9;
 reader.updateRuntimeSettings(settings);
-reader.destroy();
 ```
 
 ### With a Preset Template
@@ -88,7 +86,6 @@ void updateRuntimeSettings(EnumPresetTemplate presetTemplate)
 ```java
 BarcodeReader reader = new BarcodeReader();
 reader.updateRuntimeSettings(EnumPresetTemplate.VIDEO_SINGLE_BARCODE);
-reader.destroy();
 ```
 
 ## resetRuntimeSettings
@@ -111,5 +108,4 @@ PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.deblurLevel = 9;
 reader.updateRuntimeSettings(settings);
 reader.resetRuntimeSettings();
-reader.destroy();
 ```

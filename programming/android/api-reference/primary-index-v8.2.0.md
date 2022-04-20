@@ -10,7 +10,7 @@ breadcrumbText: BarcodeReader Class
 
 # BarcodeReader Class
 
-## Initialize and Destroy
+## Initialize
 
   | Method               | Description |
   |----------------------|-------------|
