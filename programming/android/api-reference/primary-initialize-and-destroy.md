@@ -12,7 +12,6 @@ noTitleIndex: true
   | Method               | Description |
   |----------------------|-------------|
   | [`BarcodeReader`](#barcodereader-initialization) | Initialization of `BarcodeReader` object.|
-  | [`destroy`](#destroy) | Destroys an instance of `BarcodeReader` object.|
 
 ---
 
@@ -38,17 +37,3 @@ reader = new BarcodeReader();
 **Remarks**
 
 `BarcodeReader(String license)` is deprecated and will be removed in the future. Please use `BarcodeReader()` instead.
-
-## Destroy
-
-Destroy the `BarcodeReader` object.
-
-```java
-void destroy()
-```
-
-**Code Snippet**
-
-```java
-reader.destroy();
-```

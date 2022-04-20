@@ -11,7 +11,6 @@ needAutoGenerateSidebar: true
   | Method               | Description |
   |----------------------|-------------|
   | [`BarcodeReader`](#barcodereader) | Initialization of `BarcodeReader` object.|
-  | [`destroy`](#destroy) | Destroys an instance of `BarcodeReader` object.|
 
 ---
 
@@ -45,17 +44,4 @@ BarcodeReader reader = new BarcodeReader();
 
 ```java
 BarcodeReader reader = new BarcodeReade("t0260NwAAAHV***************");
-```
-
-## Destroy
-
-```java
-void com.dynamsoft.barcode.BarcodeReader.destroy()
-```
-
-**Code Snippet**
-
-```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
-reader.destroy();
 ```

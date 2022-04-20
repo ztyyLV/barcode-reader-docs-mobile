@@ -16,7 +16,6 @@ pageStartVer: 8.6
   | Method               | Description |
   |----------------------|-------------|
   | [`BarcodeReader`](primary-initialize-and-destroy.md#barcodereader) | Initialization of `BarcodeReader` object.|
-  | [`destroy`](primary-initialize-and-destroy.md#destroy) | Destroys an instance of `BarcodeReader` object.|
 
 ## Video Decoding Methods
 

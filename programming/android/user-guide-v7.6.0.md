@@ -193,7 +193,6 @@ rts.expectedBarcodesCount = 10;
 dbr.updateRuntimeSettings(rts);
 //Replace "<Put the path of your file here>" with your own file path
 TextResult[] result = dbr.decodeFile("<Put your file path here>","");
-reader.destroy();
 ```
 
 #### Specify a scan region
@@ -215,7 +214,6 @@ runtimeSettings.region.regionMeasuredByPercentage = 1; //The region is determine
 dbr.updateRuntimeSettings(runtimeSettings);
 //Replace "<Put the path of your file here>" with your own file path
 TextResult[] result = dbr.decodeFile("<Put your file path here>","");
-reader.destroy();
 ```
 
 ### Use A Template to Change Settings
@@ -228,7 +226,6 @@ dbr.initLicense("<Put your license key here>"); //Replace "<Put your license key
 br.initRuntimeSettingsWithFile("<put your json file here>", EnumConflictMode.CM_OVERWRITE);
 //Replace "<Put the path of your file here>" with your own file path
 TextResult[] result = dbr.decodeFile("<Put your file path here>","");
-reader.destroy();
 ```
 
 Below is a template for your reference. To learn more about the APIs, you can check out [`PublicRuntimeSettings`](api-reference/class/PublicRuntimeSettings.md) Class.
