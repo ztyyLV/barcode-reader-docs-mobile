@@ -10,6 +10,12 @@ noTitleIndex: true
 
 # Release Notes for Android SDK - 9.x
 
+## 9.0.1 (04/20/2022)
+
+### Fixed
+
+- Fixed a bug that might offset the position of highlight overlays on the decoded barcodes when used together with `DynamsoftCameraEnhancer`.
+
 ## 9.0.0 (03/22/2022)
 
 ### Highlights

@@ -45,7 +45,6 @@ All barcode text results decoded successfully.
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 TextResult[] result = reader.decodeFile("your file path", "");
-reader.destroy();
 ```
 
 ## DecodeFileInMemory
@@ -76,7 +75,6 @@ BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 byte[] bufferBytes = null;
 GetBufferFromFile("your file path", bufferBytes);
 TextResult[] result = reader.decodeFileInMemory(bufferBytes, "");
-reader.destroy();
 ```
 
 ```java
@@ -102,7 +100,6 @@ All barcode text results decoded successfully.
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 FileInputStream fis = new FileInputStream("your file path");
 TextResult[] result = reader.decodeFileInMemory(fis, "");
-reader.destroy();
 ```
 
 ## DecodeBuffer
@@ -141,7 +138,6 @@ int iStride = 0;
 int format;
 GetBufferFromFile("your file path", bufferBytes, iWidth, iHeight, iStride, format);
 TextResult[] result = reader.decodeBuffer(bufferBytes, iWidth,  iHeight, iStride, format, "");
-reader.destroy();
 ```
 
 ## DecodeBase64String
@@ -170,7 +166,6 @@ All barcode text results decoded successfully.
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 TextResult[] result = reader.decodeBase64String("file in base64 string", "");
-reader.destroy();
 ```
 
 ## DecodeBufferedImage
@@ -200,5 +195,4 @@ All barcode text results decoded successfully.
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 BufferedImage input = ImageIO.read("your file path");
 TextResult[] result = reader.decodeBufferedImage(bitmap, "");
-reader.destroy();
 ```

@@ -93,7 +93,6 @@ reader.setErrorCallback(new ErrorCallback() {
     }
 }, null);
 reader.startFrameDecodingEx(parameters, "");
-reader.destroy();
 ```
 
 ## appendFrame
@@ -118,7 +117,6 @@ Returns the ID of the appended frame.
 BarcodeReader reader = new BarcodeReader();
 reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYSCALED, "");
 int frameId = reader.appendFrame(bufferBytes);
-reader.destroy();
 ```
 
 ## stopFrameDecoding
@@ -139,7 +137,6 @@ void stopFrameDecoding() throws BarcodeReaderException
 BarcodeReader reader = new BarcodeReader();
 reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYSCALED, "");
 reader.stopFrameDecoding();
-reader.destroy();
 ```
 
 ## initFrameDecodingParameters
@@ -163,7 +160,6 @@ The frame decoding parameters.
 ```java
 BarcodeReader reader = new BarcodeReader();
 FrameDecodingParameters parameters = reader.initFrameDecodingParameters();
-reader.destroy();
 ```
 
 ## setErrorCallback
@@ -276,5 +272,4 @@ Returns length of current inner frame queue.
 ```java
 BarcodeReader reader = new BarcodeReader();
 int length = reader.getLengthOfFrameQueue();
-reader.destroy();
 ```

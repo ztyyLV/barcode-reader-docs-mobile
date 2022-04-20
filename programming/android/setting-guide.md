@@ -54,7 +54,6 @@ BarcodeReader reader = new BarcodeReader();
 // Input a stringified JSON data in the method to initialize the template.
 // You can set whether to inherit or overwrite the previous settings.
 reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", EnumConflictMode.CM_OVERWRITE);
-reader.destroy();
 ```
 
 ## Optimize Settings

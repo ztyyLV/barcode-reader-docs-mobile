@@ -32,5 +32,4 @@ The version information string.
 ```java
 BarcodeReader reader = new BarcodeReader();
 String versionInfo = reader.getVersion();
-reader.destroy();
 ```

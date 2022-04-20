@@ -1,18 +1,17 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader initialization and Destroy
-description: This page shows BarcodeReader initialization and Destroy methods of Dynamsoft Barcode Reader for Android SDK.
-keywords: destroy, BarcodeReader, initialization and destroy, api reference, android
+title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader initialization
+description: This page shows BarcodeReader initialization methods of Dynamsoft Barcode Reader for Android SDK.
+keywords: BarcodeReader, initialization, api reference, android
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# Initialization and Destroy Methods
+# initialization methods
 
   | Method               | Description |
   |----------------------|-------------|
   | [`BarcodeReader`](#barcodereader-initialization) | Initialization of `BarcodeReader` object.|
-  | [`destroy`](#destroy) | Destroys an instance of `BarcodeReader` object.|
 
 ---
 
@@ -38,17 +37,3 @@ reader = new BarcodeReader();
 **Remarks**
 
 `BarcodeReader(String license)` is deprecated and will be removed in the future. Please use `BarcodeReader()` instead.
-
-## Destroy
-
-Destroy the `BarcodeReader` object.
-
-```java
-void destroy()
-```
-
-**Code Snippet**
-
-```java
-reader.destroy();
-```

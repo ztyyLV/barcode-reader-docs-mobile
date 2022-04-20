@@ -39,7 +39,6 @@ The struct of template settings.
 ```java
 BarcodeReader reader = new BarcodeReader();
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
-reader.destroy();
 ```
 
 ## updateRuntimeSettings
@@ -65,7 +64,6 @@ BarcodeReader reader = new BarcodeReader();
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.deblurLevel = 9;
 reader.updateRuntimeSettings(settings);
-reader.destroy();
 ```
 
 ## resetRuntimeSettings
@@ -88,5 +86,4 @@ PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.deblurLevel = 9;
 reader.updateRuntimeSettings(settings);
 reader.resetRuntimeSettings();
-reader.destroy();
 ```

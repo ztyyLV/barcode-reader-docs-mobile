@@ -40,5 +40,4 @@ settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE
 reader.updateRuntimeSettings(settings);
 TextResult[] result = reader.decodeFile("your file path", "");
 IntermediateResult[] irtResult = reader.getIntermediateResults();
-reader.destroy();
 ```

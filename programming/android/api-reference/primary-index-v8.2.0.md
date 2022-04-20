@@ -10,12 +10,11 @@ breadcrumbText: BarcodeReader Class
 
 # BarcodeReader Class
 
-## Initialize and Destroy
+## Initialize
 
   | Method               | Description |
   |----------------------|-------------|
   | [`BarcodeReader`](primary-initialize-and-destroy.md#barcodereader) | Initialization of `BarcodeReader` object.|
-  | [`destroy`](primary-initialize-and-destroy.md#destroy) | Destroys an instance of `BarcodeReader` object.|
 
 ## Decode
 

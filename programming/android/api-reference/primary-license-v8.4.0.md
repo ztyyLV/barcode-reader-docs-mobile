@@ -41,7 +41,6 @@ void initLicense(String license) throws BarcodeReaderException
 ```java
 BarcodeReader reader = new BarcodeReader();
 reader.initLicense("t0260NwAAAHV***************");
-reader.destroy();
 ```
 
 ## initLicenseFromServer
@@ -67,7 +66,6 @@ reader.initLicenseFromServer("", "C087****",  new DBRServerLicenseVerificationLi
     public void licenseVerificationCallback(boolean isSuccess, Exception error) {
     }
 });
-reader.destroy();
 ```
 
 ## initLicenseFromLicenseContent
@@ -93,7 +91,6 @@ void initLicenseFromLicenseContent(String licenseKey, String licenseContent) thr
 BarcodeReader reader = new BarcodeReader();
 //get String licenseContent from reader.outputLicenseToString();
 reader.initLicenseFromLicenseContent("C087****",licenseContent);
-reader.destroy();
 ```
 
 ## outputLicenseToString
@@ -126,7 +123,6 @@ reader.initLicenseFromServer("", "C087****",  new DBRServerLicenseVerificationLi
     }
 });
 String licenseContent = reader.outputLicenseToString();
-reader.destroy();
 ```
 
 ## initLicenseFromLTS
