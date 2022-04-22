@@ -83,33 +83,33 @@ import DynamsoftBarcodeReader
 import DynamsoftCameraEnhancer
 // You have to add setDBRTextResultListener to your class.
 class ViewController: UIViewController, DBRTextResultListener{
-   var SafeAreaBottomHeight:CGFloat = UIApplication.shared.statusBarFrame.size.height > 20 ? 34 : 0
-   var mainHeight = UIScreen.main.bounds.height
-   var mainWidth = UIScreen.main.bounds.width
-   var dce:DynamsoftCameraEnhancer! = nil
-   var dceView:DCECameraView! = nil
-   var barcodeReader:DynamsoftBarcodeReader! = nil
-   override func viewDidLoad() {
-       super.viewDidLoad()
-       configurationDBR()
-   }
-   func configurationDBR(){
-      barcodeReader = DynamsoftBarcodeReader.init()
-      var barHeight = self.navigationController?.navigationBar.frame.height
-      if UIApplication.shared.statusBarFrame.size.height <= 20 {
-         barHeight = 20
-      }
-      dceView = DCECameraView.init(frame: CGRect(x: 0, y: barHeight!, width: mainWidth, height: mainHeight - SafeAreaBottomHeight - barHeight!))
-      self.view.addSubview(dceView)
-      dce = DynamsoftCameraEnhancer.init(view: dceView)
-      dce.open()
-      barcodeReader.setCameraEnhancer(dce)
-      barcodeReader.setDBRTextResultListener(self)
-      barcodeReader.startScanning()
-   }
-   func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?){
-      // Add your code
-   }
+    var SafeAreaBottomHeight:CGFloat = UIApplication.shared.statusBarFrame.size.height > 20 ? 34 : 0
+    var mainHeight = UIScreen.main.bounds.height
+    var mainWidth = UIScreen.main.bounds.width
+    var dce:DynamsoftCameraEnhancer! = nil
+    var dceView:DCECameraView! = nil
+    var barcodeReader:DynamsoftBarcodeReader! = nil
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configurationDBR()
+    }
+    func configurationDBR(){
+       barcodeReader = DynamsoftBarcodeReader.init()
+       var barHeight = self.navigationController?.navigationBar.frame.height
+       if UIApplication.shared.statusBarFrame.size.height <= 20 {
+          barHeight = 20
+       }
+       dceView = DCECameraView.init(frame: CGRect(x: 0, y: barHeight!, width: mainWidth, height: mainHeight - SafeAreaBottomHeight - barHeight!))
+       self.view.addSubview(dceView)
+       dce = DynamsoftCameraEnhancer.init(view: dceView)
+       dce.open()
+       barcodeReader.setCameraEnhancer(dce)
+       barcodeReader.setDBRTextResultListener(self)
+       barcodeReader.startScanning()
+    }
+    func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?){
+       // Add your code
+    }
 }
 ```
 
