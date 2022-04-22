@@ -80,10 +80,10 @@ DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicenseFromServer:@"" licenseKey:@"C087****" verificationDelegate:self];
 - (void)licenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
 {
-    NSNumber* boolNumber = [NSNumber numberWithBool:isSuccess];
-    dispatch_async(dispatch_get_main_queue(), ^{
-    [self->verificationReceiver performSelector:self->verificationCallback withObject:boolNumber withObject:error];
-    });
+   NSNumber* boolNumber = [NSNumber numberWithBool:isSuccess];
+   dispatch_async(dispatch_get_main_queue(), ^{
+   [self->verificationReceiver performSelector:self->verificationCallback withObject:boolNumber withObject:error];
+   });
 }
 ```
 2. 
@@ -91,10 +91,10 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicenseFromServer:@"" li
 let barcodeReader = DynamsoftBarcodeReader(licenseFromServer: "", licenseKey: "C087****", verificationDelegate: self)
 func licenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 {
-    let boolNumber = NSNumber(value: isSuccess)
-    DispatchQueue.main.async{
-        self.verificationReceiver?.perform(self.verificationCallback!, with: boolNumber, with: error)
-    }
+   let boolNumber = NSNumber(value: isSuccess)
+   DispatchQueue.main.async{
+      self.verificationReceiver?.perform(self.verificationCallback!, with: boolNumber, with: error)
+   }
 }
 ```
 
@@ -166,7 +166,7 @@ lts.sessionPassword = @"******";
 barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificationDelegate:self];
 - (void)LTSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
 {
-    //TODO add your code for license verification
+   //TODO add your code for license verification
 }
 ```
 2. 
@@ -177,6 +177,6 @@ lts.sessionPassword = "******"
 let barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
 func LTSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 {
-    print("isSucc : \(isSuccess) error : \(String(describing: error))")
+   print("isSucc : \(isSuccess) error : \(String(describing: error))")
 }
 ```

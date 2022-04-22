@@ -44,12 +44,12 @@ Decode barcodes from the memory buffer containing image pixels in a defined form
 // Template name example.
 // The "IP1" is the template name of this template. 
 {
-  "Version": "3.0",
-  "ImageParameter": {                   
-    "Name": "IP1",
-    "Description": "This is an imageParameter", 
-    "BarcodeFormatIds": ["BF_ALL"]
-  }
+   "Version": "3.0",
+   "ImageParameter": {                   
+      "Name": "IP1",
+      "Description": "This is an imageParameter", 
+      "BarcodeFormatIds": ["BF_ALL"]
+   }
 }
 ```
 
