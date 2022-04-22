@@ -360,11 +360,11 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    ```objc
    - (void)showResult:(NSString *)title msg:(NSString *)msg acTitle:(NSString *)acTitle completion:(void (^)(void))completion {
           dispatch_async(dispatch_get_main_queue(), ^{
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];
-            [alert addAction:[UIAlertAction actionWithTitle:acTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-               completion();
-            }]];
-            [self presentViewController:alert animated:YES completion:nil];
+             UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];
+             [alert addAction:[UIAlertAction actionWithTitle:acTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+                completion();
+             }]];
+             [self presentViewController:alert animated:YES completion:nil];
           });
    }
    ```
