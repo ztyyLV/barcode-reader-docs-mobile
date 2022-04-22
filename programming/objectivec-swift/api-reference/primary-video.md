@@ -90,8 +90,8 @@ class ViewController: UIViewController, DBRTextResultListener{
    var dceView:DCECameraView! = nil
    var barcodeReader:DynamsoftBarcodeReader! = nil
    override func viewDidLoad() {
-      super.viewDidLoad()
-      configurationDBR()
+       super.viewDidLoad()
+       configurationDBR()
    }
    func configurationDBR(){
       barcodeReader = DynamsoftBarcodeReader.init()

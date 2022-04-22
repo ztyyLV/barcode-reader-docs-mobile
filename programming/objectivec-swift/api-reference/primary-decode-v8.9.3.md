@@ -72,13 +72,13 @@ If you have imported **DynamsoftCameraEnhancer.framework**, you can get video fr
 [_dce addListener:self];
 //Get frames in callback methods.
 - (void)frameOutPutCallback:(DCEFrame *)frame timeStamp:(NSTimeInterval)timeStamp{
-    NSArray<iTextResult*>* results = [barcodeReader decodeBuffer:frame.imageData withWidth:frame.width height:frame.height stride:frame.stride format:frame.pixelFormat templateName:@"" error:nil];
+   NSArray<iTextResult*>* results = [barcodeReader decodeBuffer:frame.imageData withWidth:frame.width height:frame.height stride:frame.stride format:frame.pixelFormat templateName:@"" error:nil];
 }
 ```
 2. 
 ```swift
 func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval){
-  let result = try? barcodeReader.decodeBuffer(frame.imageData, withWidth: frame.width, height: frame.height, stride: frame.stride, format: EnumImagePixelFormat(rawValue: frame.pixelFormat) ?? EnumImagePixelFormat.ARGB_8888, templateName: "")
+   let result = try? barcodeReader.decodeBuffer(frame.imageData, withWidth: frame.width, height: frame.height, stride: frame.stride, format: EnumImagePixelFormat(rawValue: frame.pixelFormat) ?? EnumImagePixelFormat.ARGB_8888, templateName: "")
 }
 ```
 
@@ -96,34 +96,34 @@ If you are acquiring video frames from `captureOutput` callback, you can use the
 ```objc
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection;
 {
-  // Extract image data from sampleBuffer.
-  CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
-  CVPixelBufferLockBaseAddress(imageBuffer, kCVPixelBufferLock_ReadOnly);
-  int bufferSize = (int)CVPixelBufferGetDataSize(imageBuffer);
-  int imgWidth = (int)CVPixelBufferGetWidth(imageBuffer);
-  int imgHeight = (int)CVPixelBufferGetHeight(imageBuffer);
-  size_t bpr = CVPixelBufferGetBytesPerRow(imageBuffer);
-  void *baseAddress = CVPixelBufferGetBaseAddress(imageBuffer);
-  CVPixelBufferUnlockBaseAddress(imageBuffer, kCVPixelBufferLock_ReadOnly);
-  NSData * buffer = [NSData dataWithBytes:baseAddress length:bufferSize];
-  startRecognitionDate = [NSDate date];
-  NSArray* results = [m_barcodeReader decodeBuffer:buffer withWidth:imgWidth height:imgHeight stride:bpr format: EnumImagePixelFormatARGB_8888 templateName:@"" error:nil];
+   // Extract image data from sampleBuffer.
+   CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
+   CVPixelBufferLockBaseAddress(imageBuffer, kCVPixelBufferLock_ReadOnly);
+   int bufferSize = (int)CVPixelBufferGetDataSize(imageBuffer);
+   int imgWidth = (int)CVPixelBufferGetWidth(imageBuffer);
+   int imgHeight = (int)CVPixelBufferGetHeight(imageBuffer);
+   size_t bpr = CVPixelBufferGetBytesPerRow(imageBuffer);
+   void *baseAddress = CVPixelBufferGetBaseAddress(imageBuffer);
+   CVPixelBufferUnlockBaseAddress(imageBuffer, kCVPixelBufferLock_ReadOnly);
+   NSData * buffer = [NSData dataWithBytes:baseAddress length:bufferSize];
+   startRecognitionDate = [NSDate date];
+   NSArray* results = [m_barcodeReader decodeBuffer:buffer withWidth:imgWidth height:imgHeight stride:bpr format: EnumImagePixelFormatARGB_8888 templateName:@"" error:nil];
 }
 ```
 2. 
 ```swift
 func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection){
-  let imageBuffer:CVImageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
-  CVPixelBufferLockBaseAddress(imageBuffer, .readOnly)
-  let baseAddress = CVPixelBufferGetBaseAddress(imageBuffer)
-  let bufferSize = CVPixelBufferGetDataSize(imageBuffer)
-  let width = CVPixelBufferGetWidth(imageBuffer)
-  let height = CVPixelBufferGetHeight(imageBuffer)
-  let bpr = CVPixelBufferGetBytesPerRow(imageBuffer)
-  CVPixelBufferUnlockBaseAddress(imageBuffer, .readOnly)
-  startRecognitionDate = NSDate()
-  let buffer = Data(bytes: baseAddress!, count: bufferSize)
-  guard let results = try? barcodeReader.decodeBuffer(buffer, withWidth: width, height: height, stride: bpr, format: .ARGB_8888, templateName: "")
+   let imageBuffer:CVImageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
+   CVPixelBufferLockBaseAddress(imageBuffer, .readOnly)
+   let baseAddress = CVPixelBufferGetBaseAddress(imageBuffer)
+   let bufferSize = CVPixelBufferGetDataSize(imageBuffer)
+   let width = CVPixelBufferGetWidth(imageBuffer)
+   let height = CVPixelBufferGetHeight(imageBuffer)
+   let bpr = CVPixelBufferGetBytesPerRow(imageBuffer)
+   CVPixelBufferUnlockBaseAddress(imageBuffer, .readOnly)
+   startRecognitionDate = NSDate()
+   let buffer = Data(bytes: baseAddress!, count: bufferSize)
+   guard let results = try? barcodeReader.decodeBuffer(buffer, withWidth: width, height: height, stride: bpr, format: .ARGB_8888, templateName: "")
 }
 ```
 
