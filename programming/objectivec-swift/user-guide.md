@@ -283,28 +283,24 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    ```objc
    - (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
       if (results.count > 0) {
-         NSString *title = @"Results";
-         NSString *msgText = @"";
-         NSString *msg = @"Please visit: https://www.dynamsoft.com/customer/license/trialLicense?";
-         for (NSInteger i = 0; i< [results count]; i++) {
-               if (results[i].exception != nil && [results[i].exception containsString:msg]) {
-                  msgText = [msg stringByAppendingString:@"product=dbr&utm_source=installer&package=ios to request for 30 days extension."];
-                  title = @"Exception";
-                  break;
-               }
-               if (results[i].barcodeFormat_2 != 0) {
-                  msgText = [msgText stringByAppendingString:[NSString stringWithFormat:@"\nFormat: %@\nText: %@\n", results[i].barcodeFormatString_2, results[i].barcodeText]];
-               }else{
-                  msgText = [msgText stringByAppendingString:[NSString stringWithFormat:@"\nFormat: %@\nText: %@\n", results[i].barcodeFormatString, results[i].barcodeText]];
-               }
-         }
-         [self showResult:title
-                     msg:msgText
-                  acTitle:@"OK"
-               completion:^{
-               }];
+             NSString *title = @"Results";
+             NSString *msgText = @"";
+             NSString *msg = @"Please visit: https://www.dynamsoft.com/customer/license/trialLicense?";
+             for (NSInteger i = 0; i< [results count]; i++) {
+                if (results[i].exception != nil && [results[i].exception containsString:msg]) {
+                   msgText = [msg stringByAppendingString:@"product=dbr&utm_source=installer&package=ios to request for 30 days extension."];
+                   title = @"Exception";
+                   break;
+                }
+                if (results[i].barcodeFormat_2 != 0) {
+                   msgText = [msgText stringByAppendingString:[NSString stringWithFormat:@"\nFormat: %@\nText: %@\n", results[i].barcodeFormatString_2, results[i].barcodeText]];
+                }else{
+                   msgText = [msgText stringByAppendingString:[NSString stringWithFormat:@"\nFormat: %@\nText: %@\n", results[i].barcodeFormatString, results[i].barcodeText]];
+                }
+             }
+             [self showResult:title msg:msgText acTitle:@"OK" completion:^{}];
       }else{
-         return;
+             return;
       }
    }
    ```
@@ -312,19 +308,19 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    ```swift
    func textResultCallback(_ frameId: Int, ImageData: iImageData, results: [iTextResult]?) {
       if results!.count > 0 {
-         var msgText:String = ""
-         var title:String = "Results"
-         for item in results! {
-               if item.barcodeFormat_2.rawValue != 0 {
-                  msgText = msgText + String(format:"\nFormat: %@\nText: %@\n", item.barcodeFormatString_2!, item.barcodeText ?? "noResuslt")
-               }else{
-                  msgText = msgText + String(format:"\nFormat: %@\nText: %@\n", item.barcodeFormatString!,item.barcodeText ?? "noResuslt")
-               }
-         }
-         showResult(title, msgText, "OK") {
-         }
+             var msgText:String = ""
+             var title:String = "Results"
+             for item in results! {
+                if item.barcodeFormat_2.rawValue != 0 {
+                   msgText = msgText + String(format:"\nFormat: %@\nText: %@\n", item.barcodeFormatString_2!, item.barcodeText ?? "noResuslt")
+                }else{
+                   msgText = msgText + String(format:"\nFormat: %@\nText: %@\n", item.barcodeFormatString!,item.barcodeText ?? "noResuslt")
+                }
+             }
+             showResult(title, msgText, "OK") {
+             }
       }else{
-         return
+             return
       }
    }
    ```
@@ -363,23 +359,22 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    >1. 
    ```objc
    - (void)showResult:(NSString *)title msg:(NSString *)msg acTitle:(NSString *)acTitle completion:(void (^)(void))completion {
-      dispatch_async(dispatch_get_main_queue(), ^{
-         UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];
-         [alert addAction:[UIAlertAction actionWithTitle:acTitle style:UIAlertActionStyleDefault
-                                                   handler:^(UIAlertAction * action) {
-                                                      completion();
-                                                   }]];
-         [self presentViewController:alert animated:YES completion:nil];
-      });
+          dispatch_async(dispatch_get_main_queue(), ^{
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:acTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+               completion();
+            }]];
+            [self presentViewController:alert animated:YES completion:nil];
+          });
    }
    ```
    2. 
    ```swift
    private func showResult(_ title: String, _ msg: String, _ acTitle: String, completion: @escaping () -> Void) {
       DispatchQueue.main.async {
-         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
-         alert.addAction(UIAlertAction(title: acTitle, style: .default, handler: { _ in completion() }))
-         self.present(alert, animated: true, completion: nil)
+             let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+             alert.addAction(UIAlertAction(title: acTitle, style: .default, handler: { _ in completion() }))
+             self.present(alert, animated: true, completion: nil)
       }
    }
    ```
