@@ -201,11 +201,11 @@ The usage of `intermediateResultListener` is similar to the `textResultListener`
 // You have to add DBRIntermediateResultListener to your class.
 class ViewController: UIViewController, DBRIntermediateResultListener{
    func configurationDBR(){
-      barcodeReader = DynamsoftBarcodeReader.init()
-      barcodeReader.setDBRIntermediateResultListener(self)
+          barcodeReader = DynamsoftBarcodeReader.init()
+          barcodeReader.setDBRIntermediateResultListener(self)
    }
    func intermediateResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?){
-      // Add your code to execute when intermediate result is returned.
+          // Add your code to execute when intermediate result is returned.
    }
 }
 ```
