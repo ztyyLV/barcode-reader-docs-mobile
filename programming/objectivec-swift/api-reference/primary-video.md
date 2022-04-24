@@ -184,7 +184,6 @@ The usage of `intermediateResultListener` is similar to the `textResultListener`
 >- Objective-C
 >- Swift
 >
->1. 
 ```objc
 // You have to add DBRIntermediateResultListener to your interface.
 @interface ViewController ()<DBRIntermediateResultListener>
@@ -196,7 +195,6 @@ The usage of `intermediateResultListener` is similar to the `textResultListener`
    // Add your code to execute when intermediate result is returned.
 }
 ```
-2. 
 ```swift
 // You have to add DBRIntermediateResultListener to your class.
 class ViewController: UIViewController, DBRIntermediateResultListener{
