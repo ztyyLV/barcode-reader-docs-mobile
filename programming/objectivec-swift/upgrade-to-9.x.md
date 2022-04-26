@@ -34,54 +34,45 @@ pageStartVer: 9.0
 
 Starting with 9.0, we unify the API for setting offline and online licenses.
 
-- Objective-C code in 8.x:
+code in 8.x:
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"An offline license"];
-```
-
-```objc
 iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
 dls.organizationID = @"Your organization Id";
 _barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error{
-
-}
+- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error{}
 ```
-
-- Swift code in 8.x:
-
+2. 
 ```swift
-let barcodeReader = DynamsoftBarcodeReader.init(license: "An offline license")
-```
-
-```swift
-let dls = iDMDLSConnectionParameters()
+let barcodeReader = DynamsoftBarcodeReader.init(license: "An offline license")let dls = iDMDLSConnectionParameters()
 dls.organizationID = "Your organization Id"
 barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?){
-
-}
+func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?){}
 ```
 
 Please replace your license activation code with the following code. You can get the `3.0 license` from [customer portal-->License detail](#update-the-license-activation-code).
 
-- Objective-C code in 9.x:
+code in 9.x:
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 [DynamsoftBarcodeReader initLicense:@"Put your license here" verificationDelegate: self];
-- (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
-
-}
+- (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{}
 ```
-
-- Swift code in 9.x:
-
+2. 
 ```swift
 DynamsoftBarcodeReader.initLicense("Put your license here", verificationDelegate: self)
-func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
-
-}
+func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {}
 ```
 
 > Note:  
@@ -100,26 +91,23 @@ In 9.0, the default preset template `EnumPresetTemplate.default` will be changed
 
 If the default template is not specified in the previous code (the default template is still used internally) or the default template is used explicitly, and you want to keep the original running logic, you need to call the following function after creating the barcode reader instance:
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftBarcodeReader* barcodereader = [[DynamsoftBarcodeReader alloc] init];
-
 // add the following code to change to the legacy default settings
 [barcodereader updateRuntimeSettings:EnumPresetTemplateImageDefault];
-
 // change the settings based on the legacy default template...
-
 ```
-
-or 
-
+2. 
 ```swift
 let barcodereader = DynamsoftBarcodeReader()
-
 // add the following code to change to the legacy default settings
 barcodereader.updateRuntimeSettings(EnumPresetTemplate.imageDefault)
-
 // change the settings based on the legacy default template...
-
 ```
 
 ### Update the Video Barcode Decoding Code
