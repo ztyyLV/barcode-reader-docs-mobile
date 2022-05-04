@@ -31,7 +31,7 @@ Return intermediate results containing the original image, the color clustered i
 
 **Return Value**
 
-Returns intermediate result array.
+Returns an [`iIntermediateResult`](auxiliary-iIntermediateResult.md) array.
 
 **Code Snippet**
 
@@ -92,7 +92,7 @@ let x = barcodeReader.enableResultVerification
 
 ## enableDuplicateFilter
 
-The duplicated text result will be filtered. The barcode reader will not output the result for the same barcode a second time in 3 seconds.
+The duplicated text result will be filtered. The barcode reader will not output the result for the same barcode a second time if the second scan is within 3 seconds of the first. The property is enabled by default.
 
 ```objc
 @property (nonatomic, assign) BOOL enableDuplicateFilter;

@@ -29,7 +29,7 @@ PublicRuntimeSettings getRuntimeSettings() throws BarcodeReaderException
 
 **Return Value**
 
-The struct of template settings.
+The [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct of template settings.
 
 **Exceptions**
 
@@ -54,7 +54,7 @@ void updateRuntimeSettings(PublicRuntimeSettings settings) throws BarcodeReaderE
 
 **Parameters**
 
-`settings`: The struct of template settings.
+`settings`: The [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct of template settings.
 
 **Exceptions**
 
