@@ -19,17 +19,6 @@ noTitleIndex: true
 - Environment: Xcode 7.1 - 11.5 and above.
 - Recommended: macOS 10.15.4+, Xcode 11.5+, iOS 11+
 
-## Installation
-
-If you have downloaded the SDK from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> and unzipped **dbr-ios-{version-number}.zip**, you can find two **frameworks** in the root folder. You can simply include `DynamsoftBarcodeReader.framework` to your project to start creating a barcode scanning app. The other framework, `DynamsoftCameraEnhancer.framework`, is an extension package that integrates video frame preprocessing algorithms and camera control APIs.
-
-Starting from v8.8 of DBR, the SDK also offers **xcframeworks** for iOS development. **xcframeworks** are slowly replacing **frameworks** as the standard for iOS development, so we are happy to now offer `DynamsoftBarcodeReader.xcframework` and `DynamsoftCameraEnhancer.xcframework` included as part of the SDK. To learn more about **xcframeworks** and what they offer over the regular **framework**, please check out this [article](https://medium.com/trueengineering/xcode-and-xcframeworks-new-format-of-packing-frameworks-ca15db2381d3) by TrueEngineering.
-
-| Framework | Description |
-|---------|-------------|
-| `DynamsoftBarcodeReader.framework` <br /> `DynamsoftBarcodeReader.xcframework`| The Barcode Reader package, including all barcode decoding related algorithms and APIs. |
-| `DynamsoftCameraEnhancer.framework` <br /> `DynamsoftCameraEnhancer.xcframework`| The Camera Enhancer package, including camera control APIs and frame preprocessing algorithm. |
-
 ## Build Your First Application
 
 In this section, let's see how to create a **HelloWorld** app for reading barcodes from camera video input.
@@ -51,30 +40,50 @@ In this section, let's see how to create a **HelloWorld** app for reading barcod
 
 5. Click on the **Create** button to finish.
 
-### Include the Frameworks
+&nbsp;
 
-You can add your downloaded frameworks into your project through the following steps:
+### Add the SDK
 
-1. Drag and drop the **DynamsoftBarcodeReader** and **DynamsoftCameraEnhancer** frameworks into your Xcode project. Make sure to check Copy items if needed and Create groups to copy the framework into your project's folder.
+There are two ways to add the SDK into your project - **Manually** and **CocoaPods**.
 
-2. Click on the project settings then go to  **General --> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for `DynamsoftBarcodeReader` and `DynamsoftCameraEnhancer`.
+#### Add the Frameworks Manually
 
-3. Import the headers in the `ViewController` file.
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, you can find the following **Frameworks** under the **DynamsoftBarcodeReader\Frameworks** directory:
 
-    <div class="sample-code-prefix"></div>
-    >- Objective-C
-    >- Swift
-    >
-    >1. 
-    ```objc
-    #import <DynamsoftBarcodeReader/DynamsoftBarcodeReader.h>
-    #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
-    ```
-    2. 
-    ```swift
-    import DynamsoftBarcodeReader
-    import DynamsoftCameraEnhancer
-    ```
+   | Framework | Description |
+   |---------|-------------|
+   | `DynamsoftBarcodeReader.framework` <br /> `DynamsoftBarcodeReader.xcframework`| The Barcode Reader package, including all barcode decoding related algorithms and APIs. |
+   | `DynamsoftCameraEnhancer.framework` <br /> `DynamsoftCameraEnhancer.xcframework`| The Camera Enhancer package, including camera control APIs and frame preprocessing algorithm. |
+
+   >Note:
+   >
+   >- Starting from v8.8 of DBR, the SDK also offers **xcframeworks** for iOS development. **xcframeworks** are slowly replacing **frameworks** as the standard for iOS development, so we are happy to now offer `DynamsoftBarcodeReader.xcframework` and `DynamsoftCameraEnhancer.xcframework` included as part of the SDK. To learn more about **xcframeworks** and what they offer over the regular **framework**, please check out this [article](https://medium.com/trueengineering/xcode-and-xcframeworks-new-format-of-packing-frameworks-ca15db2381d3) by TrueEngineering.
+
+2. Drag and drop the above two **frameworks** into your Xcode project. Make sure to check Copy items if needed and Create groups to copy the framework into your project’s folder.
+
+3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for **DynamsoftBarcodeReader** and **DynamsoftCameraEnhancer**.
+
+#### Add the Frameworks via CocoaPods
+
+1. Add the frameworks in your **Podfile**.
+
+   ```sh
+   target 'DBRHelloWorld' do
+      use_frameworks!
+
+   pod 'DynamsoftBarcodeReader','9.0.1'
+   pod 'DynamsoftCameraEnhancer','2.1.3'
+
+   end
+   ```
+
+2. Execute the pod command to install the frameworks and generate workspace(**DBRHelloWorld.xcworkspace**):
+
+   ```sh
+   pod install
+   ```
+
+&nbsp;
 
 ### Initialize the License
 
@@ -133,7 +142,24 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
 
 ### Configure the Camera to Get Video Streaming
 
-1. Go back to the `ViewController` file. Create an instance of **DynamsoftCameraEnhancer** for getting video input.
+1. Import the headers in the `ViewController` file.
+
+    <div class="sample-code-prefix"></div>
+    >- Objective-C
+    >- Swift
+    >
+    >1. 
+    ```objc
+    #import <DynamsoftBarcodeReader/DynamsoftBarcodeReader.h>
+    #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
+    ```
+    2. 
+    ```swift
+    import DynamsoftBarcodeReader
+    import DynamsoftCameraEnhancer
+    ```
+
+2. Create an instance of **DynamsoftCameraEnhancer** for getting video input.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -160,7 +186,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    }
    ```
 
-2. Add configurations for DynamsoftCameraEnhancer.
+3. Add configurations for DynamsoftCameraEnhancer.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
