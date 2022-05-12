@@ -139,6 +139,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    {
    }
     ```
+&nbsp;
 
 ### Configure the Camera to Get Video Streaming
 
@@ -216,6 +217,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
       dce.open()
    }
    ```
+&nbsp;
 
 ### Configure the Barcode Reader and Start Decoding
 
@@ -404,6 +406,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
       }
    }
    ```
+&nbsp;
 
 ### Run the Project
 

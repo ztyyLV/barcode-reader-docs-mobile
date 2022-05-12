@@ -39,6 +39,8 @@ In this section, let's see how to create a HelloWorld app for reading barcodes f
     >
     > - With **minSdkVersion** set to 21, your app is compatible with more than 94.1% of devices on the Google Play Store (last update: March 2021).
 
+&nbsp;
+
 ### Add the SDK
 
 There are two ways to add the SDK into your project - **Manually** and **Maven**.
@@ -96,6 +98,8 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
    >
    > - If your Android SDK version is 28 or higher, you have to add `android.enableJetifer=true` in your `gradle.properties` file before you sync your project with Gradle files.
 
+&nbsp;
+
 ### Initialize License
 
 1. Initialize the license in the file `MainActivity.java`.
@@ -129,6 +133,8 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
    >- The license string here will grant you a time-limited trial license.
    >- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a> to request for an extension.
    >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">installation package</a>, it comes with a 30-day trial license.
+
+&nbsp;
 
 ### Initialize Camera Module
 
@@ -167,6 +173,8 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
       }
    }
    ```
+
+&nbsp;
 
 ### Initialize Barcode Reader
 
@@ -263,6 +271,8 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
    }
    ```
 
+&nbsp;
+
 ### Additional Steps
 
 1. In the Project window, open **app > res > layout > `activity_main.xml`**, create a text view section under the root node to display the recognized barcode results. The following sample code is a TextView under RelativeLayout
@@ -309,6 +319,8 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
       }
    }
    ```
+
+&nbsp;
 
 ### Build and Run the Project
 
