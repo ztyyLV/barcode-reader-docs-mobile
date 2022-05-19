@@ -166,7 +166,7 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 
          ...
          // Add camera view for previewing video.
-         DCECameraView cameraView = findViewById(R.id.camera_view);
+         DCECameraView cameraView = findViewById(R.id.cameraView);
 
          mCameraEnhancer = new CameraEnhancer(MainActivity.this);
          mCameraEnhancer.setCameraView(cameraView);
