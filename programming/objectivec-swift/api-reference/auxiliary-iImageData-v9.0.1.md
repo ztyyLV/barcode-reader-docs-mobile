@@ -16,9 +16,8 @@ Stores the image data.
 @interface iImageData
 ```
 
-| Method | Type | Descriptions |
+| Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
-| [`toUIImage`](#touiimage) | -- | Convert the ImageData to a UIImage. |
 | [`bytesLength`](#byteslength) | *NSInteger* | The length of the image data byte array. |
 | [`bytes`](#bytes) | *unsigned char\** | The image data content in a byte array. |
 | [`width`](#width) | *NSInteger* | The width of the image in pixels. |
