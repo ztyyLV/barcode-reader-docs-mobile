@@ -47,7 +47,7 @@ Decode barcodes from the memory buffer containing image pixels in a defined form
 
 **Return Value**
 
-The `iTextResult` of all successfully decoded barcodes.
+The [`iTextResult`](auxiliary-iTextResult.md) of each successfully decoded barcode.
 
 ### Get ImageData from DCEFrame
 
@@ -136,7 +136,7 @@ Decode barcodes from a specified image file.
 
 **Return Value**
 
-The `iTextResult` of all successfully decoded barcodes.
+The [`iTextResult`](auxiliary-iTextResult.md) of each successfully decoded barcode.
 
 **Code Snippet**
 
@@ -170,7 +170,7 @@ Decode barcodes from an image file in memory.
 
 **Return Value**
 
-The `iTextResult` of all successfully decoded barcodes.
+The [`iTextResult`](auxiliary-iTextResult.md) of each successfully decoded barcode.
 
 **Code Snippet**
 
@@ -206,7 +206,7 @@ Decode barcodes from an image file encoded as a base64 string.
 
 **Return Value**
 
-The `iTextResult` of all successfully decoded barcodes.
+The [`iTextResult`](auxiliary-iTextResult.md) of each successfully decoded barcode.
 
 **Code Snippet**
 
@@ -235,12 +235,12 @@ Inits an intermediateResult struct with default values.
 
 **Parameters**
 
-`[in] type` The type of the intermediate result to init.  
+`[in] type` The intermediate result type ([EnumIntermediateResultType]({{ site.enumerations }}result-enums.html#intermediateresulttype)) to initialize.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
 
-An intermediateResult struct with default values.
+An [`iIntermediateResult`](auxiliary-iIntermediateResult.md) struct with default values.
 
 **Code Snippet**
 
@@ -277,7 +277,7 @@ Decodes barcode from intermediate results.
 
 **Return Value**
 
-The `iTextResult` of all successfully decoded barcodes.
+The [`iTextResult`](auxiliary-iTextResult.md) of each successfully decoded barcode.
 
 **Code Snippet**
 

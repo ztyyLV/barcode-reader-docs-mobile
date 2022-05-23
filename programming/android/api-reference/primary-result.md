@@ -27,7 +27,7 @@ IntermediateResult[] getIntermediateResults() throws BarcodeReaderException
 
 **Return Value**
 
-The intermediate results were returned by the SDK.
+The [`IntermediateResult`](auxiliary-IntermediateResult.md) array were returned by the SDK.
 
 **Exceptions**
 

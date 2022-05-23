@@ -41,7 +41,7 @@ TextResult[] decodeBuffer(byte[] buffer, int width, int height, int stride, int 
 
 **Return Value**
 
-The `TextResult` of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
 
 **Exceptions**
 
@@ -121,7 +121,7 @@ TextResult[] decodeFile(String fileFullPath) throws BarcodeReaderException
 
 **Return Value**
 
-The `TextResult` of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
 
 **Exceptions**
 
@@ -152,7 +152,7 @@ TextResult[] decodeFileInMemory(byte[] fileBytes) throws BarcodeReaderException
 
 **Return Value**
 
-The `TextResult` of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
 
 **Exceptions**
 
@@ -179,7 +179,7 @@ TextResult [] decodeFileInMemory(InputStream fileStream) throws BarcodeReaderExc
 
 **Return Value**
 
-The `TextResult` of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
 
 **Exceptions**
 
@@ -208,7 +208,7 @@ TextResult[] decodeBase64String(String base64) throws BarcodeReaderException
 
 **Return Value**
 
-The `TextResult` of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
 
 **Exceptions**
 
@@ -236,7 +236,7 @@ TextResult[] decodeBufferedImage(Bitmap image) throws BarcodeReaderException
 
 **Return Value**
 
-The `TextResult` of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
 
 **Exceptions**
 
@@ -261,11 +261,11 @@ IntermediateResult initIntermediateResults(int resultType) throws BarcodeReaderE
 
 **Parameters**
 
-`resultType`: The type of the intermediate result to init.
+`resultType`: An int value that indicates the intermediate result type. The int value should be available in ([EnumIntermediateResultType]({{ site.enumerations }}result-enums.html#intermediateresulttype)).
 
 **Return Value**
 
-An intermediateResult struct with default values.
+An [`IntermediateResult`](auxiliary-IntermediateResult.md) struct with default values.
 
 **Exceptions**
 
@@ -293,7 +293,7 @@ TextResult[] decodeIntermediateResults(IntermediateResult[] results) throws Barc
 
 **Return Value**
 
-The `TextResult` of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
 
 **Exceptions**
 
