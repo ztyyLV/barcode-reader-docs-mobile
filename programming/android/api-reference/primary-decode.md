@@ -256,7 +256,7 @@ TextResult[] result = reader.decodeBufferedImage(input);
 Inits an intermediateResult struct with default values.
 
 ```java
-IntermediateResult initIntermediateResults(EnumIntermediateResultType resultType) throws BarcodeReaderException
+IntermediateResult initIntermediateResults(int resultType) throws BarcodeReaderException
 ```
 
 **Parameters**
